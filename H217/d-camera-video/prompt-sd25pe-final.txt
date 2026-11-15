@@ -5,10 +5,10 @@ Generate a light, playful live-action ad with fast hard cuts: a bikini-store own
 Image 1 is the owner of Salt & Sun Swim, a Shopify bikini store: use only her face, hair and outfit; do not use the image background.
 Image 2 is the refund notification on her lock screen: show its words exactly; do not use its table.
 Image 3 is the owner's home studio: use only its room, furniture and light; do not use the lime orb floating in it.
-Image 4 is the shopper in her sunny bedroom: use her face, hair, striped tee, earbuds, straw beach bag and the bedroom.
+Image 4 is the shopper: use only her face, hair, striped tee, earbuds and straw beach bag; do not use the image background.
 Image 5 is Scout's call card: show its words exactly.
 Image 6 is the full-price order notification: show its words exactly; do not use its table.
-Image 7 is Scout: use only the lime orb with sound bars inside, shown on a plain background.
+Image 7 is Scout: use only the lime orb with sound bars inside; do not use its plain background.
 Video 1 is used only for the cutting rhythm, shot sizes and macro-then-fast-pull-back opening of 0-8s; do not use its woman, candles, room or screens.
 Video 2 is used only for the bullet-time camera move of 8-11s; do not use its diner, food or people.
 Video 3 is used only for the continuous push-in that dives through the subject into a new scene, for 11-12s; do not use its woman, street or eye.
@@ -21,7 +21,7 @@ Audio 4 is used only for Scout's voice timbre.
 
 【Subjects and Relationships】
 The owner maps to Image 1 and appears only in the studio from Image 3. Her hands stay on her product and her work: the coral bikini, the bikini pile, the laptop trackpad, the kraft mailer.
-The shopper maps to Image 4 and appears only in her bedroom.
+The shopper maps to Image 4 and appears only in her sunny bedroom: tall white-framed windows, soft daylight and an unmade white bed.
 Scout maps to Image 7 and is the only orb. Scout first enters at 8-11s, popping in beside her shoulder.
 One person per shot.
 
