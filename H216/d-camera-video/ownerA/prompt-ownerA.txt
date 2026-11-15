@@ -1,0 +1,29 @@
+【Generation Goal】
+Generate a short live-action story scene. The core subject is the owner of a small online candle shop. Her Fig & Cedar candles are not selling, and she wrongly decides nobody wants them: in her stockroom full of unsold Fig & Cedar boxes she counts them, tapes one shut, writes DISCONTINUED on it and blows out the candle, lightly annoyed and a little sad. Scout's voice ends the scene.
+
+【Reference Asset Roles】
+Use @Image1 as the first frame.
+This first frame defines the composition at the start of the video: the owner seated at her wooden desk facing the camera, her laptop open in front of her, a lit amber three-wick candle at the left of the frame, shelves of amber jars behind her, warm light, eye-level camera.
+@Image2 is used for the owner's facial features, auburn side braid and rust knit sweater, without changing the first-frame composition defined by @Image1; do not use its background.
+@Image3 is used for her stockroom: dark brick wall, metal shelves packed with brown boxes that each carry a kraft label reading "Fig & Cedar" with a jar drawing, one open box of amber jars, and the wooden packing table with a red tape gun, a black marker and kraft paper; no person appears in it.
+@Image4 is used for the Fig & Cedar candle: the amber three-wick jar with its kraft "Fig & Cedar" label; do not use the cloth behind it.
+@Audio1 is used only for the owner's inner-voice timbre; do not use its words.
+@Audio2 is used only for Scout's calm female voice timbre; do not use its words.
+
+【Subjects and Relationships】
+There is one owner (@Image2), the only person in the scene. The lit Fig & Cedar jar (@Image4) is the one candle she blows out; it stands on her desk in the first frame and on the packing table in the stockroom. Every box on the shelves is the same Fig & Cedar product (@Image3). Scout is never seen, only heard.
+
+【Event Script】
+The shot begins naturally from the first frame defined by @Image1.
+0-1s: [Medium, static, from the first frame] The owner (@Image2) looks up from her laptop, her shoulders drop slightly and she exhales through her nose, lips closed. At the end, her gaze has left the screen.
+1-3.5s: [Hard cut. Wide, her stockroom (@Image3), slow push in] The owner (@Image2) stands in front of the shelves of Fig & Cedar boxes and runs one finger along a row, counting, her brows slightly drawn, lips closed. The owner (@Image2), in English, in the voice of @Audio1 (inner voice, flat, lightly annoyed, lips closed): {Still all here.} At the end, her finger stops on the last box of the row.
+3.5-5.5s: [Hard cut. Close-up on her hands at the packing table] The owner's (@Image2) hands run the red tape gun across the top of one Fig & Cedar box <tape screech>. The owner (@Image2), in English, in the voice of @Audio1 (inner voice, quiet, a little sad, lips closed): {Nobody wants these...} At the end, the box is taped shut.
+5.5-7s: [Hard cut. Insert, top of the taped box, static] Her hand writes DISCONTINUED across the box lid in thick black marker <marker squeak>. At the end, the word DISCONTINUED is complete.
+7-8s: [Hard cut. Close-up, static] The owner (@Image2) leans over the packing table and blows out the lit Fig & Cedar jar (@Image4) <a soft breath>; its three flames go out. At the end, thin smoke rises from the three wicks.
+8-10s: [Hard cut. Macro on the jar's (@Image4) smoking wicks, slow push in] Scout, in English, in the voice of @Audio2 (off screen, calm): {Don't guess why your shoppers don't buy.} At the end, smoke curls up from the wicks.
+
+【Sound and Text】
+Quiet studio room tone throughout. The owner never speaks aloud; her lips stay closed and her two lines are inner voice only. No subtitles. No on-screen text except the "Fig & Cedar" box and jar labels and the word DISCONTINUED she writes.
+
+【Maintain Consistency】
+Hard cuts only. Keep the owner's face, braid and rust sweater identical in every shot, the boxes all labelled Fig & Cedar, and only one lit jar. Her performance stays light: mild annoyance and quiet disappointment, nothing exaggerated.

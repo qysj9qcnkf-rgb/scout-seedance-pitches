@@ -1,0 +1,13 @@
+# H240 owner part, option A: asset list for ONE 10 s Seedance 2.5 clip (stitched into take 2 at 15.0 s)
+# Prompt: prompt-ownerA.txt (sha256 4e9270d2ba90f8396c4ae8d126ad5bf1807995c48b64994655355a3f7062e59c)
+# Job: seedance_2_5, omni_reference, duration 10 s, aspect 9:16, 480p draft, generate_audio on (job settings, not in the prompt). @Image1 is the first frame.
+# Upload in this order. Every media id returned 200 on the Higgsfield CDN on Nov 15 ~5:45 PM ET.
+# role | Higgsfield media id | local file | what it is
+@Image1 | 0ae7b4cf-bfa4-46a2-a0e0-ba54b49d595c | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/d-camera-video/ownerA/image1-firstframe-take2-15s.jpg | FIRST FRAME: take 2 (job 246fd4e8) at 15.0 s, where the High flip lands: owner at her desk, laptop, lit jar, 480x854
+@Image2 | a3488732-1c28-4b37-bb28-0c69475dacd0 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/d-camera-video/ownerA/image2-owner.png | owner face, auburn side braid, rust sweater (same as H240 @Image5)
+@Image3 | 4a5ac491-b2b9-4497-beb3-2c74ca7b82c6 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/d-camera-video/ownerA/image3-stockroom-figcedar.jpg | stockroom: shelves of boxes each labelled Fig & Cedar, open box of jars, packing table with tape gun, marker, kraft paper (free GPT Image, Nov 15)
+@Image4 | a810d86e-d04c-4546-b052-be03ddfcd93a | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/d-camera-video/ownerA/image4-fig-cedar-jar.png | Fig & Cedar amber three-wick jar, labelled (same as H240 @Image8)
+@Audio1 | 54c5f7bf-6df5-47de-ba4b-a32454769d3b | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/d-camera-video/ownerA/audio1-owner-voice.mp3 | owner voice timbre, 10 s (its words are about stone fruit: not used); = H240 @Audio2
+@Audio2 | cd435499-8236-4dcf-8f04-24e07af602bb | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/d-camera-video/ownerA/audio2-scout-voice.mp3 | Scout voice timbre, 4.5 s (its words not used); = H240 @Audio3
+# Totals: 4 images, 0 videos, 2 audio (14.5 s), 6 uploads. Unused assets: none.
+# After the clip: splice take 2 0-15.0 s + clip 0-10 s, then lay in the real H158 end screen from 25 s (free edit). Expected cost: about 30 credits (10 s draft).
