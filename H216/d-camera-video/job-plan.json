@@ -1,0 +1,104 @@
+{
+ "card": "H227",
+ "round": "cat-candle story (Emile, Nov 15 1:00 PM ET, from H228)",
+ "model": "seedance_2_5",
+ "mode": "omni_reference",
+ "draft": true,
+ "resolution": "480p",
+ "duration": 30,
+ "aspect_ratio": "9:16",
+ "generate_audio": true,
+ "quoted_credits": "not re-quoted this round (earlier 30 s draft 480p quotes were 90 credits); re-quote before any render",
+ "submitted": false,
+ "prompt_file": "prompt-sd25pe-final.txt (send this; sd25-pe compile, 994 words)",
+ "prompt_ours_file": "prompt.txt (ours, before the sd25-pe compile)",
+ "medias_in_upload_order": [
+  {
+   "tag": "image1",
+   "what": "shopper face crop (free local crop, shared with A)",
+   "value": "d54d8df5-566f-400d-823a-fd87b64a0831",
+   "file": "a/image1-shopper-face.jpg"
+  },
+  {
+   "tag": "image2",
+   "what": "grey tabby cat crop (free local crop, shared with A)",
+   "value": "696c034b-34ca-4b95-8f62-382f22de2f6f",
+   "file": "a/image2-cat.jpg"
+  },
+  {
+   "tag": "image3",
+   "what": "shopper apartment, room only, many lit candles (shared still)",
+   "value": "8dcc4d3e-6957-49cd-a342-fbc14d6a5e1f",
+   "file": "a/image3-apartment-candles.jpg"
+  },
+  {
+   "tag": "image4",
+   "what": "Fig & Cedar product page, mouse pointer painted out (free local fix + free upload Nov 15; old 527991c0 had the pointer on Add to cart)",
+   "value": "918984eb-8269-43da-b074-23d61faa8083",
+   "file": "a/image4-product-page.png"
+  },
+  {
+   "tag": "image5",
+   "what": "owner face, braid, sweater",
+   "value": "1963a66d-94e4-4fdc-95e5-b34fde48ea4f",
+   "file": "a/image5-owner.png"
+  },
+  {
+   "tag": "image6",
+   "what": "owner studio, empty desk",
+   "value": "1992f753-0975-476d-8571-4a43c2c6c2b0",
+   "file": "a/image6-owner-studio.png"
+  },
+  {
+   "tag": "image7",
+   "what": "owner units-sold list, Fig & Cedar 3 (-84%)",
+   "value": "8c33aad5-bc87-4b86-965e-1a967b2686d3",
+   "file": "a/image7-owner-sales.png"
+  },
+  {
+   "tag": "image8",
+   "what": "Fig & Cedar jar, labelled (free upload Nov 15, replaces the old job-id reference)",
+   "value": "a810d86e-d04c-4546-b052-be03ddfcd93a",
+   "file": "a/image8-fig-cedar-jar.png"
+  },
+  {
+   "tag": "video1",
+   "what": "H158 end screen, picture and voice, 4.5 s",
+   "value": "cae62718-ec02-41f6-8e36-1de097e8427d",
+   "file": "a/video1-end-screen.mp4"
+  },
+  {
+   "tag": "video2",
+   "what": "High flip camera move only, 5 s, no audio track, 600x1066",
+   "value": "d44455fb-e7cc-46cf-9d86-641fe8304b97",
+   "file": "a/video2-high-flip.mp4"
+  },
+  {
+   "tag": "audio1",
+   "what": "shopper voice timbre, 9 s (its words are about a beach house: not used)",
+   "value": "cf1289fd-1e9e-441c-9a83-65c939fde0a6",
+   "file": "a/audio1-shopper-voice.mp3"
+  },
+  {
+   "tag": "audio2",
+   "what": "owner voice timbre, 10 s (its words are about stone fruit notes: not used)",
+   "value": "54c5f7bf-6df5-47de-ba4b-a32454769d3b",
+   "file": "a/audio2-owner-voice.mp3"
+  },
+  {
+   "tag": "audio3",
+   "what": "Scout voice timbre, 4.5 s (says the end-screen line: words not used in 23-25s)",
+   "value": "cd435499-8236-4dcf-8f04-24e07af602bb",
+   "file": "a/audio3-scout-voice.mp3"
+  }
+ ],
+ "totals": {
+  "images": 8,
+  "videos": 2,
+  "video_seconds": 9.5,
+  "audios": 3,
+  "audio_seconds": 23.5
+ },
+ "dropped_this_round": "eyes-in (049306d2), Dip owner pace (b2b7244b), earth zoom (45b61586), old shopper still (24babbac), Scout logo (67fba5cb): moved to work/dropped-pre-catstory/",
+ "spend": "none; two free uploads (image4 cursor-free page, image8 jar)"
+}

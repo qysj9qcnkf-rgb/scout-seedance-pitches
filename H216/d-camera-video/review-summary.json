@@ -1,158 +1,136 @@
 {
- "title": "One answer away",
- "technique": "Three real camera-move clips and one acting clip, each bound to one beat.",
+ "title": "Are these safe for cats?",
+ "technique": "The High flip camera move comes from one reference clip (@Video2, its move only); every other move is written in words.",
  "story": [
-  "A shopper is one click from buying the Fig & Cedar candle.",
-  "She wonders if it's safe for her cat; the page doesn't say. She leaves.",
-  "The owner sees three sales, decides nobody wants it, and plans to discontinue it.",
-  "Scout's orb pops out of her laptop: Don't guess. Ask them.",
-  "Scout reaches the shopper; the owner reads why: Wasn't sure it's safe for my cat.",
-  "End screen: Scout interviews your shoppers for you. Get free early access."
+  "A cat lady sits on her sofa at night; candles burn all over her apartment, her cat beside her.",
+  "She scrolls the Fig & Cedar product page up and down, searching. She does not buy.",
+  "Inner voice, lips closed, the camera circling her: “Are these safe for cats?”",
+  "She finds nothing, gets annoyed (shown only), closes the site: “I guess we'll never know.”",
+  "The High flip turns from her down to the owner reading her sales: “I guess no one's interested in Fig and Cedar. No one wants this. Time to discontinue the product line.” She blows out the candle.",
+  "Scout's voice: “Don't guess why your shoppers don't buy.” End screen: “Scout interviews your shoppers for you. Get free early access.”"
  ],
  "shots": [
   {
-   "t": "0-2s",
-   "who": "Shopper",
-   "what": "She clicks Add to cart; the Added to cart notice slides in.",
-   "line": "Mm. Fig and Cedar. Perfect.",
-   "speaker": "Shopper (inner)",
-   "assets": [
-    "image1",
-    "image2",
-    "audio1"
-   ]
-  },
-  {
-   "t": "2-4s",
-   "who": "Shopper, Cat",
-   "what": "The cat walks the sofa behind her; she glances at it.",
-   "line": "Wait.",
-   "speaker": "Shopper (inner)",
-   "assets": [
-    "image1",
-    "audio1"
-   ]
-  },
-  {
-   "t": "4-7s",
-   "who": "Shopper",
-   "what": "Eyes in: a steady push into her eye.",
-   "line": "Is this one safe for my cat?",
-   "speaker": "Shopper (inner)",
-   "assets": [
-    "image1",
-    "video1",
-    "audio1"
-   ]
-  },
-  {
-   "t": "7-9s",
-   "who": "Shopper",
-   "what": "She scrolls the product page: nothing about pets.",
-   "line": "It doesn't say anywhere.",
-   "speaker": "Shopper (inner)",
-   "assets": [
-    "image1",
-    "image2",
-    "audio1"
-   ]
-  },
-  {
-   "t": "9-11s",
-   "who": "Shopper, Cat",
-   "what": "She closes the laptop; the cat settles behind her.",
-   "line": "Guess not.",
-   "speaker": "Shopper (inner)",
-   "assets": [
-    "image1",
-    "audio1"
-   ]
-  },
-  {
-   "t": "11-13s",
-   "who": "Shopper, Owner",
-   "what": "High flip from her sofa to the owner in her bright studio.",
+   "t": "0-3s",
+   "who": "Shopper, cat",
+   "what": "Opening shot. Wide, slow arc toward her on the sofa, candles everywhere, laptop open, the cat curled beside her.",
    "line": "",
    "speaker": "",
    "assets": [
     "image1",
+    "image2",
+    "image3"
+   ]
+  },
+  {
+   "t": "3-5s",
+   "who": "Shopper (hand)",
+   "what": "Hard cut. Over her shoulder: her fingers scroll the product page down, then back up.",
+   "line": "",
+   "speaker": "",
+   "assets": [
+    "image1",
+    "image3",
+    "image4"
+   ]
+  },
+  {
+   "t": "5-8s",
+   "who": "Shopper, cat",
+   "what": "Hard cut. Close-up; the camera slowly circles her face; the cat soft behind.",
+   "line": "Are these safe for cats?",
+   "speaker": "Shopper (inner)",
+   "assets": [
+    "image1",
+    "image2",
+    "image3",
+    "audio1"
+   ]
+  },
+  {
+   "t": "8-10s",
+   "who": "Shopper",
+   "what": "Hard cut. Medium close-up, slow push in: she scrolls faster, finds nothing; jaw tightens, sharp exhale, rubs her brow.",
+   "line": "",
+   "speaker": "",
+   "assets": [
+    "image1",
+    "image3",
+    "image4"
+   ]
+  },
+  {
+   "t": "10-13s",
+   "who": "Shopper, cat",
+   "what": "Hard cut. Medium: she closes the site, leans back, looks at the cat.",
+   "line": "I guess we'll never know.",
+   "speaker": "Shopper (inner)",
+   "assets": [
+    "image1",
+    "image2",
+    "image3",
+    "audio1"
+   ]
+  },
+  {
+   "t": "13-15s",
+   "who": "Shopper → owner",
+   "what": "High flip (@Video2): the camera rises over her until it looks straight down, the sofa back sweeps the frame as the view flips, out level on the owner at her desk.",
+   "line": "",
+   "speaker": "",
+   "assets": [
     "video2",
-    "image4",
-    "image5"
+    "image1",
+    "image5",
+    "image6"
    ]
   },
   {
-   "t": "13-17s",
+   "t": "15-21s",
    "who": "Owner",
-   "what": "Hand on the jar, she reads the red sales row, then frowns.",
-   "line": "Huh. Three sold? I thought Fig and Cedar would sell more.",
+   "what": "Lands from the flip. Medium close-up, slow push in: she reads Fig & Cedar at 3, the lit jar beside the laptop, and sighs.",
+   "line": "I guess no one's interested in Fig and Cedar. No one wants this. Time to discontinue the product line.",
    "speaker": "Owner",
    "assets": [
-    "image4",
-    "image3",
+    "image5",
     "image6",
-    "video3",
+    "image7",
+    "image8",
     "audio2"
    ]
   },
   {
-   "t": "17-20s",
-   "who": "Owner",
-   "what": "She lifts the jar toward a box marked CLEARANCE.",
-   "line": "Guess nobody wants it. I'm discontinuing it.",
-   "speaker": "Owner",
+   "t": "21-23s",
+   "who": "Owner, jar",
+   "what": "Hard cut. Close-up: she leans in and blows out the jar; three flames go out, smoke rises.",
+   "line": "",
+   "speaker": "",
    "assets": [
-    "image4",
-    "image3",
-    "video3",
-    "audio2"
+    "image5",
+    "image8",
+    "image6"
    ]
   },
   {
-   "t": "20-22s",
-   "who": "Owner, Scout orb",
-   "what": "Scout pops out of her laptop; she freezes, jar above box.",
-   "line": "Don't guess.",
+   "t": "23-25s",
+   "who": "Smoke",
+   "what": "Hard cut. Macro on the smoking wicks, slow push in; the studio dims.",
+   "line": "Don't guess why your shoppers don't buy.",
    "speaker": "Scout",
    "assets": [
-    "image7",
-    "image4",
+    "image8",
+    "image6",
     "audio3"
    ]
   },
   {
-   "t": "22-24s",
-   "who": "Scout orb",
-   "what": "Scout flies over the night city to the shopper's lit window.",
-   "line": "Ask them.",
-   "speaker": "Scout",
-   "assets": [
-    "image7",
-    "video4",
-    "audio3"
-   ]
-  },
-  {
-   "t": "24-26s",
-   "who": "Owner",
-   "what": "She reads the shopper's answer, sets the jar back, smiles.",
-   "line": "They'll tell you why.",
-   "speaker": "Scout",
-   "assets": [
-    "image4",
-    "image3",
-    "audio3"
-   ]
-  },
-  {
-   "t": "26-30s",
-   "who": "Scout orb",
-   "what": "Scout becomes the o of the Scout wordmark end screen.",
+   "t": "25-30s",
+   "who": "End screen",
+   "what": "Hard cut. Scout's end screen, its picture and voice.",
    "line": "Scout interviews your shoppers for you. Get free early access.",
    "speaker": "Scout",
    "assets": [
-    "image7",
-    "video5"
+    "video1"
    ]
   }
  ]
