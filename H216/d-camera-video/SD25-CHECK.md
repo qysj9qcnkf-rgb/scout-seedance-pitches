@@ -19,7 +19,7 @@ Task: video generation with references. Gate: @Video1 is 4.5 s and @Video2 is 5 
 | # | Item | Result | Proof line |
 |---|------|--------|-----------|
 | 1 | One primary task | PASS | Generation only: "Generate a warm live-action story ad." |
-| 2 | Subjects, counts, scene, props, outcome unchanged | PASS | One shopper, one cat, one owner, one jar; "so she leaves without buying"; "discontinues the line on that wrong premise, deleting it from her website"; 22-23s she blows out the jar; end screen. Matches STORY.md lines 1-6 and Emile's H240 note. Cause shown before reaction: the page with nothing about pets (3-10s) comes before she leaves, the sales screen (15-21s) before the owner's line |
+| 2 | Subjects, counts, scene, props, outcome unchanged | PASS | One shopper, one cat, one owner, one jar; "so she leaves without buying"; "discontinues the line on that wrong premise, deleting it from her website"; 22-23s she blows out the jar; end screen. Matches STORY.md lines 1-6 and Emile's H240 note. Cause shown before reaction: the page with nothing about pets (3-10s) comes before she leaves, the sales screen (15-17s) before the owner's line |
 | 3 | Every required entity covered; no merge | PASS | Shopper @Image1, cat @Image2, apartment @Image3, product page @Image4, owner @Image5, studio @Image6, sales @Image7, jar @Image8, store admin @Image9, Scout @Video1 |
 | 4 | Every used asset has one unique role | PASS | 14 role lines, one per asset; @Audio3 = timbre in 23-25s only; @Video1 = end screen in 25-30s only |
 | 5 | User's existing references kept | PASS | Brief fixes "High flip (@Video2)"; kept as @Video2 |

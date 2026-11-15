@@ -8,12 +8,13 @@
 @Image7 is the owner's candle studio.
 @Image8 is the owner's laptop screen: units sold, Fig & Cedar at 3 (−84%).
 @Image9 is the one Fig & Cedar jar, on the owner's desk.
+@Image10 is her store admin, only on her laptop screen, never an overlay.
 @Video1 is only the High flip camera move.
 @Video2 is the end screen picture.
 @Audio1, @Audio2, @Audio3: voice timbre only for the shopper, the owner and Scout; do not use their words.
 
 【Generation Goal】
-A cat lady in her candle-filled apartment searches the Fig & Cedar page for whether the candles are safe for cats, finds nothing and leaves without buying. The owner, reading her Fig & Cedar sales, guesses no one wants it and decides to discontinue it. Scout: don't guess. Please note that this is not video editing.
+A cat lady in her candle-filled apartment searches the Fig & Cedar page for whether the candles are safe for cats, finds nothing and leaves without buying. The owner sees only the missing sales, wrongly concludes nobody wants Fig & Cedar and, surprisingly, discontinues it, deleting it from her website. Scout: don't guess.
 
 【Shots】
 0-3s: [Panel 1, opening shot, wide, slow arc toward her] Night, dozens of lit candles everywhere; she sits on the sofa, laptop on her lap, the cat curled beside her.
@@ -24,12 +25,15 @@ Shopper (inner voice, lips closed, wondering): {Are these safe for cats?}
 10-13s: [Panel 5, Hard cut, medium] She closes the site to an empty browser, leans back, looks at the cat.
 Shopper (inner voice, lips closed, flat): {I guess we'll never know.}
 13-15s: [Panels 6-7, High flip like @Video1] The camera rises over her until it looks straight down, the back of the sofa sweeps across the frame as the view flips, and it comes out level on the owner at her desk.
-15-21s: [Panels 8-9, lands from the flip, medium, then closer] The owner at her desk, units-sold list on screen, the lit Fig & Cedar jar beside the laptop. She sighs.
-Owner (on camera, resigned): {I guess no one's interested in Fig and Cedar. No one wants this. Time to discontinue the product line.}
-21-23s: [Panel 10, Hard cut, close-up] She leans in and blows out the Fig & Cedar candle; the three flames go out, smoke rises <a soft blow>.
-23-25s: [Panel 11, Hard cut, macro] Smoking wicks; the studio dims.
+15-17s: [Panel 8, lands from the flip, over her shoulder onto her laptop, slow push in] The units-sold list only on her laptop screen, never an overlay; the Fig & Cedar row in red.
+Owner (on camera, from behind, flat surprise): {Wow, Fig and Cedar totally failed.}
+17-20s: [Panel 9, Hard cut, slow orbit around her with the laptop as the centre] She sits still, staring at the laptop, the lit jar beside it.
+Owner (on camera, disappointed): {Looks like no one's interested in Fig and Cedar.}
+20-22s: [Panel 10, Hard cut, macro on her laptop] Her cursor clicks the red X on Fig & Cedar in her store admin <click>; the row disappears.
+22-23s: [Panel 11, Hard cut, close-up] She leans in and blows out the jar <a soft breath>; the three flames go out.
+23-25s: [Panel 12, Hard cut, macro] The jar's smoking wicks.
 Scout (off screen, calm): {Don't guess why your shoppers don't buy.}
-25-30s: [Panel 12, Hard cut, end screen as @Video2]
+25-30s: [End screen, Hard cut, as @Video2]
 Scout (off screen, warm): {Scout interviews your shoppers for you. Get free early access.}
 
 【Style and Sound】
