@@ -22,7 +22,7 @@
   var sections = [];
   var posters = new Map();
   var ui = {};
-  var state = { row: null, section: null, lbIndex: -1, lbItem: null, lbOpener: null, backY: null, decorating: false };
+  var state = { lbY: 0, row: null, section: null, lbIndex: -1, lbItem: null, lbOpener: null, backY: null, decorating: false };
 
   function txt(el) { return el ? (el.textContent || '').replace(/\s+/g, ' ').trim() : ''; }
   function clip(s, n) { return s.length > n ? s.slice(0, n - 1).replace(/\s+\S*$/, '') + '…' : s; }
@@ -614,20 +614,32 @@
     });
   }
 
+  /* Lock the page under the viewer without moving it: pin the body at the reader's Y,
+     then put that exact Y back on close (Codex H239 fix 1). */
   function lockScroll(on) {
-    var de = document.documentElement;
+    var de = document.documentElement, b = document.body;
     if (on) {
       var sw = window.innerWidth - de.clientWidth;
-      de.classList.add('rv-locked');
       if (sw > 0) de.style.setProperty('--rv-sbw', sw + 'px');
+      b.style.position = 'fixed';
+      b.style.top = (-state.lbY) + 'px';
+      b.style.left = '0';
+      b.style.right = '0';
+      de.classList.add('rv-locked');
     } else {
       de.classList.remove('rv-locked');
       de.style.removeProperty('--rv-sbw');
+      b.style.position = ''; b.style.top = ''; b.style.left = ''; b.style.right = '';
+      var prev = de.style.scrollBehavior;
+      de.style.scrollBehavior = 'auto';
+      window.scrollTo(window.scrollX, state.lbY);
+      de.style.scrollBehavior = prev;
     }
   }
 
   function openLB(item, opener) {
-    var y = window.scrollY;
+    var wasOpen = ui.lb && !ui.lb.hidden;
+    if (!wasOpen) state.lbY = window.scrollY;
     if (!ui.lb) buildLightbox();
     state.lbOpener = opener || document.activeElement;
     var idx = assets.indexOf(item);
@@ -637,7 +649,6 @@
     if (ui.lb.hidden) { ui.lb.hidden = false; lockScroll(true); }
     var x = ui.lb.querySelector('.rv-lb-x');
     try { x.focus({ preventScroll: true }); } catch (e) { x.focus(); }
-    if (window.scrollY !== y) window.scrollTo(0, y);
   }
 
   function stopMedia() {
@@ -692,13 +703,12 @@
 
   function closeLB(keepFocus) {
     if (!ui.lb || ui.lb.hidden) return;
-    var y = window.scrollY;
     stopMedia();
     ui.lb.querySelector('.rv-lb-stage').innerHTML = '';
     ui.lb.hidden = true;
     lockScroll(false);
     if (!keepFocus && state.lbOpener && state.lbOpener.focus) { try { state.lbOpener.focus({ preventScroll: true }); } catch (e) { /* ignore */ } }
-    if (window.scrollY !== y) window.scrollTo(0, y);
+    if (Math.abs(window.scrollY - state.lbY) > 1) window.scrollTo(window.scrollX, state.lbY);
   }
 
   function adHoc(src, title, kind) {
