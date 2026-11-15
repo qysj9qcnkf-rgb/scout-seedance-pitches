@@ -6,16 +6,15 @@
 @Image5 is her grey tabby cat.
 @Image6 is the owner: face, side braid, rust sweater.
 @Image7 is the owner's candle studio.
-@Image8 is the store's Products list, only on the laptop screen: other candles selling, Fig & Cedar 212 in stock, 3 sales.
 @Image9 is the one Fig & Cedar jar, on the owner's desk.
-@Image10 is the same admin with the red X on Fig & Cedar, only on the laptop screen, never an overlay.
-@Image11 is the co-founder: face, short fade, beard, charcoal sweater.
+@Image8 is the store admin with the red X on Fig & Cedar (212 in stock, 3 sales), only on the laptop screen, never an overlay.
+@Image10 is the co-founder: face, short fade, beard, charcoal sweater.
 @Video1 is only the High flip camera move.
 @Video2 is the end screen picture.
 @Audio1, @Audio2, @Audio3, @Audio4: voice timbre only for the shopper, the owner, Scout and the co-founder; do not use their words.
 
 【Generation Goal】
-A cat lady in her candle-filled apartment searches the Fig & Cedar page for whether the candles are safe for cats, finds nothing and leaves without buying. The owner and her co-founder see only the missing sales; he is sure their customers don't want Fig & Cedar, she agrees, and they delete it from their store. Scout: don't guess.
+A cat lady in her candle-filled apartment searches the Fig & Cedar page for whether the candles are safe for cats, finds nothing and leaves without buying. The owner and her co-founder see only the missing sales; he is sure their customers don't want Fig & Cedar, she is impressed, and they delete it from their store. Scout: don't guess.
 
 【Shots】
 0-3s: [Panel 1, opening shot, wide, slow arc toward her] Night, dozens of lit candles everywhere; she sits on the sofa, laptop on her lap, the cat curled beside her.
@@ -25,18 +24,18 @@ Shopper (inner voice, lips closed, wondering): {Are these safe for cats?}
 8-10s: [Panel 4, Hard cut, medium close-up] She scrolls faster, finds nothing about pets; jaw tightens, sharp exhale through the nose <short nose exhale>, rubs her brow. Silent.
 10-13s: [Panel 5, Hard cut, medium] She closes the site to an empty browser, leans back, looks at the cat.
 Shopper (inner voice, lips closed, flat): {I guess we'll never know.}
-13-15s: [Panels 6-7, High flip like @Video1] The camera rises over her until it looks straight down, the back of the sofa sweeps across the frame as the view flips, and it comes out level on the owner at her desk.
-15-18s: [Panel 8, Hard cut, over both their shoulders onto the laptop] She scrolls the Products list past other candles to Fig & Cedar: 212 in stock, 3 sales. He listens, mouth closed.
-Owner (on camera, from behind, stunned): {Wow, I can't believe Fig and Cedar totally failed.}
-18-22s: [Panel 9, Hard cut, medium, facing them] He leans back, arms crossed, smug; she turns to him.
-Co-founder (on camera, smooth, overconfident): {I told you. Our customers just aren't into Fig and Cedar.}
-22-24s: [Panel 10, Hard cut, over her shoulder onto the laptop]
-Owner (on camera, from behind, giving in): {I guess you're right.} Her cursor clicks the red X on Fig & Cedar <click>; the row disappears.
-24-25s: [Panel 11, Hard cut, close-up] She leans in and blows out the jar <a soft breath>; the three flames go out.
-25-27s: [Panel 12, Hard cut, macro] The jar's smoking wicks.
+13-15s: [Panels 6-7, High flip like @Video1] The camera rises over her until it looks straight down, the back of the sofa sweeps across the frame as the view flips, and it comes out level on the owner and her co-founder at their desk. The mood flips from her calm to their hype.
+15-18s: [Panel 8, Hard cut, two-shot facing them] Both lean in toward the laptop, wide-eyed, intense.
+Owner and co-founder (on camera, together, hyped): {Damn, what's going on with Fig and Cedar?}
+18-21s: [Panel 9, Hard cut, on him] He leans back, arms crossed, cocky grin; she turns to him.
+Co-founder (on camera, cool, cocky, a little street): {Yeah, I told you. Customers just aren't into Fig and Cedar.}
+21-23s: [Panel 10, Hard cut, on her] Hand on her chest, amazed, as if he were a visionary; he smirks.
+Owner (on camera, deeply impressed): {Damn, you just know things.}
+23-24s: [Panel 11, Hard cut, over her shoulder onto the laptop] Her cursor clicks the red X on Fig & Cedar <click>; the row disappears.
+24-27s: [Panel 12, Hard cut, close-up] She blows out the jar <a soft breath>; flames out, wicks smoke.
 Scout (off screen, calm): {Don't guess why your shoppers don't buy.}
 27-30s: [End screen, Hard cut, as @Video2]
 Scout (off screen, warm): {Scout interviews your shoppers for you. Get free early access.}
 
 【Style and Sound】
-Photoreal, warm candlelight. Hard cuts, except the High flip at 13-15s. No ka-ching, no cart sound, no Add-to-cart click. (Soft piano, low under speech.) English dialogue exactly as written. No subtitles.
+Photoreal, warm candlelight. Hard cuts, except the High flip at 13-15s. No ka-ching, no cart sound, no Add-to-cart click. (Soft piano under her half; a punchy, upbeat beat under theirs.) English dialogue exactly as written. No subtitles.
