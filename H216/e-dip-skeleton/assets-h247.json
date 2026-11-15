@@ -1,0 +1,130 @@
+{
+ "card": "H247 Render \u00b7 Cat-candle ad \u00b7 E (from H228)",
+ "prompt": "prompt-sd25pe-final.txt",
+ "model": "seedance_2_5",
+ "mode": "omni_reference",
+ "duration": 30,
+ "aspect_ratio": "9:16",
+ "resolution": "480p",
+ "generate_audio": true,
+ "assets_in_order": [
+  {
+   "ref": "@Image1",
+   "role": "shopper: face, bob with bangs, cream cardigan",
+   "media_id": "6863aea3-f1bb-44d8-a97d-f9012864baa5",
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_398kORxw9vOlFFTUC4yYsMhV0Fj/6863aea3-f1bb-44d8-a97d-f9012864baa5.png",
+   "local_file": "a2/image1-shopper.png",
+   "sha256": "d48eb8a8a0861038fd646fac585523ece334d85bea713a5c96b2f0abba40dc97",
+   "remote_matches_local": true
+  },
+  {
+   "ref": "@Image2",
+   "role": "shopper's apartment: white pillar candles + tea lights, no jars",
+   "media_id": "d006adfc-2f01-41d0-ac79-5d1839a2afff",
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_398kORxw9vOlFFTUC4yYsMhV0Fj/d006adfc-2f01-41d0-ac79-5d1839a2afff.png",
+   "local_file": "a2/image2-shopper-apartment.png",
+   "sha256": "b1b45932e9da380ef0f67d636d735ad3708a9a4f0d20e1d9ea3799a575a4ee90",
+   "remote_matches_local": true
+  },
+  {
+   "ref": "@Image3",
+   "role": "shopper's grey tabby cat",
+   "media_id": "696c034b-34ca-4b95-8f62-382f22de2f6f",
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_398kORxw9vOlFFTUC4yYsMhV0Fj/696c034b-34ca-4b95-8f62-382f22de2f6f.jpg",
+   "local_file": "a2/image3-cat.jpg",
+   "sha256": "4145d23f5e0ff9fd75250b87f31a24a61e6a85aa7dc66168d04303f33a1158a6",
+   "remote_matches_local": true
+  },
+  {
+   "ref": "@Image4",
+   "role": "shopper's laptop screen: Fig & Cedar product page (pointer removed)",
+   "media_id": "4e666139-7388-4246-a7f2-8c75463d0655",
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_398kORxw9vOlFFTUC4yYsMhV0Fj/4e666139-7388-4246-a7f2-8c75463d0655.png",
+   "local_file": "a2/image4-product-page.png",
+   "sha256": "61d3a42ec599cff627e33e37c19b9649219435fffc15e831249dc038bbe6743a",
+   "remote_matches_local": true
+  },
+  {
+   "ref": "@Image5",
+   "role": "owner: face, auburn braid, rust sweater",
+   "media_id": "c36aaeb4-75a6-4741-8b79-c8f34f49de1a",
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_398kORxw9vOlFFTUC4yYsMhV0Fj/c36aaeb4-75a6-4741-8b79-c8f34f49de1a.png",
+   "local_file": "a2/image5-owner.png",
+   "sha256": "bbc1176a7b23ee84075e7d9f286d0344a347493bb69e3a6ba7ec6eaf823051c8",
+   "remote_matches_local": true
+  },
+  {
+   "ref": "@Image6",
+   "role": "owner's sunlit studio",
+   "media_id": "f7d402a0-7846-4883-96d5-8c9fab8b999f",
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_398kORxw9vOlFFTUC4yYsMhV0Fj/f7d402a0-7846-4883-96d5-8c9fab8b999f.png",
+   "local_file": "a2/image6-owner-studio.png",
+   "sha256": "f154bc61337e49ed8351511cebab0386997c04bedb07872f56e03bd408cb1a4d",
+   "remote_matches_local": true
+  },
+  {
+   "ref": "@Image7",
+   "role": "owner's laptop screen: sales page, Fig & Cedar row red",
+   "media_id": "8c33aad5-bc87-4b86-965e-1a967b2686d3",
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_398kORxw9vOlFFTUC4yYsMhV0Fj/8c33aad5-bc87-4b86-965e-1a967b2686d3.png",
+   "local_file": "a2/image7-owner-sales.png",
+   "sha256": "492e79700ac558d9e87ddfeda007728c8d2347e2b9a6eb0832c540ce6abda814",
+   "remote_matches_local": true
+  },
+  {
+   "ref": "@Image8",
+   "role": "the Fig & Cedar jar (page photo crop)",
+   "media_id": "a6be392e-53f0-4230-8ded-1abbed02b2ee",
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_398kORxw9vOlFFTUC4yYsMhV0Fj/a6be392e-53f0-4230-8ded-1abbed02b2ee.png",
+   "local_file": "a2/image8-fig-cedar-jar.png",
+   "sha256": "b4d947c9a49bb571a74199180375bedbfe126ef3b4836f84a4bbfeb3370865cb",
+   "remote_matches_local": true
+  },
+  {
+   "ref": "@Video1",
+   "role": "The Dip skeleton, 25 s grey coarse blockout",
+   "media_id": "419879cc-cce3-4aa9-a30a-4d2f53841c91",
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_398kORxw9vOlFFTUC4yYsMhV0Fj/419879cc-cce3-4aa9-a30a-4d2f53841c91.mp4",
+   "local_file": "a2/video1-dip-skeleton.mp4",
+   "sha256": "605bb6bbbf7baed5dfdf985d694b57caf9cb02b5120da9c76efb1ad9bf9462c9",
+   "remote_matches_local": true
+  },
+  {
+   "ref": "@Video2",
+   "role": "H158 end screen (fixed-voice master), 4.5 s, picture only",
+   "media_id": "b2587db7-cdcb-4a9a-9694-74ceedbf3931",
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_398kORxw9vOlFFTUC4yYsMhV0Fj/b2587db7-cdcb-4a9a-9694-74ceedbf3931.mp4",
+   "local_file": "a2/video2-end-screen.mp4",
+   "sha256": "247eb9d7bc8dc5d204b27e51c67c0a077496e70bddd5da30e223e1d8be8d9502",
+   "remote_matches_local": true
+  },
+  {
+   "ref": "@Audio1",
+   "role": "shopper voice timbre, 9 s",
+   "media_id": "4203dd9a-c54c-45b9-82aa-43f37890e723",
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_398kORxw9vOlFFTUC4yYsMhV0Fj/4203dd9a-c54c-45b9-82aa-43f37890e723.mp3",
+   "local_file": "a2/audio1-shopper-voice.mp3",
+   "sha256": "701b9ef0b64336c890cc441ad054aeda8246b25daf3d6799859310d145542381",
+   "remote_matches_local": true
+  },
+  {
+   "ref": "@Audio2",
+   "role": "owner voice timbre, 10 s",
+   "media_id": "181644ae-51c1-45e8-a5f3-f964ffaabfbd",
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_398kORxw9vOlFFTUC4yYsMhV0Fj/181644ae-51c1-45e8-a5f3-f964ffaabfbd.mp3",
+   "local_file": "a2/audio2-owner-voice.mp3",
+   "sha256": "d5ca81d5d7bcd5a3e41cb20b4f6de1aad94b35f3d3e5c8cab30f43b7933bebf3",
+   "remote_matches_local": true
+  },
+  {
+   "ref": "@Audio3",
+   "role": "Scout voice (end-screen line), 4.5 s",
+   "media_id": "390b5a38-aebb-4de2-9f8c-8019f63edef0",
+   "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_398kORxw9vOlFFTUC4yYsMhV0Fj/390b5a38-aebb-4de2-9f8c-8019f63edef0.mp3",
+   "local_file": "a2/audio3-scout-voice.mp3",
+   "sha256": "98356cf9cb9f4e70b6e41cb82014c83712149cf007e2030dd029d9b1f7428e17",
+   "remote_matches_local": true
+  }
+ ],
+ "note": "Every media id re-checked Nov 15 ~3:00 PM ET: the CDN bytes equal the local file (sha256). Image1/5/6 and Video2 re-uploaded free so every input is a plain upload."
+}

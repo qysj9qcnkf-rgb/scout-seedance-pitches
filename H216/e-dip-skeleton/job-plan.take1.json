@@ -1,0 +1,49 @@
+{
+ "model": "seedance_2_5",
+ "mode": "omni_reference",
+ "draft": true,
+ "resolution": "480p",
+ "duration": 30,
+ "aspect_ratio": "9:16",
+ "generate_audio": true,
+ "quoted_credits": 90,
+ "submitted": false,
+ "round": "Nov 15 E rebuild on The Dip (Emile 2:02 PM: 'I don't even see the Dip in the files')",
+ "prompt_file": "prompt-sd25pe-final.txt",
+ "asset_folder": "a2/",
+ "medias_in_order": {
+  "image1_shopper": "6863aea3-f1bb-44d8-a97d-f9012864baa5",
+  "image2_shopper_apartment_candles": "d006adfc-2f01-41d0-ac79-5d1839a2afff",
+  "image3_cat": "696c034b-34ca-4b95-8f62-382f22de2f6f",
+  "image4_product_page": "4e666139-7388-4246-a7f2-8c75463d0655",
+  "image5_owner": "c36aaeb4-75a6-4741-8b79-c8f34f49de1a",
+  "image6_owner_studio": "f7d402a0-7846-4883-96d5-8c9fab8b999f",
+  "image7_owner_sales": "8c33aad5-bc87-4b86-965e-1a967b2686d3",
+  "image8_fig_cedar_jar": "a6be392e-53f0-4230-8ded-1abbed02b2ee",
+  "video1_dip_skeleton_25s_grey_blockout": "419879cc-cce3-4aa9-a30a-4d2f53841c91",
+  "video2_h158_end_screen": "b2587db7-cdcb-4a9a-9694-74ceedbf3931",
+  "audio1_shopper_voice_9s": "4203dd9a-c54c-45b9-82aa-43f37890e723",
+  "audio2_owner_voice_10s": "181644ae-51c1-45e8-a5f3-f964ffaabfbd",
+  "audio3_scout_voice_4_5s": "390b5a38-aebb-4de2-9f8c-8019f63edef0"
+ },
+ "asset_count": {
+  "images": 8,
+  "videos": 2,
+  "audio": 3,
+  "total": 13
+ },
+ "totals": {
+  "video_seconds": 29.5,
+  "audio_seconds": 23.5
+ },
+ "dropped_vs_previous": [
+  "High flip clip (that is D/H227's technique; the flip is written in words at The Dip's 9-11 s flight)",
+  "Scout logo/orb image"
+ ],
+ "new_free_asset": "image2 = shopper apartment full of candles, GPT Image via codex exec (0 credits), uploaded free as media 6c1574e8",
+ "spend": "none",
+ "technique": "The Dip (H174) as a grey coarse blockout @Video1 (a2/video1-dip-skeleton.mp4, 25 s): cuts, shot sizes, camera moves, pacing only",
+ "image2_note": "Nov 15 2:11 PM (Emile): apartment candles are white/cream pillars and tea lights, no amber jars; free GPT Image edit via codex, uploaded free (d006adfc). Previous still in a2-old/.",
+ "asset_list": "assets-h247.json",
+ "render_card": "H247 (gid 1220547176325716)"
+}

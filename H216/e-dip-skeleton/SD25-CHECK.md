@@ -12,16 +12,16 @@ Updated by Emile on H240, 2:35 PM (every cat-candle ad): owner lines are now {Wo
 ## Assets inspected (every one opened)
 | Ref | File | What it really is | Spec / media |
 |---|---|---|---|
-| @Image1 | a2/image1-shopper.png | Woman, dark-brown bob with bangs, cream cardigan, at a laptop; room, lamp, tabby, small candle behind | 880x1168 · 561ba2d9 |
+| @Image1 | a2/image1-shopper.png | Woman, dark-brown bob with bangs, cream cardigan, at a laptop; room, lamp, tabby, small candle behind | 880x1168 · 6863aea3 (free re-upload, sha256 = local) |
 | @Image2 | a2/image2-shopper-apartment.png | Empty night living room, sofa, coffee table + laptop, lamp, ~20 lit white/cream pillar candles and tea lights (no jars, no amber glass — Emile 2:11 PM), cat bed; no people/animals/text | 941x1672 · d006adfc (free edit + upload) |
 | @Image3 | a2/image3-cat.jpg | Grey tabby only, standing; sofa behind | 436 px wide · 696c034b |
 | @Image4 | a2/image4-product-page.png | Ember & Fig product page, Fig & Cedar $38, Burn time/Size/Wax rows, no pet info; mouse pointer painted out | 1600x1000 · 4e666139 |
-| @Image5 | a2/image5-owner.png | Woman, auburn side braid, rust sweater | 1536x2048 · 1963a66d |
-| @Image6 | a2/image6-owner-studio.png | Sunlit studio, brick, shelves of lit jars, desk, laptop, a tall labelled jar (fenced) | 752x1344 · 50199c94 |
+| @Image5 | a2/image5-owner.png | Woman, auburn side braid, rust sweater | 1536x2048 · c36aaeb4 (free re-upload, sha256 = local) |
+| @Image6 | a2/image6-owner-studio.png | Sunlit studio, brick, shelves of lit jars, desk, laptop, a tall labelled jar (fenced) | 752x1344 · f7d402a0 (free re-upload, sha256 = local) |
 | @Image7 | a2/image7-owner-sales.png | Products · units sold; Fig & Cedar row red, 3, -84% | 1600x1000 · 8c33aad5 |
 | @Image8 | a2/image8-fig-cedar-jar.png | The page's jar photo: short, wide amber, three wicks, kraft label; fig leaves, linen | 660x660 · a6be392e |
 | @Video1 | a2/video1-dip-skeleton.mp4 | The Dip (H174), grey + blurred, no audio. Cuts (scene detect + 2 fps sheet): 0-1.4 desk phone + notification cards · 1.4-4.5 woman at desk with laptop + jar (medium) · 4.5-5.8 push into laptop · 5.8-6.8 five flash cuts (product page, jar) · 7-8.6 woman medium, phone · 8.6-11 orb flies out the window over a city, globe · 11-12 man in kitchen (wide) · 12-15.6 frontal medium on the man with a waveform card · 15.6-17.8 over-the-shoulder with cards and "birthday candle" text · 17.8-19.4 over-the-shoulder, chat bubbles, paper · 19.4-21 woman holding jar + phone to camera · 21-22.4 hand, jar, mug insert · 22.4-23.2 product-page insert · 23.2-25 punch-in on woman's face with jar | 25.00 s, 480x854 · 419879cc |
-| @Video2 | a2/video2-end-screen.mp4 | Scout end screen; its voice says the end line | 4.50 s, 1080x1920 · cae62718 |
+| @Video2 | a2/video2-end-screen.mp4 | Scout end screen; its voice says the end line | 4.50 s, 1080x1920 · b2587db7 (free re-upload, sha256 = local) |
 | @Audio1 | a2/audio1-shopper-voice.mp3 | Calm woman's voice | 9.00 s · 4203dd9a |
 | @Audio2 | a2/audio2-owner-voice.mp3 | Alexandra, warm | 10.00 s · 181644ae |
 | @Audio3 | a2/audio3-scout-voice.mp3 | Video2's line | 4.50 s · 390b5a38 |
@@ -109,5 +109,8 @@ Known risk (not a rule FAIL): @Video1 is The Dip greyed and blurred, not simple 
 - She clicks X to delete Fig & Cedar from her site (18-19s), then blows out the jar as Scout's line lands (21-25s). One primary change per stage: 18-19 = row deleted, 21-25 = candle out. PASS.
 - Clean H158 end screen exactly: "hard cut to the end screen, exactly @Video2, clean" (the smoke dissolve removed). PASS.
 - Checklist 2/3/11/12/20/21 and Principles 1/3/10 re-run on the changed shots: PASS. Limits unchanged except 1,000 words.
+
+## Pre-spend gate (H247, Nov 15 ~3:00 PM ET)
+Asset list `assets-h247.json`: 13 refs in prompt order, each media id's CDN bytes sha256-equal to the local a2/ file; Image1, Image5, Image6 and Video2 (the fixed-voice H158 end screen used in a2/) re-uploaded free so every input is a plain upload. Prompt unchanged since the 2:35 PM fold-in (1,000 words). Page prompt block, shot list and review summary checked line by line against the prompt.
 
 ## Result: zero FAILs.
