@@ -99,7 +99,7 @@ img { cursor: zoom-in; }
 .rv-pill.is-on { background: var(--rv-accent-bg); color: var(--rv-accent) !important; border-color: var(--rv-accent-bg); font-weight: 600; }
 .rv-r-sec { display: flex; flex-direction: column; gap: 1px; }
 .rv-sec {
-  text-align: left; background: none; border: 0; border-left: 2px solid transparent; padding: 3px 8px;
+  text-align: left; background: none; border: 0; border-left: 2px solid transparent; border-radius: 0; padding: 3px 8px;
   font-size: 12.5px !important; color: var(--rv-muted) !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 .rv-sec:hover { color: var(--rv-ink) !important; }

@@ -155,8 +155,9 @@
       if (!pick) ds.forEach(function (d) {
         var t = txt(d.querySelector('summary')).toLowerCase(), s0 = 0;
         if (/prompt/.test(t)) s0 += 2;
-        if (/send|final|exact|sd25|optimi/.test(t)) s0 += 2;
-        if (/history|draft|ours vs|compare|next to/.test(t)) s0 -= 2;
+        if (/send|final|exact|seedance gets/.test(t)) s0 += 3;
+        if (/sd25|optimi/.test(t)) s0 += 1;
+        if (/history|draft|before|ours vs|compare|next to|check|eval|risk/.test(t)) s0 -= 4;
         if (s0 > score) { score = s0; pick = d; }
       });
       if (pick && score > 0) jumpTo(pick.querySelector('summary'), 'start');
@@ -172,6 +173,16 @@
 
   /* ---------- 1. Asset registry ---------- */
   function collectAssets() {
+    // Pages without asset ids: give captioned figures ("Image 3 · her cat") their id.
+    if (!document.querySelector('[id^="image"], [id^="video"], [id^="audio"], [id*="-image"], [id*="-video"], [id*="-audio"]')) {
+      document.querySelectorAll('figure').forEach(function (f) {
+        if (f.closest('.rv-ui') || f.id) return;
+        var m = txt(f.querySelector('figcaption')).match(/^@?(Image|Video|Audio)\s?(\d{1,2})\b/i);
+        if (!m || !f.querySelector('img, video, audio')) return;
+        var id = m[1].toLowerCase() + m[2];
+        if (!document.getElementById(id)) f.id = id;
+      });
+    }
     document.querySelectorAll('[id]').forEach(function (el) {
       var m = el.id.match(ID_RE);
       if (!m || el.closest('.rv-ui')) return;
@@ -203,7 +214,7 @@
 
       var role = [];
       el.querySelectorAll('p, .gives, .not, .ameta span, figcaption, .k').forEach(function (p) {
-        if (p.closest('.src, code, .meta, .mid')) return;
+        if (p.closest('.src, code, .mid') || p.matches('.meta, .src, .mid')) return;
         if (p.classList.contains('src') || p.classList.contains('mid')) return;
         if (p.querySelector('p, .gives, .not')) return;
         var clone = p.cloneNode(true);
@@ -212,7 +223,8 @@
         if (!s || s === title) return;
         if (role.indexOf(s) < 0) role.push(s);
       });
-      if (!title) title = role.length ? clip(role.shift(), 70) : KIND[kind] + ' ' + n;
+      if (!title) title = role.length ? clip(role[0].replace(tagRe, '').replace(/^[\s·:—-]+/, ''), 70) : KIND[kind] + ' ' + n;
+      if (role.length === 1 && role[0] === title) role = [];
 
       var a = {
         id: el.id, el: el, kind: kind, n: n, pass: pass, mtype: mtype,
@@ -615,7 +627,7 @@
     uses.innerHTML = '';
     var keyed = (a.uses || []).filter(function (r) { return r.label; });
     var seen = {};
-    keyed = keyed.filter(function (r) { var k = r.label + '|' + (r.section ? r.section.name : ''); if (seen[k]) return false; seen[k] = 1; return true; });
+    keyed = keyed.filter(function (r) { var k = r.key.pass + '|' + (r.key.time || ('s' + r.key.shot)); if (seen[k]) return false; seen[k] = 1; return true; });
     if (keyed.length) {
       uses.appendChild(h('span', 'rv-lb-uses-h', { text: 'Named in' }));
       keyed.slice(0, 14).forEach(function (r) {
@@ -796,7 +808,7 @@
     }
     ui.strip.classList.remove('is-empty');
     label.textContent = (r.label ? r.label + ' · ' : '') + (r.section ? r.section.name : '');
-    var t = txt(r.el.tagName === 'TR' ? r.el : r.el);
+    var t = r.el.tagName === 'TR' ? Array.prototype.map.call(r.el.cells, function (c) { return txt(c); }).filter(Boolean).join(' · ') : txt(r.el);
     text.textContent = clip(t, 180);
     rowAssets(r).forEach(function (a) {
       var borrowed = r.own.indexOf(a) < 0;
