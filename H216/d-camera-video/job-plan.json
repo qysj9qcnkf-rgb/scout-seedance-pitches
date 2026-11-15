@@ -45,27 +45,21 @@
   },
   {
    "tag": "image6",
-   "what": "owner studio, empty desk",
-   "value": "1992f753-0975-476d-8571-4a43c2c6c2b0",
-   "file": "a/image6-owner-studio.png"
+   "what": "owner studio + stockroom with unsold Fig & Cedar stock (take 3)",
+   "value": "f8a51279-ed8d-445e-b268-2f81add8d9ae",
+   "file": "a/image6-studio-stockroom.jpg"
   },
   {
    "tag": "image7",
-   "what": "owner units-sold list, Fig & Cedar 3 (-84%)",
-   "value": "8c33aad5-bc87-4b86-965e-1a967b2686d3",
-   "file": "a/image7-owner-sales.png"
+   "what": "store admin Fig & Cedar product page, 272 in stock, 3 sold, Discontinue (take 3)",
+   "value": "71429343-b839-4add-b864-fc7eda0df3b1",
+   "file": "a/image7-admin-product-272.jpg"
   },
   {
    "tag": "image8",
    "what": "Fig & Cedar jar, labelled (free upload Nov 15, replaces the old job-id reference)",
    "value": "a810d86e-d04c-4546-b052-be03ddfcd93a",
    "file": "a/image8-fig-cedar-jar.png"
-  },
-  {
-   "tag": "image9",
-   "what": "owner store admin Products page, red X on the Fig & Cedar row, cursor on it (free GPT Image, Nov 15 round 2)",
-   "value": "66bac8e5-e3c3-4dac-b362-0158528e64b1",
-   "file": "a/image9-store-admin-x.jpg"
   },
   {
    "tag": "video1",
@@ -99,7 +93,7 @@
   }
  ],
  "totals": {
-  "images": 9,
+  "images": 8,
   "videos": 2,
   "video_seconds": 9.5,
   "audios": 3,

@@ -1,20 +1,19 @@
 # H240 asset list: Render · Cat-candle ad · D (from approved H227)
-# Prompt: prompt-sd25pe-final.txt (sha256 b4f4b5ed8457f1fa2d1e4993def75c55613d5785afc87b69a2df85e78c5ccb95; round 2: owner part rebuilt per Emile 2:35 PM)
+# Prompt: prompt-sd25pe-final.txt (sha256 c4d3669d50b12fe9be4c70e324cc26b9d3b28714f9d4dd580a81f3b7a28aeec2; take 3: owner part as inner voice, 272 in stock, stockroom, Discontinue, per Emile 4:13 PM)
 # Upload in this order. Job: seedance_2_5, 30 s, 9:16, 480p draft, audio on (job settings, not in the prompt).
-# Every media id below returned 200 on the Higgsfield CDN on Nov 15 ~2:45 PM ET.
+# Every media id below returned 200 on the Higgsfield CDN on Nov 15 ~4:25 PM ET.
 # role | Higgsfield media id | local file | what it is
 @Image1 | d54d8df5-566f-400d-823a-fd87b64a0831 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/d-camera-video/a/image1-shopper-face.jpg | shopper face crop (free local crop, shared with A)
 @Image2 | 696c034b-34ca-4b95-8f62-382f22de2f6f | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/d-camera-video/a/image2-cat.jpg | grey tabby cat crop (free local crop, shared with A)
 @Image3 | f11fa295-b91d-4edd-b9bf-d492d8480d83 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/d-camera-video/a/image3-apartment-candles.jpg | shopper apartment v2, room only, white/cream pillar candles and tea lights only, no amber jars (free GPT Image edit Nov 15)
 @Image4 | 918984eb-8269-43da-b074-23d61faa8083 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/d-camera-video/a/image4-product-page.png | Fig & Cedar product page, mouse pointer painted out (free local fix + free upload Nov 15; old 527991c0 had the pointer on Add to cart)
 @Image5 | a3488732-1c28-4b37-bb28-0c69475dacd0 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/d-camera-video/a/image5-owner.png | owner face, braid, sweater (re-uploaded free Nov 15 for H240; old 1963a66d did not resolve on the CDN)
-@Image6 | 1992f753-0975-476d-8571-4a43c2c6c2b0 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/d-camera-video/a/image6-owner-studio.png | owner studio, empty desk
-@Image7 | 8c33aad5-bc87-4b86-965e-1a967b2686d3 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/d-camera-video/a/image7-owner-sales.png | owner units-sold list, Fig & Cedar 3 (-84%)
+@Image6 | f8a51279-ed8d-445e-b268-2f81add8d9ae | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/d-camera-video/a/image6-studio-stockroom.jpg | owner studio + stockroom: brick wall, shelves of boxes and unlit labelled Fig & Cedar jars, packing table with shipping boxes, tape gun, kraft paper, label printer, desk with laptop; no people (free GPT Image edit of the take-2 studio, Nov 15)
+@Image7 | 71429343-b839-4add-b864-fc7eda0df3b1 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/d-camera-video/a/image7-admin-product-272.jpg | owner store admin, Fig & Cedar · 3-wick product page: Inventory 272 in stock, Sold last 30 days 3, red Discontinue button with her cursor on it; no platform logo (free GPT Image, Nov 15)
 @Image8 | a810d86e-d04c-4546-b052-be03ddfcd93a | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/d-camera-video/a/image8-fig-cedar-jar.png | Fig & Cedar jar, labelled (free upload Nov 15, replaces the old job-id reference)
-@Image9 | 66bac8e5-e3c3-4dac-b362-0158528e64b1 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/d-camera-video/a/image9-store-admin-x.jpg | owner store admin Products page, red X on the Fig & Cedar row with her cursor on it (free GPT Image, Nov 15 round 2)
 @Video1 | cae62718-ec02-41f6-8e36-1de097e8427d | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/d-camera-video/a/video1-end-screen.mp4 | H158 end screen, picture and voice, 4.5 s
 @Video2 | d44455fb-e7cc-46cf-9d86-641fe8304b97 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/d-camera-video/a/video2-high-flip.mp4 | High flip camera move only, 5 s, no audio track, 600x1066
 @Audio1 | cf1289fd-1e9e-441c-9a83-65c939fde0a6 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/d-camera-video/a/audio1-shopper-voice.mp3 | shopper voice timbre, 9 s (its words are about a beach house: not used)
 @Audio2 | 54c5f7bf-6df5-47de-ba4b-a32454769d3b | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/d-camera-video/a/audio2-owner-voice.mp3 | owner voice timbre, 10 s (its words are about stone fruit notes: not used)
 @Audio3 | cd435499-8236-4dcf-8f04-24e07af602bb | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/d-camera-video/a/audio3-scout-voice.mp3 | Scout voice timbre, 4.5 s (says the end-screen line: words not used in 23-25s)
-# Totals: 9 images, 2 videos (9.5 s), 3 audio (23.5 s), 14 uploads. Unused assets: none.
+# Totals: 8 images, 2 videos (9.5 s), 3 audio (23.5 s), 13 uploads. Unused assets: none.

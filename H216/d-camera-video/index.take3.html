@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cat Candle Moves</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f3ee;--panel:#ffffff;--ink:#1c1a17;--muted:#6b645b;--line:#e3ddd3;--lime:#d1fb18;--lime-ink:#1f2a00;--amber:#b5651d;--img:#2d6cdf;--vid:#b5367a;--aud:#1d8a5b;--code:#f1ede6}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0f0e0d;--panel:#1a1816;--ink:#f1ece4;--muted:#a49b8f;--line:#2e2a26;--code:#22201d;--img:#7aa7ff;--vid:#ff7bbf;--aud:#5fd59f;--amber:#e8a35c}}
+:root[data-theme="dark"]{--bg:#0f0e0d;--panel:#1a1816;--ink:#f1ece4;--muted:#a49b8f;--line:#2e2a26;--code:#22201d;--img:#7aa7ff;--vid:#ff7bbf;--aud:#5fd59f;--amber:#e8a35c}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 Inter,system-ui,sans-serif}
+.wrap{max-width:1080px;margin:0 auto;padding:28px 16px 64px}
+h1,h2,h3{font-family:"Space Grotesk",Inter,sans-serif;line-height:1.15;margin:0 0 10px}
+h1{font-size:clamp(26px,5vw,40px)} h2{font-size:22px;margin-top:40px} h3{font-size:17px;margin-top:22px}
+.kicker{font:600 12px/1 Inter;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.story{font-size:17px;max-width:820px;padding-left:20px} .story li{margin:4px 0}
+.box{border:2px solid var(--amber);border-radius:12px;padding:16px;margin:28px 0;background:var(--panel)}
+.illus{border:1px dashed var(--line);border-radius:12px;padding:16px;margin:28px 0}
+.label{display:inline-block;font:600 12px Inter;background:var(--code);border:1px solid var(--line);border-radius:999px;padding:3px 10px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.card{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:8px;scroll-margin-top:16px}
+.card:target{outline:3px solid var(--lime)}
+.card p{margin:6px 0 0;font-size:12.5px}
+.media img,.media video{width:100%;aspect-ratio:3/4;object-fit:contain;background:#000;border-radius:8px;display:block}
+.audiobox{height:70px;display:flex;align-items:center;background:var(--code);border-radius:8px;padding:6px} .audiobox audio{width:100%}
+.tag{display:inline-block;font:600 12px/1 ui-monospace,Menlo,monospace;padding:4px 8px;border-radius:6px;margin-bottom:6px;color:#fff}
+.t-img{background:var(--img)} .t-vid{background:var(--vid)} .t-aud{background:var(--aud)}
+.chip{display:inline-block;font:600 12px/1.4 ui-monospace,Menlo,monospace;padding:0 6px;border-radius:5px;text-decoration:none;color:#fff;margin:1px 0}
+.c-image{background:var(--img)} .c-video{background:var(--vid)} .c-audio{background:var(--aud)}
+.dlg{background:color-mix(in srgb,var(--lime) 45%,transparent);border-radius:4px;padding:0 2px}
+.sfx{color:var(--amber);font-weight:600}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;min-width:820px;font-size:13.5px}
+th,td{text-align:left;vertical-align:top;padding:8px 10px;border-bottom:1px solid var(--line)} th{font-weight:600;background:var(--code)}
+.mono{font-family:ui-monospace,Menlo,monospace;white-space:nowrap}
+.ptxt{white-space:pre-wrap;overflow-wrap:anywhere;font:12.5px/1.55 ui-monospace,Menlo,monospace;background:var(--code);border:1px solid var(--line);border-radius:10px;padding:12px;margin:0;max-height:620px;overflow:auto}
+button{font:600 14px Inter;background:var(--ink);color:var(--bg);border:0;border-radius:8px;padding:9px 14px;cursor:pointer;margin:8px 0}
+details{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin:10px 0}
+summary{font:600 15px "Space Grotesk";cursor:pointer}
+.flip img{width:100%;border-radius:8px;display:block}
+.muted{color:var(--muted);font-size:13px}
+a{color:inherit}
+</style></head><body><div class="wrap">
+<header>
+<div class="kicker">H227 · Seedance 2.5 · technique D: camera moves from a reference clip</div>
+<h1>Are these safe for cats?</h1>
+<ol class="story"><li>A cat lady sits on her sofa at night; candles burn all over her apartment, her cat beside her.</li><li>She scrolls the Fig &amp; Cedar product page up and down, searching. She does not buy.</li><li>Inner voice, lips closed, the camera circling her: “Are these safe for cats?”</li><li>She finds nothing, gets annoyed (shown only), closes the site: “I guess we&#x27;ll never know.”</li><li>The High flip turns from her down to the owner, who runs the shop. In her head, nervous: “Two hundred seventy-two left.” Her stockroom is full of unsold jars: “Nobody wants Fig and Cedar.” She clicks Discontinue: “Time to discontinue the line.” She blows out the candle.</li><li>Scout&#x27;s voice: “Don&#x27;t guess why your shoppers don&#x27;t buy.” End screen: “Scout interviews your shoppers for you. Get free early access.”</li></ol>
+<p><strong>The idea, as Seedance is told it (Emile, H240):</strong> she is about to buy the candle but never finds the one thing she needs to know, whether it is safe for her cat, so she leaves without buying. The owner, who runs the online shop, sees only the missing sales and her unsold stock (272 jars), wrongly concludes nobody wants Fig &amp; Cedar, and, surprisingly, discontinues the line on that wrong premise.</p>
+<p><strong>Candles (Emile, Nov 15 2:11 PM):</strong> her home has only white pillar candles and tea lights; the amber three-wick Fig &amp; Cedar jar appears only on the product page and in the owner's studio, so she clearly doesn't own it.</p>
+<p class="muted">The technique: the one hard camera move, the High flip, is taken from a real clip (<a href="#video2">@Video2</a>, its move only). Every other move (slow arc, circling her face, push-ins) is written in words. 30 s, 9:16, draft 480p, set in the job, not in the prompt. Nothing has been generated or spent.</p>
+</header>
+
+<h2>Shot list</h2>
+<div class="tablewrap"><table><thead><tr><th>Time</th><th>Who</th><th>What</th><th>Line</th><th>Assets</th></tr></thead><tbody>
+<tr><td class="mono">0-3s</td><td>Shopper, cat</td><td>Opening shot. Wide, slow arc toward her on the sofa, candles everywhere, laptop open, the cat curled beside her.</td><td>—</td><td><a class="chip c-image" href="#image1">@Image1</a> <a class="chip c-image" href="#image2">@Image2</a> <a class="chip c-image" href="#image3">@Image3</a></td></tr><tr><td class="mono">3-5s</td><td>Shopper (hand)</td><td>Hard cut. Over her shoulder: her fingers scroll the product page down, then back up.</td><td>—</td><td><a class="chip c-image" href="#image1">@Image1</a> <a class="chip c-image" href="#image3">@Image3</a> <a class="chip c-image" href="#image4">@Image4</a></td></tr><tr><td class="mono">5-8s</td><td>Shopper, cat</td><td>Hard cut. Close-up; the camera slowly circles her face; the cat soft behind.</td><td>Are these safe for cats? (inner voice, lips closed)</td><td><a class="chip c-image" href="#image1">@Image1</a> <a class="chip c-image" href="#image2">@Image2</a> <a class="chip c-image" href="#image3">@Image3</a> <a class="chip c-audio" href="#audio1">@Audio1</a></td></tr><tr><td class="mono">8-10s</td><td>Shopper</td><td>Hard cut. Medium close-up, slow push in: she scrolls faster, finds nothing; jaw tightens, sharp exhale, rubs her brow.</td><td>—</td><td><a class="chip c-image" href="#image1">@Image1</a> <a class="chip c-image" href="#image3">@Image3</a> <a class="chip c-image" href="#image4">@Image4</a></td></tr><tr><td class="mono">10-13s</td><td>Shopper, cat</td><td>Hard cut. Medium: she closes the site, leans back, looks at the cat.</td><td>I guess we&#x27;ll never know. (inner voice, lips closed)</td><td><a class="chip c-image" href="#image1">@Image1</a> <a class="chip c-image" href="#image2">@Image2</a> <a class="chip c-image" href="#image3">@Image3</a> <a class="chip c-audio" href="#audio1">@Audio1</a></td></tr><tr><td class="mono">13-15s</td><td>Shopper → owner</td><td>High flip (<span class="chip c-video">@Video2</span>): the camera rises over her until it looks straight down, the sofa back sweeps the frame as the view flips, out level on the owner at her desk.</td><td>—</td><td><a class="chip c-video" href="#video2">@Video2</a> <a class="chip c-image" href="#image1">@Image1</a> <a class="chip c-image" href="#image5">@Image5</a> <a class="chip c-image" href="#image6">@Image6</a></td></tr><tr><td class="mono">15-17s</td><td>Owner</td><td>Lands from the flip. Over her shoulder onto her laptop, slow push in: her store admin ON the laptop screen, Fig &amp; Cedar, 272 in stock, 3 sold.</td><td>Two hundred seventy-two left. (inner voice, nervous, lips closed)</td><td><a class="chip c-image" href="#image5">@Image5</a> <a class="chip c-image" href="#image6">@Image6</a> <a class="chip c-image" href="#image7">@Image7</a> <a class="chip c-audio" href="#audio2">@Audio2</a></td></tr><tr><td class="mono">17-20s</td><td>Owner</td><td>Hard cut. Slow orbit around her as she looks up at her stockroom shelves stacked with unsold Fig &amp; Cedar jars and boxes beside the packing table; the lit jar on her desk.</td><td>Nobody wants Fig and Cedar. (inner voice, worried, lips closed)</td><td><a class="chip c-image" href="#image5">@Image5</a> <a class="chip c-image" href="#image6">@Image6</a> <a class="chip c-image" href="#image8">@Image8</a> <a class="chip c-audio" href="#audio2">@Audio2</a></td></tr><tr><td class="mono">20-22s</td><td>Owner (cursor)</td><td>Hard cut. Macro on her laptop: her cursor clicks Discontinue on Fig &amp; Cedar.</td><td>Time to discontinue the line. (inner voice, lips closed)</td><td><a class="chip c-image" href="#image5">@Image5</a> <a class="chip c-image" href="#image7">@Image7</a> <a class="chip c-audio" href="#audio2">@Audio2</a></td></tr><tr><td class="mono">22-23s</td><td>Owner, jar</td><td>Hard cut. Close-up: she leans in and blows out the jar; three flames go out.</td><td>—</td><td><a class="chip c-image" href="#image5">@Image5</a> <a class="chip c-image" href="#image8">@Image8</a> <a class="chip c-image" href="#image6">@Image6</a></td></tr><tr><td class="mono">23-25s</td><td>Smoke</td><td>Hard cut. Macro on the smoking wicks, slow push in.</td><td>Don&#x27;t guess why your shoppers don&#x27;t buy. (Scout, off screen)</td><td><a class="chip c-image" href="#image8">@Image8</a> <a class="chip c-audio" href="#audio3">@Audio3</a></td></tr><tr><td class="mono">25-30s</td><td>End screen</td><td>Hard cut. Scout&#x27;s end screen, its picture and voice.</td><td>Scout interviews your shoppers for you. Get free early access. (Scout, off screen)</td><td><a class="chip c-video" href="#video1">@Video1</a></td></tr>
+</tbody></table></div>
+
+<section class="box" id="seedance-gets">
+<h2 style="margin-top:0">What Seedance gets</h2>
+<p class="muted">Only these 13 files, in this order, plus the prompt below. Nothing else on this page is sent.</p>
+<div class="grid"><div class="card" id="image1"><span class="tag t-img">@Image1</span><div class="media"><img src="a/image1-shopper-face.jpg" alt="@Image1" loading="lazy"></div><p>The shopper: face, bob, cardigan only</p></div><div class="card" id="image2"><span class="tag t-img">@Image2</span><div class="media"><img src="a/image2-cat.jpg" alt="@Image2" loading="lazy"></div><p>The grey tabby cat only</p></div><div class="card" id="image3"><span class="tag t-img">@Image3</span><div class="media"><img src="a/image3-apartment-candles.jpg" alt="@Image3" loading="lazy"></div><p>Her apartment, room only: white pillar candles and tea lights, no amber jars; not the closed laptop</p></div><div class="card" id="image4"><span class="tag t-img">@Image4</span><div class="media"><img src="a/image4-product-page.png" alt="@Image4" loading="lazy"></div><p>Her laptop screen: the Fig &amp; Cedar page (pointer removed)</p></div><div class="card" id="image5"><span class="tag t-img">@Image5</span><div class="media"><img src="a/image5-owner.png" alt="@Image5" loading="lazy"></div><p>The owner: face, braid, sweater only</p></div><div class="card" id="image6"><span class="tag t-img">@Image6</span><div class="media"><img src="a/image6-studio-stockroom.jpg" alt="@Image6" loading="lazy"></div><p>Her studio and stockroom: shelves of unsold Fig &amp; Cedar jars and boxes, packing table, label printer (take 3)</p></div><div class="card" id="image7"><span class="tag t-img">@Image7</span><div class="media"><img src="a/image7-admin-product-272.jpg" alt="@Image7" loading="lazy"></div><p>Her store admin, only on her laptop: Fig &amp; Cedar, 272 in stock, 3 sold, Discontinue (take 3)</p></div><div class="card" id="image8"><span class="tag t-img">@Image8</span><div class="media"><img src="a/image8-fig-cedar-jar.png" alt="@Image8" loading="lazy"></div><p>The one Fig &amp; Cedar jar</p></div><div class="card" id="video1"><span class="tag t-vid">@Video1</span><div class="media"><video src="a/video1-end-screen.mp4" controls muted playsinline preload="metadata"></video></div><p>Scout end screen, picture + voice, 25-30s</p></div><div class="card" id="video2"><span class="tag t-vid">@Video2</span><div class="media"><video src="a/video2-high-flip.mp4" controls muted playsinline preload="metadata"></video></div><p>High flip: its camera move only, 13-15s</p></div><div class="card" id="audio1"><span class="tag t-aud">@Audio1</span><div class="media"><div class="audiobox"><audio src="a/audio1-shopper-voice.mp3" controls preload="none"></audio></div></div><p>Shopper voice timbre (not its words)</p></div><div class="card" id="audio2"><span class="tag t-aud">@Audio2</span><div class="media"><div class="audiobox"><audio src="a/audio2-owner-voice.mp3" controls preload="none"></audio></div></div><p>Owner voice timbre (not its words)</p></div><div class="card" id="audio3"><span class="tag t-aud">@Audio3</span><div class="media"><div class="audiobox"><audio src="a/audio3-scout-voice.mp3" controls preload="none"></audio></div></div><p>Scout voice timbre, 23-25s (not its words)</p></div></div>
+<h3>The prompt (send this one) · 1,000 words · sha256 c4d3669d…aeec2</h3>
+<button type="button" id="copy">Copy prompt</button>
+<pre class="ptxt" id="final">【Generation Goal】
+Generate a live-action story ad. A cat lady is about to buy the Fig &amp; Cedar candle, but its product page never says whether it is safe for cats, all she needs to know, so she leaves without buying. The owner, who runs the online shop, sees only the missing sales and her unsold stock, wrongly concludes nobody wants Fig &amp; Cedar, and, surprisingly, discontinues the line on that wrong premise. Please note that this is not video editing.
+
+【Reference Asset Roles】
+The shopper maps to <span class="chip c-image">@Image1</span>; use only her face, dark bob with bangs and cream cardigan.
+The grey tabby cat maps to <span class="chip c-image">@Image2</span>; use only the cat.
+The shopper&#x27;s apartment references <span class="chip c-image">@Image3</span>; use only the room, sofa and lit white pillar candles and tea lights, not the closed laptop on the stool.
+Her product page references <span class="chip c-image">@Image4</span>; use it only on her laptop screen.
+The owner maps to <span class="chip c-image">@Image5</span>; use only her face, auburn side braid and rust sweater.
+The owner&#x27;s studio and stockroom references <span class="chip c-image">@Image6</span>; use only its brick wall, shelves of boxes and unlit Fig &amp; Cedar jars, packing table with shipping boxes and label printer, and desk.
+Her store admin references <span class="chip c-image">@Image7</span>, the Fig &amp; Cedar product page; use it only on her laptop screen, never as an overlay.
+The Fig &amp; Cedar jar maps to <span class="chip c-image">@Image8</span>; use only the amber three-wick jar with its kraft label.
+<span class="chip c-video">@Video2</span> is used only for the High flip camera move in 13-15s, not its people, furniture, room or colours.
+<span class="chip c-video">@Video1</span> is Scout&#x27;s end screen in 25-30s; reproduce its picture and voice exactly.
+<span class="chip c-audio">@Audio1</span> is used only for the shopper&#x27;s inner-voice timbre; not its words.
+<span class="chip c-audio">@Audio2</span> is used only for the owner&#x27;s inner-voice timbre; not its words.
+<span class="chip c-audio">@Audio3</span> is used only for Scout&#x27;s voice timbre in 23-25s; not its words.
+
+【Subjects and Relationships】
+The shopper (<span class="chip c-image">@Image1</span>) and her cat (<span class="chip c-image">@Image2</span>) are only in her apartment (<span class="chip c-image">@Image3</span>); the owner (<span class="chip c-image">@Image5</span>) is only in her studio (<span class="chip c-image">@Image6</span>). The one lit Fig &amp; Cedar jar (<span class="chip c-image">@Image8</span>) is on the owner&#x27;s desk; unsold ones fill her shelves; the shopper&#x27;s own candles are only white pillars and tea lights, never amber jars. She never clicks Add to cart.
+
+【Event Script】
+0-3s: [Opening shot. Wide, slow arc toward the shopper] The shopper (<span class="chip c-image">@Image1</span>) sits on the sofa in her apartment (<span class="chip c-image">@Image3</span>), white candles lit everywhere, laptop open on her lap, the cat (<span class="chip c-image">@Image2</span>) curled beside her. At the end, screen glow lights her face.
+3-5s: [Hard cut. Over the shopper&#x27;s shoulder onto her laptop, static] The shopper&#x27;s (<span class="chip c-image">@Image1</span>) fingers scroll the product page (<span class="chip c-image">@Image4</span>) down, then back up, searching. At the end, the page is back at the top.
+5-8s: [Hard cut. Close-up, the camera slowly circles around the shopper&#x27;s (<span class="chip c-image">@Image1</span>) face] The cat (<span class="chip c-image">@Image2</span>) soft behind her. The shopper (<span class="chip c-image">@Image1</span>), in English, in the voice of <span class="chip c-audio">@Audio1</span> (inner voice, wondering, lips closed): <span class="dlg">{Are these safe for cats?}</span> At the end, the camera is at her other side.
+8-10s: [Hard cut. Medium close-up, slow push in on the shopper] The shopper (<span class="chip c-image">@Image1</span>) scrolls the product page (<span class="chip c-image">@Image4</span>) faster, up and down, finding nothing about pets; her jaw tightens, she exhales sharply and rubs her brow. At the end, her hand rests on her brow.
+10-13s: [Hard cut. Medium shot, static] The shopper (<span class="chip c-image">@Image1</span>) closes the site to an empty browser, leans back, looks at the cat (<span class="chip c-image">@Image2</span>). The shopper (<span class="chip c-image">@Image1</span>), in English, in the voice of <span class="chip c-audio">@Audio1</span> (inner voice, resigned, lips closed): <span class="dlg">{I guess we&#x27;ll never know.}</span> At the end, she looks at the cat.
+13-15s: [High flip (<span class="chip c-video">@Video2</span>)] The camera rises over the shopper (<span class="chip c-image">@Image1</span>) until it looks straight down, the sofa back sweeps across the frame as the view flips 180 degrees, and it comes out level on the owner (<span class="chip c-image">@Image5</span>) at her desk in the studio (<span class="chip c-image">@Image6</span>) <span class="sfx">&lt;soft whoosh&gt;</span>. At the end, the camera is level on the owner.
+15-17s: [Lands from the High flip. Over the owner&#x27;s shoulder onto her laptop, slow push in] Her laptop shows the store admin (<span class="chip c-image">@Image7</span>): Fig &amp; Cedar, 272 in stock, 3 sold. The owner (<span class="chip c-image">@Image5</span>), in English, in the voice of <span class="chip c-audio">@Audio2</span> (inner voice, nervous, lips closed): <span class="dlg">{Two hundred seventy-two left.}</span> At the end, the 272 fills the screen.
+17-20s: [Hard cut. Medium shot, slow orbit around the owner] The owner (<span class="chip c-image">@Image5</span>), the lit jar (<span class="chip c-image">@Image8</span>) beside her laptop, looks up at her stockroom shelves (<span class="chip c-image">@Image6</span>) stacked with unsold Fig &amp; Cedar jars and boxes beside the packing table; she stays still. The owner (<span class="chip c-image">@Image5</span>), in English, in the voice of <span class="chip c-audio">@Audio2</span> (inner voice, worried, lips closed): <span class="dlg">{Nobody wants Fig and Cedar.}</span> At the end, the stacked jars are behind her.
+20-22s: [Hard cut. Macro on her laptop screen, static] On her store admin (<span class="chip c-image">@Image7</span>), the owner&#x27;s (<span class="chip c-image">@Image5</span>) cursor clicks Discontinue on Fig &amp; Cedar <span class="sfx">&lt;click&gt;</span>. The owner (<span class="chip c-image">@Image5</span>), in English, in the voice of <span class="chip c-audio">@Audio2</span> (inner voice, lips closed): <span class="dlg">{Time to discontinue the line.}</span> At the end, her cursor rests on Discontinue.
+22-23s: [Hard cut. Close-up, static] The owner (<span class="chip c-image">@Image5</span>) leans in and blows out the jar (<span class="chip c-image">@Image8</span>) <span class="sfx">&lt;a soft breath&gt;</span>; its three flames go out. At the end, smoke rises from the three wicks.
+23-25s: [Hard cut. Macro on the jar&#x27;s (<span class="chip c-image">@Image8</span>) smoking wicks, slow push in] Scout, in English, in the voice of <span class="chip c-audio">@Audio3</span> (off screen, calm): <span class="dlg">{Don&#x27;t guess why your shoppers don&#x27;t buy.}</span> At the end, smoke curls up.
+25-30s: [Hard cut. Scout&#x27;s end screen (<span class="chip c-video">@Video1</span>)] Scout, in English, in <span class="chip c-video">@Video1</span>&#x27;s own voice (off screen): <span class="dlg">{Scout interviews your shoppers for you. Get free early access.}</span> At the end, its final frame holds.
+
+【Sound and Text】
+Night room tone at the shopper&#x27;s <span class="sfx">&lt;faint candle crackle&gt;</span>; quiet studio tone at the owner&#x27;s. (Soft, warm music.) No ka-ching, cart sound or chime. No subtitles. No on-screen text except the laptop screens (<span class="chip c-image">@Image4</span>, <span class="chip c-image">@Image7</span>), the jar labels and the end screen (<span class="chip c-video">@Video1</span>).
+
+【Maintain Consistency】
+Hard cuts only, except the High flip. Keep both women, the cat, the jar and both rooms identical.
+</pre>
+<textarea id="raw" style="position:absolute;left:-9999px" aria-hidden="true">【Generation Goal】
+Generate a live-action story ad. A cat lady is about to buy the Fig &amp; Cedar candle, but its product page never says whether it is safe for cats, all she needs to know, so she leaves without buying. The owner, who runs the online shop, sees only the missing sales and her unsold stock, wrongly concludes nobody wants Fig &amp; Cedar, and, surprisingly, discontinues the line on that wrong premise. Please note that this is not video editing.
+
+【Reference Asset Roles】
+The shopper maps to @Image1; use only her face, dark bob with bangs and cream cardigan.
+The grey tabby cat maps to @Image2; use only the cat.
+The shopper&#x27;s apartment references @Image3; use only the room, sofa and lit white pillar candles and tea lights, not the closed laptop on the stool.
+Her product page references @Image4; use it only on her laptop screen.
+The owner maps to @Image5; use only her face, auburn side braid and rust sweater.
+The owner&#x27;s studio and stockroom references @Image6; use only its brick wall, shelves of boxes and unlit Fig &amp; Cedar jars, packing table with shipping boxes and label printer, and desk.
+Her store admin references @Image7, the Fig &amp; Cedar product page; use it only on her laptop screen, never as an overlay.
+The Fig &amp; Cedar jar maps to @Image8; use only the amber three-wick jar with its kraft label.
+@Video2 is used only for the High flip camera move in 13-15s, not its people, furniture, room or colours.
+@Video1 is Scout&#x27;s end screen in 25-30s; reproduce its picture and voice exactly.
+@Audio1 is used only for the shopper&#x27;s inner-voice timbre; not its words.
+@Audio2 is used only for the owner&#x27;s inner-voice timbre; not its words.
+@Audio3 is used only for Scout&#x27;s voice timbre in 23-25s; not its words.
+
+【Subjects and Relationships】
+The shopper (@Image1) and her cat (@Image2) are only in her apartment (@Image3); the owner (@Image5) is only in her studio (@Image6). The one lit Fig &amp; Cedar jar (@Image8) is on the owner&#x27;s desk; unsold ones fill her shelves; the shopper&#x27;s own candles are only white pillars and tea lights, never amber jars. She never clicks Add to cart.
+
+【Event Script】
+0-3s: [Opening shot. Wide, slow arc toward the shopper] The shopper (@Image1) sits on the sofa in her apartment (@Image3), white candles lit everywhere, laptop open on her lap, the cat (@Image2) curled beside her. At the end, screen glow lights her face.
+3-5s: [Hard cut. Over the shopper&#x27;s shoulder onto her laptop, static] The shopper&#x27;s (@Image1) fingers scroll the product page (@Image4) down, then back up, searching. At the end, the page is back at the top.
+5-8s: [Hard cut. Close-up, the camera slowly circles around the shopper&#x27;s (@Image1) face] The cat (@Image2) soft behind her. The shopper (@Image1), in English, in the voice of @Audio1 (inner voice, wondering, lips closed): {Are these safe for cats?} At the end, the camera is at her other side.
+8-10s: [Hard cut. Medium close-up, slow push in on the shopper] The shopper (@Image1) scrolls the product page (@Image4) faster, up and down, finding nothing about pets; her jaw tightens, she exhales sharply and rubs her brow. At the end, her hand rests on her brow.
+10-13s: [Hard cut. Medium shot, static] The shopper (@Image1) closes the site to an empty browser, leans back, looks at the cat (@Image2). The shopper (@Image1), in English, in the voice of @Audio1 (inner voice, resigned, lips closed): {I guess we&#x27;ll never know.} At the end, she looks at the cat.
+13-15s: [High flip (@Video2)] The camera rises over the shopper (@Image1) until it looks straight down, the sofa back sweeps across the frame as the view flips 180 degrees, and it comes out level on the owner (@Image5) at her desk in the studio (@Image6) &lt;soft whoosh&gt;. At the end, the camera is level on the owner.
+15-17s: [Lands from the High flip. Over the owner&#x27;s shoulder onto her laptop, slow push in] Her laptop shows the store admin (@Image7): Fig &amp; Cedar, 272 in stock, 3 sold. The owner (@Image5), in English, in the voice of @Audio2 (inner voice, nervous, lips closed): {Two hundred seventy-two left.} At the end, the 272 fills the screen.
+17-20s: [Hard cut. Medium shot, slow orbit around the owner] The owner (@Image5), the lit jar (@Image8) beside her laptop, looks up at her stockroom shelves (@Image6) stacked with unsold Fig &amp; Cedar jars and boxes beside the packing table; she stays still. The owner (@Image5), in English, in the voice of @Audio2 (inner voice, worried, lips closed): {Nobody wants Fig and Cedar.} At the end, the stacked jars are behind her.
+20-22s: [Hard cut. Macro on her laptop screen, static] On her store admin (@Image7), the owner&#x27;s (@Image5) cursor clicks Discontinue on Fig &amp; Cedar &lt;click&gt;. The owner (@Image5), in English, in the voice of @Audio2 (inner voice, lips closed): {Time to discontinue the line.} At the end, her cursor rests on Discontinue.
+22-23s: [Hard cut. Close-up, static] The owner (@Image5) leans in and blows out the jar (@Image8) &lt;a soft breath&gt;; its three flames go out. At the end, smoke rises from the three wicks.
+23-25s: [Hard cut. Macro on the jar&#x27;s (@Image8) smoking wicks, slow push in] Scout, in English, in the voice of @Audio3 (off screen, calm): {Don&#x27;t guess why your shoppers don&#x27;t buy.} At the end, smoke curls up.
+25-30s: [Hard cut. Scout&#x27;s end screen (@Video1)] Scout, in English, in @Video1&#x27;s own voice (off screen): {Scout interviews your shoppers for you. Get free early access.} At the end, its final frame holds.
+
+【Sound and Text】
+Night room tone at the shopper&#x27;s &lt;faint candle crackle&gt;; quiet studio tone at the owner&#x27;s. (Soft, warm music.) No ka-ching, cart sound or chime. No subtitles. No on-screen text except the laptop screens (@Image4, @Image7), the jar labels and the end screen (@Video1).
+
+【Maintain Consistency】
+Hard cuts only, except the High flip. Keep both women, the cat, the jar and both rooms identical.
+</textarea>
+</section>
+
+<section class="illus">
+<span class="label">Illustration, not sent to Seedance</span>
+<h3>The High flip, frame by frame</h3>
+<p class="muted">@Video2 at 2 frames a second: the camera rises above the seated person, the chair back sweeps the frame as it flips, and it comes out level on the other person. Seedance takes only this move, not the people, chair, table or colours.</p>
+<div class="flip"><img src="extras/high-flip-sheet.jpg" alt="High flip reference, ten frames"></div>
+</section>
+
+<section class="illus">
+<span class="label">Illustration, not sent to Seedance</span>
+<h3>Our prompt before the sd25-pe compile</h3>
+<pre class="ptxt">A warm live-action story ad in two homes for a small candle brand, 10 shots. Camera moves are the technique: the High flip is taken from a reference clip (<span class="chip c-video">@Video2</span>, its move only); every other move is written in words.
+
+Cast and places
+The shopper (<span class="chip c-image">@Image1</span>): dark-brown bob with bangs, cream cardigan. Her cat (<span class="chip c-image">@Image2</span>), a grey tabby. Her night apartment (<span class="chip c-image">@Image3</span>): candles burning on every surface; her laptop is open on her lap (not the closed laptop in the picture). Her laptop shows the Fig &amp; Cedar product page (<span class="chip c-image">@Image4</span>); she never clicks Add to cart (no cursor).
+The owner (<span class="chip c-image">@Image5</span>): auburn side braid, rust sweater. Her candle studio (<span class="chip c-image">@Image6</span>). Her laptop shows units sold (<span class="chip c-image">@Image7</span>), Fig &amp; Cedar at 3 (-84%). The one Fig &amp; Cedar jar (<span class="chip c-image">@Image8</span>), lit, on her desk.
+Voices: shopper <span class="chip c-audio">@Audio1</span>, owner <span class="chip c-audio">@Audio2</span>, Scout <span class="chip c-audio">@Audio3</span> (timbre only, not their words). End screen <span class="chip c-video">@Video1</span>.
+
+Shots
+1. 0-3s, opening, wide, slow arc toward her: the shopper on the sofa among the candles, laptop open, the cat curled beside her.
+2. 3-5s, hard cut, over her shoulder: her fingers scroll the product page down, then back up, searching.
+3. 5-8s, hard cut, close-up, the camera slowly circles her face, the cat soft behind. Inner voice, lips closed: <span class="dlg">{Are these safe for cats?}</span>
+4. 8-10s, hard cut, medium close-up, slow push in: she scrolls faster up and down, finds nothing about pets; jaw tightens, sharp exhale, rubs her brow. Silent.
+5. 10-13s, hard cut, medium: she closes the site to an empty browser, leans back, looks at the cat. Inner voice, lips closed: <span class="dlg">{I guess we&#x27;ll never know.}</span>
+6. 13-15s, High flip (<span class="chip c-video">@Video2</span>): the camera rises over her until it looks straight down, the back of the sofa sweeps across the frame as the view flips, and it comes out level on the owner at her desk.
+7. 15-17s, lands from the flip, over her shoulder onto the laptop, slow push in: her store admin, Fig &amp; Cedar, 272 in stock, 3 sold. Inner voice, lips closed, nervous: <span class="dlg">{Two hundred seventy-two left.}</span>
+8. 17-20s, hard cut, slow orbit: she looks up at her stockroom shelves full of unsold Fig &amp; Cedar jars and boxes by the packing table. Inner voice, worried: <span class="dlg">{Nobody wants Fig and Cedar.}</span>
+9. 20-22s, hard cut, macro on the laptop: her cursor clicks Discontinue. Inner voice: <span class="dlg">{Time to discontinue the line.}</span>
+10. 22-23s, hard cut, close-up: she blows out the Fig &amp; Cedar jar; three flames go out.
+11. 23-25s, hard cut, macro on the smoking wicks. Scout, off screen: <span class="dlg">{Don&#x27;t guess why your shoppers don&#x27;t buy.}</span>
+12. 25-30s, hard cut, the end screen (<span class="chip c-video">@Video1</span>), its picture and voice: <span class="dlg">{Scout interviews your shoppers for you. Get free early access.}</span>
+
+Sound: quiet night room tone and faint candle crackle at hers, quiet studio tone at the owner&#x27;s, a soft warm music bed. No ka-ching, no cart sound, no chime. No subtitles. Hard cuts only, except the High flip.
+</pre>
+</section>
+
+<h2>History and checks</h2>
+<details><summary>sd25-pe check (SD25-CHECK.md, H240 render gate): zero FAILs</summary><pre class="ptxt"># SD25-CHECK · H240 Render (from H227 D, camera moves) · cat-candle story · Nov 15 2026
+
+Prompt checked: `prompt-sd25pe-final.txt` (1,000 words, 7 spoken lines, sha256 c4d3669d50b12fe9be4c70e324cc26b9d3b28714f9d4dd580a81f3b7a28aeec2). Asset list: `H240-assets.txt`.
+
+**Take 3 (Emile, Nov 15 4:13 PM on H240):** &quot;The only part I don&#x27;t like is the owner… too robotic… it should be in her mind… a clear picture of Fig and Cedar with 272 in stock, and then we see them somewhere in their stock… as if they&#x27;re like a surplus of stock… she&#x27;s nervous about it… there&#x27;s no reference that she&#x27;s a store owner… we need to feel like this is a shop, she&#x27;s selling, and she&#x27;s a Shopify owner.&quot; Applied per the next-round brief: 0-15s, 22-23s (blow-out), 23-25s (lesson line) and 25-30s (end screen) are byte-identical to take 2 (diffed, 9 of 9 lines). Only 15-22s changed, and the owner now speaks only as an inner voice, lips closed, like the shopper: 15-17s over her shoulder, her store admin (@Image7) on the laptop shows Fig &amp; Cedar 272 in stock, 3 sold, {Two hundred seventy-two left.} (nervous); 17-20s slow orbit as she looks up at her stockroom shelves (@Image6) stacked with unsold Fig &amp; Cedar jars and boxes beside the packing table, {Nobody wants Fig and Cedar.} (worried); 20-22s macro as her cursor clicks Discontinue, {Time to discontinue the line.}. New free stills: @Image7 = the Fig &amp; Cedar product page in her store admin (media 71429343; inspected: dark sidebar, Products selected, breadcrumb, jar photo, Active, &#x27;Inventory: 272 in stock&#x27;, &#x27;Sold, last 30 days: 3&#x27; with a red down arrow, red outlined Discontinue button with an arrow cursor on it, store name Ember &amp; Fig, no platform logo). @Image6 = the same studio edited into a stockroom and packing corner (media f8a51279; inspected: brick wall, metal shelving with rows of unlit amber jars labelled &#x27;Fig &amp; Cedar&#x27; and stacked kraft boxes, packing table with flattened shipping boxes, tape gun, kraft paper roll and a label printer printing a label, desk with laptop, plant, no people, no lit candles). The old units-sold list and the X-delete admin (take 2&#x27;s @Image7 and @Image9) are off the upload list. Goal now: &quot;The owner, who runs the online shop, sees only the missing sales and her unsold stock, wrongly concludes nobody wants Fig &amp; Cedar, and, surprisingly, discontinues the line on that wrong premise.&quot; Relationships: &quot;The one lit Fig &amp; Cedar jar (@Image8) is on the owner&#x27;s desk; unsold ones fill her shelves&quot; (the lit desk jar is the one she blows out; the shelf jars are unlit stock, which Emile asked for). Previous cleared prompt: `prompt-sd25pe-final.take2.txt` (b4f4b5ed).
+
+**Round 2 (history, superseded by take 3; Emile, Nov 15 2:35 PM on H240, after take 1):** &quot;I like the portion of the client. The portion of the owner is not good… there&#x27;s an overlay of the thing. This is horrendous… that should be on the laptop… The shot is too long… [his first owner line, quoted exactly in the 15-17s prompt line]… [his second take-2 owner line]… You see her clicking X, deleting it from the website, and blowing away the candles… a camera spinning around her… with the laptop as a center point.&quot; Applied: 0-15s lines byte-identical to take 1 (diffed). 15-25s rebuilt as five shots: 15-17s over her shoulder onto the laptop, the list (@Image7) only on the screen (&quot;never as an overlay&quot; in its role line); 17-20s slow orbit with the laptop as the centre, she sits still; 20-22s macro on her store admin (@Image9, new free GPT Image still, media 66bac8e5) as her cursor clicks the red X on Fig &amp; Cedar; 22-23s she blows out the jar; 23-25s smoking wicks + Scout&#x27;s line. Owner lines are his exact words, no &quot;I guess&quot;. 25-30s keeps @Video1 (the real H158 end screen is laid in after the take, free). Goal now ends &quot;discontinues the line on that wrong premise, deleting it from her website&quot;. Kept ≤1,000 words by tightening role lines to &quot;use only …&quot; form and cutting duplicates (&quot;Scout is seen only in the end screen&quot;, the relationships duplicate of the goal, the studio dimming, &quot;lifting into the end screen&quot;). Previous cleared prompt: `prompt-sd25pe-final.take1.txt` (df8a11dd).
+
+**H240 changes (Emile, Nov 15, on the cards):** (a) 2:10 PM on H240: &quot;clearly explain to Seedance the idea: the customer is looking at a thing, she&#x27;s not finding the thing that makes her buy, and the owner has the wrong reason and is discontinuing the line on the wrong premise.&quot; (b) 2:11 PM on H225, for every cat-candle ad: the Fig &amp; Cedar candle must look clearly different (shape and colour) from the candles she already owns. Done the sd25-pe way, story facts only: 【Generation Goal】 now reads &quot;A cat lady is about to buy the Fig &amp; Cedar candle, but its product page never says whether it is safe for cats, all she needs to know, so she leaves without buying. The owner sees only the missing sales, wrongly concludes nobody wants Fig &amp; Cedar, and, surprisingly, discontinues the line on that wrong premise, blowing out the candle.&quot; 【Subjects and Relationships】 adds &quot;the shopper&#x27;s own candles are only white pillars and tea lights, never amber jars; the amber Fig &amp; Cedar jar appears only on her screen (@Image4) and in the studio&quot; and &quot;The shopper&#x27;s unanswered question is the real reason for the low sales; the owner never learns it.&quot; The @Image3 role says &quot;its lit white pillar candles and tea lights&quot;; 0-3s says &quot;white candles lit everywhere&quot;. @Image3 is now apartment-candles-v2 (free GPT Image edit; media f11fa295, inspected: same room, every candle a white/cream pillar or tea light in clear/white holders, no amber glass, no labels, no person, no cat, closed laptop on the stool, which the role line fences). No new dialogue, event, shot, asset or sound. To stay ≤1,000 words, exact duplicates were cut: the move description inside the @Video2 role line (13-15s still describes it), &quot;the only non-cut transition&quot; (&quot;Hard cuts only, except the High flip&quot; stays), &quot;She sighs.&quot;, &quot;The shopper&#x27;s lips stay closed.&quot; and &quot;Three voices only: …&quot; (every spoken line still names its speaker, @Audio, on/off screen and lips closed), &quot;the women are never in the same room&quot; (each is &quot;only in&quot; her own room), &quot;silent&quot;, &quot;and smoke rises&quot; (end state keeps it), the goal&#x27;s &quot;Scout&#x27;s voice says not to guess&quot; (23-25s keeps the line). Diff vs the approved H227 prompt (`prompt-sd25pe-final.pre-h240.txt`): {…} lines identical 5/5, @asset set identical, sound effects identical, gate line once.
+
+Assets inspected (not guessed from names): 8 stills viewed (take 3: @Image6 and @Image7 replaced, see the note above; take-2 @Image9, removed, was: a store-admin Products page, dark sidebar, five rows with grey X buttons, the Fig &amp; Cedar · 3-wick row pale red with a red X and a white arrow cursor on it, store name Ember &amp; Fig, no platform logo); @Video2 contact sheet (throne → overhead → chair back sweeps → poker table; no audio track); @Video1 contact sheet (orb → Scout wordmark → &quot;For Shopify owners&quot;); all audio transcribed with Deepgram:
+- @Audio1: &quot;Oh my gosh. Okay. So we finally booked the beach house for July…&quot; (timbre only)
+- @Audio2: &quot;Bright with notes of stone fruit. Do my buyers even talk like that?…&quot; (timbre only)
+- @Audio3: &quot;Scout interviews your shoppers for you. Get free early access.&quot; (timbre only in 23-25s)
+- @Video1 own audio: &quot;Scout interviews your shoppers for you. Get free early access.&quot; (= the 25-30s line, so reproduced)
+
+Task: video generation with references. Gate: @Video1 is 4.5 s and @Video2 is 5 s against a 30 s output, so &quot;Please note that this is not video editing.&quot; goes right after the goal sentence (once).
+
+## Final Checklist
+
+| # | Item | Result | Proof line |
+|---|------|--------|-----------|
+| 1 | One primary task | PASS | Generation only: &quot;Generate a warm live-action story ad.&quot; |
+| 2 | Subjects, counts, scene, props, outcome unchanged | PASS | One shopper, one cat, one owner, one jar; &quot;so she leaves without buying&quot;; &quot;discontinues the line on that wrong premise&quot;; 20-22s she clicks Discontinue; 22-23s she blows out the jar; end screen. Matches STORY.md lines 1-6 and Emile&#x27;s H240 note. Cause shown before reaction: the page with nothing about pets (3-10s) comes before she leaves, the 272-in-stock screen (15-17s) comes before her first thought and the stocked shelves are in shot (17-20s) as she thinks the second |
+| 3 | Every required entity covered; no merge | PASS | Shopper @Image1, cat @Image2, apartment @Image3, product page @Image4, owner @Image5, studio and stockroom @Image6, store admin product page @Image7, jar @Image8, Scout @Video1 |
+| 4 | Every used asset has one unique role | PASS | 13 role lines, one per asset; @Audio3 = timbre in 23-25s only; @Video1 = end screen in 25-30s only |
+| 5 | User&#x27;s existing references kept | PASS | Brief fixes &quot;High flip (@Video2)&quot;; kept as @Video2 |
+| 6 | No claims about unread assets | PASS | All 13 inspected (above) |
+| 7 | No forced assets; unused listed | PASS | Every upload has a role, so no 【Unused Assets】 block. Dropped clips (eyes-in, Dip pace, earth zoom) are off the upload list, not merely unused |
+| 8 | Inaccessible assets not treated as understood | PASS | None inaccessible |
+| 9 | Characters/props mapped one by one, no range | PASS | &quot;The shopper maps to @Image1…&quot;, &quot;The owner maps to @Image5…&quot;, &quot;The Fig &amp; Cedar jar maps to @Image8…&quot; |
+| 10 | No single-person image defines two people | PASS | Shopper face and cat are separate crops; room still @Image3 (v2) has no person or cat |
+| 11 | Each stage one change + end state | PASS | Each of 10 ranges ends with &quot;At the end, …&quot; |
+| 12 | User time ranges kept | PASS | 0-3 / 3-5 / 5-8 / 8-10 / 10-13 / 13-15 kept from take 1; 15-17 / 17-20 / 20-22 / 22-23 / 23-25 / 25-30 per the round-2 brief; continuous, integer |
+| 13 | Editing rules | N/A | Not an editing task |
+| 14 | Locked ratio/duration rules | PASS | No ratio, duration or resolution in the prompt (grep for 9:16/vertical/seconds = 0) |
+| 15 | Extension rules | N/A | Not an extension |
+| 16 | First/last frame statements | N/A | No keyframes |
+| 17 | Multiple keyframes | N/A | None |
+| 18 | Storyboard grid | N/A | None |
+| 19 | Blockout | N/A | @Video2 is a camera-move reference, not a blockout |
+| 20 | Emotion and camera terms observable | PASS | Annoyance shown as &quot;jaw tightens, she exhales sharply and rubs her brow&quot;; moves named as visible paths: &quot;slow arc toward the shopper&quot;, &quot;the camera slowly circles around the shopper&#x27;s (@Image1) face&quot;, &quot;slow push in on the shopper&quot;, &quot;camera rises … looks straight down … sofa back sweeps across the frame … comes out level on the owner&quot; |; take 3 adds &quot;Over the owner&#x27;s shoulder onto her laptop, slow push in&quot;, &quot;slow orbit around the owner&quot; while she &quot;looks up at her stockroom shelves … she stays still&quot;, and &quot;Macro on her laptop screen, static&quot; with &quot;her cursor clicks Discontinue&quot;. Nervousness is a delivery note on an inner voice (lips closed), not an invented action
+| 21 | Speaker, state, words, audio, language, on/off screen per line | PASS | 5s-8s and 10-13s &quot;The shopper (@Image1), in English, in the voice of @Audio1 (inner voice, …, lips closed)&quot;; 15-17s, 17-20s and 20-22s &quot;The owner (@Image5), in English, in the voice of @Audio2 (inner voice, nervous / worried, lips closed)&quot;; the @Audio2 role says &quot;inner-voice timbre&quot;; 23-25s &quot;Scout, in English, in the voice of @Audio3 (off screen …)&quot;; 25-30s &quot;in @Video1&#x27;s own voice (off screen)&quot;. No accent added |
+| 22 | Numbers stay identifiers | PASS | &quot;3 (-84%)&quot; is screen text; &quot;180 degrees&quot; is a flip, not a shot number |
+| 23 | No parameters, analysis, keys, reasons | PASS | Prompt holds only the template sections |
+| 24 | Gate line exactly once, only when triggered | PASS | Triggered by 4.5 s / 5 s refs vs 30 s; appears once, right after the goal sentence |
+| 25 | Ref-video spec decision from real specs | PASS | ffprobe: @Video1 1080x1920 4.5 s with audio; @Video2 600x1066 5.0 s, no audio |
+| 26 | No unrequested negative constraints | PASS | Each &quot;no&quot; is Emile&#x27;s or a fence for a real leak: &quot;No ka-ching, cart sound or chime.&quot; (STORY hard rules), &quot;never amber jars&quot; (Emile, Nov 15 2:11 PM: her candles must look unlike the Fig &amp; Cedar jar), &quot;do not use the closed laptop on the stool&quot; (STORY), &quot;No subtitles&quot; (spoken lines must not be captioned) |
+| 27 | Placeholders replaced; body only | PASS | No &lt;placeholder&gt; left; &lt;soft whoosh&gt;, &lt;a soft breath&gt;, &lt;faint candle crackle&gt; are sound effects |
+
+## Non-Negotiable Principles 1-11
+
+| # | Principle | Result | Proof line |
+|---|-----------|--------|-----------|
+| 1 | Intent first | PASS | Emile&#x27;s 5 lines identical to STORY.md (diff of {…}: no difference); she never buys; Emile&#x27;s H240 plot (she can&#x27;t find the one thing that makes her buy; the owner discontinues on a wrong premise) is stated in the goal as story fact, not as dialogue; &quot;Hard cuts only, except the High flip&quot; |
+| 2 | Template first | PASS | 【Generation Goal】【Reference Asset Roles】【Subjects and Relationships】【Event Script】【Sound and Text】【Maintain Consistency】 |
+| 3 | Account for every asset | PASS | 13 uploads, 13 role lines, each saying what to use only |
+| 4 | User mapping first | PASS | @Video2 = High flip as the brief names it; room = apartment-candles still per STORY |
+| 5 | Minimal clarification | PASS | No questions needed |
+| 6 | Submission-ready content only | PASS | No notes, versions or reasons in the prompt |
+| 7 | Separate parameters | PASS | 9:16, 30 s, 480p live in job-plan.json only |
+| 8 | No unrequested constraints | PASS | See checklist 26 |
+| 9 | One best version | PASS | One prompt to send; prompt.txt is ours, kept for comparison only |
+| 10 | Facts vs observations | PASS | &quot;cat lady&quot;, her not buying, the unanswered cat-safety question as the real reason and the owner&#x27;s wrong premise all come from Emile&#x27;s text (Nov 15 1:00 PM story + H240 note); looks come from stills |
+| 11 | Subject cardinality | PASS | One image per person (@Image1 shopper, @Image5 owner), one for the cat (@Image2) |
+
+## Which ONE @asset defines each person and object, per shot
+
+| Time | Transition | Shopper | Cat | Owner | Jar | Room | Screen | Move | Voice |
+|------|-----------|---------|-----|-------|-----|------|--------|------|-------|
+| 0-3s | Opening shot | @Image1 | @Image2 | — | — | @Image3 | (glow only) | slow arc toward her (words) | — |
+| 3-5s | Hard cut | @Image1 (fingers) | — | — | — | @Image3 | @Image4 | static, over her shoulder | — |
+| 5-8s | Hard cut | @Image1 | @Image2 | — | — | @Image3 | — | circles her face (words) | @Audio1, inner |
+| 8-10s | Hard cut | @Image1 | — | — | — | @Image3 | @Image4 | slow push in (words) | — |
+| 10-13s | Hard cut | @Image1 | @Image2 | — | — | @Image3 | (empty browser) | static | @Audio1, inner |
+| 13-15s | High flip (@Video2) | @Image1 | — | @Image5 | — | @Image3 → @Image6 | — | @Video2 | — |
+| 15-17s | Lands from flip | — | — | @Image5 (from behind) | — | @Image6 | @Image7 (on her laptop only) | over the shoulder, slow push in (words) | @Audio2, inner voice |
+| 17-20s | Hard cut | — | — | @Image5 | @Image8 (lit, on desk) | @Image6 (stockroom shelves) | (laptop, back) | slow orbit (words) | @Audio2, inner voice |
+| 20-22s | Hard cut | — | — | @Image5 (cursor only) | — | — | @Image7 (on her laptop only) | static macro | @Audio2, inner voice |
+| 22-23s | Hard cut | — | — | @Image5 | @Image8 | @Image6 | — | static | — |
+| 23-25s | Hard cut | — | — | — | @Image8 | @Image6 | — | slow push in (words) | @Audio3, off screen |
+| 25-30s | Hard cut | — | — | — | — | — | — | @Video1 end screen | @Video1 own voice |
+
+Notes: the shopper&#x27;s laptop in 0-3s and 10-13s is described in words (&quot;laptop open on her lap&quot;, &quot;closes the site to an empty browser&quot;); sd25-pe: generic environmental elements do not create an asset gap. The shopper&#x27;s candles are white pillars and tea lights from @Image3 (v2), never amber jars, so the amber Fig &amp; Cedar jar reads as new to her; room decor from @Image3; the only Fig &amp; Cedar jar is @Image8.
+
+## Limits
+
+8 images, 2 videos (9.5 s), 3 audio (23.5 s), 13 uploads: within 30 / 10 &amp; 30 s / 10 &amp; 30 s. @Video2 is 639,600 px (above the 407,696 px minimum). Prompt 1,000 words (≤1,000).
+
+Check 1 tightenings applied (no FAILs found): &quot;the women are never in the same room&quot; (the flip moves from one to the other in one shot, so &quot;never share a frame&quot; contradicted 13-15s); &quot;Scout is seen only in the end screen&quot; (his voice is heard at 23-25s); &quot;never swap the women&quot; cut (not asked for, P8); shelf jars fenced as &quot;no shelf jar carries a Fig &amp; Cedar label&quot;.
+
+Check 2 fixes: @Image4 replaced by a cursor-free copy (pointer painted out locally, free upload 918984eb), so its &quot;do not use the mouse cursor&quot; fence is gone; 21-23s now &quot;blows out the candle in the jar (@Image8)&quot;; job-plan word count corrected.
+
+**Result: zero FAILs.**</pre></details>
+<details><summary>Eval log</summary><pre class="ptxt"># EVAL LOG · H227 · cat-candle story (Emile, Nov 15 1:00 PM ET) · technique D, camera moves
+
+Loop 1: Goal fit: YES — he asked for his Nov 15 cat-candle story, his words kept, built with this card&#x27;s camera-move technique (no ka-ching, she never buys, inner voice with lips closed, the High flip down to the owner, she blows out the candle, &quot;Don&#x27;t guess why your shoppers don&#x27;t buy.&quot;, the end screen); this is a zero-spend pitch page with a 997-word sd25-pe prompt, 13 uploads (only the High flip clip kept as a move reference, every other move in words) and an SD25-CHECK with zero FAILs. Found: no FAILs; fresh checker ran the full sd25-pe Final Checklist and Principles 1-11 (all PASS), page PASS at 1440 and 390 px; four tightenings: &quot;the women never share a frame&quot; contradicted the 13-15s flip that moves from her to the owner in one shot; &quot;Scout appears only in the end screen&quot; sat badly next to his 23-25s voice; &quot;never swap the women&quot; was not asked for (P8); the studio&#x27;s shelf jars look like the Fig &amp; Cedar jar. Fixed: &quot;the women are never in the same room&quot;; &quot;Scout is seen only in the end screen&quot;; &quot;never swap the women&quot; cut; &quot;no shelf jar carries a Fig &amp; Cedar label&quot;; 5 lines still identical to STORY.md; 997 words.
+Loop 2: Goal fit: YES — he asked for his Nov 15 cat-candle story, his words kept, built with this card&#x27;s camera-move technique; this is the same pitch page after the loop-1 fixes, 13 uploads, High flip (@Video2) the only move clip, SD25-CHECK zero FAILs. Found: no checklist FAILs (Final Checklist and Principles 1-11 all PASS, 5 lines identical to STORY.md, EVAL loop 1 claims true, page PASS at 1440 and 390 px); two problems: @Image4 still showed the mouse pointer resting on Add to cart (only fenced in words, a purchase cue in a no-buy story), and job-plan.json said 998 words; tightening: &quot;blows out the jar&quot; should be &quot;the candle in the jar&quot;. Fixed: pointer painted out locally (button text redrawn, checked at 2x) and uploaded free as media 918984eb, so the cursor fence was dropped; &quot;blows out the candle in the jar (@Image8)&quot;; job-plan count now 994; prompt 994 words, lines unchanged.
+</pre></details>
+<details><summary>What changed from the last version</summary>
+<p>Emile's new story (Nov 15, 1:00 PM ET) replaces the old one: no ka-ching, she never buys, no Scout orb or call scene, and the owner blows out the candle. The room is the new candle-filled apartment; the shopper's face and the cat are their own crops. The eyes-in, Dip pace and earth-zoom clips are off the upload list; only the High flip clip stays. Old voice clips give timbre only, never their words.</p>
+</details>
+<script>
+document.getElementById('copy').addEventListener('click',function(){var t=document.getElementById('raw').value;try{navigator.clipboard.writeText(t);this.textContent='Copied';}catch(e){var r=document.getElementById('raw');r.select();document.execCommand('copy');this.textContent='Copied';}});
+</script>
+</div><script type="application/json" id="rv-summary">{"title": "Are these safe for cats?", "technique": "The High flip camera move comes from one reference clip (@Video2, its move only); every other move is written in words.", "story": ["A cat lady sits on her sofa at night; candles burn all over her apartment, her cat beside her.", "She scrolls the Fig & Cedar product page up and down, searching. She does not buy.", "Inner voice, lips closed, the camera circling her: “Are these safe for cats?”", "She finds nothing, gets annoyed (shown only), closes the site: “I guess we'll never know.”", "The High flip turns from her down to the owner, who runs the shop. In her head, nervous: “Two hundred seventy-two left.” Her stockroom is full of unsold jars: “Nobody wants Fig and Cedar.” She clicks Discontinue: “Time to discontinue the line.” She blows out the candle.", "Scout's voice: “Don't guess why your shoppers don't buy.” End screen: “Scout interviews your shoppers for you. Get free early access.”"], "shots": [{"t": "0-3s", "who": "Shopper, cat", "what": "Opening shot. Wide, slow arc toward her on the sofa, candles everywhere, laptop open, the cat curled beside her.", "line": "", "speaker": "", "assets": ["image1", "image2", "image3"]}, {"t": "3-5s", "who": "Shopper (hand)", "what": "Hard cut. Over her shoulder: her fingers scroll the product page down, then back up.", "line": "", "speaker": "", "assets": ["image1", "image3", "image4"]}, {"t": "5-8s", "who": "Shopper, cat", "what": "Hard cut. Close-up; the camera slowly circles her face; the cat soft behind.", "line": "Are these safe for cats?", "speaker": "Shopper (inner)", "assets": ["image1", "image2", "image3", "audio1"]}, {"t": "8-10s", "who": "Shopper", "what": "Hard cut. Medium close-up, slow push in: she scrolls faster, finds nothing; jaw tightens, sharp exhale, rubs her brow.", "line": "", "speaker": "", "assets": ["image1", "image3", "image4"]}, {"t": "10-13s", "who": "Shopper, cat", "what": "Hard cut. Medium: she closes the site, leans back, looks at the cat.", "line": "I guess we'll never know.", "speaker": "Shopper (inner)", "assets": ["image1", "image2", "image3", "audio1"]}, {"t": "13-15s", "who": "Shopper → owner", "what": "High flip (@Video2): the camera rises over her until it looks straight down, the sofa back sweeps the frame as the view flips, out level on the owner at her desk.", "line": "", "speaker": "", "assets": ["video2", "image1", "image5", "image6"]}, {"t": "15-17s", "who": "Owner", "what": "Lands from the flip. Over her shoulder onto her laptop: her store admin, Fig & Cedar, 272 in stock, 3 sold.", "line": "Two hundred seventy-two left.", "speaker": "Owner (inner voice)", "assets": ["image5", "image6", "image7", "audio2"]}, {"t": "17-20s", "who": "Owner", "what": "Slow orbit as she looks up at her stockroom shelves stacked with unsold Fig & Cedar jars and boxes by the packing table.", "line": "Nobody wants Fig and Cedar.", "speaker": "Owner (inner voice)", "assets": ["image5", "image6", "image8", "audio2"]}, {"t": "20-22s", "who": "Owner (cursor)", "what": "Macro on her laptop: her cursor clicks Discontinue on Fig & Cedar.", "line": "Time to discontinue the line.", "speaker": "Owner (inner voice)", "assets": ["image5", "image7", "audio2"]}, {"t": "22-23s", "who": "Owner, jar", "what": "She blows out the jar; three flames go out.", "line": "", "speaker": "", "assets": ["image5", "image8", "image6"]}, {"t": "23-25s", "who": "Smoke", "what": "Macro on the smoking wicks.", "line": "Don't guess why your shoppers don't buy.", "speaker": "Scout", "assets": ["image8", "audio3"]}, {"t": "25-30s", "who": "End screen", "what": "Hard cut. Scout's end screen, its picture and voice.", "line": "Scout interviews your shoppers for you. Get free early access.", "speaker": "Scout", "assets": ["video1"]}]}</script>
+<link rel="stylesheet" href="../../_review/review.css"><script src="../../_review/review.js" defer></script>
+</body></html>

@@ -6,7 +6,7 @@
   "She scrolls the Fig & Cedar product page up and down, searching. She does not buy.",
   "Inner voice, lips closed, the camera circling her: “Are these safe for cats?”",
   "She finds nothing, gets annoyed (shown only), closes the site: “I guess we'll never know.”",
-  "The High flip turns from her down to the owner, her sales on the laptop: “Wow, Fig and Cedar totally failed.” The camera circles her: “Looks like no one's interested in Fig and Cedar.” She clicks X to delete it from her site and blows out the candle.",
+  "The High flip turns from her down to the owner, who runs the shop. In her head, nervous: “Two hundred seventy-two left.” Her stockroom is full of unsold jars: “Nobody wants Fig and Cedar.” She clicks Discontinue: “Time to discontinue the line.” She blows out the candle.",
   "Scout's voice: “Don't guess why your shoppers don't buy.” End screen: “Scout interviews your shoppers for you. Get free early access.”"
  ],
  "shots": [
@@ -88,9 +88,9 @@
   {
    "t": "15-17s",
    "who": "Owner",
-   "what": "Lands from the flip. Over her shoulder onto her laptop: the sales list on the screen, Fig & Cedar at 3 in red.",
-   "line": "Wow, Fig and Cedar totally failed.",
-   "speaker": "Owner",
+   "what": "Lands from the flip. Over her shoulder onto her laptop: her store admin, Fig & Cedar, 272 in stock, 3 sold.",
+   "line": "Two hundred seventy-two left.",
+   "speaker": "Owner (inner voice)",
    "assets": [
     "image5",
     "image6",
@@ -101,9 +101,9 @@
   {
    "t": "17-20s",
    "who": "Owner",
-   "what": "Slow orbit around her with the laptop as the centre; she sits still.",
-   "line": "Looks like no one's interested in Fig and Cedar.",
-   "speaker": "Owner",
+   "what": "Slow orbit as she looks up at her stockroom shelves stacked with unsold Fig & Cedar jars and boxes by the packing table.",
+   "line": "Nobody wants Fig and Cedar.",
+   "speaker": "Owner (inner voice)",
    "assets": [
     "image5",
     "image6",
@@ -114,12 +114,13 @@
   {
    "t": "20-22s",
    "who": "Owner (cursor)",
-   "what": "Macro on her laptop: she clicks the red X on Fig & Cedar in her store admin; the row disappears.",
-   "line": "",
-   "speaker": "",
+   "what": "Macro on her laptop: her cursor clicks Discontinue on Fig & Cedar.",
+   "line": "Time to discontinue the line.",
+   "speaker": "Owner (inner voice)",
    "assets": [
     "image5",
-    "image9"
+    "image7",
+    "audio2"
    ]
   },
   {
