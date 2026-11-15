@@ -13,7 +13,7 @@
  "asset_folder": "a2/",
  "medias_in_order": {
   "image1_shopper": "561ba2d9-6e83-4de5-a7de-146082719ccf",
-  "image2_shopper_apartment_candles": "6c1574e8-5e21-4fce-8df4-935ce8741c27",
+  "image2_shopper_apartment_candles": "d006adfc-2f01-41d0-ac79-5d1839a2afff",
   "image3_cat": "696c034b-34ca-4b95-8f62-382f22de2f6f",
   "image4_product_page": "4e666139-7388-4246-a7f2-8c75463d0655",
   "image5_owner": "1963a66d-94e4-4fdc-95e5-b34fde48ea4f",
@@ -42,5 +42,6 @@
  ],
  "new_free_asset": "image2 = shopper apartment full of candles, GPT Image via codex exec (0 credits), uploaded free as media 6c1574e8",
  "spend": "none",
- "technique": "The Dip (H174) as a grey coarse blockout @Video1 (a2/video1-dip-skeleton.mp4, 25 s): cuts, shot sizes, camera moves, pacing only"
+ "technique": "The Dip (H174) as a grey coarse blockout @Video1 (a2/video1-dip-skeleton.mp4, 25 s): cuts, shot sizes, camera moves, pacing only",
+ "image2_note": "Nov 15 2:11 PM (Emile): apartment candles are white/cream pillars and tea lights, no amber jars; free GPT Image edit via codex, uploaded free (d006adfc). Previous still in a2-old/."
 }

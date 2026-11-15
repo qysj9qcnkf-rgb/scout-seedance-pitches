@@ -1,35 +1,35 @@
 【Generation Goal】
-Generate a warm, realistic film: a shopper can't find whether the Fig & Cedar candle is safe for cats and gives up; the owner reads slow sales as no demand and blows out the candle; Scout gives the lesson. Please note that this is not video editing.
+Generate a warm, realistic film: a shopper is about to buy the Fig & Cedar candle but can't, because the page never says whether it is safe for cats; the owner, seeing only slow sales, surprisingly cuts the line on the wrong insight; Scout gives the lesson. Please note that this is not video editing.
 
 【Reference Asset Roles】
 @Image1 is the shopper: only her face, dark-brown bob with bangs and cream cardigan; not the room, candle, laptop or cat.
-@Image2 is only the shopper's apartment: sofa, lamp, many small lit unlabelled candles.
+@Image2 is only the shopper's apartment: sofa, lamp, many lit white and cream pillar candles and tea lights; no jars.
 @Image3 is only the shopper's grey tabby cat; not the sofa.
 @Image4 is only the shopper's laptop screen: the Fig & Cedar product page; keep its layout and words.
 @Image5 is the owner: only her face, auburn side braid and rust sweater; not the background.
-@Image6 is only the owner's sunlit studio: brick wall, shelves, desk and laptop; not the tall labelled jar.
+@Image6 is only the owner's sunlit studio: brick, shelves, desk, laptop; not the tall labelled jar.
 @Image7 is only the owner's laptop screen: her sales page with the Fig & Cedar row in red; keep its layout and words.
-@Image8 is only the Fig & Cedar jar: short, wide amber glass, three wicks, kraft label, as on @Image4; not the fig leaves or linen.
-@Video1 is a coarse-blockout reference, 0-25s. Use it only for cut points, shot sizes, camera moves and pacing; do not adopt its grey blurred look, people, rooms, phones, cards, orb, city, globe, mug or text.
-@Video2 is only the end screen at 25-30s: its picture, motion and on-screen words; do not use its audio.
+@Image8 is only the Fig & Cedar jar: short, wide amber glass, three wicks, kraft label, as on @Image4; not the fig leaves or linen. Only on her screen and in the studio.
+@Video1 is a coarse-blockout reference, 0-25s. Use it only for cut points, shot sizes, camera moves and pacing; not its grey blurred look, people, rooms, phones, cards, orb, city, globe, mug or text.
+@Video2 is only the end screen at 25-30s: picture, motion and on-screen words; not its audio.
 @Audio1 is only the shopper's voice timbre; do not use its words.
 @Audio2 is only the owner's voice timbre; do not use its words.
-@Audio3 is only Scout's voice timbre; use its words only for the end-screen line at 25-30s.
+@Audio3 is only Scout's voice timbre; its words only at 25-30s.
 
 【Blockout Mapping】
-In @Video1: the desk phone at 0-2s is the shopper's laptop screen (@Image4), its notification cards unused; the figure at 2-9s is the shopper (@Image1), the laptop her laptop, the jar one of her small candles; the 6-7s flash cuts are @Image4 rows, her candle, the cat and her eyes; the 7-9s phone and the 9-11s orb, window, city and globe are unused, only the rising camera path is kept; the man at 11-19s and the woman at 19-25s are both the owner (@Image5); the 12-18s waveform card and 18-19s chat bubbles are her screen (@Image7), their words unused; the 18-19s paper is unused; the jar at 19-25s is @Image8; the 19-22s phones and 21-22s mug are unused; the product page at 22-23s is @Image7.
+In @Video1: the desk phone at 0-2s is the shopper's laptop screen (@Image4), its notification cards unused; the figure at 2-9s is the shopper (@Image1), the laptop her laptop, the jar one of her white pillar candles; the 6-7s flash cuts are @Image4 rows, a candle, the cat and her eyes; the 7-9s phone and 9-11s orb, window, city and globe are unused, only the rising camera path kept; the man at 11-19s and the woman at 19-25s are both the owner (@Image5); the 12-18s waveform card and 18-19s chat bubbles are her screen (@Image7), their words unused; the 18-19s paper is unused; the jar at 19-25s is @Image8; the 19-22s phones and 21-22s mug are unused; the product page at 22-23s is @Image7.
 
 【Subjects and Relationships】
-Two women, never together. The shopper (@Image1) is only in her apartment (@Image2) at night, on the sofa, her cat (@Image3) beside her. The owner (@Image5) is only at her desk in her studio (@Image6) by day; the Fig & Cedar jar (@Image8) is the only jar on her desk. Scout is only heard until @Video2.
+Two women, never together. The shopper (@Image1) is only in her apartment (@Image2) at night, her cat (@Image3) beside her. The owner (@Image5) is only at her desk in her studio (@Image6) by day; the Fig & Cedar jar (@Image8) is the only jar on her desk. Scout is heard, unseen, until @Video2.
 
 【Event Script】
-Follow @Video1's cut points, shot sizes, camera moves and pacing, except where a shot below names its own move.
+Follow @Video1's cuts, shot sizes, moves and pacing, except where a shot names its own move.
 0-2s, @Video1's macro: the shopper's (@Image1) finger scrolling her laptop screen (@Image4). At the end, the page mid-scroll.
-2-4s, @Video1's medium, but the camera slowly circles her: the shopper (@Image1) on the sofa, the cat (@Image3) beside her, candles all around. The shopper's inner voice (@Audio1), off screen, in English, lips closed, wondering: {Are these safe for cats?} At the end, behind her shoulder.
+2-4s, @Video1's medium, but the camera slowly circles her: the shopper (@Image1) on the sofa, the cat (@Image3) beside her, white candles all around. The shopper's inner voice (@Audio1), off screen, in English, lips closed, wondering: {Are these safe for cats?} At the end, behind her shoulder.
 4-6s, @Video1's push-in over the shopper's (@Image1) shoulder into @Image4: she scrolls down, back up, then down again; nothing about pets. At the end, close on the Wax row.
-6-7s, @Video1's five flash cuts: the Wax row; the Burn time row; her small candle's flame; the cat (@Image3); the shopper's (@Image1) eyes narrowing. At the end, her eyes.
+6-7s, @Video1's five flash cuts: the Wax row; the Burn time row; a white pillar candle's flame; the cat (@Image3); the shopper's (@Image1) eyes narrowing. At the end, her eyes.
 7-9s, hard cut, @Video1's medium: the shopper (@Image1), annoyed, exhales through her nose, closes the site and leans back beside the cat (@Image3). The shopper's inner voice (@Audio1), off screen, in English, lips closed, resigned: {I guess we'll never know.} At the end, she sits back, nothing bought.
-9-11s, a flip along @Video1's rising camera path: the camera rises above the shopper (@Image1), flips over the sofa back until it fills the frame, and comes down out of it into a different place, the owner's sunlit studio (@Image6). <a soft whoosh> At the end, above the owner's desk.
+9-11s, a flip along @Video1's rising camera path: the camera rises above the shopper (@Image1), flips over the sofa back until it fills the frame, and comes down into a different place, the owner's studio (@Image6). <a soft whoosh> At the end, above her desk.
 11-12s, @Video1's wide: the owner (@Image5) at her desk, the jar (@Image8) lit beside her laptop. At the end, wide on her.
 12-16s, @Video1's medium: the owner (@Image5) faces the camera, her laptop screen (@Image7) showing the red Fig & Cedar row; she reads it, frowns. The owner (@Audio2), on screen, in English, disappointed: {I guess no one's interested in Fig and Cedar. No one wants this.} At the end, her frown.
 16-18s, hard cut, @Video1's over-the-shoulder shots: the owner (@Image5) looks from @Image7 to the jar (@Image8). The owner (@Audio2), on screen, in English, decided: {Time to discontinue the product line.} At the end, her eyes on the jar.

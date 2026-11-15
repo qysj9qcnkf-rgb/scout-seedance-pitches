@@ -1,7 +1,7 @@
 # SD25-CHECK · H228 · E: The Dip as the skeleton, Emile's Nov 15 story
 
 Checked against ByteDance's `sd25-pe` skill (`~/ClaudeCowork/marketer/.claude/skills/sd25-pe/SKILL.md`, v0.1.1, read in full this session, lines 1-996; the self-update command ran earlier this session and reported no installed copy to update, so the local copy is used).
-Prompt: `prompt-sd25pe-final.txt` (997 words by `wc -w`, after the two fresh checks; pre-check text in `prompt-sd25pe-final.pre-diploop.txt`). Job plan: `job-plan.json`. Assets: `a2/` (13 files). Previous High-flip version: `bak-pre-dip/`.
+Prompt: `prompt-sd25pe-final.txt` (998 words by `wc -w`, after the two fresh checks and Emile's 2:11 PM additions; earlier texts `prompt-sd25pe-final.pre-diploop.txt`, `prompt-sd25pe-final.pre-1411.txt`). Job plan: `job-plan.json`. Assets: `a2/` (13 files). Previous High-flip version: `bak-pre-dip/`.
 Task type: **video generation with reference assets + a coarse blockout** (skill "Blockout References and Rendering → Coarse Blockout"). Not editing, not extension, no keyframes, no storyboard.
 Why: Emile, 2:02 PM: "You say The Dip skeleton but this one looks exactly like 227. I don't even see the Dip in the files being referenced." E now sends The Dip as @Video1; the High flip clip (D's technique) is not sent.
 
@@ -12,7 +12,7 @@ Cat lady, candles everywhere, cat nearby; scrolls the Fig & Cedar page up and do
 | Ref | File | What it really is | Spec / media |
 |---|---|---|---|
 | @Image1 | a2/image1-shopper.png | Woman, dark-brown bob with bangs, cream cardigan, at a laptop; room, lamp, tabby, small candle behind | 880x1168 · 561ba2d9 |
-| @Image2 | a2/image2-shopper-apartment.png | Empty night living room, sofa, coffee table + laptop, lamp, ~20 lit unlabelled candles, cat bed; no people/animals/text | 941x1672 · 6c1574e8 |
+| @Image2 | a2/image2-shopper-apartment.png | Empty night living room, sofa, coffee table + laptop, lamp, ~20 lit white/cream pillar candles and tea lights (no jars, no amber glass — Emile 2:11 PM), cat bed; no people/animals/text | 941x1672 · d006adfc (free edit + upload) |
 | @Image3 | a2/image3-cat.jpg | Grey tabby only, standing; sofa behind | 436 px wide · 696c034b |
 | @Image4 | a2/image4-product-page.png | Ember & Fig product page, Fig & Cedar $38, Burn time/Size/Wax rows, no pet info; mouse pointer painted out | 1600x1000 · 4e666139 |
 | @Image5 | a2/image5-owner.png | Woman, auburn side braid, rust sweater | 1536x2048 · 1963a66d |
@@ -90,11 +90,15 @@ Cause before reaction: page with no pet info (4-6s) before her annoyance (7-9s);
 The six `{}` lines equal Emile's six lines word for word. No ka-ching; no call scene; no orb. **PASS**.
 
 ## f) Limits
-8 images · 2 videos 29.5 s (≤30) · 3 audio 23.5 s (≤30) · 13 total · 997 words (≤1,000). **PASS**.
+8 images · 2 videos 29.5 s (≤30) · 3 audio 23.5 s (≤30) · 13 total · 998 words (≤1,000). **PASS**.
 
 ## Two fresh-context checks (Nov 15) and fixes
 Check 1 (Goal fit YES, FAIL): mapping times wrong (chat bubbles 17.8-19.4, two figures 11-19 man / 19-25 woman, unmapped paper); 18-21 crossed the 19.4 s cut. Fixed: mapping rewritten as above; 18-19 over-the-shoulder + 19-21 medium; flash-cut cat/eyes mapped; "(soft guitar begins)" cut for words.
 Check 2 (Goal fit YES, FAIL): "the High flip" named D's technique with no asset → "a flip"; 12-16 said "slow push-in over the shoulder" but the skeleton is a frontal medium there → "@Video1's medium… laptop screen (@Image7) showing the red row"; risk the 23-25 s skeleton jar is lit → "the jar stays unlit after 21s"; this file's cut times and self-update claim corrected.
 Known risk (not a rule FAIL): @Video1 is The Dip greyed and blurred, not simple geometry; faces and some text are half-readable. The role line fences "its grey blurred look, people, rooms, phones, cards, orb, city, globe, mug or text".
+
+## Emile's 2:11 PM additions (all cat-candle ads), folded in
+- Plot in 【Generation Goal】: "a shopper is about to buy the Fig & Cedar candle but can't, because the page never says whether it is safe for cats; the owner, seeing only slow sales, surprisingly cuts the line on the wrong insight". Checklist 2/Principle 1 still PASS (same story).
+- Her candles look different from Fig & Cedar: @Image2 re-made with white/cream pillars and tea lights, no jars; role line "many lit white and cream pillar candles and tea lights; no jars"; 2-4s "white candles all around"; mapping "the jar one of her white pillar candles"; @Image8 (amber three-wick jar) "Only on her screen and in the studio". @Image1's own small background candle stays fenced ("not the room, candle, laptop or cat"). PASS.
 
 ## Result: zero FAILs.
