@@ -1,0 +1,33 @@
+【Generation Goal】
+Generate a live-action story film. A shopper at home at night is one click from buying a candle, wonders whether it is safe for her cat, finds no answer and leaves; next morning the candle's maker reads the low sales as nobody wanting it, until Scout's glowing orb tells her not to guess. Please note that this is not video editing.
+
+【Reference Asset Roles】
+Image 1 is used for the shopper's face, bob with bangs and cream cardigan, and for her night living room: lamp, sofa, lit candle jar, white mouse and grey tabby cat.
+Image 2 is used only for the Ember & Fig product page on the shopper's laptop screen; copy its text exactly.
+Image 3 is used only for the owner's face, auburn side braid and rust knit sweater; do not use its background.
+Image 4 is used for the owner's candle studio space, materials and sunlight; do not use its dark laptop screen.
+Image 5 is used only for the Shopify admin on the owner's laptop screen; copy its text exactly.
+Image 6 is used for the single Fig & Cedar candle jar.
+Image 7 is used for Scout's round orb only; no letters appear with it before the final shot.
+Video 1 is used for Scout's calm female voice in both Scout lines, and for the wordmark and talking "o" in the final shot only.
+Audio 1 is used for the shopper's voice timbre, pace and soft tone.
+Audio 2 is used for the owner's voice timbre, warmth and pace.
+
+【Subjects and Relationships】
+The shopper maps to Image 1 and appears only in her dark living room; the cat stays in the background behind her. The owner maps to Image 3 and appears only in the studio from Image 4, at her packing table with the jar from Image 6 in her hands. There is one jar and one orb.
+
+【Event Script】
+0-3s: Macro close-up, high angle, slow push in on the shopper's hand on the white mouse <click, click>; the laptop shows Image 2 with the cursor on "Add to cart"; the candle flickers. Use English. Shopper (inner voice, pleased, lips closed): {Okay. Fig and Cedar. This one.}
+3-5s: Close-up, eye level, static on her screen-lit face, lips closed; the grey tabby cat walks along the back of the sofa and she glances back. <a soft cat trill>
+5-8s: Medium close-up across the laptop lid, slow push in; her hand stops, she scrolls, brows tightening, lips closed. Shopper (inner voice, worried): {Hmm. Is this one safe for my cat?}
+8-10s: Extreme close-up, eye level, static on her eyes as screen glow slides across them, lips closed. Shopper (inner voice, quiet, let down): {It doesn't say anywhere.}
+10-12s: Macro close-up, high angle, static; she clicks <click> and the page closes to a blank tab; the candle flame bends. Shopper (inner voice, small shrug): {Guess not.}
+12-14s: The camera cranes up from a close-up of her to overhead and rolls 180 degrees in one move <whoosh>, landing at eye level, right side up, in the owner's sunlit studio.
+14-17s: Close-up, eye level, slow push in; the owner turns the lit jar with one hand, eyes on her laptop showing Image 5. Owner (puzzled, warm): {Huh. Thought Fig and Cedar would sell way more.}
+17-20s: Close-up, slight low angle, static; she lifts the jar in both hands with a sad half-smile and glances into the lens. Owner (dry, resigned, to camera): {My favourite, too. Guess I'm discontinuing it.}
+20-22s: Macro, eye level, slow pull back; the jar's three flames merge into the orb, which rises between her and the laptop. <a soft rising chime>
+22-25s: Close-up, eye level, static; the orb hovers beside her shoulder; she stops, eyebrows up, mouth naturally closed while listening. Scout (from the orb, calm, friendly): {Don't guess. Ask your shoppers.}
+25-30s: Close-up, eye level, push in on the orb, which flies into the lens and becomes the "o" of the Scout wordmark following Video 1, then holds locked-off on the end screen. Scout (calm): {Scout interviews your shoppers for you. Get free early access.} (music lifts and resolves)
+
+【Maintain Consistency】
+Keep exactly three voices: the shopper only as a close-mic inner voice with her lips closed, the owner on camera with lip sync, Scout only from the orb and end screen. Keep the shopper's room dark and quiet and the owner's studio bright, the owner's look identical in every shot, and one jar throughout. Hard cuts except the flip at 12s, smooth, stabilized camera. On-screen text only on the two laptop screens and the end screen. (A soft, warm lo-fi music bed, very low under the voices.) No subtitles appear on screen.

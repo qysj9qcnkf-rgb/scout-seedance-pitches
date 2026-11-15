@@ -1,0 +1,47 @@
+【Generation Goal】
+Generate a bright, slightly playful live-action ad. A woman who runs her own Shopify online store, all bikinis, is about to post a discount when Scout, a floating lime orb, freezes time and takes her back into a call Scout had with one of her shoppers, which changes her mind. Please note that this is not video editing.
+
+【Reference Asset Roles】
+Use Images 1 to 10 in order as keyframes. Each keyframe sets the composition, room, props and on-screen text of its own time range; move naturally from one keyframe to the next.
+Use Image 1 as the first frame.
+This first frame defines the opening macro of her phone and its "Refund issued" banner.
+Image 11 is the owner: take only her face and hair; do not use its background.
+Image 12 is the shopper: take only her face and hair; do not use its background.
+Audio 1 is the owner's voice: take only timbre, accent and pace; her words come only from this prompt.
+Audio 2 is the shopper's voice: take only timbre, accent and pace; her words come only from this prompt.
+Video 1 is Scout's voice for every Scout line, and it is the ending: at 25-30s it plays exactly as it is. Do not show anything from Video 1 before 25s.
+Audio 3 is the order sound: play it exactly, at 0s and again at 23s.
+Scout is the glowing lime-green orb in Images 4, 5 and 6, and the small lime badge beside the shopper's phone in Image 7.
+
+【Subjects and Relationships】
+The owner works alone in her sunlit studio, full of the bikinis she sells online: the same room in Images 2, 3, 4, 5, 6, 8 and 10. She wears the same loose white linen shirt in every studio shot.
+The shopper exists only in the past, inside the orb (Image 6) and inside the memory (Image 7): her own bright bedroom, a striped tee, a straw beach bag she is packing, her phone at her ear.
+There is one Scout orb. It first appears at 8s; there is no orb before that.
+The Sunset bikini is one orange-to-pink triangle bikini: the same one in the shopper's story and in the owner's hands.
+
+【Event Script】
+0-2s (reference: Image 1): Macro on her phone. <Audio 3 rings> as the "Refund issued" banner slides in.
+2-4s (reference: Image 2): Hard cut. She reads the phone and deflates.
+Owner's line (English; flat, dry sarcasm): {Oh, great. A refund.}
+4-6s (reference: Image 2): Quick punch-in to a close-up; she looks into the lens.
+Owner's line (English; wry, tired): {Sales are so low this week.}
+6-8s (reference: Image 3): Hard cut over her shoulder. The room tone fades; her lips stay closed.
+Owner (V.O., inner voice, English; tempted, close-mic): {Maybe it's time for a discount.}
+8-10s (reference: Image 4): Everything freezes and the music stops: her hand stops on the laptop and the orange bikini top hangs in mid-air. <A soft pop> and Scout appears at her shoulder. Only the camera moves, gliding slowly around the frozen moment. Her lips stay closed.
+Scout's line (English; calm, playful): {Not yet.}
+10-12s (reference: Image 5): Reverse angle: she turns and looks at the orb, surprised and curious, lips closed.
+Scout's line (English; warm, confident): {There's something you don't know.}
+12-15s (reference: Image 6): The orb swells beside her into a round window onto the past. Inside it, the shopper sits on her bed packing a straw beach bag, her phone at her ear, on a call with Scout. The owner watches from her chair, chin on her hand, lips closed. The shopper listens, lips closed.
+Scout's line (English; heard inside the orb from that call; curious, precise): {The Sunset bikini. Three times in your cart. What stopped you?}
+15-18s (reference: Image 7): The camera pushes through the orb's glowing rim into that past moment: a lime glow around the edges of the frame, warm, soft light like a memory. The shopper smiles and shrugs, still packing.
+Shopper's line (English; casual, easy): {You run a discount every week. I'm just waiting for it.}
+18-21s (reference: Image 8): The lime glow snaps away: hard cut back to the studio, in the present. She holds the Sunset bikini top up by its strings in both hands, a rueful half-smile.
+Owner's line (English; realising, quietly amused): {I'm training them to wait.}
+21-23s (reference: Image 9): Close-up: she clicks Delete on the discount.
+Owner's line (English; decisive, light): {Noted.}
+23-25s (reference: Image 10): <Audio 3 rings> as the "New order" banner lands; she speaks right on the bell.
+Owner's line (English; relieved, smiling): {Glad I asked.}
+25-30s (reference: Video 1): Video 1 plays exactly as it is, with Scout's line from it: {Scout interviews your shoppers for you. Get free early access.} Its last frame holds until 30s.
+
+【Maintain Consistency】
+Live action, real skin, natural daylight. Hard cuts, a new visual every 2 to 3 seconds, smooth, stabilised and premium; the only moves inside a cut are the punch-in at 4s, the glide around the freeze at 8s and the push through the orb at 15s. The shopper's call (12-18s) is the past; everything else happens now, in the same studio. Each spoken line finishes inside its own time range. Exactly three voices: the owner (Audio 1), the shopper (Audio 2) and Scout (Video 1); whoever is not speaking keeps their lips closed. (Light upbeat music, silent during the freeze, lower under speech.) Generate dialogue strictly as written; do not add or remove lines. No subtitles.

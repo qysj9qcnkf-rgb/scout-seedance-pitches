@@ -1,0 +1,27 @@
+【Generation Goal】
+Generate a light, real, slightly playful live-action ad: the owner of Salt & Sun Swim, a small online bikini store on Shopify, gets a refund instead of a sale in her sunny home studio, starts to run a discount, and is stopped mid-click by Scout, a floating lime orb. Please note that this is not video editing.
+
+【Reference Asset Roles】
+The owner maps to @Image1; use only her facial features, long brown hair and white linen shirt.
+Her studio references @Image2; use only the room: bikini rails, folded swimsuits, kraft boxes, the wooden table, the window and the daylight. Do not use its empty-chair composition.
+Scout maps to the lime orb in @Image2; use only its round glowing lime body with white sound bars. There is exactly one orb, and it appears only from 10s.
+The phone notification references @Image3; show its lock-screen text exactly as written.
+The laptop screen references @Image4; show the "Create discount" page exactly as written.
+Use @Image5 as the last frame.
+This last frame defines the owner at the laptop with the @Image4 page open, her lips closed, turned toward the orb at her shoulder, in the same studio and camera direction.
+@Video1 is used only for Scout's voice timbre; do not use any of its visuals.
+@Audio1 is used only for the owner's voice timbre, accent, pace and emotion; the words come only from this prompt.
+@Audio2 is the ka-ching on the refund notification; use it only once, at 0-2s, as the @Image3 notification lands, and never on the orb or any later shot.
+
+【Event Script】
+0-2s: Macro close-up, overhead, locked-off. Her phone lies face up on the table among folded bikinis. The @Image3 notification slides in <the @Audio2 ka-ching as the @Image3 notification lands>.
+2-4s: Medium close-up, eye level. She picks up the phone, reads it, and her face drops. The owner, in natural English, annoyed then deflated, says: {Oh f... a refund.} She stops the word after the "f" and never says the rest of it.
+4-6s: Close-up, front angle, slow push in. She lowers the phone and looks straight into the camera, a bikini rail behind her. The owner, in natural English, flat and a little disappointed, says: {Sales are so low this week.}
+6-9s: Medium shot from behind her right shoulder, slow push in toward the laptop showing @Image4. She types the discount, pushing a coral bikini aside with her other hand, her lips closed. The owner's inner voice (V.O.), in natural English, close and quiet, says: {Maybe it's time for a discount.} <The room sound drops away while she thinks.>
+9-10s: Extreme close-up, side angle, bullet time: her finger freezes just above the Save discount button on @Image4, a bikini she tossed hangs still in mid-air, and the camera slowly arcs around her hand. <One soft whoosh.>
+10-12s: Medium close-up, eye level, time still frozen. Scout, the lime orb, silently appears in the air beside her left shoulder. Scout, in natural English, warm, quick and a little playful, says: {Not yet. There's something you don't know.} The owner stays frozen with her mouth closed.
+12-13s: Reverse angle toward the last frame. Time unfreezes; she turns her head to the orb, which glows brighter in silence. The owner, in natural English, surprised and soft, says: {Hm?}
+13-14s: Hold on the last frame defined by @Image5: her lips closed, eyes on the orb, @Image4 still open on the laptop, only quiet room sound.
+
+【Maintain Consistency】
+Keep the owner's face, hair and white shirt, the one studio with her swimwear always around her, the single orb, the bright window daylight and the warm sand, coral and sea-blue colours stable. Exactly two voices: the owner's and Scout's. Generate dialogue strictly as written; do not add or remove lines. Every line finishes inside its own shot. The orb makes no sound at all: no chime, no ka-ching, no pop. The only ka-ching is @Audio2 at 0-2s. No background music. No subtitles appear on screen.

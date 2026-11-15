@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Borrowed Camera Moves</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f4ef; --surface:#ffffff; --surface-2:#efece4; --ink:#16171a; --muted:#5d5f66; --line:#dcd8cd;
+  --lime:#d1fb18; --lime-ink:#1c2300; --accent:#2f6fb3; --coral:#e9694c; --chip-img:#e4efff; --chip-vid:#ffe8df; --chip-aud:#eef7d4;
+  --chip-img-ink:#1d4f8f; --chip-vid-ink:#9a3415; --chip-aud-ink:#3d5200; --shadow:0 1px 2px rgba(0,0,0,.05),0 8px 24px rgba(0,0,0,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0e0f11; --surface:#17191c; --surface-2:#1f2226; --ink:#eeeee9; --muted:#a1a3a9; --line:#2c3035;
+    --accent:#7fb2ec; --coral:#f08a6d; --chip-img:#1b2a40; --chip-vid:#3a2119; --chip-aud:#26300f;
+    --chip-img-ink:#a9cbf5; --chip-vid-ink:#ffb79f; --chip-aud-ink:#d6f27a; --shadow:none;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0e0f11; --surface:#17191c; --surface-2:#1f2226; --ink:#eeeee9; --muted:#a1a3a9; --line:#2c3035;
+  --accent:#7fb2ec; --coral:#f08a6d; --chip-img:#1b2a40; --chip-vid:#3a2119; --chip-aud:#26300f;
+  --chip-img-ink:#a9cbf5; --chip-vid-ink:#ffb79f; --chip-aud-ink:#d6f27a; --shadow:none;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:32px 16px 80px}
+h1,h2,h3{font-family:"Space Grotesk",Inter,sans-serif;letter-spacing:-.01em;line-height:1.15;margin:0}
+h1{font-size:clamp(30px,6vw,52px);font-weight:700}
+h2{font-size:24px;font-weight:600;margin-bottom:6px}
+h3{font-size:17px;font-weight:600}
+p{margin:0 0 12px}
+a{color:var(--accent)}
+section{margin-top:44px}
+.kicker{font:600 12px/1 Inter;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.lede{font-size:clamp(18px,2.6vw,22px);margin:16px 0 18px;max-width:780px}
+.why{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px 20px;box-shadow:var(--shadow)}
+.why ul{margin:8px 0 0;padding-left:20px}
+.why li{margin:6px 0}
+cite{font-style:normal;font-size:13px;color:var(--muted)}
+.sub{color:var(--muted);margin-bottom:16px}
+.inputline{display:flex;flex-wrap:wrap;gap:8px;align-items:center;background:var(--ink);color:var(--bg);border-radius:14px;padding:14px 16px;font-weight:500}
+.inputline .pill{max-width:100%;background:rgba(127,127,127,.22);border-radius:999px;padding:4px 12px;font-size:14px}
+.inputline .pill.lime{background:var(--lime);color:var(--lime-ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(160px,100%),1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);scroll-margin-top:20px;display:flex;flex-direction:column}
+.card:target{outline:3px solid var(--lime);outline-offset:2px}
+.card .media{background:#000;aspect-ratio:9/16;display:flex;align-items:center;justify-content:center}
+.card .media img,.card .media video{width:100%;height:100%;object-fit:cover;display:block}
+.card .media.audio{aspect-ratio:auto;padding:22px 12px;background:var(--surface-2)}
+.card .media.audio audio{width:100%}
+.card .body{padding:12px 14px 14px;font-size:14px}
+.card .body p{margin:6px 0 0;color:var(--muted)}
+.tag{display:inline-block;font:600 13px/1 ui-monospace,Menlo,monospace;border-radius:6px;padding:5px 7px}
+.t-img{background:var(--chip-img);color:var(--chip-img-ink)}
+.t-vid{background:var(--chip-vid);color:var(--chip-vid-ink)}
+.t-aud{background:var(--chip-aud);color:var(--chip-aud-ink)}
+.meta{font:12px/1.4 ui-monospace,Menlo,monospace;color:var(--muted);margin-top:8px;word-break:break-all}
+.chip{display:inline-block;font:600 .86em/1.2 Inter;border-radius:6px;padding:1px 6px;text-decoration:none;white-space:nowrap}
+.chip.i{background:var(--chip-img);color:var(--chip-img-ink)}
+.chip.v{background:var(--chip-vid);color:var(--chip-vid-ink)}
+.chip.a{background:var(--chip-aud);color:var(--chip-aud-ink)}
+.part{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-top:12px}
+.part h3{margin-bottom:8px}
+.part .lbl{font:600 11px/1 Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.part p{font-size:15px;margin:0 0 8px}
+.part .ts{font-weight:700;font-variant-numeric:tabular-nums}
+.dlg{background:var(--surface-2);border-radius:4px;padding:0 3px}
+.copyrow{display:flex;gap:10px;align-items:center;margin-top:14px;flex-wrap:wrap}
+button{font:600 15px Inter;border:0;border-radius:10px;padding:11px 18px;background:var(--lime);color:var(--lime-ink);cursor:pointer}
+button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.hint{color:var(--muted);font-size:14px}
+textarea.raw{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:900px;font-size:14px}
+th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--line)}
+th{font:600 12px Inter;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--surface-2);position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td.t{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+td.line{font-style:italic}
+tr.special td{background:color-mix(in srgb,var(--lime) 14%,transparent)}
+.hero{display:grid;grid-template-columns:minmax(0,340px) 1fr;gap:22px;align-items:start}
+.hero video{width:100%;border-radius:16px;background:#000;display:block;aspect-ratio:9/16}
+.now{margin-top:10px;font:600 15px Inter}
+.now span{color:var(--muted);font-weight:500}
+.bar{position:relative;height:42px;border-radius:10px;overflow:hidden;display:flex;margin:14px 0 6px;border:1px solid var(--line)}
+.bar div{display:flex;align-items:center;justify-content:center;font:600 11px Inter;color:var(--ink);border-right:1px solid var(--line);cursor:pointer;text-align:center;line-height:1.1;padding:0 2px}
+.bar .r1{background:var(--chip-vid)}.bar .r2,.bar .r3,.bar .r4{background:var(--lime);color:var(--lime-ink)}.bar .r5{background:var(--ink);color:var(--bg)}.bar .none{background:var(--surface-2);color:var(--muted)}
+.bar .head{position:absolute;top:0;bottom:0;width:2px;background:var(--coral);left:0;pointer-events:none}
+.scale{display:flex;justify-content:space-between;font:11px ui-monospace,Menlo,monospace;color:var(--muted)}
+.moves{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(200px,100%),1fr));gap:14px;margin-top:22px}
+.move{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.move video{width:100%;aspect-ratio:9/16;object-fit:cover;background:#000;display:block}
+.move .body{padding:12px 14px;font-size:14px}
+.move .body b{display:block;font-family:"Space Grotesk";font-size:16px;margin-bottom:2px}
+.risk{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(260px,100%),1fr));gap:12px}
+.risk div{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--coral);border-radius:10px;padding:12px 14px;font-size:14px}
+.vs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-top:12px}
+.vs h4{font:600 14px Inter;margin:0 0 6px}
+.vs pre{white-space:pre-wrap;word-break:break-word;font:12.5px/1.55 ui-monospace,Menlo,monospace;max-height:560px;overflow:auto;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px;margin:0}
+.vs .send pre{border:2px solid var(--lime)}
+.verdict{background:var(--lime);color:var(--lime-ink);border-radius:14px;padding:14px 18px;font-size:16px;margin-top:12px}
+.chk td:first-child{font-weight:600;white-space:nowrap}
+.chk table{min-width:0}
+@media (max-width:720px){.vs{grid-template-columns:1fr}}
+/* phones: one asset per row, thumbnail beside full-width text; audio cards stack */
+@media (max-width:600px){
+  .grid{grid-template-columns:1fr;gap:12px}
+  .grid .card{flex-direction:row;align-items:stretch}
+  .grid .card .media{flex:0 0 112px;width:112px;align-self:flex-start}
+  .grid .card .body{flex:1 1 auto;min-width:0;overflow-wrap:anywhere}
+  .grid .card:has(.media.audio){flex-direction:column}
+  .grid .card .media.audio{flex:none;width:auto;align-self:stretch}
+}
+#eval{background:var(--surface);border:2px dashed var(--line);border-radius:14px;padding:18px 20px}
+@media (max-width:720px){
+  .hero{grid-template-columns:1fr}
+  .hero video{max-width:340px;margin:0 auto}
+  .bar div{font-size:9px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="kicker">H217 · Team D · Seedance 2.5 technique: camera-motion video reference</div>
+  <h1>Borrowed camera moves: "Not yet"</h1>
+  <p class="lede">A refund lands, she's one click from a discount, and Scout freezes time. Real viral camera moves (Bullet time, Eyes in, High flip) and The Dip's cutting rhythm go in as video references, so the freeze, the dive into the shopper's call and the snap back come from moves that already work on Higgsfield, not from adjectives.</p>
+  <div class="why">
+    <h3>Why this technique fits this story</h3>
+    <ul>
+      <li><b>The story turns on three moves.</b> The freeze, the jump into a past call and the return are the beats words describe worst. The guide's motion-reference row covers exactly this: "References motion and dynamic information from videos: action/expression/<b>camera movement</b>/creativity/effects". <cite>PG, R2V task table</cite></li>
+      <li><b>One video per beat, only the part we name.</b> "Refer to the action of casting the spell in Video 1 and the wrap-around camera movement in Video 2", and "if only part of an asset should be referenced, clearly state which part". <cite>PG, Reference tasks (multi-asset mapping)</cite> ByteDance's own ad example binds six video clips to six moments of one film ("referring to the motion and camera movement of @Video2…"). <cite>Tutorial, Up to 50 omni reference assets</cite></li>
+      <li><b>Take the move, never the people.</b> The clay-model example says the video "should only be used as a reference for camera movement, camera motion, shot rhythm… Do not reference its visual content." Every video line here ends with what not to take. <cite>PG, 3D clay-model video reference; Tutorial, Prompt rules: "what should not be referenced"</cite></li>
+      <li><b>Pace is a reference too.</b> The Dip's first 8 s go in silent as Video 1 (its on-screen words and label blurred out), for "the shot language and action rhythm". <cite>PG 2.0, Asset configuration strategy (2.5 inherits motion refs: "consistent with Seedance 2.0")</cite></li>
+      <li><b>It fits the limits.</b> Five videos, 26.5 s in all, each 4–8 s (limit: "up to 10 videos, combined total duration of no more than 30 seconds"; best "5-10 seconds"). <cite>PG, Reference asset input recommendations</cite> No reference video has subtitles or readable words ("Subtitles in a reference video may override the no-subtitle instruction"). <cite>PG FAQ, Subtitles</cite></li>
+    </ul>
+  </div>
+</header>
+
+<section>
+  <h2>Input</h2>
+  <p class="sub">Laid out like ByteDance's examples. One pass, no second render.</p>
+  <div class="inputline">
+    <span>Input:</span><span class="pill">text</span><span class="pill">+ 7 images</span><span class="pill lime">+ 5 videos (26.5 s)</span><span class="pill">+ 4 audio (27.4 s)</span>
+    <span class="pill">seedance_2_5 · omni_reference · draft · 480p · 9:16 · 30 s · audio on</span>
+    <span class="pill lime">90 credits, one pass</span>
+  </div>
+  <p class="hint" style="margin-top:10px">Cost from Higgsfield's free get_cost preflight with video references attached: 90 credits, the same as without them (quoted on the 14-asset set). <b>Unconfirmed for the full 16-asset set</b> (7 images, 5 videos, 4 audio): the sd25-pe final adds Image 7 and Audio 4 and was not re-quoted. Every past quote with more references stayed 90; run get_cost on the 16 uploads before any render. Nothing was rendered. Text is written at 0–30 s with whole-second stamps and no gaps <cite>(PG, Timestamps)</cite>.</p>
+</section>
+
+<section>
+  <h2>Reference assets, in upload order</h2>
+  <p class="sub">Upload in this exact order; the prompt counts "Image 1 / Video 1 / Audio 1" by it <cite>(PG, Reference tasks)</cite>. Characters go in by first appearance: owner, then Scout, then shopper <cite>(PG FAQ, Incorrect character-to-reference mapping)</cite>.</p>
+  <div class="grid">
+    <div class="card" id="image1"><div class="media"><img src="a/image1-owner.png" alt="The owner smiling in her bikini studio" loading="lazy"></div><div class="body"><span class="tag t-img">&lt;image1&gt;</span> <b>Owner</b><p>Soul 2 face, cast inside her own warm studio. Face, hair, outfit.</p><div class="meta">job 9a8b15e8-59c4-4f55-b292-8a5645ff4ad8</div></div></div>
+    <div class="card" id="image2"><div class="media"><img src="a/image2-refund-banner.png" alt="Lock screen with a Shopify Refund issued notification" loading="lazy"></div><div class="body"><span class="tag t-img">&lt;image2&gt;</span> <b>Refund banner</b><p>New. "Refund issued · [SALT &amp; SUN SWIM] A refund of $68.00 was issued for 1 item from Online Store." Built in HTML, green bag kept.</p><div class="meta">upload at render · a/image2-refund-banner.png</div></div></div>
+    <div class="card" id="image3"><div class="media"><img src="a/image3-studio-orb.png" alt="The studio with the lime Scout orb floating over a chair" loading="lazy"></div><div class="body"><span class="tag t-img">&lt;image3&gt;</span> <b>Studio + Scout orb</b><p>Binds every owner shot to the bikini studio (the H215 lesson).</p><div class="meta">media db24f683-e851-48d8-b1b3-51e80702c4fe</div></div></div>
+    <div class="card" id="image4"><div class="media"><img src="a/image4-shopper.png" alt="Shopper packing a straw beach bag in a sunny bedroom" loading="lazy"></div><div class="body"><span class="tag t-img">&lt;image4&gt;</span> <b>Shopper</b><p>Busy, one task (packing), coral bikini on the bed.</p><div class="meta">job 6ccc5f17-498c-424f-8c58-a90ff1577399</div></div></div>
+    <div class="card" id="image5"><div class="media"><img src="a/image5-call-card.png" alt="Call card: Scout asks What stopped you?" loading="lazy"></div><div class="body"><span class="tag t-img">&lt;image5&gt;</span> <b>Call card</b><p>The Dip's design, Scout's question only, so the shopper's answer is heard at 16 s before anything shows it. Rebuilt from the old card for 0 credits.</p><div class="meta">upload at render · a/image5-call-card.png</div></div></div>
+    <div class="card" id="image6"><div class="media"><img src="a/image6-sale-banner.png" alt="Lock screen with a new full-price order notification" loading="lazy"></div><div class="body"><span class="tag t-img">&lt;image6&gt;</span> <b>Full-price order</b><p>New. $84.00, Thursday, golden light: "a week later".</p><div class="meta">upload at render · a/image6-sale-banner.png</div></div></div>
+    <div class="card" id="image7"><div class="media"><img src="a/image7-scout-orb.png" alt="The lime Scout orb with sound bars, cut out on a plain background" loading="lazy"></div><div class="body"><span class="tag t-img">&lt;image7&gt;</span> <b>Scout orb · new</b><p>Cut out of Image 3 onto a plain background for free, so Scout has his own reference with no studio behind him, and Image 3 is only the room. sd25-pe: one role per asset.</p><div class="meta">upload at render · a/image7-scout-orb.png</div></div></div>
+
+    <div class="card" id="video1"><div class="media"><video src="a/video1-dip-rhythm-8s.mp4" controls muted playsinline preload="metadata"></video></div><div class="body"><span class="tag t-vid">&lt;video1&gt;</span> <b>The Dip, 0–8 s · rhythm</b><p>Silent. Cutting rhythm, shot sizes, macro-phone-then-pull-back. Banner text and the laptop/product inserts (4–7 s) are blurred, so no words or label can leak. Bound to 0–8 s.</p><div class="meta">8.0 s · upload at render</div></div></div>
+    <div class="card" id="video2"><div class="media"><video src="a/video2-bullet-time-5s.mp4" controls muted playsinline preload="metadata"></video></div><div class="body"><span class="tag t-vid">&lt;video2&gt;</span> <b>Bullet time · the freeze</b><p>Higgsfield viral preset, 2.5–7.5 s, centre-cropped to 9:16. Bound to 8–11 s.</p><div class="meta">5.0 s · upload at render</div></div></div>
+    <div class="card" id="video3"><div class="media"><video src="a/video3-eyes-in-5s.mp4" controls muted playsinline preload="metadata"></video></div><div class="body"><span class="tag t-vid">&lt;video3&gt;</span> <b>Eyes in · the dive</b><p>Higgsfield viral preset, 2–7 s. Push into the orb and out in the shopper's room. Bound to 11–13 s.</p><div class="meta">5.0 s · upload at render</div></div></div>
+    <div class="card" id="video4"><div class="media"><video src="a/video4-high-flip-4s.mp4" controls muted playsinline preload="metadata"></video></div><div class="body"><span class="tag t-vid">&lt;video4&gt;</span> <b>High flip · the return</b><p>Higgsfield viral preset, 3–7 s. Rise and flip from the shopper back to the owner. Bound to 19–20 s, with no line on it.</p><div class="meta">4.0 s · upload at render</div></div></div>
+    <div class="card" id="video5"><div class="media"><video src="a/video5-h158-end-4_5s.mp4" controls playsinline preload="metadata"></video></div><div class="body"><span class="tag t-vid">&lt;video5&gt;</span> <b>H158 end screen + Scout's voice</b><p>Talking "o". Reproduced at 25–30 s; its voice is Scout's.</p><div class="meta">4.5 s · media cae62718-ec02-41f6-8e36-1de097e8427d</div></div></div>
+
+    <div class="card" id="audio1"><div class="media audio"><audio src="a/audio1-owner-elena-9s.mp3" controls preload="none"></audio></div><div class="body"><span class="tag t-aud">&lt;audio1&gt;</span> <b>Owner voice · Elena</b><p>Timbre only; the prompt's words win. Cut to 8.9 s at a sentence end (was 13.4 s, media e05a2ee1) to make room for Audio 4 under the 30 s audio limit; 5–10 s is the guide's best range.</p><div class="meta">8.9 s · upload at render · a/audio1-owner-elena-9s.mp3</div></div></div>
+    <div class="card" id="audio2"><div class="media audio"><audio src="a/audio2-shopper-serene.mp3" controls preload="none"></audio></div><div class="body"><span class="tag t-aud">&lt;audio2&gt;</span> <b>Shopper voice · Serene</b><p>Relaxed, casual.</p><div class="meta">11.4 s · media 4b121290-c867-44a1-8dc3-6046fb0efb15</div></div></div>
+    <div class="card" id="audio3"><div class="media audio"><audio src="a/audio3-kaching.mp3" controls preload="none"></audio></div><div class="body"><span class="tag t-aud">&lt;audio3&gt;</span> <b>Ka-ching</b><p>First 1.6 s, twice: refund (0 s) and full-price order (23 s).</p><div class="meta">2.6 s · media 45fb9d1d-0e34-4966-83b9-4d0f169fe660</div></div></div>
+    <div class="card" id="audio4"><div class="media audio"><audio src="a/audio4-scout-voice.mp3" controls preload="none"></audio></div><div class="body"><span class="tag t-aud">&lt;audio4&gt;</span> <b>Scout voice · new</b><p>The sound of Video 5 on its own (Deepgram: "Scout interviews your shoppers for you. Get free early access."). Scout's voice for his lines at 8–16 s, so Video 5 keeps one job: the final shot.</p><div class="meta">4.5 s · upload at render · a/audio4-scout-voice.mp3</div></div></div>
+  </div>
+</section>
+
+<section id="special">
+  <h2>The camera map</h2>
+  <p class="sub">The technique's special asset. A free, rough 30 s animatic: each borrowed move plays in the seconds it drives; stills hold the beats Seedance writes from text. It shows timing and moves only, not the look (the candle woman and the diner are what we tell Seedance <b>not</b> to take).</p>
+  <div class="hero">
+    <div>
+      <video id="anim" src="a/camera-map-animatic.mp4" controls playsinline preload="metadata"></video>
+      <div class="now" id="now">0–8 s <span>The Dip rhythm (Video 1)</span></div>
+    </div>
+    <div>
+      <div class="bar" id="bar" aria-label="Which reference drives each second">
+        <div class="r1" style="flex:8" data-t="0">Video 1 · Dip rhythm</div>
+        <div class="r2" style="flex:3" data-t="8">V2 Bullet</div>
+        <div class="r3" style="flex:2" data-t="11">V3 Eyes</div>
+        <div class="none" style="flex:6" data-t="13">the call (text)</div>
+        <div class="r4" style="flex:1" data-t="19">V4</div>
+        <div class="none" style="flex:5" data-t="20">aha, fix + sale</div>
+        <div class="r5" style="flex:5" data-t="25">Video 5 end</div>
+        <span class="head" id="head"></span>
+      </div>
+      <div class="scale"><span>0 s</span><span>8</span><span>13</span><span>19</span><span>25</span><span>30 s</span></div>
+      <p style="margin-top:14px">Click a block to jump there. Lime blocks are the three borrowed viral moves; text alone drives the grey blocks, where the acting matters more than the camera (2.0 guide: "Try to specify only 1 type of camera movement in a single shot").</p>
+      <p class="hint">The animatic also plays the ka-ching at 0 s and 23 s and the real end-screen audio.</p>
+    </div>
+  </div>
+
+  <div class="moves">
+    <div class="move"><video data-src="a/video2-bullet-time-5s.mp4" muted loop playsinline autoplay></video><div class="body"><b>Bullet time → the freeze (8–11 s)</b>Time stops, objects hang, the camera arcs around her. A tossed bikini hangs mid-air; Scout pops in. <a href="https://cdn.higgsfield.ai/viral_hub/08dad223-9baf-4d51-a07d-07062cf392d9.mp4">Higgsfield preview</a> · preset 6626ad13</div></div>
+    <div class="move"><video data-src="a/video3-eyes-in-5s.mp4" muted loop playsinline autoplay></video><div class="body"><b>Eyes in → into Scout's memory (11–13 s)</b>The camera dives into the eye and through the pupil to a new scene. Ours dives into the orb's glow and comes out in the shopper's bedroom: proof shown, not explained. <a href="https://cdn.higgsfield.ai/viral_hub/dba03734-6e8a-4337-acb4-17ce943563d8.mp4">Higgsfield preview</a> · preset a5e06af0</div></div>
+    <div class="move"><video data-src="a/video4-high-flip-4s.mp4" muted loop playsinline autoplay></video><div class="body"><b>High flip → back to her (19–20 s)</b>"The camera rises above the subject and flips overhead, revealing a new character and location." From the shopper's bed to the owner's studio. The flip runs silent; her aha line gets its own landed close-up at 20–22 s. <a href="https://cdn.higgsfield.ai/viral_hub/001156a7-cfdb-4e16-8f13-68c246ddc06c.mp4">Higgsfield preview</a> · preset 93a606f8</div></div>
+    <div class="move"><video data-src="a/video1-dip-rhythm-8s.mp4" muted loop playsinline autoplay></video><div class="body"><b>The Dip, 0–8 s → pace (0–8 s)</b>Macro banner, fast pull-back, a talking close-up, a push into the screen: 5 cuts in 8 s. Ours runs refund macro, phone, lens, laptop.</div></div>
+  </div>
+  <p class="hint" style="margin-top:12px">Also considered and left out: Earth zoom (used in H215; geography reads as "travel", not "memory"), Orbit 360 and Wild ride (spin without a story reason). Marketing Studio's motion category holds motion-graphics templates, not camera moves.</p>
+</section>
+
+<section>
+  <h2>The exact prompt</h2>
+  <p class="sub">Split into the guide's four parts <cite>(PG, Basic prompting techniques: asset referencing, one-sentence summary, detailed plot, additional notes)</cite>. Chips jump to their asset. Dialogue uses <span class="dlg">Character (emotion) says: {line}</span>; the thought line uses the guide's V.O. form with "keeps her lips closed" <cite>(PG FAQ, Subtitles; PG example, V.O.; Tutorial, Prompt rules: {} for dialogue)</cite>. Negative wording only for subtitles and audio <cite>(PG, Negative control)</cite>; the "Do not take" lines on reference videos follow the guide's own wording <cite>(Tutorial, "what should not be referenced"; PG, 3D clay-model: "Do not reference its visual content")</cite>. Accurate references are named, not re-described <cite>(PG: "simply state that it should be referenced and avoid repeatedly describing")</cite>.</p>
+  <div id="parts"></div>
+  <textarea class="raw" id="raw" aria-label="Raw prompt" readonly>Image 1 is the owner of Salt &amp; Sun Swim, a Shopify bikini store: use her face, hair and outfit; her room comes from Image 3. She speaks with the voice timbre of Audio 1.
+Image 2 is the refund notification on her lock screen: show it word for word. Do not use its table.
+Image 3 is her home studio and Scout, the floating lime orb with sound bars inside. Every owner shot takes place in this studio. Scout speaks with the voice in Video 5.
+Image 4 is the shopper: use her face, striped tee and straw beach bag. She speaks with the voice timbre of Audio 2.
+Image 5 is Scout's call card: show its words exactly.
+Image 6 is the full-price order notification: show it word for word. Do not use its table.
+Refer to Video 1 only for the cutting rhythm, shot sizes and macro-then-fast-pull-back opening, for 0-8s. Do not take its woman, candles, room or screens.
+Refer to Video 2 only for the bullet-time camera move, for 8-11s. Do not take its diner, food or people.
+Refer to Video 3 only for the continuous push-in that dives through the subject into a new scene, for 11-13s. Do not take its woman, street or eye.
+Refer to Video 4 only for the rise-and-flip-overhead move into a new room, for 19-20s. Do not take its people, throne, church or card table.
+Video 5 is the ending: reproduce it as the final shot, with its wordmark and voice.
+Audio 3 is the order sound: use its first 1.6 seconds only at 0-2s, on the refund notification from Image 2, and at 23-25s, on the full-price notification from Image 6. Nothing else plays it.
+
+A bikini-store owner gets a refund and nearly runs a discount, until Scout, a floating lime orb, freezes time to show her the shopper interview that changes her mind; a light, playful vertical live-action ad with fast hard cuts.
+
+0-2s: Extreme macro of her phone among folded bikinis. The order sound of Audio 3 rings and the notification from Image 2 slides in. The camera pulls back fast.
+2-4s: Close-up: she picks up the phone with a coral bikini in her other hand. The owner (deflated, half laughing) says: {Oh, come on. A refund.}
+4-6s: Punch-in close-up, still holding the coral bikini, she looks into the lens. The owner (dry, a little sad) says: {Sales are so low this week.}
+6-8s: Side profile at her laptop: she tosses a bikini onto the pile and starts setting up a discount in her Shopify admin. She keeps her lips closed. The owner (V.O., tempted) says: {Maybe it's time for a discount.}
+8-11s: Bullet time, the move of Video 2: her finger stops above the trackpad and the tossed bikini hangs in mid-air. Scout, the lime orb from Image 3, pops in beside her shoulder. Scout (warm, playful, firm) says: {Not yet. There's something you don't know.}
+11-13s: Reverse angle: she turns to the orb, curious. The camera dives into its glow, the move of Video 3, with a soft whoosh.
+13-16s: Out into the shopper's sunny bedroom from Image 4: earbuds in, she packs her beach bag on the bed, half turned away. The call card from Image 5 floats up off the phone. Scout (curious, kind) says: {Sunset bikini, in your cart three times. What stopped you?}
+16-19s: Close-up: she folds a towel into the bag without looking up. The shopper (casual, shrugging) says: {You discount every week. I'm just waiting.}
+19-20s: The flip of Video 4 carries us back to the owner's studio. No line.
+20-22s: Close-up landing on the owner holding the coral bikini, half laughing, half wincing. The owner (realising) says: {I'm training them to wait.}
+22-23s: Close-up: she taps delete on the discount. The owner (light, decided) says: {Noted.}
+23-25s: A week later, golden light: her phone on the table lights up with the notification from Image 6 and the order sound of Audio 3. She seals a kraft mailer. The owner (relieved, smiling) says: {Glad I asked.}
+25-30s: Exactly as in Video 5: the orb becomes the "o" of the Scout wordmark. Scout says: {Scout interviews your shoppers for you. Get free early access.}
+
+Vertical 9:16 live action, hard cuts, steady camera. Each spoken line finishes inside its own shot. Tight delivery: no pause longer than a quarter second inside a line. Warm window light, sand and sea-blue colours. One person per shot; faces, hair and outfits stay identical. Generate dialogue strictly as written. Light upbeat music under the film, lower under speech. No subtitles.
+</textarea>
+  <div class="copyrow"><button id="copy" type="button">Copy raw prompt</button><span class="hint" id="copied">750 words · 60 spoken words (50 story + 10 end line) · also saved as prompt.txt</span></div>
+</section>
+
+<section id="sd25pe">
+  <h2>sd25-pe final: ours next to ByteDance's</h2>
+  <p class="sub">Emile, Nov 14: run the final prompt through ByteDance's sd25-pe to check every input is right for the model, show it next to ours, and say which to send. This pass ran the real skill (loaded with the Skill tool; its self-update found no newer copy, so it used the installed one) on the prompt above and the actual assets, then checked it line by line against the skill's Final Checklist.</p>
+  <div class="verdict"><b>Send the sd25-pe final (the lime-framed box).</b> Same story, same 13 time stamps, same three borrowed moves, same 60 spoken words. It fixes what ours gets wrong for the model: two assets with two jobs each, no language on the lines, and sound effects not marked. Ours stays as the control if we ever A/B.</div>
+  <div class="vs">
+    <div><h4>Ours · prompt.txt · 750 words · 14 assets</h4><pre>Image 1 is the owner of Salt &amp; Sun Swim, a Shopify bikini store: use her face, hair and outfit; her room comes from Image 3. She speaks with the voice timbre of Audio 1.
+Image 2 is the refund notification on her lock screen: show it word for word. Do not use its table.
+Image 3 is her home studio and Scout, the floating lime orb with sound bars inside. Every owner shot takes place in this studio. Scout speaks with the voice in Video 5.
+Image 4 is the shopper: use her face, striped tee and straw beach bag. She speaks with the voice timbre of Audio 2.
+Image 5 is Scout's call card: show its words exactly.
+Image 6 is the full-price order notification: show it word for word. Do not use its table.
+Refer to Video 1 only for the cutting rhythm, shot sizes and macro-then-fast-pull-back opening, for 0-8s. Do not take its woman, candles, room or screens.
+Refer to Video 2 only for the bullet-time camera move, for 8-11s. Do not take its diner, food or people.
+Refer to Video 3 only for the continuous push-in that dives through the subject into a new scene, for 11-13s. Do not take its woman, street or eye.
+Refer to Video 4 only for the rise-and-flip-overhead move into a new room, for 19-20s. Do not take its people, throne, church or card table.
+Video 5 is the ending: reproduce it as the final shot, with its wordmark and voice.
+Audio 3 is the order sound: use its first 1.6 seconds only at 0-2s, on the refund notification from Image 2, and at 23-25s, on the full-price notification from Image 6. Nothing else plays it.
+
+A bikini-store owner gets a refund and nearly runs a discount, until Scout, a floating lime orb, freezes time to show her the shopper interview that changes her mind; a light, playful vertical live-action ad with fast hard cuts.
+
+0-2s: Extreme macro of her phone among folded bikinis. The order sound of Audio 3 rings and the notification from Image 2 slides in. The camera pulls back fast.
+2-4s: Close-up: she picks up the phone with a coral bikini in her other hand. The owner (deflated, half laughing) says: {Oh, come on. A refund.}
+4-6s: Punch-in close-up, still holding the coral bikini, she looks into the lens. The owner (dry, a little sad) says: {Sales are so low this week.}
+6-8s: Side profile at her laptop: she tosses a bikini onto the pile and starts setting up a discount in her Shopify admin. She keeps her lips closed. The owner (V.O., tempted) says: {Maybe it's time for a discount.}
+8-11s: Bullet time, the move of Video 2: her finger stops above the trackpad and the tossed bikini hangs in mid-air. Scout, the lime orb from Image 3, pops in beside her shoulder. Scout (warm, playful, firm) says: {Not yet. There's something you don't know.}
+11-13s: Reverse angle: she turns to the orb, curious. The camera dives into its glow, the move of Video 3, with a soft whoosh.
+13-16s: Out into the shopper's sunny bedroom from Image 4: earbuds in, she packs her beach bag on the bed, half turned away. The call card from Image 5 floats up off the phone. Scout (curious, kind) says: {Sunset bikini, in your cart three times. What stopped you?}
+16-19s: Close-up: she folds a towel into the bag without looking up. The shopper (casual, shrugging) says: {You discount every week. I'm just waiting.}
+19-20s: The flip of Video 4 carries us back to the owner's studio. No line.
+20-22s: Close-up landing on the owner holding the coral bikini, half laughing, half wincing. The owner (realising) says: {I'm training them to wait.}
+22-23s: Close-up: she taps delete on the discount. The owner (light, decided) says: {Noted.}
+23-25s: A week later, golden light: her phone on the table lights up with the notification from Image 6 and the order sound of Audio 3. She seals a kraft mailer. The owner (relieved, smiling) says: {Glad I asked.}
+25-30s: Exactly as in Video 5: the orb becomes the "o" of the Scout wordmark. Scout says: {Scout interviews your shoppers for you. Get free early access.}
+
+Vertical 9:16 live action, hard cuts, steady camera. Each spoken line finishes inside its own shot. Tight delivery: no pause longer than a quarter second inside a line. Warm window light, sand and sea-blue colours. One person per shot; faces, hair and outfits stay identical. Generate dialogue strictly as written. Light upbeat music under the film, lower under speech. No subtitles.</pre></div>
+    <div class="send"><h4>sd25-pe final · prompt-sd25pe-final.txt · 924 words · 16 assets</h4><pre>【Generation Goal】
+Generate a light, playful live-action ad with fast hard cuts: a bikini-store owner gets a refund and nearly runs a discount, until Scout, a floating lime orb, freezes time to show her the shopper interview that changes her mind. Please note that this is not video editing.
+
+【Reference Asset Roles】
+Image 1 is the owner of Salt &amp; Sun Swim, a Shopify bikini store: use only her face, hair and outfit; do not use the image background.
+Image 2 is the refund notification on her lock screen: show its words exactly; do not use its table.
+Image 3 is the owner's home studio: use only its room, furniture and light; do not use the lime orb floating in it.
+Image 4 is the shopper in her sunny bedroom: use her face, hair, striped tee, earbuds, straw beach bag and the bedroom.
+Image 5 is Scout's call card: show its words exactly.
+Image 6 is the full-price order notification: show its words exactly; do not use its table.
+Image 7 is Scout: use only the lime orb with sound bars inside, shown on a plain background.
+Video 1 is used only for the cutting rhythm, shot sizes and macro-then-fast-pull-back opening of 0-8s; do not use its woman, candles, room or screens.
+Video 2 is used only for the bullet-time camera move of 8-11s; do not use its diner, food or people.
+Video 3 is used only for the continuous push-in that dives through the subject into a new scene, for 11-13s; do not use its woman, street or eye.
+Video 4 is used only for the rise-and-flip-overhead move into a new room, for 19-20s; do not use its people, throne, church or card table.
+Video 5 is the final shot: reproduce it with its wordmark, motion and sound.
+Audio 1 is used only for the owner's voice timbre.
+Audio 2 is used only for the shopper's voice timbre.
+Audio 3 is the order sound: use its first 1.6 seconds only at 0-2s, on the refund notification from Image 2, and at 23-25s, on the full-price notification from Image 6. Nothing else plays it.
+Audio 4 is used only for Scout's voice timbre.
+
+【Subjects and Relationships】
+The owner maps to Image 1 and appears only in the studio from Image 3. Her hands stay on her product: the coral bikini, the bikini pile, the kraft mailer.
+The shopper maps to Image 4 and appears only in her bedroom.
+Scout maps to Image 7 and is the only orb. Scout first enters at 8-11s, popping in beside her shoulder.
+One person per shot.
+
+【Event Script】
+0-2s: Extreme macro of her phone among folded bikinis. &lt;The order sound of Audio 3 rings&gt; and the notification from Image 2 slides in. The camera pulls back fast.
+2-4s: Close-up: she picks up the phone with a coral bikini in her other hand. The owner (deflated, half laughing) says in English: {Oh, come on. A refund.}
+4-6s: Punch-in close-up, still holding the coral bikini, she looks into the lens. The owner (dry, a little sad) says in English: {Sales are so low this week.}
+6-8s: Side profile at her laptop: she tosses a bikini onto the pile and starts setting up a discount in her Shopify admin. She keeps her lips closed. The owner (V.O., tempted) says in English: {Maybe it's time for a discount.}
+8-11s: Bullet time, the move of Video 2: her finger stops above the trackpad and the tossed bikini hangs in mid-air. Scout pops in beside her shoulder. She keeps her lips closed. Scout (warm, playful, firm) says in English: {Not yet. There's something you don't know.}
+11-13s: Reverse angle: she turns to Scout, curious. The camera dives into its glow, the move of Video 3, with &lt;a soft whoosh&gt;.
+13-16s: Out into the shopper's sunny bedroom: earbuds in, she packs her beach bag on the bed, half turned away. The call card from Image 5 floats up off her phone. The shopper keeps her lips closed. Scout is off-screen; his voice comes through her earbuds. Scout (curious, kind) says in English: {Sunset bikini, in your cart three times. What stopped you?}
+16-19s: Close-up: she folds a towel into the bag without looking up. The shopper (casual, shrugging) says in English: {You discount every week. I'm just waiting.}
+19-20s: The flip of Video 4 carries us back to the owner's studio. No line.
+20-22s: Close-up landing on the owner holding the coral bikini, half laughing, half wincing. The owner (realising) says in English: {I'm training them to wait.}
+22-23s: Close-up: she taps delete on the discount. The owner (light, decided) says in English: {Noted.}
+23-25s: A week later, golden light: her phone on the table lights up with the notification from Image 6 and &lt;the order sound of Audio 3&gt;. She seals a kraft mailer. The owner (relieved, smiling) says in English: {Glad I asked.}
+25-30s: Exactly as in Video 5: Scout becomes the "o" of the Scout wordmark. Scout says in English: {Scout interviews your shoppers for you. Get free early access.}
+
+【Maintain Consistency】
+Live action, hard cuts, a new shot every 2-3 seconds, fast but smooth, steady camera; the bullet time, the dive and the flip are the only moving transitions. Each spoken line finishes inside its own shot. Tight delivery: no pause longer than a quarter second inside a line. Generate dialogue strictly as written. Warm window light, sand and sea-blue colours. Faces, hair and outfits stay identical. (Light upbeat music under the film, lower under speech.) No subtitles appear on screen.</pre></div>
+  </div>
+  <div class="part chk">
+    <div class="lbl">Emile's checks</div>
+    <h3>Every input right for the model</h3>
+    <div class="tablewrap"><table><tbody><tr><td>Each asset has one role</td><td>Done, with one deliberate exception: Image 4 carries the shopper and her sunny bedroom, because it is the only picture of either, and she appears nowhere else. 16 lines, one per asset. Image 3 had two jobs (studio + orb): it is now the room only, "do not use the lime orb floating in it", and Scout comes from new Image 7. Video 5 had two jobs (end shot + Scout's voice for all his lines): Scout's voice is now Audio 4. Each line names what not to take.</td></tr><tr><td>Unused assets listed</td><td>None to list: all 16 uploads have a role, so sd25-pe leaves out 【Unused Assets】 (it is written only when the set is not empty). Not uploaded at all: the camera-map animatic (page only), the 13.4 s Audio 1 cut and the old by-hand prompt.</td></tr><tr><td>Exact dialogue</td><td>Done. All 10 lines, 60 words, identical to ours (script diff). Each line reads Speaker (emotion) says in English: {…}, so speaker and language are on every line. Video 5's own audio says the end line word for word (Deepgram).</td></tr><tr><td>() <> {} sound marks</td><td>Done. Music in (), the two ka-chings and the whoosh in &lt;&gt;, dialogue in {}. No 【】 subtitles; "No subtitles appear on screen."</td></tr><tr><td>Ka-ching rule (Emile on H229, card comment Nov 14)</td><td>Done. The ka-ching (Audio 3) is a &lt;&gt; sound in two timestamps only: 0-2s on the refund banner (Image 2) and 23-25s on the full-price banner (Image 6). The Audio 3 line names those two moments and says nothing else plays it. No chime or ka-ching is tied to Scout: his 8-11s entrance is silent, and the whoosh at 11-13s belongs to the camera dive.</td></tr><tr><td>No ratio or duration in the text</td><td>Done. No 9:16, 30 s, 480p or sound toggle in the prompt (checked by script). Set 9:16, 30 s, 480p draft and audio on in Higgsfield. The 0-30s stamps stay: they are our creative timing, which sd25-pe keeps.</td></tr></tbody></table></div>
+  </div>
+  <h3 style="margin-top:22px">The final, part by part</h3>
+  <div id="pe-parts"></div>
+  <textarea class="raw" id="pe-raw" aria-label="Optimized raw prompt" readonly>【Generation Goal】
+Generate a light, playful live-action ad with fast hard cuts: a bikini-store owner gets a refund and nearly runs a discount, until Scout, a floating lime orb, freezes time to show her the shopper interview that changes her mind. Please note that this is not video editing.
+
+【Reference Asset Roles】
+Image 1 is the owner of Salt &amp; Sun Swim, a Shopify bikini store: use only her face, hair and outfit; do not use the image background.
+Image 2 is the refund notification on her lock screen: show its words exactly; do not use its table.
+Image 3 is the owner's home studio: use only its room, furniture and light; do not use the lime orb floating in it.
+Image 4 is the shopper in her sunny bedroom: use her face, hair, striped tee, earbuds, straw beach bag and the bedroom.
+Image 5 is Scout's call card: show its words exactly.
+Image 6 is the full-price order notification: show its words exactly; do not use its table.
+Image 7 is Scout: use only the lime orb with sound bars inside, shown on a plain background.
+Video 1 is used only for the cutting rhythm, shot sizes and macro-then-fast-pull-back opening of 0-8s; do not use its woman, candles, room or screens.
+Video 2 is used only for the bullet-time camera move of 8-11s; do not use its diner, food or people.
+Video 3 is used only for the continuous push-in that dives through the subject into a new scene, for 11-13s; do not use its woman, street or eye.
+Video 4 is used only for the rise-and-flip-overhead move into a new room, for 19-20s; do not use its people, throne, church or card table.
+Video 5 is the final shot: reproduce it with its wordmark, motion and sound.
+Audio 1 is used only for the owner's voice timbre.
+Audio 2 is used only for the shopper's voice timbre.
+Audio 3 is the order sound: use its first 1.6 seconds only at 0-2s, on the refund notification from Image 2, and at 23-25s, on the full-price notification from Image 6. Nothing else plays it.
+Audio 4 is used only for Scout's voice timbre.
+
+【Subjects and Relationships】
+The owner maps to Image 1 and appears only in the studio from Image 3. Her hands stay on her product: the coral bikini, the bikini pile, the kraft mailer.
+The shopper maps to Image 4 and appears only in her bedroom.
+Scout maps to Image 7 and is the only orb. Scout first enters at 8-11s, popping in beside her shoulder.
+One person per shot.
+
+【Event Script】
+0-2s: Extreme macro of her phone among folded bikinis. &lt;The order sound of Audio 3 rings&gt; and the notification from Image 2 slides in. The camera pulls back fast.
+2-4s: Close-up: she picks up the phone with a coral bikini in her other hand. The owner (deflated, half laughing) says in English: {Oh, come on. A refund.}
+4-6s: Punch-in close-up, still holding the coral bikini, she looks into the lens. The owner (dry, a little sad) says in English: {Sales are so low this week.}
+6-8s: Side profile at her laptop: she tosses a bikini onto the pile and starts setting up a discount in her Shopify admin. She keeps her lips closed. The owner (V.O., tempted) says in English: {Maybe it's time for a discount.}
+8-11s: Bullet time, the move of Video 2: her finger stops above the trackpad and the tossed bikini hangs in mid-air. Scout pops in beside her shoulder. She keeps her lips closed. Scout (warm, playful, firm) says in English: {Not yet. There's something you don't know.}
+11-13s: Reverse angle: she turns to Scout, curious. The camera dives into its glow, the move of Video 3, with &lt;a soft whoosh&gt;.
+13-16s: Out into the shopper's sunny bedroom: earbuds in, she packs her beach bag on the bed, half turned away. The call card from Image 5 floats up off her phone. The shopper keeps her lips closed. Scout is off-screen; his voice comes through her earbuds. Scout (curious, kind) says in English: {Sunset bikini, in your cart three times. What stopped you?}
+16-19s: Close-up: she folds a towel into the bag without looking up. The shopper (casual, shrugging) says in English: {You discount every week. I'm just waiting.}
+19-20s: The flip of Video 4 carries us back to the owner's studio. No line.
+20-22s: Close-up landing on the owner holding the coral bikini, half laughing, half wincing. The owner (realising) says in English: {I'm training them to wait.}
+22-23s: Close-up: she taps delete on the discount. The owner (light, decided) says in English: {Noted.}
+23-25s: A week later, golden light: her phone on the table lights up with the notification from Image 6 and &lt;the order sound of Audio 3&gt;. She seals a kraft mailer. The owner (relieved, smiling) says in English: {Glad I asked.}
+25-30s: Exactly as in Video 5: Scout becomes the "o" of the Scout wordmark. Scout says in English: {Scout interviews your shoppers for you. Get free early access.}
+
+【Maintain Consistency】
+Live action, hard cuts, a new shot every 2-3 seconds, fast but smooth, steady camera; the bullet time, the dive and the flip are the only moving transitions. Each spoken line finishes inside its own shot. Tight delivery: no pause longer than a quarter second inside a line. Generate dialogue strictly as written. Warm window light, sand and sea-blue colours. Faces, hair and outfits stay identical. (Light upbeat music under the film, lower under speech.) No subtitles appear on screen.
+</textarea>
+  <div class="copyrow"><button id="pe-copy" type="button">Copy the sd25-pe final</button><span class="hint" id="pe-copied">924 words · 60 spoken words, unchanged · saved as prompt-sd25pe-final.txt</span></div>
+  <div class="part">
+    <div class="lbl">What changed</div>
+    <h3>From ours to the final</h3>
+    <ul>
+      <li><b>Its template.</b> Generation Goal, Reference Asset Roles, Subjects and Relationships, Event Script, Maintain Consistency.</li>
+      <li><b>One role per asset.</b> New Image 7 (Scout's orb, cut out of Image 3 onto a plain background) and Audio 4 (Scout's voice, taken from Video 5). Audio 1 cut to 8.9 s so the four audio files total 27.4 s, under the 30 s limit.</li>
+      <li><b>Scout is mapped once.</b> "Scout maps to Image 7 and is the only orb. Scout first enters at 8-11s, popping in beside her shoulder."</li>
+      <li><b>Language on every line</b> ("says in English") and <b>listeners keep their lips closed</b> while Scout speaks.</li>
+      <li><b>Sound marks.</b> &lt;sound effects&gt; and (music).</li>
+      <li><b>Ka-ching pinned (Emile, H229).</b> Audio 3 plays only at 0-2s (refund banner) and 23-25s (full-price banner). The chime on Scout's entrance is gone.</li>
+      <li><b>Gate line.</b> "Please note that this is not video editing." Its gate fires because every reference video (4–8 s) is shorter than the 30 s output.</li>
+      <li><b>Removed "Vertical 9:16"</b>: it's a setting.</li>
+      <li><b>Kept from our Dip check:</b> the pace line ("a new shot every 2-3 seconds"), the named hard-cut exceptions, hands on product.</li>
+      <li><b>Shorter than the earlier by-hand pass</b> (907 words): the extra hair and outfit descriptions it added to Images 1 and 4 are gone, because the guide says not to re-describe an accurate reference.</li>
+    </ul>
+    <h3 style="margin-top:14px">Still unsure</h3>
+    <ul>
+      <li>13–16 s has 10 words in 3 s (3.3 a second). Lines stay word for word, so if the cut comes early, this is the line to shorten.</li>
+      <li>924 words, above the 380–740 of ByteDance's 30 s examples. The extra length is mostly section labels and one line per asset.</li>
+      <li>Image 7 is the orb cut out onto a plain background. Not yet tested in a render.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Shot list</h2>
+  <p class="sub">13 shots, one camera move per shot. Two are 1 s beats: the silent flip and the delete tap. Lime rows are the borrowed moves.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Time</th><th>Shot size</th><th>Angle</th><th>Movement</th><th>Transition in</th><th>Sound</th><th>Line</th><th>Borrowed from</th></tr></thead>
+    <tbody>
+      <tr><td class="t">0–2 s</td><td>Extreme macro, phone</td><td>Slight high</td><td>Fast pull-back</td><td>Open</td><td>Ka-ching (Audio 3)</td><td class="line">none, the refund banner lands</td><td>The Dip's opening (<a href="#video1">Video 1</a>)</td></tr>
+      <tr><td class="t">2–4 s</td><td>Close-up</td><td>Eye level</td><td>Handheld-steady</td><td>Hard cut</td><td>Room tone</td><td class="line">"Oh, come on. A refund."</td><td>Dip rhythm</td></tr>
+      <tr><td class="t">4–6 s</td><td>Punch-in close-up, coral bikini in hand</td><td>Straight to lens</td><td>Locked</td><td>Hard cut</td><td>Music dips</td><td class="line">"Sales are so low this week."</td><td>Dip rhythm</td></tr>
+      <tr><td class="t">6–8 s</td><td>Medium close-up</td><td>Side profile</td><td>Slow push in</td><td>Hard cut</td><td>V.O., lips closed; she tosses a bikini on the pile</td><td class="line">"Maybe it's time for a discount." (V.O.)</td><td>Dip rhythm</td></tr>
+      <tr class="special"><td class="t">8–11 s</td><td>Medium</td><td>Arc around her</td><td>Bullet-time sweep, frozen time</td><td>Freeze on her finger</td><td>Sound sucks out; no chime on Scout</td><td class="line">Scout: "Not yet. There's something you don't know."</td><td><a href="#video2">Bullet time</a> (viral preset)</td></tr>
+      <tr class="special"><td class="t">11–13 s</td><td>Close-up → into the orb</td><td>Reverse angle</td><td>Continuous dive into the glow</td><td>Dive-through</td><td>Whoosh</td><td class="line">none, she looks at the orb</td><td><a href="#video3">Eyes in</a> (viral preset)</td></tr>
+      <tr><td class="t">13–16 s</td><td>Medium</td><td>45° side, she's half turned</td><td>Slow track</td><td>Out of the light</td><td>Call ring-in; Scout off-screen, through her earbuds</td><td class="line">Scout: "Sunset bikini, in your cart three times. What stopped you?"</td><td>text only</td></tr>
+      <tr><td class="t">16–19 s</td><td>Close-up</td><td>Side-on profile</td><td>Locked</td><td>Hard cut</td><td>Towel rustle</td><td class="line">Shopper: "You discount every week. I'm just waiting."</td><td>text only</td></tr>
+      <tr class="special"><td class="t">19–20 s</td><td>Wide → overhead</td><td>Overhead</td><td>Rise and flip</td><td>Flip</td><td>Whoosh</td><td class="line">none</td><td><a href="#video4">High flip</a> (viral preset)</td></tr>
+      <tr><td class="t">20–22 s</td><td>Close-up, coral bikini in hand</td><td>Eye level</td><td>Settles from the flip</td><td>Landing</td><td>Half laugh</td><td class="line">"I'm training them to wait."</td><td>text only</td></tr>
+      <tr><td class="t">22–23 s</td><td>Close-up, hands</td><td>Over the laptop</td><td>Locked</td><td>Hard cut</td><td>Delete tap</td><td class="line">"Noted."</td><td>text only</td></tr>
+      <tr><td class="t">23–25 s</td><td>Close-up</td><td>Eye level</td><td>Gentle push in</td><td>Hard cut, golden light</td><td>Ka-ching (Audio 3), she speaks on the bell</td><td class="line">"Glad I asked."</td><td>text only</td></tr>
+      <tr><td class="t">25–30 s</td><td>End screen</td><td>Front</td><td>As Video 5</td><td>Orb becomes the "o"</td><td>Video 5's own sound (Scout's lines at 8–16 s use Audio 4)</td><td class="line">"Scout interviews your shoppers for you. Get free early access."</td><td><a href="#video5">H158 end screen</a></td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section>
+  <h2>What could go wrong, and the guard</h2>
+  <div class="risk">
+    <div><b>Too many assets.</b> 16 references; the 2.0 guide's comfort zone was 4–5. 2.5 allows 50 and our video refs are motion-only, not subjects (1–5 subjects recommended). Guard: every asset has one job and a "do not take".</div>
+    <div><b>Leaks from the refs.</b> Fixed at the source: The Dip clip is cut to 8 s and its banner text, laptop table and product label are blurred, so there is no word or label left to copy. The candle jars behind the presenter stay unreadable at 480p.</div>
+    <div><b>Faces in the viral refs.</b> Videos 2–4 show real-looking people. BytePlus blocks such inputs; Higgsfield is the route, but before any paid run do a free upload preflight of all three, and keep a faceless or clay-model cut of each move as the fallback.</div>
+    <div><b>Upload order on Higgsfield.</b> How Higgsfield maps our order onto ByteDance's numbering isn't documented (H214 playbook). Upload in the order shown; check the first frame against Image 2.</div>
+    <div><b>Bullet-time source is 4:3.</b> Centre-cropped and scaled to 480×854 so it clears the 407,696-pixel minimum. It's soft, which is fine for a camera move.</div>
+    <div><b>Emile's Nov 13 note.</b> He'd rather name camera moves only when he wants something specific. This pitch is that case: three specific moves, the rest left to Seedance.</div>
+  </div>
+</section>
+
+<section id="eval">
+  <h2>Eval</h2>
+  <p class="sub">Independent judge, round 1 (before these fixes). The team then applied every must-fix and every nice-to-have. No video was rendered and no image credits were spent on the fixes.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Goal</th><th>Guide</th><th>Story</th><th>Craft</th><th>Overall</th></tr></thead>
+    <tbody><tr><td class="t">8.5</td><td class="t">7.0</td><td class="t">8.5</td><td class="t">7.5</td><td class="t"><b>7.8</b></td></tr></tbody>
+  </table></div>
+  <h3 style="margin-top:18px">Must-fix, and what changed</h3>
+  <div class="tablewrap"><table>
+    <thead><tr><th>#</th><th>Judge said</th><th>What we changed</th></tr></thead>
+    <tbody>
+      <tr><td class="t">1</td><td>Video 1 shows an "EXAMPLE" pill and readable words ("New order [EMBER &amp; FIG]", "Fig &amp; Cedar", "Sessions"), and the orb flying out a window at 9–10 s. Text in a reference can override the prompt (PG FAQ, Subtitles).</td><td>Re-cut <a href="#video1">Video 1</a> to the 0–8 s it is bound to (the orb exit is gone). Blurred the notification banners (0.1–1.75 s) and the whole laptop-table / product-page / candle-label insert (3.85–6.9 s), so the pill and the words are gone. Video refs now total <b>26.5 s</b> (was 28.5 s). The camera map is rebuilt from the clean clip.</td></tr>
+      <tr><td class="t">2</td><td>The 5-word aha line rides on a 1.5–2 s flip, so it can't finish inside its shot.</td><td>Split it as suggested: <b>19–20 s</b> flip (Video 4), no line; <b>20–22 s</b> close-up landing on her with the coral bikini, "I'm training them to wait."; <b>22–23 s</b> she taps delete, "Noted." Dropped the hang-it-back action.</td></tr>
+      <tr><td class="t">3</td><td>Image 5 printed the shopper's answer while Scout was still asking, and misquoted it.</td><td>Rebuilt <a href="#image5">Image 5</a> with only the SCOUT bubble, "What stopped you?", which matches Scout's spoken line at 13–16 s. The answer is now only heard, at 16–19 s.</td></tr>
+      <tr><td class="t">4</td><td>959 words vs 380–740 in the official 30 s examples; accurate references were re-described.</td><td>Cut to <b>750 words</b>: removed the Image 3 studio description, the re-description of the Video 2 and Video 3 moves, the duplicate move wording in the shots, and the closing boilerplate ("She ACTS…", "a new visual surprise every 2–3 seconds").</td></tr>
+    </tbody>
+  </table></div>
+  <h3 style="margin-top:18px">Nice-to-have, also done</h3>
+  <ul>
+    <li>Thought line in the guide's V.O. form: "She keeps her lips closed. The owner (V.O., tempted) says: {Maybe it's time for a discount.}" Every line now reads "Character (emotion) says: {line}".</li>
+    <li>6–8 s now sets up the toss ("she tosses a bikini onto the pile"), so the bikini hanging mid-air at 8–11 s is earned.</li>
+    <li>4–6 s: "still holding the coral bikini", keeping her on the product as The Dip does.</li>
+    <li>Negatives rewritten as positives ("her room comes from Image 3", "steady camera", "each spoken line finishes inside its own shot"). The "Do not take" lines on the reference videos stay, as the guide supports them.</li>
+    <li>Face preflight for Videos 2–4 added to the risks, with a faceless or clay-model fallback.</li>
+    <li>"Oh, fudge." is now "Oh, come on. A refund."</li>
+    <li>Shopper line trimmed to "You discount every week. I'm just waiting." (7 words in 3 s).</li>
+  </ul>
+  <h3 style="margin-top:18px">Judge's verdict (round 1)</h3>
+  <p>"This is a strong, correct use of the camera-motion video reference technique. Real viral moves (Bullet time for the freeze, Eyes in for the dive into the call, High flip for the return) plus The Dip's first 10 s for pace are each tied to an exact time slot, with 'only for' wording and a 'do not take its' line, as the guide's multi-asset mapping and clay-model sections describe. The limits hold. … Four things to fix before any render. Video 1 still carries an EXAMPLE pill and readable Dip text. The aha line can't fit inside the 2 s High-flip slot. The call card gives away and misquotes the shopper's answer. The prompt is about 25% longer than the official examples, mostly because it re-describes references that are already accurate. With those fixed it should score about 8.5 or higher."</p>
+  <p class="hint"><b>Where it stands now.</b> Independent check 1 (Nov 14): Seedance 8/10, story 8/10, feedback 5/10, because the published link was still the old version. Fixed: page republished with all 16 assets, Scout's off-screen voice at 13–16 s, the "no orb" negative rewritten as a positive, Image 7 cut out onto a plain background, shot list and counts corrected. Independent check 2 (Nov 14): Seedance 7/10, story 8/10, feedback 5/10, because Emile's ka-ching rule from H229 was not applied. Fixed: the chime on Scout is gone, Audio 3 is pinned to 0–2 s and 23–25 s only, a ka-ching row is in Emile's checks, Image 4's two jobs are noted, and the stale Image 7 note is corrected. This page carries both rounds of fixes.</p>
+</section>
+
+</div>
+<script>
+(function(){
+  var raw=document.getElementById('raw').value;
+  var paras=raw.trim().split(/\n\s*\n/);
+  var titles=[['Part 1','Asset mapping'],['Part 2','One-sentence summary'],['Part 3','Detailed plot (timestamps)'],['Part 4','Additional notes']];
+  function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+  function chips(s){
+    s=esc(s);
+    s=s.replace(/\b(Image|Video|Audio) (\d+)\b/g,function(m,k,n){var c=k==='Image'?'i':k==='Video'?'v':'a';return '<a class="chip '+c+'" href="#'+k.toLowerCase()+n+'">'+k+' '+n+'</a>';});
+    s=s.replace(/\{([^}]*)\}/g,'<span class="dlg">{$1}</span>');
+    s=s.replace(/^(\d+-\d+s:)/,'<span class="ts">$1</span>');
+    return s;
+  }
+  var out='';
+  paras.forEach(function(p,i){
+    var t=titles[i]||['Part','More'];
+    out+='<div class="part"><div class="lbl">'+t[0]+'</div><h3>'+t[1]+'</h3>';
+    p.split('\n').forEach(function(l){if(l.trim())out+='<p>'+chips(l)+'</p>';});
+    out+='</div>';
+  });
+  document.getElementById('parts').innerHTML=out;
+  document.getElementById('copy').addEventListener('click',function(){
+    var done=function(){document.getElementById('copied').textContent='Copied.';};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(raw).then(done,function(){fallback();});}else{fallback();}
+    function fallback(){var t=document.getElementById('raw');t.select();try{document.execCommand('copy');done();}catch(e){}}
+  });
+  document.querySelectorAll('.move video').forEach(function(v){v.src=v.getAttribute('data-src');});
+  var segs=[[0,8,'0–8 s','The Dip rhythm (Video 1)'],[8,11,'8–11 s','Bullet time freeze (Video 2)'],[11,13,'11–13 s','Eyes in, dive into the orb (Video 3)'],[13,19,'13–19 s','The call: text and stills'],[19,20,'19–20 s','High flip back to her (Video 4)'],[20,25,'20–25 s','Aha, delete, then the full-price ka-ching'],[25,30,'25–30 s','End screen (Video 5)']];
+  var vid=document.getElementById('anim'),now=document.getElementById('now'),head=document.getElementById('head');
+  vid.addEventListener('timeupdate',function(){
+    var t=vid.currentTime;head.style.left=(t/30*100)+'%';
+    for(var i=0;i<segs.length;i++){if(t>=segs[i][0]&&t<segs[i][1]){now.innerHTML=segs[i][2]+' <span>'+segs[i][3]+'</span>';break;}}
+  });
+  document.querySelectorAll('#bar div').forEach(function(d){d.addEventListener('click',function(){vid.currentTime=parseFloat(d.getAttribute('data-t'));vid.play();});});
+})();
+</script>
+<script>
+(function(){
+  var raw=document.getElementById('pe-raw').value;
+  function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+  function chips(s){
+    s=esc(s);
+    s=s.replace(/\b(Image|Video|Audio) (\d+)\b/g,function(m,k,n){var c=k==='Image'?'i':k==='Video'?'v':'a';return '<a class="chip '+c+'" href="#'+k.toLowerCase()+n+'">'+k+' '+n+'</a>';});
+    s=s.replace(/\{([^}]*)\}/g,'<span class="dlg">{$1}</span>');
+    s=s.replace(/^(\d+-\d+s:)/,'<span class="ts">$1</span>');
+    return s;
+  }
+  var out='',open=false;
+  raw.split('\n').forEach(function(l){
+    if(!l.trim())return;
+    var m=l.match(/^\u3010(.+)\u3011$/);
+    if(m){if(open)out+='</div>';out+='<div class="part"><div class="lbl">sd25-pe section</div><h3>'+esc(m[1])+'</h3>';open=true;return;}
+    out+='<p>'+chips(l)+'</p>';
+  });
+  if(open)out+='</div>';
+  document.getElementById('pe-parts').innerHTML=out;
+  document.getElementById('pe-copy').addEventListener('click',function(){
+    var done=function(){document.getElementById('pe-copied').textContent='Copied.';};
+    function fallback(){var t=document.getElementById('pe-raw');t.select();try{document.execCommand('copy');done();}catch(e){}}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(raw).then(done,fallback);}else{fallback();}
+  });
+})();
+</script>
+</body>
+</html>

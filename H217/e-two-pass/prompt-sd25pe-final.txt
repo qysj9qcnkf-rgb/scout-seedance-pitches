@@ -1,0 +1,29 @@
+【Reference Asset Roles】
+@Video1 is the source video to extend forward.
+@Video2 is used only for the closing end card: from 13s only, reproduce its picture, the Scout wordmark whose "o" is the glowing lime orb, the text and the lime button. Do not use it before 13s, and do not use its sound.
+The shopper maps to @Image1; use only her face, light-brown hair, striped T-shirt and white earbud.
+The memory sphere references @Image2; use only the look of a swollen glowing lime sphere with a past moment playing inside it, as if through round glass. Do not use its people, its composition or its shoulder bag; the woman inside the sphere is the shopper from @Image1.
+The shopper's bedroom references @Image5; use only the white bed, the woven straw beach bag with its blue towel, and the coral bikini, phone and sunglasses on the bed. A bright window with palm trees and the sea is behind her bed.
+The laptop screen references @Image3; show the "Create discount" page exactly as written, with its Discard and Save discount buttons.
+The full-price new-order notification references @Image4; show its lock-screen text exactly as written.
+@Audio1 is used only for the owner's voice timbre, accent, pace and emotion; the words come only from this prompt.
+@Audio2 is used only for the shopper's voice timbre, accent, pace and emotion; the words come only from this prompt.
+@Audio3 is the ka-ching for the full-price order; use it only once, at 11-13s, as the @Image4 notification lands on her phone, and never on the orb, the sphere or any other shot.
+@Audio4 is used only for Scout's voice timbre, accent, pace and emotion; the words come only from this prompt.
+
+【Extension】
+Extend @Video1 forward. The first frame of the extended segment directly continues from the final frame of @Video1: keep the owner seated on her wooden chair at the table, hands on the laptop, the @Image3 page open on the screen, her head turned toward Scout, the single lime orb floating in the air in front of the bikini rail, her lips closed, the window with palm trees behind her, the camera position, the bright daylight and the quiet room sound. The other reference assets must not replace this boundary frame.
+
+Then Scout takes her back into a call with one of her shoppers, shown as a past moment inside the orb, the owner learns why her sales stalled, discards the discount, and a full-price order lands.
+
+【Event Script】
+0-2s: Medium close-up, the camera slowly pushes toward the orb as it swells, silently, into a large glowing lime sphere in front of her, like a memory bubble. Inside the sphere, as if through round glass, the shopper's sunny bedroom from @Image5 appears. Scout, off-screen, in natural English, warm, says: {Listen.} The owner watches with her mouth closed.
+2-5s: The camera pushes through the sphere's surface into the memory. Close-up over the shopper's shoulder: the edges of the frame glow soft lime and the picture is slightly warmer and dreamlike, clearly a past moment. Her phone shows a shopping cart with a coral bikini named "Sunset"; a small lime orb hovers beside the phone. Scout, in natural English, curious and friendly, says: {You left the Sunset bikini three times. What stopped you?} The shopper keeps her mouth closed while Scout speaks.
+5-8s: Inside the memory, medium close-up, eye level, slow push in. The shopper, earbud in, laughs over the beach bag she is packing on her bed. The shopper, in natural English, casual and laughing a little, says: {You run a discount every week. I'm just waiting for it.}
+8-10s: The camera pulls back out through the sphere into the owner's studio; the sphere silently shrinks back into the small orb in front of the bikini rail. Close-up, front angle, slow push in: the owner holds a coral bikini, mixed feelings, a half laugh, not angry. The owner, in natural English, realising and quiet, says: {I'm training them to wait.}
+10-11s: Extreme close-up, side angle: her finger presses Discard on the laptop showing @Image3. The owner, off-screen, in natural English, dry and decided, says: {Noted.}
+11-13s: Extreme close-up, overhead, locked-off, on her phone alone, with no orb in the shot: the phone on the table lights up with the @Image4 notification <the @Audio3 ka-ching as the @Image4 notification lands>. Pull back to her smiling as she folds a bikini into a kraft mailer. The owner, in natural English, relieved and smiling, says on the sound: {Glad I asked.}
+13-16s: The silent orb drifts to the centre of the frame and becomes the "o" of the Scout wordmark, arriving at the end card of @Video2. Scout, in natural English, says: {Scout interviews your shoppers for you. Get free early access.} The owner keeps her mouth closed.
+
+【Maintain Consistency】
+Keep the owner's face, hair and white linen shirt, her one studio with her swimwear always around her, the bright daylight and the warm sand, coral and sea-blue colours from @Video1, and the close handheld-steady framing. The owner, the shopper and Scout each remain one continuous instance, never duplicated, split or swapped; there is only one lime orb, and the owner and the shopper are two different women. The orb and the sphere make no sound at all: no chime, no ka-ching, no pop. The only ka-ching is @Audio3 on the phone at 11-13s. Exactly three voices: the owner's, the shopper's and Scout's, which keeps the @Audio4 voice throughout. Generate dialogue strictly as written; do not add or remove lines. Every line finishes inside its own shot, with no pause longer than half a second inside a line. No background music. No subtitles appear on screen.

@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Keyframes Pitch C</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf8f3;--surface:#ffffff;--ink:#1d1b18;--muted:#6b665e;--line:#e7e1d6;--lime:#c6f01a;--lime-ink:#2f3a00;--sea:#1f6fa8;--coral:#e8674a;--chip-i:#e4f0fb;--chip-v:#fde6df;--chip-a:#eef7cf;--shadow:0 1px 2px rgba(40,30,10,.06),0 8px 24px rgba(40,30,10,.06)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#13120f;--surface:#1d1c18;--ink:#f1ede5;--muted:#a59f93;--line:#34312a;--lime:#c6f01a;--lime-ink:#c6f01a;--sea:#7cb8e3;--coral:#f08d74;--chip-i:#1b3346;--chip-v:#47261d;--chip-a:#2f3a10;--shadow:none}}
+:root[data-theme="dark"]{--bg:#13120f;--surface:#1d1c18;--ink:#f1ede5;--muted:#a59f93;--line:#34312a;--lime:#c6f01a;--lime-ink:#c6f01a;--sea:#7cb8e3;--coral:#f08d74;--chip-i:#1b3346;--chip-v:#47261d;--chip-a:#2f3a10;--shadow:none}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px;overflow-wrap:anywhere}
+h1,h2,h3,h4{font-family:"Space Grotesk",Inter,sans-serif;line-height:1.15;margin:0}
+h2{font-size:26px;margin:56px 0 6px}h2 small{font:500 13px Inter;color:var(--muted);display:block;margin-top:6px;letter-spacing:0}
+header{padding:40px 0 8px}
+.eyebrow{font:600 12px Inter;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h1{font-size:clamp(34px,6vw,56px);margin:10px 0 14px}
+h1 .dot{display:inline-block;width:.55em;height:.55em;border-radius:50%;background:var(--lime);vertical-align:.08em;margin-left:.1em}
+.pitch{font-size:clamp(18px,2.4vw,22px);max-width:820px;margin:0 0 18px}
+.why{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px;box-shadow:var(--shadow);max-width:900px}
+.why p{margin:0 0 10px}.why p:last-child{margin:0}
+cite{font-style:normal;font-size:13px;color:var(--muted);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:1px 6px;overflow-wrap:anywhere}
+.input{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 0}
+.pill{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 12px;font-size:14px;font-weight:500}
+.pill b{font-family:"Space Grotesk";font-size:16px}
+.pill.cost{background:var(--lime);color:#1d1b18;border-color:transparent}
+.strip{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:10px;margin-top:18px}
+.strip figure{margin:0}.strip img{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:10px;display:block;border:1px solid var(--line)}
+.strip figcaption{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.35}.strip figcaption b{color:var(--ink)}
+@media (max-width:900px){.strip{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;margin-top:18px}
+.card{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);scroll-margin-top:16px}
+.card:target{outline:3px solid var(--lime);outline-offset:2px}
+.card img,.card video{width:100%;aspect-ratio:9/16;object-fit:cover;display:block;background:#000}
+.card.aud{display:flex;align-items:flex-end;min-height:210px}
+.card audio{width:100%;margin:8px 0}
+.tag{position:absolute;top:10px;left:10px;font:600 12px ui-monospace,Menlo,monospace;background:rgba(20,20,20,.78);color:#fff;padding:3px 8px;border-radius:6px;z-index:2}
+.card.aud .tag{background:var(--ink);color:var(--bg)}
+.cb{padding:12px 14px 14px}.cb .k{font-size:12px;color:var(--muted);font-weight:600}.cb h4{font-size:17px;margin:2px 0 6px}.cb p{font-size:14px;margin:0 0 8px}
+code{font:12px ui-monospace,Menlo,monospace;color:var(--muted);word-break:break-all}
+.prompt{display:grid;gap:14px;margin-top:16px}
+.part{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.part h3{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.part p{margin:0 0 8px}.part p.ts{margin-top:14px;font-weight:500}.part p.dlg{margin-left:16px;color:var(--ink)}
+.line{background:var(--chip-a);border-radius:4px;padding:0 3px}
+.chip{display:inline-block;font:600 12.5px Inter;padding:1px 7px;border-radius:999px;text-decoration:none;color:var(--ink);border:1px solid var(--line);vertical-align:1px}
+.c-image{background:var(--chip-i)}.c-video{background:var(--chip-v)}.c-audio{background:var(--chip-a)}
+.copyrow{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+button{font:600 14px Inter;background:var(--ink);color:var(--bg);border:0;border-radius:10px;padding:10px 16px;cursor:pointer}
+.copied{font-size:13px;color:var(--muted)}
+textarea.raw{position:absolute;left:-9999px;width:1px;height:1px}
+.tbl{overflow-x:auto;margin-top:16px;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:980px;font-size:14px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:600 12px Inter;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);background:var(--bg)}
+td.t{font-family:"Space Grotesk";font-weight:700;white-space:nowrap}td.ln{min-width:220px}
+tr:last-child td{border-bottom:0}
+.presets{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin-top:16px}
+.presets .card video{aspect-ratio:auto;max-height:340px;object-fit:contain}
+.big{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:18px}
+.big figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+.big img{width:100%;display:block;aspect-ratio:9/16;object-fit:cover}
+.big figcaption{padding:12px 14px;font-size:14px}.big figcaption b{font-family:"Space Grotesk";font-size:17px;display:block}
+.big .ts{display:inline-block;background:var(--lime);color:#1d1b18;font:700 12px Inter;border-radius:6px;padding:2px 7px;margin-bottom:6px}
+@media (max-width:800px){.big{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.big{grid-template-columns:1fr}}
+.how{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:12px}
+.how figure{margin:0}.how img{width:100%;border-radius:8px;border:1px solid var(--line);display:block;aspect-ratio:9/16;object-fit:cover}.how img.wide{aspect-ratio:16/10}
+.how figcaption{font-size:12px;color:var(--muted);margin-top:4px}
+ul.notes{padding-left:18px}ul.notes li{margin-bottom:6px}
+#eval{margin:56px 0 80px;padding:20px;border:2px dashed var(--line);border-radius:14px}
+footer{color:var(--muted);font-size:13px;padding-bottom:40px}
+</style>
+<style>
+.score{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px;margin:14px 0}
+.score div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.score b{display:block;font:700 26px "Space Grotesk"}.score span{font-size:12px;color:var(--muted)}
+.fixes{display:grid;gap:12px;margin-top:12px}
+.fix{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.fix h4{font-size:16px;margin:0 0 6px}.fix p{margin:0 0 6px;font-size:14px}.fix .was{color:var(--muted)}
+.ba{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;max-width:360px;margin-top:8px}
+.ba img{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:8px;border:1px solid var(--line);display:block}
+.ba figure{margin:0}.ba figcaption{font-size:12px;color:var(--muted)}
+.verdict{background:var(--surface);border-left:4px solid var(--lime);border-radius:8px;padding:12px 16px;font-size:15px}
+</style>
+</head>
+<body><div class="wrap">
+
+<header>
+<div class="eyebrow">H217 · Team C · Seedance 2.5 technique: Multi-keyframe reference · round 4 (H220)</div>
+<h1>Ten frames, one room<span class="dot"></span></h1>
+<p class="pitch">The refund that sounds like a ka-ching, the freeze, the shopper's call and the full-price sale: each is a real-looking photo of her in the studio she runs her Shopify store from. Seedance fills in the motion between them, so the film can't drift into a room or a face we didn't approve.</p>
+<div class="why">
+<p><b>Why keyframes fit this story.</b> The guide says: "When the video must strictly follow the storyboard, use <b>keyframe references</b>. Input each storyboard as an independent reference image in order, and state in the first sentence of the prompt: 'Use Images X to X in order as keyframes.'" <cite>Prompt guide · Advanced · Keyframe reference</cite> With keyframes, "the generated video visuals will align relatively strictly with the input images", while a multi-panel storyboard "mainly provides a high-level plot reference". <cite>Task instructions · Unlocked: Reference tasks, storyboards, and keyframes</cite></p>
+<p>H215's draft failed where nothing was locked: the owner's shots lost the bikini studio because no shot bound her to it, and she never touched the product. Emile's story lives in a few exact moments: a refund banner, a Shopify discount page, a freeze with the orb, a shopper with that bikini in her cart, and a full-price banner. Each one is either text that has to be right or a set that has to stay hers. That calls for strict alignment, not loose inspiration.</p>
+<p><b>Round 3 (H220, Emile's feedback):</b> the shopper's call now reads as <b>the past, seen through the orb</b>, as Emile pictured it: "within the orbs… the orb takes you back in this world… a big switch… you kind of know this was the past." At 12s the orb swells into a window and she watches the shopper's call inside it (<a class="chip c-image" href="#image6">Image 6</a>, new). At 16s the camera pushes through the orb's rim into that memory, lime glow at the edges (<a class="chip c-image" href="#image7">Image 7</a>, new). At 20s the glow snaps away: back to now. Because she watches the shopper pack the beach bag, who is who and when is clear. She is now written as a woman who runs her own Shopify online store, all bikinis. The final prompt went through ByteDance's <b>sd25-pe</b> skill (loaded with the Skill tool this time). <a href="#sd25pe">Both prompts and which to send.</a> <a href="#round3">What changed.</a></p><p><b>Round 4 (independent check, H220 fix 1):</b> Video 1 now has one role (the ending); Scout's voice is cut from it as <a class="chip c-audio" href="#audio4">Audio 4</a>. The shopper <b>stands</b> by her bed, as Images 6 and 7 show. The visual negatives and the re-described wardrobe are gone. Ranges join with hard cuts. Scout's question and the shopper's answer now get 4 s each (12-16s, 16-20s), so every line is at or under 3 words a second. <b>The trade-off, for Emile:</b> the aha is 2 s (20-22s) and "Noted." is 1 s (22-23s). Your lines are unchanged word for word. The full-price sale is marked "Days later".</p><p><b>Round 5 (second independent check, H220 fix 2):</b> the H229 ka-ching rule is now on the page and met: the ka-ching sits only at 0-2s (refund banner) and 23-25s (order banner), and Scout appears silently, with no pop on the orb. The bikini on the shopper's bed is her own, not the Sunset bikini, which she never bought; the Sunset bikini appears only with the owner (Images 8 and 9). Re-described props are cut, and the sd25-pe prompt is down to 738 words, under the guide's 741-word example. The gate line stays, with the reason given under <a href="#sd25pe">What sd25-pe changed</a>.</p><p style="color:var(--muted)"><b>Round 2:</b> every studio keyframe is now built on <b>one room</b>, her real Soul 2 studio photo (<a class="chip c-image" href="#image11">Image 11</a>): red-tile roofs through the window, the hanging pothos, the cross-back chair. The garbled laptop text is gone, the shopper beat is split in two, and the prompt is trimmed to 541 words. <a href="#eval">See the scorecard.</a></p>
+</div>
+<div class="input">
+<span class="pill">Text <b>675</b> words (ours) · <b>707</b> (sd25-pe, the one to send)</span>
+<span class="pill"><b>12</b> images (10 keyframes + 2 faces)</span>
+<span class="pill"><b>1</b> video (4.5 s)</span>
+<span class="pill"><b>4</b> audio (27.4 s total)</span>
+<span class="pill">seedance_2_5 · omni_reference (task type: reference)</span>
+<span class="pill">draft · 480p · 9:16 · 30 s · audio on</span>
+<span class="pill cost">90 credits planned (round 1 get_cost, 15 assets; re-quote with 17 before render)</span>
+<span class="pill">Stills: round 1 10 × 0.25, round 2 4 made = 3.5 credits; round 3: 0 new (the two memory-orb stills were already made on H217)</span>
+</div>
+<div class="strip"><figure><a href="#image1"><img src="a/image1-kf1.jpg" alt="Keyframe 1"></a><figcaption><b>Image 1</b> 0-2s<br>Refund banner macro</figcaption></figure>
+<figure><a href="#image2"><img src="a/image2-kf2.jpg" alt="Keyframe 2"></a><figcaption><b>Image 2</b> 2-6s<br>Refund in hand</figcaption></figure>
+<figure><a href="#image3"><img src="a/image3-kf3.jpg" alt="Keyframe 3"></a><figcaption><b>Image 3</b> 6-8s<br>Over the shoulder, discount page</figcaption></figure>
+<figure><a href="#image4"><img src="a/image4-kf4.jpg" alt="Keyframe 4"></a><figcaption><b>Image 4</b> 8-10s<br>The freeze, Scout pops in</figcaption></figure>
+<figure><a href="#image5"><img src="a/image5-kf5.jpg" alt="Keyframe 5"></a><figcaption><b>Image 5</b> 10-12s<br>Reverse angle: she sees the orb</figcaption></figure>
+<figure><a href="#image6"><img src="a/image6-kf6.jpg" alt="Keyframe 6"></a><figcaption><b>Image 6</b> 12-16s<br>The past, inside the orb</figcaption></figure>
+<figure><a href="#image7"><img src="a/image7-kf7.jpg" alt="Keyframe 7"></a><figcaption><b>Image 7</b> 16-20s<br>Into the memory</figcaption></figure>
+<figure><a href="#image8"><img src="a/image8-kf8.jpg" alt="Keyframe 8"></a><figcaption><b>Image 8</b> 20-22s<br>The aha with the Sunset bikini</figcaption></figure>
+<figure><a href="#image9"><img src="a/image9-kf9.jpg" alt="Keyframe 9"></a><figcaption><b>Image 9</b> 22-23s<br>Delete discount</figcaption></figure>
+<figure><a href="#image10"><img src="a/image10-kf10.jpg" alt="Keyframe 10"></a><figcaption><b>Image 10</b> 23-25s<br>Full-price ka-ching</figcaption></figure></div>
+</header>
+
+<h2 id="assets">Reference assets, in upload order<small>Upload exactly in this order. Every chip in the prompt links here. The faces come after the keyframes because the guide's first sentence must read "Images 1 to 10 as keyframes"; each face is bound by role in the text.</small></h2>
+<div class="grid"><article class="card" id="image1"><span class="tag">&lt;image1&gt;</span><img src="a/image1-kf1.jpg" alt="Refund banner macro" loading="lazy"><div class="cb"><div class="k">Keyframe 1 · 0-2s</div><h4>Refund banner macro</h4><p>The refund is the hook, so the banner words must be exact ("Refund issued", $68.00, SALT &amp; SUN SWIM). The guide says exact text should come in as an image.</p><code>gpt_image_2_6 job 3f016a4d-14af-467d-badc-adfd44032287, background defocused locally (v2)</code></div></article>
+<article class="card" id="image2"><span class="tag">&lt;image2&gt;</span><img src="a/image2-kf2.jpg" alt="Refund in hand" loading="lazy"><div class="cb"><div class="k">Keyframe 2 · 2-6s</div><h4>Refund in hand</h4><p>Ties her face to her own studio from her first word on. H215 lost the studio because no shot bound her to it.</p><code>gpt_image_2_6 job 49879701-03b2-4c01-8de8-3bde3173fa34 (v2, her real room)</code></div></article>
+<article class="card" id="image3"><span class="tag">&lt;image3&gt;</span><img src="a/image3-kf3.jpg" alt="Over the shoulder, discount page" loading="lazy"><div class="cb"><div class="k">Keyframe 3 · 6-8s</div><h4>Over the shoulder, discount page</h4><p>The inner-voice beat only works if we see what she is about to do: a Shopify "Create discount" page, WEEKEND20, 20% off. Built from Image 4's exact angle, so the freeze lands on the same frame.</p><code>gpt_image_2_6 job 693d5e3f-bb04-4a94-a92a-256ac55e05d5 (v2, from Image 4 + discount screen)</code></div></article>
+<article class="card" id="image4"><span class="tag">&lt;image4&gt;</span><img src="a/image4-kf4.jpg" alt="The freeze, Scout pops in" loading="lazy"><div class="cb"><div class="k">Keyframe 4 · 8-10s</div><h4>The freeze, Scout pops in</h4><p>Freezes, and the orb's size and place, are where models improvise most. This fixes the swimsuit in mid-air, her hand stopped and the orb at her shoulder. The screen is out of focus on purpose, with the focus on the orb.</p><code>gpt_image_2_6 job f0c16dce-50c7-443d-bc1c-b9e773ffb600, laptop screen defocused locally (v2)</code></div></article>
+<article class="card" id="image5"><span class="tag">&lt;image5&gt;</span><img src="a/image5-kf5.jpg" alt="Reverse angle: she sees the orb" loading="lazy"><div class="cb"><div class="k">Keyframe 5 · 10-12s</div><h4>Reverse angle: she sees the orb</h4><p>Emile asked for "another angle, she looks at the orb". Without a frame, models keep the first angle. This keeps the eyeline.</p><code>gpt_image_2_6 job 77c3feb0-f6a9-4aea-ac59-a6016d1b787c</code></div></article>
+<article class="card" id="image6"><span class="tag">&lt;image6&gt;</span><img src="a/image6-kf6.jpg" alt="The past, inside the orb" loading="lazy"><div class="cb"><div class="k">Keyframe 6 · 12-16s · new in round 3</div><h4>The past, inside the orb</h4><p>Emile's "within the orbs" idea. The owner, in her own studio, watches the shopper's call inside the swollen orb: the shopper stands by her bed packing a beach bag, phone at her ear. One frame says who the shopper is, that it already happened and that the owner is seeing it now.</p><code>gpt_image_2_6 still made on H217 (memory-orb/orb-window.png), converted to JPEG; no new spend</code></div></article>
+<article class="card" id="image7"><span class="tag">&lt;image7&gt;</span><img src="a/image7-kf7.jpg" alt="Into the memory" loading="lazy"><div class="cb"><div class="k">Keyframe 7 · 16-20s · new in round 3</div><h4>Into the memory</h4><p>The "big switch": the camera has gone through the orb's rim, so we are inside the past. A lime glow rings the frame, and the small lime sound-bar badge by her phone is Scout on the call. Same shopper, same striped tee, same bag as Image 6.</p><code>gpt_image_2_6 still made on H217 (memory-orb/lime-flashback.png), converted to JPEG; no new spend</code></div></article>
+<article class="card" id="image8"><span class="tag">&lt;image8&gt;</span><img src="a/image8-kf8.jpg" alt="The aha with the Sunset bikini" loading="lazy"><div class="cb"><div class="k">Keyframe 8 · 20-22s</div><h4>The aha with the Sunset bikini</h4><p>The H215 lesson: she never touched the product. Here she holds the exact bikini from the cart, in her own studio, with the mixed feeling Emile asked for.</p><code>gpt_image_2_6 job 5ac0d1a8-0c05-4971-b394-6d7a413d392d (v2, her real room)</code></div></article>
+<article class="card" id="image9"><span class="tag">&lt;image9&gt;</span><img src="a/image9-kf9.jpg" alt="Delete discount" loading="lazy"><div class="cb"><div class="k">Keyframe 9 · 22-23s</div><h4>Delete discount</h4><p>The fix has to be seen in two seconds. A "Delete discount?" dialog is unmistakable; without it, the model would make up a UI.</p><code>gpt_image_2_6 job c2a102bf-8c04-4901-a847-2b210e54dad6, background defocused locally (v2)</code></div></article>
+<article class="card" id="image10"><span class="tag">&lt;image10&gt;</span><img src="a/image10-kf10.jpg" alt="Full-price ka-ching" loading="lazy"><div class="cb"><div class="k">Keyframe 10 · 23-25s</div><h4>Full-price ka-ching</h4><p>It mirrors keyframe 1: her phone, now with "New order" for $68.00 at full price, in her studio. Its lock screen reads Friday 5:38, days after the Tuesday refund; the prompt says "Days later" so the jump reads. The payoff must read at a glance, so the banner is locked.</p><code>gpt_image_2_6 job abb9b854-01a6-4069-b151-2366484b0abd (v2, her real room)</code></div></article>
+<article class="card" id="image11"><span class="tag">&lt;image11&gt;</span><img src="a/image11-owner.jpg" alt="Owner face (Soul 2)" loading="lazy"><div class="cb"><div class="k">Identity</div><h4>Owner face (Soul 2)</h4><p>Her face and hair only. It is also the room every studio keyframe was rebuilt on, so face and room agree.</p><code>Higgsfield job 9a8b15e8-59c4-4f55-b292-8a5645ff4ad8</code></div></article>
+<article class="card" id="image12"><span class="tag">&lt;image12&gt;</span><img src="a/image12-shopper.jpg" alt="Shopper face (Soul 2)" loading="lazy"><div class="cb"><div class="k">Identity</div><h4>Shopper face (Soul 2)</h4><p>Her face and hair only.</p><code>Higgsfield job 6ccc5f17-498c-424f-8c58-a90ff1577399</code></div></article>
+<article class="card" id="video1"><span class="tag">&lt;video1&gt;</span><video src="a/video1-end.mp4" poster="a/video1-poster.jpg" controls playsinline preload="none"></video><div class="cb"><div class="k">25-30s · 4.5 s + 0.5 s hold</div><h4>End screen: talking "o" (H158)</h4><p>Plays exactly as it is, then its last frame holds to 30 s. Its sound is Scout's voice, cut out as Audio 4 so Video 1 keeps one role.</p><code>media cae62718-ec02-41f6-8e36-1de097e8427d</code></div></article>
+<article class="card aud" id="audio1"><span class="tag">&lt;audio1&gt;</span><div class="cb"><h4>Owner voice: Elena</h4><p>8.9 s (trimmed from 13.4 s at a natural pause, inside the guide's 5-10 s). An unrelated read, used for timbre, accent and pace only.</p><audio src="a/audio1-elena.mp3" controls preload="none"></audio><code>media e05a2ee1-0882-4e54-937b-ed2475948d4e (13.4 s; re-upload the 8.9 s cut before render)</code></div></article>
+<article class="card aud" id="audio2"><span class="tag">&lt;audio2&gt;</span><div class="cb"><h4>Shopper voice: Serene</h4><p>11.4 s, a calm young American voice.</p><audio src="a/audio2-serene.mp3" controls preload="none"></audio><code>media 4b121290-c867-44a1-8dc3-6046fb0efb15</code></div></article>
+<article class="card aud" id="audio3"><span class="tag">&lt;audio3&gt;</span><div class="cb"><h4>Ka-ching</h4><p>2.6 s. Plays at 0s, on the refund banner, and at 23s on the full-price sale. The same bell for money moving either way; the banner text says which.</p><audio src="a/audio3-kaching.mp3" controls preload="none"></audio><code>media 45fb9d1d-0e34-4966-83b9-4d0f169fe660</code></div></article>
+<article class="card aud" id="audio4"><span class="tag">&lt;audio4&gt;</span><div class="cb"><div class="k">New in round 4</div><h4>Scout voice</h4><p>4.5 s, the sound of Video 1 cut out locally (ffmpeg, no spend). Used for timbre, accent and pace only; Scout's words come from the prompt.</p><audio src="a/audio4-scout.mp3" controls preload="none"></audio><code>not uploaded yet: upload before render</code></div></article></div>
+
+<h2 id="prompt">The exact prompt<small>Split into the guide's four parts <cite>Prompt guide · Basic prompting techniques</cite>. Dialogue uses "Character's line (emotion): {…}" <cite>FAQ · Subtitles generated despite prompt constraints</cite>. The inner voice uses the guide's "(V.O.) … lips closed" form <cite>FAQ · Incorrect character-to-reference mapping, Shot 2</cite>. Timestamps are integer seconds with no gaps <cite>Basic · Timestamps</cite>. Where a keyframe already shows something, the text doesn't describe it again <cite>Basic · Reference tasks: "just say to reference it"</cite>.</small></h2>
+<div class="copyrow" style="margin-top:14px"><button id="copy" type="button">Copy raw prompt</button><span class="copied" id="copied"></span></div>
+<textarea class="raw" id="raw" readonly aria-hidden="true">Use Images 1 to 10 in order as keyframes. Each keyframe sets the composition, room, props and on-screen text of its own time range; ranges join with hard cuts, apart from the three moves named at the end (4s, 8s and 16s).
+Image 11 is the owner: take only her face and hair. Her voice takes only timbre, accent and pace from Audio 1.
+Image 12 is the shopper: take only her face and hair. Her voice takes only timbre, accent and pace from Audio 2.
+Scout is the glowing lime-green orb in Images 4, 5 and 6, and the small lime badge beside the shopper&#x27;s phone in Image 7. Scout&#x27;s voice takes only timbre, accent and pace from Audio 4.
+Audio 3 is the order sound: play it exactly where the plot marks it.
+Video 1 is the ending: play it exactly as it is, picture and sound.
+
+A woman who runs her own Shopify online store, all bikinis, is about to post a discount when Scout, a floating lime orb, freezes time and takes her back into a call Scout had with one of her shoppers, which changes her mind; a bright, slightly playful live-action ad.
+
+0-2s (reference: Image 1): Macro on her phone. Audio 3 rings as the &quot;Refund issued&quot; banner slides in.
+2-4s (reference: Image 2): Hard cut. She reads the phone and deflates.
+Owner&#x27;s line (flat, dry sarcasm): {Oh, great. A refund.}
+4-6s (reference: Image 2): Quick punch-in to a close-up; she looks into the lens.
+Owner&#x27;s line (wry, tired): {Sales are so low this week.}
+6-8s (reference: Image 3): Hard cut over her shoulder. The room tone fades; her lips stay closed.
+Owner (V.O., inner voice, tempted, close-mic): {Maybe it&#x27;s time for a discount.}
+8-10s (reference: Image 4): Everything freezes and the music stops. Scout appears silently. Only the camera moves, gliding slowly around the frozen moment.
+Scout&#x27;s line (calm, playful): {Not yet.}
+10-12s (reference: Image 5): Reverse angle: she turns and looks at the orb, surprised and curious.
+Scout&#x27;s line (warm, confident): {There&#x27;s something you don&#x27;t know.}
+12-16s (reference: Image 6): The orb swells beside her into a round window onto the past. Inside it, the shopper stands by her bed packing a straw beach bag, her phone at her ear, on a call with Scout. The owner watches from her chair, chin on her hand, lips closed.
+Scout&#x27;s line, heard inside the orb from that call (curious, precise): {The Sunset bikini. Three times in your cart. What stopped you?}
+16-20s (reference: Image 7): The camera pushes through the orb&#x27;s glowing rim into that past moment: a lime glow around the edges of the frame, warm, soft light like a memory. The shopper smiles and shrugs, still packing.
+Shopper&#x27;s line (casual, easy): {You run a discount every week. I&#x27;m just waiting for it.}
+20-22s (reference: Image 8): The lime glow snaps away: hard cut back to the studio, in the present. A rueful half-smile.
+Owner&#x27;s line (realising, quietly amused): {I&#x27;m training them to wait.}
+22-23s (reference: Image 9): Close-up: she clicks Delete on the discount.
+Owner&#x27;s line (decisive, light): {Noted.}
+23-25s (reference: Image 10): Days later. Audio 3 rings as the &quot;New order&quot; banner lands; she speaks right on the bell.
+Owner&#x27;s line (relieved, smiling): {Glad I asked.}
+25-30s (reference: Video 1): Video 1 plays exactly as it is, with Scout&#x27;s line from it: {Scout interviews your shoppers for you. Get free early access.} Its last frame holds until 30s.
+
+Live action, real skin, natural daylight. Hard cuts between ranges, smooth, stabilised and premium; the only moves inside a cut are the punch-in at 4s, the glide around the freeze at 8s and the push through the orb at 16s. The shopper&#x27;s call (12-20s) is the past; everything else happens now. Each spoken line finishes inside its own time range. Exactly three voices: the owner (Audio 1), the shopper (Audio 2) and Scout (Audio 4). Light upbeat music, silent during the freeze, lower under speech. Generate dialogue strictly as written; do not add or remove lines. No subtitles.</textarea>
+<div class="prompt">
+<div class="part"><h3>1 · Asset mapping</h3><p class="">Use <a class="chip c-image" href="#keyframes">Images 1 to 10</a> in order as keyframes. Each keyframe sets the composition, room, props and on-screen text of its own time range; ranges join with hard cuts, apart from the three moves named at the end (4s, 8s and 16s).</p><p class=""><a class="chip c-image" href="#image11">Image 11</a> is the owner: take only her face and hair. Her voice takes only timbre, accent and pace from <a class="chip c-audio" href="#audio1">Audio 1</a>.</p><p class=""><a class="chip c-image" href="#image12">Image 12</a> is the shopper: take only her face and hair. Her voice takes only timbre, accent and pace from <a class="chip c-audio" href="#audio2">Audio 2</a>.</p><p class="">Scout is the glowing lime-green orb in Images <a class="chip c-image" href="#image4">4</a>, <a class="chip c-image" href="#image5">5</a> and <a class="chip c-image" href="#image6">6</a>, and the small lime badge beside the shopper's phone in <a class="chip c-image" href="#image7">Image 7</a>. Scout's voice takes only timbre, accent and pace from <a class="chip c-audio" href="#audio4">Audio 4</a>.</p><p class=""><a class="chip c-audio" href="#audio3">Audio 3</a> is the order sound: play it exactly where the plot marks it.</p><p class=""><a class="chip c-video" href="#video1">Video 1</a> is the ending: play it exactly as it is, picture and sound.</p></div>
+<div class="part"><h3>2 · One-sentence summary</h3><p>A woman who runs her own Shopify online store, all bikinis, is about to post a discount when Scout, a floating lime orb, freezes time and takes her back into a call Scout had with one of her shoppers, which changes her mind; a bright, slightly playful live-action ad.</p></div>
+<div class="part"><h3>3 · Detailed plot</h3><p class="ts">0-2s (reference: <a class="chip c-image" href="#image1">Image 1</a>): Macro on her phone. <a class="chip c-audio" href="#audio3">Audio 3</a> rings as the "Refund issued" banner slides in.</p>
+<p class="ts">2-4s (reference: <a class="chip c-image" href="#image2">Image 2</a>): Hard cut. She reads the phone and deflates.</p>
+<p class="dlg">Owner's line (flat, dry sarcasm): <span class="line">{Oh, great. A refund.}</span></p>
+<p class="ts">4-6s (reference: <a class="chip c-image" href="#image2">Image 2</a>): Quick punch-in to a close-up; she looks into the lens.</p>
+<p class="dlg">Owner's line (wry, tired): <span class="line">{Sales are so low this week.}</span></p>
+<p class="ts">6-8s (reference: <a class="chip c-image" href="#image3">Image 3</a>): Hard cut over her shoulder. The room tone fades; her lips stay closed.</p>
+<p class="dlg">Owner (V.O., inner voice, tempted, close-mic): <span class="line">{Maybe it's time for a discount.}</span></p>
+<p class="ts">8-10s (reference: <a class="chip c-image" href="#image4">Image 4</a>): Everything freezes and the music stops. Scout appears silently. Only the camera moves, gliding slowly around the frozen moment.</p>
+<p class="dlg">Scout's line (calm, playful): <span class="line">{Not yet.}</span></p>
+<p class="ts">10-12s (reference: <a class="chip c-image" href="#image5">Image 5</a>): Reverse angle: she turns and looks at the orb, surprised and curious.</p>
+<p class="dlg">Scout's line (warm, confident): <span class="line">{There's something you don't know.}</span></p>
+<p class="ts">12-16s (reference: <a class="chip c-image" href="#image6">Image 6</a>): The orb swells beside her into a round window onto the past. Inside it, the shopper stands by her bed packing a straw beach bag, her phone at her ear, on a call with Scout. The owner watches from her chair, chin on her hand, lips closed.</p>
+<p class="dlg">Scout's line, heard inside the orb from that call (curious, precise): <span class="line">{The Sunset bikini. Three times in your cart. What stopped you?}</span></p>
+<p class="ts">16-20s (reference: <a class="chip c-image" href="#image7">Image 7</a>): The camera pushes through the orb's glowing rim into that past moment: a lime glow around the edges of the frame, warm, soft light like a memory. The shopper smiles and shrugs, still packing.</p>
+<p class="dlg">Shopper's line (casual, easy): <span class="line">{You run a discount every week. I'm just waiting for it.}</span></p>
+<p class="ts">20-22s (reference: <a class="chip c-image" href="#image8">Image 8</a>): The lime glow snaps away: hard cut back to the studio, in the present. A rueful half-smile.</p>
+<p class="dlg">Owner's line (realising, quietly amused): <span class="line">{I'm training them to wait.}</span></p>
+<p class="ts">22-23s (reference: <a class="chip c-image" href="#image9">Image 9</a>): Close-up: she clicks Delete on the discount.</p>
+<p class="dlg">Owner's line (decisive, light): <span class="line">{Noted.}</span></p>
+<p class="ts">23-25s (reference: <a class="chip c-image" href="#image10">Image 10</a>): Days later. <a class="chip c-audio" href="#audio3">Audio 3</a> rings as the "New order" banner lands; she speaks right on the bell.</p>
+<p class="dlg">Owner's line (relieved, smiling): <span class="line">{Glad I asked.}</span></p>
+<p class="ts">25-30s (reference: <a class="chip c-video" href="#video1">Video 1</a>): <a class="chip c-video" href="#video1">Video 1</a> plays exactly as it is, with Scout's line from it: <span class="line">{Scout interviews your shoppers for you. Get free early access.}</span> Its last frame holds until 30s.</p>
+</div>
+<div class="part"><h3>4 · Additional notes</h3><p>Live action, real skin, natural daylight. Hard cuts between ranges, smooth, stabilised and premium; the only moves inside a cut are the punch-in at 4s, the glide around the freeze at 8s and the push through the orb at 16s. The shopper's call (12-20s) is the past; everything else happens now. Each spoken line finishes inside its own time range. Exactly three voices: the owner (<a class="chip c-audio" href="#audio1">Audio 1</a>), the shopper (<a class="chip c-audio" href="#audio2">Audio 2</a>) and Scout (<a class="chip c-audio" href="#audio4">Audio 4</a>). Light upbeat music, silent during the freeze, lower under speech. Generate dialogue strictly as written; do not add or remove lines. No subtitles.</p></div>
+</div>
+
+
+<h2 id="sd25pe">After ByteDance's sd25-pe optimizer (final)<small>Our prompt above, run through ByteDance's own Seedance 2.5 prompt optimizer: the sd25-pe skill, loaded with the Skill tool in this session and refreshed with its own update command first. Same keyframe technique, same 11 lines, word for word. Round 4: 17 assets (Audio 4 added) and the 12-16s / 16-20s ranges. Round 5 (fix 2): 738 words (ours: 675), under the guide's 741-word 30 s keyframe example. Round 6 (Codex fix): every asset is now written in Seedance attachment syntax, @Image1 to @Image12, @Video1 and @Audio1 to @Audio4, and the fixed-frame line reads exactly "Use @Image1 as the first frame."; nothing else changed, and it counts 707 words because "Image 1" is now one token, "@Image1". Saved as prompt-sd25pe-final.txt.</small></h2>
+<div class="copyrow" style="margin-top:14px"><button id="copy2" type="button">Copy optimized prompt</button><span class="copied" id="copied2"></span></div>
+<pre id="raw2" style="white-space:pre-wrap;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:14px 0 0;font:13.5px/1.6 ui-monospace,Menlo,monospace;color:var(--ink);overflow-wrap:anywhere">【Generation Goal】
+Generate a bright, slightly playful live-action ad: a woman who runs her own Shopify online store, all bikinis, is about to post a discount when Scout, a floating lime orb, freezes time and shows her a past call with one of her shoppers, which changes her mind. Please note that this is not video editing.
+
+【Reference Asset Roles】
+Use @Image1 to @Image10 in order as keyframes. Each keyframe sets the composition, room, props and on-screen text of its own time range; ranges join with hard cuts, except the punch-in at 4s, the freeze glide at 8s and the push through the orb at 16s.
+Use @Image1 as the first frame.
+@Image11 is the owner: take only her face and hair.
+@Image12 is the shopper: take only her face and hair.
+@Audio1 is the owner&#x27;s voice: take only timbre, accent and pace; her words come only from this prompt.
+@Audio2 is the shopper&#x27;s voice: take only timbre, accent and pace; her words come only from this prompt.
+@Audio4 is Scout&#x27;s voice: take only timbre, accent and pace; Scout&#x27;s words come only from this prompt.
+@Audio3 is the order sound: play it exactly where the Event Script marks it.
+@Video1 is the ending: at 25-30s it plays exactly as it is, picture and sound.
+Scout is the lime orb in @Image4, @Image5 and @Image6 and the lime badge in @Image7.
+
+【Subjects and Relationships】
+The owner works alone in one studio (@Image2, @Image3, @Image4, @Image5, @Image6, @Image8 and @Image10); the shopper exists only in the past, inside the orb (@Image6) and the memory (@Image7).
+There is one Scout orb, first seen at 8s. The Sunset bikini appears only in the owner&#x27;s hands (@Image8) and on her desk (@Image9); the swimwear on the shopper&#x27;s bed is her own.
+
+【Event Script】
+0-2s (reference: @Image1): Macro on her phone. &lt;@Audio3 rings&gt; as the &quot;Refund issued&quot; banner slides in.
+2-4s (reference: @Image2): Hard cut. She reads the phone and deflates.
+Owner&#x27;s line (English; flat, dry sarcasm): {Oh, great. A refund.}
+4-6s (reference: @Image2): Quick punch-in to a close-up; she looks into the lens.
+Owner&#x27;s line (English; wry, tired): {Sales are so low this week.}
+6-8s (reference: @Image3): Hard cut over her shoulder. The room tone fades; her lips stay closed.
+Owner (V.O., inner voice, English; tempted, close-mic): {Maybe it&#x27;s time for a discount.}
+8-10s (reference: @Image4): Everything freezes and the music stops. Scout appears silently at her shoulder. Only the camera moves, gliding around the frozen moment. Her lips stay closed.
+Scout&#x27;s line (English; calm, playful): {Not yet.}
+10-12s (reference: @Image5): Reverse angle: she turns and looks at the orb, surprised and curious, lips closed.
+Scout&#x27;s line (English; warm, confident): {There&#x27;s something you don&#x27;t know.}
+12-16s (reference: @Image6): The orb swells beside her into a round window onto the past: inside it, the shopper&#x27;s call with Scout. The owner watches, lips closed; the shopper listens, lips closed.
+Scout&#x27;s line (English; heard inside the orb from that call; curious, precise): {The Sunset bikini. Three times in your cart. What stopped you?}
+16-20s (reference: @Image7): The camera pushes through the orb&#x27;s glowing rim into that past moment, a lime glow at the frame&#x27;s edges. The shopper smiles and shrugs.
+Shopper&#x27;s line (English; casual, easy): {You run a discount every week. I&#x27;m just waiting for it.}
+20-22s (reference: @Image8): The lime glow snaps away: hard cut back to the studio, in the present. A rueful half-smile.
+Owner&#x27;s line (English; realising, quietly amused): {I&#x27;m training them to wait.}
+22-23s (reference: @Image9): Close-up: she clicks Delete on the discount.
+Owner&#x27;s line (English; decisive, light): {Noted.}
+23-25s (reference: @Image10): Days later. &lt;@Audio3 rings&gt; as the &quot;New order&quot; banner lands; she speaks right on the bell.
+Owner&#x27;s line (English; relieved, smiling): {Glad I asked.}
+25-30s (reference: @Video1): @Video1 plays exactly as it is, with Scout&#x27;s line from it: {Scout interviews your shoppers for you. Get free early access.} Its last frame holds until 30s.
+
+【Maintain Consistency】
+Live action, real skin, natural daylight; smooth, stabilised and premium. Each spoken line finishes inside its own time range. Exactly three voices; whoever is not speaking keeps their lips closed. (Light upbeat music, silent during the freeze, lower under speech.) Generate dialogue strictly as written; do not add or remove lines. No subtitles.</pre>
+<div class="part" style="margin-top:14px"><h3>What sd25-pe changed</h3><ul style="margin:0;padding-left:20px">
+<li style="margin:0 0 6px">Put it into its template: Generation Goal, Reference Asset Roles, Subjects and Relationships, Event Script, Maintain Consistency. Our opening keyframe sentence, every time range and every keyframe reference stay as they were.</li>
+<li style="margin:0 0 6px">Added its exact keyframe sentence <b>"Use @Image1 as the first frame."</b>, with every asset written in Seedance attachment syntax (@Image1 to @Image12, @Video1, @Audio1 to @Audio4; Codex fix, round 6) (round 5 cut the extra line that re-described that frame).</li>
+<li style="margin:0 0 6px">Kept <b>"Please note that this is not video editing."</b>, on purpose. sd25-pe's Final Checklist says this line is "not added automatically for ... first-frame generation", and this prompt does declare Image 1 as the first frame. But this is not a pure first-frame job: it also carries a 4.5 s reference video (Video 1) inside a 30 s output, and that video-length mismatch is the gate's own trigger. Without the line, Seedance could read Video 1 as a clip to edit and the whole job as an edit. The first-frame exclusion is about jobs with no reference video, so the gate wins here.</li>
+<li style="margin:0 0 6px">Gave each asset one role in positive words: faces give only face and hair, voices only timbre, accent and pace, Video 1 is only the ending at 25-30s, and Scout's voice is its own Audio 4 (round 4). All 17 assets are used, so there is no Unused Assets list.</li>
+<li style="margin:0 0 6px">Subjects section, relationships only, now two lines (round 5): one studio (Images 2, 3, 4, 5, 6, 8, 10), the shopper <b>exists only in the past</b> (Images 6 and 7), one orb first seen at 8s, and the <b>Sunset bikini only in the owner's hands (Image 8) and on her desk (Image 9)</b>. The shopper never bought it ("Three times in your cart"), so the orange swimwear on her bed in Images 6 and 7 is <b>not</b> the Sunset bikini: the prompt says it is her own. Wardrobe, props and held objects are left to the keyframes.</li>
+<li style="margin:0 0 6px">Labelled every line <b>English</b>, and listeners keep their lips closed: the owner while frozen and while watching the orb, and the shopper while Scout asks.</li>
+<li style="margin:0 0 6px">Sound effects go in &lt;angle brackets&gt; (&lt;Audio 3 rings&gt; at 0-2s and 23-25s only) and music in (round brackets). Round 5 dropped the &lt;A soft pop&gt; on Scout's entrance: Scout appears silently, so no sound is tied to the orb (H229 rule). There are no subtitles, and no ratio, duration or resolution is written in the text.</li>
+</ul>
+<p style="margin:10px 0 0;color:var(--muted);font-size:14px"><b>Re-checked after round 6:</b> same 11 lines word for word, same 0-30s ranges, every asset reference in @ syntax, 707 words. <b>Round 5:</b> still 11 lines word for word (script check), ranges 0-30s integer and gap-free, 738 words. <b>Round 4:</b> all 11 spoken lines match ours word for word (checked by script). "Use Images 1 to 10 in order as keyframes" opens the asset roles, and each range keeps its "(reference: Image N)". Every line is now at or under 3 words a second (most: 2.75 in 12-16s and 16-20s). The only negatives left are "No subtitles" and "do not add or remove lines", plus the gate line "this is not video editing". Round 5 brought it under the guide's 741-word 30 s keyframe example.</p></div>
+<div class="part" style="margin-top:14px;border-color:var(--lime)"><h3>Which one I'd send</h3><p style="margin:0"><b>The sd25-pe version.</b> It is our prompt with the same frames, lines and timings, plus what keeps the new memory beat from leaking. It says the shopper exists only in the past, so she can't turn up in the studio. It says the owner keeps her lips closed while she watches the orb, so the call's voice doesn't move her mouth. It places the end screen only at 25-30s, and gives Scout's voice its own clip. At 707 words (738 before the round 6 @ syntax) it is now under the guide's own 741-word 30 s keyframe example.</p></div>
+<script>document.getElementById('copy2').addEventListener('click',async()=>{const t=document.getElementById('raw2').innerText;const s=document.getElementById('copied2');try{await navigator.clipboard.writeText(t);s.textContent='Copied.'}catch(e){const r=document.createRange();r.selectNodeContents(document.getElementById('raw2'));const g=getSelection();g.removeAllRanges();g.addRange(r);s.textContent='Selected; press Cmd+C.'}});</script>
+
+<h2 id="shots">Shot list<small>54 spoken words before the end line (The Dip had 55) and 64 with it. Twelve ranges of 1 to 4 seconds (4 s for the two call lines, so each stays at or under 3 words a second), plus the 5-second end card.</small></h2>
+<div class="tbl"><table><thead><tr><th>Time</th><th>Ref</th><th>Shot size</th><th>Angle</th><th>Movement</th><th>Transition</th><th>Sound</th><th>Line</th><th>Borrowed from</th></tr></thead><tbody>
+<tr><td class="t">0-2s</td><td><a class="chip c-image" href="#image1">Image 1</a></td><td>Macro</td><td>Slightly high</td><td>Still, phone settles</td><td>Opens the film</td><td>Audio 3 ka-ching</td><td class="ln"><em>(banner: Refund issued)</em></td><td>The Dip's macro banner opening (H174)</td></tr>
+<tr><td class="t">2-4s</td><td><a class="chip c-image" href="#image2">Image 2</a></td><td>Medium close-up</td><td>Eye level</td><td>Steady</td><td>Hard cut</td><td>Room tone</td><td class="ln">Oh, great. A refund.</td><td>-</td></tr>
+<tr><td class="t">4-6s</td><td><a class="chip c-image" href="#image2">Image 2</a></td><td>Close-up</td><td>Eye level, to lens</td><td>Quick punch-in</td><td>Punch-in</td><td>Room tone</td><td class="ln">Sales are so low this week.</td><td>-</td></tr>
+<tr><td class="t">6-8s</td><td><a class="chip c-image" href="#image3">Image 3</a></td><td>Over the shoulder</td><td>Behind her right</td><td>Slow drift</td><td>Hard cut</td><td>Room tone fades, close-mic V.O.</td><td class="ln">(inner voice) Maybe it&#x27;s time for a discount.</td><td>-</td></tr>
+<tr><td class="t">8-10s</td><td><a class="chip c-image" href="#image4">Image 4</a></td><td>Medium, three-quarter back</td><td>Behind her right (same as Image 3)</td><td>Camera glides around the frozen moment</td><td>Freeze at 8s</td><td>Music stops; Scout appears silently</td><td class="ln">Scout: Not yet.</td><td><a href="#p-frozen">Frozen in motion</a> + <a href="#p-bullet">Bullet time</a></td></tr>
+<tr><td class="t">10-12s</td><td><a class="chip c-image" href="#image5">Image 5</a></td><td>Medium close-up</td><td>Reverse, front</td><td>Locked</td><td>Hard cut (reverse)</td><td>Room tone</td><td class="ln">Scout: There&#x27;s something you don&#x27;t know.</td><td>-</td></tr>
+<tr><td class="t">12-16s</td><td><a class="chip c-image" href="#image6">Image 6</a></td><td>Medium, over her shoulder</td><td>Behind her, toward the orb</td><td>Orb swells into a round window; slow push toward it</td><td>Hard cut</td><td>Scout's voice from inside the orb, light music</td><td class="ln">Scout: The Sunset bikini. Three times in your cart. What stopped you?</td><td>Emile's "within the orbs" (H220)</td></tr>
+<tr><td class="t">16-20s</td><td><a class="chip c-image" href="#image7">Image 7</a></td><td>Medium</td><td>Eye level, front</td><td>Push through the orb's rim into the memory</td><td>The big switch: through the orb</td><td>Bedroom ambience, light music</td><td class="ln">Shopper: You run a discount every week. I'm just waiting for it.</td><td><a href="#p-earth">Earth zoom</a> (one unbroken plunge, here through the orb)</td></tr>
+<tr><td class="t">20-22s</td><td><a class="chip c-image" href="#image8">Image 8</a></td><td>Medium close-up</td><td>Eye level, front</td><td>Locked</td><td>Lime glow snaps away: hard cut back to now</td><td>Music returns softly</td><td class="ln">I&#x27;m training them to wait.</td><td>-</td></tr>
+<tr><td class="t">22-23s</td><td><a class="chip c-image" href="#image9">Image 9</a></td><td>Close-up</td><td>High, over laptop</td><td>Locked</td><td>Hard cut</td><td>Click</td><td class="ln">Noted.</td><td>-</td></tr>
+<tr><td class="t">23-25s</td><td><a class="chip c-image" href="#image10">Image 10</a></td><td>Medium</td><td>Eye level</td><td>Gentle push in</td><td>Hard cut</td><td>Audio 3 ka-ching, music lifts (days later)</td><td class="ln">Glad I asked.</td><td>Ka-ching payoff (Emile, Nov 10)</td></tr>
+<tr><td class="t">25-30s</td><td><a class="chip c-video" href="#video1">Video 1</a></td><td>End screen</td><td>-</td><td>As in Video 1, last frame holds 0.5 s</td><td>Cut</td><td>Video 1's own sound (Scout)</td><td class="ln">Scout interviews your shoppers for you. Get free early access.</td><td>H158 talking "o"</td></tr>
+</tbody></table></div>
+
+<h3 style="margin-top:28px;font-size:18px">The camera moves I borrowed (Higgsfield Viral gallery, browsed for free)</h3>
+<div class="presets">
+<article class="card" id="p-frozen"><span class="tag">Frozen in motion</span><video src="a/preset-frozen.mp4" controls muted playsinline loop preload="none"></video><div class="cb"><p>"The subject freezes in midair while… everything continues." I flipped it: at 8s the whole room freezes and only the camera and Scout move. Preset 6e822598-7221-4f89-9a7d-81bb812433d9.</p></div></article>
+<article class="card" id="p-bullet"><span class="tag">Bullet time</span><video src="a/preset-bullet.mp4" controls muted playsinline loop preload="none"></video><div class="cb"><p>"Time freezes for a sweeping camera move… snaps back into place." This is the slow glide around her frozen hand, kept to a short arc so the orb stays in frame. Preset 6626ad13-f00f-4b67-be41-c768b9c0a380.</p></div></article>
+<article class="card" id="p-earth"><span class="tag">Earth zoom</span><video src="a/preset-earth.mp4" controls muted playsinline loop preload="none"></video><div class="cb"><p>"One unbroken move… built for transitions." At 16s the camera pushes through the orb's rim into the shopper's memory: the past call, shown and not explained. It's text only, so it uses no video slot. Preset 1ac7759b-5b1a-4523-bd77-b6bb5d6df84e.</p></div></article>
+</div>
+
+<h2 id="keyframes">The special asset: ten keyframes<small>Each one is strict for a reason (see its card above). Studio frames 2, 3, 8 and 10 were rebuilt with gpt_image_2_6 on her real room (Image 11). Frames 1 and 9 are macros whose background is now defocused. Frames 6 and 7 are the round-3 memory-orb stills.</small></h2>
+<div class="big"><figure><img src="a/image1-kf1.jpg" alt="Keyframe 1: Refund banner macro"><figcaption><span class="ts">Image 1 · 0-2s</span><b>Refund banner macro</b>The bell rings, then the banner reads "Refund issued".</figcaption></figure>
+<figure><img src="a/image2-kf2.jpg" alt="Keyframe 2: Refund in hand"><figcaption><span class="ts">Image 2 · 2-6s</span><b>Refund in hand</b>"Oh, great. A refund." / "Sales are so low this week."</figcaption></figure>
+<figure><img src="a/image3-kf3.jpg" alt="Keyframe 3: Over the shoulder, discount page"><figcaption><span class="ts">Image 3 · 6-8s</span><b>Over the shoulder, discount page</b>Inner voice: "Maybe it's time for a discount."</figcaption></figure>
+<figure><img src="a/image4-kf4.jpg" alt="Keyframe 4: The freeze, Scout pops in"><figcaption><span class="ts">Image 4 · 8-10s</span><b>The freeze, Scout pops in</b>Freeze. "Not yet."</figcaption></figure>
+<figure><img src="a/image5-kf5.jpg" alt="Keyframe 5: Reverse angle: she sees the orb"><figcaption><span class="ts">Image 5 · 10-12s</span><b>Reverse angle: she sees the orb</b>"There's something you don't know."</figcaption></figure>
+<figure><img src="a/image6-kf6.jpg" alt="Keyframe 6: The past, inside the orb"><figcaption><span class="ts">Image 6 · 12-16s</span><b>The past, inside the orb</b>Scout, on the call: "The Sunset bikini. Three times in your cart. What stopped you?"</figcaption></figure>
+<figure><img src="a/image7-kf7.jpg" alt="Keyframe 7: Into the memory"><figcaption><span class="ts">Image 7 · 16-20s</span><b>Into the memory</b>"You run a discount every week. I'm just waiting for it."</figcaption></figure>
+<figure><img src="a/image8-kf8.jpg" alt="Keyframe 8: The aha with the Sunset bikini"><figcaption><span class="ts">Image 8 · 20-22s</span><b>The aha with the Sunset bikini</b>"I'm training them to wait."</figcaption></figure>
+<figure><img src="a/image9-kf9.jpg" alt="Keyframe 9: Delete discount"><figcaption><span class="ts">Image 9 · 22-23s</span><b>Delete discount</b>"Noted."</figcaption></figure>
+<figure><img src="a/image10-kf10.jpg" alt="Keyframe 10: Full-price ka-ching"><figcaption><span class="ts">Image 10 · 23-25s</span><b>Full-price ka-ching</b>"Glad I asked."</figcaption></figure></div>
+
+<h3 style="margin-top:28px;font-size:18px">How they were made: the inputs behind the keyframes</h3>
+<div class="how">
+<figure><img src="a/image11-owner.jpg" alt=""><figcaption>Her real studio (Soul 2, Image 11): the one room ref for 2, 3, 4, 5, 8 and 10</figcaption></figure>
+<figure><img src="a/src-orb.jpg" alt=""><figcaption>Same studio + orb (H215 media db24f683): the orb ref for 4, 5 and 6</figcaption></figure>
+<figure><img src="a/src-refund.jpg" alt=""><figcaption>Refund banner, built in HTML → Image 1</figcaption></figure>
+<figure><img src="a/src-fullprice.jpg" alt=""><figcaption>Full-price banner, 5:38 → Image 10</figcaption></figure>
+<figure><img class="wide" src="a/src-discount.jpg" alt=""><figcaption>Shopify-style "Create discount" → Images 3 and 9</figcaption></figure>
+<figure><img src="a/v2-kf6-replaced.jpg" alt=""><figcaption>Replaced in round 3, Image 6 v2: the call in the shopper's bedroom. Emile: it didn't read as the past.</figcaption></figure>
+<figure><img src="a/v2-kf7-replaced.jpg" alt=""><figcaption>Replaced in round 3, Image 7 v2: crop of the old Image 6</figcaption></figure>
+<figure><img src="a/kf4-v1-rejected.jpg" alt=""><figcaption>Rejected round-1 Image 4, v1: the swimsuit read as a wall sticker and the orb sat on her head</figcaption></figure>
+<figure><img src="a/src-studio.jpg" alt=""><figcaption>Retired: the H215 beach-and-pier studio. Round 1 built six frames on it, and that was the room clash.</figcaption></figure>
+</div>
+
+<h2 id="rules">Guide checks and open risks</h2>
+<ul class="notes">
+<li><b>Asset limits:</b> 12 images (limit 30), 1 video of 4.5 s (limit 10 videos, 30 s in total, each 4-30 s), 4 audio clips of 27.4 s in total (8.9 + 11.4 + 2.6 + 4.5; limit 30 s; each 2-30 s). <cite>Reference asset input recommendations</cite></li>
+<li><b>Subject audio at 5-10 s:</b> Elena is now 8.9 s, cut at a natural pause. Serene stays at 11.4 s. <cite>Reference asset input recommendations, FAQ row "5-10 seconds"</cite> The 8.9 s cut must be re-uploaded to Higgsfield before the render; the media id on the card is still the 13.4 s file.</li>
+<li><b>Each asset's role, in positive words:</b> faces are "take only her face and hair", and voices "take only timbre, accent and pace". The camera is "smooth, stabilised". Round 4 removed the visual negatives ("do not use its background", "Do not show anything from Video 1 before 25s", "no orb before that"). The only negatives left are "No subtitles" and "do not add or remove lines", which the guide allows. <cite>Basic · Negative control: "Use positive descriptions whenever possible"</cite></li>
+<li><b>Exact text goes in as images:</b> the refund, discount and order banners live in Images 1, 3, 9 and 10, not in the prompt. <cite>FAQ · Text spelling errors, solution 2</cite> Spoken words are never repeated as visuals, which avoids subtitles. <cite>FAQ · Subtitles, point 1</cite></li>
+<li><b>Prompt length:</b> 675 words (ours) and 738 (sd25-pe) in round 5 (880 in round 4); round 2 had trimmed 764 to 541, and round 3 added the memory beat. The guide says a keyframe prompt "can be simplified" <cite>Advanced · Concept storyboard usage</cite>. For scale, its own 30 s keyframe example (3D clay-model film, "Using the keyframe reference images for each stage") runs 741 words <cite>Prompt examples · 3D clay-model video reference and rendering</cite>, and its short keyframe example runs 134 <cite>Advanced · Keyframe reference</cite>.</li>
+<li><b>Real-face rule:</b> BytePlus direct blocks real faces <cite>API · content, warning</cite>, so Higgsfield is the route.</li>
+<li><b>Risk: keyframes vs. pace.</b> Strict frames can make shots feel like stills that come to life. The prompt says ranges join with hard cuts and names the three moves inside a cut, keeping The Dip's hard-cut pace. Watch the draft for frozen-looking starts.</li>
+<li><b>Risk: KF9's laptop.</b> The Delete close-up keeps its space-grey laptop, while Images 3 and 4 show a silver one. At 480p in a 1-second close-up (22-23s) this should pass. If it shows, it's a ~7-credit video edit, not a retake.</li>
+<li><b>Risk: the call beat is now 8 s.</b> 12-16s and 16-20s are 4 s each, so the two call lines fit at 2.75 words a second. The cost is a 2 s aha (20-22s) and a 1 s "Noted." (22-23s). If the draft feels slow in the orb, trim a line instead; that is Emile's call.</li>
+<li><b>One pass is enough:</b> draft (90 credits) → if approved, the 1080p final from the draft ID (valid 14 days; quote it with get_cost first) <cite>Tutorial · Draft mode</cite>.</li>
+<li><b>The first line:</b> <span class="line">{Oh, great. A refund.}</span> (flat, dry sarcasm) replaces "Oh, fudge", which read goofy. If Emile wants the bitten-off beat, use <span class="line">{Oh, fff… a refund.}</span></li>
+</ul>
+
+<section id="round3" style="margin-top:36px"><h2 style="margin-top:0">Round 3 (H220): Emile's feedback, point by point</h2>
+<div class="tbl"><table><thead><tr><th>His words</th><th>What changed</th><th>Where</th></tr></thead><tbody>
+<tr><td>"I imagine it more like within the orbs… the orb takes you back in this world… a big switch… you kind of know this was the past."</td><td>12-16s: the orb swells into a window and she watches the call inside it. 16-20s: the camera pushes through the orb's rim into the memory, lime glow at the edges. 20s: the glow snaps away, back to now. The prompt says the call is the past and everything else is now.</td><td><a href="#image6">Image 6</a>, <a href="#image7">Image 7</a>, <a href="#prompt">prompt</a> 12-20s</td></tr>
+<tr><td>Who packs the bag? (the flashback must show who and when)</td><td>She watches a stranger pack the bag inside her orb, so it is the shopper and it is the past. The Subjects section says the shopper exists only in the past.</td><td><a href="#image6">Image 6</a>, <a href="#sd25pe">sd25-pe</a> Subjects</td></tr>
+<tr><td>"She runs a Shopify online store, and the vibe is full bikinis."</td><td>The summary now reads "a woman who runs her own Shopify online store, all bikinis". "Bikini-store owner" and "bikini studio" are gone from both prompts.</td><td><a href="#prompt">prompt</a> part 2, <a href="#sd25pe">sd25-pe</a> Goal</td></tr>
+<tr><td>Run the final prompt through ByteDance's sd25-pe and show it next to ours, with which to send.</td><td>Done with the real skill, loaded with the Skill tool and refreshed with its update command first. Its output keeps all 11 lines word for word and the keyframe technique. I recommend sending it.</td><td><a href="#sd25pe">sd25-pe</a></td></tr>
+<tr><td>H229 rule (Nov 14): "pin the ka-ching to the opening seconds (on the first notification), write it as a &lt;&gt; sound effect in that timestamp only, and never tie any chime or ka-ching to the orb. If the story has a second ka-ching (the full-price order), tie it to that banner only."</td><td>Met. The ka-ching is placed only in two timestamps: <code>0-2s ... &lt;Audio 3 rings&gt; as the "Refund issued" banner slides in</code> and <code>23-25s ... &lt;Audio 3 rings&gt; as the "New order" banner lands</code>. The asset line no longer repeats the timing ("play it exactly where the Event Script marks it"). Scout appears <b>silently</b> at 8-10s: the &lt;A soft pop&gt; is gone, so no sound is tied to the orb.</td><td><a href="#sd25pe">sd25-pe</a> 0-2s, 8-10s, 23-25s</td></tr>
+<tr><td>Team A: "Image 8 sucks… we had better" (The Dip's call card)</td><td>Doesn't apply to Team C: we never had a call-card image. The call is shown live inside the orb, with Scout as the lime sound-bar badge by her phone (Image 7). Say if you want The Dip card added as a 13th image.</td><td><a href="#image7">Image 7</a></td></tr>
+</tbody></table></div>
+<h3 style="font-size:18px;margin-top:22px">Self-check against marketing-check (builder, not a fresh judge)</h3>
+<ul class="notes">
+<li><b>Goal fit: YES.</b> The card asks for one briefing version Emile can review and keep or kill. This page is that version: the keyframes, the exact prompt, the compiled prompt, and which one to send.</li>
+<li><b>Emile's feedback: 9/10.</b> Every point above is done. The only gap is the call card, which doesn't apply here.</li>
+<li><b>Seedance 2.5 rules: 8/10.</b> The rules covered: one task (reference generation), the gate line justified (4.5 s video in a 30 s output), 17 assets each with one role (Scout's voice now Audio 4), dialogue in {} with speaker and English, &lt;&gt; sound effects, () music, no ratio or duration in the text, integer ranges with no gaps, and the exact first-frame wording. Inside limits: 12 images, 1 video of 4.5 s, 4 audio clips of 27.4 s in total, each 2.6-11.4 s. Round 4 fixed what the independent check found: Video 1's two roles, visual negatives, re-described props, "move naturally" against hard cuts, sitting vs. standing, and two lines above 3 words a second. Round 5 (fix 2) is at 738 words, under the guide's 741-word example.</li>
+<li><b>Readable story: 8/10.</b> A refund, then the urge to discount, Scout stops time, she sees the past call inside the orb, the shopper says she waits for discounts, she deletes the discount, a full-price sale, the end screen.</li>
+</ul>
+<h3 style="font-size:18px;margin-top:22px">Open risks for the render</h3>
+<ul class="notes">
+<li>In Image 6 the owner, seen from behind, has lighter streaks in her hair than Image 11. Image 11 governs face and hair, so expect Seedance to follow it. If not, it's a paid "change only her hair" edit (0.25 cr), not done here because Script cards spend nothing.</li>
+<li>The orb window holds a whole second scene, and the model may simplify it to a glowing ball. Image 6 locks the composition, and the text names what is inside it.</li>
+</ul>
+</section>
+
+<section id="eval"><h2 style="margin-top:0">Eval</h2>
+<p><b>Round 1 judge scores (before the fixes):</b></p>
+<div class="score">
+<div><b>7.5</b><span>Goal</span></div>
+<div><b>7.5</b><span>Guide</span></div>
+<div><b>9</b><span>Story</span></div>
+<div><b>7</b><span>Craft</span></div>
+<div><b>7.5</b><span>Overall</span></div>
+</div>
+
+<h3 style="font-size:18px;margin-top:22px">Must-fix, and what changed</h3>
+<div class="fixes">
+<div class="fix"><h4>1 · Two studios inside one locked set</h4>
+<p class="was">Judge: six keyframes were built on the H215 beach-and-pier studio and two on her real red-roof studio. The room would jump at 8 s and jump back at 19 s.</p>
+<p><b>Changed:</b> everything now uses one room, her real Soul 2 studio (Image 11). With only 4 new images allowed, I spent them where the room fills the frame. I regenerated <b>2</b> (refund in hand), <b>3</b> (over the shoulder, rebuilt from Image 4's exact angle), <b>8</b> (the aha) and <b>10</b> (full-price ka-ching) with Image 11 as the room and face reference. For the two macros, <b>1</b> (refund phone) and <b>9</b> (Delete dialog), I defocused the background locally, so no pier, beach or grid window is left to lock in. The page line now reads "the one room ref for 2, 3, 4, 5, 8 and 10", and the H215 studio is marked as retired. The face drift (nice-to-have) was checked: new 2, 8 and 10 match Image 11.</p>
+<div class="ba"><figure><img src="a/v1-kf2.jpg" alt="Round 1 keyframe 2"><figcaption>Round 1: pier studio</figcaption></figure><figure><img src="a/image2-kf2.jpg" alt="Round 2 keyframe 2"><figcaption>Round 2: her real room</figcaption></figure></div>
+<div class="ba"><figure><img src="a/v1-kf9.jpg" alt="Round 1 keyframe 9"><figcaption>Round 1 ka-ching</figcaption></figure><figure><img src="a/image10-kf10.jpg" alt="Round 2 keyframe 10"><figcaption>Round 2 (now Image 10)</figcaption></figure></div>
+</div>
+<div class="fix"><h4>2 · Keyframe 4 locked in garbled laptop text</h4>
+<p class="was">Judge: the screen read "WEERENZO" with fields you couldn't read.</p>
+<p><b>Changed:</b> I took the judge's second option. The screen is now visibly out of focus behind the frozen swimsuit (a feathered local blur), so focus sits on the orb. The exact discount text is carried by Image 3 one beat earlier, which reads WEEKEND20 / 20% off. I didn't spend a new image here: regenerating the freeze risked the swimsuit-and-orb composition that took two tries in round 1.</p>
+<div class="ba"><figure><img src="a/v1-kf4.jpg" alt="Round 1 keyframe 4"><figcaption>Round 1: garbled text</figcaption></figure><figure><img src="a/image4-kf4.jpg" alt="Round 2 keyframe 4"><figcaption>Round 2: screen defocused</figcaption></figure></div>
+</div>
+<div class="fix"><h4>3 · The 7-second shopper shot broke the 2-3 s pace</h4>
+<p class="was">Judge: 12-19s was one shot holding two lines.</p>
+<p><b>Changed:</b> it is now two ranges, each bound to its own keyframe. <b>12-15s, Image 6</b> is the wide shot: the orb push plus Scout's question. <b>15-18s, Image 7 (new)</b> is a close-up of the shopper's shrug on "I'm just waiting for it." Image 7 is cropped from Image 6, so it costs no generation and her face, top and earbud can't drift. The rest moved up by a second: aha 18-21, Noted 21-23 (2 s, up from 1), ka-ching 23-25. Every range is now 2-3 s apart from the end card.</p>
+</div>
+<div class="fix"><h4>4 · "Phone on speaker" contradicted the earbuds</h4>
+<p class="was">Judge: the prompt said speakerphone, but both images show an AirPod.</p>
+<p><b>Changed:</b> following the judge's better option, I cut the description. The range now says only "onto the shopper on a call", and the keyframe shows the rest (guide: when a reference is accurate, don't re-describe it).</p>
+</div>
+</div>
+
+<h3 style="font-size:18px;margin-top:22px">Nice-to-have</h3>
+<ul class="notes">
+<li><b>Trim the prompt (round 2):</b> done, 764 → 541 words. Round 3 added the memory beat; round 4 was at 685 / 880, round 5 is at 675 (ours) / 738 (sd25-pe). The cuts were re-described props, light and wardrobe. The 541 includes 64 spoken words. I sourced the length comparison (guide's 30 s keyframe example: 741 words) instead of the unsourced "380-740".</li>
+<li><b>Elena to about 9 s:</b> done, 8.9 s, cut at a natural pause with a 0.15 s fade. Audio total was 22.9 s; 27.4 s with Audio 4.</li>
+<li><b>Video 1 is 4.5 s in a 5 s slot:</b> done. "Its last frame holds until 30s."</li>
+<li><b>Positive wording:</b> done. "do not use its background" → "take only her face and hair"; "never its words" → "takes only timbre, accent and pace"; "never shaky" → "smooth, stabilised"; "not angry" → "a rueful half-smile".</li>
+<li><b>"Oh, fudge":</b> done. It's now {Oh, great. A refund.} (flat, dry sarcasm). The bitten-off version stays as an alternative.</li>
+<li><b>Face drift in 2 and 7:</b> done, through the regeneration on Image 11.</li>
+<li><b>"Noted." in 1 s (round 2):</b> done then, 2 s (21-23). Round 4 put it back to 1 s (22-23s) to give the call lines 4 s each. I kept the ka-ching at 23 s so the end card keeps its full 5 s.</li>
+</ul>
+
+<p><b>Spend this round:</b> 4 new gpt_image_2_6 stills (1.0 credit). One more request for keyframe 10 was blocked by moderation and made no image; the retry was reworded and dropped the swimwear close-up reference. No video generated.</p>
+
+<h3 style="font-size:18px;margin-top:22px">Judge's verdict (round 1)</h3>
+<p class="verdict">The technique is applied correctly in form. The prompt opens with the guide's exact sentence "Use Images 1 to 9 in order as keyframes". Nine separate realistic gpt_image_2_6 stills are each bound to an integer, gap-free time range (0-2 ... 25-30), and each has a stated reason for being strict. Mapping follows upload order (keyframes first, faces as Images 10-11, Video 1, Audio 1-3). Dialogue uses the Character's line (emotion): {...} format, and the inner voice is a V.O. with lips closed. The assets are inside every limit: 11 of 30 images; one video of 4.5 s (within 4-30 s); 3 audio clips totalling 27.5 s, each 2-30 s. All 8 story beats are present and clear, at 64 spoken words with no client names or EXAMPLE labels. The fatal flaw is that the keyframes do not share one room. Six were built on the H215 beach-and-pier studio and two (the freeze and the reverse angle) on the owner's real red-roof studio from Image 10. Strict keyframes would make the room jump at 8 s and jump back at 19 s, which is exactly the consistency this technique exists to guarantee. Keyframe 4 also locks in garbled screen text. The 7-second shopper shot breaks the 2-3 s pace, and the prompt's "phone on speaker" contradicts the AirPods in the images. Regenerate the keyframes on one room, fix KF4, split the shopper beat and trim the prompt, and this becomes a strong, faithful keyframe pitch.</p>
+<p style="color:var(--muted);font-size:14px">Image numbers in the verdict are round 1's. In round 2, faces are Images 11-12 and the keyframes are Images 1-10.</p>
+</section>
+
+<footer>H217 · Team C · round 4 (H220 fix 1), Nov 14 2026 · No video was generated. Stills only: 10 gpt_image_2_6 in round 1, plus 4 in round 2 (one more request was blocked by moderation and made no image).</footer>
+</div>
+<script>
+document.getElementById('copy').addEventListener('click',async()=>{const t=document.getElementById('raw').value;const s=document.getElementById('copied');try{await navigator.clipboard.writeText(t);s.textContent='Copied.'}catch(e){const r=document.getElementById('raw');r.removeAttribute('aria-hidden');r.select();try{document.execCommand('copy');s.textContent='Copied.'}catch(_){s.textContent='Copy failed; select the prompt above.'}}});
+</script>
+</body></html>

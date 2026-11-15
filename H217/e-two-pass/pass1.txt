@@ -1,0 +1,20 @@
+Image 1 is the owner of Salt & Sun Swim, a small online bikini store on Shopify. Her voice is Audio 1: take only its timbre, accent, pace and emotion.
+Image 2 is her studio and Scout, the lime orb. Every shot of her takes place in this studio, with bikini rails, folded swimsuits and kraft boxes around her. Do not reuse its empty-chair composition.
+Image 3 is her phone's lock screen with the refund notification: show it exactly, word for word.
+Image 4 is the Shopify discount page on her laptop screen: show it exactly.
+Image 5 is the last frame of this video.
+Video 1: take only Scout's voice from it. Do not show any of its visuals.
+Audio 2 is the notification sound: use it exactly.
+
+A bikini-store owner in her sunny home studio gets a refund instead of a sale, decides to run a discount, and is stopped mid-click by Scout, a floating lime orb; a light, real, slightly playful live-action ad, vertical, close handheld-steady shots.
+
+0-2s: Macro close-up, overhead, locked-off. Her phone lies face up on the table among folded bikinis. The notification from Image 3 slides in with the sound of Audio 2.
+2-4s: Medium close-up, eye level. She picks up the phone, reads it, and her face drops. The owner (annoyed, then deflated) says: {Oh f... a refund.} She bites the word off after the "f" and never says the rest of it.
+4-6s: Close-up, front angle, slow push in. She lowers the phone and looks straight into the camera, a bikini rail behind her. The owner (flat, a little disappointed) says: {Sales are so low this week.}
+6-9s: Medium shot from behind her right shoulder, slow push in toward the laptop showing Image 4. She types the discount, pushing a coral bikini aside with her other hand, her lips closed. The owner (V.O., inner voice, close and quiet) says: {Maybe it's time for a discount.} The room sound drops away while she thinks.
+9-10s: Extreme close-up, side angle, bullet time: her finger freezes just above the Save discount button on Image 4, a bikini she tossed hangs still in mid-air, and the camera slowly arcs around her hand. One soft whoosh.
+10-12s: Medium close-up, eye level, time still frozen. Scout, the lime orb from Image 2, pops into the air beside her left shoulder with a soft pop. Scout (warm, quick, a little playful) says: {Not yet. There's something you don't know.}
+12-13s: Reverse angle matching Image 5. Time unfreezes; she turns her head to the orb, which glows brighter with a soft chime. The owner (surprised, soft) says: {Hm?}
+13-14s: Hold on Image 5: her lips closed, eyes on the orb, Image 4 still open on the laptop, only quiet room sound. End exactly on Image 5.
+
+Vertical 9:16, live action, bright natural daylight from the window, warm sand, coral and sea-blue colours; she is always surrounded by her swimwear. Exactly two voices: hers (Audio 1) and Scout's (Video 1). Generate dialogue strictly as written; do not add or remove lines. Every line finishes inside its own shot, with no pause longer than half a second inside a line. No background music. No subtitles.

@@ -1,0 +1,61 @@
+【Generation Goal】
+Generate a photoreal, full-colour story ad. A bikini-store owner gets a refund and is about to post a discount when Scout, a floating lime orb, freezes time and shows her a shopper who is just waiting for that discount.
+
+【Reference Asset Roles】
+Image 1 is a 12-panel line-art storyboard. Read it left to right, top to bottom, one panel per shot. Use it only for shot order, blocking and what each person holds; do not adopt its line-art style.
+Image 2 is the refund notification on her phone: show it word for word.
+Image 3 is the owner: use her face, hair and clothes.
+Image 4 is her studio, the room for every owner shot.
+Image 5 is the shopper and her bedroom.
+Image 6 is the new-order notification on her phone: show it word for word.
+Video 1 is the final shot: reproduce its picture. Scout's end line below replaces its sound. Scout uses the voice timbre of Video 1.
+Audio 1 is the order sound.
+Audio 2 is the owner's voice timbre only. Audio 3 is the shopper's voice timbre only.
+
+【Subjects】
+The owner (Image 3) appears only in her studio (Image 4), always with her own swimwear in her hands, her face, hair and clothes identical in every shot.
+The shopper (Image 5) appears only in her bedroom, 13-21s.
+Scout is one glowing lime orb with white sound bars, no face or body, first seen at 8s.
+
+【Event Script】
+Construct the story according to the storyboard sequence; the shots add what the panels don't show.
+
+0-2s | Panel 1: Macro on her phone among folded bikinis. The notification from Image 2 drops in with Audio 1.
+
+2-4s | Panel 2: Close-up. A bikini top in one hand, she frowns at the phone in the other.
+The owner's line (annoyed but disappointed): {Oh, for... A refund.}
+
+4-6s | Panel 3: Close-up to the lens, a stack of folded swimsuits in her hands with the phone on top.
+The owner's line (flat, disappointed): {Sales are so low this week.}
+
+6-8s | Panel 4: Over her shoulder at the discount form on her laptop, a folded suit in her hand. Room sound drops away; her lips stay closed.
+The owner (V.O., inner voice): {Maybe it's time for a discount.}
+
+8-11s | Panel 5: Bullet time: everything freezes. A tossed bikini hangs mid-air above her, and the camera arcs around her frozen figure. Scout appears for the first time, popping in by her shoulder with a soft <pop>.
+Scout's line (calm, a little playful): {Not yet. There's something you don't know.}
+
+11-13s | Panel 6: 11-12s, close-up, she turns to the orb, curious, a bikini top dangling from her hand. At 12s the camera rises and flips overhead with a <whoosh>, landing in the shopper's bedroom at 13s.
+
+13-17s | Panel 7: The shopper packs her beach bag, the coral bikini on the bed. The orb hovers beside her.
+Scout's line (curious, friendly): {You left the Sunset bikini in your cart three times. What stopped you?}
+
+17-21s | Panel 8: Close-up in profile. She keeps packing a towel into the bag, without looking up.
+The shopper's line (casual, matter-of-fact): {You run a discount every week. I'm just waiting for it.}
+
+21-23s | Panel 9: Back in the studio, close-up. She holds a bikini top out by its straps, half a laugh.
+The owner's line (dawning, wry): {I'm training them to wait.}
+
+23-24s | Panel 10: Over her shoulder, a folded suit in one hand; one finger deletes the discount and the form breaks apart.
+The owner's line (decided): {Noted.}
+
+24-26s | Panel 11: Later that week, golden light. She seals a mailer at the table as the notification from Image 6 lands on the phone in front of her with Audio 1; she speaks on the sound.
+The owner's line (relieved, smiling): {Glad I asked.}
+
+26-30s | Panel 12: The orb becomes the "o" of the Scout wordmark, as in Video 1.
+Scout's line (warm): {Scout interviews your shoppers for you. Get free early access.}
+
+【Camera and Pace】
+Hard cuts between shots, except the bullet-time arc at 8s and the overhead flip at 12s. A new visual every 2-3 seconds, fast, smooth, stabilised camera. Close framing: talking shots are close-ups; her hands and the swimwear fill the frame. Each line finishes inside its shot.
+
+【Look and Sound】
+Bright daylight, sand and sea-blue colours. (Light upbeat music, lower under speech.) All dialogue in English, strictly as written; whoever is not speaking keeps their mouth closed. No subtitles.

@@ -1,0 +1,63 @@
+【Generation Goal】
+Generate a photoreal, full-colour story ad. A bikini-store owner gets a refund and is about to post a discount when Scout, a floating lime orb, freezes time and shows her a shopper who is just waiting for that discount. Please note that this is not video editing.
+
+【Reference Asset Roles】
+Image 1 is a 12-panel line-art storyboard. Read it left to right, top to bottom, one panel per shot below. Use it only for shot order, blocking and what each person holds; do not adopt its line-art style or its placeholder figures.
+Image 2 is the refund notification on her phone: show it word for word.
+Image 3 is the owner: use only her face, hair and clothes.
+Image 4 is her studio: use only its space, props and daylight; it is the room for every owner shot.
+The shopper maps to Image 5; use only her face, hair and clothes.
+Her bedroom references Image 5; use only its space, props and light; do not add a second shopper.
+Image 6 is the new-order notification on her phone: show it word for word.
+Video 1 is the final shot: reproduce its picture and its own audio as they are; that audio already says Scout's end line.
+Audio 1 is the order sound effect.
+Audio 2 is the owner's voice timbre only; do not use its words.
+Audio 3 is the shopper's voice timbre only; do not use its words.
+
+【Subjects】
+The owner (Image 3) appears only in her studio (Image 4), always with her own swimwear in her hands, the same face, hair and clothes in every shot.
+The shopper (Image 5) appears only in her bedroom, 13-21s.
+Scout is one glowing lime orb with white sound bars, first seen at 8s. Its voice is calm and warm and matches the end line in Video 1.
+
+【Event Script】
+Follow the storyboard; each shot adds only what the panel can't show.
+
+0-2s | Panel 1: The notification from Image 2 drops in with <the order sound from Audio 1>.
+
+2-4s | Panel 2:
+The owner, in English (annoyed but disappointed): {Oh, for... A refund.}
+
+4-6s | Panel 3:
+The owner, in English (flat, disappointed): {Sales are so low this week.}
+
+6-8s | Panel 4: Room sound drops away; her lips stay closed.
+The owner, in English (V.O., inner voice): {Maybe it's time for a discount.}
+
+8-11s | Panel 5: Bullet time: everything freezes and the camera arcs around her. Scout pops in by her shoulder with a soft <pop>. Her mouth stays closed.
+Scout, in English (calm, a little playful): {Not yet. There's something you don't know.}
+
+11-13s | Panel 6: She turns to the orb, curious. At 12s the camera rises and flips overhead with a <whoosh>, landing in the shopper's bedroom at 13s.
+
+13-17s | Panel 7: The shopper keeps packing, her mouth closed.
+Scout, in English (curious, friendly): {You left the Sunset bikini in your cart three times. What stopped you?}
+
+17-21s | Panel 8:
+The shopper, in English (casual, matter-of-fact): {You run a discount every week. I'm just waiting for it.}
+
+21-23s | Panel 9: Back in the studio.
+The owner, in English (dawning, wry): {I'm training them to wait.}
+
+23-24s | Panel 10: One finger deletes the discount; the form breaks apart.
+The owner, in English (decided): {Noted.}
+
+24-26s | Panel 11: Later that week, golden light. The notification from Image 6 lands with <the order sound from Audio 1>.
+The owner, in English (relieved, smiling): {Glad I asked.}
+
+26-30s | Panel 12: Video 1 as it is: the orb becomes the "o" of the Scout wordmark, and Video 1's own audio carries Scout's line.
+Scout, in English (warm): {Scout interviews your shoppers for you. Get free early access.}
+
+【Camera and Pace】
+Hard cuts between shots, except the bullet-time arc at 8s and the overhead flip at 12s. A new visual every 2-3 seconds, fast, smooth, stabilised camera. Talking shots are close-ups; her hands and the swimwear fill the frame. Each line finishes inside its shot.
+
+【Look and Sound】
+Bright daylight, sand and sea-blue colours. (Light upbeat music, lower under speech.) Dialogue strictly as written; whoever is not speaking keeps their mouth closed. No subtitles appear on screen.

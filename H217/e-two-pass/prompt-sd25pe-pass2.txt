@@ -1,0 +1,27 @@
+【Reference Asset Roles】
+Video 1 is the source video to extend forward. It is the first part of this film: keep its owner, studio, daylight, colours, room sound and Scout's voice.
+Video 2 is used only for the final shot: the lime orb becoming the "o" of the Scout wordmark, and Scout's voice. Do not show any of its visuals before 12s.
+Image 1 is used for the shopper's face, wavy shoulder-length hair, striped T-shirt and white earbuds, and for her bedroom at home. She is a different woman from the owner.
+Image 2 is used for the Shopify discount page on the owner's laptop, the same page as in Video 1: show it exactly.
+Image 3 is used for the owner's phone lock screen with the new order: show it exactly, word for word.
+Audio 1 is used for the owner's voice: take only its timbre, accent, pace and emotion.
+Audio 2 is used for the shopper's voice: take only its timbre, accent, pace and emotion.
+Audio 3 is used for the order sound: use it exactly.
+Scout's voice comes from Video 1 and Video 2.
+
+【Extension】
+Extend Video 1 forward. The first frame of the extended segment directly continues from the final frame of Video 1: keep the owner seated at her laptop with the discount page open, her head turned toward Scout, the lime orb floating beside her, her lips closed, the bikini rails and the window behind her, the camera position, the bright daylight and the quiet room sound. The other reference assets must not replace this boundary frame.
+
+Then Scout, the lime orb, takes us into a call with one of her shoppers, the owner learns why her sales stalled, discards the discount, and a full-price order lands.
+
+【Event Script】
+0-1s: Continue from the final frame of Video 1 in one unbroken move: the camera rises above the owner and flips overhead, and on the other side of the flip reveals the shopper's bedroom from Image 1. Off-screen, in English, warm, Scout says: {Listen.}
+1-4s: Close-up, over the shopper's shoulder: her phone shows a shopping cart with a coral bikini named "Sunset"; the lime orb hovers beside the phone. In English, curious, friendly, Scout says: {You left the Sunset bikini three times. What stopped you?} The shopper listens with her lips closed.
+4-7s: Medium close-up, eye level, slow push in. The shopper, earbuds in, laughs over the beach bag she is packing on her bed. In English, casual, laughing a little, the shopper says: {You run a discount every week. I'm just waiting for it.}
+7-9s: Hard cut back to the studio. Close-up, front angle, slow push in. The owner holds a coral bikini; mixed feelings, a half laugh, not angry. In English, realising, quiet, the owner says: {I'm training them to wait.}
+9-10s: Extreme close-up, side angle: her finger presses Discard on the laptop showing Image 2. In English, dry, decided, the owner says: {Noted.}
+10-12s: Extreme close-up, overhead, locked-off: her phone on the table lights up with Image 3, landing with <the order sound of Audio 3>, then pull back to her smiling as she folds a bikini into a kraft mailer, the lime orb hovering by her shoulder. On the bell, in English, relieved, smiling, the owner says: {Glad I asked.}
+12-16s: The orb drifts from her shoulder to the centre of the frame and becomes the "o" of the Scout wordmark, exactly as in Video 2. In English, Scout says: {Scout interviews your shoppers for you. Get free early access.}
+
+【Maintain Consistency】
+Same bright daylight, warm sand, coral and sea-blue colours and close handheld-steady framing as Video 1; the owner is always in her studio, surrounded by her swimwear. The owner, the shopper and Scout each remain one continuous instance, never duplicated, split or swapped; there is only one lime orb. Exactly three voices: the owner (Audio 1), the shopper (Audio 2) and Scout (Video 1 and Video 2). Generate dialogue strictly as written; do not add or remove lines. Every line finishes inside its own shot, with no pause longer than half a second inside a line. No background music. No subtitles on screen.

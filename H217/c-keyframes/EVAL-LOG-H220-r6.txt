@@ -1,0 +1,1 @@
+Loop 1: found bare Image/Video/Audio references and non-verbatim first-frame line in the compiled sd25-pe prompt, fixed: every asset now in @ syntax (@Image1-@Image12, @Video1, @Audio1-@Audio4), standalone line is exactly 'Use @Image1 as the first frame.', page block identical to prompt file, 11 lines and 0-30s ranges unchanged (fresh-context check PASS).

@@ -1,0 +1,46 @@
+Image 1 is the storyboard: 12 line-art panels, left to right, top to bottom, one per shot below. Use it for plot and blocking only; the film is photoreal, full colour.
+Image 2 is the refund notification on her phone: show it word for word.
+Image 3 is the owner; use her face, hair and clothes. She uses the voice timbre of Audio 2.
+Image 4 is her studio, the room for every owner shot.
+Image 5 is the shopper and her bedroom. She uses the voice timbre of Audio 3.
+Image 6 is the new-order notification on her phone: show it word for word.
+Video 1 is the final shot: reproduce its picture; Scout's end line below replaces its sound. Scout uses the voice timbre of Video 1.
+Audio 1 is the order sound.
+
+A bikini-store owner gets a refund and is about to post a discount when Scout, a floating lime orb, freezes time and shows her a shopper who is just waiting for that discount.
+
+Construct the story according to the storyboard sequence; the shots add what the panels don't show.
+
+0-2s: [Panel 1] The notification from Image 2 drops in with Audio 1.
+
+2-4s: [Panel 2] The owner's line (annoyed but disappointed): {Oh, for... A refund.}
+
+4-6s: [Panel 3] To the lens. The owner's line (flat, disappointed): {Sales are so low this week.}
+
+6-8s: [Panel 4] Room sound drops away; her lips stay closed.
+The owner (V.O., inner voice): {Maybe it's time for a discount.}
+
+8-11s: [Panel 5] Bullet time: everything freezes, a tossed bikini hangs mid-air, the camera arcs around her. Scout appears for the first time: a glowing lime orb with white sound bars, popping in by her shoulder.
+Scout's line (calm, a little playful): {Not yet. There's something you don't know.}
+
+11-13s: [Panel 6] 11-12s she turns to the orb, curious; at 12s the camera rises and flips overhead, landing in the shopper's bedroom at 13s.
+
+13-17s: [Panel 7] The orb hovers beside the shopper.
+Scout's line (curious, friendly): {You left the Sunset bikini in your cart three times. What stopped you?}
+
+17-21s: [Panel 8] She keeps packing, without looking up.
+The shopper's line (casual, matter-of-fact): {You run a discount every week. I'm just waiting for it.}
+
+21-23s: [Panel 9] Back in the studio, half a laugh.
+The owner's line (dawning, wry): {I'm training them to wait.}
+
+23-24s: [Panel 10] She deletes the discount.
+The owner's line (decided): {Noted.}
+
+24-26s: [Panel 11] Later that week, golden light. The notification from Image 6 lands with Audio 1; she speaks on the sound.
+The owner's line (relieved, smiling): {Glad I asked.}
+
+26-30s: [Panel 12] The orb becomes the "o" of the Scout wordmark, as in Video 1.
+Scout's line (warm): {Scout interviews your shoppers for you. Get free early access.}
+
+Hard cuts between shots, except the bullet-time arc at 8s and the overhead flip at 12s. A new visual every 2-3 seconds, fast, smooth, stabilised camera. Bright daylight, sand and sea-blue colours. Each line finishes inside its shot. Light upbeat music, lower under speech. Dialogue strictly as written. No subtitles.

@@ -1,0 +1,45 @@
+【Generation Goal】
+Generate a realistic story ad in two homes for Ember & Fig, a small candle brand. At night a shopper drops the Fig & Cedar candle she was about to buy because the page doesn't say if it is safe for her cat; the owner reads the slow sales as nobody wanting it and decides to drop it, until Scout, a glowing lime orb, stops her. Please note that this is not video editing.
+
+【Reference Asset Roles】
+The shopper maps to @Image1; use only her face, short dark-brown bob with bangs and cream knit cardigan.
+Her night living room references @Image1; use only the sofa and the warm floor lamp.
+The grey tabby cat references @Image1.
+Her own small single-wick candle, burning beside her laptop, references @Image1.
+@Image2 is used only for what the shopper's laptop screen shows: the Ember & Fig product page for Fig & Cedar, $38.00, "Add to cart". Copy its layout and words exactly; do not use it as a scene.
+@Image3 is used for the Fig & Cedar jar: a wide amber three-wick jar with a kraft label reading "Fig & Cedar". It is the jar on the owner's desk; do not use the linen background.
+@Image4 is used only for the owner's face, auburn side braid and rust knit sweater; do not use the background of this image.
+@Image5 is used only for the owner's candle studio: dark metal shelves of lit amber jars, red brick wall, empty light wooden desk, warm light.
+@Image6 is used only for what the owner's laptop screen shows: her Products page, the Fig & Cedar row outlined in red, 3 units. Copy its layout; do not use it as a scene.
+@Image7 is used only for Scout: the lime disc with five dark sound bars, as a glowing orb; do not use the wordmark letters before Shot 12.
+@Video1 is used only for the camera move of Shot 3; do not use its people, places or colours.
+@Video2 is used only for the camera move of Shot 6; do not use its people, places or colours.
+@Video3 is used only for the owner's pace and acting in Shots 7-8: quick cuts between her talking face and her hand on the jar.
+@Video4 is used only for the camera path of Shot 10 and its bright-to-dusk light change; do not use its people or places.
+@Video5 is used only for the end screen of Shot 12: reproduce it exactly, picture, words and audio.
+@Audio1 is used only for the shopper's voice timbre and calm mood; do not use its words.
+@Audio2 is used only for the owner's voice timbre and warm, dry mood; do not use its words.
+@Audio3 is used only for Scout's voice timbre in Shots 9-11; do not use its words.
+
+【Subjects and Relationships】
+Exactly two women, never in the same shot: the shopper, from @Image1, only in her living room at night; the owner, from @Image4, only in the studio from @Image5. The shopper sees the product only on her screen, exactly as @Image2 shows it. The one physical Fig & Cedar jar, from @Image3, is on the owner's desk. The candle burning beside the shopper is her own small single-wick candle. The cat stays in the background of the shopper's home.
+
+【Event Script】
+Shot 1, 0-2 s: macro at night by candlelight. Her fingertip clicks the laptop trackpad on "Add to cart" on @Image2; a small "Added to cart" notification slides in at the top of the page <ka-ching>. The shopper's inner voice, in English, pleased, her lips closed: {Mm. Fig and Cedar. Perfect.}
+Shot 2, 2-4 s: medium on her on the sofa, about to check out. First the grey tabby walks along the back of the sofa behind her; then she glances at it. The shopper's inner voice, in English, catching herself, her lips closed: {Wait.}
+Shot 3, 4-7 s: following @Video1, into her face and eye as she stares at the screen. The shopper's inner voice, in English, unsure, her lips closed: {Is this one safe for my cat?}
+Shot 4, 7-9 s: close on the laptop: she scrolls the product page; nothing about pets. The shopper's inner voice, in English, deflating, her lips closed: {It doesn't say anywhere.}
+Shot 5, 9-11 s: her hand leaves the trackpad and closes the laptop <soft laptop click>; the cat settles on the sofa behind her. The shopper's inner voice, in English, with a small sigh, her lips closed: {Guess not.} At the end, the laptop is closed and she has not bought.
+Shot 6, 11-13 s: following @Video2, from her dark room <whoosh> into the owner's bright studio.
+Shot 7, 13-17 s: close on the owner at her desk, one hand on the Fig & Cedar jar; her laptop shows @Image6. After she reads the red row, she frowns. The owner, in English, puzzled, dry: {Huh. Three sold? I thought Fig and Cedar would sell more.}
+Shot 8, 17-20 s: on her hands lifting the jar off the desk toward a cardboard box on the floor marked "CLEARANCE". The owner, in English, resigned, with a small shrug: {Guess nobody wants it. I'm discontinuing it.} At the end, the jar is in her hand above the clearance box.
+Shot 9, 20-22 s: the lime orb pops out of her laptop screen and hovers at her eye level; then she freezes, the jar still in her hand above the clearance box, her mouth closed. Scout, in English, calm, friendly: {Don't guess.}
+Shot 10, 22-24 s: following @Video4, the orb flies over the city and dives toward the shopper's lit window. At the end, the orb reaches her window. Scout, in English, warm: {Ask them.}
+Shot 11, 24-26 s: back on the owner at her desk: her laptop screen shows one new message from the shopper in large type, "Is it safe for my cat?". After she reads it, she lowers the jar back onto her desk and smiles, her mouth closed. Scout, in English, warm, off screen: {They'll tell you why.} At the end, the jar stands on her desk.
+Shot 12, 26-30 s: the orb becomes the "o" of the Scout wordmark, exactly like @Video5. Scout, in English, calm, from the talking "o": {Scout interviews your shoppers for you. Get free early access.} At the end, the end screen of @Video5 holds.
+
+【Sound and Text】
+Shopper's home: quiet night room tone <a candle's faint crackle>. Owner's studio: brighter room tone. (A soft, warm music bed under everything, lifting at the flip and at the end.) The only ka-ching is the one on the "Added to cart" notification in Shot 1; no ka-ching, chime or sound effect on the orb at any time. Each line finishes inside its own shot. No subtitles. No on-screen text except what @Image2, @Image6 and @Video5 show, the "Added to cart" notification in Shot 1, the word "CLEARANCE" on the box in Shot 8 and the shopper's one-line message in Shot 11.
+
+【Maintain Consistency】
+Hard cuts, a new visual every 2-3 seconds, except Shots 3, 6 and 10, which are single continuous moves. Keep each woman's face, hair and clothes identical in every shot, the cat a grey tabby, the one Fig & Cedar jar identical to @Image3 and on the owner's desk, and the two homes separate.

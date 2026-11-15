@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guess Not: Text Refs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f2ec; --surface:#fffdf9; --ink:#1d1a16; --muted:#6b6258; --line:#e4dcd0;
+  --accent:#b4551f; --lime:#d1fb18; --lime-ink:#1f2a00;
+  --chip-img:#f3e2d3; --chip-vid:#dfe7f5; --chip-aud:#e5f1dc;
+  --sfx:#7a3e9d; --dlg:#1f6f5c; --mus:#9a6a00;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#121110; --surface:#1b1917; --ink:#f1ece4; --muted:#a59a8d; --line:#2f2b27;
+    --accent:#e48a52; --chip-img:#3b2a1e; --chip-vid:#1f2a3b; --chip-aud:#22311d;
+    --sfx:#c79be3; --dlg:#7fd3bd; --mus:#e2b955;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#121110; --surface:#1b1917; --ink:#f1ece4; --muted:#a59a8d; --line:#2f2b27;
+  --accent:#e48a52; --chip-img:#3b2a1e; --chip-vid:#1f2a3b; --chip-aud:#22311d;
+  --sfx:#c79be3; --dlg:#7fd3bd; --mus:#e2b955;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink)}
+body{font:16px/1.55 Inter,system-ui,sans-serif}
+.wrap{max-width:1080px;margin:0 auto;padding:32px 16px 80px}
+h1,h2,h3{font-family:"Space Grotesk",Inter,sans-serif;letter-spacing:-.01em;margin:0}
+h1{font-size:clamp(28px,5vw,44px);line-height:1.1}
+h2{font-size:22px;margin:48px 0 14px;padding-top:12px;border-top:1px solid var(--line)}
+.kicker{font-size:13px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+.pitch{font-size:19px;margin:14px 0 10px;max-width:760px}
+.why{color:var(--muted);max-width:820px}
+.why li{margin:4px 0}
+.inputline{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.pill{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:14px}
+.pill b{font-weight:600}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;scroll-margin-top:16px}
+.card:target{outline:3px solid var(--accent)}
+.card .media{background:#0e0d0c;display:flex;align-items:center;justify-content:center;aspect-ratio:4/3}
+.card .media img,.card .media video{max-width:100%;max-height:100%;display:block}
+.card .media.audio{aspect-ratio:auto;padding:28px 12px;background:var(--chip-aud)}
+.card audio{width:100%}
+.card .body{padding:12px 14px;font-size:14px}
+.tag{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:14px}
+.card .gives{margin:6px 0 4px}
+.card .not{color:var(--muted)}
+.card .id{font-size:11px;color:var(--muted);word-break:break-all;margin-top:6px}
+.new{display:inline-block;background:var(--lime);color:var(--lime-ink);font-size:11px;font-weight:600;border-radius:6px;padding:1px 6px;margin-left:6px}
+.ppart{background:var(--surface);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden}
+.phead{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline;padding:10px 14px;border-bottom:1px solid var(--line)}
+.pnum{font-family:"Space Grotesk",sans-serif;font-weight:700}
+.pwhy{font-size:13px;color:var(--muted)}
+.pbody{padding:6px 14px 10px;font-size:15px}
+.pbody p{margin:8px 0}
+.chip{display:inline-block;border-radius:6px;padding:0 6px;font-size:13px;font-weight:600;text-decoration:none;color:var(--ink)}
+.chip-image{background:var(--chip-img)} .chip-video{background:var(--chip-vid)} .chip-audio{background:var(--chip-aud)}
+.sfx{color:var(--sfx)} .dlg{color:var(--dlg);font-weight:500} .mus{color:var(--mus)}
+.copyrow{display:flex;gap:10px;align-items:center;margin:8px 0 14px;flex-wrap:wrap}
+button{font:600 14px Inter,sans-serif;background:var(--ink);color:var(--bg);border:0;border-radius:10px;padding:9px 16px;cursor:pointer}
+.muted{color:var(--muted);font-size:14px}
+textarea.hidden{position:absolute;left:-9999px;width:1px;height:1px}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:900px;font-size:14px}
+th,td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+th{font-family:"Space Grotesk",sans-serif;font-size:13px;color:var(--muted);font-weight:500}
+td.t{white-space:nowrap;font-weight:600}
+td img{width:84px;border-radius:6px;display:block}
+.big{display:grid;grid-template-columns:1fr;gap:14px}
+.big img{width:100%;border-radius:14px;border:1px solid var(--line);display:block}
+.duo{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.duo figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.duo figure img,.duo figure video{width:100%;display:block}
+figcaption{padding:10px 14px;font-size:14px;color:var(--muted)}
+.script{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 18px}
+.script p{margin:6px 0}
+.who{font-weight:600}
+.risk li{margin:6px 0}
+.pre{white-space:pre-wrap;word-break:break-word;font:13px/1.5 ui-monospace,Menlo,monospace;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px;max-height:520px;overflow:auto;margin:0}
+.scores{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 14px}
+.fix{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 14px;margin-bottom:10px;font-size:14px}
+.fix p{margin:4px 0}
+#eval{border-top:1px solid var(--line);margin-top:48px;padding-top:12px}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+<header>
+  <div class="kicker">H224 (from H216 · Team A) · Technique: text + reference images (no storyboard)</div>
+  <h1>Guess Not</h1>
+  <p class="pitch">At night she adds Fig &amp; Cedar to her cart (ka-ching), but the page never says if it's safe for her cat, so she closes the tab. Next morning, in The Dip's sunlit studio, the owner reads that silence as "nobody wants it" and is about to kill her favourite candle. Then Scout's orb rises out of the flame: "Don't guess. Ask your shoppers."</p>
+  <ul class="why">
+    <li><b>Why this technique fits:</b> this is the guide's <i>basic</i> recipe and nothing else: asset referencing, a one-sentence summary, a timestamped plot, additional notes (Prompt guide, §Basic prompting techniques). The story is simple cause and effect (one shopper, one owner, one product), so it doesn't need a storyboard. The guide warns that storyboards "constrain the model's creative output" (§Multi-panel storyboards), and Emile asked on Nov 13 to let Seedance choose where it can.</li>
+    <li><b>The cast lives in the images, the camera lives in the words.</b> Each shot gets a <code>[shot size, angle, movement]</code> bracket, as in the guide's line-art example. Specific moves get a plain explanation next to the name (§Camera language: "convert them into [term + descriptive explanation]"). The flip gets its trigger time and method (§Camera language, transitions).</li>
+    <li><b>Upload order follows the order people first appear on screen:</b> shopper, her screen, owner, studio, the owner's screen, jar, Scout. The guide's fix for characters swapping is to "upload reference assets in the order in which the subjects first appear" (FAQ, §Incorrect character-to-reference mapping).</li>
+  </ul>
+</header>
+
+<h2>Input</h2>
+<div class="inputline">
+  <span class="pill"><b>Text</b> · sd25-pe compile, 864 words (ours: 776; official 30 s examples run 380–740)</span>
+  <span class="pill"><b>7 images</b></span>
+  <span class="pill"><b>1 video</b> · 4.5 s</span>
+  <span class="pill"><b>2 audio</b> · 9.3 s + 9.25 s = 18.6 s</span>
+  <span class="pill"><b>Mode</b> · Higgsfield seedance_2_5, omni_reference</span>
+  <span class="pill"><b>Settings</b> · draft, 480p, 9:16, 30 s, audio on (set as parameters, kept out of the prompt: sd25-pe principle 7)</span>
+  <span class="pill"><b>Credits</b> · 90 for one draft take (quoted with get_cost: true, nothing submitted)</span>
+</div>
+<p class="muted">One pass is enough for this technique: 90 credits. The 720p final reuses the draft's job ID (tutorial, §Draft mode). Spend on this card (H224): 0 credits. Inherited from H216, the card this brief came from: 0.50 credits for 2 GPT Image 2.6 stills (Higgsfield ledger, 17:39–18:04 ET on Nov 14, before H224 was filed at 18:18 ET). The round-2 orb crop was cut locally from the logo file and uploaded for free. No video was generated (job.json: submitted false).</p>
+
+<h2>Reference assets (in upload order)</h2>
+<div class="cards">
+  <div class="card" id="image1">
+    <div class="media"><img src="a/image1-shopper.jpg" alt="Shopper on her sofa at night, hand on a white mouse, lit candle, grey tabby cat behind her"></div>
+    <div class="body"><div class="tag">@Image1 The shopper <span class="new">new edit</span></div>
+      <div class="gives"><b>Provides:</b> her face, bob, cream cardigan, the dark living room, the lamp, the lit candle, the mouse, the cat.</div>
+      <div class="not"><b>Not:</b> the laptop screen (her screen comes from @Image2). She and her room are one scene in this one still, so the prompt maps them in a single line as one scene; there is no separate room plate, and making one would be a paid still.</div>
+      <div class="id">GPT Image 2.6 edit of the shared cast still (Soul 2 c21f0a0f). Job 7afee04b-f61c-4a07-a8a1-3e51aa6f651b. Why: lips closed (her lines are inner voice) and a hand on a mouse, as Emile pictured it.</div></div>
+  </div>
+  <div class="card" id="image2">
+    <div class="media"><img src="a/image2-product-page.jpg" alt="Ember and Fig product page for Fig and Cedar, 38 dollars"></div>
+    <div class="body"><div class="tag">@Image2 Her screen: the product page</div>
+      <div class="gives"><b>Provides:</b> the exact text and layout on her laptop: Fig &amp; Cedar, $38.00, Add to cart, with no word about pets anywhere.</div>
+      <div class="not"><b>Not:</b> anything outside her screen.</div>
+      <div class="id">media 527991c0-fa61-4beb-9dd4-e07986925190 (shared cast)</div></div>
+  </div>
+  <div class="card" id="image3">
+    <div class="media"><img src="a/image3-owner-actress14.jpg" alt="Actress 14, auburn side braid, rust sweater"></div>
+    <div class="body"><div class="tag">@Image3 The owner, actress 14</div>
+      <div class="gives"><b>Provides:</b> the face, auburn side braid and rust knit sweater from The Dip.</div>
+      <div class="not"><b>Not:</b> anything around her. The prompt now says her surroundings come only from @Image4, which removes the old "no brick wall" line that clashed with @Image4's brick studio.</div>
+      <div class="id">media 1963a66d-94e4-4fdc-95e5-b34fde48ea4f (same file as The Dip)</div></div>
+  </div>
+  <div class="card" id="image4">
+    <div class="media"><img src="a/image4-owner-studio.jpg" alt="Empty sunlit candle studio, brick wall, shelves of amber jars, laptop, lit three-wick jar"></div>
+    <div class="body"><div class="tag">@Image4 Her studio, clean plate <span class="new">new</span></div>
+      <div class="gives"><b>Provides:</b> The Dip's room: brick wall, shelves of amber jars, wooden packing table, kraft mailers, morning sun from the left.</div>
+      <div class="not"><b>Not:</b> the dark laptop screen (her screen is @Image5), or the lit three-wick jar on its table: the prompt says "the jar comes only from @Image6", so two jars can't appear.</div>
+      <div class="id">GPT Image 2.6 job 824d398d-1598-4d04-b520-662e07aedf83, made from a frame of The Dip at 3 s plus the jar. No person and no orb in it (H217 lesson: an orb baked into the room shows up before Scout's entrance).</div></div>
+  </div>
+  <div class="card" id="image5">
+    <div class="media"><img src="a/image5-owner-sales.jpg" alt="Shopify admin products units sold, Fig and Cedar 3 units minus 84 percent outlined in red"></div>
+    <div class="body"><div class="tag">@Image5 Her screen: units sold</div>
+      <div class="gives"><b>Provides:</b> the exact Shopify admin: Fig &amp; Cedar, 3 units, −84%, outlined in red.</div>
+      <div class="not"><b>Not:</b> anything outside her screen.</div>
+      <div class="id">media 8c33aad5-bc87-4b86-965e-1a967b2686d3 (shared cast)</div></div>
+  </div>
+  <div class="card" id="image6">
+    <div class="media"><img src="a/image6-fig-cedar-jar.jpg" alt="Wide amber three-wick candle jar with blank kraft label"></div>
+    <div class="body"><div class="tag">@Image6 Fig &amp; Cedar jar</div>
+      <div class="gives" style="color:var(--muted)">Deliberate change from The Dip: a blank kraft label instead of a printed "Fig &amp; Cedar" one, so the model has no label text to misspell. The name is carried by the two screens and the dialogue.</div>
+      <div class="gives"><b>Provides:</b> the product she holds: shape, amber glass, blank kraft label, three wicks.</div>
+      <div class="not"><b>Not:</b> the linen backdrop or the fig leaves.</div>
+      <div class="id">media bdbf8b6a-e4e3-4455-ba26-22f84aadd453 (shared cast)</div></div>
+  </div>
+  <div class="card" id="image7">
+    <div class="media"><img src="a/image7-scout-orb.png" alt="Scout orb only: lime disc, five dark sound bars, thin ring, no letters"></div>
+    <div class="body"><div class="tag">@Image7 Scout's orb <span class="new">orb-only crop</span></div>
+      <div class="gives"><b>Provides:</b> the orb that rises out of the flames: a lime disc, five dark sound bars, a thin ring.</div>
+      <div class="not"><b>Not:</b> its dark background. The prompt names what to take, "only its round lime disc, five dark sound bars and thin ring", with no visual negative. This file has no letters: it is cut from the wordmark logo, so no "Sc" or "ut" can leak in over the flames.</div>
+      <div class="id">media 5aaa2bca-36bc-4152-9d7a-007f9913766b · round 2. Replaces af514c1f (the full "Scout" wordmark, now in extras/ and not uploaded).</div></div>
+  </div>
+  <div class="card" id="video1">
+    <div class="media"><video src="a/video1-end-screen.mp4" controls playsinline preload="metadata"></video></div>
+    <div class="body"><div class="tag">@Video1 H158 talking "o" end screen</div>
+      <div class="gives"><b>Provides:</b> Scout, one entity: its calm female voice for both Scout lines (22–25 s and 25–30 s) and its wordmark and talking "o" in the 25–30 s shot. Voice and look are one subject here, so the prompt maps Scout to @Video1 in a single line and says so ("which alone defines Scout as one entity, voice and look together"), as sd25-pe asks when one asset defines one entity.</div>
+      <div class="not"><b>Not:</b> its wordmark or look before 25 s. It is a subject and voice reference, not a camera move.</div>
+      <div class="id">media cae62718-ec02-41f6-8e36-1de097e8427d · 4.5 s</div></div>
+  </div>
+  <div class="card" id="audio1">
+    <div class="media audio"><audio src="a/audio1-shopper-voice-9s.mp3" controls preload="metadata"></audio></div>
+    <div class="body"><div class="tag">@Audio1 Shopper voice (Serene) <span class="new">trimmed</span></div>
+      <div class="gives"><b>Provides:</b> the timbre, pace and soft tone of her inner voice.</div>
+      <div class="not"><b>Not:</b> its words. The prompt's lines win (sd25-pe: "the audio provides only voice quality, accent, speaking rate, and emotion").</div>
+      <div class="id">media 81f0f01a-af88-4136-a48f-a11e1d3a554a · 9.3 s, cut at a natural pause from the 11.4 s H215 file. The guide recommends 5–10 s per subject audio; longer clips "may reduce stability".</div></div>
+  </div>
+  <div class="card" id="audio2">
+    <div class="media audio"><audio src="a/audio2-owner-voice-9s.mp3" controls preload="metadata"></audio></div>
+    <div class="body"><div class="tag">@Audio2 Owner voice (Alexandra) <span class="new">trimmed</span></div>
+      <div class="gives"><b>Provides:</b> The Dip's voice for actress 14: timbre, warmth, pace.</div>
+      <div class="not"><b>Not:</b> its words (they're an unrelated read).</div>
+      <div class="id">media df6c7e5e-3bb4-4975-86c6-6ee99b367f92 · 9.25 s, cut at a pause from the 16.8 s Alexandra file (same 5–10 s guidance).</div></div>
+  </div>
+</div>
+<p class="muted">Not uploaded as a file: the ka-ching. Following Emile's Nov 14 rule, it is written as a &lt;ka-ching&gt; sound in the 0–3 s shot only, on the first notification (her "Added to cart" banner), and never on the orb. There is no second ka-ching, because no full-price order happens in this story. Also not uploaded: The Dip's rhythm clip and the camera-preset videos (this technique carries the camera in words only). Because none of them are uploaded, the prompt has no 【Unused Assets】 line (sd25-pe principle 3 applies only to assets that are actually supplied).</p>
+
+<h2>The prompt to send: the sd25-pe compile</h2>
+<div class="copyrow"><button id="copy" type="button">Copy prompt</button><span class="muted" id="copied">864 words · saved as prompt-sd25pe-final.txt next to this page (our version, prompt.txt, is in the comparison below)</span></div>
+<textarea class="hidden" id="raw" readonly>【Generation Goal】
+Generate a live-action story film, warm and in close framing. At night a woman at home adds a candle to her cart, wonders if it is safe for her cat, finds no answer and leaves; next morning its maker reads the low sales as nobody wanting it, until Scout&#x27;s orb tells her not to guess. Please note that this is not video editing.
+
+【Reference Asset Roles】
+The shopper in her night living room maps to @Image1, which jointly defines her and her room as one scene: use her face, bob with bangs and cream cardigan, and the room&#x27;s lamp, sofa, small lit candle, mouse and cat; do not use its laptop screen.
+The shopper&#x27;s laptop screen references @Image2: the Ember &amp; Fig product page. Copy its text exactly.
+The owner maps to @Image3; use only her face, auburn side braid and rust knit sweater; do not use her pose or background.
+The owner&#x27;s candle studio references @Image4; use its shelves, brick wall, packing table and sunlight; do not use its dark laptop screen or its candle jar; the jar comes only from @Image6.
+The owner&#x27;s laptop screen references @Image5: the Shopify admin. Copy its text exactly.
+The Fig &amp; Cedar candle references @Image6; do not use the leaves or cloth.
+Scout&#x27;s orb references @Image7; use only its round lime disc, five dark sound bars and thin ring; do not use its dark background.
+Scout maps to @Video1, which alone defines Scout as one entity, voice and look together: use its calm female voice for both Scout lines, and its wordmark, layout and talking &quot;o&quot; only in 25-30s; do not use its words or its dark background before 25s.
+@Audio1 is used only for the shopper&#x27;s voice timbre, pace and soft tone.
+@Audio2 is used only for the owner&#x27;s voice timbre, warmth and pace.
+
+【Event Script】
+0-3s: [Macro close-up, high angle, slow push in] The shopper&#x27;s hand on the white mouse clicks &quot;Add to cart&quot; on the laptop showing @Image2 &lt;click&gt;; a small &quot;Added to cart&quot; notification slides in at the top of the screen &lt;ka-ching&gt;. Her candle flickers beside it. Shopper, in English (V.O., pleased, lips closed): {Okay. Fig and Cedar. This one.}
+3-5s: [Close-up, eye level, static] Her face lit by the screen, lips closed. Behind her the grey tabby cat walks along the back of the sofa; she glances back at it. &lt;a soft cat trill&gt;
+5-8s: [Medium close-up across the laptop lid, slow push in] Her hand stops on the mouse; she scrolls the description, brows tightening, and keeps her lips closed. Shopper, in English (V.O., worried): {Hmm. Is this one safe for my cat?}
+8-10s: [Extreme close-up on her eyes, eye level, static, screen glow sliding across them] Her lips stay closed. Shopper, in English (V.O., quiet, let down): {It doesn&#x27;t say anywhere.}
+10-12s: [Macro close-up, high angle, static on mouse and screen] She clicks &lt;click&gt;; the page closes to a blank tab; the candle flame bends. Shopper, in English (V.O., small shrug): {Guess not.}
+12-14s: [Close-up to overhead, crane up and 180-degree roll, landing eye level] The camera rises above her, rolls overhead in one move &lt;whoosh&gt; and lands right side up in the owner&#x27;s sunlit studio.
+14-17s: [Close-up, eye level, slow push in] The owner at her packing table, one hand turning the lit Fig &amp; Cedar jar, eyes on her laptop showing @Image5. Owner, in English (puzzled, warm): {Huh. Thought Fig and Cedar would sell way more.}
+17-20s: [Close-up, slight low angle, static] She lifts the jar in both hands with a sad half-smile, then glances into the lens. Owner, in English (dry, resigned, to camera): {My favourite, too. Guess I&#x27;m discontinuing it.}
+20-22s: [Macro, eye level, slow pull back] The jar&#x27;s three flames merge into the glowing lime orb, which rises between her and the laptop. (the music bed swells softly)
+22-25s: [Close-up, eye level, static] The orb hovers beside her shoulder; she stops, eyebrows up, mouth naturally closed while listening. Scout, in English (from the orb, calm, friendly): {Don&#x27;t guess. Ask your shoppers.}
+25-30s: [Close-up, eye level, push in on the orb, then locked-off on the end screen] The orb flies into the lens and becomes the &quot;o&quot; of the Scout wordmark, following @Video1. At the end, the end screen holds still. Scout, in English (calm): {Scout interviews your shoppers for you. Get free early access.} (music lifts and resolves)
+
+【Maintain Consistency】
+Hard cuts except the flip at 12s, a new visual every 2-3 seconds, smooth, stabilized camera. Each line finishes inside its shot. Exactly three voices: the shopper only as a close-mic inner voice with her lips always closed; the owner on camera with lip sync; Scout only from the orb and the end screen. The shopper&#x27;s room stays dark and quiet, the cat in the background; the owner&#x27;s studio is bright and sunlit, her look identical. One Fig &amp; Cedar jar in the owner&#x27;s hands, one orb. One ka-ching only, on the cart notification at 0-3s; the orb makes no chime or ka-ching. On-screen text only on the two laptop screens and the end screen. (A soft, warm lo-fi music bed, very low under the voices.) No subtitles appear on screen.
+</textarea>
+<div class="ppart"><div class="phead"><span class="pnum">1 · Asset referencing</span><span class="pwhy">Guide §Basic prompting techniques: “Clearly identify each image, video, or audio asset by its upload order and intended purpose.” Tutorial §Prompt rules: say what each asset provides and what not to take. Accurate assets get a role, not a re-description.</span></div><div class="pbody"><p><a class="chip chip-image" href="#image1">@Image1</a> is the shopper in her night living room, one scene: her face, bob with bangs, cream cardigan, and the room's lamp, sofa, lit candle jar, white mouse and grey tabby cat. Do not use its laptop screen.</p><p><a class="chip chip-image" href="#image2">@Image2</a> is the Ember &amp; Fig product page, shown only on the shopper's laptop screen. Copy its text exactly.</p><p><a class="chip chip-image" href="#image3">@Image3</a> is the owner: use only her face, auburn side braid and rust knit sweater; her surroundings come only from <a class="chip chip-image" href="#image4">@Image4</a>.</p><p><a class="chip chip-image" href="#image4">@Image4</a> is the owner's candle studio. Do not use its dark laptop screen or its candle jar; the jar comes only from <a class="chip chip-image" href="#image6">@Image6</a>.</p><p><a class="chip chip-image" href="#image5">@Image5</a> is the Shopify admin, shown only on the owner's laptop screen. Copy its text exactly.</p><p><a class="chip chip-image" href="#image6">@Image6</a> is the Fig &amp; Cedar candle jar.</p><p><a class="chip chip-image" href="#image7">@Image7</a> is Scout's orb: use only its round lime disc, five dark sound bars and thin ring.</p><p><a class="chip chip-video" href="#video1">@Video1</a> is Scout, one entity, voice and look together: use its calm female voice for both Scout lines (22-25s and 25-30s), and its wordmark and talking "o" only in the 25-30s shot.</p><p><a class="chip chip-audio" href="#audio1">@Audio1</a> is the shopper's voice: use only its timbre, pace and soft tone.</p><p><a class="chip chip-audio" href="#audio2">@Audio2</a> is the owner's voice: use only its timbre, warmth and pace.</p></div></div>
+<div class="ppart"><div class="phead"><span class="pnum">2 · One-sentence summary</span><span class="pwhy">Guide: “Subject + Location + Event + Genre/Style + Camera movement.”</span></div><div class="pbody"><p>At night a woman at home adds a candle to her cart, wonders if it is safe for her cat, finds no answer and leaves; next morning its maker reads the low sales as nobody wanting it, until Scout's orb tells her not to guess. Live-action, warm, close framing.</p></div></div>
+<div class="ppart"><div class="phead"><span class="pnum">3 · Detailed plot description</span><span class="pwhy">Guide: timestamps at 1-second units, no gaps; every shot carries [shot size, angle, movement] (§Camera language); the flip has its trigger point and method.</span></div><div class="pbody"><p>0-3s: [Macro close-up, high angle, slow push in] The shopper's hand on the white mouse clicks "Add to cart" on the laptop showing <a class="chip chip-image" href="#image2">@Image2</a> <span class="sfx">&lt;click&gt;</span>; a small "Added to cart" notification slides in at the top of the screen <span class="sfx">&lt;ka-ching&gt;</span>. The candle flickers beside it. Shopper (V.O., pleased, lips closed): <span class="dlg">{Okay. Fig and Cedar. This one.}</span></p><p>3-5s: [Close-up, eye level, static] Her face lit by the screen, lips closed. Behind her the grey tabby cat walks along the back of the sofa; she glances back at it. <span class="sfx">&lt;a soft cat trill&gt;</span></p><p>5-8s: [Medium close-up across the laptop lid, slow push in] Her hand stops on the mouse; she scrolls the description, brows tightening, and keeps her lips closed. Shopper (V.O., worried): <span class="dlg">{Hmm. Is this one safe for my cat?}</span></p><p>8-10s: [Extreme close-up on her eyes, eye level, static, screen glow sliding across them] She keeps her lips closed. Shopper (V.O., quiet, let down): <span class="dlg">{It doesn't say anywhere.}</span></p><p>10-12s: [Macro close-up, high angle, static on mouse and screen] She clicks <span class="sfx">&lt;click&gt;</span>; the page closes to a blank tab; the candle flame bends. Shopper (V.O., small shrug): <span class="dlg">{Guess not.}</span></p><p>12-14s: [Close-up to overhead, crane up and 180-degree roll, landing eye level] The camera rises above her, rolls overhead in one move <span class="sfx">&lt;whoosh&gt;</span> and lands right side up in the owner's sunlit studio from <a class="chip chip-image" href="#image4">@Image4</a>.</p><p>14-17s: [Close-up, eye level, slow push in] The owner at her packing table, one hand turning the lit Fig &amp; Cedar jar, eyes on her laptop showing <a class="chip chip-image" href="#image5">@Image5</a>. Owner (puzzled, warm): <span class="dlg">{Huh. Thought Fig and Cedar would sell way more.}</span></p><p>17-20s: [Close-up, slight low angle, static] She lifts the jar in both hands with a sad half-smile, then glances into the lens. Owner (dry, resigned, to camera): <span class="dlg">{My favourite, too. Guess I'm discontinuing it.}</span></p><p>20-22s: [Macro, eye level, slow pull back] The jar's three flames merge into the glowing lime orb from <a class="chip chip-image" href="#image7">@Image7</a>, which rises between her and the laptop. <span class="mus">(the music bed swells softly)</span></p><p>22-25s: [Close-up, eye level, static] The orb hovers beside her shoulder; she stops, eyebrows up, lips closed, listening. Scout (from the orb, calm, friendly): <span class="dlg">{Don't guess. Ask your shoppers.}</span></p><p>25-30s: [Close-up, eye level, push in on the orb, then locked-off on the end screen] The orb flies into the lens and becomes the "o" of the Scout wordmark, strictly following <a class="chip chip-video" href="#video1">@Video1</a>. Scout (calm): <span class="dlg">{Scout interviews your shoppers for you. Get free early access.}</span> <span class="mus">(music lifts and resolves)</span></p></div></div>
+<div class="ppart"><div class="phead"><span class="pnum">4 · Additional notes</span><span class="pwhy">Guide: “Add any visual details that should remain consistent throughout.” Negative wording only for subtitles (§Negative control).</span></div><div class="pbody"><p>Hard cuts except the flip at 12s, a new visual every 2-3 seconds, smooth, stabilized camera. Each line finishes inside its shot. Exactly three voices: the shopper (<a class="chip chip-audio" href="#audio1">@Audio1</a>) only as a close-mic inner voice, lips always closed; the owner (<a class="chip chip-audio" href="#audio2">@Audio2</a>) on camera with lip sync; Scout (<a class="chip chip-video" href="#video1">@Video1</a>'s voice) only from the orb and the end screen. The shopper's room stays dark and quiet, the cat in the background; the owner's studio is bright and sunlit, her look identical. One ka-ching only, on the cart notification at 0-3s; the orb makes no chime or ka-ching. On-screen text only on the two laptop screens and the end screen. <span class="mus">(A soft, warm lo-fi music bed, very low under the voices.)</span> No subtitles.</p></div></div>
+
+<h2>What we hear, top to bottom (51 words)</h2>
+<div class="script">
+  <p><span class="who">Shopper (thinking):</span> Okay. Fig and Cedar. This one. … Hmm. Is this one safe for my cat? … It doesn't say anywhere. … Guess not.</p>
+  <p><span class="who">Owner:</span> Huh. Thought Fig and Cedar would sell way more. … My favourite, too. Guess I'm discontinuing it.</p>
+  <p><span class="who">Scout:</span> Don't guess. Ask your shoppers. … Scout interviews your shoppers for you. Get free early access.</p>
+</div>
+<p class="muted">"Guess" ties it together: the shopper's "Guess not", the owner's "Guess I'm discontinuing it", Scout's "Don't guess". No line is over 3 spoken words per second of its shot (H217 pace check). At 51 words this sits just under the 55–70 brief, on purpose: the round-1 judge flagged the 8–10 s line as too long for its shot, so it lost 3 words. "My favourite, too." is an added beat, kept because it gives her a reason to care and sets up her glance to the lens.</p>
+
+<h2>Shot list</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>Time</th><th>Shot size</th><th>Angle</th><th>Movement</th><th>Transition</th><th>Sound</th><th>Line</th><th>Inspiration</th></tr></thead>
+<tbody>
+<tr><td class="t">0–3 s</td><td>Macro close-up</td><td>High angle</td><td>Slow push in</td><td>Opens on the hand (no wide)</td><td>&lt;click&gt;, then &lt;ka-ching&gt; on the "Added to cart" notification (the only ka-ching), low music</td><td>Shopper V.O.: "Okay. Fig and Cedar. This one."</td><td><img src="extras/dip-contact-sheet.jpg" alt="">The Dip's macro opening (phone): same closeness, here on the mouse</td></tr>
+<tr><td class="t">3–5 s</td><td>Close-up</td><td>Eye level</td><td>Static</td><td>Hard cut</td><td>&lt;soft cat trill&gt;</td><td>(none; the cat sets up the worry)</td><td>sd25-pe: "show the trigger clearly before showing the character's reaction"</td></tr>
+<tr><td class="t">5–8 s</td><td>Medium close-up</td><td>Across the laptop lid</td><td>Slow push in</td><td>Hard cut</td><td>Scroll ticks</td><td>"Hmm. Is this one safe for my cat?"</td><td>The Dip 2.8 s push into the screen</td></tr>
+<tr><td class="t">8–10 s</td><td>Extreme close-up (eyes)</td><td>Eye level</td><td>Static, screen glow slides</td><td>Hard cut</td><td>Room tone</td><td>"It doesn't say anywhere." (4 words in 2 s)</td><td><img src="extras/preset-eyes-in.jpg" alt="">Higgsfield "Eyes in" (a5e06af0): the eye framing only, not the dive</td></tr>
+<tr><td class="t">10–12 s</td><td>Macro close-up</td><td>High angle</td><td>Static</td><td>Hard cut</td><td>&lt;click&gt;, the page closes to a blank tab</td><td>"Guess not."</td><td>The Dip's macro language</td></tr>
+<tr><td class="t">12–14 s</td><td>Close-up to overhead</td><td>Rises to top-down, lands eye level</td><td>Crane up and 180-degree roll (the High flip, written out in words)</td><td>The one non-cut transition (at 12 s)</td><td>&lt;whoosh&gt;, music lifts</td><td>(none)</td><td><img src="extras/preset-high-flip.jpg" alt="">Higgsfield "High flip" (93a606f8): "rises above the subject and flips overhead, revealing a new character and location"</td></tr>
+<tr><td class="t">14–17 s</td><td>Close-up</td><td>Eye level</td><td>Slow push in</td><td>Lands from the flip</td><td>Morning studio tone</td><td>Owner: "Huh. Thought Fig and Cedar would sell way more."</td><td>The Dip 23 s punch-in to her beside the jar</td></tr>
+<tr><td class="t">17–20 s</td><td>Close-up</td><td>Slight low angle</td><td>Static</td><td>Hard cut</td><td>Glass on wood</td><td>"My favourite, too. Guess I'm discontinuing it." She glances into the lens on the last line.</td><td>The Dip 19 s: she holds the jar in both hands; The Dip's owner plays to camera</td></tr>
+<tr><td class="t">20–22 s</td><td>Macro on the flames</td><td>Eye level</td><td>Slow pull back</td><td>Hard cut in</td><td>(music bed swells softly); no chime, nothing on the orb</td><td>(none: the flames become the orb)</td><td>The Dip 25.5 s: three flames bloom into the orb</td></tr>
+<tr><td class="t">22–25 s</td><td>Close-up</td><td>Eye level</td><td>Static</td><td>Hard cut</td><td>Room tone, music low</td><td>Scout: "Don't guess. Ask your shoppers." (her lips closed, listening)</td><td>The Dip: her eyebrows-up reaction to Scout</td></tr>
+<tr><td class="t">25–30 s</td><td>Close-up, then end screen</td><td>Eye level</td><td>Push in on the orb, then locked off</td><td>Orb becomes the "o"</td><td>Music resolves</td><td>Scout: "Scout interviews your shoppers for you. Get free early access."</td><td>H158 talking "o" (@Video1)</td></tr>
+</tbody></table></div>
+
+<h2>The special asset: a reference set that carries the whole story</h2>
+<div class="big">
+  <img src="extras/reference-board.jpg" alt="All seven reference images in upload order">
+  <p class="muted">The seven images in upload order (round 2: @Image7 is now the orb alone). Without a storyboard, every story fact has to live in one of these images or in the text. Two of the images were made new for this technique on H216, before this card existed (0.25 credits each, inherited spend, not H224's), and each one fixes something the shared cast couldn't:</p>
+</div>
+<div class="duo">
+  <figure><img src="extras/shopper-before-edit.jpg" alt="Shared cast shopper, mouth open, hand on keyboard"><figcaption>Before (shared cast): mouth open, hand on the keyboard. With only words to steer her, an open mouth can make her lip-sync lines that should be thoughts.</figcaption></figure>
+  <figure><img src="a/image1-shopper.jpg" alt="Edited shopper, lips closed, hand on mouse"><figcaption>@Image1 after: lips closed, a thoughtful look, her hand on a white mouse. Same face, room and cat.</figcaption></figure>
+  <figure><img src="extras/dip-studio-frame-3s.jpg" alt="Frame from The Dip at 3 seconds"><figcaption>The Dip at 3 s: the room we need to return to, but she's already in it, and a person in a scene plate can turn into a second copy of her.</figcaption></figure>
+  <figure><img src="a/image4-owner-studio.jpg" alt="Clean studio plate"><figcaption>@Image4: the same studio with nobody in it, sunlit, the Fig &amp; Cedar jar lit. It keeps the room tied to The Dip without a second owner.</figcaption></figure>
+</div>
+<div class="duo" style="margin-top:14px">
+  <figure><video src="extras/preset-high-flip-preview.mp4" controls muted playsinline loop preload="metadata"></video><figcaption>Higgsfield "High flip" preview, the move borrowed (in words only) for the switch from night to morning. Preset 93a606f8.</figcaption></figure>
+</div>
+
+<h2>Risks and how this prompt handles them</h2>
+<ul class="risk">
+  <li><b>Her thoughts get lip-synced.</b> Every shopper line is marked V.O., her lips are closed in @Image1, and the notes repeat "lips always closed", and since round 2 every V.O. shot (0–3, 5–8, 8–10 s) says it in the shot itself. This is the guide's own pattern (Shot 2 of its mapping example: "keeps her lips closed… (V.O.) says").</li>
+  <li><b>The flip comes out as a hard cut, or doesn't land.</b> Words alone are the weakest way to control a camera move. The shot now carries a full bracket, [Close-up to overhead, crane up and 180-degree roll, landing eye level], so the move is spelled out rather than named. If the draft still misses it, the fix is a video_edit on that 2 s window, not a full retake (about 14 credits, per our edit pricing).</li>
+  <li><b>Screen text garbles at 480p.</b> Both screens are image refs with "copy its text exactly" (guide FAQ, §Text spelling errors: give exact text as an image). Fallback: overlay the HTML screenshots in post.</li>
+  <li><b>The owner's room drifts toward her face image's background.</b> The prompt now says "her surroundings come only from @Image4", and @Image4 is the only room she appears in.</li>
+  <li><b>Scout's letters appear early.</b> @Image7 is an orb-only crop with no letters, and the prompt names only what to take: "use only its round lime disc, five dark sound bars and thin ring" (no visual negative, per the guide's §Negative control).</li>
+  <li><b>A sound gets tied to the orb.</b> On H229 Seedance put the ka-ching on the orb. Here the one &lt;ka-ching&gt; sits in 0–3 s on the cart notification, the orb's 20–22 s shot has only the music swelling, and the notes say "the orb makes no chime or ka-ching" (audio negatives are allowed).</li>
+  <li><b>Two jars on the owner's table.</b> @Image4's studio has a lit three-wick jar of its own. The prompt says "do not use … its candle jar; the jar comes only from @Image6".</li>
+  <li><b>Subtitles.</b> No line is repeated as a visual, each line uses the "Character (emotion): {…}" format, and "No subtitles" is the only negative (guide FAQ, §Subtitles).</li>
+</ul>
+
+<h2 id="compare">Ours vs ByteDance's sd25-pe compile</h2>
+<p class="muted">Card H224, Emile's brief (Nov 14): "run the final prompt through ByteDance's official sd25-pe skill … Show the compiled prompt next to ours on the page, and say which to send." This time the real skill loaded: the Skill tool ran <code>sd25-pe</code> and its own instructions were applied in full (its self-update command was attempted; it didn't report a clear result, so the local copy may be the installed one). The earlier hand-made compile is replaced by prompt-sd25pe-final.txt and kept for the record as extras/prompt-sd25pe-hand-v1.txt.</p>
+<div class="duo">
+<figure><figcaption><b>Ours, H224 fix 2 (prompt.txt) · 776 words</b>: the guide's basic four parts with a camera bracket on every shot.</figcaption><pre class="pre">[Reference assets]
+@Image1 is the shopper in her night living room, one scene: her face, bob with bangs, cream cardigan, and the room&#x27;s lamp, sofa, lit candle jar, white mouse and grey tabby cat. Do not use its laptop screen.
+@Image2 is the Ember &amp; Fig product page, shown only on the shopper&#x27;s laptop screen. Copy its text exactly.
+@Image3 is the owner: use only her face, auburn side braid and rust knit sweater; her surroundings come only from @Image4.
+@Image4 is the owner&#x27;s candle studio. Do not use its dark laptop screen or its candle jar; the jar comes only from @Image6.
+@Image5 is the Shopify admin, shown only on the owner&#x27;s laptop screen. Copy its text exactly.
+@Image6 is the Fig &amp; Cedar candle jar.
+@Image7 is Scout&#x27;s orb: use only its round lime disc, five dark sound bars and thin ring.
+@Video1 is Scout, one entity, voice and look together: use its calm female voice for both Scout lines (22-25s and 25-30s), and its wordmark and talking &quot;o&quot; only in the 25-30s shot.
+@Audio1 is the shopper&#x27;s voice: use only its timbre, pace and soft tone.
+@Audio2 is the owner&#x27;s voice: use only its timbre, warmth and pace.
+
+[Story]
+At night a woman at home adds a candle to her cart, wonders if it is safe for her cat, finds no answer and leaves; next morning its maker reads the low sales as nobody wanting it, until Scout&#x27;s orb tells her not to guess. Live-action, warm, close framing.
+
+[Shots]
+0-3s: [Macro close-up, high angle, slow push in] The shopper&#x27;s hand on the white mouse clicks &quot;Add to cart&quot; on the laptop showing @Image2 &lt;click&gt;; a small &quot;Added to cart&quot; notification slides in at the top of the screen &lt;ka-ching&gt;. The candle flickers beside it. Shopper (V.O., pleased, lips closed): {Okay. Fig and Cedar. This one.}
+3-5s: [Close-up, eye level, static] Her face lit by the screen, lips closed. Behind her the grey tabby cat walks along the back of the sofa; she glances back at it. &lt;a soft cat trill&gt;
+5-8s: [Medium close-up across the laptop lid, slow push in] Her hand stops on the mouse; she scrolls the description, brows tightening, and keeps her lips closed. Shopper (V.O., worried): {Hmm. Is this one safe for my cat?}
+8-10s: [Extreme close-up on her eyes, eye level, static, screen glow sliding across them] She keeps her lips closed. Shopper (V.O., quiet, let down): {It doesn&#x27;t say anywhere.}
+10-12s: [Macro close-up, high angle, static on mouse and screen] She clicks &lt;click&gt;; the page closes to a blank tab; the candle flame bends. Shopper (V.O., small shrug): {Guess not.}
+12-14s: [Close-up to overhead, crane up and 180-degree roll, landing eye level] The camera rises above her, rolls overhead in one move &lt;whoosh&gt; and lands right side up in the owner&#x27;s sunlit studio from @Image4.
+14-17s: [Close-up, eye level, slow push in] The owner at her packing table, one hand turning the lit Fig &amp; Cedar jar, eyes on her laptop showing @Image5. Owner (puzzled, warm): {Huh. Thought Fig and Cedar would sell way more.}
+17-20s: [Close-up, slight low angle, static] She lifts the jar in both hands with a sad half-smile, then glances into the lens. Owner (dry, resigned, to camera): {My favourite, too. Guess I&#x27;m discontinuing it.}
+20-22s: [Macro, eye level, slow pull back] The jar&#x27;s three flames merge into the glowing lime orb from @Image7, which rises between her and the laptop. (the music bed swells softly)
+22-25s: [Close-up, eye level, static] The orb hovers beside her shoulder; she stops, eyebrows up, lips closed, listening. Scout (from the orb, calm, friendly): {Don&#x27;t guess. Ask your shoppers.}
+25-30s: [Close-up, eye level, push in on the orb, then locked-off on the end screen] The orb flies into the lens and becomes the &quot;o&quot; of the Scout wordmark, strictly following @Video1. Scout (calm): {Scout interviews your shoppers for you. Get free early access.} (music lifts and resolves)
+
+[Notes]
+Hard cuts except the flip at 12s, a new visual every 2-3 seconds, smooth, stabilized camera. Each line finishes inside its shot. Exactly three voices: the shopper (@Audio1) only as a close-mic inner voice, lips always closed; the owner (@Audio2) on camera with lip sync; Scout (@Video1&#x27;s voice) only from the orb and the end screen. The shopper&#x27;s room stays dark and quiet, the cat in the background; the owner&#x27;s studio is bright and sunlit, her look identical. One ka-ching only, on the cart notification at 0-3s; the orb makes no chime or ka-ching. On-screen text only on the two laptop screens and the end screen. (A soft, warm lo-fi music bed, very low under the voices.) No subtitles.
+</pre></figure>
+<figure><figcaption><b>sd25-pe compile (prompt-sd25pe-final.txt) · 864 words · send this one</b>: 【Generation Goal】, 【Reference Asset Roles】, 【Event Script】, 【Maintain Consistency】.</figcaption><pre class="pre">【Generation Goal】
+Generate a live-action story film, warm and in close framing. At night a woman at home adds a candle to her cart, wonders if it is safe for her cat, finds no answer and leaves; next morning its maker reads the low sales as nobody wanting it, until Scout&#x27;s orb tells her not to guess. Please note that this is not video editing.
+
+【Reference Asset Roles】
+The shopper in her night living room maps to @Image1, which jointly defines her and her room as one scene: use her face, bob with bangs and cream cardigan, and the room&#x27;s lamp, sofa, small lit candle, mouse and cat; do not use its laptop screen.
+The shopper&#x27;s laptop screen references @Image2: the Ember &amp; Fig product page. Copy its text exactly.
+The owner maps to @Image3; use only her face, auburn side braid and rust knit sweater; do not use her pose or background.
+The owner&#x27;s candle studio references @Image4; use its shelves, brick wall, packing table and sunlight; do not use its dark laptop screen or its candle jar; the jar comes only from @Image6.
+The owner&#x27;s laptop screen references @Image5: the Shopify admin. Copy its text exactly.
+The Fig &amp; Cedar candle references @Image6; do not use the leaves or cloth.
+Scout&#x27;s orb references @Image7; use only its round lime disc, five dark sound bars and thin ring; do not use its dark background.
+Scout maps to @Video1, which alone defines Scout as one entity, voice and look together: use its calm female voice for both Scout lines, and its wordmark, layout and talking &quot;o&quot; only in 25-30s; do not use its words or its dark background before 25s.
+@Audio1 is used only for the shopper&#x27;s voice timbre, pace and soft tone.
+@Audio2 is used only for the owner&#x27;s voice timbre, warmth and pace.
+
+【Event Script】
+0-3s: [Macro close-up, high angle, slow push in] The shopper&#x27;s hand on the white mouse clicks &quot;Add to cart&quot; on the laptop showing @Image2 &lt;click&gt;; a small &quot;Added to cart&quot; notification slides in at the top of the screen &lt;ka-ching&gt;. Her candle flickers beside it. Shopper, in English (V.O., pleased, lips closed): {Okay. Fig and Cedar. This one.}
+3-5s: [Close-up, eye level, static] Her face lit by the screen, lips closed. Behind her the grey tabby cat walks along the back of the sofa; she glances back at it. &lt;a soft cat trill&gt;
+5-8s: [Medium close-up across the laptop lid, slow push in] Her hand stops on the mouse; she scrolls the description, brows tightening, and keeps her lips closed. Shopper, in English (V.O., worried): {Hmm. Is this one safe for my cat?}
+8-10s: [Extreme close-up on her eyes, eye level, static, screen glow sliding across them] Her lips stay closed. Shopper, in English (V.O., quiet, let down): {It doesn&#x27;t say anywhere.}
+10-12s: [Macro close-up, high angle, static on mouse and screen] She clicks &lt;click&gt;; the page closes to a blank tab; the candle flame bends. Shopper, in English (V.O., small shrug): {Guess not.}
+12-14s: [Close-up to overhead, crane up and 180-degree roll, landing eye level] The camera rises above her, rolls overhead in one move &lt;whoosh&gt; and lands right side up in the owner&#x27;s sunlit studio.
+14-17s: [Close-up, eye level, slow push in] The owner at her packing table, one hand turning the lit Fig &amp; Cedar jar, eyes on her laptop showing @Image5. Owner, in English (puzzled, warm): {Huh. Thought Fig and Cedar would sell way more.}
+17-20s: [Close-up, slight low angle, static] She lifts the jar in both hands with a sad half-smile, then glances into the lens. Owner, in English (dry, resigned, to camera): {My favourite, too. Guess I&#x27;m discontinuing it.}
+20-22s: [Macro, eye level, slow pull back] The jar&#x27;s three flames merge into the glowing lime orb, which rises between her and the laptop. (the music bed swells softly)
+22-25s: [Close-up, eye level, static] The orb hovers beside her shoulder; she stops, eyebrows up, mouth naturally closed while listening. Scout, in English (from the orb, calm, friendly): {Don&#x27;t guess. Ask your shoppers.}
+25-30s: [Close-up, eye level, push in on the orb, then locked-off on the end screen] The orb flies into the lens and becomes the &quot;o&quot; of the Scout wordmark, following @Video1. At the end, the end screen holds still. Scout, in English (calm): {Scout interviews your shoppers for you. Get free early access.} (music lifts and resolves)
+
+【Maintain Consistency】
+Hard cuts except the flip at 12s, a new visual every 2-3 seconds, smooth, stabilized camera. Each line finishes inside its shot. Exactly three voices: the shopper only as a close-mic inner voice with her lips always closed; the owner on camera with lip sync; Scout only from the orb and the end screen. The shopper&#x27;s room stays dark and quiet, the cat in the background; the owner&#x27;s studio is bright and sunlit, her look identical. One Fig &amp; Cedar jar in the owner&#x27;s hands, one orb. One ka-ching only, on the cart notification at 0-3s; the orb makes no chime or ka-ching. On-screen text only on the two laptop screens and the end screen. (A soft, warm lo-fi music bed, very low under the voices.) No subtitles appear on screen.
+</pre></figure>
+</div>
+<p><b>What sd25-pe changed, rule by rule:</b></p>
+<ul>
+<li><b>Routing line added.</b> <i>"Please note that this is not video editing."</i> goes right after the goal sentence. Its compatibility gate fires because @Video1 is 4.5 s and the output is 30 s. The skill makes this line mandatory when the gate fires, so it isn't optional.</li>
+<li><b>One line per subject, one role per line.</b> @Image1 is the only still of the shopper and her room, which it shows together. Fix 2 maps it once, as one scene: "The shopper in her night living room maps to @Image1, which jointly defines her and her room as one scene". The skill asks for this: "When multiple assets jointly define the same entity, state this explicitly", and reuse is allowed "when the asset itself contains those characters together and no better independent candidates exist". A separate room plate would be a paid still. @Video1 gets the same treatment: "Scout maps to @Video1, which alone defines Scout as one entity, voice and look together". Every line now says what <i>not</i> to take: @Image1 not its laptop screen, @Image3 not her hand-on-cheek pose or the brick-and-roaster background, @Image6 not the fig leaves or the cloth, @Image7 not its dark background.</li>
+<li><b>Language on each speaker.</b> Every line is now labelled "Shopper, in English (…)", "Owner, in English (…)" or "Scout, in English (…)". The skill says: "Label each speaker separately; do not make a single blanket declaration."</li>
+<li><b>Listener's mouth closed.</b> At 22–25 s the owner keeps her "mouth naturally closed while listening" while Scout speaks.</li>
+<li><b>One jar, worded safely.</b> The ending reads "One Fig &amp; Cedar jar in the owner's hands", not "one jar throughout", because @Image4's shelves hold dozens of jars.</li>
+<li><b>Re-descriptions trimmed.</b> Following "do not re-describe accurate references", the jar and orb lines just name the reference.</li>
+<li><b>Unused Assets: none.</b> All 10 uploads have a role, so there is no 【Unused Assets】 block. Nothing in extras/ is uploaded.</li>
+<li><b>Limits:</b> 7 images, 1 video (4.5 s), 2 audio clips (9.3 + 9.25 = 18.6 s). That's inside the caps of 30 images, 10 videos ≤30 s and 10 audio ≤30 s, and every audio clip is in the guide's 5–10 s sweet spot. There's no ratio, duration, resolution or sound toggle in the text: draft 480p, 9:16, 30 s and audio on are set as parameters.</li>
+</ul>
+<p><b>Technique and lines, checked by script diff against prompt.txt:</b> all 8 spoken lines are word-for-word identical. The 11 timestamps (0–30 s, integer, no gaps) and all 11 <code>[shot size, angle, movement]</code> brackets are identical, so the technique this card tests survives. The &lt;&gt; sounds and the () music are identical too. "V.O." stays (the guide's own example uses it). The flip, the orb rising from the flames and the end screen are untouched.</p>
+<p><b>Which to send: the sd25-pe compile (prompt-sd25pe-final.txt).</b> It keeps our story, lines, shots and camera brackets exactly. It adds the three things ByteDance's own rules require of this input: the routing line (the 4.5 s video in a 30 s job), the per-speaker language, and a "do not take" on every asset. The earlier hand compile turned the brackets into prose, so we kept ours; this one doesn't, so that reason is gone. <b>One open risk:</b> it runs 864 words, past the 740-word top of the official 30 s examples. The guide sets no word limit, and the extra words are role, exclusion and language labels, not plot. If the draft cuts too often, use ours (prompt.txt, 776 words) plus the routing line.</p>
+
+<section id="eval">
+  <h2 style="border:0;margin-top:0">Eval</h2>
+  <p><b>H224 round (Nov 14):</b> the card has two comments from Emile (relayed by the Marketer), and both are now applied. <b>Comment 1 (23:19, sd25-pe):</b> (a) the final prompt went through the real <code>sd25-pe</code> skill; (b) every asset has one role plus what not to take, with @Image1 and @Video1 each stated as one entity; (c) no unused uploads, so there's no 【Unused Assets】 block; (d) dialogue is exact and in {}, with sounds in &lt;&gt; and music in (); (e) no ratio or duration in the text; (f) the compile sits next to ours, with the pick "send this one". <b>Comment 2 (23:41, ka-ching):</b> (a) the ka-ching is pinned to the opening seconds, written as &lt;ka-ching&gt; in the 0–3 s timestamp only, on the first notification (her "Added to cart" banner); (b) no chime or ka-ching is tied to the orb: its 20–22 s shot now has only "(the music bed swells softly)", and the notes say "the orb makes no chime or ka-ching"; (c) there is no second ka-ching, because no full-price order happens in this story. Spend this round: 0 credits, no stills, no video. The round-1 judge notes below come from H216.</p>
+  <p><b>H224 fix 1 (Nov 14):</b> one label style everywhere: @Image1…@Image7, @Video1, @Audio1, @Audio2, on this page and in both prompt files, matching the official sd25-pe skill's @ImageN form and the upload order in job.json (image1…audio2). @Video1 now reads as one subject, Scout, with what not to take: "Scout maps to @Video1: use its calm female voice for both Scout lines and its wordmark, layout and talking "o" only in 25-30s; do not use its words or its dark background before 25s." Spend: 0 credits.</p>
+  <p><b>H224 fix 2 (Nov 14):</b> the orb's &lt;a soft rising chime&gt; is gone (20–22 s, both prompt files, the page and the shot list). The ka-ching now sits at 0–3 s on an "Added to cart" notification, so the story reads "she adds it to her cart, then leaves" and the shot list says so. @Image1 and @Video1 are each mapped once, as one entity, with the reason stated. @Image7's line names only what to take, with no visual negative. @Image4's line excludes its own jar ("the jar comes only from @Image6"). Fixed the "GPT @Image2.6" typo on the asset cards and the spend note. Word counts: compile 864, ours 776. Spend: 0 credits.</p>
+  <p><b>Before (round-1 independent judge):</b></p>
+  <div class="scores"><span class="pill"><b>Goal</b> 8</span><span class="pill"><b>Guide</b> 7</span><span class="pill"><b>Story</b> 8.5</span><span class="pill"><b>Craft</b> 7.5</span><span class="pill"><b>Overall</b> 7.7</span></div>
+  <div class="fix"><p><b>Must-fix 1 · @Video1 voice only in the last shot.</b> Seedance could have picked an unanchored voice for the 20–24 s orb line, or pulled the end screen forward.</p><p><b>Changed:</b> "@Video1 is Scout: use its calm female voice for both Scout lines (22-25s and 25-30s); use its wordmark and talking "o" only in the 25-30s shot." The @Video1 card now says the same thing.</p></div>
+  <div class="fix"><p><b>Must-fix 2 · @Image7 was the full wordmark.</b> Letters could appear over the flames.</p><p><b>Changed:</b> a new orb-only crop (disc, five bars, ring, no letters), uploaded as media 5aaa2bca, plus the line "use only the round orb, never any letters, before 25s". The old wordmark is in extras/ and is not uploaded. Cost: 0 credits.</p></div>
+  <div class="fix"><p><b>Must-fix 3 · The 8–10 s line ran 7 words in 2 s.</b></p><p><b>Changed:</b> {It doesn't say anywhere.} is 4 words in 2 s and finishes inside the shot.</p></div>
+  <div class="fix"><p><b>Must-fix 4 · Two shots had no camera bracket.</b></p><p><b>Changed:</b> 12–14 s now reads [Close-up to overhead, crane up and 180-degree roll, landing eye level], and 25–30 s reads [Close-up, eye level, push in on the orb, then locked-off on the end screen]. Every shot has one now.</p></div>
+  <div class="fix"><p><b>Must-fix 5 · "No brick wall" clashed with @Image4's brick studio.</b></p><p><b>Changed:</b> "@Image3 is the owner: use only her face, auburn side braid and rust knit sweater; her surroundings come only from @Image4."</p></div>
+  <div class="fix"><p><b>Nice-to-haves applied:</b></p><p>20–24 s is split into 20–22 s (macro: the flames become the orb) and 22–25 s (her eyebrows up as the orb speaks).</p><p>The end screen is now 5 s (25–30 s).</p><p>"Keeps her lips closed" is written into the 5–8 and 8–10 s shots.</p><p>The re-descriptions of Images 4, 6 and 7 are trimmed to a role plus what not to take.</p><p>"Never shaky" is now "smooth, stabilized camera".</p><p>The page now explains the 51 spoken words and the "My favourite, too." beat.</p><p>10–12 s now says "the page closes to a blank tab".</p><p>The owner glances into the lens on {Guess I'm discontinuing it.}</p><p>The blank jar label is noted as a deliberate change.</p></div>
+  <p><b>Verdict:</b> all five must-fixes are applied, and so are all nine nice-to-haves. The compiled prompt (prompt-sd25pe-final.txt) is 864 words, past the 740-word top of the official 30 s examples (380–740); the guide sets no word limit, and the open risk is noted in the comparison above. It has 11 shots, each with a <code>[shot size, angle, movement]</code> bracket, and integer timestamps with no gaps. It uses ten references (7 images, 1 video of 4.5 s, 2 audio clips totalling 18.6 s), each with a role. "No subtitles" is the only negative, and there is no ratio or duration in the prompt. Spend on H224: 0 credits. Inherited from H216: 0.50 credits (2 GPT Image 2.6 stills, made before H224 was filed). It's ready for one 90-credit draft take once Emile gives the go. Still unsure: whether a flip written only in words lands, and whether the inner voice stays off her lips.</p>
+</section>
+
+</main>
+<script>
+document.getElementById('copy').addEventListener('click', async () => {
+  const t = document.getElementById('raw').value;
+  const msg = document.getElementById('copied');
+  try { await navigator.clipboard.writeText(t); msg.textContent = 'Copied.'; }
+  catch (e) { const r = document.getElementById('raw'); r.select(); try { document.execCommand('copy'); msg.textContent = 'Copied.'; } catch (e2) { msg.textContent = 'Copy failed: open prompt-sd25pe-final.txt'; } }
+});
+</script>
+</body>
+</html>

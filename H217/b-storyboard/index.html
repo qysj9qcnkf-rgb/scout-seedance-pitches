@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Refund Storyboard Pitch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f5f0; --surface:#ffffff; --ink:#16181d; --muted:#5d6370; --line:#e3dfd6;
+  --lime:#c6f432; --lime-ink:#2c3a00; --coral:#f07a5c; --sea:#2f6fb3; --chip:#eef7cf; --chip-ink:#3b4a05;
+  --code:#f1eee7; --shadow:0 1px 2px rgba(20,20,20,.05),0 8px 24px rgba(20,20,20,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#111317; --surface:#1a1d23; --ink:#eef0f3; --muted:#9aa1ad; --line:#2b2f37;
+    --lime:#c6f432; --lime-ink:#1a2200; --coral:#ff8f73; --sea:#6aa6e6; --chip:#2b3612; --chip-ink:#d9f58a;
+    --code:#15181d; --shadow:none;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#111317; --surface:#1a1d23; --ink:#eef0f3; --muted:#9aa1ad; --line:#2b2f37;
+  --lime:#c6f432; --lime-ink:#1a2200; --coral:#ff8f73; --sea:#6aa6e6; --chip:#2b3612; --chip-ink:#d9f58a;
+  --code:#15181d; --shadow:none;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif}
+.wrap{max-width:1120px;margin:0 auto;padding:32px 16px 80px}
+h1,h2,h3,h4{font-family:"Space Grotesk",Inter,sans-serif;line-height:1.15;margin:0}
+h1{font-size:clamp(30px,5vw,48px);letter-spacing:-.02em}
+h2{font-size:22px;margin:0 0 14px;display:flex;gap:10px;align-items:baseline}
+h2 .n{font-size:13px;color:var(--muted);font-family:Inter;font-weight:600}
+section{margin-top:44px}
+.kicker{display:inline-block;font:600 12px/1 Inter;letter-spacing:.08em;text-transform:uppercase;background:var(--lime);color:var(--lime-ink);padding:6px 10px;border-radius:99px}
+.pitch{font-size:clamp(18px,2.3vw,22px);margin:16px 0 0;max-width:62ch}
+.why{margin-top:18px;display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.why div{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;box-shadow:var(--shadow);font-size:14.5px}
+.why b{display:block;font-family:"Space Grotesk";font-size:15px;margin-bottom:4px}
+cite{font-style:normal;color:var(--muted);font-size:13px}
+.input{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:var(--shadow);display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;font-size:15px}
+.input .pill{font:600 13px/1 Inter;background:var(--code);border:1px solid var(--line);padding:7px 10px;border-radius:99px}
+.input .cost{margin-left:auto;font-weight:700}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px;box-shadow:var(--shadow);position:relative;scroll-margin-top:16px}
+.card:target{outline:3px solid var(--lime)}
+.card img,.card video{width:100%;height:220px;object-fit:cover;border-radius:10px;background:#000;display:block}
+.card#image1 img{object-fit:contain;background:#fff}
+.card h4{font-size:15px;margin:10px 0 4px}
+.card p{margin:0 0 8px;font-size:13.5px;color:var(--muted)}
+.card code{font-size:11px;color:var(--muted);word-break:break-all}
+.tag{position:absolute;top:18px;left:18px;z-index:2;font:600 12px/1 ui-monospace,Menlo,monospace;background:var(--lime);color:var(--lime-ink);padding:5px 8px;border-radius:6px}
+.aud{height:220px;border-radius:10px;background:linear-gradient(135deg,#1b2a10,#0d1410);display:flex;flex-direction:column;justify-content:flex-end;padding:12px;gap:10px}
+.wave{flex:1;background:repeating-linear-gradient(90deg,transparent 0 6px,var(--lime) 6px 9px);mask:radial-gradient(ellipse at center,#000 30%,transparent 70%);-webkit-mask:radial-gradient(ellipse at center,#000 30%,transparent 70%);opacity:.8}
+.aud audio{width:100%}
+.prompt{display:grid;gap:12px}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:12px}.cmp .txt{font-size:13px!important;overflow-wrap:anywhere}
+@media (max-width:900px){.cmp{grid-template-columns:1fr}}
+.part{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:var(--shadow)}
+.part h3{font-size:14px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:8px}
+.part .txt{white-space:pre-wrap;font-size:14.5px}
+.chip{display:inline-block;font:600 12px/1.2 ui-monospace,Menlo,monospace;background:var(--chip);color:var(--chip-ink);padding:2px 6px;border-radius:6px;text-decoration:none;border:1px solid transparent}
+.chip:hover{border-color:var(--chip-ink)}
+.say{color:var(--coral);font-weight:600}
+.copyrow{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+button{font:600 14px Inter;background:var(--ink);color:var(--bg);border:0;border-radius:10px;padding:10px 16px;cursor:pointer}
+.small{font-size:13px;color:var(--muted)}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--surface);box-shadow:var(--shadow)}
+table{border-collapse:collapse;width:100%;min-width:980px;font-size:13.5px}
+th,td{padding:10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font:600 12px Inter;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);background:var(--code);position:sticky;top:0}
+td:first-child{width:78px;position:relative}
+.th{width:62px;border:1px solid var(--line);border-radius:6px;background:#fff;display:block}
+.pn{font:600 11px ui-monospace,Menlo,monospace;color:var(--muted)}
+.mono{font-family:ui-monospace,Menlo,monospace;white-space:nowrap}
+td.line{min-width:220px;font-weight:500}
+td.insp{min-width:200px;font-size:13px}
+td.insp a{color:var(--sea)}
+.board{display:grid;gap:18px;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);align-items:start}
+.board img{width:100%;border-radius:12px;border:1px solid var(--line);background:#fff;display:block}
+.checks{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;box-shadow:var(--shadow);font-size:14px}
+.checks ol{margin:0;padding-left:20px}
+.checks li{margin:0 0 6px}
+.ok{color:#3c8a12;font-weight:700}
+:root[data-theme="dark"] .ok{color:var(--lime)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .ok{color:var(--lime)}}
+details{margin-top:12px}
+summary{cursor:pointer;font-weight:600}
+.v1 img{max-width:420px;width:100%;margin-top:10px;border-radius:10px;border:1px solid var(--line)}
+.presets{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:14px}
+.presets video{width:100%;border-radius:10px;max-height:300px;background:#000}
+.presets p{margin:6px 0 0;font-size:13.5px}
+#eval{background:var(--surface);border:2px dashed var(--line);border-radius:14px;padding:18px}
+textarea.raw{position:absolute;left:-9999px;width:1px;height:1px}
+@media (max-width:760px){.board{grid-template-columns:1fr}.input .cost{margin-left:0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <span class="kicker">H219 · Refund ad B · Multi-panel storyboard</span>
+  <h1 style="margin-top:14px">Line-art multi-panel storyboard</h1>
+  <p class="pitch">One sheet of 12 simple drawings tells Seedance the whole refund story: who's in each shot, where, and in what order. The prompt then only has to add what drawings can't, which is her words, her voice, the sounds, the freeze and the flip.</p>
+  <div class="why">
+    <div><b>Why a storyboard fits this story</b>This ad has 12 beats, two rooms and three characters. The guide says a multi-panel storyboard "references storyboard information such as subjects, composition, actions, plot, and scene progression". That is exactly what H215 draft 1 lost when the owner drifted out of her studio. <cite>Typical capabilities → Storyboard reference</cite></div>
+    <div><b>Built to the guide's rules</b>12 panels (the limit is "15 panels or fewer"), "stick-figure or line-art", no text on the sheet, and a deliberately simple second pass instead of the busier first one ("avoid noisy or over-sharpened AI-generated storyboards"). <cite>Reference asset input recommendations; Multi-panel storyboards</cite></div>
+    <div><b>Fixes H215's miss</b>A bikini rail is drawn behind her in all 9 owner panels (2–6, 9–11; panel 1 is the phone on folded suits). She holds swimwear in 7 of them: a bikini top in 2, 6 and 9, a folded stack in 3, a folded suit in 4 and 10. In panel 5 the bikini is frozen mid-air, and in 11 she seals a mailer. Panel order binds her to the product, so the prompt doesn't have to fight for it. <cite>Lesson from H215-draft-1</cite></div>
+    <div><b>Shorter prompt</b>The guide says that with a storyboard "the prompt can be simplified". So the prompt no longer re-describes what the panels and references already show. It keeps only what they can't carry: lines, voices, sound, the freeze, the flip and the time jump. Our draft runs 515 words (66 of them spoken), down from 755. The version to send is the sd25-pe one in 04b: 677 words. It adds the one-role-per-asset lines and the studio and swimwear binding H215 needed, and drops every line that re-described a panel. <cite>Also "when a reference is accurate, just say to reference it"</cite> <cite>Multi-panel storyboards → Concept storyboard usage</cite></div>
+  </div>
+</header>
+
+<section id="input">
+  <h2><span class="n">01</span>Input</h2>
+  <div class="input">
+    <span class="pill">Text</span><span class="pill">6 images</span><span class="pill">1 video (4.5 s)</span><span class="pill">3 audio (26.8 s total)</span>
+    <span>Higgsfield · <b>seedance_2_5</b> · omni_reference (task type: <b>reference</b>) · <b>draft</b> · 480p · 9:16 · 30 s · audio on</span>
+    <span class="cost">1 pass · 90 credits</span>
+  </div>
+  <p class="small">One pass, no second mode: a storyboard is an unlocked reference task, so ratio and duration stay ours <cite>(Task instructions → Unlocked)</cite>. Limits checked: 6 of 30 images, 4.5 s of 30 s video (one clip, and the 4–30 s per-clip rule passes), 26.8 s of 30 s audio (the ka-ching is cut to exactly 2.0 s, the minimum for an audio reference, so the prompt doesn't have to trim it). Assets are uploaded in order of first appearance, as the FAQ "Incorrect character-to-reference mapping" advises. Spent on the parent card H217, before this card was filed: 5 stills with gpt_image_2_6 (4 storyboard passes and 1 clean studio plate) = 1.25 credits. This Script card (H219) spent nothing. No video was generated.</p>
+</section>
+
+<section id="assets">
+  <h2><span class="n">02</span>Reference assets, in upload order</h2>
+  <div class="grid">
+<article class="card" id="image1"><span class="tag">&lt;image1&gt;</span><a href="a/storyboard.png" target="_blank"><img src="a/storyboard.png" alt="Storyboard · 12 line-art panels" loading="lazy"></a><h4>Storyboard · 12 line-art panels</h4><p>Plot, shot order and framing. Never the drawing style.</p><code>gpt_image_2_6 job fdc06c34-48ba-4aa3-b240-75c8e4f3aec5 (v4, this card)</code></article>
+<article class="card" id="image2"><span class="tag">&lt;image2&gt;</span><a href="a/refund-banner.jpg" target="_blank"><img src="a/refund-banner.jpg" alt="Refund notification" loading="lazy"></a><h4>Refund notification</h4><p>First shot. Shopify-style 'Refund issued', exact words.</p><code>New HTML screenshot (b-work/refund.html). Upload at render time</code></article>
+<article class="card" id="image3"><span class="tag">&lt;image3&gt;</span><a href="a/owner.jpg" target="_blank"><img src="a/owner.jpg" alt="Owner · Salt &amp; Sun Swim" loading="lazy"></a><h4>Owner · Salt &amp; Sun Swim</h4><p>Face, hair and clothes. Cast inside her bikini studio.</p><code>Soul 2 job 9a8b15e8-59c4-4f55-b292-8a5645ff4ad8</code></article>
+<article class="card" id="image4"><span class="tag">&lt;image4&gt;</span><a href="a/studio-plate.png" target="_blank"><img src="a/studio-plate.png" alt="Her studio, clean plate" loading="lazy"></a><h4>Her studio · clean plate, no orb</h4><p>The room for every owner shot. The orb was painted out so Scout can't show up before 8 s; the prompt describes Scout only at 8 s.</p><code>gpt_image_2_6 job a17f8839-aacf-4c8f-b35d-6db3a15d49f8 (edit of media db24f683)</code></article>
+<article class="card" id="image5"><span class="tag">&lt;image5&gt;</span><a href="a/shopper.jpg" target="_blank"><img src="a/shopper.jpg" alt="Shopper" loading="lazy"></a><h4>Shopper</h4><p>One role: her face, hair and clothes. Her bedroom is written into the prompt in words, not taken from this image.</p><code>Soul 2 job 6ccc5f17-498c-424f-8c58-a90ff1577399</code></article>
+<article class="card" id="image6"><span class="tag">&lt;image6&gt;</span><a href="a/order-banner.jpg" target="_blank"><img src="a/order-banner.jpg" alt="Full-price order" loading="lazy"></a><h4>Full-price order</h4><p>The payoff ka-ching, exact words. Green bag icon kept.</p><code>H215 screen/kaching.png. Upload at render time</code></article>
+<article class="card" id="video1"><span class="tag">&lt;video1&gt;</span><video src="a/h158-end.mp4" controls playsinline preload="metadata"></video><h4>End screen · H158 talking 'o' (4.5 s)</h4><p>One role: the final shot, picture and its own sound as they are. Decided (H219): the clip already says "Scout interviews your shoppers for you. Get free early access." (checked on card H158, r3), so the prompt keeps the clip's audio and does not ask for a new end line. Scout's earlier lines get their voice in words only (calm and warm); Video 1 is not used as a voice reference.</p><code>media cae62718-ec02-41f6-8e36-1de097e8427d</code></article>
+<article class="card" id="audio1"><span class="tag">&lt;audio1&gt;</span><div class="aud"><div class="wave"></div><audio src="a/kaching-2_0s.mp3" controls preload="none"></audio></div><h4>Ka-ching (2.0 s)</h4><p>Plays for the refund AND for the full-price sale. Trimmed locally from the 2.6 s clip (with a 0.3 s fade).</p><code>New file: upload a/kaching-2_0s.mp3 at render time (was media 45fb9d1d)</code></article>
+<article class="card" id="audio2"><span class="tag">&lt;audio2&gt;</span><div class="aud"><div class="wave"></div><audio src="a/voice-elena.mp3" controls preload="none"></audio></div><h4>Owner voice · Elena (13.4 s)</h4><p>Timbre only; the prompt's words win.</p><code>media e05a2ee1-0882-4e54-937b-ed2475948d4e</code></article>
+<article class="card" id="audio3"><span class="tag">&lt;audio3&gt;</span><div class="aud"><div class="wave"></div><audio src="a/voice-serene.mp3" controls preload="none"></audio></div><h4>Shopper voice · Serene (11.4 s)</h4><p>Timbre only.</p><code>media 4b121290-c867-44a1-8dc3-6046fb0efb15</code></article>
+
+  </div>
+</section>
+
+<section id="board">
+  <h2><span class="n">03</span>The storyboard: Image 1</h2>
+  <div class="board">
+    <a href="a/storyboard.png" target="_blank"><img src="a/storyboard.png" alt="12-panel line-art storyboard of the refund ad"></a>
+    <div class="checks">
+      <b>Panel-by-panel check against the shot list</b>
+      <ol>
+        <li>Phone among folded bikinis, notification popping <span class="ok">✓</span></li>
+        <li>Owner reads the phone, bikini top in hand, rail behind; a soft, disappointed frown (was angry) <span class="ok">✓</span></li>
+        <li>Owner to lens, deflated, holding a stack of folded suits with the phone on top, rail behind <span class="ok">✓</span></li>
+        <li>Over the shoulder at the laptop form, folded suit in her hand, rail beyond the laptop <span class="ok">✓</span></li>
+        <li>Freeze: bikini in mid-air, orb by her shoulder, rail behind, dashed arc for the camera <span class="ok">✓</span></li>
+        <li>Reverse angle, she turns to the orb, a bikini top dangling from her hand, rail behind <span class="ok">✓</span></li>
+        <li>Shopper with earbuds, beach bag, bikini on the bed, orb beside her <span class="ok">✓</span></li>
+        <li>Shopper in profile, towel into the bag, eyes down <span class="ok">✓</span></li>
+        <li>Owner's aha: holds a bikini top out by its straps, wry closed-mouth half smile, rail behind <span class="ok">✓</span></li>
+        <li>Over the shoulder: folded suit in one hand, a finger deletes the form, which breaks apart, rail behind <span class="ok">✓</span></li>
+        <li>Phone lights up in front, owner sealing a mailer, window light, rail behind <span class="ok">✓</span></li>
+        <li>Orb alone in the centre, for the end screen <span class="ok">✓</span></li>
+      </ol>
+      <p class="small" style="margin-top:10px">No letters or numbers anywhere on the sheet. Panel 9's top is held by its straps in front of her shirt, a little close to her body; the guide says the panels are a "high-level plot reference", and the line "half a laugh" carries the mood. 880×1168 px, under the output resolution, which the "Fingerprint-like textures" FAQ recommends.</p>
+      <details class="v1"><summary>v2 (judged sheet): angry panel 2, empty hands in 3, 4, 6, 10, no rail in 4, 6, 10, 11</summary>
+        <img src="a/storyboard-v2.png" alt="Storyboard v2, replaced">
+        <p class="small">v3 fixed panels 2, 3, 4, 10, 11 but drew the bikini worn in 6 and 9; v4 (above) fixed those two.</p>
+      </details>
+      <details class="v1"><summary>Rejected first pass (too detailed for the guide)</summary>
+        <p class="small">It matched every panel, but it's comic-style with detailed faces and hatching, close to the guide's "not recommended" examples, and in panel 5 the owner reacts instead of freezing.</p>
+        <img src="a/storyboard-v1.png" alt="First storyboard pass, rejected">
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="prompt">
+  <h2><span class="n">04</span>Our draft, in the guide's four parts</h2>
+  <p class="small">Line-art steps from the guide: Step 1 maps the assets, Step 2 summarises the story, Step 3 describes the plot "according to the storyboard, and at minimum fill in information not shown in the storyboard", using timestamps. Each line uses the "Character's line (emotion): {…}" format from the Subtitles FAQ. Timestamps are whole seconds from 0 to 30 with no gaps. Negative wording appears only for subtitles. This is our draft for comparison; the prompt to send is the sd25-pe version in 04b. Hard cuts between shots, except the two named camera moves.</p>
+  <div class="prompt">
+    <div class="part"><h3>1 · Asset mapping</h3><div class="txt" id="pMap"></div></div>
+    <div class="part"><h3>2 · One-sentence summary</h3><div class="txt" id="pSum"></div></div>
+    <div class="part"><h3>3 · Detailed plot (fills what the panels don't show)</h3><div class="txt" id="pPlot"></div></div>
+    <div class="part"><h3>4 · Additional notes</h3><div class="txt" id="pNotes"></div></div>
+    <div class="copyrow"><button id="copy" type="button">Copy the prompt to send (sd25-pe)</button><span class="small" id="copied">Copies the sd25-pe prompt from 04b (677 words). Our draft below: 515 words.</span></div>
+  </div>
+  <textarea class="raw" id="raw" readonly aria-hidden="true">Image 1 is the storyboard: 12 line-art panels, left to right, top to bottom, one per shot below. Use it for plot and blocking only; the film is photoreal, full colour.
+Image 2 is the refund notification on her phone: show it word for word.
+Image 3 is the owner; use her face, hair and clothes. She uses the voice timbre of Audio 2.
+Image 4 is her studio, the room for every owner shot.
+Image 5 is the shopper and her bedroom. She uses the voice timbre of Audio 3.
+Image 6 is the new-order notification on her phone: show it word for word.
+Video 1 is the final shot: reproduce its picture; Scout&#x27;s end line below replaces its sound. Scout uses the voice timbre of Video 1.
+Audio 1 is the order sound.
+
+A bikini-store owner gets a refund and is about to post a discount when Scout, a floating lime orb, freezes time and shows her a shopper who is just waiting for that discount.
+
+Construct the story according to the storyboard sequence; the shots add what the panels don&#x27;t show.
+
+0-2s: [Panel 1] The notification from Image 2 drops in with Audio 1.
+
+2-4s: [Panel 2] The owner&#x27;s line (annoyed but disappointed): {Oh, for... A refund.}
+
+4-6s: [Panel 3] To the lens. The owner&#x27;s line (flat, disappointed): {Sales are so low this week.}
+
+6-8s: [Panel 4] Room sound drops away; her lips stay closed.
+The owner (V.O., inner voice): {Maybe it&#x27;s time for a discount.}
+
+8-11s: [Panel 5] Bullet time: everything freezes, a tossed bikini hangs mid-air, the camera arcs around her. Scout appears for the first time: a glowing lime orb with white sound bars, popping in by her shoulder.
+Scout&#x27;s line (calm, a little playful): {Not yet. There&#x27;s something you don&#x27;t know.}
+
+11-13s: [Panel 6] 11-12s she turns to the orb, curious; at 12s the camera rises and flips overhead, landing in the shopper&#x27;s bedroom at 13s.
+
+13-17s: [Panel 7] The orb hovers beside the shopper.
+Scout&#x27;s line (curious, friendly): {You left the Sunset bikini in your cart three times. What stopped you?}
+
+17-21s: [Panel 8] She keeps packing, without looking up.
+The shopper&#x27;s line (casual, matter-of-fact): {You run a discount every week. I&#x27;m just waiting for it.}
+
+21-23s: [Panel 9] Back in the studio, half a laugh.
+The owner&#x27;s line (dawning, wry): {I&#x27;m training them to wait.}
+
+23-24s: [Panel 10] She deletes the discount.
+The owner&#x27;s line (decided): {Noted.}
+
+24-26s: [Panel 11] Later that week, golden light. The notification from Image 6 lands with Audio 1; she speaks on the sound.
+The owner&#x27;s line (relieved, smiling): {Glad I asked.}
+
+26-30s: [Panel 12] The orb becomes the &quot;o&quot; of the Scout wordmark, as in Video 1.
+Scout&#x27;s line (warm): {Scout interviews your shoppers for you. Get free early access.}
+
+Hard cuts between shots, except the bullet-time arc at 8s and the overhead flip at 12s. A new visual every 2-3 seconds, fast, smooth, stabilised camera. Bright daylight, sand and sea-blue colours. Each line finishes inside its shot. Light upbeat music, lower under speech. Dialogue strictly as written. No subtitles.
+</textarea>
+</section>
+
+<section id="sd25pe">
+  <h2><span class="n">04b</span>Ours next to ByteDance's sd25-pe</h2>
+  <p class="small">Card H219, Emile's brief (Nov 14): run the final prompt through ByteDance's official sd25-pe skill, check every input is right for the model, show the compiled prompt next to ours and say which to send. This time the real skill ran: it was loaded with the Skill tool (version checked current with its own update command), and its Final Checklist was applied to the prompt in 04. Same technique (one storyboard sheet, one pass), same 10 assets in the same upload order, same timestamps. All 10 lines are word for word, checked by script: 66 spoken words. Nine are written in {} (56 words); the tenth, Scout's end line (10 words), is spoken by Video 1's own audio, so it is not written a second time. No image or video was generated.</p>
+  <div class="part" style="border-color:var(--lime);margin-bottom:12px"><h3>Which one to send</h3><div style="font-size:14.5px"><b>Send the sd25-pe version (right).</b> H215 failed because the owner drifted out of her studio; this version binds her to the studio and puts the swimwear in her hands in words, not only in the drawings. It gives every upload exactly one role (Image 5 is only the shopper's look; her bedroom is described in words). This is a storyboard/reference generation, not an edit of Video 1, so no compatibility sentence is needed. It runs 677 words against 515: the one-role-per-asset lines are in, and the shot lines no longer restate what the panels already draw.</div></div>
+  <div class="cmp">
+    <div class="part"><h3>Ours (04) · 515 words</h3><div class="txt" id="pOurs"></div></div>
+    <div class="part"><h3>sd25-pe final · 677 words</h3><div class="txt" id="pPE"></div>
+      <div class="copyrow" style="margin-top:10px"><button id="copyPE" type="button">Copy sd25-pe prompt</button><span class="small" id="copiedPE">File: prompt-sd25pe-final.txt</span></div></div>
+  </div>
+  <div class="prompt" style="margin-top:12px">
+    <div class="part"><h3>What sd25-pe changed, rule by rule</h3><div style="font-size:14.5px"><ol style="margin:0;padding-left:20px">
+      <li><b>Compatibility gate: not triggered.</b> This is a storyboard/reference task: Image 1 sets shot order and blocking, and Video 1 is one 4.5 s clip used as the final shot inside a 30 s story. That is ordinary reference-based generation, not a locked task whose ratio or duration conflicts with the output, so the prompt carries no compatibility sentence.</li>
+      <li><b>One role per asset, by upload order:</b> each of Image 1-6, Video 1 and Audio 1-3 gets one line and what not to take: the storyboard's line-art style and placeholder figures, the words in Audio 2 and 3 (timbre only). Image 3 gives only face, hair and clothes; the room comes from Image 4. Image 5 has one role: the shopper's face, hair and clothes only. Her bedroom is described in words in 【Subjects】 and the 13 s shot line, not taken from Image 5. Video 1 has one role: the final shot, picture and its own audio, which already says the end line. It is no longer named as Scout's voice reference; Scout's voice is described in words only.</li>
+      <li><b>Unused assets:</b> none. All 10 uploads have a role (the bullet-time and high-flip clips on the shot list are inspiration only and are not uploaded), so no 【Unused Assets】 block is needed.</li>
+      <li><b>Dialogue ledger:</b> every line is in {}, with its speaker and "in English" on each line, as the skill asks (no blanket declaration). Listeners keep their mouths closed, named at 6 s, 8 s and 13 s. The end line is not written as dialogue: Video 1's own audio says it, so it is spoken once, by one voice.</li>
+      <li><b>Sound marks:</b> music in (), the ka-ching, pop and whoosh in &lt;&gt;; the pop and whoosh come from our own shot list. No subtitles.</li>
+      <li><b>Parameters kept out:</b> no ratio, duration, resolution or sound toggle in the text (9:16, 30 s, 480p and audio on are set on the request). Timestamps are ours, whole seconds, continuous 0-30.</li>
+      <li><b>Storyboard:</b> 12 panels (limit 15), reading order stated, each panel gets its shot line.</li>
+    </ol></div></div>
+    <div class="part"><h3>Kept from ours on purpose</h3><div style="font-size:14.5px"><ul style="margin:0;padding-left:20px">
+      <li>The pace line "A new visual every 2-3 seconds, fast" and "Each line finishes inside its shot".</li>
+      <li>The owner "with her own swimwear in hand or within reach" in every shot (panel 5 freezes the bikini mid-air, panel 11 shows her sealing a mailer) and the close-framing line, so the product stays in frame.</li>
+      <li>Scout described only from 8 s, so the orb can't appear early.</li>
+      <li>No visual negatives: the one-shopper rule is written as a count ("One shopper only") in 【Subjects】. Negative wording is kept to sound (no other voice at the end, timbre only from Audio 2 and 3) and subtitles, plus what not to take from the storyboard's drawing style.</li>
+    </ul></div></div>
+  </div>
+  <textarea class="raw" id="rawPE" readonly aria-hidden="true">【Generation Goal】
+Generate a photoreal, full-colour story ad. A bikini-store owner gets a refund and is about to post a discount when Scout, a floating lime orb, freezes time and shows her a shopper who is just waiting for that discount.
+
+【Reference Asset Roles】
+Image 1 is a 12-panel line-art storyboard. Read it left to right, top to bottom, one panel per shot below. Use it only for shot order, blocking and what each person holds; do not adopt its line-art style or its placeholder figures.
+Image 2 is the refund notification on her phone: show it word for word.
+Image 3 is the owner: use only her face, hair and clothes.
+Image 4 is her studio: use only its space, props and daylight; it is the room for every owner shot.
+Image 5 is the shopper: use only her face, hair and clothes.
+Image 6 is the new-order notification on her phone: show it word for word.
+Video 1 is the final shot: reproduce its picture and its own audio as they are; that audio already says Scout's end line.
+Audio 1 is the order sound effect.
+Audio 2 is the owner's voice timbre only; do not use its words.
+Audio 3 is the shopper's voice timbre only; do not use its words.
+
+【Subjects】
+The owner (Image 3) appears only in her studio (Image 4), with her own swimwear in hand or within reach and the same face, hair and clothes in every shot.
+One shopper only (Image 5), seen only in her own sunny bedroom, with a beach bag and a coral bikini on the bed, 13-21s.
+Scout is one glowing lime orb with white sound bars, first seen at 8s. Its voice is calm and warm.
+
+【Event Script】
+Follow the storyboard; each shot adds only what the panel can't show.
+
+0-2s | Panel 1: The notification from Image 2 drops in with &lt;the order sound from Audio 1&gt;.
+
+2-4s | Panel 2:
+The owner, in English (annoyed but disappointed): {Oh, for... A refund.}
+
+4-6s | Panel 3:
+The owner, in English (flat, disappointed): {Sales are so low this week.}
+
+6-8s | Panel 4: Room sound drops away; her lips stay closed.
+The owner, in English (V.O., inner voice): {Maybe it's time for a discount.}
+
+8-11s | Panel 5: Bullet time: everything freezes and the camera arcs around her. Scout pops in by her shoulder with a soft &lt;pop&gt;. Her mouth stays closed.
+Scout, in English (calm, a little playful): {Not yet. There's something you don't know.}
+
+11-13s | Panel 6: She turns to the orb, curious. At 12s the camera rises and flips overhead with a &lt;whoosh&gt;, landing in the shopper's bedroom at 13s.
+
+13-17s | Panel 7: The shopper keeps packing, her mouth closed.
+Scout, in English (curious, friendly): {You left the Sunset bikini in your cart three times. What stopped you?}
+
+17-21s | Panel 8:
+The shopper, in English (casual, matter-of-fact): {You run a discount every week. I'm just waiting for it.}
+
+21-23s | Panel 9: Back in the studio.
+The owner, in English (dawning, wry): {I'm training them to wait.}
+
+23-24s | Panel 10: One finger deletes the discount; the form breaks apart.
+The owner, in English (decided): {Noted.}
+
+24-26s | Panel 11: Later that week, golden light. The notification from Image 6 lands with &lt;the order sound from Audio 1&gt;.
+The owner, in English (relieved, smiling): {Glad I asked.}
+
+26-30s | Panel 12: Video 1 as it is: the orb becomes the "o" of the Scout wordmark, and Video 1's own audio carries Scout's end line; no other voice is added.
+
+【Camera and Pace】
+Hard cuts between shots, except the bullet-time arc at 8s and the overhead flip at 12s. A new visual every 2-3 seconds, fast, smooth, stabilised camera. Talking shots are close-ups; her hands and the swimwear fill the frame. Each line finishes inside its shot.
+
+【Look and Sound】
+Bright daylight, sand and sea-blue colours. (Light upbeat music, lower under speech.) Dialogue strictly as written; whoever is not speaking keeps their mouth closed. No subtitles appear on screen.</textarea>
+</section>
+
+<section id="shots">
+  <h2><span class="n">05</span>Shot list</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Panel</th><th>Time</th><th>Shot size</th><th>Angle</th><th>Movement</th><th>Transition</th><th>Sound</th><th>Line</th><th>Inspired by</th></tr></thead>
+    <tbody>
+<tr><td><img class="th" src="a/p/p1.png" alt="Panel 1"><span class="pn">P1</span></td><td class="mono">0–2s</td><td>Extreme close-up (macro)</td><td>High, looking down</td><td>Locked, slight push</td><td>Opens cold</td><td>Audio 1 ka-ching, but it's a refund</td><td class="line">—</td><td class="insp">—</td></tr>
+<tr><td><img class="th" src="a/p/p2.png" alt="Panel 2"><span class="pn">P2</span></td><td class="mono">2–4s</td><td>Close-up</td><td>Eye level</td><td>Steady</td><td>Hard cut</td><td>Room tone</td><td class="line">Owner (annoyed but disappointed): Oh, for… A refund.</td><td class="insp">—</td></tr>
+<tr><td><img class="th" src="a/p/p3.png" alt="Panel 3"><span class="pn">P3</span></td><td class="mono">4–6s</td><td>Medium close-up</td><td>Eye level, to lens</td><td>Locked</td><td>Hard cut</td><td>Room tone</td><td class="line">Owner (flat): Sales are so low this week.</td><td class="insp">—</td></tr>
+<tr><td><img class="th" src="a/p/p4.png" alt="Panel 4"><span class="pn">P4</span></td><td class="mono">6–8s</td><td>Over-the-shoulder</td><td>Behind, slightly high</td><td>Slow push</td><td>Hard cut</td><td>Room tone drops, close-mic</td><td class="line">Owner V.O., lips closed: Maybe it&#x27;s time for a discount.</td><td class="insp">—</td></tr>
+<tr><td><img class="th" src="a/p/p5.png" alt="Panel 5"><span class="pn">P5</span></td><td class="mono">8–11s</td><td>Medium shot</td><td>Eye level</td><td>Bullet-time arc around the frozen moment</td><td>Freeze (continuous move)</td><td>Soft pop as the orb lands</td><td class="line">Scout: Not yet. There&#x27;s something you don&#x27;t know.</td><td class="insp"><a href="a/preset-bullet-time.mp4" target="_blank">Higgsfield Viral · <b>Bullet time</b></a> (time freezes, sweeping camera arc)</td></tr>
+<tr><td><img class="th" src="a/p/p6.png" alt="Panel 6"><span class="pn">P6</span></td><td class="mono">11–13s</td><td>Close-up, reverse angle</td><td>Eye level</td><td>11–12 s she turns; 12 s rise + overhead flip, lands at 13 s</td><td>High flip into the bedroom (continuous move)</td><td>Whoosh</td><td class="line">—</td><td class="insp"><a href="a/preset-high-flip.mp4" target="_blank">Higgsfield Viral · <b>High flip</b></a> (camera rises and flips overhead onto a new person and place)</td></tr>
+<tr><td><img class="th" src="a/p/p7.png" alt="Panel 7"><span class="pn">P7</span></td><td class="mono">13–17s</td><td>Medium shot</td><td>45° side</td><td>Slow track</td><td>Lands from the flip</td><td>Bedroom ambience</td><td class="line">Scout: You left the Sunset bikini in your cart three times. What stopped you?</td><td class="insp">—</td></tr>
+<tr><td><img class="th" src="a/p/p8.png" alt="Panel 8"><span class="pn">P8</span></td><td class="mono">17–21s</td><td>Close-up, profile</td><td>Side-on</td><td>Locked</td><td>Hard cut</td><td>Bag rustle</td><td class="line">Shopper (casual): You run a discount every week. I&#x27;m just waiting for it.</td><td class="insp">—</td></tr>
+<tr><td><img class="th" src="a/p/p9.png" alt="Panel 9"><span class="pn">P9</span></td><td class="mono">21–23s</td><td>Medium close-up</td><td>Eye level</td><td>Quick punch-in on the laugh</td><td>Hard cut back</td><td>Room tone</td><td class="line">Owner (dawning, wry): I&#x27;m training them to wait.</td><td class="insp">—</td></tr>
+<tr><td><img class="th" src="a/p/p10.png" alt="Panel 10"><span class="pn">P10</span></td><td class="mono">23–24s</td><td>Over-the-shoulder close-up</td><td>Behind, slightly high</td><td>Locked</td><td>Hard cut</td><td>Key click</td><td class="line">Owner: Noted.</td><td class="insp">—</td></tr>
+<tr><td><img class="th" src="a/p/p11.png" alt="Panel 11"><span class="pn">P11</span></td><td class="mono">24–26s</td><td>Close-up, phone in foreground</td><td>Table level</td><td>Rack focus from phone to her</td><td>Time jump (golden light)</td><td>Audio 1 ka-ching: full-price sale</td><td class="line">Owner (relieved): Glad I asked.</td><td class="insp">—</td></tr>
+<tr><td><img class="th" src="a/p/p12.png" alt="Panel 12"><span class="pn">P12</span></td><td class="mono">26–30s</td><td>End screen</td><td>Front</td><td>Video 1 as is</td><td>Orb becomes the 'o'</td><td>Scout's voice</td><td class="line">Scout: Scout interviews your shoppers for you. Get free early access.</td><td class="insp">—</td></tr>
+
+    </tbody>
+  </table></div>
+  <p class="small" style="margin-top:14px"><b>Inspiration, not uploaded.</b> These two preset clips are only here to show the moves. Do not add them to the render: they would take the video references to 28.5 s, close to the 30 s cap.</p>
+  <div class="presets">
+    <div><video src="a/preset-bullet-time.mp4" controls muted playsinline preload="metadata"></video><p><b>Bullet time</b> (Higgsfield Viral). Time freezes and the camera sweeps around. Used for 8–11 s: her discount moment stops, a tossed bikini hangs in the air, and Scout pops in.</p></div>
+    <div><video src="a/preset-high-flip.mp4" controls muted playsinline preload="metadata"></video><p><b>High flip</b> (Higgsfield Viral). The camera rises, flips overhead and lands on a new person in a new place. Used at 12 s to cross from her studio into the shopper's bedroom, so we feel Scout taking her there instead of being told. The guide asks for a stated trigger point and method <cite>(Camera language → transition shots)</cite>.</p></div>
+  </div>
+</section>
+
+<section id="eval">
+  <h2><span class="n">06</span>Eval: independent judge, round 1, and what changed</h2>
+  <div class="input" style="margin-bottom:14px">
+    <span class="pill">Goal 7.5</span><span class="pill">Guide 7</span><span class="pill">Story 8.5</span><span class="pill">Craft 7.5</span>
+    <span class="cost">Overall 7.5 (before fixes)</span>
+  </div>
+  <div class="tablewrap"><table style="min-width:640px">
+    <thead><tr><th>Must fix</th><th>What I changed</th></tr></thead>
+    <tbody>
+<tr><td>The studio reference (Image 4) had the lime orb baked in, so Scout would likely show up before 8 s.</td><td>New Image 4: a clean studio plate with the orb painted out (gpt_image_2_6 edit, 0.25 cr). Scout is now described only once, at 8 s, as "appears for the first time".</td></tr>
+<tr><td>"Hard cuts only" contradicted the bullet-time arc and the overhead flip.</td><td>Notes now say "Hard cuts between shots, except the bullet-time arc at 8s and the overhead flip at 12s."</td></tr>
+<tr><td>755 words, which works against "the prompt can be simplified".</td><td>Cut to 515 words (66 spoken). Dropped the re-descriptions of the studio, the shopper's earbuds and the bikini on the bed, the "first 1.6 seconds" trim, and every framing note the panels already draw. Kept lines, voices, sound, freeze, flip and time jump. The page's word-count claim is corrected.</td></tr>
+<tr><td>The shopper's 11-word line in 3 s (about 3.7 words per second).</td><td>Her shot is now 17–21 s, 4 s long (2.75 words per second). To keep Scout's 13-word question from getting squeezed, panel 11 went from 3 s to 2 s (one ka-ching plus "Glad I asked"). The end card stays at 4 s.</td></tr>
+<tr><td>The turn plus the flip in 1 s, landing on the shot boundary.</td><td>Panel 6 is now 11–13 s: "11-12s she turns to the orb; at 12s the camera rises and flips, landing at 13s." Timestamps run 0–30 with no gaps.</td></tr>
+<tr><td>The page overclaimed that every owner panel shows swimwear in her hands and the rail behind her.</td><td>Redrew the sheet twice with gpt_image_2_6 (v3, then v4, 0.5 cr). It is still text-free. The rail is now behind her in all 9 owner panels. She holds swimwear in 7 (2, 3, 4, 6, 9, 10, and the frozen bikini in 5). Panel 11 shows a mailer. The claim on the page now says exactly that.</td></tr>
+    </tbody>
+  </table></div>
+  <p class="small" style="margin-top:12px"><b>Nice to have, also done:</b> "never shaky" became "smooth, stabilised camera". The ka-ching is a new 2.0 s file, and the trim instruction is gone. Panel 9 now has a wry closed-mouth half smile, with the top held out by its straps. Panel 2 now has a soft, disappointed frown. Video 1's own sound is settled: it already says the end line (per H158), so the sd25-pe prompt keeps the clip's audio as is. The two preset clips are labelled "inspiration, not uploaded".</p>
+  <p class="small"><b>Spend in that round (on H217, before H219 was filed):</b> 3 gpt_image_2_6 stills = 0.75 credits (H217 total: 5 stills, 1.25 credits). H219 itself spent nothing. No video generated.</p>
+  <p class="small"><b>H219 check 3, fixed:</b> the "not video editing" sentence is gone from the prompt and from 04b: a 4.5 s end-shot clip inside a 30 s storyboard story is ordinary reference generation, not a compatibility conflict. Image 5 now has exactly one role, the shopper's face, hair and clothes; her bedroom is written into the prompt in words. Every upload (Image 1-6, Video 1, Audio 1-3) has one role.</p>
+  <p class="small"><b>H219 check 2, fixed:</b> Image 5 was merged into one line (that still gave it two roles; fixed in check 3 above). Video 1 is the final shot only, no longer Scout's voice reference. The end line is spoken once, by Video 1's own audio, not written again as dialogue. The visual negative "do not add a second shopper" became "One shopper only". The swimwear line now matches the panels (in hand or within reach). Spend is labelled as H217's, the unsourced 380–740 word range is gone, and the first copy button now copies the sd25-pe prompt.</p>
+  <blockquote style="margin:14px 0 0;padding:12px 16px;border-left:4px solid var(--lime);background:var(--code);border-radius:8px;font-size:14px"><b>Judge's verdict (before fixes):</b> "Strong use of the line-art storyboard technique. The sheet has 12 clean panels with no text, and the simplified v2 was kept while the busy v1 was rejected. The mapping goes in upload order and all three of the guide's steps are present. Timestamps are whole seconds with no gaps, and dialogue uses the "Character's line (emotion): {}" format. Limits pass: 6 images; one 4.5 s video; audio clips of 2.6, 13.4 and 11.4 s, 27.5 s in total. Every story beat is there in 66 clean spoken words. Four things should be fixed before a paid render. The studio reference has the orb baked in, so Scout will likely show up in shots before 8 s. "Hard cuts only" contradicts the bullet-time and flip moves. The prompt is 755 words, over the official range [H219 check 2: no such range is in ByteDance's docs], even though the technique's point is a shorter prompt. Two shots are too tight for their content: the shopper line in 3 s and the turn plus flip in 1 s. The page also overclaims that every owner panel shows her holding swimwear in front of the rail."</blockquote>
+</section>
+
+</div>
+<script>
+(function(){
+  var raw=document.getElementById('raw').value.replace(/\r/g,'');
+  var blocks=raw.trim().split(/\n\s*\n/);
+  var map=blocks[0], sum=blocks[1], notes=blocks[blocks.length-1], plot=blocks.slice(2,-1).join('\n\n');
+  function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+  function fmt(s){
+    s=esc(s);
+    s=s.replace(/\{([^}]*)\}/g,'<span class="say">{$1}</span>');
+    s=s.replace(/\b(Image|Video|Audio) (\d+)\b/g,function(m,k,n){return '<a class="chip" href="#'+k.toLowerCase()+n+'">'+k+' '+n+'</a>';});
+    return s;
+  }
+  document.getElementById('pMap').innerHTML=fmt(map);
+  document.getElementById('pSum').innerHTML=fmt(sum);
+  document.getElementById('pPlot').innerHTML=fmt(plot);
+  document.getElementById('pNotes').innerHTML=fmt(notes);
+  document.getElementById('copy').addEventListener('click',function(){
+    var done=function(){document.getElementById('copied').textContent='Copied.';};
+    var pe=document.getElementById('rawPE').value.replace(/\r/g,'');
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(pe).then(done,fallback);}else{fallback();}
+    function fallback(){var t=document.getElementById('rawPE');t.select();try{document.execCommand('copy');done();}catch(e){}}
+  });
+})();
+</script>
+<script>
+(function(){
+  var raw=document.getElementById('rawPE').value.replace(/\r/g,'');
+  function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+  var t=esc(raw);
+  t=t.replace(/\{([^}]*)\}/g,'<span class="say">{$1}</span>');
+  t=t.replace(/\b(Image|Video|Audio) (\d+)\b/g,function(m,k,n){return '<a class="chip" href="#'+k.toLowerCase()+n+'">'+k+' '+n+'</a>';});
+  t=t.replace(/(【[^】]*】)/g,'<b>$1</b>');
+  document.getElementById('pPE').innerHTML=t;
+  var ro=document.getElementById('raw');if(ro){var u=esc(ro.value.replace(/\r/g,''));u=u.replace(/\{([^}]*)\}/g,'<span class="say">{$1}</span>');u=u.replace(/\b(Image|Video|Audio) (\d+)\b/g,function(m,k,n){return '<a class="chip" href="#'+k.toLowerCase()+n+'">'+k+' '+n+'</a>';});document.getElementById('pOurs').innerHTML=u;}
+  document.getElementById('copyPE').addEventListener('click',function(){
+    var done=function(){document.getElementById('copiedPE').textContent='Copied.';};
+    function fallback(){var x=document.getElementById('rawPE');x.select();try{document.execCommand('copy');done();}catch(e){}}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(raw).then(done,fallback);}else{fallback();}
+  });
+})();
+</script>
+</body>
+</html>

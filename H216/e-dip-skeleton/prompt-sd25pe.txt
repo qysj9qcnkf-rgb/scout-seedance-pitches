@@ -1,0 +1,38 @@
+【Generation Goal】
+Generate a realistic, warm short film in two homes. The core subjects are a shopper and the owner of the candle brand Ember & Fig, and the principal event is a sale lost to one unanswered question: at night the shopper abandons a candle because nothing says whether it is safe for her cat; later, in her sunlit studio, the owner decides to discontinue that candle until Scout, a glowing lime orb, stops her guess. Please note that this is not video editing.
+
+【Reference Asset Roles】
+@Image1 is used for the shopper's facial features, dark-brown bob with bangs and cream knit cardigan, and for her dim living room at night with the side table, laptop, white mouse, lit amber candle and grey tabby cat.
+@Image2 is used for the only screen on the shopper's laptop, the Fig & Cedar product page, with its layout and words unchanged.
+@Image3 is used for the owner's facial features, auburn side braid and rust knit sweater; do not use the image background.
+@Image4 is used for the owner's sunlit candle studio: amber jar shelves, brick wall, wooden packing table, kraft mailers, laptop and the lit three-wick Fig & Cedar jar.
+@Image5 is used for the only screen on the owner's laptop, her product list with the Fig & Cedar row outlined in red, with its layout and words unchanged.
+@Image6 is used for Scout's shape and colour: a glowing lime disc with five dark vertical sound bars and a thin lime ring; do not use its lettering before the end screen.
+@Video1 is used as the only reference for camera movement, shot rhythm, shot-size changes, subject motion trajectory and camera blocking from 0 to 25 seconds, preserving its shot order and pacing; do not use its people, faces, rooms, phones, screens, cards or text.
+@Video2 is used for the end screen's picture, motion and words from 25 seconds to the end, and for Scout's voice quality in every Scout line.
+@Audio1 is used for the shopper's inner-voice quality, pace and emotion; do not use its words.
+@Audio2 is used for the owner's voice quality, pace and emotion; do not use its words.
+
+【Subjects and Relationships】
+The shopper maps to @Image1 and only ever appears in her own living room with her cat. The owner maps to @Image3 and only ever appears in the studio from @Image4. The two women never share a room. Scout maps to @Image6 and is the only thing that crosses between the two homes. The shopper's laptop shows only @Image2; the owner's laptop shows only @Image5.
+
+【Event Script】
+0-2s: Macro on the shopper's hand on the white mouse; the cursor glides to Add to cart on @Image2. <soft mouse clicks> <a quiet room at night>
+2-4s: The camera pulls back to the shopper on her sofa, her hand on the mouse beside the laptop on the low side table, the candle burning, the cat walking along the sofa behind her. Her lips stay closed. In American English, pleased and soft, the shopper's inner voice: {Ooh. That's the one.}
+4-6s: The camera pushes into her screen as she scrolls to the Burn time, Size and Wax rows, with nothing about pets. Her lips stay closed. In American English, unsure, the shopper's inner voice: {This one... safe for my cat?}
+6-7s: Five flash cuts: the Wax row; the Burn time row; her finger stopping above the mouse button; her eyes lifting from the screen; the cat in soft focus behind her stepping past the lit jar. <five quick soft whooshes>
+7-9s: Close on her face lit by the screen; her brows tighten slightly and she lowers the laptop lid. Her lips stay closed. In American English, let down, the shopper's inner voice: {It doesn't say anywhere. Guess not.} <a soft lid click>
+9-11s: In one continuous move, the camera lifts off the closed laptop, glides out of her dark window and rises over the city rooftops while the night sky turns to morning. <a long rising whoosh> (a soft, warm acoustic guitar bed begins)
+11-12s: Hard cut to a wide shot in the sunlit studio: the owner at the packing table beside her laptop and the burning Fig & Cedar jar. In American English, puzzled, the owner says: {Huh. Three sold?}
+12-15s: The camera pushes in on her and her laptop showing @Image5. In American English, half-laughing, the owner says: {I thought Fig and Cedar would sell way more.}
+15-18s: Close on her hands lifting the burning jar off the table; then she looks up. In American English, with a small sigh, the owner says: {Okay. Nobody wants it. Guess I'm discontinuing it.}
+18-19s: Close on the jar in her hands as a small glowing lime orb with pulsing sound bars rises out of the candle smoke. In American English, calm and friendly, Scout says: {Wait.} <a soft chime>
+19-21s: Whip pan to her face, front on, the jar in both hands, the orb beside her cheek; her lips stay closed while she listens. In American English, calm and friendly, Scout says: {Don't guess. Your shoppers know why.}
+21-22s: Insert: the orb streaks into the shopper's dim living room and settles beside her candle, the cat curled up nearby. In American English, warm, Scout says: {I'll ask them.} <a soft whoosh>
+22-23s: Insert: the shopper's phone on the side table lights up with a lime glow and pulsing sound bars. <a gentle ring>
+23-25s: Punch in on the owner relighting the three wicks and setting the jar back down, a small hopeful smile. (the warm guitar bed lifts)
+25-30s: The three flames merge into the lime orb, which becomes the "o" of the Scout end screen from @Video2. In American English, calm and friendly, Scout says: {Scout interviews your shoppers for you. Get free early access.}
+At the end: the owner's jar is lit again on her table, and the end screen holds as in @Video2.
+
+【Maintain Consistency】
+Keep exactly two women, each face, hair and outfit, each home and the Fig & Cedar jar stable. The shopper's lips stay closed throughout; only her inner voice is heard. Scout's voice comes only from the orb and the end screen. Each line finishes inside its time segment. No subtitles appear on screen, and no on-screen words appear except those in @Image2, @Image5 and @Video2.

@@ -1,0 +1,33 @@
+Use Images 1 to 10 in order as keyframes. Each keyframe sets the composition, room, props and on-screen text of its own time range; move naturally from one keyframe to the next.
+Image 11 is the owner: take only her face and hair. Her voice takes only timbre, accent and pace from Audio 1.
+Image 12 is the shopper: take only her face and hair. Her voice takes only timbre, accent and pace from Audio 2.
+Scout is the glowing lime-green orb in Images 4, 5 and 6. Scout's voice comes from Video 1.
+Audio 3 is the order sound: play it exactly, at 0s and again at 23s.
+Video 1 is the ending: play it exactly as it is.
+
+A Shopify bikini-store owner about to post a discount is stopped by Scout, a floating lime orb, which freezes time and shows her a shopper's call that changes her mind; a bright, slightly playful live-action ad.
+
+0-2s (reference: Image 1): Macro on her phone. Audio 3 rings as the "Refund issued" banner slides in.
+2-4s (reference: Image 2): Hard cut. She reads the phone and deflates.
+Owner's line (flat, dry sarcasm): {Oh, great. A refund.}
+4-6s (reference: Image 2): Quick punch-in to a close-up; she looks into the lens.
+Owner's line (wry, tired): {Sales are so low this week.}
+6-8s (reference: Image 3): Hard cut over her shoulder. The room tone fades; her lips stay closed.
+Owner (V.O., inner voice, tempted, close-mic): {Maybe it's time for a discount.}
+8-10s (reference: Image 4): Everything freezes and the music stops. With a soft pop, Scout appears. Only the camera moves, gliding slowly around the frozen moment.
+Scout's line (calm, playful): {Not yet.}
+10-12s (reference: Image 5): Reverse angle: she turns and looks at the orb, surprised and curious.
+Scout's line (warm, confident): {There's something you don't know.}
+12-15s (reference: Image 6): A fast push into the orb; its lime light fills the frame and opens, in one continuous move, onto the shopper on a call.
+Scout's line (curious, precise): {The Sunset bikini. Three times in your cart. What stopped you?}
+15-18s (reference: Image 7): Close-up: she shrugs, smiling.
+Shopper's line (casual, easy): {You run a discount every week. I'm just waiting for it.}
+18-21s (reference: Image 8): Hard cut back to the studio: the Sunset bikini in her hands, a rueful half-smile.
+Owner's line (realising, quietly amused): {I'm training them to wait.}
+21-23s (reference: Image 9): Close-up: she clicks Delete on the discount.
+Owner's line (decisive, light): {Noted.}
+23-25s (reference: Image 10): Audio 3 rings as the "New order" banner lands; she speaks right on the bell.
+Owner's line (relieved, smiling): {Glad I asked.}
+25-30s (reference: Video 1): Video 1 plays exactly as it is, with Scout's line from it: {Scout interviews your shoppers for you. Get free early access.} Its last frame holds until 30s.
+
+Live action, real skin, natural daylight. Hard cuts, a new visual every 2 to 3 seconds, smooth, stabilised and premium. Each spoken line finishes inside its own time range. Exactly three voices: the owner (Audio 1), the shopper (Audio 2) and Scout (Video 1). Light upbeat music, silent during the freeze, lower under speech. Generate dialogue strictly as written; do not add or remove lines. No subtitles.

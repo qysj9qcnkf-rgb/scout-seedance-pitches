@@ -1,0 +1,29 @@
+[Reference assets]
+Image 1 is the shopper: her face, bob with bangs, cream cardigan, and her night living room: lamp, sofa, lit candle jar, white mouse, grey tabby cat.
+Image 2 is the Ember & Fig product page on the shopper's laptop screen. Copy its text exactly, only on her screen.
+Image 3 is the owner of Ember & Fig: use only her face, auburn side braid and rust knit sweater. Do not use the brick wall or the black machine behind her.
+Image 4 is the owner's studio: brick wall, shelves of amber candle jars, wooden packing table, kraft mailers, warm morning sun from the left. Do not use its dark laptop screen.
+Image 5 is the Shopify admin on the owner's laptop screen. Copy its text exactly, including the red Fig & Cedar row, only on her screen.
+Image 6 is the Fig & Cedar candle: a wide amber three-wick jar with a blank kraft label.
+Image 7 is Scout: a glowing lime #D1FB18 orb with five dark sound bars and a thin lime ring. Use its shape and colour only.
+Video 1 is the end screen: use its wordmark, its talking "o" and Scout's calm female voice, only in the last shot.
+Audio 1 is the shopper's voice: use only its timbre, pace and soft tone.
+Audio 2 is the owner's voice: use only its timbre, warmth and pace.
+
+[Story]
+At night a woman at home is one click from buying a candle, wonders if it is safe for her cat, finds no answer and leaves; next morning its maker reads the low sales as nobody wanting it, until Scout's orb tells her not to guess. Live-action, warm, close framing, hard cuts, one overhead flip.
+
+[Shots]
+0-3s: [Macro close-up, high angle, slow push in] The shopper's hand on the white mouse <click, click>; behind it the laptop shows Image 2, the cursor gliding to "Add to cart". The candle flickers beside it. Shopper (V.O., pleased, lips closed): {Okay. Fig and Cedar. This one.}
+3-5s: [Close-up, eye level, static] Her face lit by the screen, lips closed. Behind her the grey tabby cat walks along the back of the sofa; she glances back at it. <a soft cat trill>
+5-8s: [Medium close-up across the laptop lid, slow push in] Her hand stops on the mouse; she scrolls the description, brows tightening. Shopper (V.O., worried): {Hmm. Is this one safe for my cat?}
+8-10s: [Extreme close-up on her eyes, screen glow sliding across them] Shopper (V.O., quiet, let down): {It doesn't say anywhere on the page.}
+10-12s: [Macro close-up on mouse and screen] She clicks the tab closed <click>; the screen goes dark; the candle flame bends. Shopper (V.O., small shrug): {Guess not.}
+12-14s: [High flip] The camera rises above her, flips overhead in one move <whoosh> and lands right side up in the owner's sunlit studio from Image 4.
+14-17s: [Close-up, eye level, slow push in] The owner at her packing table, one hand turning the lit Fig & Cedar jar, eyes on her laptop showing Image 5. Owner (puzzled, warm): {Huh. Thought Fig and Cedar would sell way more.}
+17-20s: [Close-up, slight low angle] She lifts the jar in both hands with a sad half-smile. Owner (dry, resigned): {My favourite, too. Guess I'm discontinuing it.}
+20-24s: [Macro on the three flames, pull back to her face] The flames merge into the glowing lime orb, which rises and hovers between her and the laptop; she stops, eyebrows up. Scout (from the orb, calm, friendly): {Don't guess. Ask your shoppers.}
+24-30s: The orb flies into the lens and becomes the "o" of the Scout wordmark, strictly following Video 1. Scout (calm): {Scout interviews your shoppers for you. Get free early access.} (music lifts and resolves)
+
+[Notes]
+Hard cuts except the flip at 12s, a new visual every 2-3 seconds, never shaky. Each line finishes inside its shot. Exactly three voices: the shopper (Audio 1) only as an intimate close-mic inner voice, her lips closed in every shot; the owner (Audio 2) on camera with lip sync; Scout (Video 1) only from the orb. The shopper's room stays dark and quiet, the cat in the background; the owner's studio is bright and sunlit, her look identical. On-screen text only on the two laptop screens and the end screen. (A soft, warm lo-fi music bed, very low under the voices.) No subtitles.

@@ -1,0 +1,38 @@
+【Generation Goal】
+Generate a live-action story ad for Scout. The owner of the online bikini store Salt & Sun Swim hears a refund and nearly runs a discount, until Scout, a floating lime orb, freezes the moment and shows her the memory of a past call with a shopper who only waits for her next sale; she drops the discount and sells at full price. Please note that this is not video editing.
+
+【Reference Asset Roles】
+Image 1 is used for the owner's face, long dark hair and white linen shirt.
+Image 2 is used for the owner's back view; it is the same woman as Image 1, not a second person.
+Image 3 is used for her studio's layout and light, the setting of every owner shot.
+Image 4 is used only for Scout, the floating lime orb with white sound bars; do not use the empty chair.
+Image 5 is used for the shopper's face, striped T-shirt, earbuds and her sunny bedroom; do not take the coral bikini on her bed.
+Image 6 is used for the refund notification on the owner's lock screen; show its text exactly.
+Image 7 is used for the Shopify discount page on the owner's laptop; show its text exactly.
+Image 8 is used for the call card; show its text exactly.
+Image 9 is used for the new-order notification; show its text exactly.
+Video 1 is used only for the final shot: the orb becoming the "o" of the Scout wordmark, with its text, motion, timing and its audio, which is Scout speaking the end line; do not use it in any earlier shot.
+Audio 1 is the owner's voice quality only.
+Audio 2 is the shopper's voice quality only.
+Audio 3 is the ka-ching sound effect: its first 1.6 seconds, played exactly twice, at 0-2s with Image 6 and at 23-25s with Image 9; never with the orb.
+Audio 4 is Scout's voice quality only, for her lines from 8s to 17s.
+All spoken words come from this prompt, not from the audio.
+
+【Subjects and Relationships】
+Three characters. The shopper is a different woman, a customer of the store, seen only inside Scout's memory of a past call. Scout is only the orb, with no body or face.
+
+【Event Script】
+0-2s: [Extreme close-up, overhead, slow push in] Her phone on the packing table among folded bikinis. <The ka-ching of Audio 3> rings and the notification from Image 6 slides in.
+2-4s: [Close-up, slightly low angle] She snatches the phone up, bikini rails behind her. The owner says in English (annoyed, catching herself mid-word): {Oh, f- a refund.}
+4-6s: [Close-up, eye level, punch in] She looks straight into the lens, a coral bikini in her hand, rails behind her. The owner says in English (disappointed, dry): {Sales are so low this week.}
+6-8s: [Medium shot from behind her, as in Image 2, slow push in toward the laptop] She types on the discount page from Image 7, bikini rails beyond the screen. Her lips stay closed. The owner's inner voice (V.O., English, slightly muffled, close-mic, room sound drops away): {Maybe it's time for a discount.}
+8-11s: [Bullet time: the frame freezes as her finger hovers over "Save discount"; the camera keeps moving, arcing slowly from behind her to her side] The lime orb from Image 4 fades in silently in the air beside her head. She stays frozen, mouth closed. Scout says in English (calm, a little playful): {Not yet. There's something you don't know.}
+11-13s: [Close-up, reverse angle from beside the orb, then a fast push into the orb] She looks at the orb, curious, mouth closed. Inside the orb's glow, like a memory in a glass ball, a small moving picture appears: the shopper from Image 5 in her sunny bedroom, on a call. Scout says in English (calm, matter-of-fact): {I called one of your shoppers.} As the line ends, the camera rushes into the orb, into that picture, with <a soft whoosh>.
+13-17s: [Medium shot, eye level, slow tracking left] Inside the memory, the call replaying: the shopper's sunny bedroom from Image 5, a soft lime glow lingering at the edges of the frame. She packs a beach bag on her bed, earbuds in, half turned away, mouth closed as she listens. The call card from Image 8 floats above her phone on the bed, its waveform moving. Scout, heard as call audio, says in English (curious): {Sunset bikini, in your cart three times. What stopped you?}
+17-20s: [Close-up, side profile, slight push in] Still inside the memory, the lime glow at the frame edges. She folds a towel into the bag without looking up. The shopper says in English (casual, matter-of-fact): {There's a discount every week. I just wait.}
+20-23s: [Close-up, eye level, then a tilt down to her hand clicking Discard] The memory shrinks back into the orb in a lime flash, and we are back with the owner at her laptop, bikini rails behind her. The owner says in English (surprised, half laughing at herself): {I'm training them to wait.} The owner says in English (decided): {Noted.} At the end, her finger has clicked "Discard" on the page from Image 7, with <a soft click>.
+23-25s: [Close-up, eye level, gentle push in] Days later, golden afternoon light in the same studio. She folds the coral Sunset bikini into a kraft mailer as her phone lights up with the notification from Image 9 on <the ka-ching of Audio 3>; she smiles. The owner says in English (relieved, warm): {Glad I asked.} At the end, the bikini is inside the mailer.
+25-30s: [As in Video 1] The sunlit studio fades to black as the orb glides to the centre; then as in Video 1. Scout says in English: {Scout interviews your shoppers for you. Get free early access.}
+
+【Maintain Consistency】
+Live action. Warm window sunlight, sand, coral and sea-blue colours. Keep the owner's face, hair and white linen shirt identical in every owner shot. Hard cuts, a new visual every 2-3 seconds, close framing; the only moves that are not hard cuts are the bullet-time freeze (8-11s), the rush into the orb (end of 11-13s) and the lime flash out of the memory (20s). Each line finishes inside its own shot, no pause longer than a quarter second inside a line. (Light upbeat music, lower under speech, silent during the freeze.) Generate dialogue strictly as written; do not add or remove lines. No subtitles appear on screen.

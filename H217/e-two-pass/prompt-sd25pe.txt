@@ -1,0 +1,30 @@
+【Generation Goal】
+Generate a light, real, slightly playful live-action ad: a bikini-store owner in her sunny home studio gets a refund instead of a sale, decides to run a discount, and is stopped mid-click by Scout, a floating lime orb. Please note that this is not video editing.
+
+【Reference Asset Roles】
+Image 1 is used for the owner's face, long brown hair and white linen shirt. She is the owner of Salt & Sun Swim, a small online bikini store on Shopify.
+Image 2 is used for her studio: the bikini rails, folded swimsuits, kraft boxes, wooden table, the window with palm trees and the bright daylight. Do not reuse its empty-chair composition.
+Image 2 is also used for Scout's look: one glowing lime orb with a white sound-wave mark. Scout is not in the room before 10s.
+Image 3 is used for her phone's lock screen with the refund notification: show it exactly, word for word.
+Image 4 is used for the Shopify discount page on her laptop screen: show it exactly.
+Use Image 5 as the last frame.
+This last frame defines the owner seated at her laptop with Image 4 open, her head turned toward Scout floating in the air beside her, her lips closed, the bikini rails and the window behind her.
+Video 1 is used only for Scout's voice. Do not show any of its visuals, text or graphics.
+Audio 1 is used for the owner's voice: take only its timbre, accent, pace and emotion; she says only the lines written below.
+Audio 2 is used for the notification sound: use it exactly.
+
+【Subjects and Relationships】
+The owner maps to Image 1 and is the only person in this video. Every shot of her takes place in the studio from Image 2, with bikini rails, folded swimsuits and kraft boxes around her. Her phone and her laptop showing Image 4 sit on the same wooden table. Scout is one lime orb that floats in the air near her.
+
+【Event Script】
+0-2s: Macro close-up, overhead, locked-off. Her phone lies face up on the table among folded bikinis. The notification from Image 3 slides in with <the notification sound of Audio 2>.
+2-4s: Medium close-up, eye level. She picks up the phone, reads it, and her face drops. In English, annoyed, then deflated, the owner says: {Oh f... a refund.} She bites the word off after the "f" and never says the rest of it.
+4-6s: Close-up, front angle, slow push in. She lowers the phone and looks straight into the camera, a bikini rail behind her. In English, flat, a little disappointed, the owner says: {Sales are so low this week.}
+6-9s: Medium shot from behind her right shoulder, slow push in toward the laptop showing Image 4. She types the discount, pushing a coral bikini aside with her other hand, her lips closed. In English, as her inner voice off-screen, close and quiet, the owner says: {Maybe it's time for a discount.} The room sound drops away while she thinks.
+9-10s: Extreme close-up, side angle, bullet time: time freezes, her finger stops just above the Save discount button on Image 4, a bikini she tossed hangs still in mid-air, and the camera slowly arcs around her hand while nothing else moves. <One soft whoosh.>
+10-12s: Medium close-up, eye level, time still frozen. Scout, the lime orb from Image 2, pops into the air beside her left shoulder <with a soft pop>. In English, warm, quick, a little playful, Scout says: {Not yet. There's something you don't know.} The owner stays frozen with her lips closed.
+12-13s: Reverse angle matching Image 5. Time unfreezes; she turns her head to the orb, which glows brighter <with a soft chime>. In English, surprised, soft, the owner says: {Hm?}
+13-14s: Hold on Image 5: her lips closed, eyes on the orb, Image 4 still open on the laptop, only quiet room sound. End exactly on Image 5.
+
+【Maintain Consistency】
+Live action, close handheld-steady shots, bright natural daylight from the window, warm sand, coral and sea-blue colours; she is always surrounded by her swimwear. Keep the owner's face, hair and white linen shirt, the one studio from Image 2, one phone, one laptop and one orb. The owner and Scout each remain one continuous instance, never duplicated or split. Exactly two voices: hers (Audio 1) and Scout's (Video 1). Generate dialogue strictly as written; do not add or remove lines. Every line finishes inside its own shot, with no pause longer than half a second inside a line. No background music. No subtitles on screen.

@@ -1,0 +1,46 @@
+【Generation Goal】
+A live-action vertical ad: a swimwear store owner, about to run a discount on a slow week, is stopped by Scout, a small lime orb that flies to one of her shoppers and brings back the real reason; she deletes the discount and a full-price order arrives.
+
+【Reference Asset Roles】
+@Video1 is a coarse-blockout reference for 0-25 seconds. Use it only for camera position, camera movement, shot sizes, cuts and pacing, shot for shot in the same order; do not adopt its blockout appearance, materials, or scene.
+In @Video1, the studio figure is the owner; the figure at the counter (11-19 s) is the shopper; the small bright dot is Scout; the flat light-grey panels are the laptop screen and the call card; the round shape at 10 s is a skylight in the shopper's roof; the grey block in the closing close-up is the coral swimsuit.
+@Image1: the refund notification, word for word.
+@Image2: the owner; do not use the image background.
+@Image3: the owner's studio; do not use any people in the image.
+@Image4: the store dashboard. @Image5: the discount page.
+@Image6: Scout; do not use the image background.
+@Image7: the shopper; do not use the image background.
+@Image8: the call card, word for word.
+@Image9: the new-order notification, word for word.
+@Video2: the final shot, reproduced exactly, and Scout's voice quality.
+@Audio1: the owner's voice quality. @Audio2: the shopper's voice quality. @Audio3: the order sound.
+
+【Event Script】
+0-2s: Macro on her phone on the table among folded bikinis; @Image1 slides in <@Audio3>. Fast pull back to a medium as she snatches it up.
+The owner's line (annoyed, deflated): {Oh, come on. A refund.}
+2-4s: Medium front, she looks into the lens.
+The owner's line (disappointed, honest): {Sales are so low this week.}
+4-6s: Slow push in past her until @Image4 fills the frame, the sales line sliding down.
+6-7s: Five flash cuts, no words: trackpad, typing, @Image5, the slider to 30%, her finger over Save. <whooshes>
+7-9s: Medium front; she sits back, lips closed, the room sound dropping away. Her phone lights up and Scout lifts off it.
+The owner's line (V.O., tempted): {Maybe it's time for a discount.}
+9-11s: Time stops; a tossed swimsuit hangs in the air. The camera follows Scout past the laptop, out the window and over a sunny seaside town toward one round skylight.
+Scout's line (calm, a little playful): {Not yet. There's something you don't know.}
+11-12s: Scout dives through the skylight; wide on the shopper in her sunny bedroom, packing a beach bag. Her phone rings once.
+12-15s: Push in as she taps an AirPod; @Image8 rises off her phone and hangs in the air.
+Scout's line (curious): {Sunset bikini, three times in your cart. What stopped you?}
+15-18s: Over her shoulder, the card floating in front of her; as she answers, the card tilts toward the lens.
+The shopper's line (casual, matter-of-fact): {You run a discount every week. I'm just waiting.}
+18-19s: Back in the studio, over the owner's shoulder, the card floats beside her laptop. <a soft tick> Time restarts; the swimsuit drops.
+19-21s: Whip pan to a close-up: she lifts the coral Sunset swimsuit on its hanger, half smiling.
+The owner's line (realising, wry): {I'm training them to wait.}
+21-22s: Her hands delete the discount on @Image5.
+The owner's line (decided, light): {Noted.}
+22-23s: Later that week, golden light: her phone screen fills the frame; @Image9 slides in <@Audio3>.
+23-25s: Punch in to a close-up; she leans toward the lens with the coral swimsuit, smiling.
+The owner's line (relieved, pleased): {Full price. Glad I asked.}
+25-30s: Reproduce @Video2 exactly.
+Scout's line (warm): {Scout interviews your shoppers for you. Get free early access.}
+
+【Maintain Consistency】
+Every studio shot uses @Image3 with the owner from @Image2, one person per shot. Bright daylight, warm sand and sea-blue colours. Preserve the cuts and pacing of @Video1. Every line finishes inside its own shot. (Light upbeat music, lower under speech.) English. Generate dialogue strictly as written; do not add or remove lines. No subtitles.

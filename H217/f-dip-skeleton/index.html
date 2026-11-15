@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dip Skeleton Brief</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f5f1;--panel:#ffffff;--ink:#16171a;--muted:#62646b;--line:#e3e1da;--lime:#d1fb18;--limeInk:#2f3a00;--accent:#0b0c0e;--chip:#eef7c8;--chipInk:#334000;--code:#f1f0ea;--warn:#b4441b}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e0f11;--panel:#17181b;--ink:#eceae4;--muted:#9a9ca3;--line:#2a2b30;--accent:#d1fb18;--chip:#2b3410;--chipInk:#e3ff7a;--code:#1d1e22;--warn:#ff8a5b}}
+:root[data-theme="dark"]{--bg:#0e0f11;--panel:#17181b;--ink:#eceae4;--muted:#9a9ca3;--line:#2a2b30;--accent:#d1fb18;--chip:#2b3410;--chipInk:#e3ff7a;--code:#1d1e22;--warn:#ff8a5b}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 Inter,system-ui,sans-serif}
+.wrap{max-width:1100px;margin:0 auto;padding:28px 16px 80px}
+h1,h2,h3{font-family:"Space Grotesk",Inter,sans-serif;letter-spacing:-.01em;margin:0}
+h1{font-size:clamp(28px,5vw,44px);line-height:1.08}
+h2{font-size:22px;margin:44px 0 12px;padding-top:8px;border-top:1px solid var(--line)}
+h3{font-size:16px;margin:18px 0 8px}
+p{margin:8px 0}
+.kicker{font:600 12px/1 "Space Grotesk";letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.pitch{font-size:19px;max-width:820px;margin:14px 0}
+.lime{background:var(--lime);color:#0b0c0e;padding:0 .25em;border-radius:4px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.box p:first-child{margin-top:0}
+.cite{color:var(--muted);font-size:13px}
+.input{font:600 15px/1.5 "Space Grotesk";background:var(--accent);color:var(--bg);border-radius:12px;padding:12px 16px;display:flex;flex-wrap:wrap;gap:6px 18px}
+.assets{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
+.asset{margin:0;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px;scroll-margin-top:12px}
+.asset:target{outline:3px solid var(--lime)}
+.asset img,.asset video{width:100%;height:220px;object-fit:contain;background:var(--code);border-radius:8px;display:block}
+.asset audio{width:100%;margin:12px 0}
+.asset figcaption{font-size:12.5px;color:var(--muted);margin-top:6px}
+.asset figcaption b{color:var(--ink)}
+.mid{display:block;font:11px ui-monospace,Menlo,monospace;margin-top:4px;opacity:.8}
+.tag{font:600 12px ui-monospace,Menlo,monospace;color:var(--chipInk);background:var(--chip);display:inline-block;border-radius:6px;padding:1px 6px;margin-bottom:6px}
+.chip{font:600 12px ui-monospace,Menlo,monospace;background:var(--chip);color:var(--chipInk);border-radius:6px;padding:0 5px;text-decoration:none;white-space:nowrap}
+.chip:hover{background:var(--lime);color:#0b0c0e}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+.tabs button{font:600 13px Inter;border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:7px 12px;border-radius:999px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+.part{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:10px 0}
+.part h4{margin:0 0 6px;font:600 12px "Space Grotesk";letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.part pre{white-space:pre-wrap;word-wrap:break-word;margin:0;font:13.5px/1.6 Inter,sans-serif}
+.copy{font:600 13px Inter;background:var(--lime);color:#0b0c0e;border:0;border-radius:10px;padding:9px 14px;cursor:pointer}
+textarea.raw{display:none}
+.tbl{width:100%;overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{text-align:left;vertical-align:top;padding:9px 10px;border-bottom:1px solid var(--line)}
+th{font:600 12px "Space Grotesk";letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--code)}
+.map td.th{width:96px}.map td.th img{width:88px;border-radius:8px;display:block}
+.map td.arrow{font-size:22px;color:var(--muted);text-align:center;width:24px}
+.nopv{font-size:11px;color:var(--muted)}
+.line{margin-top:6px;font-weight:600}.line:empty{display:none}
+.line2{font-weight:600;min-width:180px}.insp{color:var(--muted);min-width:160px}
+.mono{font:600 12.5px ui-monospace,Menlo,monospace}
+.big{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.big video{width:100%;max-height:520px;background:#000;border-radius:12px;display:block}
+.big figure{margin:0}.big figcaption{font-size:13px;color:var(--muted);margin-top:6px}
+.cuts{font:12.5px ui-monospace,Menlo,monospace;background:var(--code);border-radius:10px;padding:10px 12px;overflow-x:auto;white-space:pre}
+.presets{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.presets video{width:100%;height:260px;object-fit:cover;border-radius:10px;background:#000}
+.verdict{border-left:4px solid var(--lime);padding:10px 14px;background:var(--panel);border-radius:0 12px 12px 0}
+ul{padding-left:20px;margin:6px 0}li{margin:3px 0}
+.warn{color:var(--warn);font-weight:600}
+#eval{border:2px dashed var(--line);border-radius:14px;padding:16px;margin-top:44px}
+@media (max-width:700px){.big{grid-template-columns:1fr}.map td.th{width:70px}.map td.th img{width:64px}.asset img,.asset video{height:180px}}
+</style></head>
+<body><div class="wrap">
+
+<div class="kicker">H217 · team F · Seedance 2.5 technique pitch</div>
+<h1>The Dip as the skeleton</h1>
+<p class="kicker" style="margin-top:8px">Motion and rhythm transfer</p>
+<p class="pitch">Your refund story, shot on The Dip's bones: the same macro ka-ching open, the same push-in, the same whip montage, the same orb lift-off, the same card on the call, the same whip to the product and the same punch-in close, in the same 25 seconds. <span class="lime">New people, new store, new words. Same rhythm you already love.</span></p>
+
+<div class="cols">
+ <div class="box"><p><b>Why this technique fits this story.</b> You asked for the refund story "but leverage The Dip for camera motion, rhythm shots". Seedance 2.5 has a reference type built for exactly that: a <i>motion reference</i> that "references motion and dynamic information from videos… action/expression/camera movement" (Prompt guide, <i>Typical multimodal capabilities</i>). Its 3D clay-model example says it in one sentence we reuse almost word for word: "Use the 3D clay-model reference video as the only reference for the entire video's camera movement, shot rhythm, shot-size changes… Strictly preserve the shot order, camera position changes, movement patterns, and pacing" (<i>Prompt examples → Coarse-grained 3D clay-model video</i>).</p></div>
+ <div class="box"><p><b>Why The Dip is turned into a flat grey blockout.</b> The guide says "simple, coarse-grained 3D clay-model video generally works better as a reference" (<i>Reference asset input recommendations</i>) and warns that text in a reference video carries over: "Ensure that the reference video does not contain subtitles. Subtitles in a reference video may override the no-subtitle instruction" (<i>FAQ → Subtitles</i>). So blur alone was not enough: the first version (v1, 14 px blur) still let "birthday candle", the chat bubbles and the jars show through. In v2 every banner, screen, call card, chat bubble, phone, label and jar is painted over with a flat grey panel, frame-timed to its shot. The rest is blurred and cut down to 9 flat tones, so people become simple figures, as the guide recommends. No readable text is left, and all 11 hard cuts still land on the same frame.</p></div>
+ <div class="box"><p><b>Why it fits the 30 s limit.</b> Video refs may total "no more than 30 seconds" (<i>Reference asset input recommendations</i>). The skeleton is 25.0 s and the end screen is 4.5 s, so the total is 29.5 s. The ending gets the last 5 s, and The Dip's own end (flames → orb, 25.1 s) lands exactly where ours starts.</p><p class="cite">Prompt shape: asset mapping → one-sentence summary → detailed plot with integer-second timestamps → additional notes (<i>Basic prompting techniques</i>; <i>Timestamps</i>: "1-second intervals… avoid gaps").</p></div>
+</div>
+
+<h2>Input</h2>
+<div class="input"><span>Text</span><span>+ 9 images</span><span>+ 2 videos (25.0 s + 4.5 s = 29.5 s)</span><span>+ 3 audio (13.4 + 11.4 + 2.6 = 27.5 s)</span><span>Higgsfield seedance_2_5 · omni_reference · draft · 480p · 9:16 · 30 s · audio on</span><span>90 credits (quoted with get_cost, nothing submitted)</span></div>
+<p class="cite">One pass. No extension, no edit pass. Upload order follows first appearance (<i>FAQ → Incorrect character-to-reference mapping</i>): the skeleton first, then the images in the order they enter the film, then the end screen and the voices.</p>
+
+<h2>Reference assets, in upload order</h2>
+<div class="assets"><figure class="asset" id="video1"><div class="tag">&lt;video1&gt;</div><video src="a/video1-dip-skeleton-25s.mp4" controls muted playsinline preload="metadata"></video><figcaption><b>Video 1</b> The Dip, 0–25 s, silent, as a flat grey blockout (v2): every screen, card, banner, label and jar is a flat grey panel; blur and 9 tone steps on the rest. Camera, shot sizes, cuts and pacing only.<span class="mid">v2 upload · media 50655db0 (v1 2820fbdb retired: it leaked text)</span></figcaption></figure><figure class="asset" id="image1"><div class="tag">&lt;image1&gt;</div><a href="a/thumb-image1-refund-banner.jpg" target="_blank"><img src="a/thumb-image1-refund-banner.jpg" alt="Image 1" loading="lazy"></a><figcaption><b>Image 1</b> Refund lock screen (HTML, graphite phone, Monday): exact banner text.<span class="mid">media 84a759a5</span></figcaption></figure><figure class="asset" id="image2"><div class="tag">&lt;image2&gt;</div><a href="a/thumb-image2-owner.jpg" target="_blank"><img src="a/thumb-image2-owner.jpg" alt="Image 2" loading="lazy"></a><figcaption><b>Image 2</b> The owner, Soul 2 face in her own bikini studio.<span class="mid">job 9a8b15e8</span></figcaption></figure><figure class="asset" id="image3"><div class="tag">&lt;image3&gt;</div><a href="a/thumb-image3-studio.jpg" target="_blank"><img src="a/thumb-image3-studio.jpg" alt="Image 3" loading="lazy"></a><figcaption><b>Image 3</b> Her studio, clean plate, no orb (H217 judge lesson).<span class="mid">media 48561c24</span></figcaption></figure><figure class="asset" id="image4"><div class="tag">&lt;image4&gt;</div><a href="a/thumb-image4-admin-low-week.jpg" target="_blank"><img src="a/thumb-image4-admin-low-week.jpg" alt="Image 4" loading="lazy"></a><figcaption><b>Image 4</b> Shopify-style dashboard, a low week, on her laptop.<span class="mid">media 0985c478</span></figcaption></figure><figure class="asset" id="image5"><div class="tag">&lt;image5&gt;</div><a href="a/thumb-image5-discount.jpg" target="_blank"><img src="a/thumb-image5-discount.jpg" alt="Image 5" loading="lazy"></a><figcaption><b>Image 5</b> Shopify-style &#x27;Create discount&#x27; page: SALE30, 30% off. She builds it, then deletes it.<span class="mid">media bbda7354</span></figcaption></figure><figure class="asset" id="image6"><div class="tag">&lt;image6&gt;</div><a href="a/thumb-image6-scout-orb.jpg" target="_blank"><img src="a/thumb-image6-scout-orb.jpg" alt="Image 6" loading="lazy"></a><figcaption><b>Image 6</b> Scout&#x27;s look: the official logo &#x27;o&#x27;, lime disc with five sound bars.<span class="mid">media 1a93fb27</span></figcaption></figure><figure class="asset" id="image7"><div class="tag">&lt;image7&gt;</div><a href="a/thumb-image7-shopper.jpg" target="_blank"><img src="a/thumb-image7-shopper.jpg" alt="Image 7" loading="lazy"></a><figcaption><b>Image 7</b> The shopper, Soul 2, packing a beach bag.<span class="mid">job 6ccc5f17</span></figcaption></figure><figure class="asset" id="image8"><div class="tag">&lt;image8&gt;</div><a href="a/thumb-image8-call-card.jpg" target="_blank"><img src="a/thumb-image8-call-card.jpg" alt="Image 8" loading="lazy"></a><figcaption><b>Image 8</b> Call card in The Dip&#x27;s design, rebuilt with this story: Sunset bikini, added 3 times; &#x27;A discount every week&#x27;.<span class="mid">media 7f9e196a</span></figcaption></figure><figure class="asset" id="image9"><div class="tag">&lt;image9&gt;</div><a href="a/thumb-image9-order-banner.jpg" target="_blank"><img src="a/thumb-image9-order-banner.jpg" alt="Image 9" loading="lazy"></a><figcaption><b>Image 9</b> Full-price new order, $68.00, Friday: the time-passes ka-ching.<span class="mid">media 5bc7a347</span></figcaption></figure><figure class="asset" id="video2"><div class="tag">&lt;video2&gt;</div><video src="a/video2-end-screen.mp4" controls muted playsinline preload="metadata"></video><figcaption><b>Video 2</b> H158 talking &#x27;o&#x27; end screen, 4.5 s. Also Scout&#x27;s voice.<span class="mid">media cae62718</span></figcaption></figure><figure class="asset" id="audio1"><div class="tag">&lt;audio1&gt;</div><audio src="a/audio1-owner-elena.mp3" controls preload="none"></audio><figcaption><b>Audio 1</b> Owner voice, Elena (13 s unrelated read): timbre only.<span class="mid">media e05a2ee1</span></figcaption></figure><figure class="asset" id="audio2"><div class="tag">&lt;audio2&gt;</div><audio src="a/audio2-shopper-serene.mp3" controls preload="none"></audio><figcaption><b>Audio 2</b> Shopper voice, Serene (11 s): timbre only.<span class="mid">media 4b121290</span></figcaption></figure><figure class="asset" id="audio3"><div class="tag">&lt;audio3&gt;</div><audio src="a/audio3-kaching.mp3" controls preload="none"></audio><figcaption><b>Audio 3</b> Ka-ching, 2.6 s. Plays on the refund and on the full-price order.<span class="mid">media 45fb9d1d</span></figcaption></figure></div>
+
+<h2>The special asset: The Dip, cut down to a skeleton</h2>
+<div class="big">
+ <figure><video src="a/video1-dip-skeleton-25s.mp4" controls muted playsinline loop preload="metadata"></video><figcaption><b>Video 1 as sent (v2, media 50655db0):</b> 0–25.0 s, no sound. Flat grey panels over every screen, card, banner, label and jar, then greyscale, 12 px blur and 9 tone steps. Only camera, framing and cut timing come through.</figcaption></figure>
+ <figure><video src="a/dip-original-0-25s-silent.mp4" controls muted playsinline loop preload="metadata"></video><figcaption><b>The Dip 0–25 s, silent, for comparison</b> (H174-real-kaching-3.mp4). This one is not sent: its candles, faces, words and EXAMPLE pills would leak into our film.</figcaption></figure>
+</div>
+<h3>The leak fix, every 0.5 s (v1 left, v2 right)</h3>
+<div class="big"><figure><img src="a/skeleton-sheet-v1-leaky.jpg" alt="v1 blur, text leaks" style="width:100%;border-radius:10px"><figcaption><b>v1, retired:</b> the 14 px blur. "birthday candle" (row 4), the chat bubbles and the jars can still be read.</figcaption></figure>
+<figure><img src="a/skeleton-sheet-v2.jpg" alt="v2 flat blockout" style="width:100%;border-radius:10px"><figcaption><b>v2, sent:</b> flat panels plus tone steps. Figures, panels, a dot, a circle: nothing to copy but the motion.</figcaption></figure></div>
+<h3>Measured cuts (ffmpeg scene detection on H174-real-kaching-3.mp4, 24 fps)</h3>
+<div class="cuts">hard cuts (score ≥ 0.4):  5.79  6.04  6.17  6.42  6.83  15.63  17.83  21.04  22.42  23.17
+soft cuts / whips (0.1–0.3): 5.83  8.58–8.83 (orb leaves the studio)  11.08 (dive lands)  12.17  19.38–19.54 (whip pan)  25.08 (end screen)
+continuous moves found frame by frame: 1.50–1.83 pull back · 3.60–5.79 push in · 8.58–11.08 orb flight
+v2 blockout re-measured (scene > 0.25): 5.79 6.04 6.17 6.25 6.42 6.83 15.63 17.83 21.04 22.42 23.17, the same frames as The Dip.</div>
+<p class="cite">The Dip has 16 shots in 30 s, and the longest stretch with no cut is the 3.5 s call push-in. Our map keeps all 16 slots in the same order.</p>
+
+<h2>Beat-to-beat map: The Dip at t → our shot</h2>
+<div class="tbl"><table class="map"><thead><tr><th>The Dip</th><th>Dip shot (measured)</th><th></th><th>Our shot</th><th>Preview</th></tr></thead><tbody><tr><td class="th"><img src="a/dip-s01.jpg" alt="Dip frame" loading="lazy"></td><td><b class="mono">0.00–1.50</b><br>Macro: phone on the table, banners slide in, ka-ching. Locked camera.</td><td class="arrow">→</td><td><b class="mono">0–2s</b><br>Macro: her phone among folded bikinis, ONE banner lands: Refund issued (Image 1), on the ka-ching.<div class="line">Oh, come on. A refund. (starts on the banner)</div></td><td class="th"><img src="a/preview-0-refund-macro.jpg" alt="our frame" loading="lazy"></td></tr><tr><td class="th"><img src="a/dip-s02.jpg" alt="Dip frame" loading="lazy"></td><td><b class="mono">1.50–1.83</b><br>Fast pull back off the phone to a medium of her (no cut).</td><td class="arrow">→</td><td><b class="mono">0–2s</b><br>Same fast pull back as she snatches the phone up.<div class="line">…A refund. (ends on the pick-up)</div></td><td class="th"><img src="a/preview-1-groan.jpg" alt="our frame" loading="lazy"></td></tr><tr><td class="th"><img src="a/dip-s03.jpg" alt="Dip frame" loading="lazy"></td><td><b class="mono">1.83–3.60</b><br>Medium, front, talking to lens: the hook.</td><td class="arrow">→</td><td><b class="mono">2–4s</b><br>Medium front, to lens, phone in hand.<div class="line">Sales are so low this week.</div></td><td class="th"><img src="a/preview-2-to-lens.jpg" alt="our frame" loading="lazy"></td></tr><tr><td class="th"><img src="a/dip-s04.jpg" alt="Dip frame" loading="lazy"></td><td><b class="mono">3.60–5.79</b><br>Slow push in to the laptop: sales line drops.</td><td class="arrow">→</td><td><b class="mono">4–6s</b><br>Slow push in past her until the dashboard (Image 4) fills the frame, sales line sliding down. No words.<div class="line">—</div></td><td class="th"><span class="nopv">same as left, our world</span></td></tr><tr><td class="th"><img src="a/dip-s05.jpg" alt="Dip frame" loading="lazy"></td><td><b class="mono">5.79–6.83</b><br>Whip montage: 5 flash cuts (5.79, 6.04, 6.17, 6.25, 6.42), the wrong fixes. Silent + whooshes.</td><td class="arrow">→</td><td><b class="mono">6–7s</b><br>5 flash cuts: trackpad, typing, discount page (Image 5), slider to 30%, finger over Save. Silent + whooshes.<div class="line">—</div></td><td class="th"><img src="a/preview-3-discount.jpg" alt="our frame" loading="lazy"></td></tr><tr><td class="th"><img src="a/dip-s06.jpg" alt="Dip frame" loading="lazy"></td><td><b class="mono">6.83–8.58</b><br>Medium front: she lifts her phone, the ask; the orb lifts off the phone.</td><td class="arrow">→</td><td><b class="mono">7–9s</b><br>Medium front: she sits back, lips closed, inner voice; her phone lights and Scout lifts off it.<div class="line">(V.O.) Maybe it&#x27;s time for a discount.</div></td><td class="th"><span class="nopv">same as left, our world</span></td></tr><tr><td class="th"><img src="a/dip-s07.jpg" alt="Dip frame" loading="lazy"></td><td><b class="mono">8.58–11.08</b><br>Orb rises past the laptop, out the window, over the city, to the globe: one continuous move.</td><td class="arrow">→</td><td><b class="mono">9–11s</b><br>Time stops in the studio. Same flight: Scout past the laptop, out the window, over a sunny seaside town, to a round skylight (= the globe).<div class="line">Scout: Not yet. There&#x27;s something you don&#x27;t know.</div></td><td class="th"><img src="a/preview-4-scout-freeze.jpg" alt="our frame" loading="lazy"></td></tr><tr><td class="th"><img src="a/dip-s08.jpg" alt="Dip frame" loading="lazy"></td><td><b class="mono">11.08–12.17</b><br>Dive lands: wide on the shopper at his counter, phone rings.</td><td class="arrow">→</td><td><b class="mono">11–12s</b><br>Same move, no cut: dive through the skylight; wide on the shopper in her bedroom packing a beach bag, one ring.<div class="line">(Scout's line ends)</div></td><td class="th"><span class="nopv">same as left, our world</span></td></tr><tr><td class="th"><img src="a/dip-s09.jpg" alt="Dip frame" loading="lazy"></td><td><b class="mono">12.17–15.63</b><br>Push in; the call card rises off his phone; Scout asks.</td><td class="arrow">→</td><td><b class="mono">12–15s</b><br>Push in as she taps an AirPod; call card (Image 8) rises off her phone; Scout asks.<div class="line">Scout: Sunset bikini, three times in your cart. What stopped you?</div></td><td class="th"><img src="a/preview-5-call.jpg" alt="our frame" loading="lazy"></td></tr><tr><td class="th"><img src="a/dip-s10.jpg" alt="Dip frame" loading="lazy"></td><td><b class="mono">15.63–17.83</b><br>Over his shoulder; the answer; a word flies off the card at the lens.</td><td class="arrow">→</td><td><b class="mono">15–18s</b><br>Over her shoulder; the answer; the whole card tilts toward the lens (no words fly: subtitle-safe).<div class="line">Shopper: You run a discount every week. I&#x27;m just waiting.</div></td><td class="th"><span class="nopv">same as left, our world</span></td></tr><tr><td class="th"><img src="a/dip-s11.jpg" alt="Dip frame" loading="lazy"></td><td><b class="mono">17.83–19.38</b><br>Back in the studio, over her shoulder: cards float beside her.</td><td class="arrow">→</td><td><b class="mono">18–19s</b><br>Back in the studio, over her shoulder: the call card floats by her laptop; tick, time restarts, swimsuit drops.<div class="line">—</div></td><td class="th"><span class="nopv">same as left, our world</span></td></tr><tr><td class="th"><img src="a/dip-s12.jpg" alt="Dip frame" loading="lazy"></td><td><b class="mono">19.38–21.04</b><br>Whip pan to close-up WITH THE PRODUCT: the aha.</td><td class="arrow">→</td><td><b class="mono">19–21s</b><br>Whip pan to close-up with the coral Sunset swimsuit on its hanger: the aha.<div class="line">I&#x27;m training them to wait.</div></td><td class="th"><img src="a/preview-6-aha.jpg" alt="our frame" loading="lazy"></td></tr><tr><td class="th"><img src="a/dip-s13.jpg" alt="Dip frame" loading="lazy"></td><td><b class="mono">21.04–22.42</b><br>The fix, hands only.</td><td class="arrow">→</td><td><b class="mono">21–22s</b><br>The fix: her hands delete the discount.<div class="line">Noted.</div></td><td class="th"><span class="nopv">same as left, our world</span></td></tr><tr><td class="th"><img src="a/dip-s14.jpg" alt="Dip frame" loading="lazy"></td><td><b class="mono">22.42–23.17</b><br>Insert: phone screen fills the frame.</td><td class="arrow">→</td><td><b class="mono">22–23s</b><br>Insert: later that week, her phone screen fills the frame, full-price order (Image 9) on the ka-ching.<div class="line">—</div></td><td class="th"><span class="nopv">same as left, our world</span></td></tr><tr><td class="th"><img src="a/dip-s15.jpg" alt="Dip frame" loading="lazy"></td><td><b class="mono">23.17–25.08</b><br>Punch in, close-up to lens, product in front: the closing line.</td><td class="arrow">→</td><td><b class="mono">23–25s</b><br>Punch in, close-up to lens, coral swimsuit in front.<div class="line">Full price. Glad I asked.</div></td><td class="th"><img src="a/preview-7-glad.jpg" alt="our frame" loading="lazy"></td></tr><tr><td class="th"><img src="a/dip-s16.jpg" alt="Dip frame" loading="lazy"></td><td><b class="mono">25.08–30.04</b><br>End screen.</td><td class="arrow">→</td><td><b class="mono">25–30s</b><br>Video 2 exactly: H158 talking &#x27;o&#x27;.<div class="line">Scout: Scout interviews your shoppers for you. Get free early access.</div></td><td class="th"><span class="nopv">same as left, our world</span></td></tr></tbody></table></div>
+<p class="cite">Previews are GPT Image 2.6 stills (8 images, 2.25 credits, one retake after a filter hit) made from the same face, studio and screen refs. They are for this page only and are not sent to Seedance. They were made before this round's remap, so they show the look, not the exact framing. No new images were made this round. What we take: motion, framing, timing. What we never take: The Dip's people, candles, words, screens or EXAMPLE pill.</p>
+
+<h2>The exact prompt</h2>
+<div class="verdict"><b>Which one I'd send: the sd25-pe compile ("Send this").</b> This round the prompt went through ByteDance's real optimizer: the Skill tool loaded <span class="mono">sd25-pe</span> in the marketer session and I followed its workflow and Final Checklist on last round's prompt. (Its self-update command, <span class="mono">npx skills update sd25-pe</span>, failed, so it ran on the local copy.) It found six things ours got wrong, all fixed in the compile, listed below. Every spoken line is the same, word for word (checked by diffing every <span class="mono">{…}</span>), and the technique is the same: Video 1 is still the only source for camera, shot sizes, cuts and pacing, 0–25 s, shot for shot. The compile is longer (1,116 vs 671 words) because each asset now gets its own line with its one role and what not to take, and each grey panel in Video 1 is mapped by its time, which is what you asked for. Your monday.com pace call on The Dip is kept as what it looks like: "a new visual every 2-3 seconds, on the cuts of @Video1". A brand name alone gives the model nothing to draw. I listened to Video 2: it says "Scout interviews your shoppers for you. Get free early access." word for word (Deepgram transcript, 0.16-4.0 s), so the final shot and the last line agree.</div>
+<div class="tabs" role="tablist">
+ <button role="tab" aria-selected="true" data-k="send">Send this · sd25-pe compile · 1,116 words</button>
+ <button role="tab" aria-selected="false" data-k="ours">Ours, last round · 671 words</button>
+</div>
+<div id="parts"></div>
+<p><button class="copy" id="copy">Copy the prompt to send</button> <span class="cite" id="copied"></span></p>
+<textarea class="raw" id="raw-send" readonly>【Generation Goal】
+Generate a live-action ad: a swimwear store owner, about to run a discount on a slow week, is stopped by Scout, a small lime orb that flies to one of her shoppers and brings back the real reason; she deletes the discount and a full-price order arrives. Please note that this is not video editing.
+
+【Reference Asset Roles】
+@Video1 is a coarse-blockout reference for 0-25 seconds. Use it only for camera position, camera movement, shot sizes, cuts and pacing, shot for shot in the same order; do not adopt its blockout appearance, materials, or scene.
+The studio figure in @Video1 corresponds to the owner.
+The figure at the counter in @Video1 (11-18 s) corresponds to the shopper.
+The small bright dot in @Video1 corresponds to Scout.
+The flat light-grey panel in @Video1 at 0-2 s corresponds to the owner&#x27;s phone lock screen showing @Image1.
+The flat light-grey panel in @Video1 at 2-6 s corresponds to the owner&#x27;s laptop screen showing @Image4.
+The flat light-grey flashes in @Video1 at 6-7 s correspond to the owner&#x27;s laptop screen showing @Image5.
+The flat light-grey panel in @Video1 at 12-18 s corresponds to the floating call card from @Image8.
+The flat light-grey panel beside the laptop in @Video1 at 18-19 s corresponds to the same floating call card.
+The flat light-grey panels in @Video1 at 19-21 s correspond to the coral swimsuit on its hanger.
+The flat light-grey panel in @Video1 at 21-22 s corresponds to the owner&#x27;s laptop screen showing @Image5.
+The flat light-grey panel in @Video1 at 22-23 s corresponds to the owner&#x27;s phone lock screen showing @Image9.
+The round shape in @Video1 at 10 s corresponds to a skylight in the shopper&#x27;s roof.
+The grey block in the closing close-up of @Video1 corresponds to the coral swimsuit.
+@Image1 is used for the refund notification on the owner&#x27;s phone lock screen, its text word for word; do not use the table or the stripes around the phone.
+@Image2 is used for the owner&#x27;s face, hair and clothing; do not use the image background.
+@Image3 is used for the owner&#x27;s studio: its layout, shelves, window and daylight; do not use any person in the image.
+@Image4 is used for the store dashboard on the owner&#x27;s laptop screen; do not use it anywhere else.
+@Image5 is used for the discount page on the owner&#x27;s laptop screen; do not use it anywhere else.
+@Image6 is used for Scout&#x27;s look: only the round lime orb with sound bars; do not use the letters around it or the dark background.
+@Image7 is used for the shopper&#x27;s face, hair and clothing; do not use the image background.
+@Image8 is used for the floating call card, its text word for word; do not use the black background.
+@Image9 is used for the new-order notification on the owner&#x27;s phone lock screen, its text word for word; do not use the table or the stripes around the phone.
+@Video2 is used for Scout, picture and voice: Scout&#x27;s voice in every Scout line, and the final shot from 25 s.
+@Audio1 is used only for the owner&#x27;s voice quality; do not use its words.
+@Audio2 is used only for the shopper&#x27;s voice quality; do not use its words.
+@Audio3 is used only for the order sound effect.
+
+【Event Script】
+0-2s: Macro on the owner&#x27;s phone on the table among folded bikinis; @Image1 slides in &lt;the order sound from @Audio3&gt;. Fast pull back to a medium as she snatches the phone up.
+The owner says in English, on screen (annoyed, deflated): {Oh, come on. A refund.}
+2-4s: Medium front, she looks into the lens.
+The owner says in English, on screen (disappointed, honest): {Sales are so low this week.}
+4-6s: Slow push in past her until @Image4 fills the frame, the sales line sliding down. No one speaks.
+6-7s: Five flash cuts, no one speaks: trackpad, typing, @Image5, the slider to 30%, her finger over Save. &lt;fast whooshes&gt;
+7-9s: Medium front; she sits back with her lips closed, the room sound dropping away. Her phone lights up and Scout lifts off it.
+The owner&#x27;s inner voice in English, off screen, her mouth stays closed (tempted): {Maybe it&#x27;s time for a discount.}
+9-12s: One continuous move, no cut. Time stops; a tossed swimsuit hangs in the air. The camera follows Scout past the laptop, out the window and over a sunny seaside town toward one round skylight, and at 11s dives through it, landing wide on the shopper in her sunny bedroom, packing a beach bag. &lt;the shopper&#x27;s phone rings once&gt; The shopper keeps her mouth closed while Scout speaks.
+Scout says in English, in the voice of @Video2 (calm, a little playful): {Not yet. There&#x27;s something you don&#x27;t know.}
+12-15s: Push in as she taps an AirPod; @Image8 rises off her phone and hangs in the air. The shopper keeps her mouth closed while Scout speaks.
+Scout says in English, in the voice of @Video2 (curious): {Sunset bikini, three times in your cart. What stopped you?}
+15-18s: Over her shoulder, the card floating in front of her; as she answers, the card tilts toward the lens.
+The shopper says in English, on screen (casual, matter-of-fact): {You run a discount every week. I&#x27;m just waiting.}
+18-19s: Back in the studio, over the owner&#x27;s shoulder, the card floats beside her laptop. &lt;a soft tick&gt; Time restarts; the swimsuit drops. No one speaks.
+19-21s: Whip pan to a close-up: she lifts the coral Sunset swimsuit on its hanger, half smiling.
+The owner says in English, on screen (realising, wry): {I&#x27;m training them to wait.}
+21-22s: Her hands delete the discount on @Image5.
+The owner says in English, off screen (decided, light): {Noted.}
+22-23s: Later that week, golden light: her phone screen fills the frame; @Image9 slides in &lt;the order sound from @Audio3&gt;.
+23-25s: Punch in to a close-up; she leans toward the lens with the coral swimsuit, smiling.
+The owner says in English, on screen (relieved, pleased): {Full price. Glad I asked.}
+25-30s: Reproduce @Video2 exactly, then hold its last frame to the end.
+Scout says in English, as in @Video2 (warm): {Scout interviews your shoppers for you. Get free early access.}
+
+【Maintain Consistency】
+Every studio shot uses the studio from @Image3 with the owner from @Image2, one person per shot. The shopper from @Image7 appears only in her bedroom. Scout is always the single lime orb from @Image6. Bright daylight, warm sand and sea-blue colours. Fast, high-energy and premium: a new visual every 2-3 seconds, on the cuts of @Video1. Every line finishes inside its own shot. (Light upbeat music, lower under speech.) Generate dialogue strictly as written; do not add or remove lines. No subtitles appear on screen.
+</textarea>
+<textarea class="raw" id="raw-ours" readonly>【Generation Goal】
+A live-action vertical ad: a swimwear store owner, about to run a discount on a slow week, is stopped by Scout, a small lime orb that flies to one of her shoppers and brings back the real reason; she deletes the discount and a full-price order arrives.
+
+【Reference Asset Roles】
+@Video1 is a coarse-blockout reference for 0-25 seconds. Use it only for camera position, camera movement, shot sizes, cuts and pacing, shot for shot in the same order.
+In @Video1, the studio figure is the owner; the figure at the counter (11-19 s) is the shopper; the small bright dot is Scout; the flat light-grey panels are the laptop screen and the call card; the round shape at 10 s is a skylight in the shopper&#x27;s roof; the grey block in the closing close-up is the coral swimsuit.
+@Image1: the refund notification, word for word.
+@Image2: the owner; use only the person.
+@Image3: the owner&#x27;s studio; use only the space.
+@Image4: the store dashboard. @Image5: the discount page.
+@Image6: Scout; use only the orb.
+@Image7: the shopper; use only the person.
+@Image8: the call card, word for word.
+@Image9: the new-order notification, word for word.
+@Video2: the final shot, reproduced exactly, and Scout&#x27;s voice quality.
+@Audio1: the owner&#x27;s voice quality. @Audio2: the shopper&#x27;s voice quality. @Audio3: the order sound.
+
+【Event Script】
+0-2s: Macro on her phone on the table among folded bikinis; @Image1 slides in &lt;@Audio3&gt;. Fast pull back to a medium as she snatches it up.
+The owner&#x27;s line (annoyed, deflated): {Oh, come on. A refund.}
+2-4s: Medium front, she looks into the lens.
+The owner&#x27;s line (disappointed, honest): {Sales are so low this week.}
+4-6s: Slow push in past her until @Image4 fills the frame, the sales line sliding down.
+6-7s: Five flash cuts, no words: trackpad, typing, @Image5, the slider to 30%, her finger over Save. &lt;whooshes&gt;
+7-9s: Medium front; she sits back, lips closed, the room sound dropping away. Her phone lights up and Scout lifts off it.
+The owner&#x27;s line (V.O., tempted): {Maybe it&#x27;s time for a discount.}
+9-11s: Time stops; a tossed swimsuit hangs in the air. The camera follows Scout past the laptop, out the window and over a sunny seaside town toward one round skylight.
+Scout&#x27;s line (calm, a little playful): {Not yet. There&#x27;s something you don&#x27;t know.}
+11-12s: Scout dives through the skylight; wide on the shopper in her sunny bedroom, packing a beach bag. Her phone rings once.
+12-15s: Push in as she taps an AirPod; @Image8 rises off her phone and hangs in the air.
+Scout&#x27;s line (curious): {Sunset bikini, three times in your cart. What stopped you?}
+15-18s: Over her shoulder, the card floating in front of her; as she answers, the card tilts toward the lens.
+The shopper&#x27;s line (casual, matter-of-fact): {You run a discount every week. I&#x27;m just waiting.}
+18-19s: Back in the studio, over the owner&#x27;s shoulder, the card floats beside her laptop. &lt;a soft tick&gt; Time restarts; the swimsuit drops.
+19-21s: Whip pan to a close-up: she lifts the coral Sunset swimsuit on its hanger, half smiling.
+The owner&#x27;s line (realising, wry): {I&#x27;m training them to wait.}
+21-22s: Her hands delete the discount on @Image5.
+The owner&#x27;s line (decided, light): {Noted.}
+22-23s: Later that week, golden light: her phone screen fills the frame; @Image9 slides in &lt;@Audio3&gt;.
+23-25s: Punch in to a close-up; she leans toward the lens with the coral swimsuit, smiling.
+The owner&#x27;s line (relieved, pleased): {Full price. Glad I asked.}
+25-30s: Reproduce @Video2 exactly.
+Scout&#x27;s line (warm): {Scout interviews your shoppers for you. Get free early access.}
+
+【Maintain Consistency】
+Every studio shot uses @Image3 with the owner from @Image2, one person per shot. Bright daylight, warm sand and sea-blue colours. Fast and high-energy like a monday.com ad: a new visual every 2 to 3 seconds on the rhythm of @Video1, smooth and premium. Every line finishes inside its own shot. (Light upbeat music, lower under speech.) English. Generate dialogue strictly as written; do not add or remove lines. No subtitles.
+</textarea>
+<h3>What sd25-pe changed, and why</h3>
+<div class="tbl"><table><thead><tr><th>#</th><th>Ours, last round</th><th>sd25-pe compile</th><th>sd25-pe rule</th></tr></thead><tbody>
+<tr><td>1</td><td>"A live-action <b>vertical</b> ad"</td><td>"vertical" removed</td><td>No aspect ratio, duration, resolution or sound toggle in the text. 9:16 and 30 s go in the Higgsfield settings only.</td></tr>
+<tr><td>2</td><td>No routing line</td><td>Adds "Please note that this is not video editing." after the goal</td><td>Compatibility gate: Video 1 is 25.0 s but the output is 30 s (more than 0.3 s apart), so the gate fires and the line is required. Without it the model can treat Video 1 as a master to edit.</td></tr>
+<tr><td>3</td><td>Video 1: "use it only for camera…"; the six shapes mapped in one sentence</td><td>Adds "do not adopt its blockout appearance, materials, or scene"; one line per shape ("The small bright dot in @Video1 corresponds to Scout.")</td><td>Coarse-blockout template; "each line must define only one subject… and its primary reference asset".</td></tr>
+<tr><td>4</td><td>Video 2: "the final shot … <b>and</b> Scout's voice quality" (two roles). Images 4 and 5 shared a line. Images 1, 4, 5, 8, 9 and the voices said nothing about what not to take.</td><td>Each of the 14 assets has its own line with one stated role and what not to take. Video 2's one role is Scout, named with both uses: Scout's voice in every Scout line ("in the voice of @Video2"), and its picture and voice reproduced as the final shot from 25 s. Audio 1 and 2: "do not use its words" (both are unrelated reads). Image 6: only the orb, not the Scout letters around it.</td><td>"Every used asset must have one explicit role"; state what is adopted and what is not.</td></tr>
+<tr><td>5</td><td>"<b>&lt;@Audio3&gt;</b>", "<b>&lt;whooshes&gt;</b>", the phone ring written as action</td><td>"&lt;the order sound from @Audio3&gt;", "&lt;fast whooshes&gt;", "&lt;the shopper&#x27;s phone rings once&gt;"</td><td>Sound effects in &lt;&gt;, music in (), dialogue in {}: each mark keeps one job.</td></tr>
+<tr><td>6</td><td>One blanket "English." at the end; no listener rule</td><td>Every line says the speaker, "in English", and on screen or off screen. The inner voice keeps her mouth closed; the shopper keeps her mouth closed while Scout asks; silent shots say "No one speaks."</td><td>Dialogue ledger: speaker, language and on/off screen per line; listeners keep their mouths closed.</td></tr>
+</tbody></table></div>
+<h3>Independent check, fixes applied (H223 fix 1, Nov 14)</h3>
+<div class="tbl"><table><thead><tr><th>#</th><th>What the check found</th><th>What changed in "Send this"</th></tr></thead><tbody>
+<tr><td>1</td><td>The card's link still served round 2.</td><td>This page, with the compile, is now the version at the card's link.</td></tr>
+<tr><td>2</td><td>Image 8 line said "do not use the beige background"; the card sits on near-black (#0b0c0e).</td><td>"do not use the black background".</td></tr>
+<tr><td>3</td><td>Video 2's role line said "only the final shot" while Scout's 9–15 s lines use its voice.</td><td>One Scout role naming both uses: Scout's voice in every Scout line, and the final shot from 25 s. Row 4 above corrected.</td></tr>
+<tr><td>4</td><td>One line mapped two props (laptop and card); phone panels and the 19–22 s panels were unmapped.</td><td>Eight lines, one panel each, by time: 0–2 s phone = Image 1; 2–6 s laptop = Image 4; 6–7 s flashes = Image 5; 12–18 s card = Image 8; 18–19 s card beside the laptop; 19–21 s = the coral swimsuit; 21–22 s laptop = Image 5; 22–23 s phone = Image 9.</td></tr>
+<tr><td>5</td><td>Shopper figure mapped at 11–19 s, but 18–19 s is the owner's studio.</td><td>"(11-18 s)".</td></tr>
+<tr><td>6</td><td>Video 2 runs 4.50 s but its slot is 5 s.</td><td>"Reproduce @Video2 exactly, then hold its last frame to the end."</td></tr>
+<tr><td>7</td><td>Scout's 7-word line had a 2 s shot (9–11 s) under "every line finishes inside its own shot".</td><td>9–12 s is now one continuous move with no cut (flight, then the dive at 11 s lands on the shopper), so the line has 3 s inside one shot. The Dip's 11.08 s is a soft dive cut, so the camera map is unchanged. Dialogue is word for word the same (checked).</td></tr>
+</tbody></table></div>
+<p class="cite"><b>Unused assets:</b> none. All 14 uploads (2 videos, 9 images, 3 audio) have a role, so sd25-pe adds no 【Unused Assets】 block. The preview stills, The Dip frames, the presets and the v1 blockout on this page are never uploaded, so they get no number. <b>Limits:</b> videos 25.0 + 4.5 = 29.5 s (max 30), audio 13.4 + 11.4 + 2.6 = 27.5 s (max 30, each ≥2 s), 9 images (max 30). <b>Not touched:</b> the story, the 15 timestamps, the 10 lines, the shot order and the files sent. Nothing generated this round, 0 credits.</p>
+<p class="cite">Files: <span class="mono">prompt-sd25pe-final.txt</span> (send this), <span class="mono">prompt.txt</span> and <span class="mono">prompt-ours.txt</span> (ours, last round: the exact text in the tab, the one that ran last round), <span class="mono">prompt-sd25pe.txt</span> (last round's hand-applied pass, retired).</p>
+
+<h2>Shot list</h2>
+<div class="tbl"><table><thead><tr><th>Time</th><th>Size</th><th>Angle</th><th>Movement</th><th>Transition</th><th>Sound</th><th>Line</th><th>Borrowed from</th></tr></thead><tbody><tr><td class="mono">0–2s</td><td>Macro → medium</td><td>High, over the table</td><td>Locked, then fast pull back</td><td>Open</td><td>Ka-ching (Audio 3)</td><td class="line2">Oh, come on. A refund.</td><td class="insp">The Dip 0–1.83 s</td></tr><tr><td class="mono">2–4s</td><td>Medium</td><td>Eye level, front</td><td>Static</td><td>Hard cut</td><td>Room tone</td><td class="line2">Sales are so low this week.</td><td class="insp">The Dip 1.83–3.60 s</td></tr><tr><td class="mono">4–6s</td><td>Medium → screen</td><td>Eye level</td><td>Slow push in to the laptop</td><td>Continuous</td><td>Music dips</td><td class="line2">—</td><td class="insp">The Dip 3.60–5.79 s</td></tr><tr><td class="mono">6–7s</td><td>Inserts ×5</td><td>Side / overhead</td><td>Flash cuts</td><td>5 hard cuts</td><td>Whooshes</td><td class="line2">—</td><td class="insp">The Dip montage 5.79–6.83 s</td></tr><tr><td class="mono">7–9s</td><td>Medium</td><td>Eye level, front</td><td>Static; orb lifts at the end</td><td>Hard cut</td><td>Room sound drops; inner voice</td><td class="line2">(V.O.) Maybe it&#x27;s time for a discount.</td><td class="insp">The Dip 6.83–8.58 s; guide V.O. format</td></tr><tr><td class="mono">9–11s</td><td>Medium → aerial</td><td>Follows the orb</td><td>Continuous flight out the window, over the town</td><td>Time freeze, then flight (one move with 11–12 s)</td><td>Hush, then air</td><td class="line2">Not yet. There&#x27;s something you don&#x27;t know.</td><td class="insp">The Dip orb flight 8.58–11.08 s + Higgsfield Viral &#x27;Frozen in motion&#x27; for the freeze</td></tr><tr><td class="mono">11–12s</td><td>Wide</td><td>Eye level</td><td>Dive through the skylight</td><td>Same move, no cut</td><td>One phone ring</td><td class="line2">(Scout's line ends)</td><td class="insp">The Dip dive 11.08 s + Higgsfield Viral &#x27;Eyes in&#x27;</td></tr><tr><td class="mono">12–15s</td><td>Medium → close</td><td>Eye level</td><td>Push in</td><td>Continuous</td><td>Scout on the call</td><td class="line2">Sunset bikini, three times in your cart. What stopped you?</td><td class="insp">The Dip 12.17–15.63 s</td></tr><tr><td class="mono">15–18s</td><td>Over shoulder</td><td>Behind shopper</td><td>Static; card tilts at lens</td><td>Hard cut</td><td>Card whoosh</td><td class="line2">You run a discount every week. I&#x27;m just waiting.</td><td class="insp">The Dip 15.63–17.83 s</td></tr><tr><td class="mono">18–19s</td><td>Over shoulder</td><td>Behind owner</td><td>Static</td><td>Hard cut</td><td>Soft tick</td><td class="line2">—</td><td class="insp">The Dip 17.83–19.38 s</td></tr><tr><td class="mono">19–21s</td><td>Close-up</td><td>Eye level</td><td>Whip pan in</td><td>Whip pan</td><td>Music lifts</td><td class="line2">I&#x27;m training them to wait.</td><td class="insp">The Dip product aha 19.38–21.04 s</td></tr><tr><td class="mono">21–22s</td><td>Insert</td><td>Hands</td><td>Static</td><td>Hard cut</td><td>Click</td><td class="line2">Noted.</td><td class="insp">The Dip fix 21.04–22.42 s</td></tr><tr><td class="mono">22–23s</td><td>Full-frame screen</td><td>Flat</td><td>Static</td><td>Hard cut, golden light</td><td>Ka-ching (Audio 3)</td><td class="line2">—</td><td class="insp">The Dip insert 22.42–23.17 s</td></tr><tr><td class="mono">23–25s</td><td>Close-up</td><td>To lens</td><td>Punch in</td><td>Hard cut</td><td>After the bell</td><td class="line2">Full price. Glad I asked.</td><td class="insp">The Dip punch-in 23.17–25.08 s</td></tr><tr><td class="mono">25–30s</td><td>End screen</td><td>—</td><td>As Video 2</td><td>As Video 2</td><td>Scout voice</td><td class="line2">Scout interviews your shoppers for you. Get free early access.</td><td class="insp">H158 end screen</td></tr></tbody></table></div>
+
+<h3>Higgsfield moves borrowed for the two shots The Dip doesn't have</h3>
+<div class="presets">
+ <figure class="box" style="margin:0"><video src="a/preset-frozen-in-motion.mp4" muted loop playsinline controls preload="metadata" poster="a/preset-frozen-in-motion.webp"></video><figcaption><b>Viral · "Frozen in motion"</b>: the subject freezes while the camera keeps moving. Used at 9–11 s for the freeze only: time stops in the studio while the camera follows Scout out on The Dip's flight path. The arc round her is dropped, because The Dip has no arc there.</figcaption></figure>
+ <figure class="box" style="margin:0"><video src="a/preset-eyes-in.mp4" muted loop playsinline controls preload="metadata" poster="a/preset-eyes-in.webp"></video><figcaption><b>Viral · "Eyes in"</b>: the camera dives into something and comes out in a new scene. Used at 11–12 s: Scout dives through the shopper's skylight, which sits where The Dip's globe is, and lands on the wide where The Dip lands at 11.08 s.</figcaption></figure>
+ <figure class="box" style="margin:0"><img src="a/preset-earth-zoom.webp" alt="Earth zoom" style="width:100%;height:260px;object-fit:cover;border-radius:10px"><figcaption><b>Viral · "Earth zoom"</b> (H215's flight ref) is <b>dropped</b>. The skeleton already carries The Dip's orb flight, and a third video would push the refs past 30 s.</figcaption></figure>
+</div>
+
+<h2>Risks and what I'd watch on the draft</h2>
+<ul>
+ <li><b>The flat panels could come back as blank screens.</b> The prompt maps each panel by its time, one line each (phone = Image 1 at 0–2 s and Image 9 at 22–23 s, laptop = Image 4 at 2–6 s and Image 5 at 6–7 s and 21–22 s, card = Image 8 at 12–19 s, swimsuit at 19–21 s). If a screen renders blank, the fix is a ~18-credit edit on that piece, not a retake.</li>
+ <li><b>The blockout look could leak</b> (grey, posterised). The text says the people, places and colour come from the images, and the guide says coarse blockouts are the type that works best.</li>
+ <li><b>Shelves behind her are still rows of grey shapes</b> in v2. They read as shelving, not candles, but if jars appear on her shelves, the next step is a flat panel over the shelf band too.</li>
+ <li><b>The mask panels switch in steps during the 3.6–5.8 s push-in</b> (three sizes). They follow the screen as it grows, but the model may read a step as a cut. Watch that the push stays one move.</li>
+ <li><b>Swimwear moderation.</b> The aha prop is a coral swimsuit on a hanger, and she wears a white linen shirt (a bikini-top still was filtered earlier).</li>
+ <li><b>"Oh, come on. A refund." is fast</b>: 5 words in about 1.5 s across the macro and pull back, because The Dip's to-lens shot (1.83–3.60) now carries "Sales are so low this week."</li>
+</ul>
+
+<section id="eval"><div class="verdict" style="margin-bottom:12px"><b>Round 3 (H223, Nov 14):</b> your brief: "run the final prompt through ByteDance's official sd25-pe skill … each asset has one role, unused assets listed, exact dialogue, () &lt;&gt; {} sound marks, no ratio/duration in the text. Show the compiled prompt next to ours on the page, and say which to send." Done in <a href="#raw-send" onclick="show('send')">The exact prompt</a>: the real skill ran, six fixes, the dialogue is word for word, and the send pick is the compile. Still open from the round 1 judge: a real sd25-pe tool run, now closed. <b>Second check (Nov 14):</b> Video 2 now has one role (Scout, picture and voice); the ring is the shopper's phone, so no sound can land on the orb; the shopper keeps her mouth closed while Scout speaks from 11 s; the pace line says what it looks like instead of naming a brand; the "Ours" tab and prompt-ours.txt are now the same text.</div><h2 style="border:0;margin-top:0">Eval: round 1 scorecard and fixes</h2>
+<div class="input" style="margin:8px 0 14px"><span>Goal 7</span><span>Guide 6.5</span><span>Story 8.5</span><span>Craft 8</span><span>Overall 7.4 (before fixes)</span></div>
+<div class="tbl"><table><thead><tr><th>#</th><th>Judge's must-fix</th><th>What I changed</th></tr></thead><tbody>
+<tr><td>1</td><td>The 14 px blur still shows "birthday candle", the chat bubbles, the call-card layout and the jars. The page's claim that blurring removes them is false.</td><td>Rebuilt Video 1 as v2. 24 frame-timed flat grey panels cover the banners (0–1.6 s), the laptop and dashboard through the push-in (1.5–5.8 s), the montage (5.79–6.83 s, now 5 plain flashes on the same cuts), the call card and fly-out word (12.1–17.8 s), the chat bubbles (17.8–19.5 s), the phones and jars (19.4–22.4 s), the social screen (22.4–23.2 s) and the close-up jar (23.2–25 s). Then greyscale, 12 px blur and 9 tone steps. Still 25.0 s, and all 11 hard cuts re-measured on the same frames. Uploaded as media 50655db0. The page claim is corrected, and v1 and v2 are shown side by side.</td></tr>
+<tr><td>2</td><td>9–12 s: the prompt has a freeze, an arc and a dive, but Video 1 flies out the window over a city to a globe.</td><td>Took option (b). 9–11 s is now The Dip's flight: Scout goes past the laptop, out the window and over a sunny seaside town to a round skylight, mapped to The Dip's globe. The freeze stays on the studio only, and the arc is gone. 11–12 s dives through the skylight onto the wide, where The Dip lands at 11.08 s.</td></tr>
+<tr><td>3</td><td>4–6 s: The Dip pushes into the laptop, but ours pushed to her face.</td><td>Remapped as the judge asked. "Oh, come on. A refund." is said across the macro and pull back (0–2 s). "Sales are so low this week." is on the to-lens medium (2–4 s). 4–6 s pushes past her until the dashboard (Image 4) fills the frame. I also found and fixed 7–9 s, which was over the shoulder but is a front medium in The Dip; the discount page moved into the flash montage.</td></tr>
+<tr><td>4</td><td>prompt.txt did not use the guide's dialogue format.</td><td>All 10 lines in all three versions now use "The owner's line (annoyed, deflated): {…}", with the action in the line before.</td></tr>
+<tr><td>5</td><td>sd25-pe was applied by hand but labelled as a compile.</td><td>Called the Skill tool with "sd25-pe" this round and got "Unknown skill". The tab is renamed "Hand-applied sd25-pe (skill file v0.1.1, Skill tool unavailable)", the recommendation is reworded, and a warning says to run the real tool before any paid render.</td></tr>
+</tbody></table></div>
+<h3>Nice-to-haves</h3>
+<ul>
+<li><b>Trim:</b> done. 966 → 671 words: repeated reference descriptions are cut and the reference lines are short.</li>
+<li><b>"every week" chip:</b> done. The whole card tilts toward the lens, and no spoken words fly off.</li>
+<li><b>Full price unclear:</b> done. The close is now "Full price. Glad I asked." (2 words added, for Emile to OK).</li>
+<li><b>"Sunset" dropped:</b> restored ("the coral Sunset swimsuit").</li>
+<li><b>AirPods vs speaker:</b> she taps an AirPod, and "through the phone speaker" is gone.</li>
+<li><b>Negative reference wording:</b> the send version uses "use only the person / the space / the orb". (Round 3: the real sd25-pe compile uses the template's "do not use…" wording on every line, as the skill asks.)</li>
+<li><b>Scout's line:</b> now "Not yet. There's something you don't know." Spoken total is 64 words, inside 60–70.</li>
+</ul>
+<div class="verdict" style="margin-top:12px"><b>Judge's verdict (round 1):</b> "This is a strong, honest pitch that really does the assigned technique… The problems are in the skeleton itself, not the story… Fix those five things and this is ready to send for the paid render."<br><span class="cite">Round 2 status: all five must-fixes and all seven nice-to-haves applied. No video generated, no new images, 0 credits spent this round (total still 2.25). The draft render is still 90 credits and waits for Emile's go. Closed in round 3: the real sd25-pe tool run.</span></div>
+</section>
+
+</div>
+<script>
+const ASSET=/@?\b(Image|Video|Audio) ?(\d+)\b/g;
+function esc(s){return s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}
+function chip(s){return esc(s).replace(ASSET,(m,t,n)=>`<a class="chip" href="#${t.toLowerCase()}${n}">${t} ${n}</a>`)}
+function split(k,txt){
+ if(txt.includes('【')){
+  const sec={};txt.split(/【([^】]+)】\n/).slice(1).forEach((v,i,a)=>{if(i%2===0)sec[v]=a[i+1].trim()});
+  return [["Asset mapping",(sec["Reference Asset Roles"]||"")+"\n\n"+(sec["Subjects and Relationships"]||"")],["One-sentence summary",sec["Generation Goal"]],["Detailed plot",sec["Event Script"]],["Additional notes",sec["Maintain Consistency"]]];
+ }
+ const p=txt.trim().split(/\n\s*\n/);
+ return [["Asset mapping",p[0]],["One-sentence summary",p[1]],["Detailed plot",p.slice(2,-1).join("\n\n")],["Additional notes",p[p.length-1]]];
+}
+function show(k){
+ document.querySelectorAll('.tabs button').forEach(b=>b.setAttribute('aria-selected',b.dataset.k===k));
+ const t=document.getElementById('raw-'+k).value;
+ document.getElementById('parts').innerHTML=split(k,t).map(([h,b])=>`<div class="part"><h4>${h}</h4><pre>${chip(b||'')}</pre></div>`).join('');
+}
+document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>show(b.dataset.k));
+show('send');
+document.getElementById('copy').onclick=async()=>{const t=document.getElementById('raw-send').value;try{await navigator.clipboard.writeText(t);document.getElementById('copied').textContent='Copied.'}catch(e){const r=document.getElementById('raw-send');r.style.display='block';r.select();document.execCommand('copy');r.style.display='none';document.getElementById('copied').textContent='Copied.'}};
+</script>
+</body></html>

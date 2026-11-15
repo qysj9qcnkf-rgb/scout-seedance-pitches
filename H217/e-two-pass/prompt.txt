@@ -1,0 +1,49 @@
+H217 · Team E · Split task: reference take + extension pass (rev 2, after judge)
+PASS 1 · seedance_2_5 · mode omni_reference (omni_reference_task_type=reference) · 14 s · 9:16 · draft 480p · audio on · 42 credits (get_cost)
+Upload order: Image 1 owner-pick.png (job 9a8b15e8-59c4-4f55-b292-8a5645ff4ad8) · Image 2 scout-orb-in-her-studio.png (db24f683-e851-48d8-b1b3-51e80702c4fe) · Image 3 refund-banner.png (new upload) · Image 4 discount-screen.png (media 36774282-7978-43d7-afaa-8508a6f570c0) · Image 5 seam-frame-v3 (gpt_image_2_6 job 071d4dc2-4016-4216-b929-3e309c46afca) · Video 1 h158-end.mp4 (cae62718-ec02-41f6-8e36-1de097e8427d) · Audio 1 voice-elena.mp3 (e05a2ee1-0882-4e54-937b-ed2475948d4e) · Audio 2 kaching-2_6s.mp3 (45fb9d1d-0e34-4966-83b9-4d0f169fe660)
+
+Image 1 is the owner of Salt & Sun Swim, a small online bikini store on Shopify. Her voice is Audio 1: take only its timbre, accent, pace and emotion.
+Image 2 is her studio and Scout, the lime orb. Every shot of her takes place in this studio, with bikini rails, folded swimsuits and kraft boxes around her. Do not reuse its empty-chair composition.
+Image 3 is her phone's lock screen with the refund notification: show it exactly, word for word.
+Image 4 is the Shopify discount page on her laptop screen: show it exactly.
+Image 5 is the last frame of this video.
+Video 1: take only Scout's voice from it. Do not show any of its visuals.
+Audio 2 is the notification sound: use it exactly.
+
+A bikini-store owner in her sunny home studio gets a refund instead of a sale, decides to run a discount, and is stopped mid-click by Scout, a floating lime orb; a light, real, slightly playful live-action ad, vertical, close handheld-steady shots.
+
+0-2s: Macro close-up, overhead, locked-off. Her phone lies face up on the table among folded bikinis. The notification from Image 3 slides in with the sound of Audio 2.
+2-4s: Medium close-up, eye level. She picks up the phone, reads it, and her face drops. The owner (annoyed, then deflated) says: {Oh f... a refund.} She bites the word off after the "f" and never says the rest of it.
+4-6s: Close-up, front angle, slow push in. She lowers the phone and looks straight into the camera, a bikini rail behind her. The owner (flat, a little disappointed) says: {Sales are so low this week.}
+6-9s: Medium shot from behind her right shoulder, slow push in toward the laptop showing Image 4. She types the discount, pushing a coral bikini aside with her other hand, her lips closed. The owner (V.O., inner voice, close and quiet) says: {Maybe it's time for a discount.} The room sound drops away while she thinks.
+9-10s: Extreme close-up, side angle, bullet time: her finger freezes just above the Save discount button on Image 4, a bikini she tossed hangs still in mid-air, and the camera slowly arcs around her hand. One soft whoosh.
+10-12s: Medium close-up, eye level, time still frozen. Scout, the lime orb from Image 2, pops into the air beside her left shoulder with a soft pop. Scout (warm, quick, a little playful) says: {Not yet. There's something you don't know.}
+12-13s: Reverse angle matching Image 5. Time unfreezes; she turns her head to the orb, which glows brighter with a soft chime. The owner (surprised, soft) says: {Hm?}
+13-14s: Hold on Image 5: her lips closed, eyes on the orb, Image 4 still open on the laptop, only quiet room sound. End exactly on Image 5.
+
+Vertical 9:16, live action, bright natural daylight from the window, warm sand, coral and sea-blue colours; she is always surrounded by her swimwear. Exactly two voices: hers (Audio 1) and Scout's (Video 1). Generate dialogue strictly as written; do not add or remove lines. Every line finishes inside its own shot, with no pause longer than half a second inside a line. No background music. No subtitles.
+
+-----
+PASS 2 · seedance_2_5 · mode video_extension, extension_mode forward (omni_reference_task_type=extend, ratio adaptive) · 16 s · draft 480p · audio on · 48 credits ESTIMATED: get_cost with mode video_extension and a 4.5 s stand-in video returned 48; re-quote with the pass 1 job id before spending.
+Upload order: Video 1 = PASS 1 output (its Higgsfield job id) · Video 2 h158-end.mp4 (cae62718-ec02-41f6-8e36-1de097e8427d) · Image 1 shopper-pick.png (job 6ccc5f17-498c-424f-8c58-a90ff1577399) · Image 2 discount-screen.png (media 36774282-7978-43d7-afaa-8508a6f570c0) · Image 3 order-banner.png (new upload) · Audio 1 voice-elena.mp3 (e05a2ee1-...) · Audio 2 voice-serene.mp3 (4b121290-c867-44a1-8dc3-6046fb0efb15) · Audio 3 kaching-2_6s.mp3 (45fb9d1d-...)
+
+Video 1 is the first part of this film: continue from the final frame of Video 1. Keep its owner, studio, daylight, colours, room sound and Scout's voice.
+Video 2 is the ending: reproduce it as the final shot, with its voice.
+Image 1 is the shopper, at home in her bedroom. Her voice is Audio 2: take only its timbre, accent, pace and emotion. The owner's voice is Audio 1.
+Image 2 is the Shopify discount page on the owner's laptop, the same page as in Video 1. Image 3 is her phone's lock screen with the new order: show it exactly, word for word.
+Audio 3 is the order sound: use it exactly.
+
+Continue the story: Scout, the lime orb, takes us into a call with one of her shoppers, the owner learns why her sales stalled, discards the discount, and a full-price order lands.
+
+0-1s: Continue from the final frame of Video 1 in one unbroken move: the camera rises above the owner and flips overhead, and on the other side of the flip reveals the shopper's bedroom from Image 1. Scout (V.O., warm) says: {Listen.}
+1-4s: Close-up, over the shopper's shoulder: her phone shows a shopping cart with a coral bikini named "Sunset"; the lime orb hovers beside the phone. Scout (curious, friendly) says: {You left the Sunset bikini three times. What stopped you?}
+4-7s: Medium close-up, eye level, slow push in. The shopper, earbuds in, laughs over the beach bag she is packing on her bed. The shopper (casual, laughing a little) says: {You run a discount every week. I'm just waiting for it.}
+7-9s: Hard cut back to the studio. Close-up, front angle, slow push in. The owner holds a coral bikini; mixed feelings, a half laugh, not angry. The owner (realising, quiet) says: {I'm training them to wait.}
+9-10s: Extreme close-up, side angle: her finger presses Discard on the laptop showing Image 2. The owner (dry, decided) says: {Noted.}
+10-12s: Extreme close-up, overhead, locked-off: her phone on the table lights up with Image 3, landing with the sound of Audio 3, then pull back to her smiling as she folds a bikini into a kraft mailer, the lime orb hovering by her shoulder. The owner (relieved, smiling) says on the bell: {Glad I asked.}
+12-16s: The orb drifts from her shoulder to the centre of the frame and becomes the "o" of the Scout wordmark, exactly as in Video 2. Scout says: {Scout interviews your shoppers for you. Get free early access.}
+
+Same bright daylight, warm sand, coral and sea-blue colours and close handheld-steady framing as Video 1; the owner is always surrounded by her swimwear. Exactly three voices: the owner (Audio 1), the shopper (Audio 2) and Scout (Video 1 and Video 2). Generate dialogue strictly as written; do not add or remove lines. No background music. No subtitles.
+
+Before pass 2: pull pass 1's real last frame (return_last_frame, or ffmpeg -sseof -0.1) and check it against Image 5 (laptop on the discount page, lips closed, eyes on the orb). Redo pass 1 if it drifts.
+Stitch: PASS 1 (0-14 s) + PASS 2 (14-30 s), hard join with a 2-frame audio crossfade at 14 s, one music bed laid under all 30 s in the edit. Total 90 credits (draft; pass 2 to be re-quoted). Final 720p: 98 + 112 = 210 credits.
