@@ -1,129 +1,163 @@
 {
  "title": "Are these safe for cats?",
- "technique": "The Dip's rhythm is written into each shot; one clip (@Video1) gives only the High flip.",
+ "technique": "The Dip (H174) as a grey 25 s blockout (@Video1): cuts, shot sizes, camera moves and pacing only; the flip is written in words at its 9-11 s flight.",
  "story": [
   "Night, candles everywhere: a cat lady scrolls the Fig & Cedar page up and down, not buying.",
   "Inner voice, lips closed, the camera circling her: “Are these safe for cats?”",
   "She finds nothing, gets annoyed, closes the site: “I guess we'll never know.”",
-  "The High flip lands on the owner: “I guess no one's interested in Fig and Cedar.”",
-  "“No one wants this. Time to discontinue the product line.” She blows out the candle.",
+  "The camera flips down to the owner: “I guess no one's interested in Fig and Cedar. No one wants this.”",
+  "“Time to discontinue the product line.” She blows out the candle.",
   "Scout: “Don't guess why your shoppers don't buy.” “Scout interviews your shoppers for you. Get free early access.”"
  ],
  "shots": [
   {
    "t": "0-2s",
-   "who": "Shopper, cat",
-   "what": "Opening shot. Wide slow arc past candles to her on the sofa.",
-   "line": "",
-   "speaker": "",
-   "assets": [
-    "image2",
-    "image1",
-    "image3"
-   ]
-  },
-  {
-   "t": "2-5s",
    "who": "Shopper",
-   "what": "The camera circles from her side to behind her shoulder.",
-   "line": "Are these safe for cats?",
-   "speaker": "Shopper (inner)",
-   "assets": [
-    "image1",
-    "audio1"
-   ]
-  },
-  {
-   "t": "5-8s",
-   "who": "Shopper (hand)",
-   "what": "Over her shoulder: she scrolls down, up, down; nothing on pets.",
+   "what": "Dip macro → her finger scrolling the Fig & Cedar page on her laptop.",
    "line": "",
    "speaker": "",
-   "assets": [
-    "image1",
-    "image4"
-   ]
-  },
-  {
-   "t": "8-10s",
-   "who": "Shopper, cat",
-   "what": "Close on her face: brows pinch, sharp exhale, glance at the cat.",
-   "line": "",
-   "speaker": "",
-   "assets": [
-    "image1",
-    "image3"
-   ]
-  },
-  {
-   "t": "10-12s",
-   "who": "Shopper, cat",
-   "what": "Medium: she closes the tab, the page disappears, she leans back.",
-   "line": "I guess we'll never know.",
-   "speaker": "Shopper (inner)",
    "assets": [
     "image1",
     "image4",
-    "image3",
-    "audio1"
+    "video1"
    ]
   },
   {
-   "t": "12-15s",
-   "who": "Shopper → owner",
-   "what": "High flip: rises over her, over the sofa back, onto the owner.",
+   "t": "2-4s",
+   "who": "Shopper",
+   "what": "Dip medium, camera circling her on the sofa, cat beside her, candles everywhere.",
+   "line": "Are these safe for cats?",
+   "speaker": "Shopper · inner voice, lips closed",
+   "assets": [
+    "image1",
+    "image2",
+    "image3",
+    "audio1",
+    "video1"
+   ]
+  },
+  {
+   "t": "4-6s",
+   "who": "Shopper",
+   "what": "Dip push-in over her shoulder: she scrolls down, up, down. Nothing about pets.",
    "line": "",
    "speaker": "",
    "assets": [
-    "video1",
     "image1",
-    "image6",
-    "image5"
+    "image4",
+    "video1"
    ]
   },
   {
-   "t": "15-19s",
+   "t": "6-7s",
+   "who": "Shopper, cat",
+   "what": "Dip's five flash cuts: Wax row, Burn time row, candle flame, the cat, her eyes narrowing.",
+   "line": "",
+   "speaker": "",
+   "assets": [
+    "image4",
+    "image3",
+    "image1",
+    "video1"
+   ]
+  },
+  {
+   "t": "7-9s",
+   "who": "Shopper",
+   "what": "Dip medium: annoyed, she closes the site and leans back.",
+   "line": "I guess we'll never know.",
+   "speaker": "Shopper · inner voice, lips closed",
+   "assets": [
+    "image1",
+    "image3",
+    "audio1",
+    "video1"
+   ]
+  },
+  {
+   "t": "9-11s",
+   "who": "Camera",
+   "what": "At the Dip's flight: the High flip, written in words. Rises over her, flips over the sofa back, comes down in the owner's studio.",
+   "line": "",
+   "speaker": "",
+   "assets": [
+    "image1",
+    "image6",
+    "video1"
+   ]
+  },
+  {
+   "t": "11-12s",
    "who": "Owner",
-   "what": "Over her shoulder: red Fig & Cedar row; push in, she frowns.",
+   "what": "Dip wide: the owner at her desk, the Fig & Cedar jar lit.",
+   "line": "",
+   "speaker": "",
+   "assets": [
+    "image5",
+    "image6",
+    "image8",
+    "video1"
+   ]
+  },
+  {
+   "t": "12-16s",
+   "who": "Owner",
+   "what": "Dip slow push-in over her shoulder: Fig & Cedar in red, then her frown.",
    "line": "I guess no one's interested in Fig and Cedar. No one wants this.",
    "speaker": "Owner",
    "assets": [
     "image5",
     "image7",
-    "image8",
-    "audio2"
+    "audio2",
+    "video1"
    ]
   },
   {
-   "t": "19-22s",
-   "who": "Owner, jar",
-   "what": "Medium: she decides, then blows out the jar's three flames.",
+   "t": "16-18s",
+   "who": "Owner",
+   "what": "Dip over-the-shoulder: from the red row to the jar.",
    "line": "Time to discontinue the product line.",
    "speaker": "Owner",
    "assets": [
     "image5",
+    "image7",
     "image8",
-    "audio2"
+    "audio2",
+    "video1"
    ]
   },
   {
-   "t": "22-25s",
-   "who": "Smoke, owner",
-   "what": "Close on the smoking jar, the owner soft behind it.",
+   "t": "18-21s",
+   "who": "Owner",
+   "what": "Dip medium: she blows out the candle.",
+   "line": "",
+   "speaker": "",
+   "assets": [
+    "image5",
+    "image8",
+    "video1"
+   ]
+  },
+  {
+   "t": "21-25s",
+   "who": "Scout",
+   "what": "Dip inserts and punch-in: smoking jar, red row, her face behind the jar.",
    "line": "Don't guess why your shoppers don't buy.",
-   "speaker": "Scout",
+   "speaker": "Scout · voice only",
    "assets": [
     "image8",
+    "image7",
     "image5",
-    "audio3"
+    "audio3",
+    "video1"
    ]
   },
   {
    "t": "25-30s",
-   "who": "End screen",
-   "what": "The smoke dissolves into Scout's end screen.",
+   "who": "Scout",
+   "what": "The smoke dissolves into the usual Scout end screen.",
    "line": "Scout interviews your shoppers for you. Get free early access.",
-   "speaker": "Scout",
+   "speaker": "Scout · end screen",
    "assets": [
     "video2",
     "audio3"

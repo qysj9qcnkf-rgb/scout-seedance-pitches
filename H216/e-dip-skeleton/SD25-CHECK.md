@@ -1,92 +1,92 @@
-# SD25-CHECK · H228 · cat-candle, Emile's new story (Nov 15 2026)
+# SD25-CHECK · H228 · E: The Dip as the skeleton, Emile's Nov 15 story
 
-Checked against ByteDance's `sd25-pe` skill (`~/ClaudeCowork/marketer/.claude/skills/sd25-pe/SKILL.md`, v0.1.1), read in full this session (lines 1-996). Self-update ran (`npx --yes skills@latest update sd25-pe -y`, exit 0, "No installed skills found matching", so the local copy is used).
-Prompt checked: `prompt-sd25pe-final.txt` (995 words by `wc -w`, after loop 1; pass-1 text in `prompt-sd25pe-final.pre-loop1.txt`). Job plan: `job-plan.json`. Assets: `a2/` (13 files). Previous round's check: `SD25-CHECK.pre-newstory.md`.
-Task type: **video generation with reference assets** (no editing, no extension, no keyframes, no storyboard, no blockout). The Dip whole-video skeleton is dropped (Emile, H215: a whole-video reference copied its look, "horrendous").
+Checked against ByteDance's `sd25-pe` skill (`~/ClaudeCowork/marketer/.claude/skills/sd25-pe/SKILL.md`, v0.1.1, read in full this session, lines 1-996; self-update ran, exit 0, local copy used).
+Prompt: `prompt-sd25pe-final.txt` (1,000 words by `wc -w`). Job plan: `job-plan.json`. Assets: `a2/` (13 files). Previous High-flip version: `bak-pre-dip/`.
+Task type: **video generation with reference assets + a coarse blockout** (skill "Blockout References and Rendering → Coarse Blockout"). Not editing, not extension, no keyframes, no storyboard.
+Why: Emile, 2:02 PM: "You say The Dip skeleton but this one looks exactly like 227. I don't even see the Dip in the files being referenced." E now sends The Dip as @Video1; the High flip clip (D's technique) is not sent.
 
-## Story contract (from Emile's Nov 15 1:00 PM comment, the Marketer's brief)
-Shopper: cat lady, candles all over her apartment, cat nearby; scrolls the Fig & Cedar page up and down, visibly searching; annoyed (visual only); inner voice, lips closed, camera moving around her: {Are these safe for cats?}; finds nothing, closes the site; {I guess we'll never know.} → High flip from her down to the owner → owner at her desk on Fig & Cedar sales, wrong hypothesis: {I guess no one's interested in Fig and Cedar. No one wants this. Time to discontinue the product line.}; blows out the candle → Scout end-screen voice {Don't guess why your shoppers don't buy.} → usual H158 end screen {Scout interviews your shoppers for you. Get free early access.} No ka-ching. No Scout call scene.
+## Story contract (Emile, Nov 15, 1:00 PM)
+Cat lady, candles everywhere, cat nearby; scrolls the Fig & Cedar page up and down; inner voice, lips closed, camera around her: {Are these safe for cats?}; annoyed (visual); closes the site: {I guess we'll never know.} → rotation down to the owner → {I guess no one's interested in Fig and Cedar. No one wants this. Time to discontinue the product line.} → blows out the candle → Scout {Don't guess why your shoppers don't buy.} → end screen {Scout interviews your shoppers for you. Get free early access.} No ka-ching, no call scene.
 
 ## Assets inspected (every one opened)
-
 | Ref | File | What it really is | Spec / media |
 |---|---|---|---|
-| @Image1 | a2/image1-shopper.png | Woman, dark-brown bob with bangs, cream cardigan, at a laptop with a mouse; dim room, lamp, grey tabby, small lit candle behind/beside her | 880x1168 · 561ba2d9 |
-| @Image2 | a2/image2-shopper-apartment.png | NEW (free GPT Image via codex exec): empty night living room, beige sofa + throw, wooden coffee table with an open laptop, floor lamp, ~20 lit unlabelled candles on table/shelf/windowsill/side table, cat bed + toy; no people, no animal, no text | 941x1672 · 6c1574e8 (free upload) |
-| @Image3 | a2/image3-cat.jpg | Grey tabby only (crop), standing, sofa/blanket behind (prompt says "sitting", not curled) | 696c034b |
-| @Image4 | a2/image4-product-page.png | Ember & Fig product page: Fig & Cedar, $38.00, Add to cart, Burn time / Size / Wax rows; nothing about pets. Mouse pointer (was on Add to cart) painted out locally in loop 1 | 1600x1000 · 4e666139 (free upload) |
-| @Image5 | a2/image5-owner.png | Woman, auburn side braid, rust sweater; brick + roaster drum behind | 1536x2048 · 1963a66d |
-| @Image6 | a2/image6-owner-studio.png | Sunlit studio: shelves of lit jars, brick, table, laptop (black screen), a lit three-wick "Fig & Cedar" jar | 752x1344 · 50199c94 |
-| @Image7 | a2/image7-owner-sales.png | Shopify-style "Products · units sold", Fig & Cedar row in red: 3, -84% | 1600x1000 · 8c33aad5 |
-| @Image8 | a2/image8-fig-cedar-jar.png | Loop 1: the page's own product photo cropped: short, wide amber jar, three wicks, plain kraft label, fig leaves on linen. Same jar as @Image4 and the @Image7 thumbnail | 660x660 · a6be392e (free upload) |
-| @Video1 | a2/video1-high-flip.mp4 | Higgsfield Viral "High flip": camera rises over a man in a throne chair, flips over the chair top (dark frame), comes down onto a second man seated at a card table. No audio | 5.00 s, 600x1066 · d44455fb |
-| @Video2 | a2/video2-end-screen.mp4 | H158 Scout end screen; its voice says "Scout interviews your shoppers for you. Get free early access." | 4.50 s, 1080x1920, audio · cae62718 |
-| @Audio1 | a2/audio1-shopper-voice.mp3 | Calm woman's voice (Serene) | 9.00 s · 4203dd9a |
-| @Audio2 | a2/audio2-owner-voice.mp3 | Alexandra, warm, dry | 10.00 s · 181644ae |
-| @Audio3 | a2/audio3-scout-voice.mp3 | Video2's soundtrack, the end-screen line | 4.50 s · 390b5a38 |
+| @Image1 | a2/image1-shopper.png | Woman, dark-brown bob with bangs, cream cardigan, at a laptop; room, lamp, tabby, small candle behind | 880x1168 · 561ba2d9 |
+| @Image2 | a2/image2-shopper-apartment.png | Empty night living room, sofa, coffee table + laptop, lamp, ~20 lit unlabelled candles, cat bed; no people/animals/text | 941x1672 · 6c1574e8 |
+| @Image3 | a2/image3-cat.jpg | Grey tabby only, standing; sofa behind | 436 px wide · 696c034b |
+| @Image4 | a2/image4-product-page.png | Ember & Fig product page, Fig & Cedar $38, Burn time/Size/Wax rows, no pet info; mouse pointer painted out | 1600x1000 · 4e666139 |
+| @Image5 | a2/image5-owner.png | Woman, auburn side braid, rust sweater | 1536x2048 · 1963a66d |
+| @Image6 | a2/image6-owner-studio.png | Sunlit studio, brick, shelves of lit jars, desk, laptop, a tall labelled jar (fenced) | 752x1344 · 50199c94 |
+| @Image7 | a2/image7-owner-sales.png | Products · units sold; Fig & Cedar row red, 3, -84% | 1600x1000 · 8c33aad5 |
+| @Image8 | a2/image8-fig-cedar-jar.png | The page's jar photo: short, wide amber, three wicks, kraft label; fig leaves, linen | 660x660 · a6be392e |
+| @Video1 | a2/video1-dip-skeleton.mp4 | The Dip (H174), grey + blurred, no audio. Cuts (scene detect + 2 fps sheet): 0-1.5 desk phone + notification cards · 1.5-4.5 woman at desk with laptop + jar (medium) · 4.5-5.8 push into laptop · 5.8-6.8 five flash cuts (product page, jar) · 7-8.5 woman medium, phone · 8.5-11 orb flies out the window over a city, globe · 11-12 man in kitchen (wide) · 12-15.6 waveform card, push-in · 15.6-17.8 over-the-shoulder with cards and "birthday candle" text · 17.8-21 chat bubbles, woman holding jar + phone to camera · 21-22.4 hand, jar, mug insert · 22.4-23.2 product-page insert · 23.2-25 punch-in on woman's face with jar | 25.00 s, 480x854 · 419879cc |
+| @Video2 | a2/video2-end-screen.mp4 | Scout end screen; its voice says the end line | 4.50 s, 1080x1920 · cae62718 |
+| @Audio1 | a2/audio1-shopper-voice.mp3 | Calm woman's voice | 9.00 s · 4203dd9a |
+| @Audio2 | a2/audio2-owner-voice.mp3 | Alexandra, warm | 10.00 s · 181644ae |
+| @Audio3 | a2/audio3-scout-voice.mp3 | Video2's line | 4.50 s · 390b5a38 |
 
-Not sent any more: The Dip clay skeleton (old Video1) and the Scout logo image (no orb in this story).
-
-## a) Final Checklist (SKILL.md lines 961-987)
-1. One primary task. **PASS**: generation ("Generate a warm, realistic film in two homes…").
-2. Subjects, counts, ownership, outcome unchanged. **PASS**: two women, one cat, one Fig & Cedar jar (owner's), no purchase ("She never clicks Add to cart", "nothing bought"), owner blows out the candle, Scout lesson.
-3. Required entities covered, none merged. **PASS**: shopper @Image1, apartment @Image2, cat @Image3, product page @Image4, owner @Image5, studio @Image6, sales screen @Image7, jar @Image8, High flip @Video1, end screen @Video2, three voices @Audio1-3.
-4. Each used asset one unique role. **PASS**: 13 lines in 【Reference Asset Roles】, one entity each; @Image1 "do not use the room, candle, laptop or cat in it"; @Image6 "do not use the Fig & Cedar jar in it"; @Video1 "only for the camera move at 12-15s".
-5. References unchanged / none invented. **PASS**: @Image1-8, @Video1-2, @Audio1-3 = the 13 uploads in job-plan order.
-6. Missing assets not claimed. **N/A** (all readable). 7. Irrelevant assets not forced; unused listed. **PASS**: every uploaded asset has a role, so no 【Unused Assets】 needed (skill line 213: only "whenever this set is nonempty").
-8. Inaccessible assets not treated as understood. **N/A**.
-9. Individual mapping, no range statements. **PASS**.
-10. Single-character image for one character. **PASS**: @Image1 shopper only, @Image5 owner only.
-11. One primary state change + clear end state per stage. **PASS**: all 10 segments end "At the end, …". 10-12s: primary change = site closed (leaning back is its follow-through); 19-22s: primary change = candle out (the line leads into it).
-12. User time ranges kept, continuous. **PASS**: 0-2, 2-5, 5-8, 8-10, 10-12, 12-15, 15-19, 19-22, 22-25, 25-30. The input compiled here is the Marketer's script with its timed shot list (the page's shot list); those times are the script author's own (skill line 531: "only when the user has already provided numerical time segments"), not invented from the 30 s parameter.
-13-18. Editing / locked params / extension / keyframes / multi-keyframes / storyboard. **N/A**.
-19. Blockout. **N/A** (no blockout this round).
-20. Abstract emotion/camera made observable. **PASS**: annoyance = "brows pinch, she exhales sharply through her nose, glances at the cat… back at the screen"; High flip = "rises above…, flips over the top of the sofa back in one continuous overhead turn, and comes down on the other side onto the owner".
-21. Speakers. **PASS**: every line names speaker + @Audio + "in English" + on/off screen; shopper "lips closed" on both inner-voice lines; owner "lips closed" while Scout speaks; no accent added.
-22. Identifiers not read as camera params. **PASS**.
-23. No output parameters / analysis in prompt. **PASS**: no ratio, duration, resolution, "vertical".
-24. Gate line. **PASS**: @Video1 5.0 s and @Video2 4.5 s vs a 30 s output → "Please note that this is not video editing." once, right after the goal sentence.
-25. **N/A**. 26. No unrequested negatives. **PASS**: "no ka-ching" is Emile's own ask; "No subtitles" + on-screen words list per skill line 875/881.
-27. Placeholders replaced, one prompt body. **PASS**.
+## a) Final Checklist (SKILL.md 961-987)
+1. One primary task. **PASS**: "Generate a warm, realistic film in two homes…".
+2. Subjects/counts/ownership/outcome unchanged. **PASS**: two women, one cat, one jar on the owner's desk; "nothing bought"; candle blown out; Scout's lesson.
+3. Required entities covered. **PASS**: shopper @Image1, apartment @Image2, cat @Image3, page @Image4, owner @Image5, studio @Image6, sales @Image7, jar @Image8, skeleton @Video1, end @Video2, voices @Audio1-3.
+4. One unique role per asset. **PASS**: 13 role lines, one entity each; @Video1 "only for cut points, shot sizes, camera moves and pacing".
+5. References unchanged/not invented. **PASS**: 13 refs = 13 uploads in job-plan order.
+6. **N/A**. 7. **PASS**: every uploaded asset has a role; no unused set, so no 【Unused Assets】 (line 213).
+8. **N/A**. 9. **PASS**: individual mappings. 10. **PASS**: one image per woman.
+11. One primary state change + end state per stage. **PASS**: all 12 segments end "At the end, …"; 7-9s primary change = site closed; 18-21s = candle out.
+12. Time ranges continuous. **PASS**: 0-2, 2-4, 4-6, 6-7, 7-9, 9-11, 11-12, 12-16, 16-18, 18-21, 21-25, 25-30. They are the script's own timed shot list, laid on @Video1's measured cuts (1.5→2, 5.8→6, 15.6→16, 17.8→18, 21.0→21, 23.2 inside 21-25); not invented from the 30 s parameter (line 531).
+13-18. **N/A**.
+19. Blockout identified coarse/fine with mapping and exclusions. **PASS**: "@Video1 is a coarse-blockout reference, 0-25s. Use it only for cut points, shot sizes, camera moves and pacing; do not adopt its grey blurred look, people, rooms, phones, cards, orb, city, globe, mug or text." 【Blockout Mapping】 maps every object by time range (below).
+20. Observable emotion/camera. **PASS**: "annoyed, exhales through her nose"; flip = "rises above… flips over the sofa back until it fills the frame, and comes down out of it into… the owner's sunlit studio".
+21. Speakers. **PASS**: each line speaker + @Audio + "in English" + on/off screen; shopper "lips closed"; owner "lips closed" during Scout; no accent.
+22. **PASS**. 23. **PASS**: no ratio/duration/resolution.
+24. Gate line. **PASS**: @Video1 25 s and @Video2 4.5 s ≠ 30 s output → "Please note that this is not video editing." once, after the goal.
+25. **N/A**. 26. **PASS**: "No ka-ching" is Emile's ask. 27. **PASS**.
 
 ## b) Principles 1-11
-1 Intent First **PASS** (his story, his lines, his order) · 2 Template First **PASS** (Generation with Reference Assets + grouping) · 3 Account for Every Asset **PASS** · 4 User Mapping First **PASS** · 5 Minimal Clarification **PASS** · 6 Submission-ready only **PASS** · 7 Separate Parameters **PASS** · 8 No unrequested constraints **PASS** · 9 One best version **PASS** · 10 Facts vs observations **PASS** (looks from assets, identities from the story) · 11 Subject cardinality **PASS**.
+1 PASS (his story, six lines exact; the camera circling her at 2-4s and the flip at 9-11s are his asks, stated as the two named exceptions to @Video1's moves) · 2 PASS (coarse-blockout + reference template) · 3 PASS · 4 PASS · 5 PASS · 6 PASS · 7 PASS · 8 PASS · 9 PASS · 10 PASS · 11 PASS.
 
-## c) Template: Generation with Reference Assets
-Goal **PASS** · asset roles with "do not use" **PASS** · subjects/relationships with homes kept apart **PASS** · event script with end states **PASS** · Maintain Consistency **PASS**. Reference video role (skill line 238): @Video1 inherits only camera movement; "do not use its people, clothes, chairs, rooms, props, colours or light" **PASS**. Audio conflict (line 240): @Audio1/@Audio2 "do not use its words"; @Audio3 words only at 25-30s; @Video2 "do not use its audio" **PASS**.
+## c) Coarse-blockout template (skill 784-805)
+- Declared coarse, dimensions limited, look excluded. **PASS**.
+- Every blockout object mapped (line 788 "Map every geometric object individually"). **PASS**:
+| @Video1 time | Blockout object | Maps to |
+|---|---|---|
+| 0-2s | desk phone | shopper's laptop screen @Image4 |
+| 0-2s | notification cards | unused |
+| 2-9s | figure | shopper @Image1 |
+| 2-6s | laptop / jar | her laptop / one of her small candles (@Image2) |
+| 6-7s | flash-cut product page / jar | @Image4 rows / her small candle |
+| 7-9s | phone | unused |
+| 9-11s | orb, window, city, globe | unused; only the rising camera path kept |
+| 11-25s | figure (man 11-18s, woman 18-25s) | owner @Image5 |
+| 12-18s | waveform + chat cards, "birthday candle" text | her screen @Image7; words unused |
+| 18-25s | jar | @Image8 |
+| 18-21s | phone | unused |
+| 21-22s | mug | unused |
+| 22-23s | product page | @Image7 |
+- Scene-by-scene activation: each segment names its @Video1 move ("@Video1's macro", "medium", "push-in", "five flash cuts", "wide", "slow push-in", "over-the-shoulder shots", "inserts, then its punch-in"). **PASS**.
 
-## d) Shot ledger: every person, object and move, and the ONE @asset that defines it
-
-| Time | Move (in words) | People | Objects | Line | Verdict |
+## d) Shot ledger: the ONE @asset per person, object and move
+| Time | Move | People | Objects | Line | Verdict |
 |---|---|---|---|---|---|
-| 0-2s | wide slow arc through the room to her | shopper @Image1 | apartment + candles @Image2, cat @Image3 | none | PASS |
-| 2-5s | camera circles from her side to behind her shoulder | shopper @Image1 | (room @Image2) | Shopper inner voice @Audio1 {Are these safe for cats?} | PASS |
-| 5-8s | over-shoulder close on screen | shopper @Image1 | product page @Image4 | none | PASS |
-| 8-10s | close on face | shopper @Image1 | cat @Image3 | none (visual annoyance) | PASS |
-| 10-12s | medium | shopper @Image1 | page @Image4 closes, cat @Image3 | Shopper inner voice @Audio1 {I guess we'll never know.} | PASS |
-| 12-15s | High flip @Video1: rise, overhead flip over sofa back, down onto owner | shopper @Image1 → owner @Image5 | studio @Image6 | none | PASS |
-| 15-19s | over-shoulder onto screen, slow push-in to face | owner @Image5 | sales @Image7, jar @Image8 | Owner @Audio2 {I guess no one's interested in Fig and Cedar. No one wants this.} | PASS |
-| 19-22s | medium | owner @Image5 | jar @Image8 (blown out) | Owner @Audio2 {Time to discontinue the product line.} | PASS |
-| 22-25s | close on jar, owner soft behind | owner @Image5 | jar @Image8 smoke | Scout @Audio3 off screen {Don't guess why your shoppers don't buy.} | PASS |
-| 25-30s | smoke dissolves into end screen | none | end screen @Video2 | Scout @Audio3 {Scout interviews your shoppers for you. Get free early access.} | PASS |
+| 0-2 | @Video1 macro | shopper @Image1 (finger) | screen @Image4 | — | PASS |
+| 2-4 | @Video1 medium; camera circles (named) | @Image1 | room @Image2, cat @Image3 | @Audio1 {Are these safe for cats?} | PASS |
+| 4-6 | @Video1 push-in | @Image1 | @Image4 | — | PASS |
+| 6-7 | @Video1 flash cuts | @Image1 (eyes) | @Image4, cat @Image3, candle (@Image2) | — | PASS |
+| 7-9 | @Video1 medium | @Image1 | @Image4, @Image3 | @Audio1 {I guess we'll never know.} | PASS |
+| 9-11 | flip on @Video1's rising path | @Image1 → studio @Image6 | — | — | PASS |
+| 11-12 | @Video1 wide | owner @Image5 | studio @Image6, jar @Image8 | — | PASS |
+| 12-16 | @Video1 slow push-in | @Image5 | sales @Image7 | @Audio2 {I guess no one's interested in Fig and Cedar. No one wants this.} | PASS |
+| 16-18 | @Video1 over-the-shoulder | @Image5 | @Image7, @Image8 | @Audio2 {Time to discontinue the product line.} | PASS |
+| 18-21 | @Video1 medium | @Image5 | @Image8 | — | PASS |
+| 21-25 | @Video1 inserts + punch-in | @Image5 | @Image8, @Image7 | @Audio3 {Don't guess why your shoppers don't buy.} | PASS |
+| 25-30 | dissolve | — | @Video2 | @Audio3 {Scout interviews your shoppers for you. Get free early access.} | PASS |
+Cause before reaction: page with no pet info (4-6s) before her annoyance (7-9s); red row (12-16s) before the frown. **PASS**.
 
-Cause before reaction (skill line 148): the page with no pet info (5-8s) comes before her annoyance (8-10s); the red Fig & Cedar row is on screen before the owner frowns (15-19s). **PASS**.
+## e) Dialogue ledger
+The six `{}` lines equal Emile's six lines word for word. No ka-ching; no call scene; no orb. **PASS**.
 
-## e) Dialogue ledger vs Emile's script (exact)
-Prompt `{}` lines, in order: "Are these safe for cats?" · "I guess we'll never know." · "I guess no one's interested in Fig and Cedar. No one wants this." · "Time to discontinue the product line." · "Don't guess why your shoppers don't buy." · "Scout interviews your shoppers for you. Get free early access." = the brief's six lines, word for word. **PASS**. No ka-ching cue anywhere (grep "ka-ching" only in the "no ka-ching" sentence). No Scout call scene, no orb. **PASS**.
+## f) Limits
+8 images · 2 videos 29.5 s (≤30) · 3 audio 23.5 s (≤30) · 13 total · 1,000 words (≤1,000). **PASS**.
 
-## f) Asset limits
-8 images (≤30, each <4K) · 2 videos, 9.5 s total (≤30 s) · 3 audio, 23.5 s total (≤30 s) · 13 total (≤50). Prompt 995 words (≤1,000). **PASS**.
-
-## Loop 1 (two fresh-context checks, Nov 15) and what changed
-Check 1 and check 2 both said Goal fit YES and VERDICT FAIL. Found and fixed:
-- @Image4's mouse pointer sat on Add to cart under "keep its layout and words" (purchase risk) → pointer painted out (local ffmpeg patch, free upload 4e666139); the negative "She never clicks Add to cart" removed (it named the action).
-- The jar didn't match: page/sales thumbnail = short, wide, blank kraft label; old @Image8 = tall, labelled → @Image8 is now the page's own jar photo (free upload a6be392e); @Image6 line fences "the tall labelled jar" and keeps shelf jars "unlit background stock, never on her desk"; subjects line says "the only jar on her desk".
-- The High flip could land in the shopper's room (@Video1's second person sits in the same room) → 12-15s now "comes down out of it into a different place: the owner's sunlit studio (@Image6)".
-- Cat pose: @Image3 stands → "sitting beside her", not "curled".
-- This file: word count corrected (995), item 11 wording made exact.
-Not changed, with reason:
-- Time ranges (check 1 item 1): kept; they come from our own timed script (see item 12), the same practice as every earlier H216-H228 prompt.
-- Line order (check 1 item 2): kept. Emile's own comment puts the question while she is shopping and scrolling ("She's scrolling through, and she's not buying yet. She's like, 'Is this safe for cats?'… the camera is around") and the annoyance after ("at some point she gets annoyed"). The prompt follows that order.
-
-## Result: zero FAILs (after loop 1).
+## Result: zero FAILs.

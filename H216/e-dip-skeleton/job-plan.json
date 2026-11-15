@@ -8,7 +8,7 @@
  "generate_audio": true,
  "quoted_credits": 90,
  "submitted": false,
- "round": "Nov 15 new story (Emile's 1:00 PM ET comment)",
+ "round": "Nov 15 E rebuild on The Dip (Emile 2:02 PM: 'I don't even see the Dip in the files')",
  "prompt_file": "prompt-sd25pe-final.txt",
  "asset_folder": "a2/",
  "medias_in_order": {
@@ -20,7 +20,7 @@
   "image6_owner_studio": "50199c94-a9bb-4fc2-9d43-791fe712a5da",
   "image7_owner_sales": "8c33aad5-bc87-4b86-965e-1a967b2686d3",
   "image8_fig_cedar_jar": "a6be392e-53f0-4230-8ded-1abbed02b2ee",
-  "video1_high_flip_camera_move": "d44455fb-e7cc-46cf-9d86-641fe8304b97",
+  "video1_dip_skeleton_25s_grey_blockout": "419879cc-cce3-4aa9-a30a-4d2f53841c91",
   "video2_h158_end_screen": "cae62718-ec02-41f6-8e36-1de097e8427d",
   "audio1_shopper_voice_9s": "4203dd9a-c54c-45b9-82aa-43f37890e723",
   "audio2_owner_voice_10s": "181644ae-51c1-45e8-a5f3-f964ffaabfbd",
@@ -33,14 +33,14 @@
   "total": 13
  },
  "totals": {
-  "video_seconds": 9.5,
+  "video_seconds": 29.5,
   "audio_seconds": 23.5
  },
  "dropped_vs_previous": [
-  "The Dip skeleton video (whole-video reference: Emile, H215 'horrendous')",
-  "Scout logo/orb image (no orb scene in the new story)"
+  "High flip clip (that is D/H227's technique; the flip is written in words at The Dip's 9-11 s flight)",
+  "Scout logo/orb image"
  ],
  "new_free_asset": "image2 = shopper apartment full of candles, GPT Image via codex exec (0 credits), uploaded free as media 6c1574e8",
  "spend": "none",
- "loop1_fix": "Fresh checks Nov 15: image4 = product page with the mouse pointer painted out (local ffmpeg patch); image8 = the page's own jar photo cropped (short, wide, kraft label) so shopper and owner see the same product; both uploaded free. Old files in a2-old/."
+ "technique": "The Dip (H174) as a grey coarse blockout @Video1 (a2/video1-dip-skeleton.mp4, 25 s): cuts, shot sizes, camera moves, pacing only"
 }
