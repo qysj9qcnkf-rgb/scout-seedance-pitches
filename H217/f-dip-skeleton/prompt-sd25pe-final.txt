@@ -12,8 +12,7 @@ The flat light-grey flashes in @Video1 at 6-7 s correspond to the owner's laptop
 The flat light-grey panel in @Video1 at 12-18 s corresponds to the floating call card from @Image8.
 The flat light-grey panel beside the laptop in @Video1 at 18-19 s corresponds to the same floating call card.
 The flat light-grey panels in @Video1 at 19-21 s correspond to the coral swimsuit on its hanger.
-The flat light-grey panel in @Video1 at 21-22 s corresponds to the owner's laptop screen showing @Image5.
-The flat light-grey panel in @Video1 at 22-23 s corresponds to the owner's phone lock screen showing @Image9.
+From 21 s, the Event Script departs from @Video1's cuts: its 21-22 s and 22-23 s shots become one shot seen from behind the owner at her laptop (21-23s), and its 23-25 s close-up keeps her phone in the foreground showing @Image9.
 The round shape in @Video1 at 10 s corresponds to a skylight in the shopper's roof.
 The grey block in the closing close-up of @Video1 corresponds to the coral swimsuit.
 @Image1 is used for the refund notification on the owner's phone lock screen, its text word for word; do not use the table or the stripes around the phone.
@@ -25,7 +24,7 @@ The grey block in the closing close-up of @Video1 corresponds to the coral swims
 @Image7 is used for the shopper's face, hair and clothing; do not use the image background.
 @Image8 is used for the floating call card, its text word for word; do not use the black background.
 @Image9 is used for the new-order notification on the owner's phone lock screen, its text word for word; do not use the table or the stripes around the phone.
-@Video2 is used for Scout, picture and voice: Scout's voice in every Scout line, and the final shot from 25 s.
+@Video2 is used only for the final shot from 25 s, its picture and its own sound. Scout's earlier lines get a calm, warm voice described in words.
 @Audio1 is used only for the owner's voice quality; do not use its words.
 @Audio2 is used only for the shopper's voice quality; do not use its words.
 @Audio3 is used only for the order sound effect.
@@ -40,21 +39,20 @@ The owner says in English, on screen (disappointed, honest): {Sales are so low t
 7-9s: Medium front; she sits back with her lips closed, the room sound dropping away. Her phone lights up and Scout lifts off it.
 The owner's inner voice in English, off screen, her mouth stays closed (tempted): {Maybe it's time for a discount.}
 9-12s: One continuous move, no cut. Time stops; a tossed swimsuit hangs in the air. The camera follows Scout past the laptop, out the window and over a sunny seaside town toward one round skylight, and at 11s dives through it, landing wide on the shopper in her sunny bedroom, packing a beach bag. <the shopper's phone rings once> The shopper keeps her mouth closed while Scout speaks.
-Scout says in English, in the voice of @Video2 (calm, a little playful): {Not yet. There's something you don't know.}
+Scout says in English, on screen as the orb (calm, warm, a little playful): {Not yet. There's something you don't know.}
 12-15s: Push in as she taps an AirPod; @Image8 rises off her phone and hangs in the air. The shopper keeps her mouth closed while Scout speaks.
-Scout says in English, in the voice of @Video2 (curious): {Sunset bikini, three times in your cart. What stopped you?}
+Scout says in English, heard on the call through her AirPod (calm, warm, curious): {Sunset bikini, three times in your cart. What stopped you?}
 15-18s: Over her shoulder, the card floating in front of her; as she answers, the card tilts toward the lens.
 The shopper says in English, on screen (casual, matter-of-fact): {You run a discount every week. I'm just waiting.}
 18-19s: Back in the studio, over the owner's shoulder, the card floats beside her laptop. <a soft tick> Time restarts; the swimsuit drops. No one speaks.
-19-21s: Whip pan to a close-up: she lifts the coral Sunset swimsuit on its hanger, half smiling.
-The owner says in English, on screen (realising, wry): {I'm training them to wait.}
-21-22s: Her hands delete the discount on @Image5.
-The owner says in English, off screen (decided, light): {Noted.}
-22-23s: Later that week, golden light: her phone screen fills the frame; @Image9 slides in <the order sound from @Audio3>.
-23-25s: Punch in to a close-up; she leans toward the lens with the coral swimsuit, smiling.
+19-21s: Whip pan to a close-up: she has just lifted the coral Sunset swimsuit on its hanger when the shopper's answer lands. She freezes: eyes wide, brows up, mouth falling open, a sharp breath in; no smile.
+The owner says in English, on screen (stunned, a shocked realisation, a catch of breath on the "..."): {Oh my god... I'm training them to wait.}
+21-23s: Hard cut, seen from behind her at the laptop, @Image5 on the screen. She says the line, then her hand on the trackpad clicks Delete on the discount with <a soft click>, and a dark toast reading "Discount deleted" pops up on the screen.
+The owner says in English, on screen, seen from behind (decided, firm): {You know what? Let's delete all these discounts.}
+23-25s: Later that week, golden light: her phone in the foreground, @Image9 slides in <the order sound from @Audio3>; punch in as she leans toward the lens with the coral swimsuit, smiling, and speaks right on the bell.
 The owner says in English, on screen (relieved, pleased): {Full price. Glad I asked.}
 25-30s: Reproduce @Video2 exactly, then hold its last frame to the end.
 Scout says in English, as in @Video2 (warm): {Scout interviews your shoppers for you. Get free early access.}
 
 【Maintain Consistency】
-Every studio shot uses the studio from @Image3 with the owner from @Image2, one person per shot. The shopper from @Image7 appears only in her bedroom. Scout is always the single lime orb from @Image6. Bright daylight, warm sand and sea-blue colours. Fast, high-energy and premium: a new visual every 2-3 seconds, on the cuts of @Video1. Every line finishes inside its own shot. (Light upbeat music, lower under speech.) Generate dialogue strictly as written; do not add or remove lines. No subtitles appear on screen.
+Every studio shot uses the studio from @Image3 with the owner from @Image2, one person per shot. The shopper from @Image7 appears only in her bedroom. Scout is always the single lime orb from @Image6. Bright daylight, warm sand and sea-blue colours. Fast, high-energy and premium: a new visual every 2-3 seconds, on the cuts of @Video1 up to 21 s. Every line finishes inside its own shot. (Light upbeat music, lower under speech.) Generate dialogue strictly as written; do not add or remove lines. No subtitles appear on screen.
