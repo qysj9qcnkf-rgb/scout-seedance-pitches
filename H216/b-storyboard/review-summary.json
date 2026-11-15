@@ -6,7 +6,7 @@
   "She scrolls the Fig & Cedar product page up and down, searching. She does not buy.",
   "Inner voice, lips closed, the camera circling her: “Are these safe for cats?”",
   "She finds nothing, gets annoyed (shown only) and closes the site: “I guess we'll never know.”",
-  "High flip down to the owner, her sales on the laptop: “Wow, Fig and Cedar totally failed.” The camera circles her: “Looks like no one's interested in Fig and Cedar.” She clicks X to delete it from her site and blows out the candle.",
+  "High flip down to the owner. Hard cut: she and her co-founder sit at one laptop; she scrolls the real store admin, other candles selling, Fig & Cedar the flop (212 in stock, 3 sales): “Wow, I can't believe Fig and Cedar totally failed.” He leans back, smug: “I told you. Our customers just aren't into Fig and Cedar.” She: “I guess you're right.” She clicks the red X and deletes Fig & Cedar, then blows out the candle.",
   "Scout: “Don't guess why your shoppers don't buy.” End screen: “Scout interviews your shoppers for you. Get free early access.”"
  ],
  "shots": [
@@ -89,46 +89,47 @@
    ]
   },
   {
-   "t": "15-17s",
-   "who": "Owner",
-   "what": "Panel 8. Lands from the flip, over her shoulder onto her laptop: the units-sold list only on the laptop screen, the Fig & Cedar row in red.",
-   "line": "Wow, Fig and Cedar totally failed.",
+   "t": "15-18s",
+   "who": "Owner, Co-founder",
+   "what": "Panel 8. Hard cut, over both their shoulders onto the laptop: she scrolls the store's Products list (only on the laptop screen) past other candles to the Fig & Cedar row: 212 in stock, 3 sales. He listens, mouth closed.",
+   "line": "Wow, I can't believe Fig and Cedar totally failed.",
    "speaker": "Owner (on camera, from behind)",
    "assets": [
     "image1",
     "image6",
+    "image11",
     "image8",
     "audio2"
    ]
   },
   {
-   "t": "17-20s",
-   "who": "Owner",
-   "what": "Panel 9. Slow orbit around her with the laptop as the centre; she sits still, the lit jar beside it.",
-   "line": "Looks like no one's interested in Fig and Cedar.",
-   "speaker": "Owner (on camera)",
+   "t": "18-22s",
+   "who": "Co-founder, Owner",
+   "what": "Panel 9. Hard cut, medium, facing them across the desk: he leans back, arms crossed, smug; she turns to him, lips closed.",
+   "line": "I told you. Our customers just aren't into Fig and Cedar.",
+   "speaker": "Co-founder (on camera)",
+   "assets": [
+    "image1",
+    "image11",
+    "image6",
+    "audio4"
+   ]
+  },
+  {
+   "t": "22-24s",
+   "who": "Owner (cursor)",
+   "what": "Panel 10. Hard cut, over her shoulder onto the laptop: she gives in, then her cursor clicks the red X on the Fig & Cedar row; the row disappears.",
+   "line": "I guess you're right.",
+   "speaker": "Owner (on camera, from behind)",
    "assets": [
     "image1",
     "image6",
-    "image7",
-    "image9",
+    "image10",
     "audio2"
    ]
   },
   {
-   "t": "20-22s",
-   "who": "Owner (cursor)",
-   "what": "Panel 10. Macro on her laptop: her cursor clicks the red X on Fig & Cedar in her store admin; the row disappears.",
-   "line": "",
-   "speaker": "",
-   "assets": [
-    "image1",
-    "image6",
-    "image10"
-   ]
-  },
-  {
-   "t": "22-23s",
+   "t": "24-25s",
    "who": "Owner",
    "what": "Panel 11. Close-up: she blows out the jar; the three flames go out.",
    "line": "",
@@ -140,7 +141,7 @@
    ]
   },
   {
-   "t": "23-25s",
+   "t": "25-27s",
    "who": "Smoke",
    "what": "Panel 12. Macro on the jar's smoking wicks.",
    "line": "Don't guess why your shoppers don't buy.",
@@ -152,13 +153,12 @@
    ]
   },
   {
-   "t": "25-30s",
+   "t": "27-30s",
    "who": "End screen",
    "what": "Hard cut to the H158 end screen.",
    "line": "Scout interviews your shoppers for you. Get free early access.",
    "speaker": "Scout (off screen)",
    "assets": [
-    "image1",
     "video2",
     "audio3"
    ]
