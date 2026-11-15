@@ -1,0 +1,149 @@
+{
+ "title": "Guess Not",
+ "technique": "Plain written prompt: cast and rooms from reference images, every camera move described in words.",
+ "story": [
+  "At night a shopper adds the Fig & Cedar candle to her cart.",
+  "She wonders if it's safe for her cat, but the page never says.",
+  "So she closes the tab. Guess not.",
+  "Next morning the owner reads the low sales as nobody wanting her favourite candle.",
+  "Scout's orb rises from the candle flame: Don't guess. Ask your shoppers.",
+  "End screen: Scout interviews your shoppers for you. Get free early access."
+ ],
+ "shots": [
+  {
+   "t": "0-3s",
+   "who": "Shopper",
+   "what": "She clicks Add to cart; the Added to cart notice slides in.",
+   "line": "Okay. Fig and Cedar. This one.",
+   "speaker": "Shopper (inner)",
+   "assets": [
+    "image1",
+    "image2",
+    "image3",
+    "audio1"
+   ]
+  },
+  {
+   "t": "3-5s",
+   "who": "Shopper, Cat",
+   "what": "On the sofa, she glances back at the cat walking behind.",
+   "line": "",
+   "speaker": "",
+   "assets": [
+    "image1",
+    "image3",
+    "image4"
+   ]
+  },
+  {
+   "t": "5-8s",
+   "who": "Shopper",
+   "what": "She scrolls the product page, brows tightening.",
+   "line": "Hmm. Is this one safe for my cat?",
+   "speaker": "Shopper (inner)",
+   "assets": [
+    "image1",
+    "image2",
+    "audio1"
+   ]
+  },
+  {
+   "t": "8-10s",
+   "who": "Shopper",
+   "what": "Extreme close-up on her eyes, screen glow sliding across.",
+   "line": "It doesn't say anywhere.",
+   "speaker": "Shopper (inner)",
+   "assets": [
+    "image1",
+    "audio1"
+   ]
+  },
+  {
+   "t": "10-12s",
+   "who": "Shopper",
+   "what": "She clicks; the product page closes to a blank tab.",
+   "line": "Guess not.",
+   "speaker": "Shopper (inner)",
+   "assets": [
+    "image1",
+    "image2",
+    "image3",
+    "audio1"
+   ]
+  },
+  {
+   "t": "12-14s",
+   "who": "Shopper",
+   "what": "High flip: camera rolls overhead, lands in the owner's sunlit studio.",
+   "line": "",
+   "speaker": "",
+   "assets": [
+    "image1",
+    "image3",
+    "image6"
+   ]
+  },
+  {
+   "t": "14-17s",
+   "who": "Owner",
+   "what": "At her packing table, turning the lit jar, eyes on laptop.",
+   "line": "Huh. Thought Fig and Cedar would sell way more.",
+   "speaker": "Owner",
+   "assets": [
+    "image5",
+    "image6",
+    "image8",
+    "image7",
+    "audio2"
+   ]
+  },
+  {
+   "t": "17-20s",
+   "who": "Owner",
+   "what": "She lifts the jar in both hands, glances into the lens.",
+   "line": "My favourite, too. Guess I'm discontinuing it.",
+   "speaker": "Owner",
+   "assets": [
+    "image5",
+    "image8",
+    "audio2"
+   ]
+  },
+  {
+   "t": "20-22s",
+   "who": "Scout orb, Owner",
+   "what": "The jar's three flames merge into Scout's orb, which rises.",
+   "line": "",
+   "speaker": "",
+   "assets": [
+    "image8",
+    "image9",
+    "image5"
+   ]
+  },
+  {
+   "t": "22-25s",
+   "who": "Owner, Scout orb",
+   "what": "The orb hovers by her shoulder; she stops, eyebrows up.",
+   "line": "Don't guess. Ask your shoppers.",
+   "speaker": "Scout",
+   "assets": [
+    "image9",
+    "image5",
+    "audio3"
+   ]
+  },
+  {
+   "t": "25-30s",
+   "who": "Scout orb",
+   "what": "The orb flies into the lens and becomes the o in Scout.",
+   "line": "Scout interviews your shoppers for you. Get free early access.",
+   "speaker": "Scout",
+   "assets": [
+    "image9",
+    "video1",
+    "audio3"
+   ]
+  }
+ ]
+}

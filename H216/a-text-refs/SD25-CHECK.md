@@ -1,200 +1,111 @@
-# SD25-CHECK · H224 · Cat-candle A: text + reference images
+# SD25-CHECK · H224 · Cat-candle A: text + reference images · Emile's Nov 15 story
 
-Checked Nov 15 2026 against `~/ClaudeCowork/marketer/.claude/skills/sd25-pe/SKILL.md` (v0.1.1, read in full for this script). Task type: video generation with reference assets (no keyframes, no storyboard, no editing, no extension). Job: seedance_2_5, omni_reference, 30 s, 9:16 set in job.json (not in the prompt).
+Checked Nov 15 2026 against `~/ClaudeCowork/marketer/.claude/skills/sd25-pe/SKILL.md` (read in full; Skill tool `sd25-pe` loaded, self-update ran). Prompt checked: `prompt-sd25pe-final.txt` (994 words). Story source: `../shared-cat-candle/STORY.md` (Emile's H228 comment, Nov 15 1:00 PM ET). Task: video generation with reference assets (no keyframes, no storyboard, no editing, no extension). Job settings in job.json, not in the prompt: seedance_2_5, omni_reference, 30 s, 9:16, draft 480p. Earlier rounds' checks: `SD25-CHECK.pre-catstory.md`.
 
-Pass 1 checks `prompt-sd25pe-final.pre-sd25check.txt` (864 words). Pass 2 checked a 1,222-word fix in the old numbering; it is kept below for the record. **The prompt to send is the final `prompt-sd25pe-final.txt` (1,338 words, renumbered by first appearance), checked in Pass 3 and Pass 4 at the end.** The "Assets inspected" table below uses the pass-1 numbering.
+## Assets inspected (upload order = first appearance)
 
-## Assets inspected (pass 1 set)
+| Ref | File | Probe | What is in it | Role in the prompt |
+|---|---|---|---|---|
+| @Image1 | a/image8-shopper-face.jpg | 488x680 | Woman, dark bob with bangs, cream knit cardigan; dim sofa behind | Shopper's face, hair, cardigan; "do not use the background" |
+| @Image2 | a/image9-cat.jpg | 436x630 | Grey tabby cat on a beige sofa, a sleeve at the right edge | The cat only; "do not use the sofa or the sleeve" |
+| @Image3 | a/image3-apartment-candles.jpg (media 8dcc4d3e) | 941x1672 | Night living room, no person, no cat: sofa with cream throw, pleated lamp, monstera, bookshelf, ~30 lit candles, cat bed + scratching post, CLOSED laptop on a stool | Shopper's apartment, room only; "do not use the closed laptop on the stool" |
+| @Image4 | a/image2-product-page.jpg | 1600x1000 | Ember & Fig store, "Fig & Cedar" $38.00, no pet info, mouse cursor resting on Add to cart | Her laptop screen only; "do not use the mouse cursor" |
+| @Image5 | a/image3-owner-actress14.jpg | 1024x1365 | Owner face, auburn side braid, rust sweater, hand on cheek; brick and a roaster behind | Owner's face, braid, sweater; "do not use her pose or background" |
+| @Image6 | a/image4-owner-studio.jpg | 752x1344 | Empty studio: shelves of amber stock jars, brick, wooden desk, dark laptop, one lit three-wick jar, kraft mailers | Owner's studio; "do not use its dark laptop screen or the lit jar on the desk" |
+| @Image7 | a/image5-owner-sales.jpg | 1600x1000 | Shopify "Products · units sold": Fig & Cedar 3, -84%, red outline | Her laptop screen only |
+| @Image8 | a/image6-fig-cedar-jar.jpg | 768x768 | Wide amber jar, blank kraft label, three wicks, fig leaves, linen | The one Fig & Cedar jar; "do not use the leaves or cloth" |
+| @Video1 | a/video1-end-screen.mp4 | 1080x1920, 4.50 s, audio | H158 end screen; its voice (Deepgram): "Scout interviews your shoppers for you. Get free early access." | Picture only, only in 25-30s; "do not use its sound" |
+| @Audio1 | a/audio1-shopper-voice-9s.mp3 | 9.30 s | Female voice, upbeat; words (Deepgram): "Oh my gosh. Okay. So we finally booked the beach house for July…" | Shopper timbre only; "do not use its words or its upbeat energy" |
+| @Audio2 | a/audio2-owner-voice-9s.mp3 | 9.25 s | Warm female voice; words: "Right. With notes of stone fruit. Do my buyers even talk like that?…" | Owner timbre only; "do not use its words" |
+| @Audio3 | a/audio3-scout-voice-4s.mp3 | 4.50 s | Scout's voice; words: "Scout interviews your shoppers for you. Get free early access." | Scout timbre only; "the words come only from the lines below" |
 
-| Ref | File | Probe | What is in it |
+Totals: 8 images, 1 video (4.5 s), 3 audio (23.05 s), 12 assets: inside every hard limit (30 images, 10 videos / 30 s, 10 audio / 30 s, 50 total). Dropped from the upload list: the Scout orb image (old @Image9, media 5aaa2bca) and the old living-room still (media 7afee04b). Nothing uploaded is left without a role, so no 【Unused Assets】 block is needed (skill: list only assets "available but has no assigned role"). Spend: 0 credits; every media ID was already uploaded and confirmed.
+
+## Spoken lines diffed against STORY.md
+
+`diff <(grep -o '{[^}]*}' prompt-sd25pe-final.txt) <(grep -o '{[A-Z][^}]*}' ../shared-cat-candle/STORY.md | head -5)` → no difference. The five lines, in order: {Are these safe for cats?} · {I guess we'll never know.} · {I guess no one's interested in Fig and Cedar. No one wants this. Time to discontinue the product line.} · {Don't guess why your shoppers don't buy.} · {Scout interviews your shoppers for you. Get free early access.}
+
+## a) Final Checklist
+
+| # | Item | Verdict | Proof line |
 |---|---|---|---|
-| @Image1 | a/image1-shopper.jpg | 880x1168 | The shopper on her sofa at night, lips closed, hand on white mouse, small lit amber candle, grey tabby cat on the sofa, lamp, laptop |
-| @Image2 | a/image2-product-page.jpg | 1600x1000 | Ember & Fig "Fig & Cedar" page, $38.00, no pet info, cursor on Add to cart |
-| @Image3 | a/image3-owner-actress14.jpg | 1024x1365 | Owner face, auburn side braid, rust sweater; brick wall and a black roaster behind |
-| @Image4 | a/image4-owner-studio.jpg | 752x1344 | Empty sunlit studio: jar shelves, brick, table, dark laptop, lit three-wick jar, kraft mailers |
-| @Image5 | a/image5-owner-sales.jpg | 1600x1000 | Shopify "Products · units sold", Fig & Cedar 3 units, −84%, red outline |
-| @Image6 | a/image6-fig-cedar-jar.jpg | 768x768 | Wide amber jar, blank kraft label, three wicks, fig leaves, linen |
-| @Image7 | a/image7-scout-orb.png | 600x600 | Lime orb, five dark bars, thin ring, dark background, no letters |
-| @Video1 | a/video1-end-screen.mp4 | 1080x1920, 4.50 s, has audio | Scout wordmark with talking "o", "For Shopify owners", "Get free early access", "We'll set you up", "Launching December 15"; voice says "Scout interviews your shoppers for you. Get free early access." (Deepgram) |
-| @Audio1 | a/audio1-shopper-voice-9s.mp3 | 9.30 s | Soft female voice, unrelated words ("we finally booked the beach house…") |
-| @Audio2 | a/audio2-owner-voice-9s.mp3 | 9.25 s | Warm female voice, unrelated words ("Bright with notes of stone fruit…") |
+| 1 | One primary task | PASS | "Generate a warm live-action story film in close framing." Generation only. |
+| 2 | Subjects, counts, scene, ownership, outcome unchanged | PASS | Shopper does not buy ("The shopper never clicks Add to cart."), owner discontinues and blows out the candle, Scout ends it: STORY.md lines 1-6. |
+| 3 | Every required entity covered, no merge | PASS | Shopper @Image1, cat @Image2, apartment @Image3, product page @Image4, owner @Image5, studio @Image6, sales screen @Image7, jar @Image8, end screen @Video1, three voices @Audio1-3. |
+| 4 | Every used asset has one unique role | PASS | One line per asset in 【Reference Asset Roles】; face and cat are separate crops; @Video1 picture only, Scout's voice from @Audio3 only. |
+| 5 | Existing references unchanged, none invented | PASS | prompt.txt and the compile use the same @Image1-8, @Video1, @Audio1-3. |
+| 6 | Missing assets not claimed | N/A | All 12 assets read (table above). |
+| 7 | Unused assets listed | PASS | All 12 uploads have a role; the orb image was removed from the upload list (job.json "dropped"). |
+| 8 | Inaccessible assets not treated as understood | N/A | None inaccessible. |
+| 9 | Individual mapping, no range statement | PASS | "The shopper maps to @Image1…", "The grey tabby cat maps to @Image2…", one subject per line. |
+| 10 | Single-character image not defining two characters | PASS | @Image1 = shopper only, @Image5 = owner only; the cat has its own @Image2. |
+| 11 | Each stage one state change + end state | PASS | All 10 ranges end with "At the end, …" (e.g. 13-15s "At the end, the camera is level on the owner."). |
+| 12 | User time ranges kept | PASS | 0-3, 3-5, 5-8, 8-10, 10-13, 13-15, 15-21, 21-23, 23-25, 25-30: STORY.md shot list, continuous, whole seconds. |
+| 13 | Editing fields | N/A | Not an edit. |
+| 14 | Locked ratio/duration rules | PASS | No ratio, duration, resolution in the prompt (grep "9:16", "30 s", "480p", "vertical": none). |
+| 15 | Extension | N/A | Not an extension. |
+| 16 | First/last frame statements | N/A | No fixed frame. |
+| 17 | Multiple keyframes | N/A | None. |
+| 18 | Storyboard grid | N/A | None. |
+| 19 | Blockout | N/A | None. |
+| 20 | Abstract emotion/camera made observable | PASS | Annoyed shown as "her jaw tightens, she exhales sharply through her nose and rubs her brow, silent"; circle move "the camera slowly circles the shopper's (@Image1) face … At the end, the camera has circled to her other side"; High flip "rises over the shopper (@Image1) until it looks straight down, the back of the sofa sweeps across the frame as the view flips 180 degrees, and it comes out level on the owner (@Image5)". |
+| 21 | Every speaking stage: speaker, state, words, audio, language, on/off screen | PASS | "The shopper (@Image1), in English, in the voice of @Audio1 (inner voice, close-mic, wondering, lips closed)"; "The owner (@Image5), in English, in the voice of @Audio2 (on camera, lips moving, disappointed)"; "Scout, in English, in the voice of @Audio3 (off screen, calm, warm)". No accent added. |
+| 22 | Numbers stay identifiers | PASS | "180 degrees" is the flip's rotation, written by the story, not a misread shot number. |
+| 23 | No parameters, analysis, metadata | PASS | Prompt body has none; card, round, credits only in job.json. |
+| 24 | "Please note that this is not video editing." once, only if the gate fires | PASS | Fires: @Video1 is 4.50 s, output 30 s (> 0.3 s apart). Once, right after the goal sentence in 【Generation Goal】, same paragraph. |
+| 25 | Unreadable video specs | N/A | ffprobe read 1080x1920, 4.50 s. |
+| 26 | No unrequested negatives | PASS | Only Emile's own rules ("No cart notification and no purchase sound", one jar, never clicks Add to cart), per-asset exclusions and "No subtitles appear on screen." (skill's own advice). |
+| 27 | Placeholders replaced, one prompt body | PASS | One body; no <placeholder> left; `<whoosh>` and `<a soft puff of breath>` are sound effects, no names in angle brackets. |
 
-index.html asset list and media IDs matched job.json for all 10 (7afee04b, 527991c0, 1963a66d, 824d398d, 8c33aad5, bdbf8b6a, 5aaa2bca, cae62718, 81f0f01a, df6c7e5e).
+## b) Non-Negotiable Principles
 
-## Pass 1 (before fixes)
-
-### a) Final Checklist
-1. One primary task: PASS. Generation; "Generate a live-action story film…".
-2. Subjects, counts, scene, ownership, outcome unchanged: PASS. Same story as prompt.txt.
-3. Every required character, prop, scene covered; no merge: PASS. Shopper, cat, candle, owner, jar, orb, both screens, both rooms all named.
-4. Every used asset has one unique role: **FAIL**. "The shopper in her night living room maps to @Image1, which jointly defines her and her room as one scene" (person + room + cat + candle + mouse). "Scout maps to @Video1, which alone defines Scout as one entity, voice and look together" (voice + end-screen picture), while @Image7 also defines Scout's orb.
-5. Existing references unchanged, none invented: PASS.
-6. Missing/inaccessible assets not claimed: N/A, all assets readable.
-7. Unused assets listed: PASS. All 10 uploads have a role; no 【Unused Assets】 needed.
-8. Inaccessible assets not treated as understood: N/A.
-9. Characters/props mapped individually, no range statement: **FAIL**. The @Image1 line maps the shopper, her room, candle, mouse and cat in one line.
-10. Single-character image not defining two on-screen characters: PASS for people (one woman); the cat case is logged under principle 11.
-11. Each stage one state change and an ending state: PASS. One action per range; 25-30s ends "the end screen holds still".
-12. User time ranges kept: PASS. 0-3s … 25-30s, continuous.
-13. Editing task fields: N/A.
-14. Locked ratio/duration rules followed: PASS. No ratio or duration in the prompt.
-15. Extension: N/A.
-16. First/last frame statements: N/A, no fixed frame.
-17. Multiple keyframes: N/A.
-18. Storyboard grid: N/A.
-19. Blockout: N/A.
-20. Emotion has observable results: PASS. "brows tightening", "sad half-smile", "eyebrows up".
-21. Every speaking stage: speaker, state, words, audio, language, on/off screen: PASS. "Shopper, in English (V.O., pleased, lips closed)"; "Owner, in English (puzzled, warm)"; "Scout, in English (from the orb…)".
-22. Shot/asset numbers stay identifiers: PASS.
-23. No parameters, analysis or metadata: PASS.
-24. "Please note that this is not video editing." once, only when the gate fires: PASS on count (fires: @Video1 4.50 s vs 30 s output). Placement is logged under the template.
-25. Unreadable reference specs: N/A, ffprobe read them.
-26. No unrequested negatives: PASS. Only "No subtitles appear on screen." plus per-asset exclusions.
-27. Placeholders replaced, one prompt body: PASS.
-
-### b) Non-Negotiable Principles
-1. Intent First: PASS. Story, lines and outcome as approved.
-2. Template First: **FAIL**. The reference-generation template's 【Subjects and Relationships】 section is missing; positions and identities are spread over Maintain Consistency.
-3. Account for Every Asset: PASS.
-4. User Mapping First: PASS.
-5. Minimal Clarification: PASS.
-6. Submission-Ready Content Only: PASS.
-7. Separate Parameters: PASS.
-8. No Unrequested Constraints: PASS.
-9. One Best Version: PASS.
-10. Separate Facts from Observations: PASS.
-11. Match Subject Cardinality: **FAIL**. @Image1 defines the shopper and the cat, two named subjects that share the frame at 3-5s.
-
-### c) Template: Generation with Reference Assets + Organizing Multiple Reference Assets
-- 【Generation Goal】: PASS for content; **FAIL** for the gate line's place. The skill says to put it "immediately after the goal sentence"; it sat after the second sentence.
-- 【Reference Asset Roles】, one subject per line: **FAIL** (@Image1, @Video1 as above).
-- 【Unused Assets】: N/A.
-- 【Subjects and Relationships】: **FAIL**, missing.
-- 【Event Script】 start, events, end: PASS.
-- 【Maintain Consistency】: PASS.
-
-### d) Shot table (pass 1)
-| Shot | On screen | Defined by | Result |
+| # | Principle | Verdict | Proof line |
 |---|---|---|---|
-| 0-3s | shopper's hand, mouse, screen, candle | "The shopper's hand" (no @), @Image2 screen, candle from @Image1 | FAIL: no @asset for the shopper; @Image1 doubles as person and room |
-| 3-5s | shopper, cat, room | "Her face", "the grey tabby cat" (no @) | FAIL: "her", no @asset |
-| 5-8s | shopper, screen | "Her hand", "she" | FAIL |
-| 8-10s | shopper's eyes | "Her lips" | FAIL; the Eyes in framing is not named as on the page |
-| 10-12s | hand, screen, candle | "She clicks" | FAIL |
-| 12-14s | flip into studio | "rises above her", studio not @-tagged | FAIL: no @asset; the move is not named "High flip" as on the page |
-| 14-17s | owner, jar, screen, studio | "The owner", @Image5 | FAIL: owner and jar have no @asset in the shot |
-| 17-20s | owner, jar | "She lifts the jar" | FAIL |
-| 20-22s | flames, orb, owner | "the glowing lime orb" | FAIL: orb and owner have no @asset |
-| 22-25s | orb, owner | "The orb", "she" | FAIL |
-| 25-30s | orb, end screen | @Video1 | FAIL: @Video1 is both the picture and Scout's voice |
+| 1 | Intent First | PASS | Same people, one jar, same causality (no answer → leaves → wrong guess → candle out → Scout), Emile's words untouched (diff above). |
+| 2 | Template First | PASS | Generation-with-references template: 【Generation Goal】, 【Reference Asset Roles】, 【Subjects and Relationships】, 【Event Script】, 【Maintain Consistency】. |
+| 3 | Account for Every Asset | PASS | 12 role lines for 12 uploads; nothing unassigned. |
+| 4 | User Mapping First | PASS | Mapping follows the brief: new room = apartment-candles, face and cat as their own crops. |
+| 5 | Minimal Clarification | PASS | No open question; everything resolved from STORY.md. |
+| 6 | Submission-Ready Content Only | PASS | No notes, versions, IDs or reasons in the prompt. |
+| 7 | Separate Parameters | PASS | Ratio/duration/resolution only in job.json. |
+| 8 | No Unrequested Constraints | PASS | No quality packs or watermark lines; the gate line is the routing declaration the skill allows. |
+| 9 | One Best Version | PASS | One prompt body. |
+| 10 | Facts vs Observations | PASS | "cat lady", her not buying, the owner's wrong guess come from Emile's text; hair, sweaters, room contents from the images. |
+| 11 | Subject Cardinality | PASS | One image per person: shopper @Image1, owner @Image5; cat @Image2 separate; no image defines two on-screen subjects. |
 
-### e) Asset limits (pass 1)
-Images 7 ≤ 30: PASS. Videos 1 (4.50 s; 4-30 s each; total 4.50 ≤ 30): PASS. Audio 2 (9.30 + 9.25 = 18.55 s; 2-30 s each; ≤ 30): PASS. Total 10 ≤ 50: PASS.
+## c) Per shot: which ONE @asset defines each person (and thing on screen)
 
-### Pass 1 FAILs (6)
-1. @Image1 held the shopper, her room and the cat (checklist 4, 9; principle 11).
-2. @Video1 held Scout's voice and the end-screen picture, and "alone defines Scout" contradicted @Image7 (checklist 4).
-3. No 【Subjects and Relationships】 (principle 2).
-4. The gate line was not right after the goal sentence (template).
-5. Shots named actors as "her/she" with no @asset (shot table; Emile's H224 comment).
-6. The flip and the eye shot were not named as on the page (High flip, Eyes in).
+| Shot | Time | Transition (as written) | Shopper | Cat | Owner | Room | Screen / prop | Voice |
+|---|---|---|---|---|---|---|---|---|
+| 1 | 0-3s | Opening shot | @Image1 | @Image2 | — | @Image3 | her laptop (words; "do not use the closed laptop") | — |
+| 2 | 3-5s | Hard cut | @Image1 (fingers) | — | — | — | @Image4 | — |
+| 3 | 5-8s | Hard cut | @Image1 | @Image2 | — | (her apartment, continues) | — | @Audio1 |
+| 4 | 8-10s | Hard cut | @Image1 | — | — | — | @Image4 | — (silent) |
+| 5 | 10-13s | Hard cut | @Image1 | @Image2 | — | — | empty browser (words) | @Audio1 |
+| 6 | 13-15s | High flip | @Image1 | — | @Image5 | @Image6 (lands) | — | — (<whoosh>) |
+| 7 | 15-21s | Lands from the High flip | — | — | @Image5 | (studio, continues) | @Image7 + jar @Image8 | @Audio2 |
+| 8 | 21-23s | Hard cut | — | — | @Image5 | — | jar @Image8 | — |
+| 9 | 23-25s | Hard cut | — | — | — (no person in frame) | @Image6 | jar @Image8 | @Audio3 |
+| 10 | 25-30s | Hard cut | — | — | — | — | end screen @Video1 | @Audio3 |
 
-## Fixes made
-Backups: `prompt-sd25pe-final.pre-sd25check.txt`, `index.pre-sd25check.html`.
-- New @Image8 `a/image8-shopper-face.jpg` (488x680, a free local crop of image1: her face, bob and cardigan only), media d54d8df5-566f-400d-823a-fd87b64a0831. The shopper now maps only to @Image8.
-- New @Image9 `a/image9-cat.jpg` (436x630, a crop of the cat from image1), media 696c034b-34ca-4b95-8f62-382f22de2f6f. The cat maps only to @Image9.
-- @Image1 is now only the room: "do not use the woman, the cat or the laptop screen in it".
-- New @Audio3 `a/audio3-scout-voice-4s.mp3` (4.50 s, the end screen's own sound), media 1040c108-8833-40b5-a3f0-943deab45436, which H226 already uploaded. @Video1 is now only the end-screen picture ("do not use its sound"), @Audio3 is only Scout's voice, @Image7 is only the orb, and the Subjects section says the orb and the "o" are one Scout.
-- Added 【Subjects and Relationships】.
-- Gate line moved to right after the goal sentence.
-- Every shot names its actor with its @asset ("The shopper (@Image8)", "the owner (@Image3)", "Scout's orb (@Image7)", "the cat (@Image9)", rooms @Image1/@Image4, jar @Image6), and each bracket opens with its transition: Opening shot, Hard cut, High flip, Lands from the High flip, Orb becomes the "o", with Eyes in framing at 8-10s.
-- The 11 spoken lines and every <sound> are unchanged (checked by diff).
-- Upload uses free media uploads only, with no generation. Spend: 0 credits.
+Every person on screen is named with exactly one @Image in her shot; no @asset is used for two people. Generic room furniture and candles are carried by the room image and words (skill: "Generic background guests, furniture, decor, or environmental elements do not create an asset gap").
 
-## Pass 2 (fixed prompt)
+## d) Hard rules from STORY.md
 
-### Assets (pass 2 set, upload order)
-@Image1 room 7afee04b · @Image2 product page 527991c0 · @Image3 owner face 1963a66d · @Image4 studio 824d398d · @Image5 owner screen 8c33aad5 · @Image6 jar bdbf8b6a · @Image7 orb 5aaa2bca · @Image8 shopper face d54d8df5 · @Image9 cat 696c034b · @Video1 end screen cae62718 (4.50 s) · @Audio1 shopper 81f0f01a (9.30 s) · @Audio2 owner df6c7e5e (9.25 s) · @Audio3 Scout 1040c108 (4.50 s).
+| Rule | Verdict | Where |
+|---|---|---|
+| No ka-ching, cart notification, Add-to-cart click, Scout call or orb | PASS | grep "ka-ching", "orb", "notification" in the prompt: only "No cart notification and no purchase sound"; "she never clicks Add to cart". |
+| Exactly 3 voices; shopper inner voice lips closed; owner on camera; Scout off screen 9-10 | PASS | 【Maintain Consistency】 "Exactly three voices: …" and each speaking line. |
+| High flip the only non-cut transition, worded as in STORY.md | PASS | 13-15s text matches STORY.md A wording (+ "180 degrees", from the shot list). |
+| One Fig & Cedar jar; apartment candles generic | PASS | "her candles are generic, none is the Fig & Cedar jar"; studio's own lit jar fenced. |
+| Old audio = timbre only | PASS | "do not use its words" on @Audio1/@Audio2; @Audio3 "the words come only from the lines below". |
+| Product page cursor fenced | PASS | "do not use the mouse cursor". |
+| Closed laptop in the room still fenced | PASS | "do not use the closed laptop on the stool"; "laptop open on her lap". |
 
-### a) Final Checklist
-1. One primary task: PASS. Generation.
-2. Story unchanged: PASS. The lines and sounds diff is clean.
-3. Every entity covered, none merged: PASS. Subjects line: "one shopper (@Image8), one grey tabby cat (@Image9), one owner (@Image3), one Fig & Cedar jar (@Image6) and one Scout".
-4. One unique role per asset: PASS. 13 role lines, one per asset; @Image1 room only, @Video1 picture only, @Audio3 voice only.
-5. References unchanged, none invented: PASS. @Image1-7, @Video1, @Audio1-2 keep their numbers; the new refs @Image8, @Image9 and @Audio3 are real uploads with media IDs.
-6. N/A. 7. PASS, every upload has a role. 8. N/A.
-9. Individual mapping: PASS. "The shopper maps to @Image8", "The grey tabby cat maps to @Image9", one per line.
-10. PASS. @Image8 holds one woman; @Image3 holds one woman.
-11. One state change and an ending state per range: PASS. End states at 10-12s ("blank tab"), 17-20s ("jar is in both her hands") and 25-30s ("holds still").
-12. Time ranges kept: PASS. 13 N/A. 14 PASS, no ratio or duration. 15-19 N/A.
-20. Observable emotion: PASS.
-21. Speaking stages: PASS. Every line has a speaker, English, V.O. or on camera, and its voice: "Scout, in English (from the orb, in the voice of @Audio3, …)".
-22. PASS. 23. PASS.
-24. Gate line once, gate fired (4.50 s video, 30 s output): PASS. It sits right after the goal sentence.
-25. N/A. 26. PASS. 27. PASS.
+**Result: zero FAILs.**
 
-### b) Principles 1-11
-1 PASS · 2 PASS (template sections Goal, Asset Roles, Subjects and Relationships, Event Script, Maintain Consistency) · 3 PASS · 4 PASS · 5 PASS · 6 PASS · 7 PASS · 8 PASS · 9 PASS · 10 PASS · 11 PASS (one image per subject: shopper @Image8, cat @Image9, owner @Image3).
+## After check 1 (Nov 15)
+Check 1 verdict PASS (Goal fit YES), no FAILs. Applied its non-blocking notes: the candle line is split so the jar is named with its one asset ("The Fig & Cedar jar (@Image8) is the only lit candle in the owner's studio (@Image6)."); @Audio1 now takes timbre only, "not its upbeat energy" (the clip is upbeat, the inner voice is not); "cat bed" dropped from the room line to stay under 1,000 words (997). Spoken lines re-diffed: identical. Old a/image1-shopper.jpg and a/image7-scout-orb.png stay in a/ only because the previous page links them; neither is in job.json or the upload box.
 
-### c) Template
-Goal + gate placement PASS · Asset Roles one per line PASS · Unused N/A (none) · Subjects and Relationships PASS · Event Script PASS · Maintain Consistency PASS.
-
-### d) Shot table (pass 2)
-| Shot | Who/what on screen → the ONE asset for each | Camera / transition | Result |
-|---|---|---|---|
-| 0-3s | shopper @Image8 (hand) · screen @Image2 · room and candle @Image1 | Opening shot, macro, slow push | PASS |
-| 3-5s | shopper @Image8 · cat @Image9 · room @Image1 | Hard cut, close-up, static | PASS |
-| 5-8s | shopper @Image8 · screen @Image2 | Hard cut, MCU, slow push | PASS |
-| 8-10s | shopper @Image8 (eyes) | Hard cut, Eyes in framing | PASS |
-| 10-12s | shopper @Image8 (hand) · screen @Image2 · candle (room @Image1) | Hard cut, macro, static | PASS |
-| 12-14s | shopper @Image8 → studio @Image4 | High flip | PASS |
-| 14-17s | owner @Image3 · studio @Image4 · jar @Image6 · screen @Image5 | Lands from the High flip, slow push | PASS |
-| 17-20s | owner @Image3 · jar @Image6 | Hard cut, static | PASS |
-| 20-22s | jar @Image6 · orb @Image7 · owner @Image3 | Hard cut, macro, pull back | PASS |
-| 22-25s | orb @Image7 · owner @Image3; voice @Audio3 | Hard cut, static | PASS |
-| 25-30s | orb @Image7 → end screen @Video1; voice @Audio3 | Orb becomes the "o", push then locked | PASS |
-
-### e) Asset limits (pass 2)
-Images 9 ≤ 30: PASS. Videos 1, 4.50 s (4-30 s; total ≤ 30): PASS. Audio 3: 9.30 + 9.25 + 4.50 = 23.05 s (each 2-30 s; total ≤ 30): PASS. Total 13 ≤ 50: PASS.
-
-**Pass 2: zero FAILs.**
-
-Open risk (not a checklist item): the prompt is now 1,222 words, past the 380-740 words of the official 30 s examples. The skill sets no word limit ("Do not impose a fixed word limit"). The added words are @-tags, role lines and the Subjects section.
-
-## Pass 3 (after independent check 1, Nov 15)
-Independent check 1 (fresh context) found 2 checklist items my pass 2 wrongly marked PASS, plus page issues.
-- **Item 11 (end states):** 7 of 11 ranges had no end state. **Fixed:** every range now ends "At the end, …" (11 of 11).
-- **Item 21 (audio bound at each speaking stage):** the shopper and owner lines did not name their voice. **Fixed:** every shopper line says "in the voice of @Audio1", every owner line "in the voice of @Audio2", and Scout's lines "@Audio3" (11 of 11 lines).
-- **Emile's "first actor" question and upload order:** the shopper was uploaded 8th. **Fixed:** renumbered in order of first appearance, so @Image1 = the shopper's face. Mapping (pass 2 → pass 3): @Image8→@Image1, @Image2→@Image2, @Image1→@Image3 (room), @Image9→@Image4 (cat), @Image3→@Image5 (owner), @Image4→@Image6 (studio), @Image5→@Image7 (owner screen), @Image6→@Image8 (jar), @Image7→@Image9 (orb). job.json, the page cards, the box and the prompt all use the new order.
-- **8-10s bracket:** "Eyes in framing, eye framing only, no dive" read as a builder's note. Now "[Hard cut. Eyes in: extreme close-up on the shopper's (@Image1) eyes, …]".
-- **@Video1 line:** now "the Scout wordmark whose "o" is the orb and all the text under it" (covers "We'll set you up" and "Launching December 15").
-- **Page:** stale counts fixed (Input pills, Limits, Unused, Verdict, compare header and word counts). The old reference-board section is labelled as earlier rounds. A "Superseded" banner sits above the round-3 comparison notes. Both page copies of the prompt match prompt-sd25pe-final.txt exactly.
-
-### Final Checklist (pass 3, prompt-sd25pe-final.txt, 1,333 words)
-1 PASS · 2 PASS (11 lines and every <sound> unchanged, diff clean) · 3 PASS · 4 PASS (13 role lines, one job each) · 5 PASS (renumbered by us, the prompt's author; every reference is a real upload in job.json order) · 6 N/A · 7 PASS · 8 N/A · 9 PASS · 10 PASS · 11 PASS (11 "At the end" lines) · 12 PASS · 13 N/A · 14 PASS · 15-19 N/A · 20 PASS · 21 PASS (each line: speaker + @image, English, its @Audio, V.O. or on camera; listeners' mouths closed) · 22 PASS · 23 PASS (no builder notes) · 24 PASS (once, right after the goal sentence) · 25 N/A · 26 PASS · 27 PASS.
-Principles 1-11: all PASS. Template: all sections PASS.
-
-### Shot table (pass 3 numbering)
-| Shot | Who/what → ONE asset each | Move | Result |
-|---|---|---|---|
-| 0-3s | shopper @Image1 · screen @Image2 · room and candle @Image3 · voice @Audio1 | Opening, macro, slow push | PASS |
-| 3-5s | shopper @Image1 · room @Image3 · cat @Image4 | Hard cut, CU static | PASS |
-| 5-8s | shopper @Image1 · screen @Image2 · @Audio1 | Hard cut, MCU push | PASS |
-| 8-10s | shopper @Image1 · @Audio1 | Hard cut, Eyes in | PASS |
-| 10-12s | shopper @Image1 · screen @Image2 · @Audio1 | Hard cut, macro | PASS |
-| 12-14s | shopper @Image1 → studio @Image6 | High flip | PASS |
-| 14-17s | owner @Image5 · studio @Image6 · jar @Image8 · screen @Image7 · @Audio2 | Lands from the High flip | PASS |
-| 17-20s | owner @Image5 · jar @Image8 · @Audio2 | Hard cut, static | PASS |
-| 20-22s | jar @Image8 · orb @Image9 · owner @Image5 | Hard cut, macro pull back | PASS |
-| 22-25s | orb @Image9 · owner @Image5 · @Audio3 | Hard cut, static | PASS |
-| 25-30s | orb @Image9 → end screen @Video1 · @Audio3 | Orb becomes the "o" | PASS |
-
-Asset limits unchanged: 9 images, 1 video 4.50 s, 3 audio 23.05 s, 13 total. PASS. **Pass 3: zero FAILs.**
-
-## Pass 4 (after independent check 2, Nov 15)
-Check 2 verdict: PASS, with zero checklist FAILs. Its non-blocking fixes are applied:
-- Tags added in 10-12s ("the candle flame in her living room (@Image3)") and 12-14s ("on her sofa in the living room (@Image3)").
-- The @Audio3 line no longer says "do not use its words": that clip's words are the 25-30s line itself. It is now "used only for Scout's calm female voice timbre".
-- Page: the @Image5/@Image6 cards and Risks now quote the real prompt lines; "her lips are closed in @Image1 (her face)"; the compile caption lists 【Subjects and Relationships】; this file's header names the 1,338-word final.
-- Not changed: the product page shows "Cart (0)", which is accurate before the click. The prompt is 1,338 words; the skill sets no limit, and the length is all @-tags, voice bindings and end states that Emile's "missing the actors / moves" asked for.
-Final Checklist re-run on the final file: all 27 items PASS or N/A as in Pass 3 (items 4, 11, 21 and 23 re-verified). **Zero FAILs.**
+## After check 2 (Nov 15)
+Check 2 verdict PASS (Goal fit YES; Emile 9, Seedance 8, story 8), no FAILs. Applied: "the cat (@Image2) beside her" (the photo shows the cat standing, not curled); dropped "stabilized camera" (a constraint nobody asked for). Prompt 994 words; spoken lines unchanged. Kept as is: the studio's shelf jars stay, since the room line already says "unlit stock jars" and the jar line says the Fig & Cedar jar is the only lit candle there.

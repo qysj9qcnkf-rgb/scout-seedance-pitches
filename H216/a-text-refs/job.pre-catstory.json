@@ -1,0 +1,105 @@
+{
+ "model": "seedance_2_5",
+ "mode": "omni_reference",
+ "draft": true,
+ "resolution": "480p",
+ "duration": 30,
+ "aspect_ratio": "9:16",
+ "generate_audio": true,
+ "credits_quoted": 90,
+ "submitted": false,
+ "prompt_file": "prompt-sd25pe-final.txt",
+ "prompt_ours": "prompt.txt",
+ "card": "H224",
+ "round": 4,
+ "medias_in_upload_order": [
+  {
+   "tag": "image1",
+   "what": "shopper face crop of image1 (free local crop)",
+   "value": "d54d8df5-566f-400d-823a-fd87b64a0831",
+   "role": "image",
+   "file": "a/image8-shopper-face.jpg"
+  },
+  {
+   "tag": "image2",
+   "what": "product page",
+   "value": "527991c0-fa61-4beb-9dd4-e07986925190",
+   "role": "image",
+   "file": "a/image2-product-page.jpg"
+  },
+  {
+   "tag": "image3",
+   "what": "shopper living room only (room role; person and cat come from image8/image9)",
+   "value": "7afee04b-f61c-4a07-a8a1-3e51aa6f651b",
+   "role": "image",
+   "file": "a/image1-shopper.jpg"
+  },
+  {
+   "tag": "image4",
+   "what": "grey tabby cat crop of image1 (free local crop)",
+   "value": "696c034b-34ca-4b95-8f62-382f22de2f6f",
+   "role": "image",
+   "file": "a/image9-cat.jpg"
+  },
+  {
+   "tag": "image5",
+   "what": "owner actress 14",
+   "value": "1963a66d-94e4-4fdc-95e5-b34fde48ea4f",
+   "role": "image",
+   "file": "a/image3-owner-actress14.jpg"
+  },
+  {
+   "tag": "image6",
+   "what": "owner studio clean plate",
+   "value": "824d398d-1598-4d04-b520-662e07aedf83",
+   "role": "image",
+   "file": "a/image4-owner-studio.jpg"
+  },
+  {
+   "tag": "image7",
+   "what": "owner Shopify admin units sold",
+   "value": "8c33aad5-bc87-4b86-965e-1a967b2686d3",
+   "role": "image",
+   "file": "a/image5-owner-sales.jpg"
+  },
+  {
+   "tag": "image8",
+   "what": "Fig & Cedar jar",
+   "value": "bdbf8b6a-e4e3-4455-ba26-22f84aadd453",
+   "role": "image",
+   "file": "a/image6-fig-cedar-jar.jpg"
+  },
+  {
+   "tag": "image9",
+   "what": "Scout orb-only crop (round 2)",
+   "value": "5aaa2bca-36bc-4152-9d7a-007f9913766b",
+   "role": "image",
+   "file": "a/image7-scout-orb.png"
+  },
+  {
+   "tag": "video1",
+   "what": "H158 end screen: picture only (sound not used)",
+   "value": "cae62718-ec02-41f6-8e36-1de097e8427d",
+   "role": "video"
+  },
+  {
+   "tag": "audio1",
+   "what": "shopper voice Serene 9.3 s",
+   "value": "81f0f01a-af88-4136-a48f-a11e1d3a554a",
+   "role": "audio"
+  },
+  {
+   "tag": "audio2",
+   "what": "owner voice Alexandra 9.25 s",
+   "value": "df6c7e5e-3bb4-4975-86c6-6ee99b367f92",
+   "role": "audio"
+  },
+  {
+   "tag": "audio3",
+   "what": "Scout voice: end screen's own sound, 4.5 s (same file as H226 audio3)",
+   "value": "1040c108-8833-40b5-a3f0-943deab45436",
+   "role": "audio"
+  }
+ ],
+ "note": "Nov 15: renumbered by first appearance; one job per asset; re-quote before any render"
+}

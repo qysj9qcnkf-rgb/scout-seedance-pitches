@@ -11,35 +11,35 @@
  "prompt_file": "prompt-sd25pe-final.txt",
  "prompt_ours": "prompt.txt",
  "card": "H224",
- "round": 4,
+ "round": 5,
  "medias_in_upload_order": [
   {
    "tag": "image1",
-   "what": "shopper face crop of image1 (free local crop)",
+   "what": "shopper face crop (free local crop)",
    "value": "d54d8df5-566f-400d-823a-fd87b64a0831",
    "role": "image",
    "file": "a/image8-shopper-face.jpg"
   },
   {
    "tag": "image2",
-   "what": "product page",
-   "value": "527991c0-fa61-4beb-9dd4-e07986925190",
-   "role": "image",
-   "file": "a/image2-product-page.jpg"
-  },
-  {
-   "tag": "image3",
-   "what": "shopper living room only (room role; person and cat come from image8/image9)",
-   "value": "7afee04b-f61c-4a07-a8a1-3e51aa6f651b",
-   "role": "image",
-   "file": "a/image1-shopper.jpg"
-  },
-  {
-   "tag": "image4",
-   "what": "grey tabby cat crop of image1 (free local crop)",
+   "what": "grey tabby cat crop (free local crop)",
    "value": "696c034b-34ca-4b95-8f62-382f22de2f6f",
    "role": "image",
    "file": "a/image9-cat.jpg"
+  },
+  {
+   "tag": "image3",
+   "what": "shopper's candle-filled apartment, room only (shared still, free upload)",
+   "value": "8dcc4d3e-6957-49cd-a342-fbc14d6a5e1f",
+   "role": "image",
+   "file": "a/image3-apartment-candles.jpg"
+  },
+  {
+   "tag": "image4",
+   "what": "Fig & Cedar product page (cursor fenced in prompt)",
+   "value": "527991c0-fa61-4beb-9dd4-e07986925190",
+   "role": "image",
+   "file": "a/image2-product-page.jpg"
   },
   {
    "tag": "image5",
@@ -57,7 +57,7 @@
   },
   {
    "tag": "image7",
-   "what": "owner Shopify admin units sold",
+   "what": "owner units-sold screen, Fig & Cedar 3 (-84%)",
    "value": "8c33aad5-bc87-4b86-965e-1a967b2686d3",
    "role": "image",
    "file": "a/image5-owner-sales.jpg"
@@ -70,36 +70,54 @@
    "file": "a/image6-fig-cedar-jar.jpg"
   },
   {
-   "tag": "image9",
-   "what": "Scout orb-only crop (round 2)",
-   "value": "5aaa2bca-36bc-4152-9d7a-007f9913766b",
-   "role": "image",
-   "file": "a/image7-scout-orb.png"
-  },
-  {
    "tag": "video1",
-   "what": "H158 end screen: picture only (sound not used)",
+   "what": "H158 end screen 4.5 s: picture only (sound not used)",
    "value": "cae62718-ec02-41f6-8e36-1de097e8427d",
-   "role": "video"
+   "role": "video",
+   "file": "a/video1-end-screen.mp4"
   },
   {
    "tag": "audio1",
-   "what": "shopper voice Serene 9.3 s",
+   "what": "shopper voice timbre 9.30 s (its words: beach-house line, not used)",
    "value": "81f0f01a-af88-4136-a48f-a11e1d3a554a",
-   "role": "audio"
+   "role": "audio",
+   "file": "a/audio1-shopper-voice-9s.mp3"
   },
   {
    "tag": "audio2",
-   "what": "owner voice Alexandra 9.25 s",
+   "what": "owner voice timbre 9.25 s (its words: stone-fruit line, not used)",
    "value": "df6c7e5e-3bb4-4975-86c6-6ee99b367f92",
-   "role": "audio"
+   "role": "audio",
+   "file": "a/audio2-owner-voice-9s.mp3"
   },
   {
    "tag": "audio3",
-   "what": "Scout voice: end screen's own sound, 4.5 s (same file as H226 audio3)",
+   "what": "Scout voice timbre 4.50 s (end screen's own sound)",
    "value": "1040c108-8833-40b5-a3f0-943deab45436",
-   "role": "audio"
+   "role": "audio",
+   "file": "a/audio3-scout-voice-4s.mp3"
   }
  ],
- "note": "Nov 15: renumbered by first appearance; one job per asset; re-quote before any render"
+ "note": "Nov 15 cat-candle story: no cart/ka-ching/orb; one job per asset; 0 credits spent (all uploads free and already confirmed); re-quote before any render",
+ "story": "Emile Nov 15 cat-candle story (shared-cat-candle/STORY.md)",
+ "dropped": [
+  {
+   "what": "Scout orb image (old @Image9)",
+   "value": "5aaa2bca-36bc-4152-9d7a-007f9913766b",
+   "why": "no orb or Scout call scene in the new story; removed from the upload list"
+  },
+  {
+   "what": "old shopper room (a/image1-shopper.jpg)",
+   "value": "7afee04b-f61c-4a07-a8a1-3e51aa6f651b",
+   "why": "replaced by the apartment-candles still"
+  }
+ ],
+ "totals": {
+  "images": 8,
+  "videos": 1,
+  "video_seconds": 4.5,
+  "audios": 3,
+  "audio_seconds": 23.05,
+  "prompt_words": 994
+ }
 }
