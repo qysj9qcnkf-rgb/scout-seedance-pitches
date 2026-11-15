@@ -1,5 +1,5 @@
 【Generation Goal】
-Generate a warm, realistic film in two homes: a cat-loving shopper searches the Fig & Cedar candle page for whether it is safe for cats, finds nothing and gives up; the owner reads the slow sales as nobody wanting it and blows out the candle; Scout's voice gives the lesson. Please note that this is not video editing.
+Generate a warm, realistic film in two homes: a cat-loving shopper searches the Fig & Cedar candle page for whether it is safe for cats, finds nothing and gives up; the owner reads slow sales as nobody wanting it and blows out the candle; Scout's voice gives the lesson. Please note that this is not video editing.
 
 【Reference Asset Roles】
 @Image1 is the shopper: only her face, dark-brown bob with bangs and cream cardigan; do not use the room, candle, laptop or cat in it.
@@ -7,32 +7,32 @@ Generate a warm, realistic film in two homes: a cat-loving shopper searches the 
 @Image3 is only the shopper's grey tabby cat; do not use the sofa behind it.
 @Image4 is only the shopper's laptop screen: the Fig & Cedar product page; keep its layout and words.
 @Image5 is the owner: only her face, auburn side braid and rust sweater; do not use the background.
-@Image6 is only the owner's sunlit studio: brick wall, shelves of jars, desk and laptop; do not use the Fig & Cedar jar in it.
+@Image6 is only the owner's sunlit studio: brick wall, shelves of jars, desk and laptop; do not use the tall labelled jar in it; the shelf jars stay unlit background stock, never on her desk.
 @Image7 is only the owner's laptop screen: her products sales page with the Fig & Cedar row in red; keep its layout and words.
-@Image8 is only the Fig & Cedar jar: tall amber glass, three wicks, kraft label "Fig & Cedar"; do not use the laptop or table behind it.
-@Video1 is used only for the camera move at 12-15s: the camera rises above a seated person, flips over the top of the seat back and comes down onto a second seated person; do not use its people, clothes, chairs, rooms, props, colours or light.
+@Image8 is only the Fig & Cedar jar: short, wide amber glass, three wicks, plain kraft label, the same jar as on @Image4; do not use the fig leaves or linen.
+@Video1 is used only for the camera move at 12-15s: rise above a seated person, flip over the seat back, come down onto a second person; do not use its people, clothes, chairs, rooms, props, colours or light.
 @Video2 is only the end screen at 25-30s: its picture, motion and on-screen words; do not use its audio.
 @Audio1 is only the shopper's voice timbre and calm mood; do not use its words.
 @Audio2 is only the owner's voice timbre and warm, dry mood; do not use its words.
 @Audio3 is only Scout's voice timbre; use its words only for the end-screen line at 25-30s.
 
 【Subjects and Relationships】
-Exactly two women, never in the same frame. The shopper (@Image1) is only in her apartment (@Image2) at night, on the sofa at her laptop, her cat (@Image3) curled beside her, candles lit all around. The owner (@Image5) is only at her desk in her studio (@Image6) by day, with the one Fig & Cedar jar (@Image8) burning beside her laptop. Scout is heard, never seen, until @Video2.
+Exactly two women, never in the same frame. The shopper (@Image1) is only in her apartment (@Image2) at night, on the sofa at her laptop, her cat (@Image3) sitting beside her, candles lit all around. The owner (@Image5) is only at her desk in her studio (@Image6) by day, with the one Fig & Cedar jar (@Image8), the only jar on her desk, lit beside her laptop. Scout is heard, never seen, until @Video2.
 
 【Event Script】
-0-2s: Wide, slow arc through the shopper's apartment (@Image2) past the candles to the shopper (@Image1) on the sofa, laptop open, the cat (@Image3) curled beside her. <candle wicks crackling softly> <a quiet room at night> At the end, medium on her and the laptop.
+0-2s: Wide, slow arc through the shopper's apartment (@Image2) past the candles to the shopper (@Image1) on the sofa, laptop open, the cat (@Image3) sitting beside her. <candle wicks crackling softly> <a quiet room at night> At the end, medium on her and the laptop.
 2-5s: The camera keeps circling around the shopper (@Image1) from her side to behind her shoulder as she scrolls. The shopper's inner voice (@Audio1), off screen, in English, lips closed, wondering: {Are these safe for cats?} At the end, over her shoulder.
-5-8s: Over the shopper's (@Image1) shoulder, close on her laptop screen (@Image4): she scrolls the Fig & Cedar page down to the Burn time, Size and Wax rows, back up to the description, then down again, searching; nothing about pets. She never clicks Add to cart. <soft trackpad scrolling> At the end, the page rests on the Wax row.
+5-8s: Over the shopper's (@Image1) shoulder, close on her laptop screen (@Image4): she scrolls the Fig & Cedar page down to the Burn time, Size and Wax rows, back up, then down again, searching; nothing about pets. <soft trackpad scrolling> At the end, the page rests on the Wax row.
 8-10s: Close on the shopper's (@Image1) face, lit by the screen: her brows pinch, she exhales sharply through her nose, glances at the cat (@Image3), then back at the screen, annoyed, lips closed. At the end, her annoyed face.
 10-12s: Medium on the shopper (@Image1): she clicks the browser tab closed, the product page (@Image4) disappears from her screen, and she leans back into the sofa beside the cat (@Image3). The shopper's inner voice (@Audio1), off screen, in English, lips closed, resigned: {I guess we'll never know.} <a soft click> At the end, she sits back, nothing bought.
-12-15s: High flip, following @Video1's camera move: the camera rises above the shopper (@Image1) on her sofa, flips over the top of the sofa back in one continuous overhead turn, and comes down on the other side onto the owner (@Image5), seated at her desk in her bright studio (@Image6). <a soft whoosh> (soft acoustic guitar begins) At the end, the owner seated at her desk.
+12-15s: High flip, following @Video1's camera move: the camera rises above the shopper (@Image1) on her sofa, flips over the top of the sofa back until it fills the frame, and comes down out of it into a different place: the owner's sunlit studio (@Image6), where the owner (@Image5) sits at her desk. <a soft whoosh> (soft acoustic guitar begins) At the end, the owner seated at her desk.
 15-19s: Over the owner's (@Image5) shoulder onto her laptop screen (@Image7), the red Fig & Cedar row, then a slow push-in to her face as she frowns at it, the jar (@Image8) burning beside the laptop. The owner (@Audio2), on screen, in English, flat, disappointed: {I guess no one's interested in Fig and Cedar. No one wants this.} At the end, close on her face.
 19-22s: Medium on the owner (@Image5) and the jar (@Image8). The owner (@Audio2), on screen, in English, decided: {Time to discontinue the product line.} Then she leans to the jar and blows out its three flames. <a soft breath> At the end, three thin trails of smoke rise from the jar.
 22-25s: Close on the smoking jar (@Image8), the owner (@Image5) soft behind it, lips closed. Scout (@Audio3), off screen, in English, calm, friendly: {Don't guess why your shoppers don't buy.} (the guitar holds) At the end, the smoke curls upward.
 25-30s: The smoke dissolves into the end screen, exactly like @Video2. Scout (@Audio3), off screen, in English, calm, friendly: {Scout interviews your shoppers for you. Get free early access.} At the end, @Video2's end screen.
 
 【Sound and Text】
-Only the sounds and music written above; no ka-ching, cash-register or notification sound anywhere. No subtitles. No on-screen words except in @Image4, @Image7, @Image8's label and @Video2.
+Only the sounds and music written above; no ka-ching or notification sound. No subtitles. No on-screen words except in @Image4, @Image7, @Image8's label and @Video2.
 
 【Maintain Consistency】
-Keep the shopper, her cat, her apartment, the owner, her studio and the one jar (@Image8) identical; never swap the two women or their homes. Each line ends inside its shot.
+Keep each woman, the cat, both homes and the one jar (@Image8) identical; never swap the women or their homes. Each line ends inside its shot.
