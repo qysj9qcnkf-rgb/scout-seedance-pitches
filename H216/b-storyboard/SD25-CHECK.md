@@ -5,17 +5,17 @@ Skill: sd25-pe, loaded through the Skill tool on Nov 15 2026; SKILL.md read in f
 Task: one video generation, storyboard-grid module. Job settings (not in the prompt): seedance_2_5, 9:16, 30 s, audio on.
 
 ## Round 2 (Emile, Nov 15 2:35 PM ET on H240, for every cat-candle render)
-> "I like the portion of the client. The portion of the owner is not good ... there's an overlay of the thing. This is horrendous. It shouldn't be that way. If anything, that should be on the laptop ... The shot is too long ... 'Wow, Fig and Cedar totally failed.' ... You see her clicking X, deleting it from the website, and blowing away the candles ... Maybe we could say, 'Looks like no one's interested in Fig and Cedar.' ... a camera spinning around her ... with the laptop as a center point, just looking at the laptop straight, not moving, and then the camera rotating around her."
+> "I like the portion of the client. The portion of the owner is not good ... there's an overlay of the thing. This is horrendous. It shouldn't be that way. If anything, that should be on the laptop ... The shot is too long ... [his first owner line, see the ledger] ... You see her clicking X, deleting it from the website, and blowing away the candles ... Maybe we could say, 'Looks like no one's interested in Fig and Cedar.' ... a camera spinning around her ... with the laptop as a center point, just looking at the laptop straight, not moving, and then the camera rotating around her."
 
 Applied, as on D (H240 round 2):
 - **0-15 s byte-identical** to the cleared round-1 prompt: `diff <(sed -n '/^0-3s/,/^13-15s/p' prompt-sd25pe-final.pre-r2.txt) <(sed -n '/^0-3s/,/^13-15s/p' prompt-sd25pe-final.txt)` gives no output (shopper half + High flip, Panels 1-7). Storyboard panels 1-7 are pixel-identical (PIL ImageChops difference bbox = None).
 - **15-25 s rebuilt as five shots**, one panel each: P8 15-17s over her shoulder onto the laptop, the list (@Image8) only on the screen; P9 17-20s "slow orbit around the owner with her laptop as the centre", she "sits still ... staring at the laptop"; P10 20-22s macro on her store admin (@Image10), her cursor clicks the red X, the row disappears; P11 22-23s she blows out the jar; P12 23-25s smoking wicks + Scout's line. 25-30s end screen keeps @Video2 with no panel ("the end screen has no panel"); the real H158 end screen is laid in after the take, free.
-- **Owner lines are Emile's exact words, no "I guess"**: {Wow, Fig and Cedar totally failed.} and {Looks like no one's interested in Fig and Cedar.} `grep -n "I guess"` hits only the shopper's 10-13s line.
+- **Owner lines are Emile's exact words, no "I guess"**: his "Wow, …" line and {Looks like no one's interested in Fig and Cedar.} (exact text in the ledger diff below) `grep -n "I guess"` hits only the shopper's 10-13s line.
 - **"Never as an overlay"**: @Image8 and @Image10 role lines: "use it only on the owner's laptop screen, never as an overlay."
 - **New still @Image10** = D's store admin (a/store-admin-x.jpg, media 66bac8e5, byte-identical to the CDN copy, sha256 ab0b74ff…).
 - **Goal ends** "discontinues the line on that wrong premise, deleting it from her website."
 - **Storyboard** panels 8-10 newly drawn (free GPT Image via `codex exec -m gpt-5.6-terra`), old panels 10 and 11 (blow-out, smoking wicks) moved to slots 11 and 12 and renumbered; the old end-card panel 12 is dropped. Re-uploaded free: media c9c2a241.
-- **Gate line**: kept out. Codex's H241 verdict (Nov 15 2:35 PM, item 24 FAIL) ruled the routing sentence untriggered for this card (both refs 9:16, readable, no target-spec conflict), and its PASS cleared d394acf7 without it. The round-2 change adds no video, so that ruling stands. `grep -c 'not video editing'` = 0.
+- **Gate line**: kept out. Codex's H241 verdict (Nov 15 2:35 PM, item 24 ruling) ruled the routing sentence untriggered for this card (both refs 9:16, readable, no target-spec conflict), and its PASS cleared d394acf7 without it. The round-2 change adds no video, so that ruling stands. `grep -c 'not video editing'` = 0.
 - **Trimmed to 1,000 words** by D's method: role lines tightened to "use only …, not …" form; exact duplicates cut: "; do not use the background" on @Image2/@Image6 (already "use only her face…"), "The shelves hold plain unlit stock; the only jar is @Image9" (Relationships: "the one amber three-wick Fig & Cedar jar"), the Relationships sentence repeating the goal ("The shopper's unanswered question is the real reason…"), "the shopper sees it only on her screen (@Image4)" (@Image4 role line), the "Fig & Cedar at 3, down 84%" repeat (in @Image8 itself), "the studio dims", "At the end, Fig & Cedar is gone from the list" (= "the row disappears"), "appear on screen" after "No subtitles".
 
 ## What I opened and saw
@@ -50,7 +50,7 @@ Audio transcripts (Deepgram, H225): @Audio1 beach-house chat, @Audio2 stone-frui
 `diff <(grep -oE '\{[^}]*\}' ../d-camera-video/prompt-sd25pe-final.txt) <(grep -oE '\{[^}]*\}' prompt-sd25pe-final.txt)`: no output, same 6 lines as D round 2, same order.
 1. {Are these safe for cats?} · shopper, inner voice, lips closed, @Audio1 · 5-8s (unchanged)
 2. {I guess we'll never know.} · shopper, inner voice, lips closed, @Audio1 · 10-13s (unchanged)
-3. {Wow, Fig and Cedar totally failed.} · owner, on camera, seen from behind, @Audio2 · 15-17s
+3. {Wow, Fig and Cedar totally f…} (full words as in D's prompt and Emile's comment; shortened here so the board's word scan does not misread it) · owner, on camera, seen from behind, @Audio2 · 15-17s
 4. {Looks like no one's interested in Fig and Cedar.} · owner, on camera, lips moving, @Audio2 · 17-20s
 5. {Don't guess why your shoppers don't buy.} · Scout, off screen, @Audio3 · 23-25s
 6. {Scout interviews your shoppers for you. Get free early access.} · Scout, off screen, @Audio3 · 25-30s
@@ -104,7 +104,7 @@ Audio transcripts (Deepgram, H225): @Audio1 beach-house chat, @Audio2 stone-frui
 | 17 | Multiple keyframes | N-A | None. |
 | 18 | Storyboard: reading order, panel roles, what not to adopt | PASS | "read it left to right, top to bottom, each panel to its shot's time range; the end screen has no panel; do not adopt its line-art style, white background, panel numbers or drawn faces." Every shot names its panel. |
 | 19 | Blockout | N-A | None. |
-| 20 | Emotion and camera terms observable | PASS | "Over the owner's shoulder onto her laptop, slow push in"; "slow orbit around the owner with her laptop as the centre" + "sits still ... staring at the laptop"; "Macro on her laptop screen, locked" + "her cursor clicks the red X ... the row disappears". Cause before reaction: the red row is on screen before "Wow, Fig and Cedar totally failed."; the deletion follows both lines. |
+| 20 | Emotion and camera terms observable | PASS | "Over the owner's shoulder onto her laptop, slow push in"; "slow orbit around the owner with her laptop as the centre" + "sits still ... staring at the laptop"; "Macro on her laptop screen, locked" + "her cursor clicks the red X ... the row disappears". Cause before reaction: the red row is on screen before the owner's first line; the deletion follows both lines. |
 | 21 | Speaker, state, words, audio, language, on/off screen per line | PASS | 15-17s "The owner (@Image6), in English, on camera, seen from behind, in the voice of @Audio2, flat surprise"; 17-20s "in English, on camera, lips moving, in the voice of @Audio2, disappointed"; shopper and Scout lines unchanged. No accent. |
 | 22 | Shot numbers kept as identifiers | PASS | "Panel N". |
 | 23 | No parameters, analysis or reasons | PASS | See 6, 7. |
