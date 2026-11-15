@@ -1,0 +1,1 @@
+Loop 1: found the page's asset summary still said 2 audio (20.6 s) after Audio 3 (Scout's voice) was added, fixed it to 3 audio (25.1 s) in both copies; fresh check PASS: summary, 3 audio cards, @Audio1-3 in the prompt, ffprobe total 25.14 s, no sideways scroll at 1440 and 390.

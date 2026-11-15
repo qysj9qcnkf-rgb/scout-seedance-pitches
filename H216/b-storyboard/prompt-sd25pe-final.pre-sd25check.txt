@@ -1,0 +1,40 @@
+【Generation Goal】
+Generate a photoreal, warm, full-colour story told in the order of the storyboard. At night a shopper almost buys the Fig & Cedar candle from Ember & Fig, but stops because the product page never says whether it is safe for her cat. The next day the candle-store owner sees it is not selling and decides to discontinue it, until Scout, a glowing lime orb, tells her to ask her shoppers.
+
+【Reference Asset Roles】
+@Image1 provides the shot order and approximate compositions for a 12-panel storyboard grid. Read it from left to right and from top to bottom, one panel per time segment; do not adopt its line-art style, white background or drawn placeholder faces.
+The shopper maps to @Image2; use only her face, bob and cardigan; do not copy her hands-on-keyboard pose.
+The shopper's living room references @Image2; use its sofa, low table, floor lamp and night light; no people.
+The grey tabby cat maps to the cat in @Image2; it is the only cat.
+The shopper's small one-wick candle maps to the lit amber candle on the low table in @Image2; it is not the Fig & Cedar jar.
+The shopper's laptop screen maps to @Image3; show it as it is.
+The owner maps to @Image4; use only her face, braid and sweater; do not use the image background.
+The owner's candle studio references @Image5; use its room, shelves and warm amber light for every owner shot; its laptop screen is blurred, so the owner's screen content comes only from @Image6; do not use the empty ceramic dish on the table or any person.
+The Fig & Cedar jar maps to the three-wick amber jar: @Image3's product photo gives its shape, label and three wicks; @Image5 gives how it looks lit on the owner's table; they jointly define one jar. There is only one Fig & Cedar jar, and it is only in the owner's studio.
+The owner's laptop screen maps to @Image6; show it as it is.
+Scout maps to @Image7; use only its look, as a glowing lime orb; do not show the wordmark before the last shot.
+@Video1 is used only for the transition's camera movement: rise, flip over, land; do not use its people, rooms, colours or pacing.
+Scout's end card maps to @Video2; use only its picture, as the last shot; do not use its sound, words or pacing.
+@Audio1 is used for the shopper's voice timbre only; do not use its words or pacing.
+@Audio2 is used for the owner's voice timbre only; do not use its words or pacing.
+@Audio3 is used for Scout's voice timbre only; do not use its words or pacing.
+
+【Shots】
+0-3s: [Panel 1] At night the small candle flickers by her hand on the mouse <two soft mouse clicks>. Screen: @Image3. In English, the shopper's inner voice (V.O.), lips closed, pleased: {Ooh. Fig and Cedar.}
+3-5s: [Panel 2] The cursor glides onto the Add to cart button and hovers there. In English, shopper V.O., lips closed, decided: {Okay, this one.}
+5-8s: [Panel 3] The cat is on the sofa back behind her <soft paws>; her eyes go from the cat to the candle. In English, shopper V.O., lips closed, unsure: {Wait. Is it safe for my cat?}
+8-10s: [Panel 4] She scrolls; screen: @Image3, no pet information anywhere <mouse-wheel ticks>. In English, shopper V.O., lips closed, flat: {It doesn't say anywhere.}
+10-12s: [Panel 5] <a small sigh> In English, shopper V.O., lips closed, letting it go: {Hm. Guess not.} At the end, nothing is in her cart.
+12-14s: [Panel 6] At 12s she shuts the laptop lid <soft click>; the camera rises and flips over like @Video1 <whoosh>, landing at 14s in the owner's studio, the next day.
+14-16s: [Panel 7] Screen: @Image6. In English, the owner, puzzled: {Huh. Three this month?}
+16-19s: [Panel 8] <glass on wood> In English, the owner, deflated: {I really thought Fig and Cedar would sell.}
+19-21s: [Panel 9] <kraft mailer rustle> In English, the owner, with a sigh: {Guess I'm discontinuing it.}
+21-24s: [Panel 10] Scout's first appearance: the orb pops in beside her shoulder <soft pop>; she turns to it, the jar in her hands, lips closed while it speaks. In English, Scout, calm and warm: {Don't guess. Ask them.}
+24-26s: [Panel 11] Hard cut back to that same night: the lamp still on, the laptop closed on the low table, the cat asleep by the candle; the shopper's lips stay closed. In English, Scout off-screen, gentle: {She was one answer away.}
+26-30s: [Panel 12] The orb becomes the "o" of the Scout wordmark, as in @Video2. In English, Scout, warm: {Scout interviews your shoppers for you. Get free early access.} At the end, the wordmark holds on screen.
+
+【Style and Sound】
+Hard cuts, except the flip at 12-14s. A new visual every 2-3 seconds, close on hands, faces and candles. Night: lamp and candlelight. Owner shots: daytime, the warm amber light of @Image5. Each line ends inside its shot. (Soft piano at night, lifting to warm music in the studio, low under speech.) No subtitles appear on screen.
+
+【Maintain Consistency】
+Keep the shopper and the owner, their clothing and their rooms separate and stable; only one Fig & Cedar jar, and it is only in the owner's studio; the shopper's small one-wick candle stays in her living room; Scout's lime orb look.
