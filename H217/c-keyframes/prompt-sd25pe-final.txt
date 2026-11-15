@@ -1,45 +1,47 @@
 【Generation Goal】
-Generate a bright, slightly playful live-action ad: a woman who runs her own Shopify online store, all bikinis, is about to post a discount when Scout, a floating lime orb, freezes time and shows her a past call with one of her shoppers, which changes her mind. Please note that this is not video editing.
+Generate a bright, slightly playful live-action ad: a woman who runs her own Shopify online store, all bikinis, is about to post a discount when Scout, a floating lime orb, freezes time and shows her a past call with one of her shoppers, which changes her mind.
 
 【Reference Asset Roles】
-Use @Image1 to @Image10 in order as keyframes. Each keyframe sets the composition, room, props and on-screen text of its own time range; ranges join with hard cuts, except the punch-in at 4s, the freeze glide at 8s and the push through the orb at 16s.
+Use @Image1 to @Image10 in order as keyframes. Each keyframe sets the composition, room, props and on-screen text of its own time range; ranges join with hard cuts, except the punch-in at 3s, the freeze glide at 7s and the push through the orb at 15s.
 Use @Image1 as the first frame.
+This first frame defines a macro of her phone lying on her studio desk, the "Refund issued" banner on its lock screen, swimwear blurred beside it, seen from slightly above.
+@Image8 sets the composition and the Sunset bikini held up in her hands; do not take the smile on her face in @Image8, her expression comes from the 19-21s line below.
 @Image11 is the owner: take only her face and hair.
 @Image12 is the shopper: take only her face and hair.
 @Audio1 is the owner's voice: take only timbre, accent and pace; her words come only from this prompt.
 @Audio2 is the shopper's voice: take only timbre, accent and pace; her words come only from this prompt.
 @Audio4 is Scout's voice: take only timbre, accent and pace; Scout's words come only from this prompt.
 @Audio3 is the order sound: play it exactly where the Event Script marks it.
-@Video1 is the ending: at 25-30s it plays exactly as it is, picture and sound.
+@Video1 is the ending: at 26-30s it plays exactly as it is, picture and sound.
 Scout is the lime orb in @Image4, @Image5 and @Image6 and the lime badge in @Image7.
 
 【Subjects and Relationships】
-The owner works alone in one studio (@Image2, @Image3, @Image4, @Image5, @Image6, @Image8 and @Image10); the shopper exists only in the past, inside the orb (@Image6) and the memory (@Image7).
-There is one Scout orb, first seen at 8s. The Sunset bikini appears only in the owner's hands (@Image8) and on her desk (@Image9); the swimwear on the shopper's bed is her own.
+The owner works alone in one studio (@Image2, @Image3, @Image4, @Image5, @Image6, @Image8, @Image9 and @Image10); the shopper exists only in the past, inside the orb (@Image6) and the memory (@Image7).
+There is one Scout orb, first seen at 7s. The Sunset bikini appears only in the owner's hands (@Image8); the swimwear on the shopper's bed is her own.
 
 【Event Script】
-0-2s (reference: @Image1): Macro on her phone. <@Audio3 rings> as the "Refund issued" banner slides in.
-2-4s (reference: @Image2): Hard cut. She reads the phone and deflates.
+0-1s (reference: @Image1): Macro on her phone. <The order sound from @Audio3 rings> as the "Refund issued" banner slides in.
+1-3s (reference: @Image2): Hard cut. She reads the phone and deflates.
 Owner's line (English; flat, dry sarcasm): {Oh, great. A refund.}
-4-6s (reference: @Image2): Quick punch-in to a close-up; she looks into the lens.
+3-5s (reference: @Image2): Quick punch-in to a close-up; she looks into the lens.
 Owner's line (English; wry, tired): {Sales are so low this week.}
-6-8s (reference: @Image3): Hard cut over her shoulder. The room tone fades; her lips stay closed.
+5-7s (reference: @Image3): Hard cut over her shoulder. The room tone fades; her lips stay closed.
 Owner (V.O., inner voice, English; tempted, close-mic): {Maybe it's time for a discount.}
-8-10s (reference: @Image4): Everything freezes and the music stops. Scout appears silently at her shoulder. Only the camera moves, gliding around the frozen moment. Her lips stay closed.
-Scout's line (English; calm, playful): {Not yet.}
-10-12s (reference: @Image5): Reverse angle: she turns and looks at the orb, surprised and curious, lips closed.
-Scout's line (English; warm, confident): {There's something you don't know.}
-12-16s (reference: @Image6): The orb swells beside her into a round window onto the past: inside it, the shopper's call with Scout. The owner watches, lips closed; the shopper listens, lips closed.
+7-9s (reference: @Image4): Everything freezes and the music stops. Scout appears silently at her shoulder. Only the camera moves, gliding around the frozen moment. Her lips stay closed.
+Scout's line (English; on screen as the orb; calm, playful): {Not yet.}
+9-11s (reference: @Image5): Reverse angle: she turns and looks at the orb, surprised and curious, lips closed.
+Scout's line (English; on screen as the orb; warm, confident): {There's something you don't know.}
+11-15s (reference: @Image6): The orb swells beside her into a round window onto the past: inside it, the shopper's call with Scout. The owner watches, lips closed; the shopper listens, lips closed.
 Scout's line (English; heard inside the orb from that call; curious, precise): {The Sunset bikini. Three times in your cart. What stopped you?}
-16-20s (reference: @Image7): The camera pushes through the orb's glowing rim into that past moment, a lime glow at the frame's edges. The shopper smiles and shrugs.
-Shopper's line (English; casual, easy): {You run a discount every week. I'm just waiting for it.}
-20-22s (reference: @Image8): The lime glow snaps away: hard cut back to the studio, in the present. A rueful half-smile.
-Owner's line (English; realising, quietly amused): {I'm training them to wait.}
-22-23s (reference: @Image9): Close-up: she clicks Delete on the discount.
-Owner's line (English; decisive, light): {Noted.}
-23-25s (reference: @Image10): Days later. <@Audio3 rings> as the "New order" banner lands; she speaks right on the bell.
+15-19s (reference: @Image7): The camera pushes through the orb's glowing rim into that past moment, a lime glow at the frame's edges. The shopper smiles and shrugs.
+Shopper's line (English; on screen, on the phone; casual, easy): {You run a discount every week. I'm just waiting for it.}
+19-21s (reference: @Image8): The lime glow snaps away: hard cut back to the studio, in the present, the bikini in her hands. Right after the shopper's answer she freezes: eyes wide, brows up, mouth falling open, a sharp breath in; no smile.
+Owner's line (English; stunned, a shocked realisation, a catch of breath on the "..."): {Oh my god... I'm training them to wait.}
+21-24s (reference: @Image9): Hard cut, seen from behind her at the laptop. She says the line, then her hand on the trackpad clicks Delete on the discount and the "Discount deleted" toast from @Image9 pops up on screen.
+Owner's line (English; decided, firm): {You know what? Let's delete all these discounts.}
+24-26s (reference: @Image10): Days later. <The order sound from @Audio3 rings> as the "New order" banner lands; she speaks right on the bell.
 Owner's line (English; relieved, smiling): {Glad I asked.}
-25-30s (reference: @Video1): @Video1 plays exactly as it is, with Scout's line from it: {Scout interviews your shoppers for you. Get free early access.} Its last frame holds until 30s.
+26-30s (reference: @Video1): @Video1 plays exactly as it is, with Scout's line from it: {Scout interviews your shoppers for you. Get free early access.}
 
 【Maintain Consistency】
 Live action, real skin, natural daylight; smooth, stabilised and premium. Each spoken line finishes inside its own time range. Exactly three voices; whoever is not speaking keeps their lips closed. (Light upbeat music, silent during the freeze, lower under speech.) Generate dialogue strictly as written; do not add or remove lines. No subtitles.
