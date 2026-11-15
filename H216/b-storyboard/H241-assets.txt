@@ -1,0 +1,21 @@
+# H241 asset list: Render · Cat-candle ad · B line-art storyboard (from approved H225)
+# Prompt: /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/prompt-sd25pe-final.txt (sha256 c0c4ba3f7473a0ffebd60d2cbc098160b6bdf29a1cae29dafe288e92603a6179; 1000 words)
+# H241 change (Emile, Nov 15 2:11 PM ET): plot in the goal; her home candles = white pillars/tea lights (room v2), amber three-wick jar only on the page and in the studio.
+# Upload in this order. Job: seedance_2_5, 30 s, 9:16, audio on (job settings, not in the prompt).
+# role | Higgsfield media id | absolute local file | what
+@Image1 | c3d88a05-a5da-4a43-8360-0bc0ce5c5b3a | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/storyboard.png | 12-panel line-art storyboard; H241: home-candle panels redrawn free as white pillars/tea lights (old 242974f8)
+@Image2 | d54d8df5-566f-400d-823a-fd87b64a0831 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/shopper-face.jpg | shopper face, dark bob with bangs, cream cardigan
+@Image3 | f11fa295-b91d-4edd-b9bf-d492d8480d83 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/apartment-candles-v2.jpg | shopper apartment v2, white pillar candles and tea lights only, no person, no cat (replaces 8dcc4d3e)
+@Image4 | 0d34de38-32c9-4f5d-b6a4-c7fad6a4e72a | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/product-page.jpg | Fig & Cedar product page, no cursor, no pet info
+@Image5 | 696c034b-34ca-4b95-8f62-382f22de2f6f | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/cat.jpg | grey tabby cat
+@Image6 | e97f42b3-72fd-40eb-9870-d62c95007272 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/owner.jpg | owner face, auburn side braid, rust sweater (same file re-uploaded free Nov 15; old 1963a66d dead)
+@Image7 | 6ef49b80-0973-487e-a2ee-ed3bec6011ee | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/studio-plate.jpg | owner studio (its jars fenced off in the prompt)
+@Image8 | 8b23ef01-aee5-4fec-b6d5-a6a291ef6105 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/owner-sales.jpg | owner units-sold screen, Fig & Cedar 3, down 84% (local .jpg re-uploaded free Nov 15; old 8c33aad5 was the .png copy)
+@Image9 | c5135236-2310-4800-baeb-f427f0bd4be9 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/fig-cedar-jar.jpg | the one Fig & Cedar jar, amber, blank kraft label, three wicks (local .jpg re-uploaded free Nov 15; old bdbf8b6a was the .png copy)
+@Video1 | 969c55f0-0fa1-4e69-b138-0f171ff227fa | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/flip-move-5s.mp4 | High flip camera move only, 5.0 s, no sound
+@Video2 | cae62718-ec02-41f6-8e36-1de097e8427d | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/h158-end.mp4 | H158 end screen, picture only, 4.5 s
+@Audio1 | 4b121290-c867-44a1-8dc3-6046fb0efb15 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/voice-serene.mp3 | shopper voice timbre, 11.44 s (words not used)
+@Audio2 | 304653bb-2310-4d21-90d4-c32b92477717 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/voice-alexandra-9s.mp3 | owner voice timbre, 9.20 s (words not used)
+@Audio3 | 1040c108-8833-40b5-a3f0-943deab45436 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/voice-scout.mp3 | Scout voice timbre, 4.50 s (words not used)
+# Totals: 9 images, 2 videos (9.5 s), 3 audio (25.14 s), 14 uploads. Unused assets: none.
+# Every media id above returned HTTP 200 on the Higgsfield CDN on Nov 15 ~2:25 PM ET.
