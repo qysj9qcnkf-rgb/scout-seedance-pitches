@@ -1,12 +1,13 @@
 # SD25-CHECK · H228 · E: The Dip as the skeleton, Emile's Nov 15 story
 
 Checked against ByteDance's `sd25-pe` skill (`~/ClaudeCowork/marketer/.claude/skills/sd25-pe/SKILL.md`, v0.1.1, read in full this session, lines 1-996; the self-update command ran earlier this session and reported no installed copy to update, so the local copy is used).
-Prompt: `prompt-sd25pe-final.txt` (998 words by `wc -w`, after the two fresh checks and Emile's 2:11 PM additions; earlier texts `prompt-sd25pe-final.pre-diploop.txt`, `prompt-sd25pe-final.pre-1411.txt`). Job plan: `job-plan.json`. Assets: `a2/` (13 files). Previous High-flip version: `bak-pre-dip/`.
+Prompt: `prompt-sd25pe-final.txt` (1,000 words by `wc -w`, after the two fresh checks and Emile's 2:11 PM and 2:35 PM additions; earlier texts `prompt-sd25pe-final.pre-diploop.txt`, `.pre-1411.txt`, `.pre-1435.txt`; previous check `SD25-CHECK.pre-1435.md`). Job plan: `job-plan.json`. Assets: `a2/` (13 files). Previous High-flip version: `bak-pre-dip/`.
 Task type: **video generation with reference assets + a coarse blockout** (skill "Blockout References and Rendering → Coarse Blockout"). Not editing, not extension, no keyframes, no storyboard.
 Why: Emile, 2:02 PM: "You say The Dip skeleton but this one looks exactly like 227. I don't even see the Dip in the files being referenced." E now sends The Dip as @Video1; the High flip clip (D's technique) is not sent.
 
 ## Story contract (Emile, Nov 15, 1:00 PM)
 Cat lady, candles everywhere, cat nearby; scrolls the Fig & Cedar page up and down; inner voice, lips closed, camera around her: {Are these safe for cats?}; annoyed (visual); closes the site: {I guess we'll never know.} → rotation down to the owner → {I guess no one's interested in Fig and Cedar. No one wants this. Time to discontinue the product line.} → blows out the candle → Scout {Don't guess why your shoppers don't buy.} → end screen {Scout interviews your shoppers for you. Get free early access.} No ka-ching, no call scene.
+Updated by Emile on H240, 2:35 PM (every cat-candle ad): owner lines are now {Wow, Fig and Cedar totally failed.} {Looks like no one's interested in Fig and Cedar.}; she deletes Fig & Cedar with X, then blows out the jar as Scout's line lands; sales on her laptop's own screen; clean H158 end screen.
 
 ## Assets inspected (every one opened)
 | Ref | File | What it really is | Spec / media |
@@ -33,7 +34,7 @@ Cat lady, candles everywhere, cat nearby; scrolls the Fig & Cedar page up and do
 5. References unchanged/not invented. **PASS**: 13 refs = 13 uploads in job-plan order.
 6. **N/A**. 7. **PASS**: every uploaded asset has a role; no unused set, so no 【Unused Assets】 (line 213).
 8. **N/A**. 9. **PASS**: individual mappings. 10. **PASS**: one image per woman.
-11. One primary state change + end state per stage. **PASS**: all 13 segments end "At the end, …"; 7-9s primary change = site closed; 19-21s = candle out.
+11. One primary state change + end state per stage. **PASS**: all 13 segments end "At the end, …"; 7-9s primary change = site closed; 18-19s = row deleted; 21-25s = candle out.
 12. Time ranges continuous. **PASS**: 0-2, 2-4, 4-6, 6-7, 7-9, 9-11, 11-12, 12-16, 16-18, 18-19, 19-21, 21-25, 25-30. They are the script's own timed shot list, laid on @Video1's measured cuts (1.4→2, 5.8→6, 8.6→9, 15.6→16, 17.8→18, 19.4→19, 21.0→21, 23.2 inside 21-25); not invented from the 30 s parameter (line 531).
 13-18. **N/A**.
 19. Blockout identified coarse/fine with mapping and exclusions. **PASS**: "@Video1 is a coarse-blockout reference, 0-25s. Use it only for cut points, shot sizes, camera moves and pacing; do not adopt its grey blurred look, people, rooms, phones, cards, orb, city, globe, mug or text." 【Blockout Mapping】 maps every object by time range (below).
@@ -74,23 +75,23 @@ Cat lady, candles everywhere, cat nearby; scrolls the Fig & Cedar page up and do
 | 0-2 | @Video1 macro | shopper @Image1 (finger) | screen @Image4 | — | PASS |
 | 2-4 | @Video1 medium; camera circles (named) | @Image1 | room @Image2, cat @Image3 | @Audio1 {Are these safe for cats?} | PASS |
 | 4-6 | @Video1 push-in | @Image1 | @Image4 | — | PASS |
-| 6-7 | @Video1 flash cuts | @Image1 (eyes) | @Image4, cat @Image3, candle (@Image2) | — | PASS |
+| 6-7 | @Video1 flash cuts | @Image1 (eyes) | @Image4, cat @Image3, white candle (@Image2) | — | PASS |
 | 7-9 | @Video1 medium | @Image1 | @Image4, @Image3 | @Audio1 {I guess we'll never know.} | PASS |
-| 9-11 | "a flip" on @Video1's rising path (no High flip asset or name) | @Image1 → studio @Image6 | — | — | PASS |
-| 11-12 | @Video1 wide | owner @Image5 | studio @Image6, jar @Image8 | — | PASS |
-| 12-16 | @Video1 frontal medium | @Image5 | sales @Image7 | @Audio2 {I guess no one's interested in Fig and Cedar. No one wants this.} | PASS |
-| 16-18 | @Video1 over-the-shoulder | @Image5 | @Image7, @Image8 | @Audio2 {Time to discontinue the product line.} | PASS |
-| 18-19 | @Video1 over-the-shoulder | @Image5 | @Image8 | — | PASS |
-| 19-21 | @Video1 medium | @Image5 | @Image8 (blown out) | — | PASS |
-| 21-25 | @Video1 inserts + punch-in | @Image5 | @Image8, @Image7 | @Audio3 {Don't guess why your shoppers don't buy.} | PASS |
-| 25-30 | dissolve | — | @Video2 | @Audio3 {Scout interviews your shoppers for you. Get free early access.} | PASS |
-Cause before reaction: page with no pet info (4-6s) before her annoyance (7-9s); red row (12-16s) before the frown. **PASS**.
+| 9-11 | "a flip" on @Video1's rising path | @Image1 → studio @Image6 | — | — | PASS |
+| 11-12 | @Video1 wide | owner @Image5 | studio @Image6, laptop, jar @Image8 | — | PASS |
+| 12-16 | @Video1 medium; camera orbits her, laptop at centre (named) | @Image5 | sales @Image7 on the laptop's own screen | @Audio2 {Wow, Fig and Cedar totally failed.} | PASS |
+| 16-18 | @Video1 over-the-shoulder | @Image5 | @Image7 red row | @Audio2 {Looks like no one's interested in Fig and Cedar.} | PASS |
+| 18-19 | @Video1 over-the-shoulder, close on screen | (her cursor) | @Image7: X clicked, row disappears | — | PASS |
+| 19-21 | @Video1 medium | @Image5 | @Image8 | — | PASS |
+| 21-25 | @Video1 inserts + punch-in | @Image5 | @Image8 blown out as the line lands, @Image7 without the row | @Audio3 {Don't guess why your shoppers don't buy.} | PASS |
+| 25-30 | hard cut, clean | — | @Video2 exactly | @Audio3 {Scout interviews your shoppers for you. Get free early access.} | PASS |
+Cause before reaction: page with no pet info (4-6s) before her annoyance (7-9s); red row on her own screen (12-16s) before "Wow…" and the frown. **PASS**.
 
 ## e) Dialogue ledger
-The six `{}` lines equal Emile's six lines word for word. No ka-ching; no call scene; no orb. **PASS**.
+Shopper (kept): {Are these safe for cats?} · {I guess we'll never know.} Owner (Emile on H240, 2:35 PM, for every cat-candle ad; no "I guess"): {Wow, Fig and Cedar totally failed.} · {Looks like no one's interested in Fig and Cedar.} Scout: {Don't guess why your shoppers don't buy.} · {Scout interviews your shoppers for you. Get free early access.} All exact. No ka-ching; no call scene; no orb. **PASS**.
 
 ## f) Limits
-8 images · 2 videos 29.5 s (≤30) · 3 audio 23.5 s (≤30) · 13 total · 998 words (≤1,000). **PASS**.
+8 images · 2 videos 29.5 s (≤30) · 3 audio 23.5 s (≤30) · 13 total · 1,000 words (≤1,000). **PASS**.
 
 ## Two fresh-context checks (Nov 15) and fixes
 Check 1 (Goal fit YES, FAIL): mapping times wrong (chat bubbles 17.8-19.4, two figures 11-19 man / 19-25 woman, unmapped paper); 18-21 crossed the 19.4 s cut. Fixed: mapping rewritten as above; 18-19 over-the-shoulder + 19-21 medium; flash-cut cat/eyes mapped; "(soft guitar begins)" cut for words.
@@ -100,5 +101,13 @@ Known risk (not a rule FAIL): @Video1 is The Dip greyed and blurred, not simple 
 ## Emile's 2:11 PM additions (all cat-candle ads), folded in
 - Plot in 【Generation Goal】: "a shopper is about to buy the Fig & Cedar candle but can't, because the page never says whether it is safe for cats; the owner, seeing only slow sales, surprisingly cuts the line on the wrong insight". Checklist 2/Principle 1 still PASS (same story).
 - Her candles look different from Fig & Cedar: @Image2 re-made with white/cream pillars and tea lights, no jars; role line "many lit white and cream pillar candles and tea lights; no jars"; 2-4s "white candles all around"; mapping "the jar one of her white pillar candles"; @Image8 (amber three-wick jar) "Only on her screen and in the studio". @Image1's own small background candle stays fenced ("not the room, candle, laptop or cat"). PASS.
+
+## Emile's 2:35 PM changes (on H240, for every cat-candle ad), folded in
+- Owner half: her sales are on her laptop's own screen, never an overlay ("is on the laptop's own screen, never floating"; mapping "her laptop screen (@Image7), never an overlay"). PASS.
+- More short owner shots on the Dip cuts (11-12 wide, 12-16 orbit, 16-18 OTS, 18-19 screen close, 19-21 medium, 21-25 inserts + punch-in); 12-16 "the camera slowly orbits the owner with her laptop at the centre" named as its own move. PASS.
+- New owner lines, no "I guess": {Wow, Fig and Cedar totally failed.} {Looks like no one's interested in Fig and Cedar.} PASS (ledger e).
+- She clicks X to delete Fig & Cedar from her site (18-19s), then blows out the jar as Scout's line lands (21-25s). One primary change per stage: 18-19 = row deleted, 21-25 = candle out. PASS.
+- Clean H158 end screen exactly: "hard cut to the end screen, exactly @Video2, clean" (the smoke dissolve removed). PASS.
+- Checklist 2/3/11/12/20/21 and Principles 1/3/10 re-run on the changed shots: PASS. Limits unchanged except 1,000 words.
 
 ## Result: zero FAILs.

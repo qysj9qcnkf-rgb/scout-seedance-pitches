@@ -5,9 +5,9 @@
   "White pillar candles everywhere: a cat lady is about to buy the amber Fig & Cedar candle, scrolling its page up and down.",
   "Inner voice, lips closed, the camera circling her: “Are these safe for cats?”",
   "She finds nothing, gets annoyed, closes the site: “I guess we'll never know.”",
-  "The camera flips down to the owner, who surprisingly cuts the line on the wrong insight: “I guess no one's interested in Fig and Cedar. No one wants this.”",
-  "“Time to discontinue the product line.” She blows out the candle.",
-  "Scout: “Don't guess why your shoppers don't buy.” “Scout interviews your shoppers for you. Get free early access.”"
+  "The camera flips down to the owner, her sales on her laptop: “Wow, Fig and Cedar totally failed.”",
+  "“Looks like no one's interested in Fig and Cedar.” She clicks X and deletes it from her site.",
+  "She blows out the jar as Scout says: “Don't guess why your shoppers don't buy.” Clean end screen: “Scout interviews your shoppers for you. Get free early access.”"
  ],
  "shots": [
   {
@@ -89,7 +89,7 @@
   {
    "t": "11-12s",
    "who": "Owner",
-   "what": "Dip wide: the owner at her desk, the Fig & Cedar jar lit.",
+   "what": "Dip wide: the owner at her desk, laptop open, the Fig & Cedar jar lit.",
    "line": "",
    "speaker": "",
    "assets": [
@@ -102,8 +102,8 @@
   {
    "t": "12-16s",
    "who": "Owner",
-   "what": "Dip medium: she reads Fig & Cedar in red on her laptop, then frowns.",
-   "line": "I guess no one's interested in Fig and Cedar. No one wants this.",
+   "what": "Dip medium, camera orbiting her with the laptop at the centre; her sales on the laptop's own screen.",
+   "line": "Wow, Fig and Cedar totally failed.",
    "speaker": "Owner",
    "assets": [
     "image5",
@@ -115,21 +115,31 @@
   {
    "t": "16-18s",
    "who": "Owner",
-   "what": "Dip over-the-shoulder: from the red row to the jar.",
-   "line": "Time to discontinue the product line.",
+   "what": "Dip over-the-shoulder: the red Fig & Cedar row on her screen.",
+   "line": "Looks like no one's interested in Fig and Cedar.",
    "speaker": "Owner",
    "assets": [
     "image5",
     "image7",
-    "image8",
     "audio2",
     "video1"
    ]
   },
   {
-   "t": "18-21s",
+   "t": "18-19s",
+   "who": "Owner (cursor)",
+   "what": "Dip over-the-shoulder, close on the screen: she clicks X, the Fig & Cedar row disappears.",
+   "line": "",
+   "speaker": "",
+   "assets": [
+    "image7",
+    "video1"
+   ]
+  },
+  {
+   "t": "19-21s",
    "who": "Owner",
-   "what": "Dip over-the-shoulder, then medium: she leans in and blows out the candle.",
+   "what": "Dip medium: she turns to the lit jar and leans in.",
    "line": "",
    "speaker": "",
    "assets": [
@@ -140,8 +150,8 @@
   },
   {
    "t": "21-25s",
-   "who": "Scout",
-   "what": "Dip inserts and punch-in: smoking jar, red row, her face behind the jar.",
+   "who": "Scout · voice only",
+   "what": "Dip inserts and punch-in: the jar, the screen without the row; she blows out the jar as the line lands.",
    "line": "Don't guess why your shoppers don't buy.",
    "speaker": "Scout · voice only",
    "assets": [
@@ -154,8 +164,8 @@
   },
   {
    "t": "25-30s",
-   "who": "Scout",
-   "what": "The smoke dissolves into the usual Scout end screen.",
+   "who": "Scout · end screen",
+   "what": "Hard cut to the clean Scout end screen, exactly.",
    "line": "Scout interviews your shoppers for you. Get free early access.",
    "speaker": "Scout · end screen",
    "assets": [
