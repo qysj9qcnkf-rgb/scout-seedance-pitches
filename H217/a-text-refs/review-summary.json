@@ -1,0 +1,144 @@
+{
+ "title": "Refund to full price, written in words alone.",
+ "technique": "Every shot written in plain text; references only for faces, voices, studio and screens.",
+ "story": [
+  "A bikini store owner gets a refund and decides it is time for a discount.",
+  "Scout, a floating lime orb, freezes the moment just before she saves it.",
+  "It shows her a past call: a shopper who left a bikini in her cart three times.",
+  "The shopper says there is a discount every week, so she just waits.",
+  "The owner drops the discount. Days later the bikini sells at full price.",
+  "End screen: Scout interviews your shoppers for you. Get free early access."
+ ],
+ "shots": [
+  {
+   "t": "0-2s",
+   "who": "Owner",
+   "what": "Her phone on the packing table; a refund notification slides in",
+   "line": "",
+   "speaker": "",
+   "assets": [
+    "image6",
+    "audio3"
+   ]
+  },
+  {
+   "t": "2-4s",
+   "who": "Owner",
+   "what": "She snatches up the phone, bikini rails behind her",
+   "line": "Oh, f- a refund.",
+   "speaker": "Owner",
+   "assets": [
+    "image1",
+    "audio1"
+   ]
+  },
+  {
+   "t": "4-6s",
+   "who": "Owner",
+   "what": "She looks into the lens, a coral bikini in hand",
+   "line": "Sales are so low this week.",
+   "speaker": "Owner",
+   "assets": [
+    "image1",
+    "audio1"
+   ]
+  },
+  {
+   "t": "6-8s",
+   "who": "Owner",
+   "what": "From behind, she types on the Shopify discount page",
+   "line": "Maybe it's time for a discount.",
+   "speaker": "Owner (inner)",
+   "assets": [
+    "image2",
+    "image7",
+    "audio1"
+   ]
+  },
+  {
+   "t": "8-11s",
+   "who": "Owner and Scout",
+   "what": "Time freezes over Save discount; the lime orb fades in",
+   "line": "Not yet. There's something you don't know.",
+   "speaker": "Scout",
+   "assets": [
+    "image1",
+    "image4",
+    "audio4"
+   ]
+  },
+  {
+   "t": "11-13s",
+   "who": "Owner and Scout",
+   "what": "She looks at the orb; a past call appears inside it",
+   "line": "I called one of your shoppers.",
+   "speaker": "Scout",
+   "assets": [
+    "image1",
+    "image4",
+    "image5",
+    "audio4"
+   ]
+  },
+  {
+   "t": "13-17s",
+   "who": "Shopper",
+   "what": "Inside the memory: the shopper packs a beach bag, call card floating",
+   "line": "Sunset bikini, in your cart three times. What stopped you?",
+   "speaker": "Scout",
+   "assets": [
+    "image5",
+    "image8",
+    "audio4"
+   ]
+  },
+  {
+   "t": "17-20s",
+   "who": "Shopper",
+   "what": "She folds a towel into the bag without looking up",
+   "line": "There's a discount every week. I just wait.",
+   "speaker": "Shopper",
+   "assets": [
+    "image5",
+    "audio2"
+   ]
+  },
+  {
+   "t": "20-23s",
+   "who": "Owner",
+   "what": "Back at her laptop, she laughs at herself and clicks Discard",
+   "line": "I'm training them to wait. Noted.",
+   "speaker": "Owner",
+   "assets": [
+    "image1",
+    "image7",
+    "audio1"
+   ]
+  },
+  {
+   "t": "23-25s",
+   "who": "Owner",
+   "what": "Days later she packs the bikini; a full-price order arrives",
+   "line": "Glad I asked.",
+   "speaker": "Owner",
+   "assets": [
+    "image1",
+    "image9",
+    "audio3",
+    "audio1"
+   ]
+  },
+  {
+   "t": "25-30s",
+   "who": "Scout",
+   "what": "The studio fades; the orb becomes the 'o' of Scout",
+   "line": "Scout interviews your shoppers for you. Get free early access.",
+   "speaker": "Scout",
+   "assets": [
+    "image4",
+    "video1"
+   ]
+  }
+ ],
+ "prompt_section": "After ByteDance's sd25-pe optimizer"
+}

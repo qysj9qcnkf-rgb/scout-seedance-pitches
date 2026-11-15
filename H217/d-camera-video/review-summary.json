@@ -1,0 +1,166 @@
+{
+ "title": "Borrowed camera moves: \"Not yet\"",
+ "technique": "Viral camera moves (bullet time, dive, overhead flip) go in as video references for key beats.",
+ "story": [
+  "A bikini-store owner gets a refund notification in a slow week.",
+  "She starts setting up a discount in her Shopify admin.",
+  "Scout, a lime orb, freezes time: \"Not yet. There's something you don't know.\"",
+  "Scout takes her into a shopper's call: \"You discount every week. I'm just waiting.\"",
+  "Shocked, she deletes all her weekly discounts.",
+  "A week later a full-price order lands. \"Glad I asked.\""
+ ],
+ "shots": [
+  {
+   "t": "0-2s",
+   "who": "Owner",
+   "what": "Macro of her phone among bikinis; refund notification slides in",
+   "line": "",
+   "speaker": "",
+   "assets": [
+    "image2",
+    "image3",
+    "audio3",
+    "video1"
+   ]
+  },
+  {
+   "t": "2-4s",
+   "who": "Owner",
+   "what": "She picks up the phone, coral bikini in her other hand",
+   "line": "Oh, come on. A refund.",
+   "speaker": "Owner",
+   "assets": [
+    "image1",
+    "image3",
+    "audio1",
+    "video1"
+   ]
+  },
+  {
+   "t": "4-6s",
+   "who": "Owner",
+   "what": "Punch-in close-up, she looks into the lens",
+   "line": "Sales are so low this week.",
+   "speaker": "Owner",
+   "assets": [
+    "image1",
+    "image3",
+    "audio1",
+    "video1"
+   ]
+  },
+  {
+   "t": "6-8s",
+   "who": "Owner",
+   "what": "At her laptop, tosses a bikini, starts a discount",
+   "line": "Maybe it's time for a discount.",
+   "speaker": "Owner (inner)",
+   "assets": [
+    "image1",
+    "image3",
+    "audio1",
+    "video1"
+   ]
+  },
+  {
+   "t": "8-11s",
+   "who": "Scout",
+   "what": "Bullet time: bikini hangs mid-air, Scout pops in at her shoulder",
+   "line": "Not yet. There's something you don't know.",
+   "speaker": "Scout",
+   "assets": [
+    "image1",
+    "image3",
+    "image7",
+    "audio4",
+    "video2"
+   ]
+  },
+  {
+   "t": "11-12s",
+   "who": "Owner",
+   "what": "She turns to Scout; camera dives into its glow",
+   "line": "",
+   "speaker": "",
+   "assets": [
+    "image1",
+    "image3",
+    "image7",
+    "video3"
+   ]
+  },
+  {
+   "t": "12-15s",
+   "who": "Shopper",
+   "what": "Shopper packs her beach bag; call card floats up",
+   "line": "Sunset bikini, in your cart three times. What stopped you?",
+   "speaker": "Scout",
+   "assets": [
+    "image4",
+    "image5",
+    "audio4"
+   ]
+  },
+  {
+   "t": "15-18s",
+   "who": "Shopper",
+   "what": "She folds a towel; camera rises and flips overhead",
+   "line": "You discount every week. I'm just waiting.",
+   "speaker": "Shopper",
+   "assets": [
+    "image4",
+    "audio2",
+    "video4"
+   ]
+  },
+  {
+   "t": "18-20s",
+   "who": "Owner",
+   "what": "Owner stops dead, eyes wide, hand on forehead",
+   "line": "Oh my god... I'm training them to wait.",
+   "speaker": "Owner",
+   "assets": [
+    "image1",
+    "image3",
+    "audio1"
+   ]
+  },
+  {
+   "t": "20-23s",
+   "who": "Owner",
+   "what": "From behind at the laptop: deletes discounts, \"Discount deleted\" toast",
+   "line": "You know what? Let's delete all these discounts.",
+   "speaker": "Owner",
+   "assets": [
+    "image1",
+    "image3",
+    "audio1"
+   ]
+  },
+  {
+   "t": "23-25s",
+   "who": "Owner",
+   "what": "A week later: full-price order lights her phone; she seals a mailer",
+   "line": "Glad I asked.",
+   "speaker": "Owner",
+   "assets": [
+    "image1",
+    "image3",
+    "image6",
+    "audio3",
+    "audio1"
+   ]
+  },
+  {
+   "t": "25-30s",
+   "who": "Scout",
+   "what": "Scout becomes the \"o\" of the Scout wordmark",
+   "line": "Scout interviews your shoppers for you. Get free early access.",
+   "speaker": "Scout",
+   "assets": [
+    "video5"
+   ]
+  }
+ ],
+ "prompt_section": "sd25-pe final: ours next to"
+}
