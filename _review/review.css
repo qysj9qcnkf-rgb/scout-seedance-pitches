@@ -99,6 +99,7 @@ img { cursor: zoom-in; }
 .rv-pill.is-on { background: var(--rv-accent-bg); color: var(--rv-accent) !important; border-color: var(--rv-accent-bg); font-weight: 600; }
 .rv-r-sec { display: flex; flex-direction: column; gap: 1px; }
 .rv-sec {
+  flex: none;
   text-align: left; background: none; border: 0; border-left: 2px solid transparent; border-radius: 0; padding: 3px 8px;
   font-size: 12.5px !important; color: var(--rv-muted) !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
@@ -188,7 +189,7 @@ img { cursor: zoom-in; }
 .rv-lb-body { position: relative; display: flex; align-items: center; justify-content: center; min-height: 0; flex: 1; background: #0d0c0b; }
 .rv-lb-stage { display: flex; align-items: center; justify-content: center; width: 100%; min-height: 200px; }
 .rv-lb-stage img, .rv-lb-stage video { display: block; max-width: 100%; max-height: min(64vh, 720px); object-fit: contain; cursor: default; }
-.rv-lb-aud { display: flex; flex-direction: column; align-items: center; gap: 18px; padding: 40px 20px; width: min(520px, 100%); color: var(--rv-aud); }
+.rv-lb-aud { display: flex; flex-direction: column; align-items: center; gap: 18px; padding: 40px 60px; width: min(520px, 100%); color: var(--rv-aud); }
 .rv-lb-aud svg { width: 120px; height: 80px; }
 .rv-lb-aud audio { width: 100%; }
 .rv-lb-nav {

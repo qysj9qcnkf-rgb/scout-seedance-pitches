@@ -210,7 +210,14 @@
         var t2 = tag ? txt(tag).replace(tagRe, '').replace(/new · .*$/i, '').trim() : '';
         if (t2) title = t2;
       }
-      title = title.replace(tagRe, '').replace(/^[\s·:—-]+/, '').trim();
+      var lead = /^\s*(?:@?(?:image|video|audio)\s?\d+|<(?:image|video|audio)\d+>)[\s·:—-]*/i;
+      title = title.replace(lead, '').trim();
+      if (!title) {
+        var whole = txt(el).replace(lead, '').trim();
+        var alt = media && media.getAttribute('alt') ? media.getAttribute('alt').replace(lead, '').trim() : '';
+        if (whole && whole.length < 120 && !el.querySelector('p')) title = whole;
+        else if (alt && !/^(image|video|audio)\s?\d+$/i.test(alt)) title = alt;
+      }
 
       var role = [];
       el.querySelectorAll('p, .gives, .not, .ameta span, figcaption, .k').forEach(function (p) {
@@ -223,7 +230,7 @@
         if (!s || s === title) return;
         if (role.indexOf(s) < 0) role.push(s);
       });
-      if (!title) title = role.length ? clip(role[0].replace(tagRe, '').replace(/^[\s·:—-]+/, ''), 70) : KIND[kind] + ' ' + n;
+      if (!title) title = role.length ? clip(role[0].replace(lead, ''), 70) : KIND[kind] + ' ' + n;
       if (role.length === 1 && role[0] === title) role = [];
 
       var a = {
@@ -801,7 +808,7 @@
     var secName = state.section ? state.section.name : '';
     if (!r) {
       label.textContent = secName || 'Scroll to a shot';
-      text.textContent = 'No asset is named in this part. Scroll to a shot or tap a name like @Image2 to open it here.';
+      text.textContent = 'Scroll to a shot to see its files here. Tap any picture or name like @Image2 to open it without leaving your place.';
       sLabel.textContent = secName || 'Scroll to a shot';
       ui.strip.classList.add('is-empty');
       return;
