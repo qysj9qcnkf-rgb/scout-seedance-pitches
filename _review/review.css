@@ -280,3 +280,9 @@ img { cursor: zoom-in; }
 .rv-gutter { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); max-width: 1180px; }
 .rv-ov.rv-gutter { padding-top: 20px; }
 @media (max-width: 760px) { .rv-shots td.rv-as { white-space: normal; } }
+
+/* Mentions inside the page's own coloured chips keep the chip's text colour (Emile, Nov 15: "We can't see them") */
+.rv-m.rv-in-chip, [class*="chip"] .rv-m, .pill .rv-m, .tag .rv-m { color: inherit !important; text-decoration: none; background: none !important; }
+.rv-mini { display: inline-block; width: 15px; height: 15px; border-radius: 3px; object-fit: cover; vertical-align: -3px; margin-right: 4px; box-shadow: 0 0 0 1px rgba(255, 255, 255, .55); cursor: zoom-in; }
+[data-rv-ink="dark"], [data-rv-ink="dark"] .rv-m { color: #15120f !important; }
+[data-rv-ink="light"], [data-rv-ink="light"] .rv-m { color: #ffffff !important; }

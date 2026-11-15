@@ -128,6 +128,32 @@
     var host = first0 ? first0.parentNode : L;
     var marker = document.createComment('rv');
     host.insertBefore(marker, first0);
+    // Emile, Nov 15: "I don't want the part before SD25." Pre-compile prompts become closed history at the end.
+    var PRE = /^(our draft|our prompt|ours \(|the exact prompts?$)/i;
+    var hasCompiled = groups.some(function (g) { return /sd25|optimi|bytedance|send/i.test(g.title); });
+    groups.forEach(function (g) { g.history = hasCompiled && PRE.test(g.title) && !/sd25-pe compile$|send/i.test(g.title.replace(/before the sd25-pe compile/i, '')); });
+    groups.forEach(function (g) {
+      if (g.history) return;
+      g.nodes.forEach(function (n) {
+        var hs = n.tagName === 'H3' ? [n] : Array.prototype.slice.call(n.querySelectorAll('h3'));
+        hs.forEach(function (h3) {
+          if (!/^(our prompt before|our draft|ours \(|our prompt \()/i.test(txt(h3))) return;
+          var take = [h3];
+          for (var x = h3.nextElementSibling; x && !/^H[23]$/.test(x.tagName) && !x.querySelector('h2, h3'); x = x.nextElementSibling) take.push(x);
+          var hg = { title: txt(h3), nodes: [], history: true, detached: take };
+          groups.push(hg);
+        });
+      });
+    });
+    groups.forEach(function (g) {
+      if (g.history) g.title = 'History · ' + g.title.replace(/\s*·\s*\d[\d,]* words$/, '') + ' (not sent)';
+    });
+    // Tabs that switch to our pre-compile prompt are hidden; the compiled prompt stays.
+    document.querySelectorAll('[role="tab"]').forEach(function (t) {
+      if (/^(ours\b|our prompt|our draft)/i.test(txt(t)) && t.getAttribute('aria-selected') !== 'true') { t.hidden = true; t.classList.add('rv-hidden-tab'); }
+    });
+    groups.sort(function (a, b) { return (a.history ? 1 : 0) - (b.history ? 1 : 0); });
+    groups.forEach(function (g) { if (g.detached) g.nodes = g.detached; });
     var box = h('div', 'rv-checkers', { 'data-rv-skip-none': '1' });
     var head = h('div', 'rv-ch-head');
     head.innerHTML = '<h2 class="rv-ov-h rv-secanchor" data-name="Details for checkers">Details for checkers</h2><p>Everything else that was on this page, closed. Open only what you need.</p>';
@@ -328,6 +354,8 @@
         if (p.start > last) frag.appendChild(document.createTextNode(s.slice(last, p.start)));
         var sp = h('span', 'rv-m rv-k-' + a.kind, { role: 'button', tabindex: '0', 'data-rv': a.id, title: 'Open ' + a.label + ' · ' + a.title });
         sp.textContent = p.text;
+        var host = node.parentElement;
+        if (host && /chip|pill|tag/.test(host.className || '') ) { sp.classList.add('rv-in-chip'); addMini(host, a); }
         frag.appendChild(sp);
         last = p.end;
       });
@@ -337,11 +365,17 @@
     });
   }
 
+  function addMini(host, a) {
+    if (!host || host.querySelector('.rv-mini') || a.mtype !== 'image' || !a.src) return;
+    if (txt(host).length > 24) return;
+    var im = h('img', 'rv-mini', { src: a.src, alt: '', loading: 'lazy', 'aria-hidden': 'true' });
+    host.insertBefore(im, host.firstChild);
+  }
   function markAnchors() {
     document.querySelectorAll('a[href^="#"]').forEach(function (a) {
       if (a.closest('.rv-ui') || a.dataset.rv) return;
       var id = decodeURIComponent(a.getAttribute('href').slice(1));
-      if (byId.has(id)) { a.dataset.rv = id; a.classList.add('rv-a'); }
+      if (byId.has(id)) { a.dataset.rv = id; a.classList.add('rv-a'); addMini(a, byId.get(id)); }
     });
   }
 
@@ -935,6 +969,24 @@
     }
   }
 
+  /* Chip text must read on its chip in both themes. */
+  function lum(c) {
+    var m = (c || '').match(/\d+(\.\d+)?/g); if (!m || m.length < 3) return -1;
+    if (m.length > 3 && +m[3] === 0) return -1;
+    var f = function (v) { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); };
+    return 0.2126 * f(+m[0]) + 0.7152 * f(+m[1]) + 0.0722 * f(+m[2]);
+  }
+  function fixChipInk() {
+    document.querySelectorAll('.rv-in-chip, a.rv-a').forEach(function (e) {
+      var host = e.classList.contains('rv-in-chip') ? e.parentElement : e;
+      host.removeAttribute('data-rv-ink');
+      var bg = lum(getComputedStyle(host).backgroundColor), fg = lum(getComputedStyle(host).color);
+      if (bg < 0 || fg < 0) return;
+      var ratio = (Math.max(bg, fg) + 0.05) / (Math.min(bg, fg) + 0.05);
+      if (ratio < 3.2) host.setAttribute('data-rv-ink', (bg + 0.05) / 0.056 > 1.05 / (bg + 0.05) ? 'dark' : 'light');
+    });
+  }
+
   /* ---------- 9. Boot ---------- */
   function decorate() {
     state.decorating = true;
@@ -958,6 +1010,9 @@
     updateSection();
     updateRow();
     renderShots(); renderNow();
+    fixChipInk();
+    try { window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function () { setTimeout(fixChipInk, 50); }); } catch (e) { /* ignore */ }
+    new MutationObserver(function () { setTimeout(fixChipInk, 50); }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
     var hid = decodeURIComponent((location.hash || '').slice(1));
     if (hid && byId.has(hid)) { window.scrollTo(0, 0); openLB(byId.get(hid), null); }
     else if (hid && document.getElementById(hid)) { var tg = document.getElementById(hid); reveal(tg); tg.scrollIntoView(); }
