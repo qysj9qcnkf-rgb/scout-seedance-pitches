@@ -6,7 +6,7 @@
   "She scrolls the Fig & Cedar product page up and down, searching. She does not buy.",
   "Inner voice, lips closed, the camera circling her: “Are these safe for cats?”",
   "She finds nothing, gets annoyed (shown only), closes the site: “I guess we'll never know.”",
-  "The High flip turns from her down to the owner reading her sales: “I guess no one's interested in Fig and Cedar. No one wants this. Time to discontinue the product line.” She blows out the candle.",
+  "The High flip turns from her down to the owner, her sales on the laptop: “Wow, Fig and Cedar totally failed.” The camera circles her: “Looks like no one's interested in Fig and Cedar.” She clicks X to delete it from her site and blows out the candle.",
   "Scout's voice: “Don't guess why your shoppers don't buy.” End screen: “Scout interviews your shoppers for you. Get free early access.”"
  ],
  "shots": [
@@ -86,23 +86,46 @@
    ]
   },
   {
-   "t": "15-21s",
+   "t": "15-17s",
    "who": "Owner",
-   "what": "Lands from the flip. Medium close-up, slow push in: she reads Fig & Cedar at 3, the lit jar beside the laptop, and sighs.",
-   "line": "I guess no one's interested in Fig and Cedar. No one wants this. Time to discontinue the product line.",
+   "what": "Lands from the flip. Over her shoulder onto her laptop: the sales list on the screen, Fig & Cedar at 3 in red.",
+   "line": "Wow, Fig and Cedar totally failed.",
    "speaker": "Owner",
    "assets": [
     "image5",
     "image6",
     "image7",
+    "audio2"
+   ]
+  },
+  {
+   "t": "17-20s",
+   "who": "Owner",
+   "what": "Slow orbit around her with the laptop as the centre; she sits still.",
+   "line": "Looks like no one's interested in Fig and Cedar.",
+   "speaker": "Owner",
+   "assets": [
+    "image5",
+    "image6",
     "image8",
     "audio2"
    ]
   },
   {
-   "t": "21-23s",
+   "t": "20-22s",
+   "who": "Owner (cursor)",
+   "what": "Macro on her laptop: she clicks the red X on Fig & Cedar in her store admin; the row disappears.",
+   "line": "",
+   "speaker": "",
+   "assets": [
+    "image5",
+    "image9"
+   ]
+  },
+  {
+   "t": "22-23s",
    "who": "Owner, jar",
-   "what": "Hard cut. Close-up: she leans in and blows out the jar; three flames go out, smoke rises.",
+   "what": "She blows out the jar; three flames go out.",
    "line": "",
    "speaker": "",
    "assets": [
@@ -114,12 +137,11 @@
   {
    "t": "23-25s",
    "who": "Smoke",
-   "what": "Hard cut. Macro on the smoking wicks, slow push in; the studio dims.",
+   "what": "Macro on the smoking wicks.",
    "line": "Don't guess why your shoppers don't buy.",
    "speaker": "Scout",
    "assets": [
     "image8",
-    "image6",
     "audio3"
    ]
   },

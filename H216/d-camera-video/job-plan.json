@@ -62,6 +62,12 @@
    "file": "a/image8-fig-cedar-jar.png"
   },
   {
+   "tag": "image9",
+   "what": "owner store admin Products page, red X on the Fig & Cedar row, cursor on it (free GPT Image, Nov 15 round 2)",
+   "value": "66bac8e5-e3c3-4dac-b362-0158528e64b1",
+   "file": "a/image9-store-admin-x.jpg"
+  },
+  {
    "tag": "video1",
    "what": "H158 end screen, picture and voice, 4.5 s",
    "value": "cae62718-ec02-41f6-8e36-1de097e8427d",
@@ -93,7 +99,7 @@
   }
  ],
  "totals": {
-  "images": 8,
+  "images": 9,
   "videos": 2,
   "video_seconds": 9.5,
   "audios": 3,
