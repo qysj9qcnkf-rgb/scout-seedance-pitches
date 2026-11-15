@@ -16,6 +16,7 @@
   "image5_owner_sales": "8c33aad5-bc87-4b86-965e-1a967b2686d3",
   "image6_scout_logo": "af514c1f-638b-492c-9fc3-76df56073a48",
   "image7_fig_cedar_jar_crop": "2a029297-3893-41bc-bbf0-aebc2f10ee3e",
+  "image8_cat_crop_from_h224": "696c034b-34ca-4b95-8f62-382f22de2f6f",
   "video1_dip_skeleton_25s_clay": "419879cc-cce3-4aa9-a30a-4d2f53841c91",
   "video2_h158_end": "cae62718-ec02-41f6-8e36-1de097e8427d",
   "audio1_shopper_9s": "4203dd9a-c54c-45b9-82aa-43f37890e723",
@@ -25,10 +26,11 @@
  "prompt_file": "prompt-sd25pe-final.txt",
  "round": 5,
  "asset_count": {
-  "images": 7,
+  "images": 8,
   "videos": 2,
   "audio": 3,
-  "total": 12
+  "total": 13
  },
- "sd25_check_nov15": "Nov 15 sd25-pe check: image1 one job (shopper only), image4 studio only, new image7 = the Fig & Cedar jar cropped from image4 locally and uploaded free (media 2a029297); every shot names its actor/@image and its Dip move. No paid generation."
+ "sd25_check_nov15": "Nov 15 sd25-pe check: image1 one job (shopper only), image4 studio only, new image7 = the Fig & Cedar jar cropped from image4 locally and uploaded free (media 2a029297); every shot names its actor/@image and its Dip move. No paid generation.",
+ "codex_fix1_nov15": "Codex fix 1 (Nov 15): image8 = the shopper's cat, the free crop already uploaded for H224 (media 696c034b), named in 2-4s, 6-7s, 21-22s. Sofa, room, small candle and phone stay as words per sd25-pe ('Generic background guests, furniture, decor, or environmental elements do not create an asset gap'). Prompt 998 words. No paid generation."
 }

@@ -1,5 +1,5 @@
 【Generation Goal】
-Generate a warm, realistic film in two homes: a shopper gives up on an Ember & Fig candle because nothing says if it's safe for her cat; the owner reads it as nobody wanting it, until Scout, a lime orb, stops her guess. Please note that this is not video editing.
+Generate a warm, realistic film: a shopper gives up on an Ember & Fig candle because nothing says it's safe for her cat; the owner thinks nobody wants it, until Scout stops her guess. Please note that this is not video editing.
 
 【Reference Asset Roles】
 @Image1 is the shopper: only her face, bob with bangs and cream cardigan; not the room, candle or cat.
@@ -9,6 +9,7 @@ Generate a warm, realistic film in two homes: a shopper gives up on an Ember & F
 @Image5 is only the owner's laptop screen; keep its layout and words.
 @Image6 is Scout: only the lime disc with bars, as a small glowing orb; not the lettering.
 @Image7 is only the Fig & Cedar jar; not the laptop or table.
+@Image8 is only the shopper's cat; not the sofa.
 @Video1 is a coarse-blockout reference; do not use its grey look, people, faces, rooms, screens or text.
 @Video2 is only the end screen at 25-30s: picture, motion, on-screen words; not its audio.
 @Audio1 is only the shopper's voice timbre; not its words.
@@ -20,24 +21,24 @@ Use @Video1 as the only reference for the entire video's camera movement, shot r
 In @Video1, the figure is the shopper (@Image1) at 0-9s and the owner (@Image3) at 11-21s and 23-25s; the desk phone at 0-2s is her laptop screen (@Image2); the desk jar at 2-8s is her small candle; the jar in hands at 16-21s is the Fig & Cedar jar (@Image7); the phone at 22-23s is the shopper's phone; the hand-held phone (19-21s), hand, jar and mug (21-22s) and round icon (9-11s) are unused.
 
 【Subjects and Relationships】
-Two women, never in the same room. The shopper (@Image1) is only in her dim living room at night: sofa, floor lamp, laptop, white mouse and phone on a side table, her own small lit candle, a grey tabby cat. The owner (@Image3) is only in her studio (@Image4), with the one jar (@Image7). Scout (@Image6) is one orb.
+Two women, never in the same room. The shopper (@Image1) is only in her dim living room at night: sofa, floor lamp, laptop, mouse, phone on a side table, her small lit candle, her cat (@Image8). The owner (@Image3) is only in her studio (@Image4), with the one jar (@Image7). Scout (@Image6) is one orb.
 
 【Event Script】
 0-2s, @Video1's macro: the shopper's (@Image1) hand clicks Add to cart on @Image2; a cart notification slides in. <a ka-ching> <soft mouse clicks> <a quiet room at night> Ends on the notification.
-2-4s, @Video1's pull-back: to the shopper (@Image1) on her sofa, the cat walking behind her. The shopper's inner voice (@Audio1), off screen, lips closed, in American English, pleased and soft: {Ooh. That's the one.} Ends wide.
+2-4s, @Video1's pull-back: to the shopper (@Image1) on her sofa, the cat (@Image8) walking behind her. The shopper's inner voice (@Audio1), off screen, lips closed, in American English, pleased and soft: {Ooh. That's the one.} Ends wide.
 4-6s, @Video1's push: over the shopper's (@Image1) shoulder into @Image2 as she scrolls to the Wax row; nothing about pets. Inner voice (@Audio1), off screen, lips closed, in American English, unsure: {This one... safe for my cat?} Ends on the Wax row.
-6-7s, @Video1's five flash cuts: the Wax row; the Burn time row; the shopper's (@Image1) frozen finger; her eyes; the cat passing her candle. <five quick soft whooshes> Ends on her eyes.
-7-9s, hard cut to a medium shot: the shopper (@Image1) lowers the laptop lid. Inner voice (@Audio1), off screen, lips closed, in American English, let down: {It doesn't say anywhere. Guess not.} <a soft lid click> Ends closed, unbought.
+6-7s, @Video1's five flash cuts: the Wax row; the Burn time row; the shopper's (@Image1) frozen finger; her eyes; the cat (@Image8) passing her candle. <five quick soft whooshes> Ends on her eyes.
+7-9s, hard cut, medium shot: the shopper (@Image1) lowers the laptop lid. Inner voice (@Audio1), off screen, lips closed, in American English, let down: {It doesn't say anywhere. Guess not.} <a soft lid click> Ends closed, unbought.
 9-11s, @Video1's flight: the camera alone, no orb, flies out her window over the city, night turning to morning. <a long rising whoosh> (soft acoustic guitar begins) Ends high over the city.
 11-12s, hard cut, wide: the owner (@Image3) at her laptop in the studio (@Image4), the jar (@Image7) burning beside it. The owner (@Audio2), on screen, in American English, puzzled: {Huh. Three sold?} Ends on her.
 12-16s, hard cut, then @Video1's push-in to a medium close-up of the owner (@Image3), her laptop showing @Image5. The owner (@Audio2), on screen, in American English, half-laughing: {I thought Fig and Cedar would sell way more.} Ends close.
 16-18s, hard cut, close on hands, tilting up to her face: the owner (@Image3) lifts the jar (@Image7) and blows out its flames. The owner (@Audio2), on screen, in American English, small sigh: {Okay. Nobody wants it. Guess I'm discontinuing it.} Ends on her face.
-18-19s, hard cut, tilt up from the smoking jar (@Image7) with Scout (@Image6) rising from the smoke; the owner's lips stay closed. Scout (@Audio3), from the orb, in American English, calm, friendly: {Wait.} Ends on the orb.
+18-19s, hard cut, tilt up from the smoking jar (@Image7) with Scout (@Image6) rising from it; the owner's lips stay closed. Scout (@Audio3), from the orb, in American English, calm, friendly: {Wait.} Ends on the orb.
 19-21s, @Video1's whip pan to the owner's (@Image3) face, jar (@Image7) in hand, Scout (@Image6) by her cheek; her lips stay closed. Scout (@Audio3), on screen, in American English, calm, friendly: {Don't guess. Your shoppers know why.} Ends on both.
-21-22s, hard cut, insert, no person: Scout (@Image6) streaks into the shopper's room and settles by her candle. Scout (@Audio3), on screen, in American English, warm: {I'll ask them.} <a soft whoosh> Ends at rest.
+21-22s, hard cut, insert, no person: Scout (@Image6) streaks into the shopper's room and settles by her candle beside the cat (@Image8). Scout (@Audio3), on screen, in American English, warm: {I'll ask them.} <a soft whoosh> Ends at rest.
 22-23s, hard cut, top-down insert, no person: the shopper's phone lights up. <a phone buzzing on wood> Ends lit.
 23-25s, @Video1's punch-in: the owner (@Image3) relights the jar (@Image7), a hopeful smile, lips closed. (the guitar lifts) Ends on the lit jar.
 25-30s, match dissolve: the jar's (@Image7) flames merge into Scout (@Image6), which becomes the "o" of the end screen, exactly like @Video2. Scout (@Audio3), off screen, in American English, calm, friendly: {Scout interviews your shoppers for you. Get free early access.} Ends on @Video2.
 
 【Maintain Consistency】
-Keep each woman, home, the jar (@Image7) and orb identical. Each line ends inside its shot. No subtitles; no on-screen words except in @Image2, @Image5, @Image7 and @Video2.
+Keep each woman, home, jar (@Image7), cat (@Image8) and orb identical. Each line ends inside its shot. No subtitles; no on-screen words except in @Image2, @Image5, @Image7 and @Video2.

@@ -14,6 +14,7 @@ Task type: **video generation with reference assets + a coarse-blockout referenc
 | @Image4 | a/image4-owner-studio-day.png | Sunlit studio: shelves of lit blank-label jars, brick, packing table, kraft boxes, laptop (black screen), and a tall lit three-wick "Fig & Cedar" jar | 752x1344 |
 | @Image5 | a/image5-owner-sales.png | Products page, Fig & Cedar row in red, 3 units, -84% | 1600x1000 |
 | @Image6 | a/image6-scout-logo.png | "Scout" wordmark, lime disc with five bars as the "o", black background | 1000x1000 |
+| @Image8 (new, Codex fix 1) | a/image8-cat.jpg | Grey tabby cat only, crop of the same shopper still (sofa/blanket behind); the free crop already uploaded for H224 | media 696c034b-34ca-4b95-8f62-382f22de2f6f |
 | @Image7 (new) | a/image7-fig-cedar-jar.jpg | Crop of @Image4's jar only: tall amber three-wick jar, kraft label "Fig & Cedar" (laptop edge and table behind) | 846x1320, media 2a029297 |
 | @Video1 | a/video1-dip-skeleton-25s-clay.mp4 | The Dip 0-25 s, grey, blurred: phone macro, woman at a desk with laptop + jar, screens, man in a kitchen, chat bubbles, "birthday candle" text, woman with jar to camera | 25.00 s, 480x854 (409,920 px), no audio |
 | @Video2 | a/video2-h158-end.mp4 | Scout end screen (same file as H227's video5); voice: "Scout interviews your shoppers for you. Get free early access." | 4.50 s, 1080x1920, audio |
@@ -170,3 +171,32 @@ Final Checklist re-run: 1-27 PASS or N/A (3 PASS, 11 PASS, 19 PASS, 20 PASS, 27 
 Check 2 found: the 19-21s phone in @Video1 is in the owner figure's hand but was mapped to the shopper (prop ownership); skeleton objects still unmapped (0-2s desk phone, 21-22s hand/jar/mug, the man at 11-15s); The Dip's 15.63 s cut rounds to 16, not 15; transitions not named in the 12, 16, 18 and 25 s shots; 18-19 "Hold" on the page vs "tilt up" in the prompt; "named exception" and "Dip …" are labels Seedance can't see; @Image2's jar differs from @Image7 while the prompt called them the same; @Video2's own audio not fenced; owner's lips at 23-25s; page "6 images", Round 2 "Mine (send this one)", 7-9 map "Close".
 Fixed: blockout line now maps "the desk phone at 0-2s is her laptop screen (@Image2) … the phone at 22-23s is the shopper's phone; the hand-held phone (19-21s), hand, jar and mug (21-22s) and round icon (9-11s) are unused" (the owner figure at 11-21s covers the man); shots re-timed 12-16s and 16-18s and the exception range is 16-19s; every shot names its move or transition as "@Video1's macro / pull-back / push / five flash cuts / flight / push-in / whip pan / punch-in", "hard cut", "tilt up" or "match dissolve"; "named exception" removed; "which is the candle on @Image2's page" removed and consistency says "the jar (@Image7)"; "@Video2 … on-screen words; not its audio"; 23-25s "lips closed"; Scout "on screen" at 19-22s; page: 7 images, Round 2 marked history, 7-9 map "Medium", 18-19 row "Tilt up". 998 words; 11 lines and all sound cues identical.
 Final Checklist re-run: all PASS or N/A (item 2 prop ownership PASS, 12 PASS, 19 PASS, 23 PASS). **Pass 5: zero FAILs.**
+
+# PASS 6 (Codex fix 1, Nov 15): one @asset per person, and the cat
+
+Codex asked for one @asset per on-screen person and object. The rule we hold (marketing-check §3, updated Nov 15) is one @asset per PERSON; objects follow sd25-pe itself, which says (SKILL.md, line 191): **"Generic background guests, furniture, decor, or environmental elements do not create an asset gap; cover them through the designated scene asset and the text description."** The same line adds that a source is needed when "a core character, prop, scene, action, or sound explicitly required by the user still lacks a source".
+- The **cat** is story-critical (the whole ad is "is it safe for my cat"), so it now has its own asset: **@Image8**, "only the shopper's cat; not the sofa", the free crop already uploaded for H224 (media 696c034b, no credits). One role. Named in 2-4s, 6-7s and 21-22s, in 【Subjects and Relationships】 and in 【Maintain Consistency】. @Image1 already says "not the room, candle or cat", so the cat has exactly one source.
+- The **sofa, room, small candle and phone** stay as words (furniture, decor and room props), covered by the text description per the line quoted above.
+- Prompt: 998 words (wc -w; was 998; under the API tip of 1,000). The 10 spoken lines {…} (earlier passes miscounted them as 11) and every <sound> cue diff identical to the pre-fix prompt (`prompt-sd25pe-final.pre-codexfix1.txt`). Assets: 13 = 8 images + 2 videos + 3 audio, under Seedance 2.5's caps (seedance-2-5.md: 30 images + 10 videos + 10 audios; also under the stricter 9 images of the 2.0 column). Video 29.5 s and audio 23.5 s are unchanged, both under 30 s. job-plan.json and the page's "What Seedance gets" box now list 13 files, with Image 8 after Image 7.
+
+## Shot ledger (current prompt): every person and object, and what defines it
+
+| Shot | Person -> its ONE @asset | Object -> its @asset, or words |
+|---|---|---|
+| 0-2s | shopper's hand -> @Image1 | laptop screen -> @Image2; mouse -> words (furniture/decor, sd25-pe line 191) |
+| 2-4s | shopper -> @Image1 | cat -> **@Image8**; sofa -> words (furniture, sd25-pe line 191) |
+| 4-6s | shopper -> @Image1 | laptop screen -> @Image2 |
+| 6-7s | shopper (finger, eyes) -> @Image1 | Wax/Burn rows -> @Image2; cat -> **@Image8**; small candle -> words (decor, sd25-pe line 191) |
+| 7-9s | shopper -> @Image1 | laptop -> words (furniture/decor) |
+| 9-11s | none ("the camera alone, no orb") | window, city -> words (environment, sd25-pe line 191) |
+| 11-12s | owner -> @Image3 | studio -> @Image4; jar -> @Image7 |
+| 12-16s | owner -> @Image3 | laptop screen -> @Image5 |
+| 16-18s | owner -> @Image3 | jar -> @Image7 |
+| 18-19s | Scout -> @Image6 (owner's lips only) | jar -> @Image7 |
+| 19-21s | owner -> @Image3; Scout -> @Image6 | jar -> @Image7 |
+| 21-22s | no person; Scout -> @Image6 | cat -> **@Image8**; shopper's room and small candle -> words (room/decor, sd25-pe line 191) |
+| 22-23s | no person | shopper's phone -> words (decor prop, sd25-pe line 191) |
+| 23-25s | owner -> @Image3 | jar -> @Image7 |
+| 25-30s | Scout -> @Image6 | jar -> @Image7; end screen -> @Video2 |
+
+Every person has exactly one @asset; every asset has one role. Final Checklist items 3, 4, 7 (13 of 13 used), 9 and 10 re-run: **PASS**. Nothing else changed.
