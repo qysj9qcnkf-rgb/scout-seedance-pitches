@@ -1,5 +1,7 @@
 # SD25-CHECK · H241 · Render gate · B line-art storyboard · cat-candle story
 
+
+**H241 gate fix 1 (Codex, Nov 15 2:30 PM):** the old @Video1 (969c55f0, flip-move-5s.mp4) did not show the High flip. Replaced by the real High flip clip from H240 (d44455fb, 5.0 s, same length, so video limits are unchanged: 2 videos, 9.5 s). Contact-sheeted (see the @Video1 row). One role kept: "@Video1 is used only for the High flip camera move". The prompt is unchanged (same sha256), so every other row stands.
 Prompt checked: `prompt-sd25pe-final.txt` (1000 words by `wc -w`, sha256 `c0c4ba3f7473a0ffebd60d2cbc098160b6bdf29a1cae29dafe288e92603a6179`). Asset list: `H241-assets.txt`. Source story: `../shared-cat-candle/STORY.md` (incl. "Emile, Nov 15 2:10-2:11 PM ET").
 Skill: sd25-pe, loaded through the Skill tool on Nov 15 2026 and SKILL.md read in full. Its self-update (`npx --yes skills@latest update sd25-pe -y`) exited 127 (npx not installed): this run could not automatically update sd25-pe and continued with the current local version.
 Task: one video generation, storyboard-grid module. Job settings (not in the prompt): seedance_2_5, 9:16, 30 s, audio on.
@@ -33,7 +35,7 @@ What changed, nothing else:
 | @Image7 | a/studio-plate.jpg | 6ef49b80-0973-487e-a2ee-ed3bec6011ee | the owner's studio |
 | @Image8 | a/owner-sales.jpg | 8b23ef01-aee5-4fec-b6d5-a6a291ef6105 | her laptop screen |
 | @Image9 | a/fig-cedar-jar.jpg | c5135236-2310-4800-baeb-f427f0bd4be9 | the one Fig & Cedar jar |
-| @Video1 | a/flip-move-5s.mp4 (5.0 s, no sound) | 969c55f0-0fa1-4e69-b138-0f171ff227fa | High flip camera move only |
+| @Video1 | a/video1-high-flip.mp4 (5.0 s, 600x1066, no sound; same clip as H240 @Video2) | d44455fb-e7cc-46cf-9d86-641fe8304b97 | High flip camera move only. Contact sheet (work-highflip-contact.jpg, 2 fps): rises over a seated person until it looks straight down, the chair back sweeps the frame as the view flips, arrives level on a second person at a table. Matches the 13-15s text. Its people, chair, table and colours are fenced in the role line |
 | @Video2 | a/h158-end.mp4 (4.5 s) | cae62718-ec02-41f6-8e36-1de097e8427d | end screen picture only |
 | @Audio1 | a/voice-serene.mp3 (11.44 s) | 4b121290-c867-44a1-8dc3-6046fb0efb15 | shopper timbre |
 | @Audio2 | a/voice-alexandra-9s.mp3 (9.20 s) | 304653bb-2310-4d21-90d4-c32b92477717 | owner timbre |
