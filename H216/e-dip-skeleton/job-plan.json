@@ -1,0 +1,34 @@
+{
+ "model": "seedance_2_5",
+ "mode": "omni_reference",
+ "draft": true,
+ "resolution": "480p",
+ "duration": 30,
+ "aspect_ratio": "9:16",
+ "generate_audio": true,
+ "quoted_credits": 90,
+ "submitted": false,
+ "medias_in_order": {
+  "image1_shopper_v2_job": "561ba2d9-6e83-4de5-a7de-146082719ccf",
+  "image2_product_page": "527991c0-fa61-4beb-9dd4-e07986925190",
+  "image3_owner_actress14": "1963a66d-94e4-4fdc-95e5-b34fde48ea4f",
+  "image4_studio_day_job": "50199c94-a9bb-4fc2-9d43-791fe712a5da",
+  "image5_owner_sales": "8c33aad5-bc87-4b86-965e-1a967b2686d3",
+  "image6_scout_logo": "af514c1f-638b-492c-9fc3-76df56073a48",
+  "image7_fig_cedar_jar_crop": "2a029297-3893-41bc-bbf0-aebc2f10ee3e",
+  "video1_dip_skeleton_25s_clay": "419879cc-cce3-4aa9-a30a-4d2f53841c91",
+  "video2_h158_end": "cae62718-ec02-41f6-8e36-1de097e8427d",
+  "audio1_shopper_9s": "4203dd9a-c54c-45b9-82aa-43f37890e723",
+  "audio2_alexandra_10s": "181644ae-51c1-45e8-a5f3-f964ffaabfbd",
+  "audio3_scout_voice_from_video2": "390b5a38-aebb-4de2-9f8c-8019f63edef0"
+ },
+ "prompt_file": "prompt-sd25pe-final.txt",
+ "round": 5,
+ "asset_count": {
+  "images": 7,
+  "videos": 2,
+  "audio": 3,
+  "total": 12
+ },
+ "sd25_check_nov15": "Nov 15 sd25-pe check: image1 one job (shopper only), image4 studio only, new image7 = the Fig & Cedar jar cropped from image4 locally and uploaded free (media 2a029297); every shot names its actor/@image and its Dip move. No paid generation."
+}

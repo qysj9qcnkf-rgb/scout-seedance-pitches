@@ -1,44 +1,43 @@
 【Generation Goal】
-Generate a realistic, warm short film in two homes. The core subjects are a shopper and the owner of the small candle brand Ember & Fig, and the principal event is a sale lost to one unanswered question: late at night the shopper almost buys a candle and quietly gives up because nothing tells her if it is safe for her cat; later, in her bright, sunlit candle studio, the owner reads the slow sales as nobody wanting that candle, until a glowing lime orb, Scout, stops her guess. Please note that this is not video editing.
+Generate a warm, realistic film in two homes: a shopper gives up on an Ember & Fig candle because nothing says if it's safe for her cat; the owner reads it as nobody wanting it, until Scout, a lime orb, stops her guess. Please note that this is not video editing.
 
 【Reference Asset Roles】
-@Image1 is used for the shopper: her face, hair and cardigan.
-The shopper's living room also comes from @Image1: the dim room at night, her laptop and white mouse, the lit candle and the grey tabby cat.
-@Image2 is used only for the screen on the shopper's laptop, the Fig & Cedar product page; keep its layout and words.
-@Image3 is used for the owner's facial features, auburn side braid and rust knit sweater; do not use the image background.
-@Image4 is used for the owner's sunlit candle studio: the packing table, her laptop and the one lit three-wick Fig & Cedar jar.
-@Image5 is used only for the screen on the owner's laptop, her product list with the Fig & Cedar row outlined in red; keep its layout and words.
-@Image6 is used for Scout's shape and colour: the glowing lime disc with five dark upright sound bars and a thin lime ring; do not use its lettering before the end screen.
-@Video1 is a coarse-blockout reference, a grey, blurred motion guide. Use it only for camera movement, shot rhythm, shot-size changes, subject motion trajectory and camera blocking; do not use its grey blurred look, people, faces, rooms, phones, screens, cards or text.
-@Video2 is used only for the Scout end screen from 25 seconds: its picture, motion and words.
-@Audio1 is used for the shopper's inner voice: voice quality, pace and emotion only; do not use its words.
-@Audio2 is used for the owner's voice: voice quality, pace and emotion only; do not use its words.
-@Audio3 is used for Scout's voice in every Scout line: voice quality, pace and emotion only.
+@Image1 is the shopper: only her face, bob with bangs and cream cardigan; not the room, candle or cat.
+@Image2 is only the shopper's laptop screen; keep its layout and words.
+@Image3 is the owner: only her face, auburn braid and rust sweater; not the background.
+@Image4 is only the owner's sunlit studio and laptop; not the Fig & Cedar jar.
+@Image5 is only the owner's laptop screen; keep its layout and words.
+@Image6 is Scout: only the lime disc with bars, as a small glowing orb; not the lettering.
+@Image7 is only the Fig & Cedar jar; not the laptop or table.
+@Video1 is a coarse-blockout reference; do not use its grey look, people, faces, rooms, screens or text.
+@Video2 is only the end screen at 25-30s: picture, motion, on-screen words; not its audio.
+@Audio1 is only the shopper's voice timbre; not its words.
+@Audio2 is only the owner's voice timbre; not its words.
+@Audio3 is only Scout's voice timbre; its words only in the end line.
 
 【Motion Skeleton】
-Use @Video1 as the only reference for the entire video's camera movement, shot rhythm, shot-size changes, subject motion trajectory and camera blocking. Strictly preserve the shot order, camera position changes, movement patterns and pacing of @Video1 from 0 to 25 seconds, with each cut on the nearest whole second given below. Follow @Video1's cut points and shot sizes everywhere except at 15-19s, where close shots of the owner's hands and jar replace its two over-the-shoulder shots.
-The blurred main figure in @Video1 corresponds to the shopper from 0 to 9 seconds and to the owner from 11 to 21 seconds and from 23 to 25 seconds; the 21-23s inserts have no person in frame.
+Use @Video1 as the only reference for the entire video's camera movement, shot rhythm, shot-size changes, subject motion trajectory and camera blocking. Strictly preserve the shot order, camera position changes, movement patterns and pacing of @Video1 from 0 to 25 seconds, with each cut on the nearest whole second given below. Follow @Video1's cut points and shot sizes everywhere except at 16-19s, where close shots of the owner's hands and jar replace its two over-the-shoulder shots.
+In @Video1, the figure is the shopper (@Image1) at 0-9s and the owner (@Image3) at 11-21s and 23-25s; the desk phone at 0-2s is her laptop screen (@Image2); the desk jar at 2-8s is her small candle; the jar in hands at 16-21s is the Fig & Cedar jar (@Image7); the phone at 22-23s is the shopper's phone; the hand-held phone (19-21s), hand, jar and mug (21-22s) and round icon (9-11s) are unused.
 
 【Subjects and Relationships】
-The shopper appears only in her own living room from @Image1, with her cat. The owner appears only in the studio from @Image4. The two women never share a room. Scout is the only thing that crosses between the two homes. The shopper's laptop shows only @Image2; the owner's laptop shows only @Image5.
+Two women, never in the same room. The shopper (@Image1) is only in her dim living room at night: sofa, floor lamp, laptop, white mouse and phone on a side table, her own small lit candle, a grey tabby cat. The owner (@Image3) is only in her studio (@Image4), with the one jar (@Image7). Scout (@Image6) is one orb.
 
 【Event Script】
-0-2s: Macro on the shopper's hand on the white mouse; @Image2 fills her laptop screen, the cursor glides to Add to cart and clicks, and a small add-to-cart notification with a cart icon slides in at the top corner of her screen. <a ka-ching> <soft mouse clicks> <a quiet room at night>
-2-4s: Pull back to the shopper on her sofa, laptop open on the low side table, her hand on the white mouse beside it, the cat walking along the sofa behind her. Her lips stay closed. In American English, pleased and soft, the shopper's inner voice, off screen: {Ooh. That's the one.}
-4-6s: Push into her screen as she scrolls to the Burn time, Size and Wax rows; nothing about pets anywhere. Her lips stay closed. In American English, unsure, the shopper's inner voice, off screen: {This one... safe for my cat?}
-6-7s: Five flash cuts: the Wax row; the Burn time row; her finger frozen above the mouse button; her eyes lifting from the screen; the cat in soft focus behind her, stepping past the lit jar. <five quick soft whooshes>
-7-9s: Close on her face lit by the screen, lips closed; she lowers the laptop lid. In American English, let down, the shopper's inner voice, off screen: {It doesn't say anywhere. Guess not.} <a soft lid click>
-9-11s: One continuous flight: the camera lifts off her closed laptop, glides out of her dark window and rises over the city rooftops as the night sky turns to morning. <a long rising whoosh> (a soft, warm acoustic guitar bed begins)
-11-12s: Hard cut, wide in the sunlit studio: the owner at the packing table, her eyes on her laptop screen, the Fig & Cedar jar burning beside it. In American English, puzzled, the owner says on screen: {Huh. Three sold?}
-12-15s: Push in on her and her laptop showing @Image5. In American English, half-laughing, the owner says on screen: {I thought Fig and Cedar would sell way more.}
-15-18s: Close on her hands lifting the burning Fig & Cedar jar off the table, then she looks up into a close-up and, on screen, in American English, with a small sigh, the owner says: {Okay. Nobody wants it. Guess I'm discontinuing it.}
-18-19s: Close on the jar in her hands as a small glowing lime orb with pulsing sound bars rises out of the candle smoke beside her. The owner's lips stay closed. In American English, calm and friendly, Scout says from the orb, in the voice of @Audio3: {Wait.}
-19-21s: Whip pan to her face, front on, the jar in both hands, the orb floating beside her cheek; her lips stay closed as she listens. In American English, calm and friendly, Scout says from the orb, in the voice of @Audio3: {Don't guess. Your shoppers know why.}
-21-22s: Insert: the orb streaks into the shopper's dim living room and settles beside her candle, the cat curled up nearby. In American English, warm, Scout says from the orb, in the voice of @Audio3: {I'll ask them.} <a soft whoosh>
-22-23s: Insert: the shopper's phone on the side table lights up with an incoming call. <a phone buzzing on wood>
-23-25s: Punch in on the owner relighting the three wicks and setting the jar back on the table, a small hopeful smile. (the warm guitar bed lifts)
-25-30s: The three flames merge into the glowing lime orb, which becomes the "o" of the Scout end screen, exactly like @Video2. In American English, calm and friendly, Scout says off screen, in the voice of @Audio3: {Scout interviews your shoppers for you. Get free early access.}
-At the end: the owner's jar is lit again on her table in the studio, and the Scout end screen holds as in @Video2.
+0-2s, @Video1's macro: the shopper's (@Image1) hand clicks Add to cart on @Image2; a cart notification slides in. <a ka-ching> <soft mouse clicks> <a quiet room at night> Ends on the notification.
+2-4s, @Video1's pull-back: to the shopper (@Image1) on her sofa, the cat walking behind her. The shopper's inner voice (@Audio1), off screen, lips closed, in American English, pleased and soft: {Ooh. That's the one.} Ends wide.
+4-6s, @Video1's push: over the shopper's (@Image1) shoulder into @Image2 as she scrolls to the Wax row; nothing about pets. Inner voice (@Audio1), off screen, lips closed, in American English, unsure: {This one... safe for my cat?} Ends on the Wax row.
+6-7s, @Video1's five flash cuts: the Wax row; the Burn time row; the shopper's (@Image1) frozen finger; her eyes; the cat passing her candle. <five quick soft whooshes> Ends on her eyes.
+7-9s, hard cut to a medium shot: the shopper (@Image1) lowers the laptop lid. Inner voice (@Audio1), off screen, lips closed, in American English, let down: {It doesn't say anywhere. Guess not.} <a soft lid click> Ends closed, unbought.
+9-11s, @Video1's flight: the camera alone, no orb, flies out her window over the city, night turning to morning. <a long rising whoosh> (soft acoustic guitar begins) Ends high over the city.
+11-12s, hard cut, wide: the owner (@Image3) at her laptop in the studio (@Image4), the jar (@Image7) burning beside it. The owner (@Audio2), on screen, in American English, puzzled: {Huh. Three sold?} Ends on her.
+12-16s, hard cut, then @Video1's push-in to a medium close-up of the owner (@Image3), her laptop showing @Image5. The owner (@Audio2), on screen, in American English, half-laughing: {I thought Fig and Cedar would sell way more.} Ends close.
+16-18s, hard cut, close on hands, tilting up to her face: the owner (@Image3) lifts the jar (@Image7) and blows out its flames. The owner (@Audio2), on screen, in American English, small sigh: {Okay. Nobody wants it. Guess I'm discontinuing it.} Ends on her face.
+18-19s, hard cut, tilt up from the smoking jar (@Image7) with Scout (@Image6) rising from the smoke; the owner's lips stay closed. Scout (@Audio3), from the orb, in American English, calm, friendly: {Wait.} Ends on the orb.
+19-21s, @Video1's whip pan to the owner's (@Image3) face, jar (@Image7) in hand, Scout (@Image6) by her cheek; her lips stay closed. Scout (@Audio3), on screen, in American English, calm, friendly: {Don't guess. Your shoppers know why.} Ends on both.
+21-22s, hard cut, insert, no person: Scout (@Image6) streaks into the shopper's room and settles by her candle. Scout (@Audio3), on screen, in American English, warm: {I'll ask them.} <a soft whoosh> Ends at rest.
+22-23s, hard cut, top-down insert, no person: the shopper's phone lights up. <a phone buzzing on wood> Ends lit.
+23-25s, @Video1's punch-in: the owner (@Image3) relights the jar (@Image7), a hopeful smile, lips closed. (the guitar lifts) Ends on the lit jar.
+25-30s, match dissolve: the jar's (@Image7) flames merge into Scout (@Image6), which becomes the "o" of the end screen, exactly like @Video2. Scout (@Audio3), off screen, in American English, calm, friendly: {Scout interviews your shoppers for you. Get free early access.} Ends on @Video2.
 
 【Maintain Consistency】
-Exactly two women, each in her own home. Keep each face, hair and outfit, each home and the single Fig & Cedar jar identical in every shot. The shopper's lips stay closed in every shot; only her inner voice is heard. The owner keeps her lips closed while Scout speaks. Scout's voice comes only from the orb and the end screen. Each line finishes inside its shot. No subtitles appear on screen, and no on-screen words appear except those in @Image2, @Image5 and @Video2.
+Keep each woman, home, the jar (@Image7) and orb identical. Each line ends inside its shot. No subtitles; no on-screen words except in @Image2, @Image5, @Image7 and @Video2.
