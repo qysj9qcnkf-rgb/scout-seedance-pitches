@@ -2,11 +2,11 @@
 Generate a light, real, slightly playful live-action ad: the owner of Salt & Sun Swim, a small online bikini store on Shopify, gets a refund instead of a sale in her sunny home studio, starts to run a discount, and is stopped mid-click by Scout, a floating lime orb. Please note that this is not video editing.
 
 【Reference Asset Roles】
-The owner maps to @Image1; use only her facial features, long brown hair and white linen shirt.
-Her studio references @Image2; use only the room: bikini rails, folded swimsuits, kraft boxes, the wooden table, the window and the daylight. Do not use its empty-chair composition.
-Scout maps to the lime orb in @Image2; use only its round glowing lime body with white sound bars. There is exactly one orb, and it appears only from 10s.
+The owner maps to @Image1; use only her facial features, long brown hair and white linen shirt, without changing the last-frame composition in @Image5.
+Her studio references @Image2; use only the room: bikini rails, folded swimsuits, kraft boxes, the wooden table, the window and the daylight, without changing the last-frame composition in @Image5. Do not use its empty-chair composition or the lime orb floating in it.
+Scout maps to @Image6; use only its round glowing lime body with white sound bars, and do not use its plain background. There is exactly one orb, and it appears only from 10s.
 The phone notification references @Image3; show its lock-screen text exactly as written.
-The laptop screen references @Image4; show the "Create discount" page exactly as written.
+The laptop screen references @Image4; show the "Create discount" page exactly as written, without changing the last-frame composition in @Image5.
 Use @Image5 as the last frame.
 This last frame defines the owner at the laptop with the @Image4 page open, her lips closed, turned toward the orb at her shoulder, in the same studio and camera direction.
 @Video1 is used only for Scout's voice timbre; do not use any of its visuals.
