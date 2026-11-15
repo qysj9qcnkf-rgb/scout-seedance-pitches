@@ -1,7 +1,7 @@
 # SD25-CHECK · H228 · E: The Dip as the skeleton, Emile's Nov 15 story
 
-Checked against ByteDance's `sd25-pe` skill (`~/ClaudeCowork/marketer/.claude/skills/sd25-pe/SKILL.md`, v0.1.1, read in full this session, lines 1-996; self-update ran, exit 0, local copy used).
-Prompt: `prompt-sd25pe-final.txt` (1,000 words by `wc -w`). Job plan: `job-plan.json`. Assets: `a2/` (13 files). Previous High-flip version: `bak-pre-dip/`.
+Checked against ByteDance's `sd25-pe` skill (`~/ClaudeCowork/marketer/.claude/skills/sd25-pe/SKILL.md`, v0.1.1, read in full this session, lines 1-996; the self-update command ran earlier this session and reported no installed copy to update, so the local copy is used).
+Prompt: `prompt-sd25pe-final.txt` (997 words by `wc -w`, after the two fresh checks; pre-check text in `prompt-sd25pe-final.pre-diploop.txt`). Job plan: `job-plan.json`. Assets: `a2/` (13 files). Previous High-flip version: `bak-pre-dip/`.
 Task type: **video generation with reference assets + a coarse blockout** (skill "Blockout References and Rendering → Coarse Blockout"). Not editing, not extension, no keyframes, no storyboard.
 Why: Emile, 2:02 PM: "You say The Dip skeleton but this one looks exactly like 227. I don't even see the Dip in the files being referenced." E now sends The Dip as @Video1; the High flip clip (D's technique) is not sent.
 
@@ -19,7 +19,7 @@ Cat lady, candles everywhere, cat nearby; scrolls the Fig & Cedar page up and do
 | @Image6 | a2/image6-owner-studio.png | Sunlit studio, brick, shelves of lit jars, desk, laptop, a tall labelled jar (fenced) | 752x1344 · 50199c94 |
 | @Image7 | a2/image7-owner-sales.png | Products · units sold; Fig & Cedar row red, 3, -84% | 1600x1000 · 8c33aad5 |
 | @Image8 | a2/image8-fig-cedar-jar.png | The page's jar photo: short, wide amber, three wicks, kraft label; fig leaves, linen | 660x660 · a6be392e |
-| @Video1 | a2/video1-dip-skeleton.mp4 | The Dip (H174), grey + blurred, no audio. Cuts (scene detect + 2 fps sheet): 0-1.5 desk phone + notification cards · 1.5-4.5 woman at desk with laptop + jar (medium) · 4.5-5.8 push into laptop · 5.8-6.8 five flash cuts (product page, jar) · 7-8.5 woman medium, phone · 8.5-11 orb flies out the window over a city, globe · 11-12 man in kitchen (wide) · 12-15.6 waveform card, push-in · 15.6-17.8 over-the-shoulder with cards and "birthday candle" text · 17.8-21 chat bubbles, woman holding jar + phone to camera · 21-22.4 hand, jar, mug insert · 22.4-23.2 product-page insert · 23.2-25 punch-in on woman's face with jar | 25.00 s, 480x854 · 419879cc |
+| @Video1 | a2/video1-dip-skeleton.mp4 | The Dip (H174), grey + blurred, no audio. Cuts (scene detect + 2 fps sheet): 0-1.4 desk phone + notification cards · 1.4-4.5 woman at desk with laptop + jar (medium) · 4.5-5.8 push into laptop · 5.8-6.8 five flash cuts (product page, jar) · 7-8.6 woman medium, phone · 8.6-11 orb flies out the window over a city, globe · 11-12 man in kitchen (wide) · 12-15.6 frontal medium on the man with a waveform card · 15.6-17.8 over-the-shoulder with cards and "birthday candle" text · 17.8-19.4 over-the-shoulder, chat bubbles, paper · 19.4-21 woman holding jar + phone to camera · 21-22.4 hand, jar, mug insert · 22.4-23.2 product-page insert · 23.2-25 punch-in on woman's face with jar | 25.00 s, 480x854 · 419879cc |
 | @Video2 | a2/video2-end-screen.mp4 | Scout end screen; its voice says the end line | 4.50 s, 1080x1920 · cae62718 |
 | @Audio1 | a2/audio1-shopper-voice.mp3 | Calm woman's voice | 9.00 s · 4203dd9a |
 | @Audio2 | a2/audio2-owner-voice.mp3 | Alexandra, warm | 10.00 s · 181644ae |
@@ -33,8 +33,8 @@ Cat lady, candles everywhere, cat nearby; scrolls the Fig & Cedar page up and do
 5. References unchanged/not invented. **PASS**: 13 refs = 13 uploads in job-plan order.
 6. **N/A**. 7. **PASS**: every uploaded asset has a role; no unused set, so no 【Unused Assets】 (line 213).
 8. **N/A**. 9. **PASS**: individual mappings. 10. **PASS**: one image per woman.
-11. One primary state change + end state per stage. **PASS**: all 12 segments end "At the end, …"; 7-9s primary change = site closed; 18-21s = candle out.
-12. Time ranges continuous. **PASS**: 0-2, 2-4, 4-6, 6-7, 7-9, 9-11, 11-12, 12-16, 16-18, 18-21, 21-25, 25-30. They are the script's own timed shot list, laid on @Video1's measured cuts (1.5→2, 5.8→6, 15.6→16, 17.8→18, 21.0→21, 23.2 inside 21-25); not invented from the 30 s parameter (line 531).
+11. One primary state change + end state per stage. **PASS**: all 13 segments end "At the end, …"; 7-9s primary change = site closed; 19-21s = candle out.
+12. Time ranges continuous. **PASS**: 0-2, 2-4, 4-6, 6-7, 7-9, 9-11, 11-12, 12-16, 16-18, 18-19, 19-21, 21-25, 25-30. They are the script's own timed shot list, laid on @Video1's measured cuts (1.4→2, 5.8→6, 8.6→9, 15.6→16, 17.8→18, 19.4→19, 21.0→21, 23.2 inside 21-25); not invented from the 30 s parameter (line 531).
 13-18. **N/A**.
 19. Blockout identified coarse/fine with mapping and exclusions. **PASS**: "@Video1 is a coarse-blockout reference, 0-25s. Use it only for cut points, shot sizes, camera moves and pacing; do not adopt its grey blurred look, people, rooms, phones, cards, orb, city, globe, mug or text." 【Blockout Mapping】 maps every object by time range (below).
 20. Observable emotion/camera. **PASS**: "annoyed, exhales through her nose"; flip = "rises above… flips over the sofa back until it fills the frame, and comes down out of it into… the owner's sunlit studio".
@@ -55,16 +55,18 @@ Cat lady, candles everywhere, cat nearby; scrolls the Fig & Cedar page up and do
 | 0-2s | notification cards | unused |
 | 2-9s | figure | shopper @Image1 |
 | 2-6s | laptop / jar | her laptop / one of her small candles (@Image2) |
-| 6-7s | flash-cut product page / jar | @Image4 rows / her small candle |
+| 6-7s | flash cuts | @Image4 rows, her candle, the cat @Image3, her eyes @Image1 |
 | 7-9s | phone | unused |
 | 9-11s | orb, window, city, globe | unused; only the rising camera path kept |
-| 11-25s | figure (man 11-18s, woman 18-25s) | owner @Image5 |
-| 12-18s | waveform + chat cards, "birthday candle" text | her screen @Image7; words unused |
-| 18-25s | jar | @Image8 |
-| 18-21s | phone | unused |
+| 11-19s / 19-25s | man / woman | both the owner @Image5 |
+| 12-18s | waveform card, "birthday candle" text | her screen @Image7; words unused |
+| 18-19s | chat bubbles | her screen @Image7; words unused |
+| 18-19s | paper | unused |
+| 19-25s | jar | @Image8 |
+| 19-22s | phones | unused |
 | 21-22s | mug | unused |
 | 22-23s | product page | @Image7 |
-- Scene-by-scene activation: each segment names its @Video1 move ("@Video1's macro", "medium", "push-in", "five flash cuts", "wide", "slow push-in", "over-the-shoulder shots", "inserts, then its punch-in"). **PASS**.
+- Scene-by-scene activation: each segment names its @Video1 move ("@Video1's macro", "medium", "push-in", "five flash cuts", "wide", "medium", "over-the-shoulder", "inserts, then its punch-in"). **PASS**.
 
 ## d) Shot ledger: the ONE @asset per person, object and move
 | Time | Move | People | Objects | Line | Verdict |
@@ -74,11 +76,12 @@ Cat lady, candles everywhere, cat nearby; scrolls the Fig & Cedar page up and do
 | 4-6 | @Video1 push-in | @Image1 | @Image4 | — | PASS |
 | 6-7 | @Video1 flash cuts | @Image1 (eyes) | @Image4, cat @Image3, candle (@Image2) | — | PASS |
 | 7-9 | @Video1 medium | @Image1 | @Image4, @Image3 | @Audio1 {I guess we'll never know.} | PASS |
-| 9-11 | flip on @Video1's rising path | @Image1 → studio @Image6 | — | — | PASS |
+| 9-11 | "a flip" on @Video1's rising path (no High flip asset or name) | @Image1 → studio @Image6 | — | — | PASS |
 | 11-12 | @Video1 wide | owner @Image5 | studio @Image6, jar @Image8 | — | PASS |
-| 12-16 | @Video1 slow push-in | @Image5 | sales @Image7 | @Audio2 {I guess no one's interested in Fig and Cedar. No one wants this.} | PASS |
+| 12-16 | @Video1 frontal medium | @Image5 | sales @Image7 | @Audio2 {I guess no one's interested in Fig and Cedar. No one wants this.} | PASS |
 | 16-18 | @Video1 over-the-shoulder | @Image5 | @Image7, @Image8 | @Audio2 {Time to discontinue the product line.} | PASS |
-| 18-21 | @Video1 medium | @Image5 | @Image8 | — | PASS |
+| 18-19 | @Video1 over-the-shoulder | @Image5 | @Image8 | — | PASS |
+| 19-21 | @Video1 medium | @Image5 | @Image8 (blown out) | — | PASS |
 | 21-25 | @Video1 inserts + punch-in | @Image5 | @Image8, @Image7 | @Audio3 {Don't guess why your shoppers don't buy.} | PASS |
 | 25-30 | dissolve | — | @Video2 | @Audio3 {Scout interviews your shoppers for you. Get free early access.} | PASS |
 Cause before reaction: page with no pet info (4-6s) before her annoyance (7-9s); red row (12-16s) before the frown. **PASS**.
@@ -87,6 +90,11 @@ Cause before reaction: page with no pet info (4-6s) before her annoyance (7-9s);
 The six `{}` lines equal Emile's six lines word for word. No ka-ching; no call scene; no orb. **PASS**.
 
 ## f) Limits
-8 images · 2 videos 29.5 s (≤30) · 3 audio 23.5 s (≤30) · 13 total · 1,000 words (≤1,000). **PASS**.
+8 images · 2 videos 29.5 s (≤30) · 3 audio 23.5 s (≤30) · 13 total · 997 words (≤1,000). **PASS**.
+
+## Two fresh-context checks (Nov 15) and fixes
+Check 1 (Goal fit YES, FAIL): mapping times wrong (chat bubbles 17.8-19.4, two figures 11-19 man / 19-25 woman, unmapped paper); 18-21 crossed the 19.4 s cut. Fixed: mapping rewritten as above; 18-19 over-the-shoulder + 19-21 medium; flash-cut cat/eyes mapped; "(soft guitar begins)" cut for words.
+Check 2 (Goal fit YES, FAIL): "the High flip" named D's technique with no asset → "a flip"; 12-16 said "slow push-in over the shoulder" but the skeleton is a frontal medium there → "@Video1's medium… laptop screen (@Image7) showing the red row"; risk the 23-25 s skeleton jar is lit → "the jar stays unlit after 21s"; this file's cut times and self-update claim corrected.
+Known risk (not a rule FAIL): @Video1 is The Dip greyed and blurred, not simple geometry; faces and some text are half-readable. The role line fences "its grey blurred look, people, rooms, phones, cards, orb, city, globe, mug or text".
 
 ## Result: zero FAILs.
