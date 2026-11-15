@@ -1,119 +1,136 @@
-# SD25-CHECK · H241 · Render gate · B line-art storyboard · cat-candle story
+# SD25-CHECK · H241 round 2 · Render gate · B line-art storyboard · cat-candle story
 
-
-**H241 gate fix 1 (Codex, Nov 15 2:30 PM):** the old @Video1 (969c55f0, flip-move-5s.mp4) did not show the High flip. Replaced by the real High flip clip from H240 (d44455fb, 5.0 s, same length, so video limits are unchanged: 2 videos, 9.5 s). Contact-sheeted (see the @Video1 row). One role kept: "@Video1 is used only for the High flip camera move". The prompt is unchanged (same sha256), so every other row stands.
-Prompt checked: `prompt-sd25pe-final.txt` (1000 words by `wc -w`, sha256 `c0c4ba3f7473a0ffebd60d2cbc098160b6bdf29a1cae29dafe288e92603a6179`). Asset list: `H241-assets.txt`. Source story: `../shared-cat-candle/STORY.md` (incl. "Emile, Nov 15 2:10-2:11 PM ET").
-Skill: sd25-pe, loaded through the Skill tool on Nov 15 2026 and SKILL.md read in full. Its self-update (`npx --yes skills@latest update sd25-pe -y`) exited 127 (npx not installed): this run could not automatically update sd25-pe and continued with the current local version.
+Prompt checked: `prompt-sd25pe-final.txt` (1000 words by `wc -w`, sha256 `bbbe6887a5d585239671c7d21678ebc4b8c7fb2f8f4917597e458d1a9196c76a`). Asset list: `H241-assets.txt` (15 uploads). Previous Codex-cleared prompt: `prompt-sd25pe-final.pre-r2.txt` (d394acf7, round 1). Source story: `../shared-cat-candle/STORY.md`; reference build: `../d-camera-video/prompt-sd25pe-final.txt` (H240 round 2, b4f4b5ed).
+Skill: sd25-pe, loaded through the Skill tool on Nov 15 2026; SKILL.md read in full. Self-update (`npx --yes skills@latest update sd25-pe -y`) exited 127 (npx not installed): this run could not automatically update sd25-pe and continued with the current local version.
 Task: one video generation, storyboard-grid module. Job settings (not in the prompt): seedance_2_5, 9:16, 30 s, audio on.
 
-## H241 change (Emile, Nov 15 2:11 PM ET on H225)
-> "the narrative of the story is that the shopper is looking at something she's about to buy. She can't buy it because she doesn't have the information. Surprisingly the owner makes a decision to cut off the product line on the wrong insight."
-> "make sure that Fig and Cedar, the thing that she's currently trying to buy, look and feel different from the one she has at home ... Make it feel different, that this is another product from the one she has at home."
+## Round 2 (Emile, Nov 15 2:35 PM ET on H240, for every cat-candle render)
+> "I like the portion of the client. The portion of the owner is not good ... there's an overlay of the thing. This is horrendous. It shouldn't be that way. If anything, that should be on the laptop ... The shot is too long ... 'Wow, Fig and Cedar totally failed.' ... You see her clicking X, deleting it from the website, and blowing away the candles ... Maybe we could say, 'Looks like no one's interested in Fig and Cedar.' ... a camera spinning around her ... with the laptop as a center point, just looking at the laptop straight, not moving, and then the camera rotating around her."
 
-What changed, nothing else:
-1. **Plot in 【Generation Goal】** (story facts, no new dialogue): "At night a cat lady wants the Fig & Cedar candle and is about to buy it, but its product page never says whether it is safe for cats, the one thing she needs before buying, so she can't and leaves without buying. The owner sees only the missing sales, wrongly concludes nobody wants Fig & Cedar, and surprisingly discontinues the line on that wrong premise, blowing out the candle." Plus in 【Subjects and Relationships】: "The shopper's unanswered question is the real reason for the low sales; the owner never learns it."
-2. **Candle contrast:** room still swapped to v2 (@Image3 = f11fa295, white pillars and tea lights; v1 8dcc4d3e had amber jars). Room line: "use only its sofa, lamp, plants, its many lit white pillar candles and tea lights, and the warm night light". Relationships: "her own candles are only white pillars and tea lights, clearly unlike the amber three-wick Fig & Cedar jar, which she does not own ... The amber jar is only on the shopper's screen (@Image4) and the owner's desk." Panel 1 shot: "Dozens of lit white pillar candles and tea lights fill the apartment (@Image3)".
-3. **Storyboard @Image1** re-uploaded free (media c3d88a05-a5da-4a43-8360-0bc0ce5c5b3a, old 242974f8): panels 1, 4, 5, 6 redrawn free (Codex) so her home candles read as slim single-wick white pillars and tea lights; the two ambiguous short candles in holders at the bottom of P6 and the one beside the table are now tea lights. Panel 3 kept as it was: its two background candles were already slim single-wick pillars, and the Codex redraw came back garbled (rejected). Panels 2 and 7-12 untouched.
-4. **Owner @Image6 re-uploaded free** (same file a/owner.jpg, byte-identical on the CDN): old media 1963a66d returned no file on the CDN; new e97f42b3. @Image8 and @Image9 re-uploaded free from the local .jpg files the list names (8b23ef01, c5135236; the old 8c33aad5/bdbf8b6a ids hold .png copies, so `<id>.jpg` returned 403).
-5. **Trimmed exact duplicates only** to stay ≤1,000 words: "Hard cuts, except the High flip at 13-15s" (every shot bracket already names its cut); the 【Maintain Consistency】 voice sentence (every line already binds speaker, voice, on/off screen, lips closed) and jar sentence (now in Relationships); "she never clicks Add to cart" on @Image4 (Panel 2 "no click" + Style "no Add-to-cart click"); "Scout closes it." (Panels 11-12); "Scout is only a voice and the end screen (@Video2)." (@Video2 line + Panel 12 + voice lines).
+Applied, as on D (H240 round 2):
+- **0-15 s byte-identical** to the cleared round-1 prompt: `diff <(sed -n '/^0-3s/,/^13-15s/p' prompt-sd25pe-final.pre-r2.txt) <(sed -n '/^0-3s/,/^13-15s/p' prompt-sd25pe-final.txt)` gives no output (shopper half + High flip, Panels 1-7). Storyboard panels 1-7 are pixel-identical (PIL ImageChops difference bbox = None).
+- **15-25 s rebuilt as five shots**, one panel each: P8 15-17s over her shoulder onto the laptop, the list (@Image8) only on the screen; P9 17-20s "slow orbit around the owner with her laptop as the centre", she "sits still ... staring at the laptop"; P10 20-22s macro on her store admin (@Image10), her cursor clicks the red X, the row disappears; P11 22-23s she blows out the jar; P12 23-25s smoking wicks + Scout's line. 25-30s end screen keeps @Video2 with no panel ("the end screen has no panel"); the real H158 end screen is laid in after the take, free.
+- **Owner lines are Emile's exact words, no "I guess"**: {Wow, Fig and Cedar totally failed.} and {Looks like no one's interested in Fig and Cedar.} `grep -n "I guess"` hits only the shopper's 10-13s line.
+- **"Never as an overlay"**: @Image8 and @Image10 role lines: "use it only on the owner's laptop screen, never as an overlay."
+- **New still @Image10** = D's store admin (a/store-admin-x.jpg, media 66bac8e5, byte-identical to the CDN copy, sha256 ab0b74ff…).
+- **Goal ends** "discontinues the line on that wrong premise, deleting it from her website."
+- **Storyboard** panels 8-10 newly drawn (free GPT Image via `codex exec -m gpt-5.6-terra`), old panels 10 and 11 (blow-out, smoking wicks) moved to slots 11 and 12 and renumbered; the old end-card panel 12 is dropped. Re-uploaded free: media c9c2a241.
+- **Gate line**: kept out. Codex's H241 verdict (Nov 15 2:35 PM, item 24 FAIL) ruled the routing sentence untriggered for this card (both refs 9:16, readable, no target-spec conflict), and its PASS cleared d394acf7 without it. The round-2 change adds no video, so that ruling stands. `grep -c 'not video editing'` = 0.
+- **Trimmed to 1,000 words** by D's method: role lines tightened to "use only …, not …" form; exact duplicates cut: "; do not use the background" on @Image2/@Image6 (already "use only her face…"), "The shelves hold plain unlit stock; the only jar is @Image9" (Relationships: "the one amber three-wick Fig & Cedar jar"), the Relationships sentence repeating the goal ("The shopper's unanswered question is the real reason…"), "the shopper sees it only on her screen (@Image4)" (@Image4 role line), the "Fig & Cedar at 3, down 84%" repeat (in @Image8 itself), "the studio dims", "At the end, Fig & Cedar is gone from the list" (= "the row disappears"), "appear on screen" after "No subtitles".
 
 ## What I opened and saw
-- **Room still v2** (a/apartment-candles-v2.jpg = media f11fa295, sha256 5842f237… identical local vs CDN): warm night living room, L-shaped beige sofa with knit throw, pleated floor lamp, monstera, window with a row of tea lights and short white pillars on the sill, wooden bookshelf with white pillars and tea lights, white coffee table with white pillars and tea lights, a tray of four cream pillars and a tea light on the sofa arm, cat bed and scratching post, closed laptop on a wooden stool. No person, no cat, no amber jar, no three-wick candle anywhere.
-- **Product page @Image4**: the Fig & Cedar page, a wide amber glass jar, blank kraft label, three wicks; nothing about pets. Clearly a different object from her white pillars.
-- **Jar @Image9**: same amber three-wick jar with blank kraft label.
-- **Storyboard @Image1** (a/storyboard.png, 1086x1448, media c3d88a05-a5da-4a43-8360-0bc0ce5c5b3a): 12 numbered line-art panels. Her home candles (P1 table and sill, P3-P5 shelf, P6 table, side and foreground) are all slim one-wick pillars or tea lights; the only wide three-wick jar is in the owner's studio (P7 top view, P8-P11) and as the jar picture on her screen (P2). The contrast reads by shape: tall narrow one-wick vs short wide three-wick. Two tiny white patches at the bottom of P6 where the tea lights were redrawn (line art only, not sent as a style: the prompt says do not adopt its line-art style).
+- **Storyboard @Image1** (a/storyboard.png, 1086x1448, media c9c2a241, CDN bytes = local sha256 2814f0f1…): 12 numbered line-art panels, 4x3. P1-P5 her apartment (white one-wick pillars and tea lights), P6 straight down on her, P7 straight down on the owner, P8 over the owner's shoulder (braid in the foreground) onto a laptop showing a 5-row list with one row outlined, the lit wide three-wick jar beside it, brick wall and shelves; P9 the owner from a three-quarter angle, still, staring at the laptop in the centre, mouth slightly open, jar beside it; P10 a laptop screen filling the panel, 5 rows each with a round X, one row outlined and a cursor clicking its X; P11 the owner blowing out the wide three-wick jar; P12 three smoking wicks. No end-card panel.
+- **@Image10** store admin: "Products" page, dark sidebar, five rows; the "Fig & Cedar · 3-wick" row pale red with a red X and a white arrow cursor on it; store name "Ember & Fig"; no platform logo.
+- **@Image8** units-sold list with Fig & Cedar at 3 (-84%) in red; **@Image9** amber three-wick jar, blank kraft label; **@Image3** room v2, white pillars and tea lights only, closed laptop on the stool, no person or cat.
+- **@Video1** a/video1-high-flip.mp4 (600x1066, 5.000 s, no audio): rises over a seated person, looks straight down, chair back sweeps the frame, lands level on a second person. **@Video2** a/h158-end.mp4 (1080x1920, 4.501 s).
 
-## Uploads (14 files, in this order)
+## Uploads (15 files, in this order)
 | Ref | File | Higgsfield media | One role |
 |---|---|---|---|
-| @Image1 | a/storyboard.png | c3d88a05-a5da-4a43-8360-0bc0ce5c5b3a | shot order and rough framing |
+| @Image1 | a/storyboard.png | c9c2a241-85ff-4d06-8eca-06adf5efb45d | shot order and rough framing |
 | @Image2 | a/shopper-face.jpg | d54d8df5-566f-400d-823a-fd87b64a0831 | the shopper |
 | @Image3 | a/apartment-candles-v2.jpg | f11fa295-b91d-4edd-b9bf-d492d8480d83 | the shopper's apartment |
 | @Image4 | a/product-page.jpg | 0d34de38-32c9-4f5d-b6a4-c7fad6a4e72a | her laptop screen |
 | @Image5 | a/cat.jpg | 696c034b-34ca-4b95-8f62-382f22de2f6f | the cat |
 | @Image6 | a/owner.jpg | e97f42b3-72fd-40eb-9870-d62c95007272 | the owner |
 | @Image7 | a/studio-plate.jpg | 6ef49b80-0973-487e-a2ee-ed3bec6011ee | the owner's studio |
-| @Image8 | a/owner-sales.jpg | 8b23ef01-aee5-4fec-b6d5-a6a291ef6105 | her laptop screen |
+| @Image8 | a/owner-sales.jpg | 8b23ef01-aee5-4fec-b6d5-a6a291ef6105 | units-sold list, only on her laptop screen |
 | @Image9 | a/fig-cedar-jar.jpg | c5135236-2310-4800-baeb-f427f0bd4be9 | the one Fig & Cedar jar |
-| @Video1 | a/video1-high-flip.mp4 (5.0 s, 600x1066, no sound; same clip as H240 @Video2) | d44455fb-e7cc-46cf-9d86-641fe8304b97 | High flip camera move only. Contact sheet (work-highflip-contact.jpg, 2 fps): rises over a seated person until it looks straight down, the chair back sweeps the frame as the view flips, arrives level on a second person at a table. Matches the 13-15s text. Its people, chair, table and colours are fenced in the role line |
+| @Image10 | a/store-admin-x.jpg | 66bac8e5-e3c3-4dac-b362-0158528e64b1 | store admin, only on her laptop screen |
+| @Video1 | a/video1-high-flip.mp4 (5.0 s) | d44455fb-e7cc-46cf-9d86-641fe8304b97 | High flip camera move only |
 | @Video2 | a/h158-end.mp4 (4.5 s) | cae62718-ec02-41f6-8e36-1de097e8427d | end screen picture only |
 | @Audio1 | a/voice-serene.mp3 (11.44 s) | 4b121290-c867-44a1-8dc3-6046fb0efb15 | shopper timbre |
 | @Audio2 | a/voice-alexandra-9s.mp3 (9.20 s) | 304653bb-2310-4d21-90d4-c32b92477717 | owner timbre |
 | @Audio3 | a/voice-scout.mp3 (4.50 s) | 1040c108-8833-40b5-a3f0-943deab45436 | Scout timbre |
 
-Totals: 9 images, 2 videos (9.5 s), 3 audio (25.14 s), 14 uploads; under the hard limits. Every id returned HTTP 200 on `https://d2ol7oe51mr4n9.cloudfront.net/user_398kORxw9vOlFFTUC4yYsMhV0Fj/<id>.<ext>` on Nov 15 (see H241-assets.txt). Every uploaded asset has a role, so no 【Unused Assets】 line.
-Audio transcripts (Deepgram, H225): @Audio1 beach-house chat, @Audio2 stone-fruit tasting line, @Audio3 and @Video2's own track = the end line. Each audio line says "do not use its words or pacing"; @Video2 says "do not use its sound, spoken words or pacing".
+Totals: 10 images, 2 videos (9.5 s), 3 audio (25.14 s), 15 uploads; under the hard limits. Every id returned HTTP 200 on `https://d2ol7oe51mr4n9.cloudfront.net/user_398kORxw9vOlFFTUC4yYsMhV0Fj/<id>.<local ext>` on Nov 15 ~2:50 PM ET. Every upload has a role, so no 【Unused Assets】.
+Audio transcripts (Deepgram, H225): @Audio1 beach-house chat, @Audio2 stone-fruit line, @Audio3 and @Video2's own track = the end line; each "not its words or pacing" / "not its sound, spoken words or pacing".
 
-## Dialogue diff
-`diff <(grep -oE '\{[^}]*\}' prompt-sd25pe-final.pre-h241.txt) <(grep -oE '\{[^}]*\}' prompt-sd25pe-final.txt)`: no output, the 5 lines are byte-identical and in the same order (also identical to STORY.md's 5 lines). No new dialogue.
-1. {Are these safe for cats?} · shopper, inner voice, lips closed · 5-8s
-2. {I guess we'll never know.} · shopper, inner voice, lips closed · 10-13s
-3. {I guess no one's interested in Fig and Cedar. No one wants this. Time to discontinue the product line.} · owner, on camera · 15-21s
-4. {Don't guess why your shoppers don't buy.} · Scout, off screen · 23-25s
-5. {Scout interviews your shoppers for you. Get free early access.} · Scout, off screen · 25-30s
+## Dialogue ledger (6 lines)
+`diff <(grep -oE '\{[^}]*\}' ../d-camera-video/prompt-sd25pe-final.txt) <(grep -oE '\{[^}]*\}' prompt-sd25pe-final.txt)`: no output, same 6 lines as D round 2, same order.
+1. {Are these safe for cats?} · shopper, inner voice, lips closed, @Audio1 · 5-8s (unchanged)
+2. {I guess we'll never know.} · shopper, inner voice, lips closed, @Audio1 · 10-13s (unchanged)
+3. {Wow, Fig and Cedar totally failed.} · owner, on camera, seen from behind, @Audio2 · 15-17s
+4. {Looks like no one's interested in Fig and Cedar.} · owner, on camera, lips moving, @Audio2 · 17-20s
+5. {Don't guess why your shoppers don't buy.} · Scout, off screen, @Audio3 · 23-25s
+6. {Scout interviews your shoppers for you. Get free early access.} · Scout, off screen, @Audio3 · 25-30s
+
+## Panel map
+| Panel | Time | Shot |
+|---|---|---|
+| 1-5 | 0-3, 3-5, 5-8, 8-10, 10-13s | shopper half (unchanged) |
+| 6-7 | 13-14s, 14-15s | High flip (unchanged) |
+| 8 | 15-17s | over her shoulder onto the laptop, list on the screen |
+| 9 | 17-20s | slow orbit, laptop as centre, she sits still |
+| 10 | 20-22s | macro on the store admin, cursor clicks the red X |
+| 11 | 22-23s | she blows out the jar |
+| 12 | 23-25s | smoking wicks, Scout's line |
+| — | 25-30s | end screen from @Video2, no panel |
 
 ## Non-Negotiable Principles 1-11
 | # | Principle | Result | Proof |
 |---|---|---|---|
-| 1 | Intent First | PASS | Same 3 people, one cat, one Fig & Cedar jar, same causality, now stated as Emile's plot: "is about to buy it, but its product page never says whether it is safe for cats ... so she can't and leaves without buying. The owner sees only the missing sales, wrongly concludes nobody wants Fig & Cedar, and surprisingly discontinues the line on that wrong premise". Candle contrast is Emile's ask, not an invention. |
-| 2 | Template First | PASS | Generation-with-references template plus storyboard module: 【Generation Goal】, 【Reference Asset Roles】, 【Subjects and Relationships】, 【Shots】, 【Style and Sound】, 【Maintain Consistency】. |
-| 3 | Account for Every Asset | PASS | 14 uploads, 14 role lines (prompt lines 5-18), each with what to take and what not; none unassigned, so no 【Unused Assets】. |
-| 4 | User Mapping First | PASS | Mappings follow STORY.md and Emile's 2:10 rule: "Swap ... apartment-candles-v2.jpg" = @Image3; "Fig & Cedar = the amber three-wick jar, only on the product page and in the owner's studio" = @Image4 + @Image9 only. |
+| 1 | Intent First | PASS | Same 3 voices, one shopper, one cat, one owner, one jar; causality per Emile: "is about to buy ... never says whether it is safe for cats ... leaves without buying ... wrongly concludes nobody wants Fig & Cedar, and, surprisingly, discontinues the line on that wrong premise, deleting it from her website." Round 2 adds only Emile's own shots and words. |
+| 2 | Template First | PASS | Generation-with-references + storyboard module: 【Generation Goal】【Reference Asset Roles】【Subjects and Relationships】【Shots】【Style and Sound】【Maintain Consistency】. |
+| 3 | Account for Every Asset | PASS | 15 uploads, 15 role lines; none unassigned. |
+| 4 | User Mapping First | PASS | @Image10 = Emile's "clicking X, deleting it from the website", the role the Marketer assigned ("only on her laptop screen, never as an overlay"); all round-1 mappings kept. |
 | 5 | Minimal Clarification | PASS | Nothing ambiguous; no questions. |
-| 6 | Submission-Ready Content Only | PASS | No notes, media ids, model names, card numbers or reasons in the prompt. |
-| 7 | Separate Parameters | PASS | `grep -niE '9:16|vertical|480p|720p|fps|aspect|seconds long|30-second'` returns nothing; only STORY.md's own shot ranges (0-3s ... 25-30s). |
-| 8 | No Unrequested Constraints | PASS | Negatives are Emile's (no ka-ching, no cart sound, no Add-to-cart click, lips closed for inner voice), asset fences, and "No subtitles appear on screen" (the skill's own rule). "clearly unlike the amber three-wick Fig & Cedar jar" is Emile's ask ("make sure that Fig and Cedar ... look and feel different"). The gate line is the routing declaration. |
-| 9 | One Best Version | PASS | One prompt in prompt-sd25pe-final.txt. |
-| 10 | Facts vs Observations | PASS | Plot facts (about to buy, missing cat-safety answer, wrong conclusion, discontinues) come from Emile's text; "white pillar candles and tea lights", "amber three-wick jar", "blank kraft label" are what the images show. |
-| 11 | Subject Cardinality | PASS | One image per person: shopper @Image2, owner @Image6; cat @Image5 alone; room @Image3 has no person or cat. |
+| 6 | Submission-Ready Content Only | PASS | No ids, notes, card numbers or reasons in the prompt. |
+| 7 | Separate Parameters | PASS | `grep -niE '9:16|vertical|480p|720p|fps|aspect|seconds long|30-second'` = 0 hits; only the shot ranges. |
+| 8 | No Unrequested Constraints | PASS | "never as an overlay" is Emile's ("there's an overlay ... This is horrendous"); "never amber jars" is his 2:11 PM ask; "No ka-ching, no cart sound, no Add-to-cart click" STORY rules; "No subtitles" the skill's own rule. No routing sentence (not triggered, per Codex). |
+| 9 | One Best Version | PASS | One prompt file. |
+| 10 | Facts vs Observations | PASS | Plot, lines and the deletion are Emile's; "red X", "store admin", "units-sold list", "white pillars" are what the stills show. |
+| 11 | Subject Cardinality | PASS | One image per person: shopper @Image2, owner @Image6; cat @Image5; the screens @Image4/@Image8/@Image10 and room/studio stills hold no person. |
 
 ## Final Checklist
 | # | Item | Result | Proof |
 |---|---|---|---|
 | 1 | One primary task | PASS | Video generation only. |
-| 2 | Subjects, counts, scene, ownership, outcome unchanged | PASS | One shopper, one cat, one owner, one jar: "the one Fig & Cedar jar (@Image9) lit beside her laptop"; "The amber jar is only on the shopper's screen (@Image4) and the owner's desk"; @Image7: "do not use any of its jars ... the only jar is @Image9". She leaves without buying; the candle ends blown out. |
-| 3 | Every required entity covered, none merged | PASS | Shopper @Image2, cat @Image5, apartment @Image3, her screen @Image4, owner @Image6, studio @Image7, her screen @Image8, jar @Image9, flip @Video1, end screen @Video2, voices @Audio1-3. |
-| 4 | Each used asset has one explicit role | PASS | One role line each (lines 5-18). |
-| 5 | Existing references kept | PASS | Same numbering as the approved H225 prompt; only the files behind @Image1, @Image3, @Image6 changed. |
-| 6 | No claims about unread assets | PASS | All opened: stills viewed (see "What I opened and saw"), videos probed (5.000 s, 4.501 s), audio transcribed. |
-| 7 | No forced irrelevant assets; unused listed | PASS | Only the 14 role assets are uploaded. |
-| 8 | Inaccessible assets not treated as understood | PASS | None inaccessible; the dead owner id was re-uploaded and verified byte-identical. |
-| 9 | Subjects mapped individually | PASS | One line per subject; no range mapping. |
-| 10 | Single-character image not defining two characters | PASS | @Image2 only the shopper, @Image6 only the owner. |
-| 11 | One state change per stage, end state | PASS | One change per shot; end states where the next cut depends on them (P1 closer on her, P10 wicks smoke, P12 end screen holds). |
-| 12 | User time ranges kept | PASS | STORY.md's 10 ranges kept; P6-7 and P8-9 sub-times named. |
-| 13 | Editing checklist | N-A | Not an editing task. |
-| 14 | Locked parameter rules | PASS | Generation task; ratio and duration on the job only. |
-| 15 | Extension | N-A | Not an extension. |
+| 2 | Subjects, counts, scene, ownership, outcome unchanged | PASS | "The owner (@Image6) stays at her studio desk (@Image7) with the one amber three-wick Fig & Cedar jar (@Image9)"; studio "not its jars"; outcome: row deleted (20-22s), candle out (22-23s). |
+| 3 | Every required entity covered, none merged | PASS | Shopper, cat, apartment, product page, owner, studio, sales list, jar, store admin, flip, end screen, 3 voices: each its own line. |
+| 4 | Each used asset one explicit role | PASS | Role lines 5-19. |
+| 5 | Existing references kept | PASS | @Image1-9, @Video1-2, @Audio1-3 keep their round-1 numbers; @Image10 is new and appended. |
+| 6 | No claims about unread assets | PASS | All opened (see above). |
+| 7 | No forced irrelevant assets; unused listed | PASS | Only the 15 role assets. |
+| 8 | Inaccessible assets not treated as understood | PASS | None inaccessible. |
+| 9 | Subjects mapped individually | PASS | One line per subject. |
+| 10 | Single-character image not defining two characters | PASS | @Image2 shopper only, @Image6 owner only. |
+| 11 | One state change per stage, end state | PASS | P8 ends "the red Fig & Cedar row fills the screen"; P9 "the camera faces her across the laptop"; P10 "the row disappears"; P11 "the wicks smoke"; end screen "holds". |
+| 12 | User time ranges kept | PASS | 0-15s ranges unchanged; 15-17/17-20/20-22/22-23/23-25/25-30 from the Marketer's brief (Emile's round-2 shots); continuous, no overlap. |
+| 13 | Editing checklist | N-A | Not editing. |
+| 14 | Locked parameter rules | PASS | Generation; ratio and duration on the job only. |
+| 15 | Extension | N-A | Not extension. |
 | 16 | First/last frame statements | N-A | No keyframes. |
 | 17 | Multiple keyframes | N-A | None. |
-| 18 | Storyboard: reading order, panel roles, what not to adopt | PASS | Line 5: "Read it left to right, top to bottom, each panel to the time range named in its shot; do not adopt its line-art style, white background, panel numbers or drawn faces." Every shot names its panel(s). |
+| 18 | Storyboard: reading order, panel roles, what not to adopt | PASS | "read it left to right, top to bottom, each panel to its shot's time range; the end screen has no panel; do not adopt its line-art style, white background, panel numbers or drawn faces." Every shot names its panel. |
 | 19 | Blockout | N-A | None. |
-| 20 | Emotion and camera terms observable | PASS | Annoyance = "jaw tight, a sharp exhale through her nose ... she rubs her brow"; High flip = "rises over ... looks straight down, the back of the sofa sweeps across the frame as the view flips, and it comes out level on the owner (@Image6) at her desk in the studio (@Image7)". |
-| 21 | Speaker, state, words, audio, language, on/off screen per line | PASS | Every line: speaker, "in English", inner voice/on camera/off screen, "in the voice of @AudioN"; shopper lines "lips closed". No accent added. |
-| 22 | Shot numbers kept as identifiers | PASS | "Panel N" is a panel number. |
-| 23 | No parameters, analysis or reasons | PASS | See principles 6 and 7. |
-| 24 | Gate line exactly once, only when triggered | PASS | Triggered: 5.0 s and 4.5 s reference videos in a 30 s job. `grep -c 'Please note that this is not video editing.'` = 1, right after the goal sentence "Generate a photoreal story in the storyboard's order (@Image1)." |
-| 25 | Unreadable video specs | N-A | Both probed. |
+| 20 | Emotion and camera terms observable | PASS | "Over the owner's shoulder onto her laptop, slow push in"; "slow orbit around the owner with her laptop as the centre" + "sits still ... staring at the laptop"; "Macro on her laptop screen, locked" + "her cursor clicks the red X ... the row disappears". Cause before reaction: the red row is on screen before "Wow, Fig and Cedar totally failed."; the deletion follows both lines. |
+| 21 | Speaker, state, words, audio, language, on/off screen per line | PASS | 15-17s "The owner (@Image6), in English, on camera, seen from behind, in the voice of @Audio2, flat surprise"; 17-20s "in English, on camera, lips moving, in the voice of @Audio2, disappointed"; shopper and Scout lines unchanged. No accent. |
+| 22 | Shot numbers kept as identifiers | PASS | "Panel N". |
+| 23 | No parameters, analysis or reasons | PASS | See 6, 7. |
+| 24 | Gate line exactly once, only when triggered | PASS | Not triggered for this card (Codex H241 item 24, 2:35 PM: refs readable and 9:16, no target-spec conflict). `grep -c 'not video editing'` = 0. |
+| 25 | Unreadable video specs | N-A | Both probed (600x1066 5.000 s; 1080x1920 4.501 s). |
 | 26 | No unrelated negative constraints | PASS | See principle 8. |
-| 27 | Placeholders replaced, one prompt body | PASS | No `<placeholder>`; `<>` only sounds (<a short sharp exhale>, <a soft breath>); `()` only music (Soft piano under speech.) apart from @asset tags; `{}` only the 5 lines. |
+| 27 | Placeholders replaced; symbols | PASS | `<>` only sounds (<a short sharp exhale>, <a soft breath>, <click>); `()` only music (Soft piano under speech.) besides @asset tags; `{}` only the 6 lines. |
 
 ## Which ONE @asset defines each person and thing, per shot
 | Time · Panel | Shopper | Cat | Owner | Room | Screen | Jar | Move / picture | Voice |
 |---|---|---|---|---|---|---|---|---|
 | 0-3s · P1 | @Image2 | @Image5 | — | @Image3 | — | — | — | — |
-| 3-5s · P2 | @Image2 | — | — | — | @Image4 | — (only its photo on @Image4) | — | — |
+| 3-5s · P2 | @Image2 | — | — | — | @Image4 | — | — | — |
 | 5-8s · P3 | @Image2 | @Image5 | — | @Image3 | — | — | — | @Audio1 |
 | 8-10s · P4 | @Image2 | — | — | — | @Image4 | — | — | — |
-| 10-13s · P5 | @Image2 | @Image5 | — | — | (empty browser, words) | — | — | @Audio1 |
+| 10-13s · P5 | @Image2 | @Image5 | — | — | (empty browser) | — | — | @Audio1 |
 | 13-15s · P6-7 | @Image2 | — | @Image6 | @Image3 → @Image7 | — | — | @Video1 | — |
-| 15-21s · P8-9 | — | — | @Image6 | @Image7 | @Image8 | @Image9 | — | @Audio2 |
-| 21-23s · P10 | — | — | @Image6 | — | — | @Image9 | — | — |
-| 23-25s · P11 | — | — | — | @Image7 | — | @Image9 | — | @Audio3 |
-| 25-30s · P12 | — | — | — | — | — | — | @Video2 | @Audio3 |
+| 15-17s · P8 | — | — | @Image6 | — | @Image8 | — | — | @Audio2 |
+| 17-20s · P9 | — | — | @Image6 | @Image7 | — | @Image9 | — | @Audio2 |
+| 20-22s · P10 | — | — | @Image6 (cursor) | — | @Image10 | — | — | — |
+| 22-23s · P11 | — | — | @Image6 | — | — | @Image9 | — | — |
+| 23-25s · P12 | — | — | — | — | — | @Image9 | — | @Audio3 |
+| 25-30s · — | — | — | — | — | — | — | @Video2 | @Audio3 |
 
-At most one asset per column per row (the flip row starts in @Image3 and lands in @Image7, one room at a time). Her home candles come only from @Image3 (white pillars, tea lights); the amber jar only from @Image9 (and its photo inside @Image4).
+At most one asset per column per row; no person or thing is defined by two assets.
 
 ## Result
 Principles 1-11: 11 PASS. Final Checklist: 27 items, 21 PASS, 6 N-A. Zero FAILs.
-Spend: 0 credits (board panels redrawn free via Codex/local, uploads free, no generation).
+Spend: 0 credits (panels drawn free via Codex GPT Image, uploads free, no generation).

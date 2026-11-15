@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cat Question Storyboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f3ec; --panel:#ffffff; --ink:#1d1a16; --muted:#6c645a; --line:#e3dacb;
+  --accent:#b4561f; --lime:#c6ef1a; --lime-ink:#2c3400; --chip-img:#f4e2d3; --chip-vid:#dde7f6; --chip-aud:#e5f1d6;
+  --code:#f1ece3;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#141210; --panel:#1d1a17; --ink:#f1ebe2; --muted:#a59c90; --line:#352f29;
+    --accent:#e8874b; --lime:#d1fb18; --lime-ink:#1c2200; --chip-img:#4a3324; --chip-vid:#26344a; --chip-aud:#2f4123; --code:#26221d;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#141210; --panel:#1d1a17; --ink:#f1ebe2; --muted:#a59c90; --line:#352f29;
+  --accent:#e8874b; --lime:#d1fb18; --lime-ink:#1c2200; --chip-img:#4a3324; --chip-vid:#26344a; --chip-aud:#2f4123; --code:#26221d;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 Inter,system-ui,sans-serif}
+main{max-width:1080px;margin:0 auto;padding:28px 16px 80px}
+h1,h2,h3,h4{font-family:"Space Grotesk",Inter,sans-serif;line-height:1.2;margin:0}
+h1{font-size:clamp(26px,5vw,40px)} h2{font-size:22px;margin:44px 0 14px} h3{font-size:16px;margin-bottom:8px;color:var(--accent)} h4{font-size:15px;margin:10px 0 4px}
+p{margin:0 0 8px} a{color:var(--accent)}
+.kicker{font:600 12px/1 Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.pitch{font-size:19px;margin:14px 0 12px;max-width:780px}
+.why{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;max-width:860px}
+.why li{margin-bottom:6px}
+.input{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.input span{background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:13px}
+.input span.cr{background:var(--lime);color:var(--lime-ink);border-color:transparent;font-weight:600}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(220px,100%),1fr));gap:14px}
+.card{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px;scroll-margin-top:16px}
+.card:target{outline:3px solid var(--accent)}
+.card img,.card video{width:100%;height:220px;object-fit:contain;background:var(--code);border-radius:8px;display:block}
+.card .aud{height:90px;display:flex;align-items:center;background:var(--code);border-radius:8px;padding:0 8px}
+.card audio{width:100%}
+.card p{font-size:13px;color:var(--muted)} .card p b{color:var(--ink)}
+.card code{display:block;font-size:11px;color:var(--muted);word-break:break-all;margin-top:6px}
+.tag{position:absolute;top:18px;left:18px;z-index:1;background:var(--ink);color:var(--bg);font:600 12px/1 ui-monospace,Menlo,monospace;padding:5px 8px;border-radius:6px}
+.ppart{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:12px}
+.ppart p{font-size:14px}
+.chip{display:inline-block;padding:0 7px;border-radius:999px;text-decoration:none;color:var(--ink);font-weight:600;font-size:13px}
+.chip.image{background:var(--chip-img)} .chip.video{background:var(--chip-vid)} .chip.audio{background:var(--chip-aud)}
+.copyrow{display:flex;gap:10px;align-items:center;margin:10px 0 0;flex-wrap:wrap}
+button{font:600 14px Inter;background:var(--ink);color:var(--bg);border:0;border-radius:8px;padding:9px 16px;cursor:pointer}
+.small{font-size:13px;color:var(--muted)}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;min-width:900px;font-size:13px}
+th,td{text-align:left;vertical-align:top;padding:8px 10px;border-bottom:1px solid var(--line)}
+th{font-family:"Space Grotesk";font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+td.line{font-weight:500} td.mono{font-family:ui-monospace,Menlo,monospace;white-space:nowrap}
+.th{width:64px;border-radius:4px;border:1px solid var(--line);display:block;background:#fff}
+.pn{font:600 11px ui-monospace,monospace;color:var(--muted)}
+.big{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:20px}
+.big img{width:100%;border-radius:8px;background:#fff;display:block}
+.legend{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;font-size:12px}
+.legend div{background:var(--code);border-radius:6px;padding:6px}
+.legend b{font-family:ui-monospace,monospace}
+.read{background:var(--panel);border-left:4px solid var(--accent);border-radius:8px;padding:14px 18px;max-width:760px}
+.read p{margin-bottom:6px} .who{font:600 12px Inter;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.notes li{margin-bottom:6px}
+.strip{width:100%;border-radius:8px;display:block;margin-top:8px}
+#eval{background:var(--panel);border:1px dashed var(--line);border-radius:12px;padding:16px}
+.vs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}.vs pre{white-space:pre-wrap;word-break:break-word;background:var(--code);border-radius:8px;padding:12px;font:12px/1.5 ui-monospace,Menlo,monospace;max-height:520px;overflow:auto;margin:6px 0 0}.pick{background:var(--panel);border-left:4px solid var(--lime);border-radius:8px;padding:12px 16px;margin-top:14px}#eval table{min-width:0}#eval td,#eval th{font-size:13px;padding:6px;letter-spacing:0}@media (max-width:760px){.vs{grid-template-columns:1fr}}
+@media (max-width:760px){ .big{grid-template-columns:1fr} .legend{grid-template-columns:repeat(3,1fr)} }
+</style>
+<style id="sg-css">
+.sg{box-sizing:border-box;max-width:1100px;margin:16px 16px 10px;padding:16px;border:3px solid #c6ef1a;border-radius:14px;background:var(--surface,var(--panel,#fff));color:var(--ink,#1d1a16)}
+.sg h2{margin:0 0 4px;font-size:22px;border:0;padding:0}
+.sg .diff{font-weight:600;margin:6px 0 10px;font-size:16px}
+.sg .plain{font-size:20px;font-weight:700;margin:8px 0 6px}
+.sg .hero img{display:block;width:100%;max-width:560px;height:auto;border-radius:8px;border:1px solid var(--line,#ddd)}
+.sg .strip{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px}
+.sg .strip figure{margin:0;flex:0 0 auto;width:118px;font-size:11px;color:var(--muted,#666)}
+.sg .strip img{display:block;width:118px;height:auto;border-radius:6px;border:1px solid var(--line,#ddd)}
+.sg .row{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.sg .row figure{margin:0;width:92px;font-size:11px;line-height:1.3;color:var(--muted,#666)}
+.sg .row img,.sg .row video{display:block;width:92px;height:92px;object-fit:cover;border-radius:6px;border:1px solid var(--line,#ddd);background:#111}
+.sg .row .au{width:92px;height:92px;display:flex;align-items:center;justify-content:center;text-align:center;border:1px solid var(--line,#ddd);border-radius:6px;font-size:12px;font-weight:600}
+.sg .meta{font-size:13px;color:var(--muted,#666);margin-top:10px}
+@media (min-width:1140px){.sg{margin:16px auto 10px}}
+.nsent{display:inline-block;margin:4px 0;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:600;background:#5b4636;color:#fff;line-height:1.5}
+</style>
+<style>
+.lead ol{padding-left:20px;max-width:820px} .lead li{margin-bottom:4px}
+.illus{border:1px dashed var(--line);border-radius:12px;padding:14px 16px;margin-top:28px;background:var(--panel)}
+.illus .nsent{margin-bottom:8px}
+pre.p{white-space:pre-wrap;word-break:break-word;background:var(--code);border-radius:8px;padding:12px;font:12px/1.5 ui-monospace,Menlo,monospace;max-height:560px;overflow:auto}
+details{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin-top:14px} summary{cursor:pointer;font-weight:600}
+.sbwrap img{width:100%;max-width:620px;display:block;border-radius:8px;border:1px solid var(--line);background:#fff}
+table.pm{min-width:0}
+</style>
+</head>
+<body>
+<main>
+<div class="kicker">H241 render gate (from H225) · Team B · line-art storyboard · Seedance 2.5 pitch</div>
+<h1>Line-art storyboard · the cat question</h1>
+<section class="lead">
+<h2>The story</h2>
+<ol><li>At night a cat lady sits on her sofa, white pillar candles and tea lights burning all over her apartment, her cat beside her.</li><li>She wants the Fig &amp; Cedar candle (an amber three-wick jar, nothing like her own candles) and is about to buy. She scrolls the page up and down: it never says if it is safe for cats. She can't buy.</li><li>Inner voice, lips closed, the camera circling her: “Are these safe for cats?”</li><li>She finds nothing, gets annoyed (shown only) and closes the site: “I guess we&#x27;ll never know.”</li><li>High flip down to the owner reading her sales: “I guess no one&#x27;s interested in Fig and Cedar. No one wants this. Time to discontinue the product line.” She blows out the candle.</li><li>Scout: “Don&#x27;t guess why your shoppers don&#x27;t buy.” End screen: “Scout interviews your shoppers for you. Get free early access.”</li></ol>
+<p class="small">Emile's story, Nov 15 1:00 PM ET. His five lines are kept word for word (diffed against STORY.md). No ka-ching, no cart click, no Scout call: she never buys.</p>
+<p><b>The idea:</b> she was about to buy and couldn't, because the page never said if it is safe for cats; the owner only sees the missing sales and kills the line on the wrong reason.</p>
+<p class="small"><b>H241 change (Emile, Nov 15 2:11 PM ET):</b> “the shopper is looking at something she's about to buy. She can't buy it because she doesn't have the information. Surprisingly the owner makes a decision to cut off the product line on the wrong insight.” and “make sure that Fig and Cedar … look and feel different from the one she has at home.” Her apartment now has only white pillar candles and tea lights; the amber three-wick Fig &amp; Cedar jar is only on the product page and in the owner's studio.</p>
+</section>
+
+<h2>Shot list · 30 s, 10 shots, 12 panels</h2>
+<div class="tablewrap"><table>
+<tr><th>Time · panel</th><th>Who</th><th>What</th><th>Line</th><th>Assets</th></tr>
+<tr><td class="mono">0-3s<br><span class="pn">P1</span></td><td>Shopper, Cat</td><td>Wide: apartment at night full of white pillar candles and tea lights; she sits on the sofa with her laptop, the cat curled beside her; slow arc in.</td><td class="line">—</td><td class="mono">@Image1 @Image2 @Image3 @Image5</td></tr><tr><td class="mono">3-5s<br><span class="pn">P2</span></td><td>Shopper</td><td>Hard cut, over her shoulder: her fingers scroll the Fig &amp; Cedar page down, then back up. No click.</td><td class="line">—</td><td class="mono">@Image1 @Image2 @Image4</td></tr><tr><td class="mono">5-8s<br><span class="pn">P3</span></td><td>Shopper, Cat</td><td>Hard cut, close-up, camera circles her face; lips closed; cat soft behind.</td><td class="line"><b>Shopper (inner voice):</b> “Are these safe for cats?”</td><td class="mono">@Image1 @Image2 @Image5 @Image3 @Audio1</td></tr><tr><td class="mono">8-10s<br><span class="pn">P4</span></td><td>Shopper</td><td>Hard cut: she scrolls faster, finds nothing about pets; jaw tight, sharp exhale, rubs her brow. Silent.</td><td class="line">—</td><td class="mono">@Image1 @Image2 @Image4</td></tr><tr><td class="mono">10-13s<br><span class="pn">P5</span></td><td>Shopper, Cat</td><td>Hard cut: she closes the site, leans back, looks at the cat.</td><td class="line"><b>Shopper (inner voice):</b> “I guess we&#x27;ll never know.”</td><td class="mono">@Image1 @Image2 @Image5 @Audio1</td></tr><tr><td class="mono">13-15s<br><span class="pn">P6-7</span></td><td>Shopper → Owner</td><td>High flip: camera rises over her to straight down, the sofa back sweeps across as the view flips, and it comes out level on the owner at her desk.</td><td class="line">—</td><td class="mono">@Image1 @Image2 @Video1 @Image6 @Image7</td></tr><tr><td class="mono">15-21s<br><span class="pn">P8-9</span></td><td>Owner</td><td>Lands from the flip: the owner reads units sold (Fig &amp; Cedar at 3), the lit jar beside her laptop; she sighs.</td><td class="line"><b>Owner (on camera):</b> “I guess no one&#x27;s interested in Fig and Cedar. No one wants this. Time to discontinue the product line.”</td><td class="mono">@Image1 @Image6 @Image7 @Image8 @Image9 @Audio2</td></tr><tr><td class="mono">21-23s<br><span class="pn">P10</span></td><td>Owner</td><td>Hard cut, close-up: she leans in and blows out the Fig &amp; Cedar candle; three flames out, smoke rises.</td><td class="line">—</td><td class="mono">@Image1 @Image6 @Image9</td></tr><tr><td class="mono">23-25s<br><span class="pn">P11</span></td><td>Smoke</td><td>Hard cut, macro on the smoking wicks; the studio dims.</td><td class="line"><b>Scout (off screen):</b> “Don&#x27;t guess why your shoppers don&#x27;t buy.”</td><td class="mono">@Image1 @Image9 @Image7 @Audio3</td></tr><tr><td class="mono">25-30s<br><span class="pn">P12</span></td><td>End screen</td><td>Hard cut to the H158 end screen.</td><td class="line"><b>Scout (off screen):</b> “Scout interviews your shoppers for you. Get free early access.”</td><td class="mono">@Image1 @Video2 @Audio3</td></tr>
+</table></div>
+
+<section class="sg" id="what-seedance-gets" style="margin:28px 0 10px">
+<h2>What Seedance gets</h2>
+<p class="diff">14 uploads plus one prompt. Only what is in this box is sent.</p>
+<div class="input">
+<span>Text (1000 words)</span><span>+ 9 images</span><span>+ 2 videos (9.5 s)</span><span>+ 3 audio (25.1 s)</span>
+<span>Omni reference · seedance_2_5</span><span>job settings: 9:16 · 30 s · audio on</span>
+<span class="cr">Spent on this round: 0 credits</span>
+</div>
+<div class="cards" style="margin-top:14px">
+<article class="card" id="image1"><span class="tag">@Image1</span><a href="a/storyboard.png" target="_blank"><img src="a/storyboard.png" alt="Storyboard · 12 numbered line-art panels (new, Nov 15)" loading="lazy"></a><h4>Storyboard · 12 numbered line-art panels (new, Nov 15)</h4><p><b>Gives:</b> Shot order and rough framing, read left to right, top to bottom; each panel to its time range.</p><p><b>Not:</b> Its line-art style, white background, panel numbers, drawn faces.</p><code>media c3d88a05-a5da-4a43-8360-0bc0ce5c5b3a (H241: panels 1, 3, 4, 5, 6 redrawn free so her home candles read as slim white pillars and tea lights; old 242974f8)</code></article><article class="card" id="image2"><span class="tag">@Image2</span><a href="a/shopper-face.jpg" target="_blank"><img src="a/shopper-face.jpg" alt="The shopper · face" loading="lazy"></a><h4>The shopper · face</h4><p><b>Gives:</b> Her face, dark bob with bangs, cream knit cardigan.</p><p><b>Not:</b> The background.</p><code>media d54d8df5-566f-400d-823a-fd87b64a0831</code></article><article class="card" id="image3"><span class="tag">@Image3</span><a href="a/apartment-candles-v2.jpg" target="_blank"><img src="a/apartment-candles-v2.jpg" alt="The shopper&#x27;s apartment · white pillar candles and tea lights (v2, Nov 15)" loading="lazy"></a><h4>The shopper&#x27;s apartment · white pillar candles and tea lights (v2)</h4><p><b>Gives:</b> Sofa, lamp, plants, dozens of lit white pillar candles and tea lights, warm night light. No amber jars: clearly unlike Fig &amp; Cedar. No person, no cat in it.</p><p><b>Not:</b> The closed laptop on the stool (her laptop is open on her lap).</p><code>media f11fa295-b91d-4edd-b9bf-d492d8480d83 (v2, shared room for all cat-candle cards; v1 8dcc4d3e had amber jars)</code></article><article class="card" id="image4"><span class="tag">@Image4</span><a href="a/product-page.jpg" target="_blank"><img src="a/product-page.jpg" alt="Her laptop screen · Fig &amp; Cedar page" loading="lazy"></a><h4>Her laptop screen · Fig &amp; Cedar page</h4><p><b>Gives:</b> The product page, shown only on her screen. No pet information anywhere.</p><p><b>Not:</b> She never clicks Add to cart. Its amber three-wick jar is the product she wants, not one she owns.</p><code>media 0d34de38-32c9-4f5d-b6a4-c7fad6a4e72a (no-cursor version)</code></article><article class="card" id="image5"><span class="tag">@Image5</span><a href="a/cat.jpg" target="_blank"><img src="a/cat.jpg" alt="The grey tabby cat" loading="lazy"></a><h4>The grey tabby cat</h4><p><b>Gives:</b> The cat only.</p><p><b>Not:</b> Anything else in the crop.</p><code>media 696c034b-34ca-4b95-8f62-382f22de2f6f</code></article><article class="card" id="image6"><span class="tag">@Image6</span><a href="a/owner.jpg" target="_blank"><img src="a/owner.jpg" alt="The owner" loading="lazy"></a><h4>The owner</h4><p><b>Gives:</b> Her face, auburn side braid, rust knit sweater.</p><p><b>Not:</b> The background.</p><code>media e97f42b3-72fd-40eb-9870-d62c95007272 (same file, re-uploaded free Nov 15: old 1963a66d no longer resolved)</code></article><article class="card" id="image7"><span class="tag">@Image7</span><a href="a/studio-plate.jpg" target="_blank"><img src="a/studio-plate.jpg" alt="The owner&#x27;s candle studio" loading="lazy"></a><h4>The owner&#x27;s candle studio</h4><p><b>Gives:</b> Brick wall, shelving, desk, laptop, amber light. The shelves hold plain unlit stock.</p><p><b>Not:</b> Any of its jars (the only jar is Image 9), the dish, the blurred screen.</p><code>media 6ef49b80-0973-487e-a2ee-ed3bec6011ee</code></article><article class="card" id="image8"><span class="tag">@Image8</span><a href="a/owner-sales.jpg" target="_blank"><img src="a/owner-sales.jpg" alt="Her laptop screen · units sold" loading="lazy"></a><h4>Her laptop screen · units sold</h4><p><b>Gives:</b> Fig &amp; Cedar at 3, down 84%, shown only on her screen.</p><p><b>Not:</b> Anything off her screen.</p><code>media 8b23ef01-aee5-4fec-b6d5-a6a291ef6105 (re-uploaded free from the .jpg, Nov 15)</code></article><article class="card" id="image9"><span class="tag">@Image9</span><a href="a/fig-cedar-jar.jpg" target="_blank"><img src="a/fig-cedar-jar.jpg" alt="The one Fig &amp; Cedar jar" loading="lazy"></a><h4>The one Fig &amp; Cedar jar</h4><p><b>Gives:</b> Amber jar, blank kraft label, three wicks. Only on the owner&#x27;s desk (and in the page photo on her screen). Nothing like her white candles at home.</p><p><b>Not:</b> The leaves and cloth.</p><code>media c5135236-2310-4800-baeb-f427f0bd4be9 (re-uploaded free from the .jpg, Nov 15)</code></article><article class="card" id="video1"><span class="tag">@Video1</span><video src="a/video1-high-flip.mp4" controls playsinline preload="metadata" muted></video><h4>High flip · camera move (5 s, no sound)</h4><p><b>Gives:</b> Only the move at 13-15 s: rise, straight down, flip, land level.</p><p><b>Not:</b> Its people, chair, table, colours, pacing.</p><code>media d44455fb-e7cc-46cf-9d86-641fe8304b97</code></article><article class="card" id="video2"><span class="tag">@Video2</span><video src="a/h158-end.mp4" controls playsinline preload="metadata" muted></video><h4>End screen · H158 (4.5 s)</h4><p><b>Gives:</b> Only the last shot&#x27;s picture.</p><p><b>Not:</b> Its sound, spoken words, pacing.</p><code>media cae62718-ec02-41f6-8e36-1de097e8427d</code></article><article class="card" id="audio1"><span class="tag">@Audio1</span><div class="aud"><audio src="a/voice-serene.mp3" controls preload="none"></audio></div><h4>Shopper voice timbre (11.4 s)</h4><p><b>Gives:</b> Timbre for her inner voice only.</p><p><b>Not:</b> Its words (“Oh my gosh. Okay. So we finally booked the beach house…”) and pacing.</p><code>media 4b121290-c867-44a1-8dc3-6046fb0efb15</code></article><article class="card" id="audio2"><span class="tag">@Audio2</span><div class="aud"><audio src="a/voice-alexandra-9s.mp3" controls preload="none"></audio></div><h4>Owner voice timbre (9.2 s)</h4><p><b>Gives:</b> Her timbre only.</p><p><b>Not:</b> Its words (“Bright with notes of stone fruit…”) and pacing.</p><code>media 304653bb-2310-4d21-90d4-c32b92477717</code></article><article class="card" id="audio3"><span class="tag">@Audio3</span><div class="aud"><audio src="a/voice-scout.mp3" controls preload="none"></audio></div><h4>Scout voice timbre (4.5 s)</h4><p><b>Gives:</b> Scout&#x27;s timbre only.</p><p><b>Not:</b> Its words and pacing (the prompt&#x27;s words win).</p><code>media 1040c108-8833-40b5-a3f0-943deab45436</code></article>
+</div>
+<h2 style="margin-top:24px">The prompt to send · sd25-pe compile (1000 words) · sha256 c0c4ba3f7473…</h2>
+<pre class="p" id="pv">【Generation Goal】
+Generate a photoreal story in the storyboard&#x27;s order (@Image1). Please note that this is not video editing. At night a cat lady wants the Fig &amp; Cedar candle and is about to buy it, but its product page never says whether it is safe for cats, the one thing she needs before buying, so she can&#x27;t and leaves without buying. The owner sees only the missing sales, wrongly concludes nobody wants Fig &amp; Cedar, and surprisingly discontinues the line on that wrong premise, blowing out the candle.
+
+【Reference Asset Roles】
+@Image1 provides the shot order and rough compositions of a 12-panel storyboard. Read it left to right, top to bottom, each panel to the time range named in its shot; do not adopt its line-art style, white background, panel numbers or drawn faces.
+The shopper maps to @Image2; use only her face, dark bob with bangs and cream knit cardigan; do not use the background.
+The shopper&#x27;s apartment references @Image3; use only its sofa, lamp, plants, its many lit white pillar candles and tea lights, and the warm night light; do not use the closed laptop on the stool.
+The shopper&#x27;s laptop screen references @Image4, the Fig &amp; Cedar product page.
+The grey tabby cat maps to @Image5; use only the cat.
+The owner maps to @Image6; use only her face, auburn side braid and rust knit sweater; do not use the background.
+The owner&#x27;s studio references @Image7; use only its brick wall, shelving, desk, laptop and amber light; do not use any of its jars, dish or blurred screen. The shelves hold plain unlit stock; the only jar is @Image9.
+The owner&#x27;s laptop screen references @Image8, units sold with Fig &amp; Cedar at 3, down 84%.
+The Fig &amp; Cedar jar maps to @Image9; use only the amber jar, blank kraft label and three wicks; do not use the leaves or cloth.
+@Video1 is used only for the High flip camera move; do not use its people, chair, table, colours or pacing.
+The end screen maps to @Video2; use only its picture; do not use its sound, spoken words or pacing.
+@Audio1 is used only for the shopper&#x27;s voice timbre; do not use its words or pacing.
+@Audio2 is used only for the owner&#x27;s voice timbre; do not use its words or pacing.
+@Audio3 is used only for Scout&#x27;s voice timbre; do not use its words or pacing.
+
+【Subjects and Relationships】
+One shopper (@Image2) and her cat (@Image5) stay in her apartment (@Image3); her own candles are only white pillars and tea lights, clearly unlike the amber three-wick Fig &amp; Cedar jar, which she does not own. One owner (@Image6) stays at her studio desk (@Image7), the one Fig &amp; Cedar jar (@Image9) lit beside her laptop. The amber jar is only on the shopper&#x27;s screen (@Image4) and the owner&#x27;s desk. The shopper&#x27;s unanswered question is the real reason for the low sales; the owner never learns it.
+
+【Shots】
+0-3s · Panel 1 [Opening shot. Wide, slow arc toward her]: Dozens of lit white pillar candles and tea lights fill the apartment (@Image3) at night; the shopper (@Image2) sits on the sofa, laptop on her lap, the cat (@Image5) curled beside her. At the end, it is closer on her.
+3-5s · Panel 2 [Hard cut. Over her shoulder]: The shopper&#x27;s (@Image2) fingers scroll the Fig &amp; Cedar page (@Image4) down, then back up; no click.
+5-8s · Panel 3 [Hard cut. Close-up, the camera slowly circles around her face]: The shopper (@Image2), lips closed in the screen glow, the cat (@Image5) soft behind her in the apartment (@Image3). The shopper (@Image2), in English, inner voice-over, in the voice of @Audio1, lips closed, wondering: {Are these safe for cats?}
+8-10s · Panel 4 [Hard cut. Medium close-up, locked]: The shopper (@Image2) scrolls the page (@Image4) faster up and down, finds nothing about pets; jaw tight, a sharp exhale through her nose &lt;a short sharp exhale&gt;, she rubs her brow. Silent.
+10-13s · Panel 5 [Hard cut. Medium, eye level]: The shopper (@Image2) closes the site to an empty browser, leans back and looks at the cat (@Image5). The shopper (@Image2), in English, inner voice-over, in the voice of @Audio1, lips closed, flat: {I guess we&#x27;ll never know.}
+13-15s · Panels 6-7 [High flip, the camera move of @Video1; Panel 6 at 13-14s, Panel 7 at 14-15s]: The camera rises over the shopper (@Image2) on her sofa in the apartment (@Image3) until it looks straight down, the back of the sofa sweeps across the frame as the view flips, and it comes out level on the owner (@Image6) at her desk in the studio (@Image7).
+15-21s · Panels 8-9 [Lands from the High flip. Medium, slow push in; Panel 8 at 15-18s, Panel 9 at 18-21s]: The owner (@Image6) at her studio desk (@Image7) reads her screen (@Image8), the lit Fig &amp; Cedar jar (@Image9) beside the laptop; she sighs. The owner (@Image6), in English, on camera, in the voice of @Audio2, resigned: {I guess no one&#x27;s interested in Fig and Cedar. No one wants this. Time to discontinue the product line.}
+21-23s · Panel 10 [Hard cut. Close-up, locked]: The owner (@Image6) leans in and blows out the Fig &amp; Cedar jar (@Image9) &lt;a soft breath&gt;; the three flames go out, smoke rises. At the end, the wicks smoke.
+23-25s · Panel 11 [Hard cut. Macro, locked]: The jar&#x27;s (@Image9) smoking wicks; the studio (@Image7) dims. Scout, in English, off screen, in the voice of @Audio3, calm: {Don&#x27;t guess why your shoppers don&#x27;t buy.}
+25-30s · Panel 12 [Hard cut. End screen, as @Video2]: Scout, in English, off screen, in the voice of @Audio3, warm: {Scout interviews your shoppers for you. Get free early access.} At the end, the end screen (@Video2) holds.
+
+【Style and Sound】
+No ka-ching, no cart sound, no Add-to-cart click. (Soft piano under speech.) No subtitles appear on screen.
+
+【Maintain Consistency】
+Keep the shopper (@Image2), the owner (@Image6), their clothing and rooms stable.
+</pre>
+<textarea id="raw" hidden>【Generation Goal】
+Generate a photoreal story in the storyboard&#x27;s order (@Image1). Please note that this is not video editing. At night a cat lady wants the Fig &amp; Cedar candle and is about to buy it, but its product page never says whether it is safe for cats, the one thing she needs before buying, so she can&#x27;t and leaves without buying. The owner sees only the missing sales, wrongly concludes nobody wants Fig &amp; Cedar, and surprisingly discontinues the line on that wrong premise, blowing out the candle.
+
+【Reference Asset Roles】
+@Image1 provides the shot order and rough compositions of a 12-panel storyboard. Read it left to right, top to bottom, each panel to the time range named in its shot; do not adopt its line-art style, white background, panel numbers or drawn faces.
+The shopper maps to @Image2; use only her face, dark bob with bangs and cream knit cardigan; do not use the background.
+The shopper&#x27;s apartment references @Image3; use only its sofa, lamp, plants, its many lit white pillar candles and tea lights, and the warm night light; do not use the closed laptop on the stool.
+The shopper&#x27;s laptop screen references @Image4, the Fig &amp; Cedar product page.
+The grey tabby cat maps to @Image5; use only the cat.
+The owner maps to @Image6; use only her face, auburn side braid and rust knit sweater; do not use the background.
+The owner&#x27;s studio references @Image7; use only its brick wall, shelving, desk, laptop and amber light; do not use any of its jars, dish or blurred screen. The shelves hold plain unlit stock; the only jar is @Image9.
+The owner&#x27;s laptop screen references @Image8, units sold with Fig &amp; Cedar at 3, down 84%.
+The Fig &amp; Cedar jar maps to @Image9; use only the amber jar, blank kraft label and three wicks; do not use the leaves or cloth.
+@Video1 is used only for the High flip camera move; do not use its people, chair, table, colours or pacing.
+The end screen maps to @Video2; use only its picture; do not use its sound, spoken words or pacing.
+@Audio1 is used only for the shopper&#x27;s voice timbre; do not use its words or pacing.
+@Audio2 is used only for the owner&#x27;s voice timbre; do not use its words or pacing.
+@Audio3 is used only for Scout&#x27;s voice timbre; do not use its words or pacing.
+
+【Subjects and Relationships】
+One shopper (@Image2) and her cat (@Image5) stay in her apartment (@Image3); her own candles are only white pillars and tea lights, clearly unlike the amber three-wick Fig &amp; Cedar jar, which she does not own. One owner (@Image6) stays at her studio desk (@Image7), the one Fig &amp; Cedar jar (@Image9) lit beside her laptop. The amber jar is only on the shopper&#x27;s screen (@Image4) and the owner&#x27;s desk. The shopper&#x27;s unanswered question is the real reason for the low sales; the owner never learns it.
+
+【Shots】
+0-3s · Panel 1 [Opening shot. Wide, slow arc toward her]: Dozens of lit white pillar candles and tea lights fill the apartment (@Image3) at night; the shopper (@Image2) sits on the sofa, laptop on her lap, the cat (@Image5) curled beside her. At the end, it is closer on her.
+3-5s · Panel 2 [Hard cut. Over her shoulder]: The shopper&#x27;s (@Image2) fingers scroll the Fig &amp; Cedar page (@Image4) down, then back up; no click.
+5-8s · Panel 3 [Hard cut. Close-up, the camera slowly circles around her face]: The shopper (@Image2), lips closed in the screen glow, the cat (@Image5) soft behind her in the apartment (@Image3). The shopper (@Image2), in English, inner voice-over, in the voice of @Audio1, lips closed, wondering: {Are these safe for cats?}
+8-10s · Panel 4 [Hard cut. Medium close-up, locked]: The shopper (@Image2) scrolls the page (@Image4) faster up and down, finds nothing about pets; jaw tight, a sharp exhale through her nose &lt;a short sharp exhale&gt;, she rubs her brow. Silent.
+10-13s · Panel 5 [Hard cut. Medium, eye level]: The shopper (@Image2) closes the site to an empty browser, leans back and looks at the cat (@Image5). The shopper (@Image2), in English, inner voice-over, in the voice of @Audio1, lips closed, flat: {I guess we&#x27;ll never know.}
+13-15s · Panels 6-7 [High flip, the camera move of @Video1; Panel 6 at 13-14s, Panel 7 at 14-15s]: The camera rises over the shopper (@Image2) on her sofa in the apartment (@Image3) until it looks straight down, the back of the sofa sweeps across the frame as the view flips, and it comes out level on the owner (@Image6) at her desk in the studio (@Image7).
+15-21s · Panels 8-9 [Lands from the High flip. Medium, slow push in; Panel 8 at 15-18s, Panel 9 at 18-21s]: The owner (@Image6) at her studio desk (@Image7) reads her screen (@Image8), the lit Fig &amp; Cedar jar (@Image9) beside the laptop; she sighs. The owner (@Image6), in English, on camera, in the voice of @Audio2, resigned: {I guess no one&#x27;s interested in Fig and Cedar. No one wants this. Time to discontinue the product line.}
+21-23s · Panel 10 [Hard cut. Close-up, locked]: The owner (@Image6) leans in and blows out the Fig &amp; Cedar jar (@Image9) &lt;a soft breath&gt;; the three flames go out, smoke rises. At the end, the wicks smoke.
+23-25s · Panel 11 [Hard cut. Macro, locked]: The jar&#x27;s (@Image9) smoking wicks; the studio (@Image7) dims. Scout, in English, off screen, in the voice of @Audio3, calm: {Don&#x27;t guess why your shoppers don&#x27;t buy.}
+25-30s · Panel 12 [Hard cut. End screen, as @Video2]: Scout, in English, off screen, in the voice of @Audio3, warm: {Scout interviews your shoppers for you. Get free early access.} At the end, the end screen (@Video2) holds.
+
+【Style and Sound】
+No ka-ching, no cart sound, no Add-to-cart click. (Soft piano under speech.) No subtitles appear on screen.
+
+【Maintain Consistency】
+Keep the shopper (@Image2), the owner (@Image6), their clothing and rooms stable.
+</textarea>
+<div class="copyrow"><button id="copy">Copy prompt</button><span class="small" id="copied"></span> <a class="small" href="prompt-sd25pe-final.txt">prompt-sd25pe-final.txt</a></div>
+</section>
+
+<section class="illus">
+<span class="nsent">Illustration, not sent to Seedance</span>
+<h2 style="margin-top:6px">How the 12 panels map to the shots</h2>
+<div class="sbwrap"><a href="a/storyboard.png" target="_blank"><img src="a/storyboard.png" alt="The 12-panel line-art storyboard (the same file as Image 1)" loading="lazy"></a></div>
+<p class="small" style="margin-top:8px">Panels 1-5 follow shots 1-5. The 2 s High flip is drawn as two straight-down views (P6 on her, P7 on the owner) so the flip reads on the sheet. The 6 s owner shot is split in two (P8 reading, P9 sighing at the jar). P10 blow-out, P11 smoking wicks, P12 end card.</p>
+</section>
+
+<section class="illus">
+<span class="nsent">Illustration, not sent to Seedance</span>
+<h2 style="margin-top:6px">Our draft before the sd25-pe compile</h2>
+<p class="small">Written our way (562 words), then compiled by the sd25-pe skill into the prompt above: one role line per asset, the speaker, language and voice on every line, the gate line after the goal.</p>
+<pre class="p">【Reference Asset Roles】
+@Image1 is a 12-panel line-art storyboard: read it left to right, top to bottom, one panel per time range. Do not adopt its line-art style, panel numbers or drawn faces.
+@Image2 is the shopper: her face, dark bob with bangs, cream cardigan.
+@Image3 is the shopper&#x27;s candle-filled apartment at night; her laptop is open on her lap, not closed on the stool.
+@Image4 is the shopper&#x27;s laptop screen, the Fig &amp; Cedar product page; she never clicks Add to cart.
+@Image5 is her grey tabby cat.
+@Image6 is the owner: face, side braid, rust sweater.
+@Image7 is the owner&#x27;s candle studio.
+@Image8 is the owner&#x27;s laptop screen: units sold, Fig &amp; Cedar at 3 (−84%).
+@Image9 is the one Fig &amp; Cedar jar, on the owner&#x27;s desk.
+@Video1 is only the High flip camera move.
+@Video2 is the end screen picture.
+@Audio1, @Audio2, @Audio3: voice timbre only for the shopper, the owner and Scout; do not use their words.
+
+【Generation Goal】
+A cat lady in her candle-filled apartment searches the Fig &amp; Cedar page for whether the candles are safe for cats, finds nothing and leaves without buying. The owner, reading her Fig &amp; Cedar sales, guesses no one wants it and decides to discontinue it. Scout: don&#x27;t guess. Please note that this is not video editing.
+
+【Shots】
+0-3s: [Panel 1, opening shot, wide, slow arc toward her] Night, dozens of lit candles everywhere; she sits on the sofa, laptop on her lap, the cat curled beside her.
+3-5s: [Panel 2, Hard cut, over her shoulder] Her fingers scroll the Fig &amp; Cedar page down, then back up, searching. No click.
+5-8s: [Panel 3, Hard cut, close-up, camera slowly circles her face] Lips closed, screen glow, cat soft behind.
+Shopper (inner voice, lips closed, wondering): {Are these safe for cats?}
+8-10s: [Panel 4, Hard cut, medium close-up] She scrolls faster, finds nothing about pets; jaw tightens, sharp exhale through the nose &lt;short nose exhale&gt;, rubs her brow. Silent.
+10-13s: [Panel 5, Hard cut, medium] She closes the site to an empty browser, leans back, looks at the cat.
+Shopper (inner voice, lips closed, flat): {I guess we&#x27;ll never know.}
+13-15s: [Panels 6-7, High flip like @Video1] The camera rises over her until it looks straight down, the back of the sofa sweeps across the frame as the view flips, and it comes out level on the owner at her desk.
+15-21s: [Panels 8-9, lands from the flip, medium, then closer] The owner at her desk, units-sold list on screen, the lit Fig &amp; Cedar jar beside the laptop. She sighs.
+Owner (on camera, resigned): {I guess no one&#x27;s interested in Fig and Cedar. No one wants this. Time to discontinue the product line.}
+21-23s: [Panel 10, Hard cut, close-up] She leans in and blows out the Fig &amp; Cedar candle; the three flames go out, smoke rises &lt;a soft blow&gt;.
+23-25s: [Panel 11, Hard cut, macro] Smoking wicks; the studio dims.
+Scout (off screen, calm): {Don&#x27;t guess why your shoppers don&#x27;t buy.}
+25-30s: [Panel 12, Hard cut, end screen as @Video2]
+Scout (off screen, warm): {Scout interviews your shoppers for you. Get free early access.}
+
+【Style and Sound】
+Photoreal, warm candlelight. Hard cuts, except the High flip at 13-15s. No ka-ching, no cart sound, no Add-to-cart click. (Soft piano, low under speech.) English dialogue exactly as written. No subtitles.
+</pre>
+</section>
+
+<details>
+<summary>Checks: sd25-pe Final Checklist and Principles 1-11 (zero FAILs)</summary>
+<p style="margin-top:8px">Full table with proof lines and the per-shot "one asset per person" table: <a href="SD25-CHECK.md">SD25-CHECK.md</a>. Asset list: <a href="H241-assets.txt">H241-assets.txt</a>. Prompt file: <a href="prompt-sd25pe-final.txt">prompt-sd25pe-final.txt</a> (sha256 c0c4ba3f7473a0ffebd60d2cbc098160b6bdf29a1cae29dafe288e92603a6179).</p>
+<p>Audio transcripts (timbre only, never their words): Audio 1 is a beach-house chat, Audio 2 is a stone-fruit tasting line, Audio 3 is Scout's end line. Video 2's own sound is not used.</p>
+</details>
+<details>
+<summary>History</summary>
+<p style="margin-top:8px"><b>Nov 15 2:11 PM, H241 (this version):</b> Emile's two changes before render: the plot in the goal (about to buy, can't without the cat-safety answer, owner cuts the line on the wrong insight) and the candle contrast (her room = white pillars and tea lights, room still v2; board panels 1, 3-6 redrawn free). Owner face re-uploaded free (old id dead). Old page: <a href="index.pre-h241.html">index.pre-h241.html</a>; old board: <a href="a/storyboard.pre-h241.png">storyboard.pre-h241.png</a>; old prompt: <a href="prompt-sd25pe-final.pre-h241.txt">prompt-sd25pe-final.pre-h241.txt</a>. Spend: 0 credits.</p>
+<p><b>Nov 15, cat story:</b> Emile's new story replaces the near-buy story. The storyboard is redrawn for free (GPT Image via Codex), the room is the shared candle apartment, and the Scout orb scene, cart click and ka-ching are gone. The flip-move clip is kept for its camera move only.</p>
+<p><b>Nov 14-15, earlier story:</b> a shopper almost buys, Scout's orb says "Don't guess. Ask them." Codex passed it on Nov 15. Old page: <a href="index.pre-catstory.html">index.pre-catstory.html</a>; old board: <a href="a/storyboard.pre-catstory.png">storyboard.pre-catstory.png</a> (its 1.0 cr of stills was spent on parent card H216 on Nov 14).</p>
+</details>
+</main>
+<script>
+document.getElementById('copy').addEventListener('click',function(){
+  var t=document.getElementById('raw').value, s=document.getElementById('copied');
+  function done(){s.textContent='Copied';setTimeout(function(){s.textContent=''},1800)}
+  function fallback(){var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy');done()}catch(e){s.textContent='Select and copy from prompt-sd25pe-final.txt'}a.remove()}
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,fallback)}else{fallback()}
+});
+</script>
+<script type="application/json" id="rv-summary">{"title": "Line-art storyboard · the cat question", "technique": "One 12-panel line-art storyboard sets every shot's order and framing; separate photos give the faces, rooms and props; words add the voices.", "story": ["At night a cat lady sits on her sofa, candles burning all over her apartment, her cat beside her.", "She scrolls the Fig & Cedar product page up and down, searching. She does not buy.", "Inner voice, lips closed, the camera circling her: “Are these safe for cats?”", "She finds nothing, gets annoyed (shown only) and closes the site: “I guess we'll never know.”", "High flip down to the owner reading her sales: “I guess no one's interested in Fig and Cedar. No one wants this. Time to discontinue the product line.” She blows out the candle.", "Scout: “Don't guess why your shoppers don't buy.” End screen: “Scout interviews your shoppers for you. Get free early access.”"], "shots": [{"t": "0-3s", "who": "Shopper, Cat", "what": "Wide: candle-filled apartment at night; she sits on the sofa with her laptop, the cat curled beside her; slow arc in.", "line": "", "speaker": "", "assets": ["image1", "image2", "image3", "image5"]}, {"t": "3-5s", "who": "Shopper", "what": "Hard cut, over her shoulder: her fingers scroll the Fig & Cedar page down, then back up. No click.", "line": "", "speaker": "", "assets": ["image1", "image2", "image4"]}, {"t": "5-8s", "who": "Shopper, Cat", "what": "Hard cut, close-up, camera circles her face; lips closed; cat soft behind.", "line": "Are these safe for cats?", "speaker": "Shopper (inner voice)", "assets": ["image1", "image2", "image5", "image3", "audio1"]}, {"t": "8-10s", "who": "Shopper", "what": "Hard cut: she scrolls faster, finds nothing about pets; jaw tight, sharp exhale, rubs her brow. Silent.", "line": "", "speaker": "", "assets": ["image1", "image2", "image4"]}, {"t": "10-13s", "who": "Shopper, Cat", "what": "Hard cut: she closes the site, leans back, looks at the cat.", "line": "I guess we'll never know.", "speaker": "Shopper (inner voice)", "assets": ["image1", "image2", "image5", "audio1"]}, {"t": "13-15s", "who": "Shopper → Owner", "what": "High flip: camera rises over her to straight down, the sofa back sweeps across as the view flips, and it comes out level on the owner at her desk.", "line": "", "speaker": "", "assets": ["image1", "image2", "video1", "image6", "image7"]}, {"t": "15-21s", "who": "Owner", "what": "Lands from the flip: the owner reads units sold (Fig & Cedar at 3), the lit jar beside her laptop; she sighs.", "line": "I guess no one's interested in Fig and Cedar. No one wants this. Time to discontinue the product line.", "speaker": "Owner (on camera)", "assets": ["image1", "image6", "image7", "image8", "image9", "audio2"]}, {"t": "21-23s", "who": "Owner", "what": "Hard cut, close-up: she leans in and blows out the Fig & Cedar candle; three flames out, smoke rises.", "line": "", "speaker": "", "assets": ["image1", "image6", "image9"]}, {"t": "23-25s", "who": "Smoke", "what": "Hard cut, macro on the smoking wicks; the studio dims.", "line": "Don't guess why your shoppers don't buy.", "speaker": "Scout (off screen)", "assets": ["image1", "image9", "image7", "audio3"]}, {"t": "25-30s", "who": "End screen", "what": "Hard cut to the H158 end screen.", "line": "Scout interviews your shoppers for you. Get free early access.", "speaker": "Scout (off screen)", "assets": ["image1", "video2", "audio3"]}]}</script>
+<link rel="stylesheet" href="../../_review/review.css"><script src="../../_review/review.js" defer></script>
+</body>
+</html>
