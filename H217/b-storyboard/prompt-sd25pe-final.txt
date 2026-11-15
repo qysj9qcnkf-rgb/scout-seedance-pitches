@@ -1,8 +1,8 @@
 【Generation Goal】
-Generate a photoreal, full-colour story ad. A bikini-store owner gets a refund and is about to post a discount when Scout, a floating lime orb, freezes time and shows her a shopper who is just waiting for that discount.
+Generate a photoreal, full-colour story ad. A bikini-store owner gets a refund and is about to post a discount when Scout, a floating lime orb, freezes time and shows her a shopper who is just waiting for that discount. Please note that this is not video editing.
 
 【Reference Asset Roles】
-Image 1 is a 12-panel line-art storyboard. Read it left to right, top to bottom, one panel per shot below. Use it only for shot order, blocking and what each person holds; do not adopt its line-art style or its placeholder figures.
+Image 1 is a 12-panel line-art storyboard. Read it left to right, top to bottom, one panel per shot below. Use it only for shot order, blocking and what each person holds; do not adopt its line-art style or its placeholder figures. Do not adopt the smile in panel 9 or the pieces flying off the laptop screen in panel 10; the shot lines below set those two moments.
 Image 2 is the refund notification on her phone: show it word for word.
 Image 3 is the owner: use only her face, hair and clothes.
 Image 4 is her studio: use only its space, props and daylight; it is the room for every owner shot.
@@ -15,39 +15,39 @@ Audio 3 is the shopper's voice timbre only; do not use its words.
 
 【Subjects】
 The owner (Image 3) appears only in her studio (Image 4), with her own swimwear in hand or within reach and the same face, hair and clothes in every shot.
-One shopper only (Image 5), seen only in her own sunny bedroom, with a beach bag and a coral bikini on the bed, 13-21s.
-Scout is one glowing lime orb with white sound bars, first seen at 8s. Its voice is calm and warm.
+One shopper only (Image 5), seen only in her own sunny bedroom, with a beach bag and a coral bikini on the bed, 9-19s.
+Scout is one glowing lime orb with white sound bars, first seen at 7s, in the studio beside the owner and in the bedroom beside the shopper. Its voice is calm and warm.
 
 【Event Script】
 Follow the storyboard; each shot adds only what the panel can't show.
 
-0-2s | Panel 1: The notification from Image 2 drops in with <the order sound from Audio 1>.
+0-1s | Panel 1: The notification from Image 2 drops in with <the order sound from Audio 1>.
 
-2-4s | Panel 2:
+1-3s | Panel 2: She reads the phone.
 The owner, in English (annoyed but disappointed): {Oh, for... A refund.}
 
-4-6s | Panel 3:
+3-5s | Panel 3:
 The owner, in English (flat, disappointed): {Sales are so low this week.}
 
-6-8s | Panel 4: Room sound drops away; her lips stay closed.
+5-7s | Panel 4: Room sound drops away; her lips stay closed.
 The owner, in English (V.O., inner voice): {Maybe it's time for a discount.}
 
-8-11s | Panel 5: Bullet time: everything freezes and the camera arcs around her. Scout pops in by her shoulder with a soft <pop>. Her mouth stays closed.
-Scout, in English (calm, a little playful): {Not yet. There's something you don't know.}
+7-9s | Panel 5: Bullet time: everything freezes and the camera arcs around her. Scout pops in by her shoulder with a soft <pop>. Her mouth stays closed.
+Scout, on screen as the orb, in English (calm, a little playful): {Not yet. There's something you don't know.}
 
-11-13s | Panel 6: She turns to the orb, curious. At 12s the camera rises and flips overhead with a <whoosh>, landing in the shopper's bedroom at 13s.
+9-11s | Panel 6: She turns to the orb, curious, mouth closed. At 10s the camera rises and flips overhead with a <whoosh>, landing in the shopper's bedroom at 11s.
 
-13-17s | Panel 7: The shopper keeps packing, her mouth closed.
-Scout, in English (curious, friendly): {You left the Sunset bikini in your cart three times. What stopped you?}
+11-15s | Panel 7: The shopper keeps packing, her mouth closed.
+Scout, on screen as the orb beside her, in English (curious, friendly): {You left the Sunset bikini in your cart three times. What stopped you?}
 
-17-21s | Panel 8:
+15-19s | Panel 8:
 The shopper, in English (casual, matter-of-fact): {You run a discount every week. I'm just waiting for it.}
 
-21-23s | Panel 9: Back in the studio.
-The owner, in English (dawning, wry): {I'm training them to wait.}
+19-21s | Panel 9: Hard cut back to the studio, right after the shopper's answer. She freezes with the bikini top still in her hands: eyes wide, brows up, a sharp breath in; no smile.
+The owner, in English (stunned, a shocked realisation, a catch of breath on the "..."): {Oh my god... I'm training them to wait.}
 
-23-24s | Panel 10: One finger deletes the discount; the form breaks apart.
-The owner, in English (decided): {Noted.}
+21-24s | Panel 10: Hard cut, seen from behind her at the laptop. She says the line, then her hand on the trackpad clicks Delete on the discount with <a soft click>, and a dark toast reading "Discount deleted" pops up on the screen.
+The owner, in English (decided, firm): {You know what? Let's delete all these discounts.}
 
 24-26s | Panel 11: Later that week, golden light. The notification from Image 6 lands with <the order sound from Audio 1>.
 The owner, in English (relieved, smiling): {Glad I asked.}
@@ -55,7 +55,7 @@ The owner, in English (relieved, smiling): {Glad I asked.}
 26-30s | Panel 12: Video 1 as it is: the orb becomes the "o" of the Scout wordmark, and Video 1's own audio carries Scout's end line; no other voice is added.
 
 【Camera and Pace】
-Hard cuts between shots, except the bullet-time arc at 8s and the overhead flip at 12s. A new visual every 2-3 seconds, fast, smooth, stabilised camera. Talking shots are close-ups; her hands and the swimwear fill the frame. Each line finishes inside its shot.
+Hard cuts between shots, except the bullet-time arc at 7s and the overhead flip at 10s. A new visual every 2-3 seconds, fast, smooth, stabilised camera. Talking shots are close-ups; her hands and the swimwear fill the frame. Each line finishes inside its shot.
 
 【Look and Sound】
 Bright daylight, sand and sea-blue colours. (Light upbeat music, lower under speech.) Dialogue strictly as written; whoever is not speaking keeps their mouth closed. No subtitles appear on screen.
