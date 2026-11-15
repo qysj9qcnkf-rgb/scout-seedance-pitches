@@ -1,132 +1,25 @@
 {
- "title": "One answer away",
- "technique": "Eight approved still frames set every beat; Seedance only fills the motion between them.",
+ "title": "Are these safe for cats?",
+ "technique": "Eight new keyframes (free GPT Image stills) set every beat; Seedance fills the motion between them. The High flip clip lends only its camera move.",
  "story": [
-  "At night a shopper on her sofa almost buys the Fig & Cedar candle.",
-  "She wonders if it's safe for her cat; the page never says. She gives up.",
-  "Across town the owner reads the flat sales as nobody wanting it.",
-  "She is about to discontinue it when Scout's orb pops up: Don't guess. Ask them.",
-  "Back on the shopper's page: She had one question. Nobody asked.",
-  "End screen: Scout interviews your shoppers for you. Get free early access."
+  "A cat lady sits on her sofa at night; candles burn all over her apartment, her cat beside her.",
+  "She scrolls the Fig & Cedar page up and down, searching. She never buys.",
+  "Inner voice, lips closed, the camera circling her: Are these safe for cats?",
+  "She finds nothing, gets annoyed, closes the site: I guess we'll never know.",
+  "High flip to the owner: I guess no one's interested in Fig and Cedar. No one wants this. Time to discontinue the product line. She blows out the candle.",
+  "Scout: Don't guess why your shoppers don't buy. End screen: Scout interviews your shoppers for you. Get free early access."
  ],
  "shots": [
-  {
-   "t": "0-3s",
-   "who": "Shopper, Cat",
-   "what": "On her sofa at night, the cat walking along the sofa back.",
-   "line": "Ooh. Fig and Cedar.",
-   "speaker": "Shopper (inner)",
-   "assets": [
-    "image1",
-    "image10",
-    "audio2"
-   ]
-  },
-  {
-   "t": "3-6s",
-   "who": "Shopper",
-   "what": "Over her shoulder, the cursor stops on Add to cart.",
-   "line": "Is this one safe for my cat?",
-   "speaker": "Shopper (inner)",
-   "assets": [
-    "image2",
-    "image10",
-    "audio2"
-   ]
-  },
-  {
-   "t": "6-9s",
-   "who": "Shopper, Cat",
-   "what": "Slow push in on her screen-lit face, brows drawn.",
-   "line": "It doesn't say anywhere on the page.",
-   "speaker": "Shopper (inner)",
-   "assets": [
-    "image3",
-    "image10",
-    "audio2"
-   ]
-  },
-  {
-   "t": "9-11s",
-   "who": "Shopper, Cat",
-   "what": "She closes the tab and lowers the laptop lid.",
-   "line": "Guess not.",
-   "speaker": "Shopper (inner)",
-   "assets": [
-    "image4",
-    "image10",
-    "audio2"
-   ]
-  },
-  {
-   "t": "11-13s",
-   "who": "Shopper",
-   "what": "High flip: camera rises, flips overhead, lands in the studio.",
-   "line": "",
-   "speaker": "",
-   "assets": [
-    "video2",
-    "image10"
-   ]
-  },
-  {
-   "t": "13-16s",
-   "who": "Owner",
-   "what": "She squints at her laptop; the Fig & Cedar row in red.",
-   "line": "Huh. I thought Fig and Cedar would sell way more.",
-   "speaker": "Owner",
-   "assets": [
-    "image5",
-    "image9",
-    "audio1"
-   ]
-  },
-  {
-   "t": "16-19s",
-   "who": "Owner",
-   "what": "She lifts the lit jar in both hands, her smile fading.",
-   "line": "Guess I'm discontinuing it.",
-   "speaker": "Owner",
-   "assets": [
-    "image6",
-    "image9",
-    "audio1"
-   ]
-  },
-  {
-   "t": "19-22s",
-   "who": "Owner, Scout orb",
-   "what": "Scout's orb pops up above the jar; she looks up at it.",
-   "line": "Don't guess. Ask them.",
-   "speaker": "Scout",
-   "assets": [
-    "image7",
-    "image9",
-    "audio3"
-   ]
-  },
-  {
-   "t": "22-25s",
-   "who": "Shopper's screen",
-   "what": "Her product page close up, cursor on Add to cart, lime glow.",
-   "line": "She had one question. Nobody asked.",
-   "speaker": "Scout",
-   "assets": [
-    "image8",
-    "audio3"
-   ]
-  },
-  {
-   "t": "25-30s",
-   "who": "Scout orb",
-   "what": "The orb becomes the o of the Scout end screen.",
-   "line": "Scout interviews your shoppers for you. Get free early access.",
-   "speaker": "Scout",
-   "assets": [
-    "video1",
-    "audio3"
-   ]
-  }
+  {"t": "0-3s", "who": "Shopper, Cat", "what": "Wide, slow arc: on her sofa, the cat beside her, candles everywhere.", "line": "", "speaker": "", "assets": ["image1", "image10", "image11"]},
+  {"t": "3-5s", "who": "Shopper", "what": "Over her shoulder: she scrolls the Fig & Cedar page down and back up.", "line": "", "speaker": "", "assets": ["image2", "image10"]},
+  {"t": "5-8s", "who": "Shopper, Cat", "what": "Close-up, the camera circles her face, lips closed.", "line": "Are these safe for cats?", "speaker": "Shopper (inner)", "assets": ["image3", "image10", "image11", "audio2"]},
+  {"t": "8-10s", "who": "Shopper", "what": "Scrolls faster, finds nothing; jaw tight, rubs her brow. Silent.", "line": "", "speaker": "", "assets": ["image4", "image10"]},
+  {"t": "10-13s", "who": "Shopper, Cat", "what": "Closes the site, leans back, looks at the cat.", "line": "I guess we'll never know.", "speaker": "Shopper (inner)", "assets": ["image5", "image10", "image11", "audio2"]},
+  {"t": "13-15s", "who": "Shopper, Owner", "what": "High flip: rises over her, flips, comes out level on the owner.", "line": "", "speaker": "", "assets": ["video2", "image10", "image9"]},
+  {"t": "15-21s", "who": "Owner", "what": "Reads units sold, Fig & Cedar 3 (-84%), the lit jar; she sighs.", "line": "I guess no one's interested in Fig and Cedar. No one wants this. Time to discontinue the product line.", "speaker": "Owner", "assets": ["image6", "image9", "image12", "audio1"]},
+  {"t": "21-23s", "who": "Owner", "what": "She blows out the Fig & Cedar candle.", "line": "", "speaker": "", "assets": ["image7", "image9", "image12"]},
+  {"t": "23-25s", "who": "Jar", "what": "Macro on the smoking wicks, the studio dims.", "line": "Don't guess why your shoppers don't buy.", "speaker": "Scout", "assets": ["image8", "image12", "audio3"]},
+  {"t": "25-30s", "who": "End screen", "what": "The H158 end screen.", "line": "Scout interviews your shoppers for you. Get free early access.", "speaker": "Scout", "assets": ["video1", "audio3"]}
  ],
- "prompt_section": "Ours vs ByteDance's optimizer"
+ "prompt_section": "The prompt Seedance gets"
 }
