@@ -1,10 +1,10 @@
 【Generation Goal】
-Generate a warm live-action story ad. A cat lady wants the Fig & Cedar candle, but its product page never says whether it is safe for cats, the one thing she needs before buying, so she leaves without buying. The owner sees only the missing sales, wrongly concludes nobody wants Fig & Cedar, and discontinues the line on that wrong premise, blowing out the candle. Scout's voice says not to guess. Please note that this is not video editing.
+Generate a warm live-action story ad. A cat lady is about to buy the Fig & Cedar candle, but its product page never says whether it is safe for cats, all she needs to know, so she leaves without buying. The owner sees only the missing sales, wrongly concludes nobody wants Fig & Cedar, and, surprisingly, discontinues the line on that wrong premise, blowing out the candle. Please note that this is not video editing.
 
 【Reference Asset Roles】
 The shopper maps to @Image1; use only her face, dark bob with bangs and cream cardigan; do not use the background.
 The grey tabby cat maps to @Image2; use only the cat, not the sofa or sleeve.
-The shopper's apartment references @Image3; use only the room, its sofa and its many lit candles in warm night light; do not use the closed laptop on the stool.
+The shopper's apartment references @Image3; use only the room, its sofa and its lit white pillar candles and tea lights; do not use the closed laptop on the stool.
 The shopper's laptop screen references @Image4, the Fig & Cedar product page; copy its layout and words, only on her laptop screen.
 The owner maps to @Image5; use only her face, auburn side braid and rust sweater; do not use her pose or background.
 The owner's studio references @Image6; use only its brick wall, shelves of lit stock jars and wooden desk; no shelf jar carries a Fig & Cedar label.
@@ -17,13 +17,13 @@ The Fig & Cedar jar maps to @Image8; use only the amber three-wick jar with its 
 @Audio3 is used only for Scout's voice timbre in 23-25s; do not use its words.
 
 【Subjects and Relationships】
-The shopper (@Image1) and her cat (@Image2) are only in her apartment (@Image3); the owner (@Image5) is only in her studio (@Image6); the women are never in the same room. The one Fig & Cedar jar (@Image8) is on the owner's desk; the shopper's candles are generic. She never clicks Add to cart. Scout is seen only in the end screen (@Video1). The shopper's unanswered question is the real reason for the low sales; the owner never learns it.
+The shopper (@Image1) and her cat (@Image2) are only in her apartment (@Image3); the owner (@Image5) is only in her studio (@Image6). The one Fig & Cedar jar (@Image8) is on the owner's desk; the shopper's own candles are only white pillars and tea lights, never amber jars; the amber Fig & Cedar jar appears only on her screen (@Image4) and in the studio. She never clicks Add to cart. Scout is seen only in the end screen (@Video1). The shopper's unanswered question is the real reason for the low sales; the owner never learns it.
 
 【Event Script】
-0-3s: [Opening shot. Wide, slow arc toward the shopper] The shopper (@Image1) sits on the sofa in her apartment (@Image3), candles lit everywhere, laptop open on her lap, the cat (@Image2) curled beside her. At the end, screen glow lights her face.
+0-3s: [Opening shot. Wide, slow arc toward the shopper] The shopper (@Image1) sits on the sofa in her apartment (@Image3), white candles lit everywhere, laptop open on her lap, the cat (@Image2) curled beside her. At the end, screen glow lights her face.
 3-5s: [Hard cut. Over the shopper's shoulder onto her laptop, static] The shopper's (@Image1) fingers scroll the product page (@Image4) down, then back up, searching. At the end, the page is back at the top.
 5-8s: [Hard cut. Close-up, the camera slowly circles around the shopper's (@Image1) face] The cat (@Image2) soft behind her. The shopper (@Image1), in English, in the voice of @Audio1 (inner voice, wondering, lips closed): {Are these safe for cats?} At the end, the camera is at her other side.
-8-10s: [Hard cut. Medium close-up, slow push in on the shopper] The shopper (@Image1) scrolls the product page (@Image4) faster, up and down, finding nothing about pets; her jaw tightens, she exhales sharply and rubs her brow, silent. At the end, her hand rests on her brow.
+8-10s: [Hard cut. Medium close-up, slow push in on the shopper] The shopper (@Image1) scrolls the product page (@Image4) faster, up and down, finding nothing about pets; her jaw tightens, she exhales sharply and rubs her brow. At the end, her hand rests on her brow.
 10-13s: [Hard cut. Medium shot, static] The shopper (@Image1) closes the site to an empty browser, leans back, looks at the cat (@Image2). The shopper (@Image1), in English, in the voice of @Audio1 (inner voice, resigned, lips closed): {I guess we'll never know.} At the end, she looks at the cat.
 13-15s: [High flip (@Video2)] The camera rises over the shopper (@Image1) until it looks straight down, the sofa back sweeps across the frame as the view flips 180 degrees, and it comes out level on the owner (@Image5) at her desk in the studio (@Image6) <soft whoosh>. At the end, the camera is level on the owner.
 15-21s: [Lands from the High flip. Medium close-up, slow push in toward the owner] The owner (@Image5) reads her laptop screen (@Image7), Fig & Cedar at 3, the lit jar (@Image8) beside it. The owner (@Image5), in English, in the voice of @Audio2 (on camera, lips moving, flat, disappointed): {I guess no one's interested in Fig and Cedar. No one wants this. Time to discontinue the product line.} At the end, she looks at the jar.
@@ -35,4 +35,4 @@ The shopper (@Image1) and her cat (@Image2) are only in her apartment (@Image3);
 Night room tone at the shopper's <faint candle crackle>; quiet studio tone at the owner's. (Soft, warm music, lifting into the end screen.) No ka-ching, cart sound or chime. No subtitles. No on-screen text except the two laptop screens (@Image4, @Image7), the jar label (@Image8) and the end screen (@Video1).
 
 【Maintain Consistency】
-Hard cuts only, except the High flip. Three voices only: the shopper (inner), the owner (on camera), Scout (off screen). Keep both women, the cat, the jar and both rooms identical.
+Hard cuts only, except the High flip. Keep both women, the cat, the jar and both rooms identical.

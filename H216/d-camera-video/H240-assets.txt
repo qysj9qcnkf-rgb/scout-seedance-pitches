@@ -1,11 +1,11 @@
 # H240 asset list: Render · Cat-candle ad · D (from approved H227)
-# Prompt: prompt-sd25pe-final.txt (sha256 89ed4dc9d2c870507e4ab237a97b5c46cc6f4732b6e308c85b2b3096b271a26b; H240 change: causal plot added to the goal)
+# Prompt: prompt-sd25pe-final.txt (sha256 df8a11dda95266d18e604f5700b4c70637a871e8ed26ba4ddd0998e9af059905; H240: causal plot in the goal + white home candles vs amber Fig & Cedar jar)
 # Upload in this order. Job: seedance_2_5, 30 s, 9:16, 480p draft, audio on (job settings, not in the prompt).
 # Every media id below returned 200 on the Higgsfield CDN on Nov 15 ~2:05 PM ET.
 # role | Higgsfield media id | local file | what it is
 @Image1 | d54d8df5-566f-400d-823a-fd87b64a0831 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/d-camera-video/a/image1-shopper-face.jpg | shopper face crop (free local crop, shared with A)
 @Image2 | 696c034b-34ca-4b95-8f62-382f22de2f6f | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/d-camera-video/a/image2-cat.jpg | grey tabby cat crop (free local crop, shared with A)
-@Image3 | 8dcc4d3e-6957-49cd-a342-fbc14d6a5e1f | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/d-camera-video/a/image3-apartment-candles.jpg | shopper apartment, room only, many lit candles (shared still)
+@Image3 | f11fa295-b91d-4edd-b9bf-d492d8480d83 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/d-camera-video/a/image3-apartment-candles.jpg | shopper apartment v2, room only, white/cream pillar candles and tea lights only, no amber jars (free GPT Image edit Nov 15)
 @Image4 | 918984eb-8269-43da-b074-23d61faa8083 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/d-camera-video/a/image4-product-page.png | Fig & Cedar product page, mouse pointer painted out (free local fix + free upload Nov 15; old 527991c0 had the pointer on Add to cart)
 @Image5 | a3488732-1c28-4b37-bb28-0c69475dacd0 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/d-camera-video/a/image5-owner.png | owner face, braid, sweater (re-uploaded free Nov 15 for H240; old 1963a66d did not resolve on the CDN)
 @Image6 | 1992f753-0975-476d-8571-4a43c2c6c2b0 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/d-camera-video/a/image6-owner-studio.png | owner studio, empty desk
