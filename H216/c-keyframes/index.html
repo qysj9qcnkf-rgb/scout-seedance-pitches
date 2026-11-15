@@ -76,8 +76,26 @@ ul.notes{padding-left:18px}ul.notes li{margin-bottom:6px}
 #eval{margin:56px 0 80px;padding:20px;border:2px dashed var(--line);border-radius:14px}
 footer{color:var(--muted);font-size:13px;padding-bottom:40px}
 </style>
+<style id="sg-css">
+.sg{box-sizing:border-box;max-width:1100px;margin:16px 16px 10px;padding:16px;border:3px solid #c6ef1a;border-radius:14px;background:var(--surface,var(--panel,#fff));color:var(--ink,#1d1a16)}
+.sg h2{margin:0 0 4px;font-size:22px;border:0;padding:0}
+.sg .diff{font-weight:600;margin:6px 0 10px;font-size:16px}
+.sg .plain{font-size:20px;font-weight:700;margin:8px 0 6px}
+.sg .hero img{display:block;width:100%;max-width:560px;height:auto;border-radius:8px;border:1px solid var(--line,#ddd)}
+.sg .strip{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px}
+.sg .strip figure{margin:0;flex:0 0 auto;width:118px;font-size:11px;color:var(--muted,#666)}
+.sg .strip img{display:block;width:118px;height:auto;border-radius:6px;border:1px solid var(--line,#ddd)}
+.sg .row{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.sg .row figure{margin:0;width:92px;font-size:11px;line-height:1.3;color:var(--muted,#666)}
+.sg .row img,.sg .row video{display:block;width:92px;height:92px;object-fit:cover;border-radius:6px;border:1px solid var(--line,#ddd);background:#111}
+.sg .row .au{width:92px;height:92px;display:flex;align-items:center;justify-content:center;text-align:center;border:1px solid var(--line,#ddd);border-radius:6px;font-size:12px;font-weight:600}
+.sg .meta{font-size:13px;color:var(--muted,#666);margin-top:10px}
+@media (min-width:1140px){.sg{margin:16px auto 10px}}
+.nsent{display:inline-block;margin:4px 0;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:600;background:#5b4636;color:#fff;line-height:1.5}
+</style>
 </head>
-<body><div class="wrap">
+<body>
+<section class="sg" id="what-seedance-gets"><h2>What Seedance gets</h2><p class="diff">The difference from the other versions: eight finished full-colour keyframes fix what each moment looks like, in order, and the film moves from one to the next.</p><div class="strip"><figure><img src="a/image1-kf1.jpg" alt="Keyframe 1" loading="lazy">Image 1 · 0-3s</figure><figure><img src="a/image2-kf2.jpg" alt="Keyframe 2" loading="lazy">Image 2 · 3-6s</figure><figure><img src="a/image3-kf3.jpg" alt="Keyframe 3" loading="lazy">Image 3 · 6-9s</figure><figure><img src="a/image4-kf4.jpg" alt="Keyframe 4" loading="lazy">Image 4 · 9-11s</figure><figure><img src="a/image5-kf5.jpg" alt="Keyframe 5" loading="lazy">Image 5 · 13-16s</figure><figure><img src="a/image6-kf6.jpg" alt="Keyframe 6" loading="lazy">Image 6 · 16-19s</figure><figure><img src="a/image7-kf7.jpg" alt="Keyframe 7" loading="lazy">Image 7 · 19-22s</figure><figure><img src="a/image8-kf8.jpg" alt="Keyframe 8" loading="lazy">Image 8 · 22-25s</figure></div><div class="row"><figure><img src="a/image1-kf1.jpg" alt="Image 1 keyframe 1" loading="lazy"><b>Image 1</b> keyframe 1</figure><figure><img src="a/image2-kf2.jpg" alt="Image 2 keyframe 2" loading="lazy"><b>Image 2</b> keyframe 2</figure><figure><img src="a/image3-kf3.jpg" alt="Image 3 keyframe 3" loading="lazy"><b>Image 3</b> keyframe 3</figure><figure><img src="a/image4-kf4.jpg" alt="Image 4 keyframe 4" loading="lazy"><b>Image 4</b> keyframe 4</figure><figure><img src="a/image5-kf5.jpg" alt="Image 5 keyframe 5" loading="lazy"><b>Image 5</b> keyframe 5</figure><figure><img src="a/image6-kf6.jpg" alt="Image 6 keyframe 6" loading="lazy"><b>Image 6</b> keyframe 6</figure><figure><img src="a/image7-kf7.jpg" alt="Image 7 keyframe 7" loading="lazy"><b>Image 7</b> keyframe 7</figure><figure><img src="a/image8-kf8.jpg" alt="Image 8 keyframe 8" loading="lazy"><b>Image 8</b> keyframe 8</figure><figure><img src="a/image9-owner-face.jpg" alt="Image 9 owner face" loading="lazy"><b>Image 9</b> owner face</figure><figure><img src="a/image10-shopper-face.jpg" alt="Image 10 shopper face" loading="lazy"><b>Image 10</b> shopper face</figure><figure><video src="a/video1-end.mp4" muted playsinline preload="metadata"></video><b>Video 1</b> end screen</figure><figure><video src="a/video2-flip-move.mp4" muted playsinline preload="metadata"></video><b>Video 2</b> High flip move</figure><figure><div class="au">Audio 1<br>audio</div><b>Audio 1</b> owner voice</figure><figure><div class="au">Audio 2<br>audio</div><b>Audio 2</b> shopper voice</figure><figure><div class="au">Audio 3<br>audio</div><b>Audio 3</b> Scout voice</figure></div><p class="meta">15 files, uploaded in this order: 10 images (8 keyframes + 2 faces), 2 videos (9.5 s), 3 audio (21.0 s). Everything else on this page is an illustration and is not sent. sd25-pe check: <a href="SD25-CHECK.md">SD25-CHECK.md</a> (final pass: zero FAILs).</p></section><div class="wrap">
 
 <header>
 <div class="eyebrow">H226 · H216 · Team C · Seedance 2.5 technique: Multi-keyframe reference · round 2 (judge fixes applied)</div>
@@ -90,7 +108,7 @@ footer{color:var(--muted);font-size:13px;padding-bottom:40px}
 <p><b>Round 2:</b> the judge's nine must-fixes are done (see <a href="#eval">Eval</a>). Four new stills: Image 2 re-shot on the same sofa with clean page copy, Image 3 with sealed lips and her own younger face, Image 5 with a three-wick jar and a dry squint. Images 6, 7 and 8 were fixed locally for free. The original round-1 frames are kept in <code>extras/round1/</code>.</p>
 </div>
 <div class="input">
-<span class="pill">Text to send: <b>1084</b> words (<a href="#pe">sd25-pe compile</a>)</span>
+<span class="pill">Text to send: <b>1,534</b> words (<a href="#pe">sd25-pe compile</a>)</span>
 <span class="pill"><b>10</b> images (8 keyframes + 2 faces)</span>
 <span class="pill"><b>2</b> videos (4.5 s + 5 s = 9.5 s)</span>
 <span class="pill"><b>3</b> audio (21 s total)</span>
@@ -119,14 +137,15 @@ footer{color:var(--muted);font-size:13px;padding-bottom:40px}
 <article class="card" id="image7"><span class="tag">&lt;image7&gt;</span><img src="a/image7-kf7.jpg" alt="Scout pops up" loading="lazy"><div class="cb"><div class="k">Keyframe 7 · 19-22s · round 2</div><h4>Scout pops up</h4><p><b>Provides:</b> the same frame as Image 6, with the lime orb beside her, above the jar, and her eyes on it. Its background screen got the same red-row patch, so Images 6 and 7 still match pixel for pixel outside the orb.</p><p class="no"><b>Use / avoid:</b> take the orb size, colour and place. Not lime light on her eyes.</p><code>media 930ad239-8509-4859-b400-972a47917fbe (job 9ac280bf + the same local screen fix)</code></div></article>
 <article class="card" id="image8"><span class="tag">&lt;image8&gt;</span><img src="a/image8-kf8.jpg" alt="One question away" loading="lazy"><div class="cb"><div class="k">Keyframe 8 · 22-25s · round 2</div><h4>One question away</h4><p><b>Provides:</b> a re-crop of the new Image 2 showing the price and the Add to cart she never clicked, with a faint lime rim glow around the button, as the prompt says.</p><p class="no"><b>Use / avoid:</b> take the page, the cursor and the glow. Not a filled cart.</p><code>media acb8804a-4584-4b2d-93e5-4e885c5e8a67 (local crop of job 8ab31276 + glow)</code></div></article>
 <article class="card" id="image9"><span class="tag">&lt;image9&gt;</span><img src="a/image9-owner-face.jpg" alt="Owner, actress 14" loading="lazy"><div class="cb"><div class="k">Identity · owner</div><h4>Actress 14 (The Dip)</h4><p><b>Provides:</b> her face and auburn side braid, so all three owner keyframes and the motion between them stay the woman from The Dip.</p><p class="no"><b>Not:</b> the background of this photo.</p><code>refs/face-actress-14.png · media 1963a66d-94e4-4fdc-95e5-b34fde48ea4f</code></div></article>
-<article class="card" id="image10"><span class="tag">&lt;image10&gt;</span><img src="a/image10-shopper-face.jpg" alt="Shopper face" loading="lazy"><div class="cb"><div class="k">Identity · shopper · round 2</div><h4>The shopper (shared cast)</h4><p><b>Provides:</b> her face and dark bob with bangs. It is now a tight crop of the cast photo, so there is no second room or cat for the model to copy.</p><p class="no"><b>Not:</b> its background or parted lips. The room comes from Images 1 to 4.</p><code>media 1db5a36d-6f7b-47ff-81c6-62c8ed215983 (crop of cast/shopper.png, Soul 2 media 24babbac)</code></div></article>
-<article class="card" id="video1"><span class="tag">&lt;video1&gt;</span><video src="a/video1-end.mp4" poster="a/video1-poster.jpg" controls playsinline preload="none"></video><div class="cb"><div class="k">25-30s · 4.5 s</div><h4>End screen: talking "o" (H158)</h4><p><b>Provides:</b> what the ending shows, and Scout's voice for his two lines before it.</p><p class="no"><b>Not:</b> its black background, wordmark or button before 25s. Seedance doesn't promise frame-exact playback, so in the edit we splice the real H158 end card over 25-30s.</p><code>media cae62718-ec02-41f6-8e36-1de097e8427d</code></div></article>
+<article class="card" id="image10"><span class="tag">&lt;image10&gt;</span><img src="a/image10-shopper-face.jpg" alt="Shopper face" loading="lazy"><div class="cb"><div class="k">Identity · shopper · round 2</div><h4>The shopper (shared cast)</h4><p><b>Provides:</b> her face and dark bob with bangs. It is now a tight crop of the cast photo, so there is no second room or cat for the model to copy.</p><p class="no"><b>Not:</b> its background or its open mouth (her lines are thoughts). The room comes from Images 1 to 4.</p><code>media 1db5a36d-6f7b-47ff-81c6-62c8ed215983 (crop of cast/shopper.png, Soul 2 media 24babbac)</code></div></article>
+<article class="card" id="video1"><span class="tag">&lt;video1&gt;</span><video src="a/video1-end.mp4" poster="a/video1-poster.jpg" controls playsinline preload="none"></video><div class="cb"><div class="k">25-30s · 4.5 s</div><h4>End screen: talking "o" (H158)</h4><p><b>Provides:</b> only the picture of the final shot at 25-30s: the Scout wordmark whose "o" is the orb, the line under it and the button.</p><p class="no"><b>Not:</b> its sound (Scout\'s voice for all three lines comes only from Audio 3), and none of it before 25s. Seedance doesn\'t promise frame-exact playback, so in the edit we splice the real H158 end card over 25-30s.</p><code>media cae62718-ec02-41f6-8e36-1de097e8427d</code></div></article>
 <article class="card" id="video2"><span class="tag">&lt;video2&gt;</span><video src="a/video2-flip-move.mp4" poster="a/video2-poster.jpg" controls muted playsinline preload="none"></video><div class="cb"><div class="k">11-13s · 5 s · round 2</div><h4>High flip: camera move only</h4><p><b>Provides:</b> the camera move only: rise, flip over the top, land in a new place. With no keyframe between 4 and 5, this keeps the transition reliable.</p><p class="no"><b>Not:</b> its people, places, colours or sound (the sound is stripped).</p><code>media 969c55f0-0fa1-4e69-b138-0f171ff227fa · Higgsfield Viral "High flip" 93a606f8, cut 2.5-7.5 s</code></div></article>
 <article class="card aud" id="audio1"><span class="tag">&lt;audio1&gt;</span><div class="cb"><h4>Owner voice: Alexandra (9.2 s)</h4><p><b>Provides:</b> the timbre, accent and pace The Dip used for her. Cut from the 16.8 s file at a pause to sit near the guide's 5-10 s.</p><p class="no"><b>Not:</b> its words; the prompt's lines win.</p><audio src="a/audio1-owner-alexandra-9s.mp3" controls preload="none"></audio><code>media c2ed3b9e-2050-423f-a203-9574a997b68c (from refs/voice-alexandra.mp3)</code></div></article>
 <article class="card aud" id="audio2"><span class="tag">&lt;audio2&gt;</span><div class="cb"><h4>Shopper inner voice: Serene (7.3 s)</h4><p><b>Provides:</b> a soft, calm young voice for her thoughts. Cut from the 11.4 s cast file at a pause.</p><p class="no"><b>Not:</b> its words or any on-screen lip movement.</p><audio src="a/audio2-shopper-serene-7s.mp3" controls preload="none"></audio><code>media 2049a920-1fdc-4534-bbc6-2d490619c449 (from cast voice-shopper-serene.mp3)</code></div></article>
-<article class="card aud" id="audio3"><span class="tag">&lt;audio3&gt;</span><div class="cb"><h4>Scout voice (4.5 s)</h4><p><b>Provides:</b> Scout's timbre, accent and pace for his two lines at 19-25s. Cut from Video 1's own sound track, so his voice matches the end card exactly, and Video 1 keeps one role (the end shot).</p><p class="no"><b>Not:</b> its words; the prompt's lines win.</p><audio src="a/audio3-scout-voice-4s.mp3" controls preload="none"></audio><code>media 1040c108-8833-40b5-a3f0-943deab45436 (cut of a/video1-end.mp4 audio, 0-4.5 s)</code></div></article></div>
+<article class="card aud" id="audio3"><span class="tag">&lt;audio3&gt;</span><div class="cb"><h4>Scout voice (4.5 s)</h4><p><b>Provides:</b> Scout's timbre and pace for all three of his lines (19-30s). Cut from Video 1's own sound track, so his voice matches the end card exactly, and Video 1 keeps one role (the end shot).</p><p class="no"><b>Not:</b> its words; the prompt's lines win.</p><audio src="a/audio3-scout-voice-4s.mp3" controls preload="none"></audio><code>media 1040c108-8833-40b5-a3f0-943deab45436 (cut of a/video1-end.mp4 audio, 0-4.5 s)</code></div></article></div>
 <p style="font-size:14px;color:var(--muted);margin-top:14px"><b>Not uploaded (already baked into the keyframes):</b> cast product-page.png, owner-sales.png, jar.png, the Dip studio frame, the ka-ching sound file (the ka-ching is written into the prompt instead, as a &lt;&gt; sound effect at 0-3s on a first notification, per Emile's Nov 14 rule; Scout's entrance has no chime or ka-ching) and the Scout logo. Sending them too would give the model a second, competing version of the same thing <cite>sd25-pe · principle 3: list unused assets</cite>.</p>
 
+<p class="nsent" style="display:block;border-radius:8px;padding:6px 10px">Prompt A below is our earlier prompt.txt, kept for comparison only, and is not sent. Some of its lines (for example Scout's voice from Video 1) were replaced in B on Nov 15.</p>
 <h2 id="prompt">Our prompt (A), annotated<small><b>The one to send is the sd25-pe compile (B) in <a href="#pe">Ours vs sd25-pe</a></b>: same story, lines and keyframes, with one role per asset and a language label on every line. Split into the guide's four parts <cite>Basic prompting techniques</cite>. Dialogue is "Character's line (emotion): {…}" <cite>FAQ · Subtitles generated despite prompt constraints</cite>; the inner voice is V.O. with lips closed; sound effects are in &lt;&gt; <cite>Tutorial · Prompt rules</cite>. Timestamps are whole seconds with no gaps <cite>Basic · Timestamps</cite>. No ratio or duration in the text <cite>sd25-pe · principle 7</cite>.</small></h2>
 <div class="copyrow"><button id="copy" type="button">Copy A (ours)</button><span class="copied" id="copied"></span></div>
 <textarea class="raw" id="raw" readonly aria-hidden="true">Use Images 1 to 8 in order as keyframes. Each keyframe sets the composition, room, light, props and on-screen text of its own time range; move naturally from one keyframe to the next. Please note that this is not video editing.
@@ -183,7 +202,7 @@ Live action, real skin, warm low light: the shopper&#x27;s room is dark with lam
 <p class="ts">22-25s (reference: <a class="chip c-image" href="#image8">Image 8</a>): Hard cut back to the shopper&#x27;s product page as it was a moment before she closed it, the cursor resting on Add to cart, a faint lime glow around it.</p>
 <p class="dlg">Scout's line (warm, certain): <span class="line">{She had one question. Nobody asked.}</span></p>
 <p class="ts">25-30s (reference: <a class="chip c-video" href="#video1">Video 1</a>): The ending follows <a class="chip c-video" href="#video1">Video 1</a>: Scout's talking orb on black, with Scout's line from it: <span class="line">{Scout interviews your shoppers for you. Get free early access.}</span> Its last frame holds until 30s.</p></div>
-<div class="part"><h3>4 · Additional notes</h3><p>Live action, real skin, warm low light: the shopper's room is dark with lamp and candle glow; the owner's studio is warm amber with shelves of lit candle jars. Hard cuts, a new visual every 2 to 3 seconds; the only transition is the high flip at 11s. The shopper's lips stay closed; we only hear her thoughts. Each spoken line finishes inside its own time range. Exactly three voices: the shopper's inner voice (<a class="chip c-audio" href="#audio2">Audio 2</a>), the owner (<a class="chip c-audio" href="#audio1">Audio 1</a>) and Scout (<a class="chip c-video" href="#video1">Video 1</a>). (Soft, warm piano music plays very low under speech, lifting a little at 25s) Generate dialogue strictly as written; do not add or remove lines. No subtitles.</p></div>
+<div class="part"><h3>4 · Additional notes</h3><p>Live action, real skin, warm low light: the shopper's room is dark with lamp and candle glow; the owner's studio is warm amber with shelves of lit candle jars. Hard cuts, a new visual every 2 to 3 seconds; the only transition is the high flip at 11s. The shopper's lips stay closed; we only hear her thoughts. Each spoken line finishes inside its own time range. Exactly three voices: the shopper's inner voice (<a class="chip c-audio" href="#audio2">Audio 2</a>), the owner (<a class="chip c-audio" href="#audio1">Audio 1</a>) and Scout (<a class="chip c-audio" href="#audio3">Audio 3</a>). (Soft, warm piano music plays very low under speech, lifting a little at 25s) Generate dialogue strictly as written; do not add or remove lines. No subtitles.</p></div>
 </div>
 
 <h2 id="shots">Shot list<small>A new visual every 2-3 s, as in The Dip. At most 3 spoken words per second in any shot, and the flip gets its own 2 s (H217 lesson). 53 spoken words.</small></h2>
@@ -195,12 +214,12 @@ Live action, real skin, warm low light: the shopper&#x27;s room is dark with lam
 <tr><td class="t">13-16s</td><td>Medium close, over the laptop</td><td>Eye level</td><td>Small push to the red row; dry squint</td><td>Lands from the flip</td><td>Studio room tone</td><td class="ln">Owner: "Huh. I thought Fig and Cedar would sell way more."</td><td>The Dip 0-3 s (her at the laptop, jars behind)</td></tr>
 <tr><td class="t">16-19s</td><td>Close-up, jar in hands</td><td>Eye level</td><td>Static</td><td>Hard cut</td><td>Candle crackle</td><td class="ln">Owner: "Guess I'm discontinuing it." (smile fades to a rueful lip press)</td><td>The Dip 18-23 s (she holds the jar)</td></tr>
 <tr><td class="t">19-22s</td><td>Close-up</td><td>Eye level</td><td>Tiny push as the orb rises</td><td>Hard cut, orb pops in</td><td>None: no chime or ka-ching on Scout (Emile, Nov 14)</td><td class="ln">Scout: "Don't guess. Ask them."</td><td>The Dip orb lift-off (5.6-8 s)</td></tr>
-<tr><td class="t">22-25s</td><td>Insert, screen</td><td>Over her shoulder</td><td>Static, faint lime glow</td><td>Hard cut back to her page as it was before she closed it</td><td>Quiet room tone</td><td class="ln">Scout: "She had one question. Nobody asked."</td><td>Re-crop of the new Image 2</td></tr>
+<tr><td class="t">22-25s</td><td>Insert, screen</td><td>On her laptop screen, no person</td><td>Static, faint lime glow</td><td>Hard cut back to her page as it was before she closed it</td><td>Quiet room tone</td><td class="ln">Scout: "She had one question. Nobody asked."</td><td>Re-crop of the new Image 2</td></tr>
 <tr><td class="t">25-30s</td><td>End screen</td><td>Front</td><td>As Video 1</td><td>Hard cut</td><td>Music lifts</td><td class="ln">Scout: "Scout interviews your shoppers for you. Get free early access."</td><td>H158 talking "o"</td></tr></tbody></table></div>
 <div class="presets">
-<figure><video src="extras/preset-high-flip.mp4" controls muted playsinline preload="none"></video><figcaption><b>High flip</b> (Higgsfield Viral 93a606f8): "the camera rises above the subject and flips overhead, revealing a new character and location on the other side." Our 11-13s flip from her sofa into the studio.</figcaption></figure>
-<figure><video src="extras/preset-eyes-in.mp4" controls muted playsinline preload="none"></video><figcaption><b>Eyes in</b> (Higgsfield Viral a5e06af0): we borrow only its slow push onto the face at 6-9s, so the thought feels intimate. No dive into the pupil.</figcaption></figure>
-<figure><img src="extras/dip-vibe-sheet.jpg" alt="The Dip frames"><figcaption><b>The Dip (H174), the vibe to match.</b> Brick wall, shelves of lit amber jars, rust sweater, side braid, hands on the jar. Images 5 to 7 were built on one frame of this film.</figcaption></figure>
+<figure><video src="extras/preset-high-flip.mp4" controls muted playsinline preload="none"></video><span class="nsent">Illustration, not sent to Seedance</span><figcaption><b>High flip</b> (Higgsfield Viral 93a606f8): "the camera rises above the subject and flips overhead, revealing a new character and location on the other side." Our 11-13s flip from her sofa into the studio.</figcaption></figure>
+<figure><video src="extras/preset-eyes-in.mp4" controls muted playsinline preload="none"></video><span class="nsent">Illustration, not sent to Seedance</span><figcaption><b>Eyes in</b> (Higgsfield Viral a5e06af0): we borrow only its slow push onto the face at 6-9s, so the thought feels intimate. No dive into the pupil.</figcaption></figure>
+<figure><img src="extras/dip-vibe-sheet.jpg" alt="The Dip frames"><span class="nsent">Illustration, not sent to Seedance</span><figcaption><b>The Dip (H174), the vibe to match.</b> Brick wall, shelves of lit amber jars, rust sweater, side braid, hands on the jar. Images 5 to 7 were built on one frame of this film.</figcaption></figure>
 </div>
 
 <h2 id="special">The eight keyframes<small>This technique's special asset: the film, frame by frame. The flip lives between frames 4 and 5.</small></h2>
@@ -214,10 +233,10 @@ Live action, real skin, warm low light: the shopper&#x27;s room is dark with lam
 <figure><img src="a/image8-kf8.jpg" alt="One question away"><figcaption><span class="ts">22-25s</span><b>8. One question, nobody asked</b></figcaption></figure></div>
 <h3 style="margin-top:28px;font-size:18px">How they were made</h3>
 <div class="how">
-<figure><img src="extras/src-dip-studio.jpg" alt="Dip frame"><figcaption>The only room reference for Images 5-7: one frame of The Dip at 2.2 s (media 09ae0b86).</figcaption></figure>
-<figure><img src="extras/src-owner-sales.jpg" alt="Owner sales screen"><figcaption>The cast's Shopify products screen, copied onto her laptop in Image 5. The text stayed accurate.</figcaption></figure>
-<figure><img src="extras/src-product-page.jpg" alt="Product page"><figcaption>The cast's Ember &amp; Fig product page, copied onto the shopper's laptop in Image 2. No word about pets, on purpose.</figcaption></figure>
-<figure><img src="extras/clean-plate-vs-orb.jpg" alt="Clean plate and orb edit"><figcaption>Image 6 (a clean plate) and Image 7 (the same frame edited to add Scout). Scout exists only from 19s.</figcaption></figure>
+<figure><img src="extras/src-dip-studio.jpg" alt="Dip frame"><span class="nsent">Illustration, not sent to Seedance</span><figcaption>The only room reference for Images 5-7: one frame of The Dip at 2.2 s (media 09ae0b86).</figcaption></figure>
+<figure><img src="extras/src-owner-sales.jpg" alt="Owner sales screen"><span class="nsent">Illustration, not sent to Seedance</span><figcaption>The cast's Shopify products screen, copied onto her laptop in Image 5. The text stayed accurate.</figcaption></figure>
+<figure><img src="extras/src-product-page.jpg" alt="Product page"><span class="nsent">Illustration, not sent to Seedance</span><figcaption>The cast's Ember &amp; Fig product page, copied onto the shopper's laptop in Image 2. No word about pets, on purpose.</figcaption></figure>
+<figure><img src="extras/clean-plate-vs-orb.jpg" alt="Clean plate and orb edit"><span class="nsent">Illustration, not sent to Seedance</span><figcaption>Image 6 (a clean plate) and Image 7 (the same frame edited to add Scout). Scout exists only from 19s.</figcaption></figure>
 </div>
 
 <h2>Risks and how this pitch handles them</h2>
@@ -233,25 +252,25 @@ Live action, real skin, warm low light: the shopper&#x27;s room is dark with lam
 
 <h2 id="versions">Round 1 → round 2<small>Every keyframe that changed, oldest first. Round-1 frames are kept in extras/round1/.</small></h2>
 <div class="big">
-<figure><img src="extras/round1/image2-kf2.jpg" alt="Round 1 Image 2"><figcaption><span class="ts">R1</span><b>Image 2</b>Desk setup, garbled banner and keys</figcaption></figure>
+<figure><img src="extras/round1/image2-kf2.jpg" alt="Round 1 Image 2"><span class="nsent">Illustration, not sent to Seedance</span><figcaption><span class="ts">R1</span><b>Image 2</b>Desk setup, garbled banner and keys</figcaption></figure>
 <figure><img src="a/image2-kf2.jpg" alt="Round 2 Image 2"><figcaption><span class="ts">R2</span><b>Image 2</b>Same sofa, clean copy, keys in shadow</figcaption></figure>
-<figure><img src="extras/round1/image3-kf3.jpg" alt="Round 1 Image 3"><figcaption><span class="ts">R1</span><b>Image 3</b>Biting her lip, older face</figcaption></figure>
+<figure><img src="extras/round1/image3-kf3.jpg" alt="Round 1 Image 3"><span class="nsent">Illustration, not sent to Seedance</span><figcaption><span class="ts">R1</span><b>Image 3</b>Biting her lip, older face</figcaption></figure>
 <figure><img src="a/image3-kf3.jpg" alt="Round 2 Image 3"><figcaption><span class="ts">R2</span><b>Image 3</b>Lips sealed, her own face</figcaption></figure>
-<figure><img src="extras/round1/image5-kf5.jpg" alt="Round 1 Image 5"><figcaption><span class="ts">R1</span><b>Image 5</b>Four flames, hand clutching her head</figcaption></figure>
+<figure><img src="extras/round1/image5-kf5.jpg" alt="Round 1 Image 5"><span class="nsent">Illustration, not sent to Seedance</span><figcaption><span class="ts">R1</span><b>Image 5</b>Four flames, hand clutching her head</figcaption></figure>
 <figure><img src="a/image5-kf5.jpg" alt="Round 2 Image 5"><figcaption><span class="ts">R2</span><b>Image 5</b>Three wicks, dry squint, mailers</figcaption></figure>
-<figure><img src="extras/round1/image6-kf6.jpg" alt="Round 1 Image 6"><figcaption><span class="ts">R1</span><b>Image 6</b>Rising green chart behind her</figcaption></figure>
+<figure><img src="extras/round1/image6-kf6.jpg" alt="Round 1 Image 6"><span class="nsent">Illustration, not sent to Seedance</span><figcaption><span class="ts">R1</span><b>Image 6</b>Rising green chart behind her</figcaption></figure>
 <figure><img src="a/image6-kf6.jpg" alt="Round 2 Image 6"><figcaption><span class="ts">R2</span><b>Image 6</b>Red-row products list behind her</figcaption></figure>
-<figure><img src="extras/round1/image7-kf7.jpg" alt="Round 1 Image 7"><figcaption><span class="ts">R1</span><b>Image 7</b>Rising chart</figcaption></figure>
+<figure><img src="extras/round1/image7-kf7.jpg" alt="Round 1 Image 7"><span class="nsent">Illustration, not sent to Seedance</span><figcaption><span class="ts">R1</span><b>Image 7</b>Rising chart</figcaption></figure>
 <figure><img src="a/image7-kf7.jpg" alt="Round 2 Image 7"><figcaption><span class="ts">R2</span><b>Image 7</b>Same red-row list as Image 6</figcaption></figure>
-<figure><img src="extras/round1/image8-kf8.jpg" alt="Round 1 Image 8"><figcaption><span class="ts">R1</span><b>Image 8</b>Crop of the garbled page, no glow</figcaption></figure>
+<figure><img src="extras/round1/image8-kf8.jpg" alt="Round 1 Image 8"><span class="nsent">Illustration, not sent to Seedance</span><figcaption><span class="ts">R1</span><b>Image 8</b>Crop of the garbled page, no glow</figcaption></figure>
 <figure><img src="a/image8-kf8.jpg" alt="Round 2 Image 8"><figcaption><span class="ts">R2</span><b>Image 8</b>Crop of the clean page, faint lime glow</figcaption></figure>
 </div>
 
 <h2 id="pe">Ours vs ByteDance's optimizer (sd25-pe)<small>Emile, Nov 14: run the final prompt through ByteDance's sd25-pe skill to check every input is right for the model, show the compiled prompt next to ours, and say which to send. This round the real skill loaded (Skill tool "sd25-pe", from .claude/skills/sd25-pe/SKILL.md); its self-update command couldn't run here, so it used the local copy.</small></h2>
 <div class="tbl" style="padding:16px 18px">
-<p><b>Send B, the sd25-pe compile</b> (<code>prompt-sd25pe-final.txt</code>, 1084 words). The Render card runs its prompt through sd25-pe anyway, so this is the version that will go out. It keeps everything ours had and fixes four gaps the optimizer found.</p>
+<p><b>Send B, the sd25-pe compile</b> (<code>prompt-sd25pe-final.txt</code>, 1,534 words). The Render card runs its prompt through sd25-pe anyway, so this is the version that will go out. It keeps everything ours had and fixes four gaps the optimizer found.</p>
 <div class="tbl" style="margin:12px 0"><table style="min-width:640px"><thead><tr><th>Emile's check</th><th>A · ours</th><th>B · sd25-pe</th></tr></thead><tbody>
-<tr><td>Each asset has one role</td><td>Mostly. Image 7 is both a keyframe and "Scout's look", and the roles are spread over one paragraph.</td><td>One line per asset, 15 lines, each saying what to take and what not to take. Scout's look comes only from keyframe 7. Video 1 is only the end shot; Scout's voice for 19-25s now comes from Audio 3, a 4.5 s clip cut from Video 1's own sound, so no asset carries two roles.</td></tr>
+<tr><td>Each asset has one role</td><td>Mostly. Image 7 is both a keyframe and "Scout's look", and the roles are spread over one paragraph.</td><td>One line per asset, 15 lines, each saying what to take and what not to take. Scout's look comes only from keyframe 7. Video 1 is only the end shot; Scout's voice for all three of his lines (19-30s) now comes from Audio 3, a 4.5 s clip cut from Video 1's own sound, so no asset carries two roles.</td></tr>
 <tr><td>Unused assets listed</td><td>Not stated.</td><td>All 15 uploads have a role, so the unused set is empty and sd25-pe adds no 【Unused Assets】 block (it lists them only when some are left over).</td></tr>
 <tr><td>Exact dialogue</td><td>9 lines in {}, but no language per line, and Scout's end line sits inside the shot description.</td><td>The same 9 lines, word for word (diffed). Each has its own speaker label with "in English", on or off screen, and the owner keeps her mouth closed while Scout speaks.</td></tr>
 <tr><td>() &lt;&gt; {} sound marks</td><td>Correct: music in (), 5 sound effects in &lt;&gt;, lines in {}.</td><td>The same marks. No names sit inside &lt;&gt;.</td></tr>
@@ -259,8 +278,8 @@ Live action, real skin, warm low light: the shopper&#x27;s room is dark with lam
 <tr><td>Routing line</td><td>"Please note that this is not video editing." is there.</td><td>Same line, placed after the goal sentence as the template says. It applies because Video 1 (4.5 s) and Video 2 (5 s) are not the 30 s output.</td></tr>
 </tbody></table></div>
 <p><b>What I re-checked by hand after the compile:</b> all 9 spoken lines are identical in A and B. Every "(reference: Image N)" in A is still in B, in order. The keyframe technique is intact: the guide's exact sentence, "Use Images 1 to 8 in order as keyframes." <cite>Advanced · Keyframe reference</cite>, is now the very first sentence of B, above 【Generation Goal】, as the guide requires (the optimizer had reworded it and buried it in the asset block), there is one short line per keyframe, and each time range still points at its frame. The Dip pace line ("Hard cuts, a new visual every 2 to 3 seconds; the only transition is the high flip at 11s") is kept; the earlier by-hand compile had dropped it. I cut the keyframe lines to a few words each so they don't describe the frames twice.</p>
-<p><b>What I chose not to take:</b> the keyframe template also suggests "Use Image 1 as the first frame." I left it out. Our brief uses keyframes as ordered anchors, not a locked first frame, and sd25-pe's own rules say first-frame jobs must not carry the "not video editing" line. Writing both would contradict itself.</p>
-<p><b>Unsure:</b> B is 1068 words against ours at 750, and ByteDance's own 30 s examples run 380-740. sd25-pe sets no word cap, and the extra words are mostly the asset lines Emile asked for. If the take drifts or crowds the shots, the first thing to cut is the 【Subjects and Relationships】 block.</p></div>
+<p><b>Changed on Nov 15:</b> B now has the keyframe template's standalone "Use Image 1 as the first frame." plus a sentence describing that frame. The "not video editing" line stays, because this is an omni_reference job (the keyframes go in as ordinary reference images, not the API first-frame slot) with 4.5 s and 5 s reference videos against a 30 s output, which fires sd25-pe's gate.</p>
+<p><b>Unsure:</b> B is 1,534 words against ours at 750, and ByteDance's own 30 s examples run 380-740. sd25-pe sets no word cap, and the extra words are mostly the asset lines Emile asked for. If the take drifts or crowds the shots, the first thing to cut is the 【Subjects and Relationships】 block.</p></div>
 <div class="prompt" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr))">
 <div class="part"><h3>A · Ours · 756 words · prompt.txt</h3><pre style="white-space:pre-wrap;font:13px/1.5 ui-monospace,Menlo,monospace;margin:0">Use Images 1 to 8 in order as keyframes. Each keyframe sets the composition, room, light, props and on-screen text of its own time range; move naturally from one keyframe to the next. Please note that this is not video editing.
 Image 9 is the owner: take only her face and auburn side braid; do not use its background. Her voice takes only timbre, accent and pace from Audio 1: a warm, dry, slightly husky American woman; do not use its words.
@@ -291,110 +310,113 @@ Scout's line (warm, certain): {She had one question. Nobody asked.}
 
 Live action, real skin, warm low light: the shopper's room is dark with lamp and candle glow; the owner's studio is warm amber with shelves of lit candle jars. Hard cuts, a new visual every 2 to 3 seconds; the only transition is the high flip at 11s. The shopper's lips stay closed; we only hear her thoughts. Each spoken line finishes inside its own time range. Exactly three voices: the shopper's inner voice (Audio 2), the owner (Audio 1) and Scout (Audio 3). (Soft, warm piano music plays very low under speech, lifting a little at 25s) Generate dialogue strictly as written; do not add or remove lines. No subtitles.
 </pre></div>
-<div class="part" style="border:2px solid var(--lime)"><h3>B · sd25-pe compile · send this · 1084 words · prompt-sd25pe-final.txt</h3><div class="copyrow" style="margin:0 0 10px"><button id="copype" type="button">Copy B</button><span class="copied" id="copiedpe"></span></div><pre style="white-space:pre-wrap;font:13px/1.5 ui-monospace,Menlo,monospace;margin:0">Use Images 1 to 8 in order as keyframes.
+<div class="part" style="border:2px solid var(--lime)"><h3>B · sd25-pe compile · send this · 1,534 words · prompt-sd25pe-final.txt</h3><div class="copyrow" style="margin:0 0 10px"><button id="copype" type="button">Copy B</button><span class="copied" id="copiedpe"></span></div><pre style="white-space:pre-wrap;font:13px/1.5 ui-monospace,Menlo,monospace;margin:0">Use Images 1 to 8 in order as keyframes.
 
 【Generation Goal】
-Generate a quiet, warm, live-action story ad. At night a shopper on her sofa almost buys the Fig &amp; Cedar candle from Ember &amp; Fig but quietly gives up because the page never says whether it is safe for her cat; across town the owner, in her warm candle studio, reads the flat sales as nobody wanting it, until Scout, a small floating lime-green orb, stops her. Please note that this is not video editing.
+Generate a quiet, warm, live-action story ad. Please note that this is not video editing. At night a shopper on her sofa almost buys the Fig &amp; Cedar candle from Ember &amp; Fig but quietly gives up because the page never says whether it is safe for her cat; across town the owner, in her warm candle studio, reads the flat sales as nobody wanting it, until Scout, a small floating lime-green orb, stops her.
 
 【Reference Asset Roles】
-Images 1 to 8 are the keyframes, in that order. Each keyframe sets the composition, room, light, props and on-screen text of its own time range; the shot moves naturally from one keyframe to the next, with no static hold.
-Image 1 defines the first keyframe: the shopper on her sofa at night, the cat walking behind her.
-Image 2 defines the second keyframe: over her shoulder, the product page, cursor on Add to cart.
-Image 3 defines the third keyframe: her screen-lit face, lips closed.
-Image 4 defines the fourth keyframe: the lid lowered, the cat beside her.
-Image 5 defines the fifth keyframe: the owner at her laptop in her candle studio.
-Image 6 defines the sixth keyframe: the owner holding the lit jar.
-Image 7 defines the seventh keyframe: the same frame with Scout, the lime-green orb, beside her, above the jar.
-Image 8 defines the eighth keyframe: the product page close up, Add to cart glowing faintly lime.
-Image 9 is used for the owner's facial features and auburn side braid; do not use its background.
-Image 10 is used for the shopper's facial features and dark bob with bangs; do not use its background.
-Video 1 is used only for the content of the final shot at 25-30s, with Scout's line in it; before 25s, do not use its black background, wordmark or button.
-Video 2 is used only for the camera move of the high flip at 11-13s; do not use its people, places, colours or sound.
-Audio 1 is used only for the owner's voice quality, accent, speaking rate and emotion (a warm, dry, slightly husky American woman); do not use its words.
-Audio 2 is used only for the shopper's inner-voice quality, accent, speaking rate and emotion (a soft, calm young American woman, close-mic); do not use its words.
-Audio 3 is used only for Scout's voice quality, accent, speaking rate and emotion (calm, friendly, slightly processed) for his lines at 19-25s; do not use its words.
+Use Image 1 as the first frame.
+This first frame defines the shopper (Image 10) on her sofa at night in her dark living room, laptop on her lap, the lamp and one small candle lit, the grey tabby cat walking along the sofa back behind her, in a medium-wide shot at eye level.
+Image 2 defines the second keyframe: over the shopper's (Image 10) shoulder, the product page on her laptop, the cursor on Add to cart.
+Image 3 defines the third keyframe: the shopper's (Image 10) screen-lit face, lips closed, the cat out of focus behind her.
+Image 4 defines the fourth keyframe: the laptop lid lowered, the cat beside the shopper (Image 10).
+Image 5 defines the fifth keyframe: the owner (Image 9) at her laptop in her candle studio, the Fig &amp; Cedar row outlined in red, the lit three-wick jar beside it.
+Image 6 defines the sixth keyframe: the owner (Image 9) holding the lit three-wick jar in both hands.
+Image 7 defines the seventh keyframe: the same frame with Scout's lime-green orb beside the owner (Image 9), above the jar.
+Image 8 defines the eighth keyframe: the shopper's product page close up, Add to cart glowing faintly lime.
+Each keyframe sets the composition, room, light, props and on-screen text of its own time range; the film passes through Images 1 to 8 in order, cutting from one keyframe to the next as the Event Script says, with no static hold.
+Image 9 is used only for the owner's facial features and auburn side braid; do not use its background or pose.
+Image 10 is used only for the shopper's facial features and dark bob with bangs; do not use its background or its open mouth.
+Video 1 is used only for the picture of the final shot at 25-30s: the Scout wordmark whose "o" is the orb, the line under it and the button; do not use its sound, and show none of it before 25s.
+Video 2 is used only for the High flip camera move at 11-13s; do not use its people, places, colours or sound.
+Audio 1 is used only for the owner's voice quality, speaking rate and emotion (warm, dry, slightly husky); do not use its words.
+Audio 2 is used only for the shopper's inner-voice quality, speaking rate and emotion (soft, calm, close-mic); do not use its words.
+Audio 3 is used only for Scout's voice quality, speaking rate and emotion (calm, friendly, slightly processed) for all three Scout lines; do not use its words.
 
 【Subjects and Relationships】
-The shopper maps to Image 10 and wears the cream knit cardigan from Images 1 to 4; she stays in her own dark living room and never meets the owner. The owner maps to Image 9 and wears the rust knit sweater from Images 5 to 7; she stays in her candle studio. There is one Fig &amp; Cedar jar design throughout: a wide amber jar with a blank kraft label and three wicks. The grey tabby cat belongs to the shopper and appears only in her room. Scout is one small lime-green orb and first appears at 19s.
+There is one shopper (Image 10), one owner (Image 9), one grey tabby cat, one Fig &amp; Cedar jar and one Scout. The shopper wears the cream knit cardigan from Images 1 to 4; she stays in her own dark living room and never meets the owner. The owner wears the rust knit sweater from Images 5 to 7; she stays in her candle studio. The Fig &amp; Cedar jar is a wide amber jar with a blank kraft label and three wicks, only in the owner's studio; its photo also appears on the shopper's product page (Images 2 and 8). The grey tabby cat belongs to the shopper and appears only in her room. Scout is one small lime-green orb, first seen in Image 7 at 19s; it is the same orb that becomes the "o" in Video 1.
 
 【Event Script】
-0-3s (reference: Image 1): The shopper on her sofa, lamp and one candle lit, quiet house. Her cat walks along the back of the sofa. &lt;a ka-ching from a first notification on her laptop&gt; &lt;two soft mouse clicks&gt; Her lips stay closed.
-Shopper (V.O., inner voice, pleased, in English): {Ooh. Fig and Cedar.}
-3-6s (reference: Image 2): Hard cut over her shoulder to the laptop on her lap, the candle glowing on the side table. The cursor glides onto Add to cart and stops there.
-Shopper (V.O., inner voice, hesitant, in English): {Is this one safe for my cat?}
-6-9s (reference: Image 3): Slow push in on her face lit by the screen, lips closed, brows drawn; the cat sits behind her, out of focus.
-Shopper (V.O., inner voice, unsure, in English): {It doesn't say anywhere on the page.}
-9-11s (reference: Image 4): &lt;a click&gt; She closes the tab and lowers the laptop lid; the cat steps onto the cushion beside her. At the end the laptop is closed and nothing has been bought.
-Shopper (V.O., inner voice, soft sigh, in English): {Guess not.}
-11-13s (reference: Video 2, camera move only): High flip: the camera rises above her, flips over overhead and lands on the other side in the owner's candle studio. &lt;a fast whoosh&gt;
-13-16s (reference: Image 5): The owner leans into her laptop with a dry, puzzled squint, the Fig &amp; Cedar row outlined in red, the three-wick jar burning beside it.
-Owner (on screen, puzzled, in English): {Huh. I thought Fig and Cedar would sell way more.}
-16-19s (reference: Image 6): Close-up: she lifts the lit three-wick Fig &amp; Cedar jar in both hands and looks down at it; her small smile fades into a rueful press of the lips.
-Owner (on screen, resigned, quietly, in English): {Guess I'm discontinuing it.}
-19-22s (reference: Image 7): Scout pops up beside her, above the jar; she lifts her eyes to it, curious, her mouth naturally closed while Scout speaks.
-Scout (calm, kind, in English): {Don't guess. Ask them.}
-22-25s (reference: Image 8): Hard cut back to the shopper&#x27;s product page as it was a moment before she closed it, the cursor resting on Add to cart, a faint lime glow around it.
-Scout (off screen, warm, certain, in English): {She had one question. Nobody asked.}
-25-30s (reference: Video 1): The ending follows Video 1: Scout's talking orb on black, with Scout's line from it.
-Scout (calm, friendly, in English): {Scout interviews your shoppers for you. Get free early access.}
+0-3s (reference: Image 1) [Opening shot. Medium-wide, eye level, static with a gentle drift]: The shopper (Image 10) on her sofa, lamp and one candle lit, quiet house. Her grey tabby cat (as in Image 1) walks along the back of the sofa. &lt;a ka-ching from a first notification on her laptop&gt; &lt;two soft mouse clicks&gt; The shopper's (Image 10) lips stay closed.
+The shopper (Image 10), V.O., inner voice, in the voice of Audio 2, pleased, in English: {Ooh. Fig and Cedar.} At the end, she is looking at her laptop.
+3-6s (reference: Image 2) [Hard cut. Over-the-shoulder close, slow push toward the cursor]: Over the shopper's (Image 10) shoulder to the laptop on her lap, the candle glowing on the side table. The cursor glides onto Add to cart and stops there.
+The shopper (Image 10), V.O., inner voice, in the voice of Audio 2, hesitant, in English: {Is this one safe for my cat?} At the end, the cursor rests on Add to cart.
+6-9s (reference: Image 3) [Hard cut. Eyes in slow push: close-up, eye level, slow push in on the shopper's (Image 10) face, stopping before the eye]: The shopper's (Image 10) face lit by the screen, lips closed, brows drawn; the cat sits behind her, out of focus.
+The shopper (Image 10), V.O., inner voice, in the voice of Audio 2, unsure, in English: {It doesn't say anywhere on the page.} At the end, her brows are still drawn.
+9-11s (reference: Image 4) [Hard cut. Medium, eye level, static]: &lt;a click&gt; The shopper (Image 10) closes the tab and lowers the laptop lid; the cat steps onto the cushion beside her. At the end the laptop is closed and nothing has been bought.
+The shopper (Image 10), V.O., inner voice, in the voice of Audio 2, soft sigh, in English: {Guess not.}
+11-13s (reference: Video 2, camera move only) [High flip, the only non-cut transition: crane up and flip 180 degrees overhead]: The camera rises above the shopper (Image 10), flips over overhead and lands on the other side in the owner's candle studio. &lt;a fast whoosh&gt; At the end, the camera is level in the studio.
+13-16s (reference: Image 5) [Lands from the High flip. Medium close over the laptop, eye level, small push to the red row]: The owner (Image 9) leans into her laptop with a dry, puzzled squint, the Fig &amp; Cedar row outlined in red, the three-wick Fig &amp; Cedar jar (as in Image 5) burning beside it.
+The owner (Image 9), on screen, in the voice of Audio 1, puzzled, in English: {Huh. I thought Fig and Cedar would sell way more.} At the end, her eyes are on the red row.
+16-19s (reference: Image 6) [Hard cut. Close-up, eye level, static]: The owner (Image 9) lifts the lit three-wick Fig &amp; Cedar jar in both hands and looks down at it; her small smile fades into a rueful press of the lips.
+The owner (Image 9), on screen, in the voice of Audio 1, resigned, quietly, in English: {Guess I'm discontinuing it.} At the end, the lit jar is in both her hands.
+19-22s (reference: Image 7) [Hard cut, orb pops in. Close-up, eye level, tiny push as the orb rises]: Scout's lime-green orb (as in Image 7) pops up beside the owner (Image 9), above the jar; she lifts her eyes to it, curious, her mouth naturally closed while Scout speaks.
+Scout, from the orb, in the voice of Audio 3, calm, kind, in English: {Don't guess. Ask them.} At the end, she is looking at the orb.
+22-25s (reference: Image 8) [Hard cut back to the shopper's page. Insert on the shopper's laptop screen, static, faint lime glow]: The shopper's product page as it was a moment before she closed it, the cursor resting on Add to cart, a faint lime glow around it. No person is on screen.
+Scout, off screen, in the voice of Audio 3, warm, certain, in English: {She had one question. Nobody asked.} At the end, the cursor still rests on Add to cart.
+25-30s (reference: Video 1) [Hard cut. End screen, front, as Video 1]: Scout's orb becomes the "o" of the Scout wordmark on the end screen, following the picture of Video 1.
+Scout, off screen, in the voice of Audio 3, calm, friendly, in English: {Scout interviews your shoppers for you. Get free early access.}
 At the end, the last frame of Video 1 holds until 30s.
 
 【Maintain Consistency】
-Live action, real skin, warm low light: the shopper's room is dark with lamp and candle glow; the owner's studio is warm amber with shelves of lit candle jars. Hard cuts, a new visual every 2 to 3 seconds; the only transition is the high flip at 11s. Keep both women's identities, clothing and hair stable. The shopper's lips stay closed; we only hear her thoughts. Each spoken line finishes inside its own time range. Exactly three voices: the shopper's inner voice (Audio 2), the owner (Audio 1) and Scout (Audio 3). (Soft, warm piano music plays very low under speech, lifting a little at 25s) Generate dialogue strictly as written; do not add or remove lines. No subtitles appear on screen.
+Live action, real skin, warm low light: the shopper's room is dark with lamp and candle glow; the owner's studio is warm amber with shelves of lit candle jars. Hard cuts, a new visual every 2 to 3 seconds; the only transition is the High flip at 11s. Keep both women's identities, clothing and hair stable. The shopper's lips stay closed; we only hear her thoughts. Each spoken line finishes inside its own time range. Exactly three voices: the shopper's inner voice (Audio 2), the owner (Audio 1) and Scout (Audio 3). (Soft, warm piano music plays very low under speech, lifting a little at 25s) Generate dialogue strictly as written; do not add or remove lines. No subtitles appear on screen.
 </pre><textarea class="raw" id="rawpe" readonly aria-hidden="true">Use Images 1 to 8 in order as keyframes.
 
 【Generation Goal】
-Generate a quiet, warm, live-action story ad. At night a shopper on her sofa almost buys the Fig &amp; Cedar candle from Ember &amp; Fig but quietly gives up because the page never says whether it is safe for her cat; across town the owner, in her warm candle studio, reads the flat sales as nobody wanting it, until Scout, a small floating lime-green orb, stops her. Please note that this is not video editing.
+Generate a quiet, warm, live-action story ad. Please note that this is not video editing. At night a shopper on her sofa almost buys the Fig &amp; Cedar candle from Ember &amp; Fig but quietly gives up because the page never says whether it is safe for her cat; across town the owner, in her warm candle studio, reads the flat sales as nobody wanting it, until Scout, a small floating lime-green orb, stops her.
 
 【Reference Asset Roles】
-Images 1 to 8 are the keyframes, in that order. Each keyframe sets the composition, room, light, props and on-screen text of its own time range; the shot moves naturally from one keyframe to the next, with no static hold.
-Image 1 defines the first keyframe: the shopper on her sofa at night, the cat walking behind her.
-Image 2 defines the second keyframe: over her shoulder, the product page, cursor on Add to cart.
-Image 3 defines the third keyframe: her screen-lit face, lips closed.
-Image 4 defines the fourth keyframe: the lid lowered, the cat beside her.
-Image 5 defines the fifth keyframe: the owner at her laptop in her candle studio.
-Image 6 defines the sixth keyframe: the owner holding the lit jar.
-Image 7 defines the seventh keyframe: the same frame with Scout, the lime-green orb, beside her, above the jar.
-Image 8 defines the eighth keyframe: the product page close up, Add to cart glowing faintly lime.
-Image 9 is used for the owner's facial features and auburn side braid; do not use its background.
-Image 10 is used for the shopper's facial features and dark bob with bangs; do not use its background.
-Video 1 is used only for the content of the final shot at 25-30s, with Scout's line in it; before 25s, do not use its black background, wordmark or button.
-Video 2 is used only for the camera move of the high flip at 11-13s; do not use its people, places, colours or sound.
-Audio 1 is used only for the owner's voice quality, accent, speaking rate and emotion (a warm, dry, slightly husky American woman); do not use its words.
-Audio 2 is used only for the shopper's inner-voice quality, accent, speaking rate and emotion (a soft, calm young American woman, close-mic); do not use its words.
-Audio 3 is used only for Scout's voice quality, accent, speaking rate and emotion (calm, friendly, slightly processed) for his lines at 19-25s; do not use its words.
+Use Image 1 as the first frame.
+This first frame defines the shopper (Image 10) on her sofa at night in her dark living room, laptop on her lap, the lamp and one small candle lit, the grey tabby cat walking along the sofa back behind her, in a medium-wide shot at eye level.
+Image 2 defines the second keyframe: over the shopper's (Image 10) shoulder, the product page on her laptop, the cursor on Add to cart.
+Image 3 defines the third keyframe: the shopper's (Image 10) screen-lit face, lips closed, the cat out of focus behind her.
+Image 4 defines the fourth keyframe: the laptop lid lowered, the cat beside the shopper (Image 10).
+Image 5 defines the fifth keyframe: the owner (Image 9) at her laptop in her candle studio, the Fig &amp; Cedar row outlined in red, the lit three-wick jar beside it.
+Image 6 defines the sixth keyframe: the owner (Image 9) holding the lit three-wick jar in both hands.
+Image 7 defines the seventh keyframe: the same frame with Scout's lime-green orb beside the owner (Image 9), above the jar.
+Image 8 defines the eighth keyframe: the shopper's product page close up, Add to cart glowing faintly lime.
+Each keyframe sets the composition, room, light, props and on-screen text of its own time range; the film passes through Images 1 to 8 in order, cutting from one keyframe to the next as the Event Script says, with no static hold.
+Image 9 is used only for the owner's facial features and auburn side braid; do not use its background or pose.
+Image 10 is used only for the shopper's facial features and dark bob with bangs; do not use its background or its open mouth.
+Video 1 is used only for the picture of the final shot at 25-30s: the Scout wordmark whose "o" is the orb, the line under it and the button; do not use its sound, and show none of it before 25s.
+Video 2 is used only for the High flip camera move at 11-13s; do not use its people, places, colours or sound.
+Audio 1 is used only for the owner's voice quality, speaking rate and emotion (warm, dry, slightly husky); do not use its words.
+Audio 2 is used only for the shopper's inner-voice quality, speaking rate and emotion (soft, calm, close-mic); do not use its words.
+Audio 3 is used only for Scout's voice quality, speaking rate and emotion (calm, friendly, slightly processed) for all three Scout lines; do not use its words.
 
 【Subjects and Relationships】
-The shopper maps to Image 10 and wears the cream knit cardigan from Images 1 to 4; she stays in her own dark living room and never meets the owner. The owner maps to Image 9 and wears the rust knit sweater from Images 5 to 7; she stays in her candle studio. There is one Fig &amp; Cedar jar design throughout: a wide amber jar with a blank kraft label and three wicks. The grey tabby cat belongs to the shopper and appears only in her room. Scout is one small lime-green orb and first appears at 19s.
+There is one shopper (Image 10), one owner (Image 9), one grey tabby cat, one Fig &amp; Cedar jar and one Scout. The shopper wears the cream knit cardigan from Images 1 to 4; she stays in her own dark living room and never meets the owner. The owner wears the rust knit sweater from Images 5 to 7; she stays in her candle studio. The Fig &amp; Cedar jar is a wide amber jar with a blank kraft label and three wicks, only in the owner's studio; its photo also appears on the shopper's product page (Images 2 and 8). The grey tabby cat belongs to the shopper and appears only in her room. Scout is one small lime-green orb, first seen in Image 7 at 19s; it is the same orb that becomes the "o" in Video 1.
 
 【Event Script】
-0-3s (reference: Image 1): The shopper on her sofa, lamp and one candle lit, quiet house. Her cat walks along the back of the sofa. &lt;a ka-ching from a first notification on her laptop&gt; &lt;two soft mouse clicks&gt; Her lips stay closed.
-Shopper (V.O., inner voice, pleased, in English): {Ooh. Fig and Cedar.}
-3-6s (reference: Image 2): Hard cut over her shoulder to the laptop on her lap, the candle glowing on the side table. The cursor glides onto Add to cart and stops there.
-Shopper (V.O., inner voice, hesitant, in English): {Is this one safe for my cat?}
-6-9s (reference: Image 3): Slow push in on her face lit by the screen, lips closed, brows drawn; the cat sits behind her, out of focus.
-Shopper (V.O., inner voice, unsure, in English): {It doesn't say anywhere on the page.}
-9-11s (reference: Image 4): &lt;a click&gt; She closes the tab and lowers the laptop lid; the cat steps onto the cushion beside her. At the end the laptop is closed and nothing has been bought.
-Shopper (V.O., inner voice, soft sigh, in English): {Guess not.}
-11-13s (reference: Video 2, camera move only): High flip: the camera rises above her, flips over overhead and lands on the other side in the owner's candle studio. &lt;a fast whoosh&gt;
-13-16s (reference: Image 5): The owner leans into her laptop with a dry, puzzled squint, the Fig &amp; Cedar row outlined in red, the three-wick jar burning beside it.
-Owner (on screen, puzzled, in English): {Huh. I thought Fig and Cedar would sell way more.}
-16-19s (reference: Image 6): Close-up: she lifts the lit three-wick Fig &amp; Cedar jar in both hands and looks down at it; her small smile fades into a rueful press of the lips.
-Owner (on screen, resigned, quietly, in English): {Guess I'm discontinuing it.}
-19-22s (reference: Image 7): Scout pops up beside her, above the jar; she lifts her eyes to it, curious, her mouth naturally closed while Scout speaks.
-Scout (calm, kind, in English): {Don't guess. Ask them.}
-22-25s (reference: Image 8): Hard cut back to the shopper&#x27;s product page as it was a moment before she closed it, the cursor resting on Add to cart, a faint lime glow around it.
-Scout (off screen, warm, certain, in English): {She had one question. Nobody asked.}
-25-30s (reference: Video 1): The ending follows Video 1: Scout's talking orb on black, with Scout's line from it.
-Scout (calm, friendly, in English): {Scout interviews your shoppers for you. Get free early access.}
+0-3s (reference: Image 1) [Opening shot. Medium-wide, eye level, static with a gentle drift]: The shopper (Image 10) on her sofa, lamp and one candle lit, quiet house. Her grey tabby cat (as in Image 1) walks along the back of the sofa. &lt;a ka-ching from a first notification on her laptop&gt; &lt;two soft mouse clicks&gt; The shopper's (Image 10) lips stay closed.
+The shopper (Image 10), V.O., inner voice, in the voice of Audio 2, pleased, in English: {Ooh. Fig and Cedar.} At the end, she is looking at her laptop.
+3-6s (reference: Image 2) [Hard cut. Over-the-shoulder close, slow push toward the cursor]: Over the shopper's (Image 10) shoulder to the laptop on her lap, the candle glowing on the side table. The cursor glides onto Add to cart and stops there.
+The shopper (Image 10), V.O., inner voice, in the voice of Audio 2, hesitant, in English: {Is this one safe for my cat?} At the end, the cursor rests on Add to cart.
+6-9s (reference: Image 3) [Hard cut. Eyes in slow push: close-up, eye level, slow push in on the shopper's (Image 10) face, stopping before the eye]: The shopper's (Image 10) face lit by the screen, lips closed, brows drawn; the cat sits behind her, out of focus.
+The shopper (Image 10), V.O., inner voice, in the voice of Audio 2, unsure, in English: {It doesn't say anywhere on the page.} At the end, her brows are still drawn.
+9-11s (reference: Image 4) [Hard cut. Medium, eye level, static]: &lt;a click&gt; The shopper (Image 10) closes the tab and lowers the laptop lid; the cat steps onto the cushion beside her. At the end the laptop is closed and nothing has been bought.
+The shopper (Image 10), V.O., inner voice, in the voice of Audio 2, soft sigh, in English: {Guess not.}
+11-13s (reference: Video 2, camera move only) [High flip, the only non-cut transition: crane up and flip 180 degrees overhead]: The camera rises above the shopper (Image 10), flips over overhead and lands on the other side in the owner's candle studio. &lt;a fast whoosh&gt; At the end, the camera is level in the studio.
+13-16s (reference: Image 5) [Lands from the High flip. Medium close over the laptop, eye level, small push to the red row]: The owner (Image 9) leans into her laptop with a dry, puzzled squint, the Fig &amp; Cedar row outlined in red, the three-wick Fig &amp; Cedar jar (as in Image 5) burning beside it.
+The owner (Image 9), on screen, in the voice of Audio 1, puzzled, in English: {Huh. I thought Fig and Cedar would sell way more.} At the end, her eyes are on the red row.
+16-19s (reference: Image 6) [Hard cut. Close-up, eye level, static]: The owner (Image 9) lifts the lit three-wick Fig &amp; Cedar jar in both hands and looks down at it; her small smile fades into a rueful press of the lips.
+The owner (Image 9), on screen, in the voice of Audio 1, resigned, quietly, in English: {Guess I'm discontinuing it.} At the end, the lit jar is in both her hands.
+19-22s (reference: Image 7) [Hard cut, orb pops in. Close-up, eye level, tiny push as the orb rises]: Scout's lime-green orb (as in Image 7) pops up beside the owner (Image 9), above the jar; she lifts her eyes to it, curious, her mouth naturally closed while Scout speaks.
+Scout, from the orb, in the voice of Audio 3, calm, kind, in English: {Don't guess. Ask them.} At the end, she is looking at the orb.
+22-25s (reference: Image 8) [Hard cut back to the shopper's page. Insert on the shopper's laptop screen, static, faint lime glow]: The shopper's product page as it was a moment before she closed it, the cursor resting on Add to cart, a faint lime glow around it. No person is on screen.
+Scout, off screen, in the voice of Audio 3, warm, certain, in English: {She had one question. Nobody asked.} At the end, the cursor still rests on Add to cart.
+25-30s (reference: Video 1) [Hard cut. End screen, front, as Video 1]: Scout's orb becomes the "o" of the Scout wordmark on the end screen, following the picture of Video 1.
+Scout, off screen, in the voice of Audio 3, calm, friendly, in English: {Scout interviews your shoppers for you. Get free early access.}
 At the end, the last frame of Video 1 holds until 30s.
 
 【Maintain Consistency】
-Live action, real skin, warm low light: the shopper's room is dark with lamp and candle glow; the owner's studio is warm amber with shelves of lit candle jars. Hard cuts, a new visual every 2 to 3 seconds; the only transition is the high flip at 11s. Keep both women's identities, clothing and hair stable. The shopper's lips stay closed; we only hear her thoughts. Each spoken line finishes inside its own time range. Exactly three voices: the shopper's inner voice (Audio 2), the owner (Audio 1) and Scout (Audio 3). (Soft, warm piano music plays very low under speech, lifting a little at 25s) Generate dialogue strictly as written; do not add or remove lines. No subtitles appear on screen.
+Live action, real skin, warm low light: the shopper's room is dark with lamp and candle glow; the owner's studio is warm amber with shelves of lit candle jars. Hard cuts, a new visual every 2 to 3 seconds; the only transition is the High flip at 11s. Keep both women's identities, clothing and hair stable. The shopper's lips stay closed; we only hear her thoughts. Each spoken line finishes inside its own time range. Exactly three voices: the shopper's inner voice (Audio 2), the owner (Audio 1) and Scout (Audio 3). (Soft, warm piano music plays very low under speech, lifting a little at 25s) Generate dialogue strictly as written; do not add or remove lines. No subtitles appear on screen.
 </textarea></div>
 </div>
 
 <section id="eval"><h2 style="margin-top:0">Eval</h2>
+<p><b>Nov 15 · sd25-pe check (<a href="SD25-CHECK.md">SD25-CHECK.md</a>):</b> pass 1 found 6 FAILs (Video 1 still carried Scout's voice; no "Use Image 1 as the first frame."; an "American" accent added to two voices; shots named no actor with a face image; the gate line out of place; the Eyes in move not named). All fixed: Video 1 is the picture only, Audio 3 is Scout for all three lines, the first-frame sentence is in, the accent is gone, and every keyframe and shot says "the shopper (Image 10)" or "the owner (Image 9)" with its move (Eyes in, High flip). After independent check 1, pass 3 also added an end state and a voice binding to every line; final pass: zero FAILs. The compile (B) is now 1,534 words. Same 15 uploads, spoken lines unchanged, 0 credits.</p>
 <p><b>Independent judge, before round 2:</b></p>
 <div class="input" style="margin:8px 0 14px"><span class="pill">Goal <b>8</b></span><span class="pill">Guide <b>8</b></span><span class="pill">Story <b>8.5</b></span><span class="pill">Craft <b>6.5</b></span><span class="pill cost">Overall <b>7.5</b></span></div>
 <p><b>Judge's verdict (round 1):</b> a strong keyframe pitch that follows the rules, but the stills needed fixing before any render: garbled product-page text, Image 2 on a desk instead of the sofa, a four-wick jar in Image 5, a rising chart behind the "flat sales" owner, no lime glow in Image 8, and parted lips in Image 3 under the V.O. "Regenerate KF2/KF8, KF3, KF5 and KF6/KF7, and make the four small prompt edits; it should then be ready for Emile's go."</p>
