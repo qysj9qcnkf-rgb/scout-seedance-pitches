@@ -1,0 +1,23 @@
+# H241 asset list: Render · Cat-candle ad · B line-art storyboard, take 3 DRAFT (Emile Nov 15 5:14 PM ET). NOT GATED: Emile picks the co-founder voice first.
+# Prompt: /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/prompt-sd25pe-final.txt (sha256 55fb9b42e6d534e003a759b6a7a23cdeaca573e371c19b19369721b837461386; 1000 words)
+# Take 3 change: flip switches mood (her calm piano -> their hype beat), both "Damn, what's going on with Fig and Cedar?", his cocky line, her "Damn, you just know things.", delete, blow-out + lesson, end screen. Products-list still dropped (the delete view shows the real admin).
+# Upload in this order. Job: seedance_2_5, 30 s, 9:16, audio on (job settings, not in the prompt).
+# role | Higgsfield media id | absolute local file | what
+@Image1 | 9a3fe3c5-5c7d-4e21-a0ad-60bd5b95b0b1 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/storyboard.png | 12-panel line-art storyboard, take 3: P7 both from above, P8 both lean in hyped, P9 him cocky, P10 her impressed, P11 cursor on red X (take-2 P10 renumbered), P12 blow-out (take-2 P11 renumbered); P1-P6 unchanged
+@Image2 | d54d8df5-566f-400d-823a-fd87b64a0831 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/shopper-face.jpg | shopper face
+@Image3 | f11fa295-b91d-4edd-b9bf-d492d8480d83 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/apartment-candles-v2.jpg | shopper apartment v2
+@Image4 | 0d34de38-32c9-4f5d-b6a4-c7fad6a4e72a | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/product-page.jpg | Fig & Cedar product page
+@Image5 | 696c034b-34ca-4b95-8f62-382f22de2f6f | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/cat.jpg | grey tabby cat
+@Image6 | e97f42b3-72fd-40eb-9870-d62c95007272 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/owner.jpg | owner face
+@Image7 | 6ef49b80-0973-487e-a2ee-ed3bec6011ee | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/studio-plate.jpg | studio
+@Image8 | 03e0d622-ebdd-4079-abd0-91ed67a4150e | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/admin-delete-x.jpg | store admin, Fig & Cedar 212 in stock / 3 sales, red X + cursor (HTML, free)
+@Image9 | c5135236-2310-4800-baeb-f427f0bd4be9 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/fig-cedar-jar.jpg | the one Fig & Cedar jar
+@Image10 | 4f56e950-cdeb-4549-9d67-8dfe39b94d1a | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/cofounder.jpg | co-founder face (Soul 2, take 2)
+@Video1 | d44455fb-e7cc-46cf-9d86-641fe8304b97 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/video1-high-flip.mp4 | High flip camera move only, 5.0 s
+@Video2 | 48682b82-6201-4336-a42d-599ec57bd765 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/h158-end.mp4 | end screen picture only, 4.5 s
+@Audio1 | 6ee138f2-80a3-4b4b-afb4-c218bd195ea5 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/voice-serene-7s.mp3 | shopper timbre, 7.60 s
+@Audio2 | 304653bb-2310-4d21-90d4-c32b92477717 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/voice-alexandra-9s.mp3 | owner timbre, 9.20 s
+@Audio3 | 1040c108-8833-40b5-a3f0-943deab45436 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/voice-scout.mp3 | Scout timbre, 4.50 s
+@Audio4 | EMILE PICKS ONE: A 360ec129-5c4b-470e-9dc3-8a3a7f86067c (/Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/voice-option-a-kevin.mp3, 3.12 s) · B 6e573b3a-3251-4c72-83c2-e82a46499925 (/Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/voice-option-b-mark.mp3, 3.20 s) · C 69760016-d8d4-4afd-9016-52ee5e249a1d (/Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/voice-option-c-gideon.mp3, 4.32 s) | co-founder timbre; ElevenLabs via Higgsfield text2speech_v2, 0.3 cr each, each says his line (Deepgram-verified)
+# Totals: 10 images, 2 videos (9.5 s), 4 audio (24.4-25.6 s depending on the pick), 16 uploads. Unused assets: none.
+# CDN bytes = local for every id (sha256, Nov 15 ~5:25 PM ET).

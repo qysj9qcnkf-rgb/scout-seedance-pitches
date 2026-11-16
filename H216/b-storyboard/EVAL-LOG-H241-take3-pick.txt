@@ -1,0 +1,1 @@
+EVAL LOG H241 take-3 pick page (Nov 15 ~5:30 PM ET): one fresh-context headless muted check at 1440/390 PASS on recheck: 'For you to pick' first on the page with the duo still, 3 voice players (no autoplay, Deepgram hears the line in each), 12-panel storyboard matching the beats; shot list/prompt lines match; 36 links 200; no console errors; no overflow at 390.

@@ -1,0 +1,43 @@
+【Generation Goal】
+Generate a photoreal story in the storyboard's order (@Image1). A cat lady almost buys the Fig & Cedar candle, but its page never says whether it is safe for cats, so she leaves. The owner and her co-founder see only the missing sales; he confidently, wrongly concludes customers don't want Fig & Cedar, she is impressed, and they delete it from their store.
+
+【Reference Asset Roles】
+@Image1 is a 12-panel storyboard giving the shot order and rough compositions; read it left to right, top to bottom; the end screen has no panel; do not adopt its line-art style, white background, panel numbers or drawn faces.
+The shopper maps to @Image2; use only her face, dark bob with bangs and cream knit cardigan.
+The shopper's apartment references @Image3; use only the room, sofa and lit white candles, not the closed laptop on the stool.
+The shopper's laptop screen references @Image4, the product page.
+The grey tabby cat maps to @Image5; use only the cat.
+The owner maps to @Image6; use only her face, auburn side braid and rust knit sweater.
+The studio references @Image7; use only its brick wall, shelving, desk, laptop and amber light, not its jars, plate or blurred screen.
+The store admin references @Image8, only on the laptop screen, never as an overlay.
+The Fig & Cedar jar maps to @Image9; use only the amber jar, blank kraft label and three wicks, not the leaves or cloth.
+The co-founder maps to @Image10; use only his face, short fade, beard, charcoal sweater, not the background.
+@Video1 gives only the High flip camera move, not its people, chair, table, colours or pacing.
+The end screen maps to @Video2; use only its picture, not its sound, words or pacing.
+@Audio1 gives only the shopper's voice timbre, not its words or pacing.
+@Audio2 gives only the owner's voice timbre, not its words or pacing.
+@Audio3 gives only Scout's voice timbre, not its words or pacing.
+@Audio4 gives only the co-founder's voice timbre, not its words or pacing.
+
+【Subjects and Relationships】
+The shopper (@Image2) and her cat (@Image5) stay in her apartment (@Image3), whose candles are only white pillars and tea lights, never amber jars. The owner (@Image6) and her co-founder (@Image10) share one laptop at the studio desk (@Image7) with the one amber three-wick Fig & Cedar jar (@Image9).
+
+【Shots】
+0-3s · Panel 1 [Opening shot. Wide, slow arc toward her]: Dozens of lit white pillar candles and tea lights fill the apartment (@Image3) at night; the shopper (@Image2) sits on the sofa, laptop on her lap, the cat (@Image5) curled beside her. At the end, it is closer on her.
+3-5s · Panel 2 [Hard cut. Over her shoulder]: The shopper's (@Image2) fingers scroll the Fig & Cedar page (@Image4) down, then back up; no click.
+5-8s · Panel 3 [Hard cut. Close-up, the camera slowly circles around her face]: The shopper (@Image2), lips closed in the screen glow, the cat (@Image5) soft behind her in the apartment (@Image3). The shopper (@Image2), in English, inner voice-over, in the voice of @Audio1, lips closed, wondering: {Are these safe for cats?}
+8-10s · Panel 4 [Hard cut. Medium close-up, locked]: The shopper (@Image2) scrolls the page (@Image4) faster up and down, finds nothing about pets; jaw tight, a sharp exhale through her nose <a short sharp exhale>, she rubs her brow. Silent.
+10-13s · Panel 5 [Hard cut. Medium, eye level]: The shopper (@Image2) closes the site to an empty browser, leans back and looks at the cat (@Image5). The shopper (@Image2), in English, inner voice-over, in the voice of @Audio1, lips closed, flat: {I guess we'll never know.}
+13-15s · Panels 6-7 [High flip, the camera move of @Video1; Panel 6 at 13-14s, Panel 7 at 14-15s]: The camera rises over the shopper (@Image2) on her sofa in the apartment (@Image3) until it looks straight down, the back of the sofa sweeps across the frame as the view flips, and it comes out level on the owner (@Image6) and the co-founder (@Image10) at their desk in the studio (@Image7).
+15-18s · Panel 8 [Hard cut. Medium two-shot, facing them across the desk]: The owner (@Image6) and the co-founder (@Image10) lean in toward the laptop, wide-eyed. The owner (@Image6) and the co-founder (@Image10), in English, on camera, together, in the voices of @Audio2 and @Audio4, hyped: {Damn, what's going on with Fig and Cedar?}
+18-21s · Panel 9 [Hard cut. Medium close-up on the co-founder]: The co-founder (@Image10) leans back, arms crossed, cocky grin; the owner (@Image6) turns to him, lips closed. The co-founder (@Image10), in English, on camera, lips moving, in the voice of @Audio4, cool, cocky, a little street: {Yeah, I told you. Customers just aren't into Fig and Cedar.}
+21-23s · Panel 10 [Hard cut. Medium close-up on the owner]: The owner (@Image6) turns to him, hand on her chest, amazed; the co-founder (@Image10) smirks, lips closed. The owner (@Image6), in English, on camera, lips moving, in the voice of @Audio2, deeply impressed: {Damn, you just know things.}
+23-24s · Panel 11 [Hard cut. Over the owner's shoulder onto the laptop]: Her cursor clicks the red X on the Fig & Cedar row (@Image8) <click>; the row disappears.
+24-27s · Panel 12 [Hard cut. Close-up, locked]: The owner (@Image6) leans in and blows out the jar (@Image9) <a soft breath>; the three flames go out and the wicks smoke. Scout, in English, off screen, in the voice of @Audio3, calm: {Don't guess why your shoppers don't buy.}
+27-30s · End screen [Hard cut, as @Video2]: Scout, in English, off screen, in the voice of @Audio3, warm: {Scout interviews your shoppers for you. Get free early access.} At the end, the end screen holds.
+
+【Style and Sound】
+No ka-ching, no cart sound, no Add-to-cart click. (Soft piano under the shopper's scenes; at the High flip it switches to a punchy, upbeat beat.) No subtitles.
+
+【Maintain Consistency】
+Keep the shopper (@Image2), owner (@Image6), co-founder (@Image10), their clothing and rooms stable.

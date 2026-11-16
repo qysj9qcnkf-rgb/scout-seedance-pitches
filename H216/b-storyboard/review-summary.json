@@ -1,167 +1,87 @@
 {
- "title": "Line-art storyboard · the cat question",
- "technique": "One 12-panel line-art storyboard sets every shot's order and framing; separate photos give the faces, rooms and props; words add the voices.",
+ "title": "Owner half · the co-founders (plugs into the keeper intro)",
+ "technique": "The keeper intro (H240 take 2, 0-15 s) is never re-rendered. One 15 s owner-only take starts from its last frame, follows a 5-panel line-art storyboard, and is stitched on for free; tags and music go in the edit.",
  "story": [
-  "At night a cat lady sits on her sofa, candles burning all over her apartment, her cat beside her.",
-  "She scrolls the Fig & Cedar product page up and down, searching. She does not buy.",
-  "Inner voice, lips closed, the camera circling her: “Are these safe for cats?”",
-  "She finds nothing, gets annoyed (shown only) and closes the site: “I guess we'll never know.”",
-  "High flip: the mood switches from her calm (soft piano) to their hype. The owner and her co-founder lean into the laptop together: “Damn, what's going on with Fig and Cedar?” He leans back, cocky: “Yeah, I told you. Customers just aren't into Fig and Cedar.” She, impressed, as if he's a visionary: “Damn, you just know things.” She clicks the red X and deletes Fig & Cedar, then blows out the candle.",
-  "Scout, over the smoke: “Don't guess why your shoppers don't buy.” End screen: “Scout interviews your shoppers for you. Get free early access.”"
+  "0-15 s · Keeper intro (H240 take 2, unchanged): the cat lady can't find whether Fig & Cedar is safe for cats and leaves; the High flip lands on the owner at her desk.",
+  "15-18 s · The camera pulls back: her co-founder sits beside her. She, quiet and sad, almost to herself: “Damn... what's going on with Fig and Cedar?”",
+  "18-21 s · He leans back, arms crossed, cocky: “Yeah, I told you. Customers just aren't into Fig and Cedar.”",
+  "21-23 s · She, amazed, hand on her chest: “Damn, you just know things.” CEO and VISIONARY tags pop on them (in the edit).",
+  "23-24 s · She clicks the red X: Fig & Cedar is deleted. 24-27 s · She blows out the candle; Scout: “Don't guess why your shoppers don't buy.”",
+  "27-30 s · End screen: “Scout interviews your shoppers for you. Get free early access.”"
  ],
  "shots": [
   {
    "t": "0-3s",
-   "who": "Shopper, Cat",
-   "what": "Wide: candle-filled apartment at night; she sits on the sofa with her laptop, the cat curled beside her; slow arc in.",
+   "who": "Owner, Co-founder",
+   "what": "Panel 1. From the intro's last frame, the camera pulls back into a two-shot revealing him beside her; she slumps, chin in hand, staring sadly at the laptop; he sits relaxed. (Ad time 15-18 s.)",
+   "line": "Damn... what's going on with Fig and Cedar?",
+   "speaker": "Owner (on camera, quiet, sad)",
+   "assets": [
+    "image1",
+    "image2",
+    "image3",
+    "image4",
+    "audio1"
+   ]
+  },
+  {
+   "t": "3-6s",
+   "who": "Co-founder, Owner",
+   "what": "Panel 2. Hard cut, on him: leans back, arms crossed, cocky grin; she turns to him, lips closed. (18-21 s.)",
+   "line": "Yeah, I told you. Customers just aren't into Fig and Cedar.",
+   "speaker": "Co-founder (on camera)",
+   "assets": [
+    "image2",
+    "image4",
+    "image3",
+    "audio2"
+   ]
+  },
+  {
+   "t": "6-8s",
+   "who": "Owner, Co-founder",
+   "what": "Panel 3. Hard cut, on her: hand on her chest, amazed; he smirks, lips closed. CEO / VISIONARY tags added in the edit. (21-23 s.)",
+   "line": "Damn, you just know things.",
+   "speaker": "Owner (on camera)",
+   "assets": [
+    "image2",
+    "image3",
+    "image4",
+    "audio1"
+   ]
+  },
+  {
+   "t": "8-9s",
+   "who": "Owner (cursor)",
+   "what": "Panel 4. Hard cut, over her shoulder: her cursor clicks the red X on Fig & Cedar (212 in stock, 3 sales); the row disappears. (23-24 s.)",
    "line": "",
    "speaker": "",
    "assets": [
-    "image1",
     "image2",
     "image3",
     "image5"
    ]
   },
   {
-   "t": "3-5s",
-   "who": "Shopper",
-   "what": "Hard cut, over her shoulder: her fingers scroll the Fig & Cedar page down, then back up. No click.",
-   "line": "",
-   "speaker": "",
-   "assets": [
-    "image1",
-    "image2",
-    "image4"
-   ]
-  },
-  {
-   "t": "5-8s",
-   "who": "Shopper, Cat",
-   "what": "Hard cut, close-up, camera circles her face; lips closed; cat soft behind.",
-   "line": "Are these safe for cats?",
-   "speaker": "Shopper (inner voice)",
-   "assets": [
-    "image1",
-    "image2",
-    "image5",
-    "image3",
-    "audio1"
-   ]
-  },
-  {
-   "t": "8-10s",
-   "who": "Shopper",
-   "what": "Hard cut: she scrolls faster, finds nothing about pets; jaw tight, sharp exhale, rubs her brow. Silent.",
-   "line": "",
-   "speaker": "",
-   "assets": [
-    "image1",
-    "image2",
-    "image4"
-   ]
-  },
-  {
-   "t": "10-13s",
-   "who": "Shopper, Cat",
-   "what": "Hard cut: she closes the site, leans back, looks at the cat.",
-   "line": "I guess we'll never know.",
-   "speaker": "Shopper (inner voice)",
-   "assets": [
-    "image1",
-    "image2",
-    "image5",
-    "audio1"
-   ]
-  },
-  {
-   "t": "13-15s",
-   "who": "Shopper → Owner, Co-founder",
-   "what": "High flip: camera rises over her to straight down, the sofa back sweeps across as the view flips, and it comes out level on the owner and her co-founder at their desk. Music switches from her soft piano to their upbeat beat.",
-   "line": "",
-   "speaker": "",
-   "assets": [
-    "image1",
-    "image2",
-    "video1",
-    "image6",
-    "image10",
-    "image7"
-   ]
-  },
-  {
-   "t": "15-18s",
-   "who": "Owner, Co-founder",
-   "what": "Panel 8. Hard cut, two-shot facing them: both lean in toward the laptop, wide-eyed, intense.",
-   "line": "Damn, what's going on with Fig and Cedar?",
-   "speaker": "Owner + Co-founder together (on camera)",
-   "assets": [
-    "image1",
-    "image6",
-    "image10",
-    "audio2",
-    "audio4"
-   ]
-  },
-  {
-   "t": "18-21s",
-   "who": "Co-founder, Owner",
-   "what": "Panel 9. Hard cut, on him: leans back, arms crossed, cocky grin; she turns to him, lips closed.",
-   "line": "Yeah, I told you. Customers just aren't into Fig and Cedar.",
-   "speaker": "Co-founder (on camera)",
-   "assets": [
-    "image1",
-    "image10",
-    "image6",
-    "audio4"
-   ]
-  },
-  {
-   "t": "21-23s",
-   "who": "Owner, Co-founder",
-   "what": "Panel 10. Hard cut, on her: hand on her chest, amazed, as if he were a visionary; he smirks, lips closed.",
-   "line": "Damn, you just know things.",
-   "speaker": "Owner (on camera)",
-   "assets": [
-    "image1",
-    "image6",
-    "image10",
-    "audio2"
-   ]
-  },
-  {
-   "t": "23-24s",
-   "who": "Owner (cursor)",
-   "what": "Panel 11. Hard cut, over her shoulder onto the laptop: her cursor clicks the red X on the Fig & Cedar row (212 in stock, 3 sales); the row disappears.",
-   "line": "",
-   "speaker": "",
-   "assets": [
-    "image1",
-    "image6",
-    "image8"
-   ]
-  },
-  {
-   "t": "24-27s",
+   "t": "9-12s",
    "who": "Owner",
-   "what": "Panel 12. Close-up: she blows out the jar; flames out, wicks smoke.",
+   "what": "Panel 5. Close-up: she blows out the jar; the wicks smoke. (24-27 s.)",
    "line": "Don't guess why your shoppers don't buy.",
    "speaker": "Scout (off screen)",
    "assets": [
-    "image1",
-    "image6",
-    "image9",
+    "image2",
+    "image3",
     "audio3"
    ]
   },
   {
-   "t": "27-30s",
+   "t": "12-15s",
    "who": "End screen",
-   "what": "Hard cut to the H158 end screen.",
+   "what": "Hard cut to the H158 end screen. (27-30 s.)",
    "line": "Scout interviews your shoppers for you. Get free early access.",
    "speaker": "Scout (off screen)",
    "assets": [
-    "video2",
+    "video1",
     "audio3"
    ]
   }
