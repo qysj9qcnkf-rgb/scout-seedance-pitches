@@ -1,0 +1,26 @@
+【Reference Asset Roles】
+@Image1 is the first frame: the last frame of the keeper intro (the owner alone at her desk after the High flip).
+@Image2 is a 5-panel line-art storyboard for the owner half: shot order only, not its style.
+@Image3 is the owner (the same image the intro used). @Image4 is the co-founder.
+@Image5 is the store admin with the red X on Fig & Cedar (212 in stock, 3 sales), only on the laptop screen.
+@Video1 is the end screen picture. @Audio1, @Audio2, @Audio3: voice timbre only for the owner, the co-founder and Scout.
+
+【Generation Goal】
+Second half of the cat-candle story, picking up right where the intro lands: the owner and her co-founder see only the missing sales; he is sure customers don't want Fig & Cedar, she is impressed, they delete it. Scout: don't guess.
+
+【Shots】
+0-3s: [Panel 1, from the first frame, pull back to reveal him beside her] She slumps, chin in hand, staring at the laptop.
+Owner (quiet, sad, almost to herself): {Damn... what's going on with Fig and Cedar?}
+3-6s: [Panel 2, hard cut, on him] Leans back, arms crossed, cocky grin; she turns to him.
+Co-founder (cool, cocky, a little street): {Yeah, I told you. Customers just aren't into Fig and Cedar.}
+6-8s: [Panel 3, hard cut, on her] Hand on her chest, amazed; he smirks.
+Owner (deeply impressed): {Damn, you just know things.}
+(In the edit: CEO tag on her, VISIONARY tag on him.)
+8-9s: [Panel 4, hard cut, over her shoulder] Her cursor clicks the red X on Fig & Cedar <click>; the row disappears.
+9-12s: [Panel 5, hard cut, close-up] She blows out the jar <a soft breath>; the wicks smoke.
+Scout (off screen, calm): {Don't guess why your shoppers don't buy.}
+12-15s: [End screen, as @Video1]
+Scout (off screen, warm): {Scout interviews your shoppers for you. Get free early access.}
+
+【Style and Sound】
+Photoreal, warm studio light as in the first frame. No music in the render (Emile's chosen bed goes in the edit). No subtitles.
