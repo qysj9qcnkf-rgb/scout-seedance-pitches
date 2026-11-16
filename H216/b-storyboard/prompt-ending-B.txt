@@ -4,14 +4,14 @@ Use @Image1 as the first frame.
 This first frame defines the studio, the owner at her desk, her laptop, the lit amber Fig & Cedar jar, the shelves and the camera direction at the start.
 
 【Reference Asset Roles】
-@Image2 is a 5-panel storyboard giving the shot order, camera angles and rough compositions; read it left to right, top to bottom; the end screen has no panel; do not adopt its line-art style, white background, panel numbers or drawn faces.
+@Image2 is a 5-panel storyboard giving the shot order, camera angles and rough compositions; read it left to right, top to bottom; the end screen has no panel; do not adopt its line-art style, white background, panel numbers, drawn faces or drawn room and props; the room, desk and jar come from @Image1.
 The owner maps to @Image3; use only her face, auburn side braid and rust knit sweater, not the background.
 The co-founder maps to @Image4; use only his face, short fade, beard and charcoal sweater, not the background.
 The owner's name badge maps to @Image5; she wears it pinned on her sweater throughout, not the grey background.
 The co-founder's name badge maps to @Image6; he wears it pinned on his sweater throughout, not the grey background.
 The small dog maps to @Image7; use only the dog, not the room.
 The store admin references @Image8, only on the laptop screen, never as an overlay.
-The end screen maps to @Video1; use only its picture, not its sound, words or pacing.
+The end screen maps to @Video1; use only its picture, not its sound, spoken words or pacing.
 @Audio1 gives only the owner's voice timbre, not its words or pacing.
 @Audio2 gives only the co-founder's voice timbre, not its words or pacing.
 @Audio3 gives only Scout's voice timbre, not its words or pacing.
@@ -24,7 +24,7 @@ The owner (@Image3) and her co-founder (@Image4) share the one desk, laptop and 
 3-6s · Panel 2 [Hard cut. Low angle from desk height, looking up at him]: The co-founder (@Image4) stays seated and leans back in his chair, arms crossed, chin slightly up, a small cocky half-smile; the owner (@Image3) turns to him, lips closed. The co-founder (@Image4), in English, on camera, lips moving, in the voice of @Audio2, casually sure of himself: {Yeah, I told you. Customers just aren't into Fig and Cedar.}
 6-8s · Panel 3 [Hard cut. Close-up on the owner, three-quarter view]: The owner (@Image3) gives a small, quietly impressed smile, eyebrows slightly raised, her name badge at the bottom of the frame. The owner (@Image3), in English, on camera, lips moving, in the voice of @Audio1, softly impressed: {Damn, you just know things.}
 8-9s · Panel 4 [Hard cut. Overhead, straight down onto the desk]: Her cursor clicks the red X on the Fig & Cedar row (@Image8) <click>; the row disappears.
-9-12s · Panel 5 [Hard cut. Close shot at table height]: The owner (@Image3) leans in and blows out the jar <a soft breath>; the three flames go out and the wicks smoke while the dog (@Image7) trots across the floor behind the desk. Scout, in English, off screen, in the voice of @Audio3, calm: {Don't guess why your shoppers don't buy.}
+9-12s · Panel 5 [Hard cut. Close shot at table height]: The owner (@Image3) leans in and blows out the jar <a soft breath>; the three flames go out and the wicks smoke while the dog (@Image7) trots across the floor behind the desk; the co-founder (@Image4) sits beside her again, lips closed. Scout, in English, off screen, in the voice of @Audio3, calm: {Don't guess why your shoppers don't buy.}
 12-15s · End screen [Hard cut, as @Video1]: Scout, in English, off screen, in the voice of @Audio3, warm: {Scout interviews your shoppers for you. Get free early access.} At the end, the end screen holds.
 
 【Style and Sound】

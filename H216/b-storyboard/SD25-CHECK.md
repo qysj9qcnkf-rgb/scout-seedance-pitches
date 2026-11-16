@@ -1,6 +1,6 @@
 # SD25-CHECK · H241 take 5 · OWNER HALF (15-30 s of the ad) · two endings, first-frame continuation of the keeper intro
 
-Prompts checked: `prompt-ending-A.txt` (gated; = `prompt-sd25pe-final.txt`; 724 words; sha256 `27f4b9c2766ec978d49ebd9cd82e83354bfcc76960f35541bd23d13977c55d59`) and `prompt-ending-B.txt` (alternative; 721 words; sha256 `6baa1502d6b6224fe70820a88675c9a9caf45ebcc74cffc6934b71a9a2a9adf6`). They differ only in line 24 (Panel 2). Asset lists: `H241-assets-ending-A.txt` (= `H241-assets.txt`) and `H241-assets-ending-B.txt`, 12 uploads each, identical except @Image2 (storyboard A f085ba75 / B 6bafbb07).
+Prompts checked: `prompt-ending-A.txt` (gated; = `prompt-sd25pe-final.txt`; 746 words; sha256 `a37dc6cc3017284303f4140b47db3c96a9451a84aac0df0b826c6dadac394416`) and `prompt-ending-B.txt` (alternative; 743 words; sha256 `61d3de1e7d0aea2446ac99a0e1b735ff0b8cc5ad4d3fa1e59a97349541746787`). They differ only in line 24 (Panel 2). Asset lists: `H241-assets-ending-A.txt` (= `H241-assets.txt`) and `H241-assets-ending-B.txt`, 12 uploads each, identical except @Image2 (storyboard A f085ba75 / B 6bafbb07).
 Skill: sd25-pe (SKILL.md read in full this session; local version). Task: one video generation with a fixed first frame plus a storyboard module. Job settings (not in the prompt): seedance_2_5, 15 s, 9:16 (locked by the first frame), audio on. Backups: `*.pre-take5.*`.
 
 ## What changed (Emile, Nov 15 8:06 PM ET)
@@ -34,6 +34,12 @@ Skill: sd25-pe (SKILL.md read in full this session; local version). Task: one vi
 | @Audio2 | a/voice-cofounder-mark.mp3 | 1ff661d8-7b3b-45e2-a5ec-edb175ab9e56 | co-founder timbre |
 | @Audio3 | a/voice-scout.mp3 | 1040c108-8833-40b5-a3f0-943deab45436 | Scout timbre |
 Totals: 8 images, 1 video (4.5 s), 3 audio (18.65 s); under every limit. CDN bytes = local for all 13 ids (both storyboards). No 【Unused Assets】: every upload has a role; the dropped voice candidates are not uploaded.
+
+## Fresh-check fixes (Nov 15 ~8:45 PM ET, 2 independent checks, both PASS)
+- Line 7 now also fences the storyboard's drawn room and props: "the room, desk and jar come from @Image1" (P1 draws a window and counter the studio does not have).
+- Line 14: "not its sound, spoken words or pacing" (so the end card's on-screen text is not suppressed).
+- Line 27: "the co-founder (@Image4) sits beside her again, lips closed" (P5 draws him seated; ending A last showed him standing).
+- Known risk kept: his 11-word line in a 3 s panel (Mark's reference reads it in 4.7 s; Seedance takes timbre only) and a 1 s delete beat.
 
 ## Dialogue ledger (5 lines, local time; +15 s in the ad)
 1. {Damn... what's going on with Fig and Cedar?} · owner, on camera, quietly, @Audio1 · 0-3s; co-founder "lips closed"
@@ -78,7 +84,7 @@ Pace: 7 words/3 s, 11/3 s (Mark reads it in 4.7 s; timbre only), 5/2 s, 7/3 s, 9
 | 15 | Extension | N-A | Not extension. |
 | 16 | First/last frame statements | PASS | Line 3 standalone "Use @Image1 as the first frame."; line 4 defines it. |
 | 17 | Multiple keyframes | N-A | One first frame. |
-| 18 | Storyboard reading order and exclusions | PASS | Line 7; panels named in lines 23-27. |
+| 18 | Storyboard reading order and exclusions | PASS | Line 7 (reading order; not its style, numbers, faces, drawn room or props; room/desk/jar from @Image1); panels named in lines 23-27. |
 | 19 | Blockout | N-A | None. |
 | 20 | Observable emotion/camera | PASS | "rises and pulls back to a wide, high angle"; "Low angle from desk height"; "Close-up ... three-quarter view"; "Overhead, straight down"; "stands up ... hands in his pockets" (A) / "leans back ... arms crossed" (B); "small, quietly impressed smile". |
 | 21 | Speaker, language, voice, on/off screen per line | PASS | Every line names speaker + asset, "in English", on camera/off screen, "in the voice of @AudioN"; listeners' lips closed. |

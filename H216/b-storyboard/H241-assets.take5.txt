@@ -1,0 +1,20 @@
+# H241 asset list · ENDING A (he stands up for his line) · owner half only (15-30 s of the ad), take 5 (Emile Nov 15 8:06 PM ET)
+# Prompt: /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/prompt-ending-A.txt (sha256 a37dc6cc3017284303f4140b47db3c96a9451a84aac0df0b826c6dadac394416; 746 words)
+# The keeper intro (H240 take 2, 0-15 s) is never re-rendered: /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/KEEP-shopper-intro-0-15s.mp4. This job renders only the owner half from its last frame; stitched on for free.
+# Upload in this order. Job: seedance_2_5, 15 s, 9:16 (locked by the first frame), audio on (job settings, not in the prompt).
+# role | Higgsfield media id | absolute local file | what
+@Image1 | 9a9c30e9-4b75-489b-8549-d4572c608020 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/first-frame-intro-end.png | FIRST FRAME: the keeper intro's last frame, 720x1280
+@Image2 | f085ba75-22c2-45c0-9b8c-3d46e139b7d3 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/storyboard-ending-A.png | 5-panel storyboard, ending A: 1 wide high angle reveal, 2 low angle on him (standing), 3 close-up on her, 4 overhead on the laptop, 5 close blow-out with the dog passing
+@Image3 | a3488732-1c28-4b37-bb28-0c69475dacd0 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/owner-h240.png | owner face: Soul 2 (text2image_soul_v2) job 1963a66d (actress 14); Higgsfield Element candle-owner-ceo 68c42a75
+@Image4 | 4f56e950-cdeb-4549-9d67-8dfe39b94d1a | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/cofounder.jpg | co-founder face: Soul 2 job 0447bb1c; Higgsfield Element candle-cofounder-visionary d35d643a
+@Image5 | df9dcae1-9902-4c1c-ad7f-9a4382b96eef | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/badge-ceo.png | her name badge, "CEO" (GPT Image via Codex, free)
+@Image6 | 0552c26e-6b80-46af-9256-6d4d84218ffe | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/badge-visionary.png | his name badge, "VISIONARY" (GPT Image via Codex, free)
+@Image7 | f7a39e14-e215-479b-ac69-a8895facc9a8 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/dog.jpg | their small fluffy dog (GPT Image via Codex, free)
+@Image8 | 03e0d622-ebdd-4079-abd0-91ed67a4150e | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/admin-delete-x.jpg | store admin, Fig & Cedar 212 in stock / 3 sales, red X + cursor
+@Video1 | 48682b82-6201-4336-a42d-599ec57bd765 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/h158-end.mp4 | end screen picture only, 4.5 s
+@Audio1 | 3b148da6-65fb-46bf-b453-15188af63fbd | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/voice-owner-alexandra.mp3 | owner timbre: her own voice (ElevenLabs Alexandra, the actress 14 voice), 9.42 s, 128 kbps, cut losslessly from refs/voice-alexandra.mp3
+@Audio2 | 1ff661d8-7b3b-45e2-a5ec-edb175ab9e56 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/voice-cofounder-mark.mp3 | co-founder timbre: Mark (Emile's pick, 8:06 PM), Eleven v4, 4.73 s, 128 kbps, cut losslessly from the raw clip
+@Audio3 | 1040c108-8833-40b5-a3f0-943deab45436 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/voice-scout.mp3 | Scout timbre, 4.50 s
+# Totals: 8 images, 1 video (4.5 s), 3 audio (18.65 s), 12 uploads. Unused assets: none.
+# Not used (not uploaded for this job): her voices Gia 9193a4cf, Quinn fdf7621a, Emily 69f076e7; his voices Marcus ea802af8, Gideon 52a6de41; take-4 Mark re-encode 7eeeae2b; music beds (edit layer, Emile still choosing: A build, B steady, C deadpan, D lo-fi).
+# CDN bytes = local for every id (sha256, Nov 15 ~8:35 PM ET).
