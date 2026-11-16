@@ -9,9 +9,17 @@
 @Image4 | 4f56e950-cdeb-4549-9d67-8dfe39b94d1a | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/cofounder.jpg | co-founder face (Soul 2)
 @Image5 | 03e0d622-ebdd-4079-abd0-91ed67a4150e | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/admin-delete-x.jpg | store admin, Fig & Cedar 212 in stock / 3 sales, red X + cursor
 @Video1 | 48682b82-6201-4336-a42d-599ec57bd765 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/h158-end.mp4 | end screen picture only, 4.5 s
-@Audio1 | DEFAULT her-1 Gia 9193a4cf-2abe-48c2-9a48-b57d7ea7bd8b | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/her-voice-1-gia.mp3 | owner timbre, 7.00 s (her two lines). Emile's pick swaps in: her-2 Quinn fdf7621a-a8d4-46bb-8724-b5640d83d0fb (/Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/her-voice-2-quinn.mp3, 7.40 s) · her-3 Emily 69f076e7-e744-4c9c-87b2-f89b08e89018 (/Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/her-voice-3-emily.mp3, 7.05 s)
-@Audio2 | DEFAULT his-1 Mark 7eeeae2b-8dbd-4cb0-add6-fc941fdeae0e | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/his-voice-1-mark.mp3 | co-founder timbre, 4.72 s. Pick swaps in: his-2 Marcus ea802af8-c418-4340-9325-f52e28d3c125 (/Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/his-voice-2-marcus.mp3, 5.72 s) · his-3 Gideon 52a6de41-aa61-4b4e-8509-c5d3ffbf1255 (/Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/his-voice-3-gideon.mp3, 5.28 s)
+@Audio1 | <PENDING: the one owner voice Emile picks> | <its local file> | owner timbre (her two lines)
+@Audio2 | <PENDING: the one co-founder voice Emile picks> | <its local file> | co-founder timbre (his line)
 @Audio3 | 1040c108-8833-40b5-a3f0-943deab45436 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/voice-scout.mp3 | Scout timbre, 4.50 s
-# Totals: 5 images, 1 video (4.5 s), 3 audio (16.2-17.6 s by pick), 9 uploads. Unused assets: none. Swapping a voice changes no prompt word.
+# Totals once picked: 5 images, 1 video (4.5 s), 3 audio (16.2-17.6 s depending on the pick), 9 uploads. Unused assets: none.
+# NOT FINAL: Emile has not picked. When he does, the two PENDING rows get the exact media id and file of his pick, and only that pick is uploaded for each role; this list then goes to Codex.
+# Voice candidates (ElevenLabs Eleven v4 via Higgsfield, 0.69 cr each, Deepgram-checked). Each is "not uploaded" for this job unless picked:
+#   Her 1 Gia | 9193a4cf-2abe-48c2-9a48-b57d7ea7bd8b | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/her-voice-1-gia.mp3 | 7.00 s | not uploaded
+#   Her 2 Quinn | fdf7621a-a8d4-46bb-8724-b5640d83d0fb | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/her-voice-2-quinn.mp3 | 7.40 s | not uploaded
+#   Her 3 Emily | 69f076e7-e744-4c9c-87b2-f89b08e89018 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/her-voice-3-emily.mp3 | 7.05 s | not uploaded
+#   His 1 Mark | 7eeeae2b-8dbd-4cb0-add6-fc941fdeae0e | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/his-voice-1-mark.mp3 | 4.72 s | not uploaded
+#   His 2 Marcus | ea802af8-c418-4340-9325-f52e28d3c125 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/his-voice-2-marcus.mp3 | 5.72 s | not uploaded
+#   His 3 Gideon | 52a6de41-aa61-4b4e-8509-c5d3ffbf1255 | /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/his-voice-3-gideon.mp3 | 5.28 s | not uploaded
 # Not uploaded (edit layer, chosen by Emile): music-a-build.mp3 / music-b-steady.mp3 (owner-side bed), tags-graphic.png style (CEO/VISIONARY tags on 6-8 s).
 # CDN bytes = local for every id (sha256, Nov 15 ~7:50 PM ET). Voices: ElevenLabs Eleven v4 via Higgsfield, 0.69 cr each; music: ElevenLabs Music v2.5, 2.18 cr each.

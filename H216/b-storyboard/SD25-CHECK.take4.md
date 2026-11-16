@@ -1,6 +1,6 @@
 # SD25-CHECK · H241 take 4 · OWNER HALF (15-30 s of the ad) · first-frame continuation of the keeper intro
 
-Prompt checked: `prompt-sd25pe-final.txt` (614 words by `wc -w`, sha256 `3896cf99717ab04cb7e4b06dd5f3e990f00a414edec548036190376b9688970e`). Asset list: `H241-assets.txt` (9 uploads; @Audio1/@Audio2 = Emile's voice picks, defaults listed). Previous: take 3 draft (55fb9b42, full 30 s), take 1 rendered (bbbe6887). Backups: `*.pre-take4.*`, `prompt-full30.take4-draft.txt`.
+Prompt checked: `prompt-sd25pe-final.txt` (614 words by `wc -w`, sha256 `3896cf99717ab04cb7e4b06dd5f3e990f00a414edec548036190376b9688970e`). Asset list: `H241-assets.txt` (9 uploads once Emile picks; @Audio1/@Audio2 are PENDING his pick, the six candidates are listed as not uploaded). Previous: take 3 draft (55fb9b42, full 30 s), take 1 rendered (bbbe6887). Backups: `*.pre-take4.*`, `prompt-full30.take4-draft.txt`.
 Skill: sd25-pe (SKILL.md read in full this session; local version). Task: one video generation with a fixed first frame plus a storyboard module. Job settings (not in the prompt): seedance_2_5, 15 s, 9:16 (locked by the first frame), audio on.
 
 ## What changed (Emile, Nov 15 7:28 PM and 7:34 PM ET)
@@ -12,7 +12,7 @@ Skill: sd25-pe (SKILL.md read in full this session; local version). Task: one vi
 - **@Image1** first frame: brick wall, metal shelves of lit amber labelled jars, the owner (auburn side braid, rust crew-neck sweater) alone at a light wood desk typing on a silver laptop at frame right; a lit amber three-wick jar labelled "Fig & Cedar" at frame left. No co-founder.
 - **@Image2** 5 panels, 3+2: (1) two-shot, she slumps chin in hand, sad; he beside her, calm; (2) him leaning back, arms crossed, cocky; (3) her, hand on chest, amazed, him smirking; (4) over her shoulder, cursor on a red X; (5) she blows out the jar. Sixth cell blank.
 - **@Image3** owner face (H240's), **@Image4** co-founder (short fade, beard, charcoal sweater, smile; brick/candle background fenced), **@Image5** admin: Fig & Cedar row red, "212 in stock", "3 ▼ 84%", red X + cursor.
-- **@Video1** 1080x1920, 4.50 s, end screen. **@Audio1** default Gia 7.00 s: "Damn. What's going on with Fig and Cedar? Damn. You just know things." **@Audio2** default Mark 4.72 s: "Yeah, I told you. Customers just aren't into fig and cedar." **@Audio3** Scout 4.50 s. All options transcribed with Deepgram (none played on this machine).
+- **@Video1** 1080x1920, 4.50 s, end screen. **@Audio1** candidates (Gia shown) 7.00 s: "Damn. What's going on with Fig and Cedar? Damn. You just know things." **@Audio2** candidates (Mark shown) 4.72 s: "Yeah, I told you. Customers just aren't into fig and cedar." **@Audio3** Scout 4.50 s. All options transcribed with Deepgram (none played on this machine).
 
 ## Uploads (9, in this order)
 | Ref | File | Media | One role |
@@ -23,8 +23,8 @@ Skill: sd25-pe (SKILL.md read in full this session; local version). Task: one vi
 | @Image4 | a/cofounder.jpg | 4f56e950-cdeb-4549-9d67-8dfe39b94d1a | the co-founder |
 | @Image5 | a/admin-delete-x.jpg | 03e0d622-ebdd-4079-abd0-91ed67a4150e | store admin, laptop screen only |
 | @Video1 | a/h158-end.mp4 | 48682b82-6201-4336-a42d-599ec57bd765 | end screen picture only |
-| @Audio1 | a/her-voice-1-gia.mp3 (or her pick) | 9193a4cf-2abe-48c2-9a48-b57d7ea7bd8b | owner timbre |
-| @Audio2 | a/his-voice-1-mark.mp3 (or his pick) | 7eeeae2b-8dbd-4cb0-add6-fc941fdeae0e | co-founder timbre |
+| @Audio1 | PENDING Emile's pick (Gia, Quinn or Emily) | the picked id only | owner timbre |
+| @Audio2 | PENDING Emile's pick (Mark, Marcus or Gideon) | the picked id only | co-founder timbre |
 | @Audio3 | a/voice-scout.mp3 | 1040c108-8833-40b5-a3f0-943deab45436 | Scout timbre |
 Totals: 5 images, 1 video (4.5 s), 3 audio (16.2-17.6 s by pick); under every limit. CDN bytes = local for all 13 candidate ids. No 【Unused Assets】: every upload has a role.
 
@@ -92,6 +92,9 @@ Pace: 7 words/3 s, 11/3 s (Mark reads it in 4.7 s with pauses; Seedance takes ti
 | 9-12s · P5 | @Image3 | — | jar (as @Image1) | — | — | @Audio3 |
 | 12-15s · — | — | — | — | — | @Video1 | @Audio3 |
 At most one asset per column per row.
+
+## Status
+Not final: the asset list stays PENDING on @Audio1/@Audio2 until Emile picks; then it is locked to his exact picks and goes to Codex.
 
 ## Result
 Principles 1-11: 11 PASS. Final Checklist: 27 items, 22 PASS, 5 N-A. Zero FAILs.
