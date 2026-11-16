@@ -1,6 +1,6 @@
 # SD25-CHECK · H241 take 5 · OWNER HALF (15-30 s of the ad) · two endings, first-frame continuation of the keeper intro
 
-Prompts checked: `prompt-ending-A.txt` (gated; = `prompt-sd25pe-final.txt`; 746 words; sha256 `a37dc6cc3017284303f4140b47db3c96a9451a84aac0df0b826c6dadac394416`) and `prompt-ending-B.txt` (alternative; 743 words; sha256 `61d3de1e7d0aea2446ac99a0e1b735ff0b8cc5ad4d3fa1e59a97349541746787`). They differ only in line 24 (Panel 2). Asset lists: `H241-assets-ending-A.txt` (= `H241-assets.txt`) and `H241-assets-ending-B.txt`, 12 uploads each, identical except @Image2 (storyboard A f085ba75 / B 6bafbb07).
+Prompts checked: `prompt-ending-A.txt` (gated; = `prompt-sd25pe-final.txt`; 767 words; sha256 `bab1b27b5b3f4eabf4787d3ee0559d5b4b4f4385064b197a9c55f286d84e8479`) and `prompt-ending-B.txt` (both rendered after A; 764 words; sha256 `9e2c14b4c05c86d3e9b73fd0dbfef62ee3dd8a539492cf630b033230085ac8b6`). They differ only in line 24 (Panel 2). Asset lists: `H241-assets-ending-A.txt` (= `H241-assets.txt`) and `H241-assets-ending-B.txt`, 12 uploads each, identical except @Image2 (storyboard A f085ba75 / B 6bafbb07).
 Skill: sd25-pe (SKILL.md read in full this session; local version). Task: one video generation with a fixed first frame plus a storyboard module. Job settings (not in the prompt): seedance_2_5, 15 s, 9:16 (locked by the first frame), audio on. Backups: `*.pre-take5.*`.
 
 ## What changed (Emile, Nov 15 8:06 PM ET)
@@ -34,6 +34,10 @@ Skill: sd25-pe (SKILL.md read in full this session; local version). Task: one vi
 | @Audio2 | a/voice-cofounder-mark.mp3 | 1ff661d8-7b3b-45e2-a5ec-edb175ab9e56 | co-founder timbre |
 | @Audio3 | a/voice-scout.mp3 | 1040c108-8833-40b5-a3f0-943deab45436 | Scout timbre |
 Totals: 8 images, 1 video (4.5 s), 3 audio (18.65 s); under every limit. CDN bytes = local for all 13 ids (both storyboards). No 【Unused Assets】: every upload has a role; the dropped voice candidates are not uploaded.
+
+## GO (Emile, Nov 15 11:37 PM ET): render both endings, one take each
+- Added to line 2 of both prompts, nothing else changed: "The two have natural, easy chemistry, warm and unrobotic, with her slightly naive and him slightly cocky on top, never overplayed." (Emile: "they have good chemistry ... very natural and they're not robotic ... not too intense".)
+- Principle 8 still holds: this is Emile's own performance direction, not a generic quality pack. Principle 10: chemistry is a requested performance, written as an observable direction alongside the per-shot actions.
 
 ## Fresh-check fixes (Nov 15 ~8:45 PM ET, 2 independent checks, both PASS)
 - Line 7 now also fences the storyboard's drawn room and props: "the room, desk and jar come from @Image1" (P1 draws a window and counter the studio does not have).

@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cat Question Storyboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f3ec; --panel:#ffffff; --ink:#1d1a16; --muted:#6c645a; --line:#e3dacb;
+  --accent:#b4561f; --lime:#c6ef1a; --lime-ink:#2c3400; --chip-img:#f4e2d3; --chip-vid:#dde7f6; --chip-aud:#e5f1d6;
+  --code:#f1ece3;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#141210; --panel:#1d1a17; --ink:#f1ebe2; --muted:#a59c90; --line:#352f29;
+    --accent:#e8874b; --lime:#d1fb18; --lime-ink:#1c2200; --chip-img:#4a3324; --chip-vid:#26344a; --chip-aud:#2f4123; --code:#26221d;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#141210; --panel:#1d1a17; --ink:#f1ebe2; --muted:#a59c90; --line:#352f29;
+  --accent:#e8874b; --lime:#d1fb18; --lime-ink:#1c2200; --chip-img:#4a3324; --chip-vid:#26344a; --chip-aud:#2f4123; --code:#26221d;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 Inter,system-ui,sans-serif}
+main{max-width:1080px;margin:0 auto;padding:28px 16px 80px}
+h1,h2,h3,h4{font-family:"Space Grotesk",Inter,sans-serif;line-height:1.2;margin:0}
+h1{font-size:clamp(26px,5vw,40px)} h2{font-size:22px;margin:44px 0 14px} h3{font-size:16px;margin-bottom:8px;color:var(--accent)} h4{font-size:15px;margin:10px 0 4px}
+p{margin:0 0 8px} a{color:var(--accent)}
+.kicker{font:600 12px/1 Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.pitch{font-size:19px;margin:14px 0 12px;max-width:780px}
+.why{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;max-width:860px}
+.why li{margin-bottom:6px}
+.input{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.input span{background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:13px}
+.input span.cr{background:var(--lime);color:var(--lime-ink);border-color:transparent;font-weight:600}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(220px,100%),1fr));gap:14px}
+.card{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px;scroll-margin-top:16px}
+.card:target{outline:3px solid var(--accent)}
+.card img,.card video{width:100%;height:220px;object-fit:contain;background:var(--code);border-radius:8px;display:block}
+.card .aud{height:90px;display:flex;align-items:center;background:var(--code);border-radius:8px;padding:0 8px}
+.card audio{width:100%}
+.card p{font-size:13px;color:var(--muted)} .card p b{color:var(--ink)}
+.card code{display:block;font-size:11px;color:var(--muted);word-break:break-all;margin-top:6px}
+.tag{position:absolute;top:18px;left:18px;z-index:1;background:var(--ink);color:var(--bg);font:600 12px/1 ui-monospace,Menlo,monospace;padding:5px 8px;border-radius:6px}
+.ppart{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:12px}
+.ppart p{font-size:14px}
+.chip{display:inline-block;padding:0 7px;border-radius:999px;text-decoration:none;color:var(--ink);font-weight:600;font-size:13px}
+.chip.image{background:var(--chip-img)} .chip.video{background:var(--chip-vid)} .chip.audio{background:var(--chip-aud)}
+.copyrow{display:flex;gap:10px;align-items:center;margin:10px 0 0;flex-wrap:wrap}
+button{font:600 14px Inter;background:var(--ink);color:var(--bg);border:0;border-radius:8px;padding:9px 16px;cursor:pointer}
+.small{font-size:13px;color:var(--muted)}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;min-width:900px;font-size:13px}
+th,td{text-align:left;vertical-align:top;padding:8px 10px;border-bottom:1px solid var(--line)}
+th{font-family:"Space Grotesk";font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+td.line{font-weight:500} td.mono{font-family:ui-monospace,Menlo,monospace;white-space:nowrap}
+.th{width:64px;border-radius:4px;border:1px solid var(--line);display:block;background:#fff}
+.pn{font:600 11px ui-monospace,monospace;color:var(--muted)}
+.big{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:20px}
+.big img{width:100%;border-radius:8px;background:#fff;display:block}
+.legend{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;font-size:12px}
+.legend div{background:var(--code);border-radius:6px;padding:6px}
+.legend b{font-family:ui-monospace,monospace}
+.read{background:var(--panel);border-left:4px solid var(--accent);border-radius:8px;padding:14px 18px;max-width:760px}
+.read p{margin-bottom:6px} .who{font:600 12px Inter;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.notes li{margin-bottom:6px}
+.strip{width:100%;border-radius:8px;display:block;margin-top:8px}
+#eval{background:var(--panel);border:1px dashed var(--line);border-radius:12px;padding:16px}
+.vs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}.vs pre{white-space:pre-wrap;word-break:break-word;background:var(--code);border-radius:8px;padding:12px;font:12px/1.5 ui-monospace,Menlo,monospace;max-height:520px;overflow:auto;margin:6px 0 0}.pick{background:var(--panel);border-left:4px solid var(--lime);border-radius:8px;padding:12px 16px;margin-top:14px}#eval table{min-width:0}#eval td,#eval th{font-size:13px;padding:6px;letter-spacing:0}@media (max-width:760px){.vs{grid-template-columns:1fr}}
+@media (max-width:760px){ .big{grid-template-columns:1fr} .legend{grid-template-columns:repeat(3,1fr)} }
+
+/* H241 · true-390 responsive fix */
+#for-you-to-pick table{min-width:0}
+.rv-cast{flex-wrap:wrap;overflow-x:visible}
+#for-you-to-pick audio{width:100%;max-width:340px}
+@media (max-width:760px){
+  .tablewrap table{min-width:0;width:100%}
+  .tablewrap table tr:first-child:has(th){display:none}
+  .tablewrap table,.tablewrap tbody,.tablewrap tr,.tablewrap td{display:block;width:auto}
+  .tablewrap tr{padding:10px 12px;border-bottom:1px solid var(--line)}
+  .tablewrap td{padding:2px 0;border:0;white-space:normal;word-break:break-word}
+  .tablewrap td.mono{font-weight:600}
+  .rv-cast{flex-wrap:wrap;overflow-x:visible}
+  .rv-cast .rv-th-big{width:calc(33.33% - 6px)}
+  #for-you-to-pick figure{max-width:100% !important;flex:1 1 100%}
+  #for-you-to-pick video,#for-you-to-pick img{max-width:100% !important}
+  pre.p{font-size:11px}
+  main{overflow-wrap:anywhere}
+}
+</style>
+<style id="sg-css">
+.sg{box-sizing:border-box;max-width:1100px;margin:16px 16px 10px;padding:16px;border:3px solid #c6ef1a;border-radius:14px;background:var(--surface,var(--panel,#fff));color:var(--ink,#1d1a16)}
+.sg h2{margin:0 0 4px;font-size:22px;border:0;padding:0}
+.sg .diff{font-weight:600;margin:6px 0 10px;font-size:16px}
+.sg .plain{font-size:20px;font-weight:700;margin:8px 0 6px}
+.sg .hero img{display:block;width:100%;max-width:560px;height:auto;border-radius:8px;border:1px solid var(--line,#ddd)}
+.sg .strip{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px}
+.sg .strip figure{margin:0;flex:0 0 auto;width:118px;font-size:11px;color:var(--muted,#666)}
+.sg .strip img{display:block;width:118px;height:auto;border-radius:6px;border:1px solid var(--line,#ddd)}
+.sg .row{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.sg .row figure{margin:0;width:92px;font-size:11px;line-height:1.3;color:var(--muted,#666)}
+.sg .row img,.sg .row video{display:block;width:92px;height:92px;object-fit:cover;border-radius:6px;border:1px solid var(--line,#ddd);background:#111}
+.sg .row .au{width:92px;height:92px;display:flex;align-items:center;justify-content:center;text-align:center;border:1px solid var(--line,#ddd);border-radius:6px;font-size:12px;font-weight:600}
+.sg .meta{font-size:13px;color:var(--muted,#666);margin-top:10px}
+@media (min-width:1140px){.sg{margin:16px auto 10px}}
+.nsent{display:inline-block;margin:4px 0;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:600;background:#5b4636;color:#fff;line-height:1.5}
+</style>
+<style>
+.lead ol{padding-left:20px;max-width:820px} .lead li{margin-bottom:4px}
+.illus{border:1px dashed var(--line);border-radius:12px;padding:14px 16px;margin-top:28px;background:var(--panel)}
+.illus .nsent{margin-bottom:8px}
+pre.p{white-space:pre-wrap;word-break:break-word;background:var(--code);border-radius:8px;padding:12px;font:12px/1.5 ui-monospace,Menlo,monospace;max-height:560px;overflow:auto}
+details{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin-top:14px} summary{cursor:pointer;font-weight:600}
+.sbwrap img{width:100%;max-width:620px;display:block;border-radius:8px;border:1px solid var(--line);background:#fff}
+table.pm{min-width:0}
+</style>
+</head>
+<body>
+<main>
+<div class="kicker">H241 · take 5 · owner half after the keeper intro · two endings · Team B</div>
+<h1>Owner half · the co-founders, two endings (after the keeper intro)</h1>
+<section class="lead rv-ui" id="for-you-to-pick" style="border:2px solid #c8743a;margin-bottom:24px">
+<h2 class="rv-secanchor" data-name="Pick A or B">Pick A or B · both endings are rendered</h2>
+<div id="takes-block"><p style="margin-top:4px"><b>0 · The two finished ads. Pick A or B.</b> Each is the keeper intro (0-15 s) plus one 15 s owner-half take, stitched for free.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap">
+<figure style="margin:0;max-width:300px;flex:1 1 260px"><video src="a/full-ad-ending-A.mp4" controls playsinline preload="metadata" muted style="width:100%;border-radius:8px"></video><figcaption class="small"><b>Ending A: he stands up.</b> Take job b5faac2c, 45 credits.</figcaption></figure>
+<figure style="margin:0;max-width:300px;flex:1 1 260px"><video src="a/full-ad-ending-B.mp4" controls playsinline preload="metadata" muted style="width:100%;border-radius:8px"></video><figcaption class="small"><b>Ending B: he stays seated.</b> Take job 653b9735, 45 credits.</figcaption></figure>
+</div></div>
+
+<p><b>1 · The keeper intro (0-15 s), untouched.</b> The owner half below starts from its last frame.</p>
+<video src="a/KEEP-shopper-intro-0-15s.mp4" controls playsinline preload="metadata" muted style="width:100%;max-width:300px;border-radius:8px;display:block"></video>
+<p style="margin-top:16px"><b>2 · The two of them, with their name tags.</b> Real pin-on badges on their sweaters, CEO and VISIONARY. Subtle: she&#x27;s a little naive and quietly impressed, he&#x27;s a bit cocky.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap">
+<figure style="margin:0;max-width:260px"><a href="a/duo-tags.png" target="_blank"><img src="a/duo-tags.png" alt="Both at the desk wearing CEO and VISIONARY name badges" style="width:100%;border-radius:8px"></a><figcaption class="small">At the desk, both badged.</figcaption></figure>
+<figure style="margin:0;max-width:260px"><a href="a/standing-a.png" target="_blank"><img src="a/standing-a.png" alt="Ending A: he stands, she looks up" style="width:100%;border-radius:8px"></a><figcaption class="small">Ending A: he stands up for his line.</figcaption></figure>
+<figure style="margin:0;max-width:260px"><a href="a/dog.jpg" target="_blank"><img src="a/dog.jpg" alt="Their small dog" style="width:100%;border-radius:8px"></a><figcaption class="small">Their dog, who trots past in the last shot.</figcaption></figure>
+</div>
+<p class="small" style="margin-top:8px"><b>Faces: both are Soul.</b> Owner = Soul 2 (actress 14, job 1963a66d); co-founder = Soul 2 (job 0447bb1c). Both saved as Higgsfield Elements: <i>candle-owner-ceo</i> and <i>candle-cofounder-visionary</i>. (The stills above are GPT Image scene previews built from those Soul faces; Seedance gets the Soul faces themselves.)</p>
+<p style="margin-top:16px"><b>3 · Storyboard, two endings.</b> Five different shots: wide from high, low angle on him, close-up on her, overhead on the laptop, table-height close with the dog. Same script; only panel 2 changes.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap">
+<figure style="margin:0;max-width:400px;flex:1 1 300px"><a href="a/storyboard-ending-A.png" target="_blank"><img src="a/storyboard-ending-A.png" alt="Storyboard ending A: he stands" style="width:100%"></a><figcaption class="small"><b>Ending A</b> (sent to the gate): he stands up.</figcaption></figure>
+<figure style="margin:0;max-width:400px;flex:1 1 300px"><a href="a/storyboard-ending-B.png" target="_blank"><img src="a/storyboard-ending-B.png" alt="Storyboard ending B: he stays seated" style="width:100%"></a><figcaption class="small"><b>Ending B</b> (alternative): he stays seated, leaning back.</figcaption></figure>
+</div>
+<p style="margin-top:16px"><b>4 · Voices: locked.</b> Hers is her own voice (Alexandra), his is Mark, as you picked. Full quality (128 kbps, no re-encode).</p>
+<div class="tablewrap"><table><tr><th>Who</th><th>Listen</th><th>What it is</th></tr>
+<tr><td><b>Her · own voice</b></td><td><audio src="a/voice-owner-alexandra.mp3" controls preload="none"></audio></td><td>Alexandra (actress 14), timbre reference only, 9.4 s.</td></tr><tr><td><b>Him · Mark</b></td><td><audio src="a/voice-cofounder-mark.mp3" controls preload="none"></audio></td><td>“Yeah, I told you. Customers just aren&#x27;t into Fig and Cedar.” 4.7 s.</td></tr></table></div>
+<p style="margin-top:16px"><b>5 · Music: two new options</b> (no pick needed yet; it goes in the edit, the earlier A and B are below them).</p>
+<div class="tablewrap"><table><tr><th>Option</th><th>Listen</th><th>What it does</th></tr>
+<tr><td><b>C · Deadpan</b></td><td><audio src="a/music-c-deadpan.mp3" controls preload="none"></audio></td><td>Dry mockumentary: pizzicato, walking bass, brushed snare. Quiet and a little smug. 15 s.</td></tr><tr><td><b>D · Lo-fi swagger</b></td><td><audio src="a/music-d-lofi.mp3" controls preload="none"></audio></td><td>Laid-back R&amp;B groove: Rhodes, mellow bass, relaxed drums. Cool, slightly cocky. 15 s.</td></tr><tr><td><b>A · Build (earlier)</b></td><td><audio src="a/music-a-build.mp3" controls preload="none"></audio></td><td>Sparse, then a cocky groove at about 8 s.</td></tr><tr><td><b>B · Steady (earlier)</b></td><td><audio src="a/music-b-steady.mp3" controls preload="none"></audio></td><td>Upbeat beat from the start.</td></tr></table></div>
+<p class="small" style="margin-top:10px">Renders: 90 credits (two 15 s takes, one per ending, on your 11:37 PM go). Earlier this round: 4.36 credits (two music samples). Stills, badges, dog, storyboard, voice cuts, Elements: free. Ending A&#x27;s exact prompt is at the Seedance gate; ending B&#x27;s prompt is below as the alternative.</p>
+</section>
+<section class="lead">
+<h2>The story</h2>
+<ol><li>0-15 s · Keeper intro (H240 take 2, unchanged): the cat lady can&#x27;t find whether Fig &amp; Cedar is safe for cats and leaves; the High flip lands on the owner at her desk.</li><li>15-18 s · Wide, from high: her co-founder beside her. She, quiet, a little sad: “Damn... what&#x27;s going on with Fig and Cedar?”</li><li>18-21 s · Low angle on him. A: he stands up, hands in pockets. B: he stays seated, leaning back. “Yeah, I told you. Customers just aren&#x27;t into Fig and Cedar.”</li><li>21-23 s · Close-up on her, quietly impressed: “Damn, you just know things.” Their name badges read CEO and VISIONARY.</li><li>23-24 s · Overhead: she clicks the red X, Fig &amp; Cedar is deleted. 24-27 s · She blows out the candle as their dog trots past; Scout: “Don&#x27;t guess why your shoppers don&#x27;t buy.”</li><li>27-30 s · End screen: “Scout interviews your shoppers for you. Get free early access.”</li></ol>
+<p class="small">Emile's story, Nov 15 1:00 PM ET. His five lines are kept word for word (diffed against STORY.md). No ka-ching, no cart click, no Scout call: she never buys.</p>
+<p class="small"><b>Take 5 (Emile, Nov 15 8:06 PM ET):</b> “We&#x27;re using actress 14&#x27;s own voice … I feel like the scenes are too much the same … different angle, height … a dog that comes in the scene … they can&#x27;t be overplaying it … she&#x27;s CEO, he&#x27;s visionary … I want to be tags under shirts … two endings … where the guy stands up … and the other one where he&#x27;s still sitting down … For the voice I pick Mark.”</p>
+<p class="small"><b>Take 4 (Emile, Nov 15 7:28 + 7:34 PM ET):</b> “The voices proposed are very AI … I need new voices … The girl should be in almost a sad soft way … He leans back, arm crossed … she should have the tag CEO and the black guy should have the tag visionary.” 7:34 PM: H240 take 2&#x27;s intro is the keeper; H241 becomes the owner half only, from its last frame.</p>
+<p class="small"><b>Take 3 draft (Emile, Nov 15 5:14 PM ET):</b> “Show me the voice of the actor … paint the scene of the two sitting together … she&#x27;s relaxed, checking. On the other side, they&#x27;re a little bit more hyped … ‘Damn, what&#x27;s going on with Fig and Cedar?’ … He&#x27;s a little bit gangsterish, confident … She&#x27;s impressed, very impressed … ‘Damn, you just know things’ … I was hoping more for an American voice … high quality.” Built as asked; not gated or rendered until he picks.</p>
+<p class="small"><b>Take 2 (Emile, Nov 15 4:25 PM ET, after take 1):</b> “I love everything, specifically how the table flipped … When she lands on the screen … It needs to feel like a real screen … something like she&#x27;s browsing within that dashboard … scrolling, seeing other products … they&#x27;re two co-founders … a light-skinned Black guy. He&#x27;s totally overconfident but … he&#x27;s wrong … Then the girl&#x27;s like, ‘I guess you&#x27;re right.’ She deletes it.” 0-15 s, the blow-out, the lesson line and the end screen are unchanged; the owner side is rebuilt: two co-founders at one desk, a sharp store admin she scrolls (HTML, free), his line, her “I guess you&#x27;re right.”, the delete. New: his face (one Soul 2 image), his voice file (a library voice, free), storyboard panels 8-10 (free).</p>
+<p class="small"><b>Round 2 (Emile, Nov 15 2:35 PM ET, after D&#x27;s take):</b> “The portion of the owner is not good … there&#x27;s an overlay of the thing. This is horrendous … that should be on the laptop … You see her clicking X, deleting it from the website, and blowing away the candles … a camera spinning around her … with the laptop as a center point.” The shopper half and the flip (0-15 s) were unchanged; the owner half became five new shots (take 1; replaced in take 2 above).</p>
+<p><b>The idea:</b> she was about to buy and couldn't, because the page never said if it is safe for cats; the owner and her co-founder only see the missing sales and delete the line from their store for the wrong reason.</p>
+<p class="small"><b>H241 change (Emile, Nov 15 2:11 PM ET):</b> “the shopper is looking at something she's about to buy. She can't buy it because she doesn't have the information. Surprisingly the owner makes a decision to cut off the product line on the wrong insight.” and “make sure that Fig and Cedar … look and feel different from the one she has at home.” Her apartment now has only white pillar candles and tea lights; the amber three-wick Fig &amp; Cedar jar is only on the product page and in the owner's studio.</p>
+</section>
+
+<h2>Shot list · owner half, 15 s (ad time 15-30 s), 5 panels + end screen, two endings</h2>
+<div class="tablewrap"><table>
+<tr><th>Time · panel</th><th>Who</th><th>What</th><th>Line</th><th>Assets</th></tr>
+<tr><td class="mono">0-3s<br><span class="pn">P1</span></td><td>Owner, Co-founder</td><td>Panel 1. From the intro&#x27;s last frame the camera rises and pulls back to a wide, high angle: he sits beside her; she rests her chin in her hand, a little sad. Badges CEO / VISIONARY on their sweaters. (Ad 15-18 s.)</td><td class="line"><b>Owner (on camera, quiet):</b> “Damn... what&#x27;s going on with Fig and Cedar?”</td><td class="mono">@Image1 @Image2 @Image3 @Image4 @Image5 @Image6 @Audio1</td></tr>
+<tr><td class="mono">3-6s<br><span class="pn">P2</span></td><td>Co-founder, Owner</td><td>Panel 2. Hard cut, low angle on him. A: he stands up, hands in pockets. B: he stays seated, leaning back, arms crossed. Small cocky half-smile; she looks at him. (18-21 s.)</td><td class="line"><b>Co-founder (on camera):</b> “Yeah, I told you. Customers just aren&#x27;t into Fig and Cedar.”</td><td class="mono">@Image2 @Image4 @Image3 @Image6 @Audio2</td></tr>
+<tr><td class="mono">6-8s<br><span class="pn">P3</span></td><td>Owner</td><td>Panel 3. Hard cut, close-up on her, three-quarter view: a small, quietly impressed smile; CEO badge at the bottom of frame. (21-23 s.)</td><td class="line"><b>Owner (on camera):</b> “Damn, you just know things.”</td><td class="mono">@Image2 @Image3 @Image5 @Audio1</td></tr>
+<tr><td class="mono">8-9s<br><span class="pn">P4</span></td><td>Owner (cursor)</td><td>Panel 4. Hard cut, overhead onto the desk: her cursor clicks the red X on Fig &amp; Cedar (212 in stock, 3 sales); the row disappears. (23-24 s.)</td><td class="line">—</td><td class="mono">@Image2 @Image3 @Image8</td></tr>
+<tr><td class="mono">9-12s<br><span class="pn">P5</span></td><td>Owner, Dog</td><td>Panel 5. Table-height close shot: she blows out the jar; the wicks smoke while their dog trots across behind the desk. (24-27 s.)</td><td class="line"><b>Scout (off screen):</b> “Don&#x27;t guess why your shoppers don&#x27;t buy.”</td><td class="mono">@Image2 @Image3 @Image7 @Audio3</td></tr>
+<tr><td class="mono">12-15s<br><span class="pn">—</span></td><td>End screen</td><td>Hard cut to the H158 end screen. (27-30 s.)</td><td class="line"><b>Scout (off screen):</b> “Scout interviews your shoppers for you. Get free early access.”</td><td class="mono">@Video1 @Audio3</td></tr>
+</table></div>
+
+<section class="sg" id="what-seedance-gets" style="margin:28px 0 10px">
+<h2>What Seedance gets</h2>
+<p class="diff">12 uploads plus one prompt (ending A). Only what is in this box is sent.</p>
+<div class="input">
+<span>Text (767 words)</span><span>+ 8 images</span><span>+ 1 video (4.5 s)</span><span>+ 3 audio (18.7 s)</span>
+<span>Omni reference · seedance_2_5 · first frame</span><span>job settings: 9:16 · 15 s · audio on</span>
+<span class="cr">Spent on this round: 4.36 credits (music samples)</span>
+</div>
+<div class="cards" style="margin-top:14px"><article class="card" id="image1"><span class="tag">@Image1</span><a href="a/first-frame-intro-end.png" target="_blank"><img src="a/first-frame-intro-end.png" alt="First frame · the intro&amp;#x27;s last frame" loading="lazy"></a><h4>First frame · the intro&amp;#x27;s last frame</h4><p><b>Gives:</b> Studio, the owner at her desk, laptop, the lit Fig &amp; Cedar jar, shelves.</p><p><b>Not:</b> Nothing else.</p><code>media 9a9c30e9</code></article><article class="card" id="image2"><span class="tag">@Image2</span><a href="a/storyboard-ending-A.png" target="_blank"><img src="a/storyboard-ending-A.png" alt="Storyboard · ending A (5 panels)" loading="lazy"></a><h4>Storyboard · ending A (5 panels)</h4><p><b>Gives:</b> Shot order, camera angles, rough framing.</p><p><b>Not:</b> Its line-art style, white background, panel numbers, drawn faces.</p><code>media f085ba75 (B: 6bafbb07)</code></article><article class="card" id="image3"><span class="tag">@Image3</span><a href="a/owner-h240.png" target="_blank"><img src="a/owner-h240.png" alt="The owner · Soul 2" loading="lazy"></a><h4>The owner · Soul 2</h4><p><b>Gives:</b> Her face, auburn braid, rust sweater.</p><p><b>Not:</b> The background.</p><code>media a3488732 · Soul job 1963a66d · Element candle-owner-ceo</code></article><article class="card" id="image4"><span class="tag">@Image4</span><a href="a/cofounder.jpg" target="_blank"><img src="a/cofounder.jpg" alt="The co-founder · Soul 2" loading="lazy"></a><h4>The co-founder · Soul 2</h4><p><b>Gives:</b> His face, short fade, beard, charcoal sweater.</p><p><b>Not:</b> The background.</p><code>media 4f56e950 · Soul job 0447bb1c · Element candle-cofounder-visionary</code></article><article class="card" id="image5"><span class="tag">@Image5</span><a href="a/badge-ceo.png" target="_blank"><img src="a/badge-ceo.png" alt="Her name badge · CEO" loading="lazy"></a><h4>Her name badge · CEO</h4><p><b>Gives:</b> The pin-on badge she wears on her sweater.</p><p><b>Not:</b> The grey background.</p><code>media df9dcae1</code></article><article class="card" id="image6"><span class="tag">@Image6</span><a href="a/badge-visionary.png" target="_blank"><img src="a/badge-visionary.png" alt="His name badge · VISIONARY" loading="lazy"></a><h4>His name badge · VISIONARY</h4><p><b>Gives:</b> The pin-on badge he wears on his sweater.</p><p><b>Not:</b> The grey background.</p><code>media 0552c26e</code></article><article class="card" id="image7"><span class="tag">@Image7</span><a href="a/dog.jpg" target="_blank"><img src="a/dog.jpg" alt="Their dog" loading="lazy"></a><h4>Their dog</h4><p><b>Gives:</b> The small fluffy dog that trots past once.</p><p><b>Not:</b> The room.</p><code>media f7a39e14</code></article><article class="card" id="image8"><span class="tag">@Image8</span><a href="a/admin-delete-x.jpg" target="_blank"><img src="a/admin-delete-x.jpg" alt="Laptop screen · store admin, red X" loading="lazy"></a><h4>Laptop screen · store admin, red X</h4><p><b>Gives:</b> Fig &amp; Cedar 212 in stock, 3 sales, red X with her cursor; only on the laptop screen.</p><p><b>Not:</b> Never as an overlay.</p><code>media 03e0d622</code></article><article class="card" id="video1"><span class="tag">@Video1</span><video src="a/h158-end.mp4" controls playsinline preload="metadata" muted></video><h4>End screen · H158 (4.5 s)</h4><p><b>Gives:</b> Only the last shot&#x27;s picture.</p><p><b>Not:</b> Its sound, words, pacing.</p><code>media 48682b82</code></article><article class="card" id="audio1"><span class="tag">@Audio1</span><div class="aud"><audio src="a/voice-owner-alexandra.mp3" controls preload="none"></audio></div><h4>Her own voice · Alexandra (9.4 s)</h4><p><b>Gives:</b> Her timbre only.</p><p><b>Not:</b> Its words and pacing.</p><code>media 3b148da6</code></article><article class="card" id="audio2"><span class="tag">@Audio2</span><div class="aud"><audio src="a/voice-cofounder-mark.mp3" controls preload="none"></audio></div><h4>His voice · Mark (4.7 s)</h4><p><b>Gives:</b> His timbre only.</p><p><b>Not:</b> Its words and pacing.</p><code>media 1ff661d8</code></article><article class="card" id="audio3"><span class="tag">@Audio3</span><div class="aud"><audio src="a/voice-scout.mp3" controls preload="none"></audio></div><h4>Scout voice timbre (4.5 s)</h4><p><b>Gives:</b> Scout&#x27;s timbre only.</p><p><b>Not:</b> Its words and pacing.</p><code>media 1040c108</code></article></div>
+<h2 style="margin-top:24px">The prompt to send · ending A · sd25-pe compile (767 words) · sha256 bab1b27b5b3f…</h2>
+<pre class="p" id="pv">【Generation Goal】
+Generate the second half of a photoreal story, continuing from the first frame. Earlier, a cat lady wanted the Fig &amp; Cedar candle but left because its page never said whether it is safe for cats. Now the owner and her co-founder see only the missing sales; he confidently, wrongly concludes customers don&#x27;t want Fig &amp; Cedar, she is quietly impressed, and they delete it from their store. The acting stays subtle and natural, never exaggerated. The two have natural, easy chemistry, warm and unrobotic, with her slightly naive and him slightly cocky on top, never overplayed.
+Use @Image1 as the first frame.
+This first frame defines the studio, the owner at her desk, her laptop, the lit amber Fig &amp; Cedar jar, the shelves and the camera direction at the start.
+
+【Reference Asset Roles】
+@Image2 is a 5-panel storyboard giving the shot order, camera angles and rough compositions; read it left to right, top to bottom; the end screen has no panel; do not adopt its line-art style, white background, panel numbers, drawn faces or drawn room and props; the room, desk and jar come from @Image1.
+The owner maps to @Image3; use only her face, auburn side braid and rust knit sweater, not the background.
+The co-founder maps to @Image4; use only his face, short fade, beard and charcoal sweater, not the background.
+The owner&#x27;s name badge maps to @Image5; she wears it pinned on her sweater throughout, not the grey background.
+The co-founder&#x27;s name badge maps to @Image6; he wears it pinned on his sweater throughout, not the grey background.
+The small dog maps to @Image7; use only the dog, not the room.
+The store admin references @Image8, only on the laptop screen, never as an overlay.
+The end screen maps to @Video1; use only its picture, not its sound, spoken words or pacing.
+@Audio1 gives only the owner&#x27;s voice timbre, not its words or pacing.
+@Audio2 gives only the co-founder&#x27;s voice timbre, not its words or pacing.
+@Audio3 gives only Scout&#x27;s voice timbre, not its words or pacing.
+
+【Subjects and Relationships】
+The owner (@Image3) and her co-founder (@Image4) share the one desk, laptop and lit amber three-wick Fig &amp; Cedar jar from @Image1. Their dog (@Image7) only passes through once.
+
+【Shots】
+0-3s · Panel 1 [Starts on the first frame; the camera rises and pulls back to a wide, high angle of the whole desk, revealing the co-founder seated beside her]: The owner (@Image3) rests her chin in her hand, looking at the laptop, a little sad; the co-founder (@Image4) sits relaxed, lips closed. The owner (@Image3), in English, on camera, quietly, almost to herself, in the voice of @Audio1, softly disappointed: {Damn... what&#x27;s going on with Fig and Cedar?}
+3-6s · Panel 2 [Hard cut. Low angle from desk height, looking up at him]: The co-founder (@Image4) stands up from his chair, hands in his pockets, chin slightly up, a small cocky half-smile; the owner (@Image3) looks up at him from her seat, lips closed. The co-founder (@Image4), in English, on camera, lips moving, in the voice of @Audio2, casually sure of himself: {Yeah, I told you. Customers just aren&#x27;t into Fig and Cedar.}
+6-8s · Panel 3 [Hard cut. Close-up on the owner, three-quarter view]: The owner (@Image3) gives a small, quietly impressed smile, eyebrows slightly raised, her name badge at the bottom of the frame. The owner (@Image3), in English, on camera, lips moving, in the voice of @Audio1, softly impressed: {Damn, you just know things.}
+8-9s · Panel 4 [Hard cut. Overhead, straight down onto the desk]: Her cursor clicks the red X on the Fig &amp; Cedar row (@Image8) &lt;click&gt;; the row disappears.
+9-12s · Panel 5 [Hard cut. Close shot at table height]: The owner (@Image3) leans in and blows out the jar &lt;a soft breath&gt;; the three flames go out and the wicks smoke while the dog (@Image7) trots across the floor behind the desk; the co-founder (@Image4) sits beside her again, lips closed. Scout, in English, off screen, in the voice of @Audio3, calm: {Don&#x27;t guess why your shoppers don&#x27;t buy.}
+12-15s · End screen [Hard cut, as @Video1]: Scout, in English, off screen, in the voice of @Audio3, warm: {Scout interviews your shoppers for you. Get free early access.} At the end, the end screen holds.
+
+【Style and Sound】
+Photoreal, warm studio light as in @Image1. Subtle, natural acting. No music. No ka-ching, no cart sound. No subtitles.
+
+【Maintain Consistency】
+Keep the owner (@Image3), the co-founder (@Image4), their sweaters and name badges, the studio, the laptop and the jar as in @Image1.
+</pre>
+<textarea id="raw" hidden>【Generation Goal】
+Generate the second half of a photoreal story, continuing from the first frame. Earlier, a cat lady wanted the Fig &amp; Cedar candle but left because its page never said whether it is safe for cats. Now the owner and her co-founder see only the missing sales; he confidently, wrongly concludes customers don&#x27;t want Fig &amp; Cedar, she is quietly impressed, and they delete it from their store. The acting stays subtle and natural, never exaggerated. The two have natural, easy chemistry, warm and unrobotic, with her slightly naive and him slightly cocky on top, never overplayed.
+Use @Image1 as the first frame.
+This first frame defines the studio, the owner at her desk, her laptop, the lit amber Fig &amp; Cedar jar, the shelves and the camera direction at the start.
+
+【Reference Asset Roles】
+@Image2 is a 5-panel storyboard giving the shot order, camera angles and rough compositions; read it left to right, top to bottom; the end screen has no panel; do not adopt its line-art style, white background, panel numbers, drawn faces or drawn room and props; the room, desk and jar come from @Image1.
+The owner maps to @Image3; use only her face, auburn side braid and rust knit sweater, not the background.
+The co-founder maps to @Image4; use only his face, short fade, beard and charcoal sweater, not the background.
+The owner&#x27;s name badge maps to @Image5; she wears it pinned on her sweater throughout, not the grey background.
+The co-founder&#x27;s name badge maps to @Image6; he wears it pinned on his sweater throughout, not the grey background.
+The small dog maps to @Image7; use only the dog, not the room.
+The store admin references @Image8, only on the laptop screen, never as an overlay.
+The end screen maps to @Video1; use only its picture, not its sound, spoken words or pacing.
+@Audio1 gives only the owner&#x27;s voice timbre, not its words or pacing.
+@Audio2 gives only the co-founder&#x27;s voice timbre, not its words or pacing.
+@Audio3 gives only Scout&#x27;s voice timbre, not its words or pacing.
+
+【Subjects and Relationships】
+The owner (@Image3) and her co-founder (@Image4) share the one desk, laptop and lit amber three-wick Fig &amp; Cedar jar from @Image1. Their dog (@Image7) only passes through once.
+
+【Shots】
+0-3s · Panel 1 [Starts on the first frame; the camera rises and pulls back to a wide, high angle of the whole desk, revealing the co-founder seated beside her]: The owner (@Image3) rests her chin in her hand, looking at the laptop, a little sad; the co-founder (@Image4) sits relaxed, lips closed. The owner (@Image3), in English, on camera, quietly, almost to herself, in the voice of @Audio1, softly disappointed: {Damn... what&#x27;s going on with Fig and Cedar?}
+3-6s · Panel 2 [Hard cut. Low angle from desk height, looking up at him]: The co-founder (@Image4) stands up from his chair, hands in his pockets, chin slightly up, a small cocky half-smile; the owner (@Image3) looks up at him from her seat, lips closed. The co-founder (@Image4), in English, on camera, lips moving, in the voice of @Audio2, casually sure of himself: {Yeah, I told you. Customers just aren&#x27;t into Fig and Cedar.}
+6-8s · Panel 3 [Hard cut. Close-up on the owner, three-quarter view]: The owner (@Image3) gives a small, quietly impressed smile, eyebrows slightly raised, her name badge at the bottom of the frame. The owner (@Image3), in English, on camera, lips moving, in the voice of @Audio1, softly impressed: {Damn, you just know things.}
+8-9s · Panel 4 [Hard cut. Overhead, straight down onto the desk]: Her cursor clicks the red X on the Fig &amp; Cedar row (@Image8) &lt;click&gt;; the row disappears.
+9-12s · Panel 5 [Hard cut. Close shot at table height]: The owner (@Image3) leans in and blows out the jar &lt;a soft breath&gt;; the three flames go out and the wicks smoke while the dog (@Image7) trots across the floor behind the desk; the co-founder (@Image4) sits beside her again, lips closed. Scout, in English, off screen, in the voice of @Audio3, calm: {Don&#x27;t guess why your shoppers don&#x27;t buy.}
+12-15s · End screen [Hard cut, as @Video1]: Scout, in English, off screen, in the voice of @Audio3, warm: {Scout interviews your shoppers for you. Get free early access.} At the end, the end screen holds.
+
+【Style and Sound】
+Photoreal, warm studio light as in @Image1. Subtle, natural acting. No music. No ka-ching, no cart sound. No subtitles.
+
+【Maintain Consistency】
+Keep the owner (@Image3), the co-founder (@Image4), their sweaters and name badges, the studio, the laptop and the jar as in @Image1.
+</textarea>
+<div class="copyrow"><button id="copy">Copy prompt</button><span class="small" id="copied"></span> <a class="small" href="prompt-sd25pe-final.txt">prompt-sd25pe-final.txt</a></div>
+<details style="margin-top:12px" open><summary>Ending B prompt (alternative: he stays seated) · 764 words · sha256 9e2c14b4c05c…</summary><pre class="p">【Generation Goal】
+Generate the second half of a photoreal story, continuing from the first frame. Earlier, a cat lady wanted the Fig &amp; Cedar candle but left because its page never said whether it is safe for cats. Now the owner and her co-founder see only the missing sales; he confidently, wrongly concludes customers don&#x27;t want Fig &amp; Cedar, she is quietly impressed, and they delete it from their store. The acting stays subtle and natural, never exaggerated. The two have natural, easy chemistry, warm and unrobotic, with her slightly naive and him slightly cocky on top, never overplayed.
+Use @Image1 as the first frame.
+This first frame defines the studio, the owner at her desk, her laptop, the lit amber Fig &amp; Cedar jar, the shelves and the camera direction at the start.
+
+【Reference Asset Roles】
+@Image2 is a 5-panel storyboard giving the shot order, camera angles and rough compositions; read it left to right, top to bottom; the end screen has no panel; do not adopt its line-art style, white background, panel numbers, drawn faces or drawn room and props; the room, desk and jar come from @Image1.
+The owner maps to @Image3; use only her face, auburn side braid and rust knit sweater, not the background.
+The co-founder maps to @Image4; use only his face, short fade, beard and charcoal sweater, not the background.
+The owner&#x27;s name badge maps to @Image5; she wears it pinned on her sweater throughout, not the grey background.
+The co-founder&#x27;s name badge maps to @Image6; he wears it pinned on his sweater throughout, not the grey background.
+The small dog maps to @Image7; use only the dog, not the room.
+The store admin references @Image8, only on the laptop screen, never as an overlay.
+The end screen maps to @Video1; use only its picture, not its sound, spoken words or pacing.
+@Audio1 gives only the owner&#x27;s voice timbre, not its words or pacing.
+@Audio2 gives only the co-founder&#x27;s voice timbre, not its words or pacing.
+@Audio3 gives only Scout&#x27;s voice timbre, not its words or pacing.
+
+【Subjects and Relationships】
+The owner (@Image3) and her co-founder (@Image4) share the one desk, laptop and lit amber three-wick Fig &amp; Cedar jar from @Image1. Their dog (@Image7) only passes through once.
+
+【Shots】
+0-3s · Panel 1 [Starts on the first frame; the camera rises and pulls back to a wide, high angle of the whole desk, revealing the co-founder seated beside her]: The owner (@Image3) rests her chin in her hand, looking at the laptop, a little sad; the co-founder (@Image4) sits relaxed, lips closed. The owner (@Image3), in English, on camera, quietly, almost to herself, in the voice of @Audio1, softly disappointed: {Damn... what&#x27;s going on with Fig and Cedar?}
+3-6s · Panel 2 [Hard cut. Low angle from desk height, looking up at him]: The co-founder (@Image4) stays seated and leans back in his chair, arms crossed, chin slightly up, a small cocky half-smile; the owner (@Image3) turns to him, lips closed. The co-founder (@Image4), in English, on camera, lips moving, in the voice of @Audio2, casually sure of himself: {Yeah, I told you. Customers just aren&#x27;t into Fig and Cedar.}
+6-8s · Panel 3 [Hard cut. Close-up on the owner, three-quarter view]: The owner (@Image3) gives a small, quietly impressed smile, eyebrows slightly raised, her name badge at the bottom of the frame. The owner (@Image3), in English, on camera, lips moving, in the voice of @Audio1, softly impressed: {Damn, you just know things.}
+8-9s · Panel 4 [Hard cut. Overhead, straight down onto the desk]: Her cursor clicks the red X on the Fig &amp; Cedar row (@Image8) &lt;click&gt;; the row disappears.
+9-12s · Panel 5 [Hard cut. Close shot at table height]: The owner (@Image3) leans in and blows out the jar &lt;a soft breath&gt;; the three flames go out and the wicks smoke while the dog (@Image7) trots across the floor behind the desk; the co-founder (@Image4) sits beside her again, lips closed. Scout, in English, off screen, in the voice of @Audio3, calm: {Don&#x27;t guess why your shoppers don&#x27;t buy.}
+12-15s · End screen [Hard cut, as @Video1]: Scout, in English, off screen, in the voice of @Audio3, warm: {Scout interviews your shoppers for you. Get free early access.} At the end, the end screen holds.
+
+【Style and Sound】
+Photoreal, warm studio light as in @Image1. Subtle, natural acting. No music. No ka-ching, no cart sound. No subtitles.
+
+【Maintain Consistency】
+Keep the owner (@Image3), the co-founder (@Image4), their sweaters and name badges, the studio, the laptop and the jar as in @Image1.
+</pre><p class="small">Same as ending A except Panel 2. Asset list: <a href="H241-assets-ending-B.txt">H241-assets-ending-B.txt</a> (storyboard B 6bafbb07). Prompt file: <a href="prompt-ending-B.txt">prompt-ending-B.txt</a>.</p></details>
+
+</section>
+
+<section class="illus">
+<span class="nsent">Illustration, not sent to Seedance</span>
+<h2 style="margin-top:6px">How the 5 panels map to the shots</h2>
+<div class="sbwrap"><a href="a/storyboard-ending-A.png" target="_blank"><img src="a/storyboard-ending-A.png" alt="The 5-panel storyboard, ending A (the same file as Image 2)" loading="lazy"></a></div>
+<p class="small" style="margin-top:8px">P1 0-3 s wide from high (her sad line), P2 3-6 s low angle on him (A stands, B sits), P3 6-8 s close-up on her, P4 8-9 s overhead delete, P5 9-12 s table-height blow-out with the dog passing. End screen 12-15 s, no panel. Ad time = +15 s.</p>
+</section>
+
+<section class="illus">
+<span class="nsent">Illustration, not sent to Seedance</span>
+<h2 style="margin-top:6px">Our draft before the sd25-pe compile</h2>
+<p class="small">Written our way (351 words), then compiled by the sd25-pe skill into the prompts above.</p>
+<pre class="p">【Reference Asset Roles】
+@Image1 first frame: the keeper intro&#x27;s last frame (the owner alone at her desk after the High flip).
+@Image2 5-panel line-art storyboard (ending A: he stands; ending B: he stays seated): shots and angles only.
+@Image3 the owner (Soul 2). @Image4 the co-founder (Soul 2).
+@Image5 her CEO name badge, @Image6 his VISIONARY name badge, worn on their sweaters throughout.
+@Image7 their small dog, passing through once.
+@Image8 the store admin with the red X on Fig &amp; Cedar (212 in stock, 3 sales), only on the laptop screen.
+@Video1 end screen picture. @Audio1 her own voice (Alexandra), @Audio2 Mark, @Audio3 Scout: timbre only.
+
+【Generation Goal】
+Second half of the cat-candle story from where the intro lands: the owner and her co-founder see only the missing sales; he is sure customers don&#x27;t want Fig &amp; Cedar, she is quietly impressed, they delete it. Subtle acting, never overplayed.
+
+【Shots】
+0-3s: [Panel 1, from the first frame, rise to a wide high angle, revealing him beside her] Chin in hand, a little sad.
+Owner (quiet, almost to herself): {Damn... what&#x27;s going on with Fig and Cedar?}
+3-6s: [Panel 2, hard cut, low angle on him] A: he stands up, hands in pockets. B: he stays seated, leaning back, arms crossed. Small cocky half-smile.
+Co-founder (casually sure of himself): {Yeah, I told you. Customers just aren&#x27;t into Fig and Cedar.}
+6-8s: [Panel 3, hard cut, close-up on her] A small, quietly impressed smile.
+Owner (softly impressed): {Damn, you just know things.}
+8-9s: [Panel 4, hard cut, overhead on the desk] Her cursor clicks the red X on Fig &amp; Cedar &lt;click&gt;; the row disappears.
+9-12s: [Panel 5, hard cut, table height] She blows out the jar &lt;a soft breath&gt;; the dog trots past behind the desk.
+Scout (off screen, calm): {Don&#x27;t guess why your shoppers don&#x27;t buy.}
+12-15s: [End screen, as @Video1]
+Scout (off screen, warm): {Scout interviews your shoppers for you. Get free early access.}
+
+【Style and Sound】
+Photoreal, warm studio light as in the first frame. No music in the render (Emile&#x27;s bed goes in the edit). No subtitles.
+</pre>
+</section>
+
+<details>
+<summary>Checks: sd25-pe Final Checklist and Principles 1-11 (zero FAILs)</summary>
+<p style="margin-top:8px">Full table with proof lines and the per-shot "one asset per person" table: <a href="SD25-CHECK.md">SD25-CHECK.md</a>. Asset lists: <a href="H241-assets-ending-A.txt">ending A</a> (= H241-assets.txt), <a href="H241-assets-ending-B.txt">ending B</a>. Prompts: <a href="prompt-ending-A.txt">ending A</a> (sha256 bab1b27b5b3f4eabf4787d3ee0559d5b4b4f4385064b197a9c55f286d84e8479, = prompt-sd25pe-final.txt), <a href="prompt-ending-B.txt">ending B</a> (sha256 9e2c14b4c05c86d3e9b73fd0dbfef62ee3dd8a539492cf630b033230085ac8b6).</p>
+<p>Audio transcripts (timbre only, never their words): Audio 1 is her own voice (Alexandra, an earlier stone-fruit line: words not used), Audio 2 is Mark reading his line, Audio 3 is Scout's end line. Video 2's own sound is not used.</p>
+</details>
+<details>
+<summary>History</summary>
+<p style="margin-top:8px"><b>Nov 15 8:06 PM, take 5 (this version):</b> Her own voice + Mark; both faces confirmed Soul and saved as Elements; varied angles; subtle acting; real CEO/VISIONARY name badges; a dog; two endings (A gated, B alternative); two new music options. Old page: <a href="index.take4.html">index.take4.html</a>; old prompt: <a href="prompt-sd25pe-final.take4.txt">prompt-sd25pe-final.take4.txt</a>. Spend: 4.36 credits.</p>
+<p style="margin-top:8px"><b>Nov 15 7:28 + 7:34 PM, take 4 (take 4):</b> New voices (Eleven v4, 3 each), her solo sad line, CEO/VISIONARY tags both ways, 2 music beds, and the switch to owner-half only from the keeper intro&#x27;s last frame. Old page: <a href="index.take3.html">index.take3.html</a>; old prompt: <a href="prompt-sd25pe-final.take3.txt">prompt-sd25pe-final.take3.txt</a>. Spend: 8.5 credits.</p>
+<p style="margin-top:8px"><b>Nov 15 5:14 PM, take 3 draft (take 3):</b> Emile liked the actor, asked to see the two together and hear the voice (out: not American). New mood switch at the flip, new lines, three voice options, panels 7-10 redrawn free, products-list still dropped. Not gated or rendered. Old page: <a href="index.take2.html">index.take2.html</a>; old prompt: <a href="prompt-sd25pe-final.take2.txt">prompt-sd25pe-final.take2.txt</a>; old board: <a href="a/storyboard.take2.png">storyboard.take2.png</a>. Spend: 0.9 credits.</p>
+<p style="margin-top:8px"><b>Nov 15 4:25 PM, take 2 (take 2):</b> Emile watched take 1 (job caf0dba8, 90 cr): loved the flip; the screen read as pixels, so the owner side becomes two co-founders at one desk with a real store admin she scrolls, his overconfident line and her “I guess you&#x27;re right.” before the delete. 0-15 s unchanged (diffed). New: admin stills (HTML, free), his face (Soul 2, 0.12 cr), his voice (library preview, free), panels 8-10 (free). Old page: <a href="index.take1.html">index.take1.html</a>; old prompt: <a href="prompt-sd25pe-final.take1.txt">prompt-sd25pe-final.take1.txt</a> (cleared bbbe6887); old board: <a href="a/storyboard.pre-cofounder.png">storyboard.pre-cofounder.png</a>.</p>
+<p><b>Nov 15 2:35 PM, round 2 (take 1):</b> Emile watched D&#x27;s take and asked for the owner half rebuilt on every cat-candle render: list only on her laptop, an orbit around her, his two lines with no “I guess”, the X click that deletes Fig &amp; Cedar from her website, then the blow-out. 0-15 s unchanged (diffed). Store admin still added (Image 10, same as D). Panels 8-12 redrawn free. Old page: <a href="index.pre-r2.html">index.pre-r2.html</a>; old prompt: <a href="prompt-sd25pe-final.pre-r2.txt">prompt-sd25pe-final.pre-r2.txt</a> (cleared d394acf7); old board: <a href="a/storyboard.pre-r2.png">storyboard.pre-r2.png</a>. Spend: 0 credits.</p>
+<p><b>Nov 15 2:11 PM, H241:</b> Emile's two changes before render: the plot in the goal (about to buy, can't without the cat-safety answer, owner cuts the line on the wrong insight) and the candle contrast (her room = white pillars and tea lights, room still v2; board panels 1, 3-6 redrawn free). Owner face re-uploaded free (old id dead). Old page: <a href="index.pre-h241.html">index.pre-h241.html</a>; old board: <a href="a/storyboard.pre-h241.png">storyboard.pre-h241.png</a>; old prompt: <a href="prompt-sd25pe-final.pre-h241.txt">prompt-sd25pe-final.pre-h241.txt</a>. Spend: 0 credits.</p>
+<p><b>Nov 15, cat story:</b> Emile's new story replaces the near-buy story. The storyboard is redrawn for free (GPT Image via Codex), the room is the shared candle apartment, and the Scout orb scene, cart click and ka-ching are gone. The flip-move clip is kept for its camera move only.</p>
+<p><b>Nov 14-15, earlier story:</b> a shopper almost buys, Scout's orb says "Don't guess. Ask them." Codex passed it on Nov 15. Old page: <a href="index.pre-catstory.html">index.pre-catstory.html</a>; old board: <a href="a/storyboard.pre-catstory.png">storyboard.pre-catstory.png</a> (its 1.0 cr of stills was spent on parent card H216 on Nov 14).</p>
+</details>
+</main>
+<script>
+document.getElementById('copy').addEventListener('click',function(){
+  var t=document.getElementById('raw').value, s=document.getElementById('copied');
+  function done(){s.textContent='Copied';setTimeout(function(){s.textContent=''},1800)}
+  function fallback(){var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy');done()}catch(e){s.textContent='Select and copy from prompt-sd25pe-final.txt'}a.remove()}
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,fallback)}else{fallback()}
+});
+</script>
+<script type="application/json" id="rv-summary">{"title": "Owner half · the co-founders, two endings (after the keeper intro)", "technique": "The keeper intro (H240 take 2, 0-15 s) is never re-rendered. One 15 s owner-only take starts from its last frame and follows a 5-panel storyboard with varied angles; ending A (he stands) is gated, ending B (he stays seated) is the alternative. Music goes in the edit.", "story": ["0-15 s · Keeper intro (H240 take 2, unchanged): the cat lady can't find whether Fig & Cedar is safe for cats and leaves; the High flip lands on the owner at her desk.", "15-18 s · Wide, from high: her co-founder beside her. She, quiet, a little sad: “Damn... what's going on with Fig and Cedar?”", "18-21 s · Low angle on him. A: he stands up, hands in pockets. B: he stays seated, leaning back. “Yeah, I told you. Customers just aren't into Fig and Cedar.”", "21-23 s · Close-up on her, quietly impressed: “Damn, you just know things.” Their name badges read CEO and VISIONARY.", "23-24 s · Overhead: she clicks the red X, Fig & Cedar is deleted. 24-27 s · She blows out the candle as their dog trots past; Scout: “Don't guess why your shoppers don't buy.”", "27-30 s · End screen: “Scout interviews your shoppers for you. Get free early access.”"], "shots": [{"t": "0-3s", "who": "Owner, Co-founder", "what": "Panel 1. From the intro's last frame the camera rises and pulls back to a wide, high angle: he sits beside her; she rests her chin in her hand, a little sad. Badges CEO / VISIONARY on their sweaters. (Ad 15-18 s.)", "line": "Damn... what's going on with Fig and Cedar?", "speaker": "Owner (on camera, quiet)", "assets": ["image1", "image2", "image3", "image4", "image5", "image6", "audio1"]}, {"t": "3-6s", "who": "Co-founder, Owner", "what": "Panel 2. Hard cut, low angle on him. A: he stands up, hands in pockets. B: he stays seated, leaning back, arms crossed. Small cocky half-smile; she looks at him. (18-21 s.)", "line": "Yeah, I told you. Customers just aren't into Fig and Cedar.", "speaker": "Co-founder (on camera)", "assets": ["image2", "image4", "image3", "image6", "audio2"]}, {"t": "6-8s", "who": "Owner", "what": "Panel 3. Hard cut, close-up on her, three-quarter view: a small, quietly impressed smile; CEO badge at the bottom of frame. (21-23 s.)", "line": "Damn, you just know things.", "speaker": "Owner (on camera)", "assets": ["image2", "image3", "image5", "audio1"]}, {"t": "8-9s", "who": "Owner (cursor)", "what": "Panel 4. Hard cut, overhead onto the desk: her cursor clicks the red X on Fig & Cedar (212 in stock, 3 sales); the row disappears. (23-24 s.)", "line": "", "speaker": "", "assets": ["image2", "image3", "image8"]}, {"t": "9-12s", "who": "Owner, Dog", "what": "Panel 5. Table-height close shot: she blows out the jar; the wicks smoke while their dog trots across behind the desk. (24-27 s.)", "line": "Don't guess why your shoppers don't buy.", "speaker": "Scout (off screen)", "assets": ["image2", "image3", "image7", "audio3"]}, {"t": "12-15s", "who": "End screen", "what": "Hard cut to the H158 end screen. (27-30 s.)", "line": "Scout interviews your shoppers for you. Get free early access.", "speaker": "Scout (off screen)", "assets": ["video1", "audio3"]}]}</script>
+<link rel="stylesheet" href="../../_review/review.css"><script src="../../_review/review.js" defer></script>
+<script>/* keep "For you to pick" first, above the review overview */(function(){function up(){var p=document.getElementById("for-you-to-pick"),o=document.querySelector(".rv-ov");if(p&&o&&o.parentNode&&p.nextElementSibling!==o){o.parentNode.insertBefore(p,o);}}document.addEventListener("DOMContentLoaded",function(){up();setTimeout(up,0);});window.addEventListener("load",up);})();</script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 # H241 asset list · ENDING A (he stands up for his line) · owner half only (15-30 s of the ad), take 5 (Emile Nov 15 8:06 PM ET)
-# Prompt: /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/prompt-ending-A.txt (sha256 a37dc6cc3017284303f4140b47db3c96a9451a84aac0df0b826c6dadac394416; 746 words)
+# Prompt: /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/prompt-ending-A.txt (sha256 bab1b27b5b3f4eabf4787d3ee0559d5b4b4f4385064b197a9c55f286d84e8479; 767 words)
 # The keeper intro (H240 take 2, 0-15 s) is never re-rendered: /Users/emilechouha/ClaudeCowork/scout-ab-launch/one-take-kit/out/H216/b-storyboard/a/KEEP-shopper-intro-0-15s.mp4. This job renders only the owner half from its last frame; stitched on for free.
 # Upload in this order. Job: seedance_2_5, 15 s, 9:16 (locked by the first frame), audio on (job settings, not in the prompt).
 # role | Higgsfield media id | absolute local file | what
